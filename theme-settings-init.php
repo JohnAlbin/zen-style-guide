@@ -1,7 +1,7 @@
 <?php
 // $Id$
 
-if (is_null(theme_get_setting('zen_wireframes'))) {
+if (is_null(theme_get_setting('zen_block_editing'))) {
   global $theme_key;
 
   /*
@@ -10,6 +10,7 @@ if (is_null(theme_get_setting('zen_wireframes'))) {
    * matches the $defaults in the theme-settings.php file.
    */
   $defaults = array(
+    'zen_block_editing' => 1,
     'zen_breadcrumb' => 'yes',
     'zen_breadcrumb_separator' => ' › ',
     'zen_breadcrumb_home' => 1,

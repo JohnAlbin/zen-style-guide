@@ -16,6 +16,7 @@ function STARTERKIT_settings($saved_settings) {
    * matches the $defaults in the theme-settings-init.php file.
    */
   $defaults = array(
+    'zen_block_editing' => 1,
     'zen_breadcrumb' => 'yes',
     'zen_breadcrumb_separator' => ' › ',
     'zen_breadcrumb_home' => 1,
