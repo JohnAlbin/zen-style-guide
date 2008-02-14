@@ -1,0 +1,20 @@
+; $Id$
+
+name = Zen Themer’s Starter Kit
+description = Read the <a href="http://drupal.org/node/201423">online docs</a> on how to create a sub-theme.
+core = 6.x
+base theme = zen
+
+screenshot = screenshot.png
+
+regions[left]           = left sidebar
+regions[right]          = right sidebar
+regions[navbar]         = navigation bar
+regions[content_top]    = content top
+regions[content_bottom] = content bottom
+regions[header]         = header
+regions[footer]         = footer
+regions[closure_region] = closure
+
+; stylesheets[all][] = layout.css
+; stylesheets[print][] = print.css
