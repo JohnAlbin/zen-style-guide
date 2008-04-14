@@ -41,7 +41,7 @@ include_once 'theme-settings-init.php';
  */
 
 // Optionally add a fixed width CSS file.
-/* -- Delete this line if you want to use this code
+/* -- Delete this line if you want to use and modify this code
 if (theme_get_setting('STARTERKIT_fixed')) {
   drupal_add_css(path_to_theme() .'/layout-fixed.css', 'theme', 'all');
 }
@@ -126,17 +126,6 @@ function STARTERKIT_preprocess_block(&$vars) {
 }
 // */
 
-
-/**
- * Override the Drupal search form using the search-theme-form.tpl.php file.
- *
- * @TODO Fix this functionality; this function is totally broken in D6.
- */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_search_theme_form($form) {
-  return _phptemplate_callback('search_theme_form', array('form' => $form), array('search-theme-form'));
-}
-// */
 
 /**
  * Fixes broken calls to l() in Drupal's (6.0-6.2) theme_username().
