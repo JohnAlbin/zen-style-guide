@@ -46,19 +46,18 @@ include_once './'. drupal_get_path('theme', 'zen') .'/template.php';
 
 
 /*
- * Add the stylesheets you will need for this sub-theme.
+ * Add any conditional stylesheets you will need for this sub-theme.
  *
- * To add stylesheets that are in the main Zen folder, use path_to_zentheme().
- * To add stylesheets thar are in your sub-theme's folder, use path_to_theme().
+ * To add stylesheets that always need to be included, you should add them to
+ * your .info file.
  */
 
-// Add any stylesheets you would like from the main Zen theme.
-drupal_add_css(path_to_zentheme() .'/html-elements.css', 'theme', 'all');
-drupal_add_css(path_to_zentheme() .'/tabs.css', 'theme', 'all');
-
-// Then add styles for this sub-theme.
-drupal_add_css(path_to_theme() .'/layout.css', 'theme', 'all');
-drupal_add_css(path_to_theme() .'/STARTERKIT.css', 'theme', 'all');
+// Optionally add a fixed width CSS file.
+/* -- Delete this line if you want to use this code
+if (theme_get_setting('STARTERKIT_fixed')) {
+  drupal_add_css(path_to_theme() .'/layout-fixed.css', 'theme', 'all');
+}
+// */
 
 // Avoid IE5 bug that always loads @import print stylesheets
 zen_add_print_css(path_to_theme() .'/print.css');
