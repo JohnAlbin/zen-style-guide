@@ -34,14 +34,6 @@ include_once 'theme-settings-init.php';
 
 
 /*
- * Sub-themes with their own page.tpl.php files are seen by PHPTemplate as their
- * own theme (seperate from Zen). So we need to re-connect those sub-themes
- * with the main Zen theme.
- */
-include_once './'. drupal_get_path('theme', 'zen') .'/template.php';
-
-
-/*
  * Add any conditional stylesheets you will need for this sub-theme.
  *
  * To add stylesheets that always need to be included, you should add them to
@@ -60,6 +52,21 @@ zen_add_print_css(path_to_theme() .'/print.css');
 
 
 /**
+ * Override or insert PHPTemplate variables into all templates.
+ *
+ * @param $vars
+ *   A sequential array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function STARTERKIT_preprocess(&$vars) {
+  // First run Zen's preprocess function.
+  phptemplate_preprocess($vars);
+
+  $vars['sample_variable'] = t('Lorem ipsum.');
+}
+// */
+
+/**
  * Override or insert PHPTemplate variables into the page templates.
  *
  * @param $vars
@@ -67,6 +74,9 @@ zen_add_print_css(path_to_theme() .'/print.css');
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_page(&$vars) {
+  // First run Zen's preprocess function.
+  phptemplate_preprocess_page($vars);
+
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -79,6 +89,9 @@ function STARTERKIT_preprocess_page(&$vars) {
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_node(&$vars) {
+  // First run Zen's preprocess function.
+  phptemplate_preprocess_node($vars);
+
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -91,6 +104,9 @@ function STARTERKIT_preprocess_node(&$vars) {
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_comment(&$vars) {
+  // First run Zen's preprocess function.
+  phptemplate_preprocess_comment($vars);
+
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -103,6 +119,9 @@ function STARTERKIT_preprocess_comment(&$vars) {
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_block(&$vars) {
+  // First run Zen's preprocess function.
+  phptemplate_preprocess_block($vars);
+
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
