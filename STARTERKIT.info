@@ -21,7 +21,7 @@ base theme = zen
   ; "handheld". See http://www.w3.org/TR/CSS21/media.html#media-types for a full
   ; list of stylesheet media types in CSS 2.1.
   ;
-  ; You can also override any of Zen’s stylesheets or any module’s stylesheets,
+  ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
 stylesheets[all][]   = layout.css
@@ -30,17 +30,17 @@ stylesheets[all][]   = layout.css
 stylesheets[all][]   = STARTERKIT.css
 stylesheets[print][] = print.css
   ; We prevent the zen.css file in the base theme from being included by
-  ; specifying it in the sub-theme’s .info file and by putting an empty zen.css
-  ; file in the sub-theme’s directory.
+  ; specifying it in the sub-theme's .info file and by putting an empty zen.css
+  ; file in the sub-theme's directory.
 stylesheets[all][]   = zen.css
 
-  ; The regions defined in Zen’s default page.tpl.php file.  The name in
+  ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
   ; "[content_top]" in the .info file means there should be a $content_top
   ; variable in the page.tpl.php file.) The text after the equals sign is a
   ; descriptive text used on the admin/build/blocks page.
   ;
-  ; To add a new region, copy Zen’s page.tpl.php to your sub-theme’s directory,
+  ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
 regions[left]           = left sidebar
