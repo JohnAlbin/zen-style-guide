@@ -128,7 +128,7 @@ function STARTERKIT_preprocess_block(&$vars) {
 
 
 /**
- * Fixes broken calls to l() in Drupal's (6.0-6.2) theme_username().
+ * The rel="nofollow" attribute is missing from anonymous users' URL in Drupal 6.0-6.2.
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_username($object) {
