@@ -18,11 +18,19 @@ if (is_null(theme_get_setting('zen_block_editing'))) {
     'zen_wireframes' => 0,
   );
 
-  // Save default theme settings
+  // Get default theme settings.
+  $settings = theme_get_settings($theme_key);
+  // Don't save the toggle_node_info_ variables.
+  if (module_exists('node')) {
+    foreach (node_get_types() as $type => $name) {
+      unset($settings['toggle_node_info_' . $type]);
+    }
+  }
+  // Save default theme settings.
   variable_set(
     str_replace('/', '_', 'theme_'. $theme_key .'_settings'),
-    array_merge($defaults, theme_get_settings($theme_key))
+    array_merge($defaults, $settings)
   );
-  // Force refresh of Drupal internals
+  // Force refresh of Drupal internals.
   theme_get_setting('', TRUE);
 }
