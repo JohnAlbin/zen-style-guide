@@ -11,25 +11,15 @@
  */
 function STARTERKIT_settings($saved_settings) {
 
-  /*
-   * The default values for the theme variables. Make sure $defaults exactly
-   * matches the $defaults in the theme-settings-init.php file.
-   */
-  $defaults = array(
-    'zen_block_editing' => 1,
-    'zen_breadcrumb' => 'yes',
-    'zen_breadcrumb_separator' => ' › ',
-    'zen_breadcrumb_home' => 1,
-    'zen_breadcrumb_trailing' => 1,
-    'zen_breadcrumb_title' => 0,
-    'zen_wireframes' => 0,
-  );
+  // Get the default values from the .info file.
+  $themes = list_themes();
+  $defaults = $themes['STARTERKIT']->info['settings'];
 
-  // Merge the saved variables and their default values
+  // Merge the saved variables and their default values.
   $settings = array_merge($defaults, $saved_settings);
 
   /*
-   * Create the form using Forms API: http://api.drupal.org/api/5
+   * Create the form using Forms API: http://api.drupal.org/api/6
    */
   $form = array();
   /* -- Delete this line if you want to use this setting

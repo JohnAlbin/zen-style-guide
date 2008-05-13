@@ -28,12 +28,6 @@
 
 
 /*
- * Initialize theme settings
- */
-include_once 'theme-settings-init.php';
-
-
-/*
  * Add any conditional stylesheets you will need for this sub-theme.
  *
  * To add stylesheets that ALWAYS need to be included, you should add them to
