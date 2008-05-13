@@ -42,7 +42,7 @@ function STARTERKIT_settings($saved_settings) {
   // */
 
   // Add the base theme's settings.
-  include_once './'. drupal_get_path('theme', 'zen') .'/theme-settings.php';
+  include_once './' . drupal_get_path('theme', 'zen') . '/theme-settings.php';
   $form += zen_settings($saved_settings, $defaults);
 
   // Remove some of the base theme's settings.

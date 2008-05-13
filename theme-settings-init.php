@@ -29,7 +29,7 @@ if (is_null(theme_get_setting('zen_breadcrumb_title'))) {
   }
   // Save default theme settings.
   variable_set(
-    str_replace('/', '_', 'theme_'. $theme_key .'_settings'),
+    str_replace('/', '_', 'theme_' . $theme_key . '_settings'),
     array_merge($defaults, $settings)
   );
   // Force refresh of Drupal internals.
