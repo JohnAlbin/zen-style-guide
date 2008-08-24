@@ -29,9 +29,10 @@ stylesheets[all][]   = layout.css
 ;stylesheets[all][]  = tabs.css
 stylesheets[all][]   = STARTERKIT.css
 stylesheets[print][] = print.css
-  ; We prevent the zen.css file in the base theme from being included by
-  ; specifying it in the sub-theme's .info file and by putting an empty zen.css
-  ; file in the sub-theme's directory.
+  ; To prevent stylesheets of a base theme or of a module from being included in
+  ; our sub-theme, we specify it in our .info file (and we don't need to have a
+  ; stylesheet in our sub-theme with that name.) For example, we prevent the
+  ; zen.css file in the base theme from being included by specifying it here.
 stylesheets[all][]   = zen.css
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
