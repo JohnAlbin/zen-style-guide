@@ -1,6 +1,10 @@
 <?php
 // $Id$
 
+// Include the definition of zen_settings() and zen_theme_get_default_settings().
+include_once './' . drupal_get_path('theme', 'zen') . '/theme-settings.php';
+
+
 /**
  * Implementation of THEMEHOOK_settings() function.
  *
@@ -12,8 +16,7 @@
 function STARTERKIT_settings($saved_settings) {
 
   // Get the default values from the .info file.
-  $themes = list_themes();
-  $defaults = $themes['STARTERKIT']->info['settings'];
+  $defaults = zen_theme_get_default_settings('STARTERKIT');
 
   // Merge the saved variables and their default values.
   $settings = array_merge($defaults, $saved_settings);
@@ -23,16 +26,15 @@ function STARTERKIT_settings($saved_settings) {
    */
   $form = array();
   /* -- Delete this line if you want to use this setting
-  $form['subtheme_example'] = array(
+  $form['STARTERKIT_example'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Use this sample setting'),
-    '#default_value' => $settings['subtheme_example'],
+    '#default_value' => $settings['STARTERKIT_example'],
     '#description'   => t("This option doesn't do anything; it's just an example."),
   );
   // */
 
   // Add the base theme's settings.
-  include_once './' . drupal_get_path('theme', 'zen') . '/theme-settings.php';
   $form += zen_settings($saved_settings, $defaults);
 
   // Remove some of the base theme's settings.
