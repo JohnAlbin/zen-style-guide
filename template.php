@@ -22,8 +22,8 @@
  * If you would like to override any of the theme functions used in Zen core,
  * you should first look at how Zen core implements those functions:
  *   theme_breadcrumbs()      in zen/template.php
- *   theme_menu_item_link()   in zen/template-menus.php
- *   theme_menu_local_tasks() in zen/template-menus.php
+ *   theme_menu_item_link()   in zen/template.php
+ *   theme_menu_local_tasks() in zen/template.php
  */
 
 
