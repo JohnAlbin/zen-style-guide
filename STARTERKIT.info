@@ -28,6 +28,7 @@ stylesheets[all][]   = layout.css
 ;stylesheets[all][]  = html-elements.css
 ;stylesheets[all][]  = tabs.css
 stylesheets[all][]   = STARTERKIT.css
+;stylesheets[all][]  = block-editing.css
 stylesheets[print][] = print.css
   ; To prevent stylesheets of a base theme or of a module from being included in
   ; our sub-theme, we specify it in our .info file (and we don't need to have a
