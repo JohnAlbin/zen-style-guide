@@ -37,6 +37,9 @@ stylesheets[print][] = print.css
   ; zen.css file in the base theme from being included by specifying it here.
 stylesheets[all][]   = zen.css
 
+  ; Set the conditional stylesheets that are processed by IE.
+;conditional-stylesheets[if IE][all][] = ie.css
+
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
   ; "[content_top]" in the .info file means there should be a $content_top
