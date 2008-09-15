@@ -28,6 +28,7 @@ stylesheets[all][]   = layout.css
 ;stylesheets[all][]  = html-elements.css
 ;stylesheets[all][]  = tabs.css
 stylesheets[all][]   = STARTERKIT.css
+;stylesheets[all][]  = messages.css
 ;stylesheets[all][]  = block-editing.css
 ;stylesheets[all][]  = wireframes.css
 stylesheets[print][] = print.css
