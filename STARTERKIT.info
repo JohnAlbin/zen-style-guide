@@ -25,7 +25,7 @@ base theme = zen
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
 stylesheets[all][]   = layout.css
-;stylesheets[all][]  = html-elements.css
+stylesheets[all][]   = html-elements.css
 ;stylesheets[all][]  = tabs.css
 stylesheets[all][]   = STARTERKIT.css
 ;stylesheets[all][]  = messages.css
