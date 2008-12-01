@@ -40,6 +40,8 @@ stylesheets[all][]   = zen.css
 
   ; Set the conditional stylesheets that are processed by IE.
 ;conditional-stylesheets[if IE][all][] = ie.css
+;conditional-stylesheets[if lte IE 6][all][] = ie6.css
+;conditional-stylesheets[if lte IE 5][all][] = ie5.css
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
