@@ -56,11 +56,10 @@
  *     THEME_preprocess_comment alters the variables for comment.tpl.php
  *     THEME_preprocess_block   alters the variables for block.tpl.php
  *
- *   For more information on preprocess functions, please visit the Theme
- *   Developer's Guide on Drupal.org: http://drupal.org/node/223430
- *   For more information on template suggestions, please visit the Theme
- *   Developer's Guide on Drupal.org: http://drupal.org/node/223440 and
- *   http://drupal.org/node/190815#template-suggestions
+ *   For more information on preprocess functions and template suggestions,
+ *   please visit the Theme Developer's Guide on Drupal.org:
+ *   http://drupal.org/node/223440
+ *   and http://drupal.org/node/190815#template-suggestions
  */
 
 
