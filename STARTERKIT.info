@@ -19,7 +19,8 @@ base theme = zen
   ; This section adds CSS files to your theme. The media type is specified in
   ; the brackets. Typical CSS media types include "all", "screen", "print", and
   ; "handheld". See http://www.w3.org/TR/CSS21/media.html#media-types for a full
-  ; list of stylesheet media types in CSS 2.1.
+  ; list of stylesheet media types in CSS 2.1. The iPhone's preferred media type
+  ; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
   ;
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
@@ -40,6 +41,8 @@ stylesheets[all][]   = comments.css
 stylesheets[all][]   = forms.css
 stylesheets[all][]   = fields.css
 stylesheets[print][] = print.css
+; stylesheets[handheld][] = mobile.css
+; stylesheets[only screen and (max-device-width: 480px)][] = iphone.css
 
   ; Set the conditional stylesheets that are processed by IE.
 ; conditional-stylesheets[if IE][all][]       = ie.css
