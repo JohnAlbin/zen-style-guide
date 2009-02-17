@@ -26,14 +26,14 @@ base theme = zen
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
 stylesheets[all][]   = html-elements.css
-stylesheets[all][]   = layout.css
 ; stylesheets[all][] = wireframes.css
+stylesheets[all][]   = layout.css
 stylesheets[all][]   = backgrounds.css
-stylesheets[all][]   = pages.css
 ; stylesheets[all][] = tabs.css
 ; stylesheets[all][] = messages.css
-stylesheets[all][]   = blocks.css
+stylesheets[all][]   = pages.css
 ; stylesheets[all][] = block-editing.css
+stylesheets[all][]   = blocks.css
 stylesheets[all][]   = navigation.css
 stylesheets[all][]   = views-styles.css
 stylesheets[all][]   = nodes.css
