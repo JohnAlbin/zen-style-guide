@@ -135,7 +135,7 @@ function STARTERKIT_preprocess_node(&$vars, $hook) {
   // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $vars['node']->type;
   if (function_exists($function)) {
-    $function($vars);
+    $function($vars, $hook);
   }
 }
 // */
