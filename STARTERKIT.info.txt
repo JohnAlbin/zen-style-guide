@@ -61,8 +61,8 @@ stylesheets[print][] = print.css
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[left]           = left sidebar
-regions[right]          = right sidebar
+regions[left]           = primary sidebar
+regions[right]          = secondary sidebar
 regions[navbar]         = navigation bar
 regions[content_top]    = content top
 regions[content_bottom] = content bottom
