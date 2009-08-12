@@ -11,13 +11,14 @@
  *
  * We need to standardize the list item indentation.
  */
-ul, ol {
+ul,
+ol {
   padding-left: 0;
   padding-right: 2em;
 }
 
-.block ul, /* Drupal overrides */
-.item-list ul {
+.block ul,
+.item-list ul /* Drupal overrides */ {
   padding: 0 2em 0 0;
 }
 

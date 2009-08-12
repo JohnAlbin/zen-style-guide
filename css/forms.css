@@ -6,15 +6,15 @@
  */
 
 
-.form-item, /* Wrapper for a form element (or group of form elements) and its label */
+.form-item,
 .form-checkboxes,
-.form-radios {
+.form-radios /* Wrapper for a form element (or group of form elements) and its label */ {
   margin: 1em 0;
 }
 
-.form-item input.error, /* Highlight the form elements that caused a form submission error */
+.form-item input.error,
 .form-item textarea.error,
-.form-item select.error {
+.form-item select.error /* Highlight the form elements that caused a form submission error */ {
   border: 2px solid #c00;
 }
 
@@ -36,15 +36,16 @@
   font-size: 0.85em;
 }
 
-.form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
-.form-radios .form-item {
+.form-checkboxes .form-item,
+.form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
   margin: 0.4em 0;
 }
 
 .form-submit /* The submit button */ {
 }
 
-.container-inline div, .container-inline label /* Inline labels and form divs */ {
+.container-inline div,
+.container-inline label /* Inline labels and form divs */ {
   display: inline;
 }
 
@@ -106,8 +107,8 @@
   margin: 1em 0;
 }
 
-#user-login li.openid-link, /* The OpenID links on the /user form. */
-#user-login li.user-link {
+#user-login li.openid-link,
+#user-login li.user-link /* The OpenID links on the /user form. */ {
   margin-left: -2em; /* LTR */ /* Un-do all of the padding on the ul list. */
 }
 

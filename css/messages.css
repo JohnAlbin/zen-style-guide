@@ -8,10 +8,10 @@
  */
 
 
-div.messages, /* Important messages (status, warning, and error) for the user */
+div.messages,
 div.status,
 div.warning,
-div.error {
+div.error /* Important messages (status, warning, and error) for the user */ {
   min-height: 21px;
   margin: 0 1em 5px 1em;
   border: 2px solid #ff7;

@@ -6,10 +6,10 @@
  */
 
 
-div.messages, /* Important messages (status, warning, and error) for the user */
+div.messages,
 div.status,
 div.warning,
-div.error {
+div.error /* Important messages (status, warning, and error) for the user */ {
   padding: 5px 35px 5px 5px;
   background-position: 99.5% 5px;
 }

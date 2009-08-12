@@ -9,7 +9,8 @@
 
 
 /* underline all links */
-a:link, a:visited {
+a:link,
+a:visited {
   text-decoration: underline !important;
 }
 
@@ -38,18 +39,31 @@ a:link, a:visited {
 
 /* Turn off any background colors or images */
 body,
-#page, #page-inner,
-#main, #main-inner,
-#content, #content-inner {
+#page,
+#page-inner,
+#main,
+#main-inner,
+#content,
+#content-inner {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
 
 /* Hide sidebars and nav elements */
-#skip-to-nav, #navbar, #sidebar-first, #sidebar-second, #footer,
-.breadcrumb, div.tabs, .links, .taxonomy,
-.book-navigation, .forum-topic-navigation, .pager, .feed-icons {
+#skip-to-nav,
+#navbar,
+#sidebar-first,
+#sidebar-second,
+#footer,
+.breadcrumb,
+div.tabs,
+.links,
+.taxonomy,
+.book-navigation,
+.forum-topic-navigation,
+.pager,
+.feed-icons {
   visibility: hidden;
   display: none;
 }

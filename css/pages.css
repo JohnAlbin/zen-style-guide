@@ -44,7 +44,8 @@ body {
 #logo-image /* The actual logo image */ {
 }
 
-h1#site-name, div#site-name /* The name of the website */ {
+h1#site-name,
+div#site-name /* The name of the website */ {
   margin: 0;
   font-size: 2em;
   line-height: 1.3em;
@@ -117,11 +118,13 @@ div.messages /* Important messages (status, warning, and error) for the user. Se
 div.status /* Normal priority messages */ {
 }
 
-div.warning, tr.warning /* Medium priority messages */ {
+div.warning,
+tr.warning /* Medium priority messages */ {
   /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
 }
 
-div.error, tr.error /* High priority messages. See also the .error declaration below. */ {
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
 }
 
 .error /* Errors that are separate from div.messages status messages. */ {
@@ -169,7 +172,8 @@ ul.links li {
   text-align: center;
 }
 
-.pager a, .pager strong.pager-current /* Each page number in the pager list */ {
+.pager a,
+.pager strong.pager-current /* Each page number in the pager list */ {
   padding: 0.5em;
 }
 

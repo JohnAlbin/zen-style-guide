@@ -51,7 +51,8 @@ body {
   font-size: 0.8em;
 }
 
-#skip-to-nav a:link, #skip-to-nav a:visited {
+#skip-to-nav a:link,
+#skip-to-nav a:visited {
   color: #fff; /* Same as background color of page */
 }
 
@@ -63,7 +64,9 @@ body {
 /* Alternatively, the skip-to-nav link can be completely hidden until a user tabs
    to the link. Un-comment the following CSS to use this technique. */
 /*
-#skip-to-nav a, #skip-to-nav a:hover, #skip-to-nav a:visited {
+#skip-to-nav a,
+#skip-to-nav a:hover,
+#skip-to-nav a:visited {
   position: absolute;
   left: 0;
   top: -500px;
@@ -72,7 +75,8 @@ body {
   overflow: hidden;
 }
 
-#skip-to-nav a:active, #skip-to-nav a:focus {
+#skip-to-nav a:active,
+#skip-to-nav a:focus {
   position: static;
   width: auto;
   height: auto;

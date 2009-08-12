@@ -74,10 +74,10 @@ ul.primary li.active a:hover .tab {
  * Messages - IE 5 and 6 don't support PNGs with alpha transparency.
  */
 
-div.messages, /* Important messages (status, warning, and error) for the user */
+div.messages,
 div.status,
 div.warning,
-div.error {
+div.error /* Important messages (status, warning, and error) for the user */ {
   background-image: url(../images/messages-status-ie6.png);
 }
 
