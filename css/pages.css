@@ -287,14 +287,22 @@ ul.links li
 {
 }
 
-.box-inner /* Additional wrapper for box */
-{
-}
-
-.box h2.title /* Box title */
+.box h2 /* Box title */
 {
 }
 
 .box .content /* Box's content wrapper */
 {
+}
+
+/*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+.clearfix:after
+{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
