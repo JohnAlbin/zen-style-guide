@@ -12,26 +12,22 @@
  * Layout CSS
  */
 
-body
-{
+body {
   text-align: center; /* 1st part of IE5/IE6quirks centering hack */
 }
 
-#page
-{
+#page {
   text-align: left; /* LTR */ /* 2nd part of IE5/IE6quirks centering hack */
 }
 
-#main
-{
+#main {
   zoom: 1; /* Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6 */
 }
 
 #content,
 #navbar,
 #sidebar-first,
-#sidebar-second /* Floating divs */
-{
+#sidebar-second /* Floating divs */ {
   display: inline; /* display inline or double your floated margin! [1] */
   overflow: hidden; /* in ie6, overflow auto is broken [2] and so is overflow visible [3] */
   overflow-y: visible;
@@ -44,40 +40,33 @@ body
 ul.primary li a,
 ul.primary li a .tab,
 ul.secondary li a,
-ul.secondary li a .tab
-{
+ul.secondary li a .tab {
   display: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
 }
 
-ul.primary li a
-{
+ul.primary li a {
   background: url(../images/tab-left-ie6.png) no-repeat left -38px;
 }
 
-ul.primary li a .tab
-{
+ul.primary li a .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right -38px;
 }
 
-ul.primary li a:hover
-{
+ul.primary li a:hover {
   background: url(../images/tab-left-ie6.png) no-repeat left -76px;
 }
 
-ul.primary li a:hover .tab
-{
+ul.primary li a:hover .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right -76px;
 }
 
 ul.primary li.active a,
-ul.primary li.active a:hover
-{
+ul.primary li.active a:hover {
   background: url(../images/tab-left-ie6.png) no-repeat left 0;
 }
 
 ul.primary li.active a .tab,
-ul.primary li.active a:hover .tab
-{
+ul.primary li.active a:hover .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right 0;
 }
 
@@ -88,18 +77,15 @@ ul.primary li.active a:hover .tab
 div.messages, /* Important messages (status, warning, and error) for the user */
 div.status,
 div.warning,
-div.error
-{
+div.error {
   background-image: url(../images/messages-status-ie6.png);
 }
 
-div.warning /* Medium priority messages */
-{
+div.warning /* Medium priority messages */ {
   background-image: url(../images/messages-warning-ie6.png);
 }
 
-div.error /* High priority messages. See also the .error declaration below. */
-{
+div.error /* High priority messages. See also the .error declaration below. */ {
   background-image: url(../images/messages-error-ie6.png);
 }
 

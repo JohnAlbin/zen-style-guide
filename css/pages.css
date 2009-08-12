@@ -13,217 +13,175 @@
 /*
  * Body
  */
-body
-{
+body {
   margin: 0;
   padding: 10px;
 }
 
-#page
-{
+#page {
 }
 
-#page-inner
-{
+#page-inner {
 }
 
 /*
  * Header
  */
-#header
-{
+#header {
 }
 
-#header-inner
-{
+#header-inner {
 }
 
-#logo-title /* Wrapper for logo, website name, and slogan */
-{
+#logo-title /* Wrapper for logo, website name, and slogan */ {
 }
 
-#logo /* Wrapper for logo */
-{
+#logo /* Wrapper for logo */ {
   margin: 0 10px 0 0; /* LTR */
   padding: 0;
 }
 
-#logo-image /* The actual logo image */
-{
+#logo-image /* The actual logo image */ {
 }
 
-h1#site-name, div#site-name /* The name of the website */
-{
+h1#site-name, div#site-name /* The name of the website */ {
   margin: 0;
   font-size: 2em;
   line-height: 1.3em;
 }
 
 #site-name a:link,
-#site-name a:visited
-{
+#site-name a:visited {
   color: #000;
   text-decoration: none;
 }
 
-#site-name a:hover
-{
+#site-name a:hover {
   text-decoration: underline;
 }
 
-#site-slogan /* The slogan (or tagline) of a website */
-{
+#site-slogan /* The slogan (or tagline) of a website */ {
 }
 
-#header-blocks /* Wrapper for any blocks placed in the header region */
-{
+#header-blocks /* Wrapper for any blocks placed in the header region */ {
 }
 
 /*
  * Main (container for everything else)
  */
-#main
-{
+#main {
 }
 
-#main-inner
-{
+#main-inner {
 }
 
 /*
  * Content
  */
-#content
-{
+#content {
 }
 
-#content-inner
-{
+#content-inner {
 }
 
-#mission /* The mission statement of the site (displayed on homepage) */
-{
+#mission /* The mission statement of the site (displayed on homepage) */ {
 }
 
-#content-top /* Wrapper for any blocks placed in the "content top" region */
-{
+#content-top /* Wrapper for any blocks placed in the "content top" region */ {
 }
 
-#content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */
-{
+#content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */ {
 }
 
-.breadcrumb /* The path to the current page in the form of a list of links */
-{
+.breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
 }
 
 h1.title, /* The title of the page */
 h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
-h3.title /* Comment title */
-{
+h3.title /* Comment title */ {
   margin: 0;
 }
 
-tr.even /* Some tables have rows marked even or odd. */
-{
+tr.even /* Some tables have rows marked even or odd. */ {
   /* background-color: #eee; */ /* Drupal core uses a #eee background */
 }
 
-tr.odd
-{
+tr.odd {
   /* background-color: #eee; */ /* Drupal core uses a #eee background */
 }
 
-div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
-{
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
 }
 
-div.status /* Normal priority messages */
-{
+div.status /* Normal priority messages */ {
 }
 
-div.warning, tr.warning /* Medium priority messages */
-{
+div.warning, tr.warning /* Medium priority messages */ {
   /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
 }
 
-div.error, tr.error /* High priority messages. See also the .error declaration below. */
-{
+div.error, tr.error /* High priority messages. See also the .error declaration below. */ {
 }
 
-.error /* Errors that are separate from div.messages status messages. */
-{
+.error /* Errors that are separate from div.messages status messages. */ {
   /* color: #e55; */ /* Drupal core uses a #e55 background */
 }
 
-.warning /* Warnings that are separate from div.messages status messages. */
-{
+.warning /* Warnings that are separate from div.messages status messages. */ {
   /* color: #e09010; */ /* Drupal core uses a #e09010 background */
 }
 
-div.tabs /* See also the tabs.css file. */
-{
+div.tabs /* See also the tabs.css file. */ {
 }
 
-.help /* Help text on a page */
-{
+.help /* Help text on a page */ {
   margin: 1em 0;
 }
 
-.more-help-link /* Link to more help */
-{
+.more-help-link /* Link to more help */ {
   font-size: 0.85em;
   text-align: right;
 }
 
-#content-area /* Wrapper for the actual page content */
-{
+#content-area /* Wrapper for the actual page content */ {
 }
 
-ul.links /* List of links */
-{
+ul.links /* List of links */ {
   margin: 1em 0;
   padding: 0;
 }
 
-ul.links.inline
-{
+ul.links.inline {
   margin: 0;
   display: inline;
 }
 
-ul.links li
-{
+ul.links li {
   display: inline;
   list-style-type: none;
   padding: 0 0.5em;
 }
 
-.pager /* A list of page numbers when more than 1 page of content is available */
-{
+.pager /* A list of page numbers when more than 1 page of content is available */ {
   clear: both;
   margin: 1em 0;
   text-align: center;
 }
 
-.pager a, .pager strong.pager-current /* Each page number in the pager list */
-{
+.pager a, .pager strong.pager-current /* Each page number in the pager list */ {
   padding: 0.5em;
 }
 
-.feed-icons /* The links to the RSS or Atom feeds for the current list of content */
-{
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
   margin: 1em 0;
 }
 
-.more-link /* Aggregator, blog, and forum more link */
-{
+.more-link /* Aggregator, blog, and forum more link */ {
   text-align: right; /* LTR */
 }
 
-#content-bottom /* Wrapper for any blocks placed in the "content bottom" region */
-{
+#content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
 }
 
 /*
@@ -232,12 +190,10 @@ ul.links li
  * Remember to NOT add padding or margin to your #sidebar-first
  * (see the layout.css file.)
  */
-#sidebar-first
-{
+#sidebar-first {
 }
 
-#sidebar-first-inner
-{
+#sidebar-first-inner {
 }
 
 /*
@@ -246,35 +202,29 @@ ul.links li
  * Remember to NOT add padding or margin to your #sidebar-second
  * (see the layout.css file.)
  */
-#sidebar-second
-{
+#sidebar-second {
 }
 
-#sidebar-second-inner
-{
+#sidebar-second-inner {
 }
 
 /*
  * Footer
  */
-#footer
-{
+#footer {
 }
 
-#footer-inner
-{
+#footer-inner {
 }
 
 #footer-message /* Wrapper for the footer message from Drupal's "Site information"
-                   and for any blocks placed in the footer region */
-{
+                   and for any blocks placed in the footer region */ {
 }
 
 /*
  * Closure
  */
-#closure-blocks /* Wrapper for any blocks placed in the closure region */
-{
+#closure-blocks /* Wrapper for any blocks placed in the closure region */ {
 }
 
 /*
@@ -283,23 +233,19 @@ ul.links li
  * Wrapper for Comment form, Comment viewing options, Menu admin, and
  * Search results.
  */
-.box /* Wrapper for box */
-{
+.box /* Wrapper for box */ {
 }
 
-.box h2 /* Box title */
-{
+.box h2 /* Box title */ {
 }
 
-.box .content /* Box's content wrapper */
-{
+.box .content /* Box's content wrapper */ {
 }
 
 /*
  * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
  */
-.clearfix:after
-{
+.clearfix:after {
   content: ".";
   display: block;
   height: 0;

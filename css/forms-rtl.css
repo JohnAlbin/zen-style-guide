@@ -9,8 +9,7 @@
 /*
  * Drupal's default login form block
  */
-#user-login-form
-{
+#user-login-form {
   text-align: right;
 }
 
@@ -22,15 +21,13 @@
  * styling of list items.
  */
 
-#user-login-form li.openid-link /* The "Log in using OpenID" link. */
-{
+#user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
   margin-left: 0;
   margin-right: -20px; /* Un-do some of the padding on the ul list. */
 }
 
 #user-login li.openid-link, /* The OpenID links on the /user form. */
-#user-login li.user-link
-{
+#user-login li.user-link {
   margin-left: 0;
   margin-right: -2em; /* Un-do all of the padding on the ul list. */
 }
@@ -44,8 +41,7 @@
  */
 
 form th,
-form thead th
-{
+form thead th {
   text-align: right;
   padding-left: 1em;
   padding-right: 0;

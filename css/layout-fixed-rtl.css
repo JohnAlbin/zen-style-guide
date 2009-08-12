@@ -9,16 +9,14 @@
 /*
  * Body
  */
-#skip-to-nav
-{
+#skip-to-nav {
   float: left;
 }
 
 /*
  * Header
  */
-#logo
-{
+#logo {
   float: right;
 }
 
@@ -26,27 +24,23 @@
  * Content
  */
 #content,
-.no-sidebars #content
-{
+.no-sidebars #content {
   float: right;
   margin-left: -960px;
   margin-right: 0; /* Negative value of #content's width + left margin. */
 }
 
-.sidebar-first #content
-{
+.sidebar-first #content {
   margin-left: -960px; /* The width of #sidebar-first. */
   margin-right: 200px; /* Negative value of #content's width + left margin. */
 }
 
-.sidebar-second #content
-{
+.sidebar-second #content {
   margin-left: -760px;
   margin-right: 0; /* Negative value of #content's width + left margin. */
 }
 
-.two-sidebars #content
-{
+.two-sidebars #content {
   margin-left: -760px; /* The width of #sidebar-first */
   margin-right: 200px; /* Negative value of #content's width + left margin. */
 }
@@ -54,20 +48,17 @@
 /*
  * Navbar
  */
-#navbar
-{
+#navbar {
   float: right;
   margin-left: -100%;
   margin-right: 0; /* Negative value of #navbar's width + left margin. */
 }
 
-#navbar ul /* Primary and secondary links */
-{
+#navbar ul /* Primary and secondary links */ {
   text-align: right;
 }
 
-#navbar li /* A simple method to get navbar links to appear in one line. */
-{
+#navbar li /* A simple method to get navbar links to appear in one line. */ {
   float: right;
   padding: 0 0 0 10px;
 }
@@ -75,29 +66,25 @@
 /*
  * First sidebar
  */
-#sidebar-first
-{
+#sidebar-first {
   float: right;
   margin-left: -200px;
   margin-right: 0; /* Negative value of #sidebar-first's width + left margin. */
 }
 
-#sidebar-first-inner
-{
+#sidebar-first-inner {
   margin: 0 0 0 20px;
 }
 
 /*
  * Second sidebar
  */
-#sidebar-second
-{
+#sidebar-second {
   float: right;
   margin-left: -960px; /* Width of content + sidebar-first. */
   margin-right: 760px; /* Negative value of #sidebar-second's width + left margin. */
 }
 
-#sidebar-second-inner
-{
+#sidebar-second-inner {
   margin: 0 20px 0 0;
 }

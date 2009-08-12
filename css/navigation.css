@@ -9,43 +9,36 @@
 /*
  * The active item in a Drupal menu
  */
-li a.active
-{
+li a.active {
   color: #000;
 }
 
 /*
  * Navigation bar
  */
-#navbar
-{
+#navbar {
 }
 
-#navbar-inner
-{
+#navbar-inner {
 }
 
 /*
  * Primary and Secondary links
  */
-#primary
-{
+#primary {
 }
 
-#secondary
-{
+#secondary {
 }
 
 /*
  * Menu blocks
  */
-.block-menu
-{
+.block-menu {
 }
 
 /*
  * "Menu block" blocks. See http://drupal.org/project/menu_block
  */
-.block-menu_block
-{
+.block-menu_block {
 }

@@ -9,15 +9,13 @@
 /*
  * Header
  */
-#logo /* Wrapper for logo */
-{
+#logo /* Wrapper for logo */ {
   margin: 0 0 0 10px;
 }
 
 /*
  * Content
  */
-.more-link /* Aggregator, blog, and forum more link */
-{
+.more-link /* Aggregator, blog, and forum more link */ {
   text-align: left;
 }

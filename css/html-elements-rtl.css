@@ -11,20 +11,17 @@
  *
  * We need to standardize the list item indentation.
  */
-ul, ol
-{
+ul, ol {
   padding-left: 0;
   padding-right: 2em;
 }
 
 .block ul, /* Drupal overrides */
-.item-list ul
-{
+.item-list ul {
   padding: 0 2em 0 0;
 }
 
-dd
-{
+dd {
   margin: 0 2em 0 0;
 }
 
@@ -36,7 +33,6 @@ dd
  */
 th,
 thead th,
-tbody th
-{
+tbody th {
   text-align: right;
 }

@@ -11,13 +11,11 @@
  */
 
 
-div.tabs
-{
+div.tabs {
   margin: 0 0 5px 0;
 }
 
-ul.primary
-{
+ul.primary {
   margin: 0;
   padding: 0 0 0 10px; /* LTR */
   border-width: 0;
@@ -27,15 +25,13 @@ ul.primary
   background: url(../images/tab-bar.png) repeat-x left bottom;
 }
 
-ul.primary li
-{
+ul.primary li {
   float: left; /* LTR */
   margin: 0;
   padding: 0;
 }
 
-ul.primary li a
-{
+ul.primary li a {
   display: block;
   height: 24px;
   margin: 0;
@@ -48,8 +44,7 @@ ul.primary li a
   background: url(../images/tab-left.png) no-repeat left -38px;
 }
 
-ul.primary li a .tab
-{
+ul.primary li a .tab {
   display: block;
   height: 20px; /* 24px (parent) - 4px (padding) */
   margin: 0;
@@ -59,21 +54,18 @@ ul.primary li a .tab
   background: url(../images/tab-right.png) no-repeat right -38px;
 }
 
-ul.primary li a:hover
-{
+ul.primary li a:hover {
   border-width: 0;
   background-color: transparent;
   background: url(../images/tab-left.png) no-repeat left -76px;
 }
 
-ul.primary li a:hover .tab
-{
+ul.primary li a:hover .tab {
   background: url(../images/tab-right.png) no-repeat right -76px;
 }
 
 ul.primary li.active a,
-ul.primary li.active a:hover
-{
+ul.primary li.active a:hover {
   border-width: 0;
   color: #000;
   background-color: transparent;
@@ -81,13 +73,11 @@ ul.primary li.active a:hover
 }
 
 ul.primary li.active a .tab,
-ul.primary li.active a:hover .tab
-{
+ul.primary li.active a:hover .tab {
   background: url(../images/tab-right.png) no-repeat right 0;
 }
 
-ul.secondary
-{
+ul.secondary {
   margin: 0;
   padding: 0 0 0 5px; /* LTR */
   border-bottom: 1px solid #c0c0c0;
@@ -96,16 +86,14 @@ ul.secondary
   background: url(../images/tab-secondary-bg.png) repeat-x left bottom;
 }
 
-ul.secondary li
-{
+ul.secondary li {
   float: left; /* LTR */
   margin: 0 5px 0 0;
   padding: 5px 0;
   border-right: none; /* LTR */
 }
 
-ul.secondary a
-{
+ul.secondary a {
   display: block;
   height: 24px;
   margin: 0;
@@ -116,8 +104,7 @@ ul.secondary a
   background: url(../images/tab-secondary.png) repeat-x left -56px;
 }
 
-ul.secondary a .tab
-{
+ul.secondary a .tab {
   display: block;
   height: 18px; /* 24px (parent) - 6px (padding) */
   margin: 0;
@@ -125,14 +112,12 @@ ul.secondary a .tab
   line-height: 18px;
 }
 
-ul.secondary a:hover
-{
+ul.secondary a:hover {
   background: url(../images/tab-secondary.png) repeat-x left bottom;
 }
 
 ul.secondary a.active,
-ul.secondary a.active:hover
-{
+ul.secondary a.active:hover {
   border: 1px solid #c0c0c0;
   color: #000;
   background: url(../images/tab-secondary.png) repeat-x left top;

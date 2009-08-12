@@ -21,13 +21,11 @@
 /*
  * Body
  */
-body
-{
+body {
 }
 
 #page,
-#closure-blocks
-{
+#closure-blocks {
   /*
    * If you want to make the page a fixed width and centered in the viewport,
    * this is the standards-compliant way to do that. See also the ie6.css file
@@ -38,31 +36,26 @@ body
   width: 960px;
 }
 
-#page-inner
-{
+#page-inner {
 }
 
 #navigation-top,
-#navigation
-{
+#navigation {
   position: absolute; /* Take the named anchors out of the doc flow    */
   left: -10000px;     /* and prevent any anchor styles from appearing. */
 }
 
-#skip-to-nav
-{
+#skip-to-nav {
   float: right; /* LTR */
   margin: 0 !important;
   font-size: 0.8em;
 }
 
-#skip-to-nav a:link, #skip-to-nav a:visited
-{
+#skip-to-nav a:link, #skip-to-nav a:visited {
   color: #fff; /* Same as background color of page */
 }
 
-#skip-to-nav a:hover
-{
+#skip-to-nav a:hover {
   color: #000;
   text-decoration: none;
 }
@@ -70,8 +63,7 @@ body
 /* Alternatively, the skip-to-nav link can be completely hidden until a user tabs
    to the link. Un-comment the following CSS to use this technique. */
 /*
-#skip-to-nav a, #skip-to-nav a:hover, #skip-to-nav a:visited
-{
+#skip-to-nav a, #skip-to-nav a:hover, #skip-to-nav a:visited {
   position: absolute;
   left: 0;
   top: -500px;
@@ -80,8 +72,7 @@ body
   overflow: hidden;
 }
 
-#skip-to-nav a:active, #skip-to-nav a:focus
-{
+#skip-to-nav a:active, #skip-to-nav a:focus {
   position: static;
   width: auto;
   height: auto;
@@ -91,58 +82,47 @@ body
 /*
  * Header
  */
-#header
-{
+#header {
 }
 
-#header-inner
-{
+#header-inner {
 }
 
-#logo-title
-{
+#logo-title {
 }
 
-#logo
-{
+#logo {
   float: left; /* LTR */
 }
 
-#site-name
-{
+#site-name {
 }
 
-#site-slogan
-{
+#site-slogan {
 }
 
-#search-box
-{
+#search-box {
 }
 
-#header-blocks
-{
+#header-blocks {
   clear: both; /* Clear the logo */
 }
 
 /*
  * Main (container for everything else)
  */
-#main
-{
+#main {
   position: relative;
 }
 
-#main-inner
-{
+#main-inner {
 }
 
 /*
  * Content
  */
 #content,
-.no-sidebars #content
-{
+.no-sidebars #content {
   float: left; /* LTR */
   width: 960px;
   margin-left: 0; /* LTR */
@@ -150,29 +130,25 @@ body
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content-inner. */
 }
 
-.sidebar-first #content
-{
+.sidebar-first #content {
   width: 760px;
   margin-left: 200px; /* LTR */ /* The width of #sidebar-first. */
   margin-right: -960px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-.sidebar-second #content
-{
+.sidebar-second #content {
   width: 760px;
   margin-left: 0; /* LTR */
   margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-.two-sidebars #content
-{
+.two-sidebars #content {
   width: 560px;
   margin-left: 200px; /* LTR */ /* The width of #sidebar-first */
   margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-#content-inner
-{
+#content-inner {
   margin: 0;
   padding: 0;
 }
@@ -180,8 +156,7 @@ body
 /*
  * Navbar
  */
-#navbar
-{
+#navbar {
   float: left; /* LTR */
   width: 100%;
   margin-left: 0; /* LTR */
@@ -194,32 +169,26 @@ body
 
 .with-navbar #content,
 .with-navbar #sidebar-first,
-.with-navbar #sidebar-second
-{
+.with-navbar #sidebar-second {
   margin-top: 3.6em; /* Set this to the same value as the navbar height above. */
 }
 
-#navbar-inner
-{
+#navbar-inner {
 }
 
-#primary
-{
+#primary {
 }
 
-#secondary
-{
+#secondary {
 }
 
-#navbar ul /* Primary and secondary links */
-{
+#navbar ul /* Primary and secondary links */ {
   margin: 0;
   padding: 0;
   text-align: left; /* LTR */
 }
 
-#navbar li /* A simple method to get navbar links to appear in one line. */
-{
+#navbar li /* A simple method to get navbar links to appear in one line. */ {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
 }
@@ -227,8 +196,7 @@ body
 /*
  * First sidebar
  */
-#sidebar-first
-{
+#sidebar-first {
   float: left; /* LTR */
   width: 200px;
   margin-left: 0; /* LTR */
@@ -236,8 +204,7 @@ body
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-first-inner. */
 }
 
-#sidebar-first-inner
-{
+#sidebar-first-inner {
   margin: 0 20px 0 0; /* LTR */
   padding: 0;
 }
@@ -245,8 +212,7 @@ body
 /*
  * Second sidebar
  */
-#sidebar-second
-{
+#sidebar-second {
   float: left; /* LTR */
   width: 200px;
   margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
@@ -254,8 +220,7 @@ body
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-second-inner. */
 }
 
-#sidebar-second-inner
-{
+#sidebar-second-inner {
   margin: 0 0 0 20px; /* LTR */
   padding: 0;
 }
@@ -263,19 +228,16 @@ body
 /*
  * Footer
  */
-#footer
-{
+#footer {
 }
 
-#footer-inner
-{
+#footer-inner {
 }
 
 /*
  * Closure
  */
-#closure-blocks /* See also the #page declaration above that this div shares. */
-{
+#closure-blocks /* See also the #page declaration above that this div shares. */ {
 }
 
 /*
@@ -287,14 +249,12 @@ body
 #sidebar-first,
 #sidebar-second,
 #footer,
-#closure-blocks
-{
+#closure-blocks {
   overflow: visible;
   word-wrap: break-word; /* A very nice CSS3 property */
 }
 
-#navbar
-{
+#navbar {
   overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
 }
 
@@ -307,8 +267,7 @@ body
  * to appear on the #page div.
  */
 /*
-#page
-{
+#page {
   overflow-y: hidden;
 }
 */

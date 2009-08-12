@@ -9,22 +9,19 @@
 
 
 /* underline all links */
-a:link, a:visited
-{
+a:link, a:visited {
   text-decoration: underline !important;
 }
 
 /* Don't underline header */
 #site-name a:link,
-#site-name a:visited
-{
+#site-name a:visited {
   text-decoration: none !important;
 }
 
 /* CSS2 selector to add visible href after links */
 #content a:link:after,
-#content a:visited:after
-{
+#content a:visited:after {
   content: " (" attr(href) ") ";
   font-size: 0.8em;
   font-weight: normal;
@@ -32,8 +29,7 @@ a:link, a:visited
 
 /* Un-float the content */
 #content,
-#content-inner
-{
+#content-inner {
   float: none;
   width: 100%;
   margin: 0 !important;
@@ -44,8 +40,7 @@ a:link, a:visited
 body,
 #page, #page-inner,
 #main, #main-inner,
-#content, #content-inner
-{
+#content, #content-inner {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
@@ -54,15 +49,13 @@ body,
 /* Hide sidebars and nav elements */
 #skip-to-nav, #navbar, #sidebar-first, #sidebar-second, #footer,
 .breadcrumb, div.tabs, .links, .taxonomy,
-.book-navigation, .forum-topic-navigation, .pager, .feed-icons
-{
+.book-navigation, .forum-topic-navigation, .pager, .feed-icons {
   visibility: hidden;
   display: none;
 }
 
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
    the content after the first page. */
-#page
-{
+#page {
   overflow-y: visible;
 }

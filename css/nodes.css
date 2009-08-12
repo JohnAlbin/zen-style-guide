@@ -8,26 +8,21 @@
  */
 
 
-.node /* Node wrapper */
-{
+.node /* Node wrapper */ {
 }
 
-.node-inner /* Additional wrapper for node */
-{
+.node-inner /* Additional wrapper for node */ {
 }
 
-.sticky /* A sticky node (displayed before others in a list) */
-{
+.sticky /* A sticky node (displayed before others in a list) */ {
 }
 
-.node-unpublished /* Unpublished nodes */
-{
+.node-unpublished /* Unpublished nodes */ {
   /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
 }
 
 .node-unpublished div.unpublished, /* The word "Unpublished" displayed underneath the content. */
-.comment-unpublished div.unpublished
-{
+.comment-unpublished div.unpublished {
   height: 0;
   overflow: visible;
   color: #d8d8d8;
@@ -40,66 +35,52 @@
   word-wrap: break-word; /* A very nice CSS3 property */
 }
 
-.node-mine /* A node created by the current user */
-{
+.node-mine /* A node created by the current user */ {
 }
 
-.node-teaser /* A node displayed as teaser */
-{
+.node-teaser /* A node displayed as teaser */ {
 }
 
 /* All nodes are given a node-type-FOO class that describes the type of
  * content that it is. If you create a new content type called
  * "my-custom-type", it will receive a "node-type-my-custom-type" class.
  */
-.node-type-page /* Page content node */
-{
+.node-type-page /* Page content node */ {
 }
 
-.node-type-story /* Story content node */
-{
+.node-type-story /* Story content node */ {
 }
 
-.node h2.title /* Node title */
-{
+.node h2.title /* Node title */ {
 }
 
-.marker /* "New" or "Updated" marker for content that is new or updated for the current user */
-{
+.marker /* "New" or "Updated" marker for content that is new or updated for the current user */ {
   color: #c00;
 }
 
-.node .picture /* The picture of the node author */
-{
+.node .picture /* The picture of the node author */ {
 }
 
 .node.node-unpublished .picture,
-.comment.comment-unpublished .picture
-{
+.comment.comment-unpublished .picture {
   position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
 }
 
-.node .meta /* Wrapper for submitted and terms data */
-{
+.node .meta /* Wrapper for submitted and terms data */ {
 }
 
-.node .submitted /* The "posted by" information */
-{
+.node .submitted /* The "posted by" information */ {
 }
 
-.node .terms /* Node terms (taxonomy) */
-{
+.node .terms /* Node terms (taxonomy) */ {
 }
 
-.node .content /* Node's content wrapper */
-{
+.node .content /* Node's content wrapper */ {
 }
 
-.node ul.links /* Node links. See also the ul.links declaration in the pages.css. */
-{
+.node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
 }
 
-.preview .node /* Preview of the content before submitting new or updated content */
-{
+.preview .node /* Preview of the content before submitting new or updated content */ {
   /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
 }

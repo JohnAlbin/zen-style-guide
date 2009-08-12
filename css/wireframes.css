@@ -14,15 +14,13 @@
 .with-wireframes #navbar-inner,
 .with-wireframes #sidebar-first-inner,
 .with-wireframes #sidebar-second-inner,
-.with-wireframes #footer-inner
-{
+.with-wireframes #footer-inner {
   margin: 1px;
   padding: 2px;
   border: 1px solid #ccc;
 }
 
-.with-wireframes #closure-blocks
-{
+.with-wireframes #closure-blocks {
   margin-top: 1px;
   padding: 2px;
   border: 1px solid #ccc;
