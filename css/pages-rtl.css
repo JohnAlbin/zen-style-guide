@@ -9,7 +9,8 @@
 /*
  * Header
  */
-#logo /* Wrapper for logo */ {
+#logo /* Wrapping link for logo */ {
+  float: right;
   margin: 0 0 0 10px;
 }
 

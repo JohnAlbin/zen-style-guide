@@ -33,15 +33,13 @@ body {
 #header-inner {
 }
 
-#logo-title /* Wrapper for logo, website name, and slogan */ {
-}
-
-#logo /* Wrapper for logo */ {
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
   margin: 0 10px 0 0; /* LTR */
   padding: 0;
 }
 
-#logo-image /* The actual logo image */ {
+#name-and-slogan /* Wrapper for website name and slogan */ {
 }
 
 h1#site-name,
