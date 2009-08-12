@@ -1,0 +1,23 @@
+/* $Id$ */
+
+/**
+ * @file
+ * RTL companion for the pages.css file.
+ */
+
+
+/*
+ * Header
+ */
+#logo /* Wrapper for logo */
+{
+  margin: 0 0 0 10px;
+}
+
+/*
+ * Content
+ */
+.more-link /* Aggregator, blog, and forum more link */
+{
+  text-align: left;
+}

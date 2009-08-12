@@ -63,21 +63,6 @@
  */
 
 
-/*
- * Add any conditional stylesheets you will need for this sub-theme.
- *
- * To add stylesheets that ALWAYS need to be included, you should add them to
- * your .info file instead. Only use this section if you are including
- * stylesheets based on certain conditions.
- */
-/* -- Delete this line if you want to use and modify this code
-// Example: optionally add a fixed width CSS file.
-if (theme_get_setting('STARTERKIT_fixed')) {
-  drupal_add_css(path_to_theme() . '/layout-fixed.css', 'theme', 'all');
-}
-// */
-
-
 /**
  * Implementation of HOOK_theme().
  */

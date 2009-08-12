@@ -25,32 +25,32 @@ base theme = zen
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
-stylesheets[all][]   = html-elements.css
-; stylesheets[all][] = wireframes.css
-stylesheets[all][]   = layout.css
-stylesheets[all][]   = backgrounds.css
-; stylesheets[all][] = tabs.css
-; stylesheets[all][] = messages.css
-stylesheets[all][]   = pages.css
-; stylesheets[all][] = block-editing.css
-stylesheets[all][]   = blocks.css
-stylesheets[all][]   = navigation.css
-stylesheets[all][]   = views-styles.css
-stylesheets[all][]   = nodes.css
-stylesheets[all][]   = comments.css
-stylesheets[all][]   = forms.css
-stylesheets[all][]   = fields.css
-stylesheets[print][] = print.css
-; stylesheets[handheld][] = mobile.css
-; stylesheets[only screen and (max-device-width: 480px)][] = iphone.css
+stylesheets[all][]   = css/html-elements.css
+stylesheets[all][]   = css/wireframes.css
+stylesheets[all][]   = css/layout.css
+stylesheets[all][]   = css/backgrounds.css
+stylesheets[all][]   = css/tabs.css
+stylesheets[all][]   = css/messages.css
+stylesheets[all][]   = css/pages.css
+stylesheets[all][]   = css/block-editing.css
+stylesheets[all][]   = css/blocks.css
+stylesheets[all][]   = css/navigation.css
+stylesheets[all][]   = css/views-styles.css
+stylesheets[all][]   = css/nodes.css
+stylesheets[all][]   = css/comments.css
+stylesheets[all][]   = css/forms.css
+stylesheets[all][]   = css/fields.css
+stylesheets[print][] = css/print.css
+; stylesheets[handheld][] = css/mobile.css
+; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 
   ; Set the conditional stylesheets that are processed by IE.
-; conditional-stylesheets[if IE][all][]       = ie.css
-; conditional-stylesheets[if lte IE 6][all][] = ie6.css
-; conditional-stylesheets[if lte IE 5][all][] = ie5.css
+; conditional-stylesheets[if IE][all][]       = css/ie.css
+; conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
+; conditional-stylesheets[if lte IE 5][all][] = css/ie5.css
 
   ; Optionally add some jquery scripts to your theme.
-; scripts[] = script.js
+; scripts[] = js/script.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
