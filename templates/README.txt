@@ -71,7 +71,7 @@ Located in modules/search:
 
 Located in modules/system:
   block.tpl.php  (overridden by Zen)
-  box.tpl.php  (overridden by Zen)
+  box.tpl.php
   maintenance-page.tpl.php  (overridden by Zen)
   page.tpl.php  (overridden by Zen)
 
