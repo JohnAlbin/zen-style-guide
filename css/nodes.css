@@ -14,7 +14,7 @@
 .node-inner /* Additional wrapper for node */ {
 }
 
-.sticky /* A sticky node (displayed before others in a list) */ {
+.node-sticky /* A sticky node (displayed before others in a list) */ {
 }
 
 .node-unpublished /* Unpublished nodes */ {
