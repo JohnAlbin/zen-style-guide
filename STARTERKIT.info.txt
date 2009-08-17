@@ -47,7 +47,6 @@ stylesheets[print][] = css/print.css
   ; Set the conditional stylesheets that are processed by IE.
 ; conditional-stylesheets[if IE][all][]       = css/ie.css
 ; conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
-; conditional-stylesheets[if lte IE 5][all][] = css/ie5.css
 
   ; Optionally add some jquery scripts to your theme.
 ; scripts[] = js/script.js
