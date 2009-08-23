@@ -27,7 +27,7 @@ base theme = zen
   ; http://drupal.org/node/171209 for more details.
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
-stylesheets[all][]   = css/layout.css
+stylesheets[all][]   = css/layout-fixed.css
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css

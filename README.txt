@@ -53,19 +53,26 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     Then, visit your site's admin/build/themes to refresh Drupal 6's cache of
     .info file data.
 
- 3. If you want a liquid layout for your theme, rename the layout-liquid.css to
-    layout.css, rename the layout-liquid-rtl.css to layout-rtl.css and delete
-    the unneeded layout-fixed.css and layout-fixed-rtl.css files. If you want a
-    fixed layout for your theme, rename the layout-fixed.css to layout.css,
-    rename the layout-fixed-rtl.css to layout-rtl.css and delete the unneeded
-    layout-liquid.css and layout-liquid-rtl.css files. Alternatively, if you are
-    more familiar with a different CSS layout method, such as Blueprint or
-    960.gs, you can create your own layout.css file with the method of your
-    choice.
+ 3. By default your new sub-theme is using a fixed-width layout. If you want a
+    liquid layout for your theme, delete the unneeded layout-fixed.css and
+    layout-fixed-rtl.css files and edit your sub-theme's .info file and replace
+    the reference to layout-fixed.css with layout-liquid.css.
 
-    For example, rename foo/layout-fixed.css as foo/layout.css and rename
-    foo/layout-fixed-rtl.css to foo/layout.css. Note that the .info file already
-    has an entry for your layout.css file.
+    For example, edit foo/foo.info and change this line:
+      stylesheets[all][]   = css/layout-fixed.css
+    to:
+      stylesheets[all][]   = css/layout-liquid.css
+
+      Why? The "stylesheets" lines in your .info file describe the media type
+      and path to the CSS file you want to include. The format for these lines
+      is:  stylesheets[MEDIA][] = path/to/file.css
+
+    Then, visit your site's admin/build/themes to refresh Drupal 6's cache of
+    .info file data.
+
+    Alternatively, if you are more familiar with a different CSS layout method,
+    such as Blueprint or 960.gs, you can replace the "css/layout-fixed.css" line
+    in your .info file with a line pointing at your choice of layout CSS file.
 
  4. Edit the template.php and theme-settings.php files in your sub-theme's
     folder; replace ALL occurrences of "STARTERKIT" with the name of your
@@ -85,7 +92,7 @@ Optional:
     zen folder, copy them to your sub-theme's folder before making any changes.
     And then rebuild the theme registry.
 
-    For example, copy zen/zen/page.tpl.php to foo/page.tpl.php.
+    For example, copy zen/templates/page.tpl.php to foo/templates/page.tpl.php.
 
  7. THEMEING DRUPAL'S SEARCH FORM:
     Copy the search-theme-form.tpl.php template file from the modules/search/
