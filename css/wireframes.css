@@ -11,10 +11,10 @@
 .with-wireframes #header-inner,
 .with-wireframes #content-inner,
 .with-wireframes #content-inner>*,
-.with-wireframes #navbar-inner,
+.with-wireframes .region-navbar,
 .with-wireframes #sidebar-first-inner,
 .with-wireframes #sidebar-second-inner,
-.with-wireframes #footer-inner {
+.with-wireframes .region-footer {
   margin: 1px;
   padding: 2px;
   border: 1px solid #ccc;

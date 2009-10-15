@@ -62,7 +62,7 @@ div#site-name /* The name of the website */ {
 #site-slogan /* The slogan (or tagline) of a website */ {
 }
 
-#header-blocks /* Wrapper for any blocks placed in the header region */ {
+.region-header /* Wrapper for any blocks placed in the header region */ {
 }
 
 /*
@@ -86,7 +86,7 @@ div#site-name /* The name of the website */ {
 #mission /* The mission statement of the site (displayed on homepage) */ {
 }
 
-#content-top /* Wrapper for any blocks placed in the "content top" region */ {
+.region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
 }
 
 #content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */ {
@@ -183,7 +183,7 @@ ul.links li {
   text-align: right; /* LTR */
 }
 
-#content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
+.region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
 }
 
 /*
@@ -216,7 +216,7 @@ ul.links li {
 #footer {
 }
 
-#footer-inner {
+.region-footer {
 }
 
 #footer-message /* Wrapper for the footer message from Drupal's "Site information"
