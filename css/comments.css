@@ -10,7 +10,7 @@
   margin: 1em 0;
 }
 
-#comments-title /* Heading for the list of comments */ {
+#comments .title /* Heading for the list of comments */ {
 }
 
 .comment /* Wrapper for a single comment */ {
