@@ -25,16 +25,16 @@
 .comment.new /* A new comment since the user last viewed the page. */ {
 }
 
-.comment.odd /* An odd-numbered comment in the list of comments */ {
-}
-
-.comment.even /* An even-numbered comment in the list of comments */ {
-}
-
 .comment.first /* The first comment in the list of comments */ {
 }
 
 .comment.last /* The last comment in the list of comments */ {
+}
+
+.comment.odd /* An odd-numbered comment in the list of comments */ {
+}
+
+.comment.even /* An even-numbered comment in the list of comments */ {
 }
 
 .comment-unpublished /* Unpublished comments */ {
@@ -44,16 +44,13 @@
 .comment-unpublished div.unpublished /* The word "Unpublished" displayed underneath the content. See also the div.unpublished declaration in the nodes.css. */ {
 }
 
-.comment-published /* Published comments */ {
+.comment-by-anonymous /* A comment created by an anonymous user */ {
 }
 
-.comment-by-anon /* A comment created by an anonymous user */ {
+.comment-by-node-author /* A comment created by the node's author */ {
 }
 
-.comment-by-author /* A comment created by the node's author */ {
-}
-
-.comment-mine /* A comment created by the current user */ {
+.comment-by-viewer /* A comment created by the current user */ {
 }
 
 .comment h3.title /* Comment title */ {
