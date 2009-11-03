@@ -60,8 +60,8 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[left]           = first sidebar
-regions[right]          = second sidebar
+regions[sidebar_first]  = first sidebar
+regions[sidebar_second] = second sidebar
 regions[navbar]         = navigation bar
 regions[content_top]    = content top
 regions[content_bottom] = content bottom
