@@ -24,7 +24,7 @@
 body {
 }
 
-#page,
+#page-wrapper,
 #closure-blocks {
   /*
    * If you want to make the page a fixed width and centered in the viewport,
@@ -36,7 +36,7 @@ body {
   width: 960px;
 }
 
-#page-inner {
+#page {
 }
 
 #navigation-top,
@@ -222,7 +222,7 @@ body {
 /*
  * Closure
  */
-#closure-blocks /* See also the #page declaration above that this div shares. */ {
+#closure-blocks /* See also the #page-wrapper declaration above that this div shares. */ {
 }
 
 /*
@@ -249,10 +249,10 @@ body {
  * place several pixels worth of space between the bottom of the div and the
  * bottom of the viewport. Uncomment this CSS property to fix this.
  * Note: with some over-large content, this property might cause scrollbars
- * to appear on the #page div.
+ * to appear on the #page-wrapper div.
  */
 /*
-#page {
+#page-wrapper {
   overflow-y: hidden;
 }
 */
