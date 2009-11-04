@@ -13,7 +13,7 @@
 .with-wireframes .region-navigation .section,
 .with-wireframes .region-sidebar-first .section,
 .with-wireframes .region-sidebar-second .section,
-.with-wireframes .region-footer .section {
+.with-wireframes #footer .section {
   margin: 1px;
   padding: 2px;
   border: 1px solid #ccc;
