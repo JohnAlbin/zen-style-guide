@@ -25,7 +25,7 @@ body {
 }
 
 #content,
-#navbar,
+#navigation,
 #sidebar-first,
 #sidebar-second /* Floating divs */ {
   display: inline; /* display inline or double your floated margin! [1] */

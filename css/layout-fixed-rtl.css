@@ -32,19 +32,19 @@
 }
 
 /*
- * Navbar
+ * Navigation
  */
-#navbar {
+#navigation {
   float: right;
   margin-left: -100%;
-  margin-right: 0; /* Negative value of #navbar's width + left margin. */
+  margin-right: 0; /* Negative value of #navigation's width + left margin. */
 }
 
-#navbar ul /* Primary and secondary links */ {
+#navigation ul /* Primary and secondary links */ {
   text-align: right;
 }
 
-#navbar li /* A simple method to get navbar links to appear in one line. */ {
+#navigation li /* A simple method to get navigation links to appear in one line. */ {
   float: right;
   padding: 0 0 0 10px;
 }
