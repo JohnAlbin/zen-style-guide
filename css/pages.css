@@ -106,7 +106,7 @@ div#site-name /* The name of the website */ {
 #content {
 }
 
-#content-inner {
+#content .section {
 }
 
 #mission /* The mission statement of the site (displayed on homepage) */ {

@@ -66,26 +66,26 @@ body {
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content-inner. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
-#content-inner,
-.no-sidebars #content-inner {
+#content .section,
+.no-sidebars #content .section {
   margin: 0;
   padding: 0;
 }
 
-.sidebar-first #content-inner {
+.sidebar-first #content .section {
   padding-left: 200px; /* LTR */ /* The width + left margin of #sidebar-first. */
   padding-right: 0; /* LTR */
 }
 
-.sidebar-second #content-inner {
+.sidebar-second #content .section {
   padding-left: 0; /* LTR */
   padding-right: 200px; /* LTR */ /* The width + right margin of #sidebar-second. */
 }
 
-.two-sidebars #content-inner {
+.two-sidebars #content .section {
   padding-left: 200px; /* The width + left margin of #sidebar-first. */
   padding-right: 200px; /* The width + right margin of #sidebar-second. */
 }

@@ -74,7 +74,7 @@ body {
   width: 960px;
   margin-left: 0; /* LTR */
   margin-right: -960px; /* LTR */ /* Negative value of #content's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content-inner. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
 .sidebar-first #content {
@@ -95,7 +95,7 @@ body {
   margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-#content-inner {
+#content .section {
   margin: 0;
   padding: 0;
 }

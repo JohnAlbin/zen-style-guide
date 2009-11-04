@@ -15,12 +15,12 @@
   margin-right: 0; /* Negative value of #content's width + left margin. */
 }
 
-.sidebar-first #content-inner {
+.sidebar-first #content .section {
   padding-left: 0; /* The width + left margin of #sidebar-first. */
   padding-right: 200px;
 }
 
-.sidebar-second #content-inner {
+.sidebar-second #content .section {
   padding-left: 200px;
   padding-right: 0; /* The width + right margin of #sidebar-second. */
 }
