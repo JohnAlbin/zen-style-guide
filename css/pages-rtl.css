@@ -7,6 +7,13 @@
 
 
 /*
+ * Body
+ */
+#skip-to-nav {
+  float: left;
+}
+
+/*
  * Header
  */
 #logo /* Wrapping link for logo */ {
