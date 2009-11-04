@@ -115,9 +115,6 @@ div#site-name /* The name of the website */ {
 .region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
 }
 
-#content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */ {
-}
-
 .breadcrumb /* The path to the current page in the form of a list of links */ {
   padding-bottom: 0; /* Undo system.css */
 }
