@@ -51,11 +51,11 @@ body {
 /*
  * Main (container for everything else)
  */
-#main {
+#main-wrapper {
   position: relative;
 }
 
-#main-inner {
+#main {
 }
 
 /*
