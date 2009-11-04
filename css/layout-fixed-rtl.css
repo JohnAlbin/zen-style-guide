@@ -17,7 +17,7 @@
 }
 
 .sidebar-first #content {
-  margin-left: -960px; /* The width of #sidebar-first. */
+  margin-left: -960px; /* The width of .region-sidebar-first. */
   margin-right: 200px; /* Negative value of #content's width + left margin. */
 }
 
@@ -27,7 +27,7 @@
 }
 
 .two-sidebars #content {
-  margin-left: -760px; /* The width of #sidebar-first */
+  margin-left: -760px; /* The width of .region-sidebar-first */
   margin-right: 200px; /* Negative value of #content's width + left margin. */
 }
 
@@ -52,25 +52,25 @@
 /*
  * First sidebar
  */
-#sidebar-first {
+.region-sidebar-first {
   float: right;
   margin-left: -200px;
-  margin-right: 0; /* Negative value of #sidebar-first's width + left margin. */
+  margin-right: 0; /* Negative value of .region-sidebar-first's width + left margin. */
 }
 
-#sidebar-first-inner {
+.region-sidebar-first .section {
   margin: 0 0 0 20px;
 }
 
 /*
  * Second sidebar
  */
-#sidebar-second {
+.region-sidebar-second {
   float: right;
   margin-left: -960px; /* Width of content + sidebar-first. */
-  margin-right: 760px; /* Negative value of #sidebar-second's width + left margin. */
+  margin-right: 760px; /* Negative value of .region-sidebar-second's width + left margin. */
 }
 
-#sidebar-second-inner {
+.region-sidebar-second .section {
   margin: 0 20px 0 0;
 }

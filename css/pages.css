@@ -212,25 +212,25 @@ ul.links li {
 /*
  * First sidebar (on left in LTR languages, on right in RTL)
  *
- * Remember to NOT add padding or margin to your #sidebar-first
+ * Remember to NOT add padding or margin to your .region-sidebar-first
  * (see the layout.css file.)
  */
-#sidebar-first {
+.region-sidebar-first {
 }
 
-#sidebar-first-inner {
+.region-sidebar-first .section {
 }
 
 /*
  * Second sidebar (on right in LTR languages, on left in RTL)
  *
- * Remember to NOT add padding or margin to your #sidebar-second
+ * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
-#sidebar-second {
+.region-sidebar-second {
 }
 
-#sidebar-second-inner {
+.region-sidebar-second .section {
 }
 
 /*

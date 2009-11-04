@@ -76,18 +76,18 @@ body {
 }
 
 .sidebar-first #content .section {
-  padding-left: 200px; /* LTR */ /* The width + left margin of #sidebar-first. */
+  padding-left: 200px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
   padding-right: 0; /* LTR */
 }
 
 .sidebar-second #content .section {
   padding-left: 0; /* LTR */
-  padding-right: 200px; /* LTR */ /* The width + right margin of #sidebar-second. */
+  padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
 }
 
 .two-sidebars #content .section {
-  padding-left: 200px; /* The width + left margin of #sidebar-first. */
-  padding-right: 200px; /* The width + right margin of #sidebar-second. */
+  padding-left: 200px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
 }
 
 /*
@@ -105,8 +105,8 @@ body {
 }
 
 .with-navigation #content,
-.with-navigation #sidebar-first,
-.with-navigation #sidebar-second {
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
   margin-top: 2.3em; /* Set this to the same value as the navigation height above. */
 }
 
@@ -127,15 +127,15 @@ body {
 /*
  * First sidebar
  */
-#sidebar-first {
+.region-sidebar-first {
   float: left; /* LTR */
   width: 200px;
   margin-left: 0; /* LTR */
-  margin-right: -200px; /* LTR */ /* Negative value of #sidebar-first's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-first-inner. */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
 }
 
-#sidebar-first-inner {
+.region-sidebar-first .section {
   margin: 0 20px 0 0; /* LTR */
   padding: 0;
 }
@@ -143,15 +143,15 @@ body {
 /*
  * Second sidebar
  */
-#sidebar-second {
+.region-sidebar-second {
   float: right; /* LTR */
   width: 200px;
-  margin-left: -200px; /* LTR */ /* Negative value of #sidebar-second's width + right margin. */
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
   margin-right: 0; /* LTR */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-second-inner. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
 }
 
-#sidebar-second-inner {
+.region-sidebar-second .section {
   margin: 0 0 0 20px; /* LTR */
   padding: 0;
 }
@@ -177,8 +177,8 @@ body {
 #header,
 #content,
 #navigation,
-#sidebar-first,
-#sidebar-second,
+.region-sidebar-first,
+.region-sidebar-second,
 #footer,
 #closure-blocks {
   overflow: visible;
