@@ -10,7 +10,7 @@
 
 .with-wireframes #header .section,
 .with-wireframes #content .section,
-.with-wireframes .region-navigation .section,
+.with-wireframes #navigation .section,
 .with-wireframes .region-sidebar-first .section,
 .with-wireframes .region-sidebar-second .section,
 .with-wireframes #footer .section {
