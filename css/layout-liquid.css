@@ -25,7 +25,7 @@ body {
 }
 
 #page-wrapper,
-#closure-blocks {
+.region-page-closure {
   min-width: 960px; /* Don't allow the browser to make the site unreadable. */
 }
 
@@ -168,7 +168,7 @@ body {
 /*
  * Closure
  */
-#closure-blocks /* See also the #page-wrapper declaration above that this div shares. */ {
+.region-page-closure /* See also the #page-wrapper declaration above that this div shares. */ {
 }
 
 /*
@@ -180,7 +180,7 @@ body {
 .region-sidebar-first,
 .region-sidebar-second,
 #footer,
-#closure-blocks {
+.region-page-closure {
   overflow: visible;
   word-wrap: break-word; /* A very nice CSS3 property */
 }

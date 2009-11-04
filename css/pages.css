@@ -249,7 +249,7 @@ ul.links li {
 /*
  * Closure
  */
-#closure-blocks /* Wrapper for any blocks placed in the closure region */ {
+.region-page-closure /* Wrapper for any blocks placed in the closure region */ {
 }
 
 /*
