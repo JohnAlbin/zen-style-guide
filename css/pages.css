@@ -61,8 +61,12 @@ body {
 
 #logo /* Wrapping link for logo */ {
   float: left; /* LTR */
-  margin: 0 10px 0 0; /* LTR */
+  margin: 0;
   padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
@@ -81,7 +85,8 @@ div#site-name /* The name of the website */ {
   text-decoration: none;
 }
 
-#site-name a:hover {
+#site-name a:hover,
+#site-name a:focus {
   text-decoration: underline;
 }
 
