@@ -190,7 +190,7 @@ body {
 }
 
 /*
- * If a div.clear-block doesn't have any content after it and its bottom edge
+ * If a div.clearfix doesn't have any content after it and its bottom edge
  * touches the bottom of the viewport, Firefox and Safari will mistakenly
  * place several pixels worth of space between the bottom of the div and the
  * bottom of the viewport. Uncomment this CSS property to fix this.
