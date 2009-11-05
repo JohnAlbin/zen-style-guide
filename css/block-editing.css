@@ -18,7 +18,7 @@ div.block.with-block-editing div.edit {
   z-index: 40;
   border: 1px solid #eee;
   padding: 0 2px;
-  font-size: 9px;
+  font-size: 0.75em;
   background-color: #fff;
 }
 
