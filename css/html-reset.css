@@ -54,7 +54,8 @@ fieldset {
   /* The following font family declarations are based on the Microsoft core
    * web fonts which are common fonts available on most computer systems. The
    * Bitstream Vera fonts are commonly available on Linux systems where the MS
-   * fonts are less common.
+   * fonts are less common. Helvetica is also widely available, but not
+   * universally.
    *
    * A user's web browser will look at the comma-separated list and will
    * attempt to use each font in turn until it finds one that is available
@@ -66,8 +67,7 @@ fieldset {
   font-family: Times, "Times New Roman", Georgia, "Bitstream Vera Serif", serif;
   font-family: Georgia, "Times New Roman", "Bitstream Vera Serif", serif;
 
-  font-family: Verdana, Tahoma, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
-  font-family: Tahoma, Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+  font-family: Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
   font-family: Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
   font-family: Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
 
@@ -75,7 +75,7 @@ fieldset {
 
    */
 
-  font-family: Tahoma, Verdana, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+  font-family: Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
 }
 
 pre,
