@@ -81,6 +81,9 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     For example, edit foo/template.php and foo/theme-settings.php and replace
     every occurrence of "STARTERKIT" with "foo".
 
+    It is recommended to use a text editing application with search and
+    "replace all" functionality.
+
  5. Log in as an administrator on your Drupal site and go to Administer > Site
     building > Themes (admin/build/themes) and enable your new sub-theme.
 
@@ -99,8 +102,8 @@ Optional:
     folder and place it in your sub-theme's folder. And then rebuild the theme
     registry.
 
-    You can find a full list of Drupal templates that you can override on:
-    http://drupal.org/node/190815
+    You can find a full list of Drupal templates that you can override in the
+    templates/README.txt file or http://drupal.org/node/190815
 
       Why? In Drupal 6 theming, if you want to modify a template included by a
       module, you should copy the template file from the module's directory to
