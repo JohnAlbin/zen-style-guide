@@ -13,7 +13,7 @@ screenshot = screenshot.png
   ; base theme. Its unlikely you will ever need to change these, but they are
   ; required fields for a Zen sub-theme. The "engine" field is not used in a
   ; sub-theme since the engine is inherited from its base theme.
-core       = 6.x
+core       = 7.x
 base theme = zen
 
   ; This section adds CSS files to your theme. The media type is specified in
