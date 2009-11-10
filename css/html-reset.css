@@ -68,10 +68,10 @@ fieldset {
 
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
   font-family: Tahoma, Verdana, "DejaVu Sans", sans-serif;
-  font-family: Helvetica, Arial, "DejaVu Sans", sans-serif;
-  font-family: Arial, Helvetica, "DejaVu Sans", sans-serif;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
-  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
 
@@ -81,7 +81,7 @@ fieldset {
 pre,
 code {
   font-size: 1.1em; /* Monospace fonts can be hard to read */
-  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-family: "Courier New", "DejaVu Sans Mono", monospace;
 }
 
 /*
