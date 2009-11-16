@@ -26,6 +26,7 @@ body {
 
 /*
  * The skip-to-nav link will be completely hidden until a user tabs to the link.
+ * See http://www.webaim.org/techniques/skipnav/
  */
 #skip-to-nav a,
 #skip-to-nav a:visited {
