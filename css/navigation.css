@@ -17,6 +17,7 @@ li a.active {
  * Navigation bar
  */
 #navigation {
+  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
 }
 
 .region-navigation {
@@ -40,5 +41,5 @@ li a.active {
 /*
  * "Menu block" blocks. See http://drupal.org/project/menu_block
  */
-.block-menu_block {
+.block-menu-block {
 }

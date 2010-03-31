@@ -185,10 +185,6 @@ body {
   word-wrap: break-word; /* A very nice CSS3 property */
 }
 
-#navigation {
-  overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
-}
-
 /*
  * If a div.clearfix doesn't have any content after it and its bottom edge
  * touches the bottom of the viewport, Firefox and Safari will mistakenly
