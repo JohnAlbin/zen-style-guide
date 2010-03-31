@@ -42,10 +42,3 @@ tr.odd th,
 tr.odd td {
   border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
 }
-
-/*
- * Markup free clearing
- */
-* html .clearfix {
-  zoom: 1;
-}
