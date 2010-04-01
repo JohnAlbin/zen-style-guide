@@ -13,14 +13,7 @@
 .with-wireframes #navigation .section,
 .with-wireframes .region-sidebar-first .section,
 .with-wireframes .region-sidebar-second .section,
-.with-wireframes #footer .section {
-  margin: 1px;
-  padding: 2px;
-  border: 1px solid #ccc;
-}
-
+.with-wireframes #footer .section,
 .with-wireframes .region-page-closure {
-  margin-top: 1px;
-  padding: 2px;
-  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
 }
