@@ -15,7 +15,7 @@
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error /* Highlight the form elements that caused a form submission error */ {
-  border: 2px solid #c00;
+  border: 1px solid #c00;
 }
 
 .form-item label /* The label for a form element */ {

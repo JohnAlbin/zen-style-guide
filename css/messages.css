@@ -14,7 +14,7 @@ div.warning,
 div.error /* Important messages (status, warning, and error) for the user */ {
   min-height: 21px;
   margin: 0 1em 5px 1em;
-  border: 2px solid #ff7;
+  border: 1px solid #ff7;
   padding: 5px 5px 5px 35px; /* LTR */
   color: #000;
   background-color: #ffc;
