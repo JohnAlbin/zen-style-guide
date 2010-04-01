@@ -123,17 +123,6 @@ body {
 #navigation .section {
 }
 
-#navigation ul /* Primary and secondary links */ {
-  margin: 0;
-  padding: 0;
-  text-align: left; /* LTR */
-}
-
-#navigation li /* A simple method to get navigation links to appear in one line. */ {
-  float: left; /* LTR */
-  padding: 0 10px 0 0; /* LTR */
-}
-
 /*
  * First sidebar
  */

@@ -20,11 +20,22 @@ li a.active {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
 }
 
+#navigation .content ul /* Main menu and secondary menu links */ {
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation .content li /* A simple method to get navigation links to appear in one line. */ {
+  float: left; /* LTR */
+  padding: 0 10px 0 0; /* LTR */
+}
+
 .region-navigation {
 }
 
 /*
- * Primary and Secondary menu links
+ * Main menu and Secondary menu links
  */
 #main-menu {
 }
