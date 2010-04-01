@@ -88,7 +88,6 @@ features[] = main_menu
 features[] = secondary_menu
 
   ; Set the default settings to be used in theme-settings.php
-settings[zen_block_editing]        = 1
 settings[zen_breadcrumb]           = yes
 settings[zen_breadcrumb_separator] = ' › '
 settings[zen_breadcrumb_home]      = 1
