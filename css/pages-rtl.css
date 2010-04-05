@@ -19,3 +19,7 @@
 .more-link /* Aggregator, blog, and forum more link */ {
   text-align: left;
 }
+
+ul.links li /* List of links */ {
+  display: inline-block; /* Bug in Safari causes display: inline to fail. */
+}
