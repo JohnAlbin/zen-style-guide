@@ -32,7 +32,6 @@ stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
 stylesheets[all][]   = css/pages.css
-stylesheets[all][]   = css/block-editing.css
 stylesheets[all][]   = css/blocks.css
 stylesheets[all][]   = css/navigation.css
 stylesheets[all][]   = css/views-styles.css
