@@ -1,5 +1,3 @@
-// $Id$
-
 ZEN'S STYLESHEETS
 -----------------
 

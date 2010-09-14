@@ -1,5 +1,3 @@
-// $Id$
-
 Your theme can add JavaScript files in two ways:
 
 1. To add a JavaScript file to all pages on your website, edit your sub-theme's

@@ -1,5 +1,3 @@
-// $Id$
-
 BUILD YOUR OWN SUB-THEME
 ------------------------
 
