@@ -8,7 +8,10 @@
   margin: 1em 0;
 }
 
-#comments .title /* Heading for the list of comments */ {
+#comments h2.title /* Heading for the list of comments */ {
+}
+
+#comments h2.comment-form /* Heading for the comment form */ {
 }
 
 .comment /* Wrapper for a single comment */ {
@@ -48,7 +51,7 @@
 .comment-by-viewer /* A comment created by the current user */ {
 }
 
-.comment h3.title /* Comment title */ {
+.comment h3.comment-title /* Comment title */ {
 }
 
 .new /* "New" marker for comments that are new for the current user */ {

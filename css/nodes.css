@@ -46,7 +46,7 @@
 .node-type-story /* Story content node */ {
 }
 
-.node h2.title /* Node title */ {
+h2.node-title /* Node title */ {
 }
 
 .marker /* "New" or "Updated" marker for content that is new or updated for the current user */ {
