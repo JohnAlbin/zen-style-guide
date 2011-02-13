@@ -8,6 +8,12 @@
   margin-bottom: 1em;
 }
 
+.block.first /* The first block in the region */ {
+}
+
+.block.last /* The last block in the region */ {
+}
+
 .block.region-odd /* Zebra striping for each block in the region */ {
 }
 
