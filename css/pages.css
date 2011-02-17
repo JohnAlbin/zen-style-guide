@@ -206,7 +206,7 @@ ul.links li {
   padding: 0.5em;
 }
 
-.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
+.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
   margin: 1em 0;
 }
 

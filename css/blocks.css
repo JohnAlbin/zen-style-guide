@@ -59,7 +59,7 @@ h2.block-title /* Block title */ {
 #block-node-recent /* "Recent content" block */ {
 }
 
-#block-node-syndicate /* "Syndicate" block for primary RSS feed */ {
+#block-node-syndicate /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */ {
 }
 
 #block-poll-recent /* "Most recent poll" block */ {
