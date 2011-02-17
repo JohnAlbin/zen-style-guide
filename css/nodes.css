@@ -61,13 +61,7 @@ h2.node-title /* Node title */ {
   position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
 }
 
-.node .meta /* Wrapper for submitted and terms data */ {
-}
-
 .node .submitted /* The "posted by" information */ {
-}
-
-.node .terms /* Node terms (taxonomy) */ {
 }
 
 .node .content /* Node's content wrapper */ {
