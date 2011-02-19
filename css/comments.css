@@ -58,7 +58,7 @@
   color: #c00;
 }
 
-.comment .picture /* The picture of the comment author */ {
+.comment .user-picture /* The picture of the comment author */ {
 }
 
 .comment .submitted /* The "posted by" information */ {

@@ -53,11 +53,11 @@ h2.node-title /* Node title */ {
   color: #c00;
 }
 
-.node .picture /* The picture of the node author */ {
+.node .user-picture /* The picture of the node author */ {
 }
 
-.node.node-unpublished .picture,
-.comment.comment-unpublished .picture {
+.node.node-unpublished .user-picture,
+.comment.comment-unpublished .user-picture {
   position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
 }
 
