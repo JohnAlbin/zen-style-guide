@@ -2,9 +2,11 @@ TEMPLATES
 ---------
 
 Drupal 7 contains the following template files which you can override and modify
-by copying them to your sub-theme. The Zen theme overrides a handful of Drupal's
-templates. In order to override those templates, you should copy them from the
-zen/templates folder to your sub-theme's templates folder.
+by copying them to your sub-theme.
+
+The Zen theme overrides a handful of Drupal's templates. In order to override
+those templates, you should copy them from the zen/templates folder to your
+sub-theme's templates folder.
 
 As always, when adding a new template file to your sub-theme, you will need to
 rebuild the "theme registry" in order for Drupal to see it. For more info, see:
@@ -42,6 +44,9 @@ Located in /modules/comment:
   comment-wrapper.tpl.php  (overridden by Zen)
   comment.tpl.php  (overridden by Zen)
 
+Located in /modules/field/theme:
+  field.tpl.php  (not used; core uses theme_field() instead)
+
 Located in /modules/forum:
   forum-icon.tpl.php
   forum-list.tpl.php
@@ -51,6 +56,9 @@ Located in /modules/forum:
 
 Located in /modules/node:
   node.tpl.php  (overridden by Zen)
+
+Located in /modules/overlay:
+  overlay.tpl.php
 
 Located in /modules/poll:
   poll-bar--block.tpl.php
@@ -74,6 +82,12 @@ Located in /modules/system:
   maintenance-page.tpl.php  (overridden by Zen)
   page.tpl.php  (overridden by Zen)
   region.tpl.php  (overridden by Zen)
+
+Located in /modules/taxonomy:
+  taxonomy-term.tpl.php
+
+Located in /modules/toolbar:
+  toolbar.tpl.php
 
 Located in /modules/user:
   user-picture.tpl.php
