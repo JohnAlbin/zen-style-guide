@@ -62,6 +62,24 @@
 
 
 /**
+ * Override or insert variables into the html templates.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function STARTERKIT_preprocess_html(&$vars, $hook) {
+  $vars['sample_variable'] = t('Lorem ipsum.');
+
+  // The body tag's classes are controlled by the $classes_array variable. To
+  // remove a class from $classes_array, use array_diff().
+  //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
+}
+// */
+
+/**
  * Override or insert variables into the page templates.
  *
  * @param $vars
@@ -72,9 +90,6 @@
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_page(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
-
-  // To remove a class from $classes_array, use array_diff().
-  //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
 }
 // */
 
