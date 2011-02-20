@@ -1,7 +1,7 @@
 TEMPLATES
 ---------
 
-Drupal 6 contains the following template files which you can override and modify
+Drupal 7 contains the following template files which you can override and modify
 by copying them to your sub-theme. The Zen theme overrides a handful of Drupal's
 templates. In order to override those templates, you should copy them from the
 zen/templates folder to your sub-theme's templates folder.
@@ -11,9 +11,12 @@ rebuild the "theme registry" in order for Drupal to see it. For more info, see:
   http://drupal.org/node/173880#theme-registry
 
 Located in zen/templates:
+  html.tpl.php
   page.tpl.php
   maintenance-page.tpl.php
   node.tpl.php
+  region.tpl.php
+  region--sidebar.tpl.php
   block.tpl.php
   comment-wrapper.tpl.php
   comment.tpl.php
@@ -26,6 +29,7 @@ Located in /modules/aggregator:
   aggregator-wrapper.tpl.php
 
 Located in /modules/block:
+  block.tpl.php  (overridden by Zen)
   block-admin-display-form.tpl.php
 
 Located in /modules/book:
@@ -35,7 +39,6 @@ Located in /modules/book:
   book-node-export-html.tpl.php
 
 Located in /modules/comment:
-  comment-folded.tpl.php
   comment-wrapper.tpl.php  (overridden by Zen)
   comment.tpl.php  (overridden by Zen)
 
@@ -44,16 +47,15 @@ Located in /modules/forum:
   forum-list.tpl.php
   forum-submitted.tpl.php
   forum-topic-list.tpl.php
-  forum-topic-navigation.tpl.php
   forums.tpl.php
 
 Located in /modules/node:
   node.tpl.php  (overridden by Zen)
 
 Located in /modules/poll:
-  poll-bar-block.tpl.php
+  poll-bar--block.tpl.php
   poll-bar.tpl.php
-  poll-results-block.tpl.php
+  poll-results--block.tpl.php
   poll-results.tpl.php
   poll-vote.tpl.php
 
@@ -66,13 +68,12 @@ Located in /modules/search:
   search-block-form.tpl.php
   search-result.tpl.php
   search-results.tpl.php
-  search-theme-form.tpl.php
 
 Located in /modules/system:
-  block.tpl.php  (overridden by Zen)
-  box.tpl.php
+  html.tpl.php (overridden by Zen)
   maintenance-page.tpl.php  (overridden by Zen)
   page.tpl.php  (overridden by Zen)
+  region.tpl.php  (overridden by Zen)
 
 Located in /modules/user:
   user-picture.tpl.php
