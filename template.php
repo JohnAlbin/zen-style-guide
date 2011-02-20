@@ -6,11 +6,10 @@
  * ABOUT THE TEMPLATE.PHP FILE
  *
  *   The template.php file is one of the most useful files when creating or
- *   modifying Drupal themes. You can add new regions for block content, modify
- *   or override Drupal's theme functions, intercept or make additional
- *   variables available to your theme, and create custom PHP logic. For more
- *   information, please visit the Theme Developer's Guide on Drupal.org:
- *   http://drupal.org/theme-guide
+ *   modifying Drupal themes. You can modify or override Drupal's theme
+ *   functions, intercept or make additional variables available to your theme,
+ *   and create custom PHP logic. For more information, please visit the Theme
+ *   Developer's Guide on Drupal.org: http://drupal.org/theme-guide
  *
  * OVERRIDING THEME FUNCTIONS
  *
@@ -28,10 +27,9 @@
  *   where STARTERKIT is the name of your sub-theme. For example, the
  *   zen_classic theme would define a zen_classic_breadcrumb() function.
  *
- *   If you would like to override any of the theme functions used in Zen core,
- *   you should first look at how Zen core implements those functions:
+ *   If you would like to override either of the two theme functions used in Zen
+ *   core, you should first look at how Zen core implements those functions:
  *     theme_breadcrumbs()      in zen/template.php
- *     theme_menu_item_link()   in zen/template.php
  *     theme_menu_local_tasks() in zen/template.php
  *
  *   For more information, please visit the Theme Developer's Guide on
