@@ -36,14 +36,14 @@
 .node-teaser /* A node displayed as teaser */ {
 }
 
-/* All nodes are given a node-type-FOO class that describes the type of
- * content that it is. If you create a new content type called
- * "my-custom-type", it will receive a "node-type-my-custom-type" class.
+/* All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
  */
-.node-type-page /* Page content node */ {
+.node-page /* Page content node */ {
 }
 
-.node-type-story /* Story content node */ {
+.node-article /* Article content node */ {
 }
 
 h2.node-title /* Node title */ {
