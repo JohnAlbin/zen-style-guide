@@ -2,8 +2,12 @@
  * @file
  * HTML Element Styling
  *
- * This is the "reset" style sheet. It standardizes the properties of the HTML
- * elements across browsers.
+ * Ok, I admit it. I fooled you. This isn't a "reset" stylesheet. Instead this
+ * is the place where you should set (not reset) the default styling for all
+ * HTML elements.
+ *
+ * @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+ * @see http://snook.ca/archives/html_and_css/no_css_reset/
  */
 
 
