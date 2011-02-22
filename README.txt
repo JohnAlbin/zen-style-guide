@@ -1,18 +1,5 @@
-BUILD YOUR OWN SUB-THEME
-------------------------
-
-*** IMPORTANT ***
-
-* In Drupal 7, the theme system caches which template files and which theme
-  functions should be called. This means that if you add a new theme,
-  preprocess or process function to your template.php file or add a new template
-  (.tpl.php) file to your sub-theme, you will need to rebuild the "theme
-  registry." See http://drupal.org/node/173880#theme-registry
-
-* Drupal 7 also stores a cache of the data in .info files. If you modify any
-  lines in your sub-theme's .info file, you MUST refresh Drupal 7's cache by
-  simply visiting the Appearance page at admin/appearance.
-
+BUILD A THEME WITH ZEN
+----------------------
 
 The base Zen theme is designed to be easily extended by its sub-themes. You
 shouldn't modify any of the CSS or PHP files in the zen/ folder; but instead you
@@ -23,6 +10,21 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
 
   Why? To learn why you shouldn't modify any of the files in the zen/ folder,
   see http://drupal.org/node/245802
+
+
+*** IMPORTANT NOTE ***
+*
+* In Drupal 7, the theme system caches which template files and which theme
+* functions should be called. This means that if you add a new theme,
+* preprocess or process function to your template.php file or add a new template
+* (.tpl.php) file to your sub-theme, you will need to rebuild the "theme
+* registry." See http://drupal.org/node/173880#theme-registry
+*
+* Drupal 7 also stores a cache of the data in .info files. If you modify any
+* lines in your sub-theme's .info file, you MUST refresh Drupal 7's cache by
+* simply visiting the Appearance page at admin/appearance.
+*
+
 
  1. Setup the location for your new sub-theme.
 
@@ -71,12 +73,12 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
       and path to the CSS file you want to include. The format for these lines
       is:  stylesheets[MEDIA][] = path/to/file.css
 
-    Then, visit your site's Appearance page at admin/appearance to refresh
-    Drupal 7's cache of .info file data.
-
     Alternatively, if you are more familiar with a different CSS layout method,
     such as Blueprint or 960.gs, you can replace the "css/layout-fixed.css" line
     in your .info file with a line pointing at your choice of layout CSS file.
+
+    Then, visit your site's Appearance page at admin/appearance to refresh
+    Drupal 7's cache of .info file data.
 
  4. Edit your sub-theme to use the proper function names.
 
@@ -97,7 +99,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     new sub-theme.
 
 
-Optional:
+Optional steps:
 
  6. Modify the markup in Zen core's template files.
 
