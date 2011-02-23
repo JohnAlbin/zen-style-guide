@@ -104,7 +104,7 @@ styles to make it easier for theme developers to see them.
 DRUPAL CORE'S STYLESHEETS
 -------------------------
 
-Many of Zen's styles are over-riding Drupal's core stylesheets, so if you remove
+Many of Zen's styles are overriding Drupal's core stylesheets, so if you remove
 a declaration from them, the styles may still not be what you want since
 Drupal's core stylesheets are still styling the element. See the
 drupal7-reference.css file for a complete list of all Drupal 7.x core styles.
