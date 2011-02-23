@@ -21,7 +21,7 @@ base theme = zen
   ;
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 7 Theme Guide at
-  ; http://drupal.org/node/171209 for more details.
+  ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/layout-fixed.css
