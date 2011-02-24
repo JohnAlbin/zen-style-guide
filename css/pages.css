@@ -24,29 +24,16 @@ body {
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
- * See http://www.webaim.org/techniques/skipnav/
+ * See the element-focusable rule in system.base.css.
  */
 #skip-link a,
 #skip-link a:visited {
-  position: absolute;
   display: block;
-  left: 0;
-  top: -500px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  width: 100%;
+  padding: 2px 0 3px 0;
   text-align: center;
   background-color: #666;
   color: #fff;
-}
-
-#skip-link a:hover,
-#skip-link a:active,
-#skip-link a:focus {
-  position: static;
-  width: 100%;
-  height: auto;
-  padding: 2px 0 3px 0;
 }
 
 /*
