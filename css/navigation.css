@@ -41,6 +41,7 @@ li a.active {
 }
 
 #secondary-menu {
+  float: right;
 }
 
 /*
