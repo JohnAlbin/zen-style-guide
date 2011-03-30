@@ -52,7 +52,7 @@
 .comment-by-viewer /* A comment created by the current user */ {
 }
 
-.comment h3.comment-title /* Comment title */ {
+h3.comment-title /* Comment title */ {
 }
 
 .new /* "New" marker for comments that are new for the current user */ {
