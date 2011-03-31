@@ -33,8 +33,7 @@ html.js #user-login-form li.openid-link,
  * section of the site.
  */
 
-form th,
-form thead th {
+form th {
   text-align: right;
   padding-left: 1em;
   padding-right: 0;

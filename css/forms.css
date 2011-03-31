@@ -95,21 +95,16 @@ html.js #user-login-form li.openid-link,
 /*
  * Drupal admin tables
  *
- * We overrode these styles in html-elements.css, but restore them for the admin
+ * We overrode these styles in html-reset.css, but restore them for the admin
  * section of the site.
  */
 
-form tbody {
-  border-top: 1px solid #ccc;
-}
-
-form th,
-form thead th {
+form th {
   text-align: left; /* LTR */
   padding-right: 1em; /* LTR */
   border-bottom: 3px solid #ccc;
 }
 
-form tbody th {
-  border-bottom: 1px solid #ccc;
+form tbody {
+  border-top: 1px solid #ccc;
 }

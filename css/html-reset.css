@@ -235,9 +235,7 @@ table {
   /* width: 100%; */ /* Prevent cramped-looking tables */
 }
 
-th,
-thead th,
-tbody th {
+th {
   text-align: left; /* LTR */
   padding: 0;
   border-bottom: none;

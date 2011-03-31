@@ -30,8 +30,6 @@ dd {
  * Drupal provides table styling which is only useful for its admin section
  * forms, so we override this default CSS. (We set it back in forms.css.)
  */
-th,
-thead th,
-tbody th {
+th {
   text-align: right;
 }
