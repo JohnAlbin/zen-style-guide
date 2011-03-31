@@ -29,8 +29,9 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
  1. Setup the location for your new sub-theme.
 
     Copy the STARTERKIT folder out of the zen/ folder and rename it to be your
-    new sub-theme. IMPORTANT: Only lowercase letters and underscores should be
-    used for the name of your sub-theme.
+    new sub-theme. IMPORTANT: The name of your sub-theme must start with an
+    alphabetic character and can only contain lowercase letters, numbers and
+    underscores.
 
     For example, copy the sites/all/themes/zen/STARTERKIT folder and rename it
     as sites/all/themes/foo.
