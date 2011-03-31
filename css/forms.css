@@ -77,6 +77,7 @@
   margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
 }
 
+html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
   margin-top: 1em;
   margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
@@ -88,11 +89,6 @@
 
 #user-login ul {
   margin: 1em 0;
-}
-
-#user-login li.openid-link,
-#user-login li.user-link /* The OpenID links on the /user form. */ {
-  margin-left: -2em; /* LTR */ /* Un-do all of the padding on the ul list. */
 }
 
 

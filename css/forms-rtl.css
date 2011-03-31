@@ -19,15 +19,10 @@
  * styling of list items.
  */
 
+html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
   margin-left: 0;
   margin-right: -20px; /* Un-do some of the padding on the ul list. */
-}
-
-#user-login li.openid-link,
-#user-login li.user-link /* The OpenID links on the /user form. */ {
-  margin-left: 0;
-  margin-right: -2em; /* Un-do all of the padding on the ul list. */
 }
 
 
