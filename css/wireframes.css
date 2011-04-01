@@ -11,7 +11,7 @@
 .with-wireframes #navigation .section,
 .with-wireframes .region-sidebar-first .section,
 .with-wireframes .region-sidebar-second .section,
-.with-wireframes #footer .section,
-.with-wireframes .region-page-closure {
+.with-wireframes .region-footer,
+.with-wireframes .region-bottom {
   outline: 1px solid #ccc;
 }
