@@ -39,9 +39,6 @@ body {
 #header .section {
 }
 
-#search-box {
-}
-
 .region-header {
 }
 
@@ -145,10 +142,7 @@ body {
 /*
  * Footer
  */
-#footer {
-}
-
-#footer .section {
+.region-footer {
 }
 
 /*
@@ -165,7 +159,7 @@ body {
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
-#footer,
+.region-footer,
 .region-bottom {
   overflow: visible;
   word-wrap: break-word; /* A very nice CSS3 property */
