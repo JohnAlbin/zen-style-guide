@@ -14,7 +14,7 @@ There are 25 CSS files in this sub-theme, but its not as bad as it first seems:
   your sub-theme, you can remove wireframes.css from your sub-theme's .info file
   and delete the file as well.
 
-That leaves just 17 CSS files. (Okay, still quite a few, but better than 28.)
+That leaves just 16 CSS files. (Okay, still quite a few, but better than 25.)
 
 - Instead of one monolithic stylesheet, your sub-theme's CSS files are organized
   into several smaller stylesheets that are grouped to allow cascading across
