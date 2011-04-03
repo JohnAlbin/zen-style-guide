@@ -61,25 +61,6 @@ ul.primary li.active a:hover .tab {
 }
 
 /*
- * Messages - IE6 doesn't support PNGs with alpha transparency.
- */
-
-div.messages,
-div.status,
-div.warning,
-div.error /* Important messages (status, warning, and error) for the user */ {
-  background-image: url(../images/messages-status-ie6.png);
-}
-
-div.warning /* Medium priority messages */ {
-  background-image: url(../images/messages-warning-ie6.png);
-}
-
-div.error /* High priority messages. See also the .error declaration below. */ {
-  background-image: url(../images/messages-error-ie6.png);
-}
-
-/*
  * Wireframes - IE6 doesn't support the outline property.
  */
 .with-wireframes #header .section,

@@ -38,7 +38,6 @@ stylesheets[all][]        = css/wireframes.css
 stylesheets[all][]        = css/layout-fixed.css
 stylesheets[all][]        = css/page-backgrounds.css
 stylesheets[all][]        = css/tabs.css
-stylesheets[all][]        = css/messages.css
 stylesheets[all][]        = css/pages.css
 stylesheets[all][]        = css/blocks.css
 stylesheets[all][]        = css/navigation.css

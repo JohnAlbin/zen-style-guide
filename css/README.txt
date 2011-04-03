@@ -3,10 +3,10 @@ ZEN'S STYLESHEETS
 
 Don't panic!
 
-There are 28 CSS files in this sub-theme, but its not as bad as it first seems:
+There are 25 CSS files in this sub-theme, but its not as bad as it first seems:
 - The drupal7-reference.css is just a reference file and isn't used directly by
   your sub-theme. See below.
-- There are 9 CSS files whose names end in "-rtl.css". Those are CSS files
+- There are 7 CSS files whose names end in "-rtl.css". Those are CSS files
   needed to style content written in Right-to-Left languages, such as Arabic and
   Hebrew. If your website doesn't use such languages, you can safely delete all
   of those CSS files.
@@ -49,12 +49,11 @@ theming Drupal websites.
   centralized in one location.
 
 - tabs.css:
-- messages.css:
   While most of the CSS rulesets in your sub-theme are guidelines without any
-  actual properties, the tabs and messages stylesheets contain actual styling
-  for Drupal tabs and Drupal status messages; two common Drupal elements that
-  are often neglected by site desiners. Zen provides some basic styling which
-  you are free to use or to rip out and replace.
+  actual properties, the tabs stylesheet contains actual styling for Drupal
+  tabs, a common Drupal element that is often neglected by site desiners. Zen
+  provides some basic styling which you are free to use or to rip out and
+  replace.
 
 - pages.css:
   Page styling for the markup in the page.tpl.php template.
