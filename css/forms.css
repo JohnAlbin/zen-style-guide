@@ -4,9 +4,7 @@
  */
 
 
-.form-item,
-.form-checkboxes,
-.form-radios /* Wrapper for a form element (or group of form elements) and its label */ {
+.form-item /* Wrapper for a form element (or group of form elements) and its label */ {
   margin: 1em 0;
 }
 
@@ -48,6 +46,15 @@
 }
 
 .tips /* Tips for Drupal's input formats */ {
+}
+
+
+/*
+ * Password confirmation
+ */
+.password-parent,
+.confirm-parent {
+  margin: 0;
 }
 
 
