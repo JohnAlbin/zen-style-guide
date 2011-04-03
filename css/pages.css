@@ -63,7 +63,7 @@ h1#site-name,
 div#site-name /* The name of the website */ {
   margin: 0;
   font-size: 2em;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 #site-name a:link,
@@ -162,7 +162,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 .help /* Help text on a page */ {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 
 .more-help-link /* Link to more help */ {
@@ -174,7 +174,7 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 ul.links /* List of links */ {
-  margin: 1em 0;
+  margin: 1.5em 0;
   padding: 0;
 }
 
@@ -191,7 +191,7 @@ ul.links li {
 
 .pager /* A list of page numbers when more than 1 page of content is available */ {
   clear: both;
-  margin: 1em 0;
+  margin: 1.5em 0;
   text-align: center;
 }
 
@@ -201,7 +201,7 @@ ul.links li {
 }
 
 .feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 
 .more-link /* Aggregator, blog, and forum more link */ {

@@ -5,7 +5,7 @@
 
 
 .form-item /* Wrapper for a form element (or group of form elements) and its label */ {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 
 .form-item input.error,
@@ -34,7 +34,7 @@
 
 .form-checkboxes .form-item,
 .form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
-  margin: 0.4em 0;
+  margin: 0; /* Drupal core uses "0.4em 0" */
 }
 
 .form-submit /* The submit button */ {
@@ -86,16 +86,16 @@
 
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
-  margin-top: 1em;
+  margin-top: 1.5em;
   margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
 }
 
 #user-login-form li.user-link /* The "Cancel OpenID login" link. */ {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 #user-login ul {
-  margin: 1em 0;
+  margin: 1.5em 0;
 }
 
 
