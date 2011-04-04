@@ -115,3 +115,11 @@ form th {
 form tbody {
   border-top: 1px solid #ccc;
 }
+
+form tr.even {
+  background-color: #fff;
+}
+
+form table .item-list ul {
+  margin: 0;
+}
