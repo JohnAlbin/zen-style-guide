@@ -127,6 +127,12 @@ code {
  * the line heights of any larger fonts be a multiple of 1.5 ems. For more
  * information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
+h1, h2, h3, h4, h5, h6
+p, blockquote, pre,
+ul, ol, dl,
+hr, table, fieldset {
+  margin: 1.5em 0;
+}
 
 /* Headings */
 h1 {
@@ -158,18 +164,9 @@ h6 {
 }
 
 /* Other block-level elements */
-p,
-ul,
-ol,
-dl,
-pre,
-table,
-fieldset {
-  margin: 1.5em 0;
-}
-
 blockquote {
-  margin: 1.5em 2em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 /*
@@ -314,6 +311,5 @@ form {
 }
 
 fieldset {
-  margin: 1.5em 0;
   padding: 0.5em;
 }
