@@ -9,6 +9,10 @@
 .node /* Node wrapper */ {
 }
 
+.preview .node /* Preview of the content before submitting new or updated content */ {
+  /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+}
+
 .node-promoted /* A node that has been promoted to the front page */ {
 }
 
@@ -55,11 +59,6 @@ h2.node-title /* Node title */ {
 .node .user-picture /* The picture of the node author */ {
 }
 
-.node.node-unpublished .user-picture,
-.comment.comment-unpublished .user-picture {
-  position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
-}
-
 .node .submitted /* The "posted by" information */ {
 }
 
@@ -67,8 +66,4 @@ h2.node-title /* Node title */ {
 }
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
-}
-
-.preview .node /* Preview of the content before submitting new or updated content */ {
-  /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
 }
