@@ -9,6 +9,9 @@
 .node /* Node wrapper */ {
 }
 
+.node-promoted /* A node that has been promoted to the front page */ {
+}
+
 .node-sticky /* A sticky node (displayed before others in a list) */ {
 }
 
@@ -47,10 +50,6 @@
 }
 
 h2.node-title /* Node title */ {
-}
-
-.marker /* "New" or "Updated" marker for content that is new or updated for the current user */ {
-  color: #c00;
 }
 
 .node .user-picture /* The picture of the node author */ {
