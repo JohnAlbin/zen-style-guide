@@ -264,28 +264,6 @@ tbody {
 }
 
 /*
- * Abbreviations
- */
-abbr {
-  border-bottom: 1px dotted #666;
-  cursor: help;
-  white-space: nowrap;
-}
-
-abbr.created /* Date-based "abbreviations" show computer-friendly timestamps which are not human-friendly. */ {
-  border: none;
-  cursor: auto;
-  white-space: normal;
-}
-
-/*
- * Images
- */
-img {
-  border: 0;
-}
-
-/*
  * Forms
  */
 form {
@@ -314,4 +292,18 @@ a:focus {
 }
 
 a:active {
+}
+
+/*
+ * Other inline elements
+ */
+img {
+  border: 0;
+  /* vertical-align: bottom; */ /* Suppress the space beneath the baseline */
+}
+
+abbr /* Abbreviations */ {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+  white-space: nowrap;
 }
