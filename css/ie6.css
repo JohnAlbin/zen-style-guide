@@ -3,6 +3,11 @@
  * CSS targeted specifically for Internet Explorer 6 for Windows.
  *
  * Any CSS in this file will override the rules specified in the ie.css file.
+ *
+ * References:
+ * 1. http://www.positioniseverything.net/explorer/doubled-margin.html
+ * 2. http://browservulsel.blogspot.com/2005/04/ie-overflow-auto-scrollbar-overlap.html
+ * 3. http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
  */
 
 
@@ -72,15 +77,3 @@ ul.primary li.active a:hover .tab {
 .with-wireframes .region-bottom {
   border: 1px solid #ccc;
 }
-
-
-/*
- * REFERENCES
- *
-
-1. http://www.positioniseverything.net/explorer/doubled-margin.html
-2. http://browservulsel.blogspot.com/2005/04/ie-overflow-auto-scrollbar-overlap.html
-3. http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
-
- *
- */
