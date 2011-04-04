@@ -114,7 +114,11 @@ fieldset {
 }
 
 pre,
-code {
+code,
+kbd,
+samp,
+tt,
+var {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 }
 
@@ -347,8 +351,46 @@ img {
   /* vertical-align: bottom; */ /* Suppress the space beneath the baseline */
 }
 
-abbr /* Abbreviations */ {
+abbr, /* Abbreviations */
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
   white-space: nowrap;
+}
+
+q {
+}
+
+cite {
+}
+
+strong, b {
+}
+
+em, i {
+}
+
+code,
+kbd,
+samp,
+tt,
+var /* Code, keyboard input, sample output, teletype, variable */ {
+}
+
+del {
+}
+
+ins {
+}
+
+big {
+}
+
+small {
+}
+
+sub {
+}
+
+sup {
 }
