@@ -1,10 +1,10 @@
 /**
  * @file
- * CSS targeted specifically for Internet Explorer for Windows.
+ * CSS targeted specifically for Internet Explorer 7 (and earlier) for Windows.
  *
- * Any CSS in this file will apply to all versions of IE. You can target
- * specific versions of IE by using conditional comments. See your sub-theme's
- * .info file for an easy way to use them.
+ * Any CSS in this file will apply to all versions of IE before IE 8. You can
+ * target specific versions of IE by using conditional comments. See your
+ * sub-theme's .info file for an easy way to use them.
  */
 
 

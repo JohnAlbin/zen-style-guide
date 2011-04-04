@@ -54,9 +54,11 @@ stylesheets[print][]      = css/print.css
 ;stylesheets[handheld][]  = css/mobile.css
 ;stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 
-; Add conditional stylesheets that are processed by IE.
+; Add conditional stylesheets that are processed by IE. See the css/README.txt.
 
-stylesheets-conditional[IE][all][]        = css/ie.css
+; To target all versions of IE with an ie.css, uncomment the following line:
+;stylesheets-conditional[IE][all][]       = css/ie.css
+stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
 stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 

@@ -87,12 +87,14 @@ theming Drupal websites.
 - print.css:
   The print styles for all markup.
 
-- ie.css:
+- ie7.css:
 - ie6.css:
   The Internet Explorer stylesheets are added via conditional comments. Many CSS
   authors find using IE "conditional stylesheets" much easier then writing
   rulesets with CSS hacks that are known to only apply to various versions of
-  IE. An alternative method presented by Paul Irish can be found at
+  IE. The full conditional comment syntax can be found on Microsoft's website:
+  http://msdn.microsoft.com/en-us/library/ms537512.aspx
+  An alternative method presented by Paul Irish can be found at
   http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
 In these stylesheets, we have included all of the classes and IDs from this
