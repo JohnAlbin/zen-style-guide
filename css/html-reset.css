@@ -195,7 +195,6 @@ ol {
   padding-left: 2em; /* LTR */
 }
 
-.block ul,
 .item-list ul /* Drupal overrides */ {
   margin: 1.5em 0;
   padding: 0 0 0 2em; /* LTR */
@@ -203,8 +202,6 @@ ol {
 
 ul ul, ul ol,
 ol ol, ol ul,
-.block ul ul, .block ul ol,
-.block ol ol, .block ol ul,
 .item-list ul ul, .item-list ul ol,
 .item-list ol ol, .item-list ol ul {
   margin: 0;
@@ -215,12 +212,7 @@ li {
   padding: 0;
 }
 
-.item-list ul li /* Drupal override */ {
-  margin: 0;
-  padding: 0;
-  list-style: inherit;
-}
-
+.item-list ul li,
 ul.menu li,
 li.expanded,
 li.collapsed,
@@ -236,6 +228,9 @@ ul ul ul ul { list-style-type: circle; }
 ol          { list-style-type: decimal; }
 ol ol       { list-style-type: lower-alpha; }
 ol ol ol    { list-style-type: decimal; }
+
+dl {
+}
 
 dt {
   margin: 0;
