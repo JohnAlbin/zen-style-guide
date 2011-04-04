@@ -102,7 +102,7 @@ div#site-name /* The name of the website */ {
 #content .section {
 }
 
-#mission /* The mission statement of the site (displayed on homepage) */ {
+.region-highlighted {
 }
 
 .region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
@@ -161,51 +161,38 @@ tr.error /* High priority messages. See also the .error declaration below. */ {
 div.tabs /* See also the tabs.css file. */ {
 }
 
-.help /* Help text on a page */ {
-  margin: 1.5em 0;
+.region-help /* Help text on a page */ {
 }
 
 .more-help-link /* Link to more help */ {
-  font-size: 0.85em;
-  text-align: right;
 }
 
 .region-content /* Wrapper for the actual page content */ {
 }
 
 ul.links /* List of links */ {
-  margin: 1.5em 0;
-  padding: 0;
 }
 
 ul.links.inline {
-  margin: 0;
-  display: inline;
+  display: block; /* Let the links be inline, but the container be a block. */
 }
 
 ul.links li {
-  display: inline;
-  list-style-type: none;
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+  padding: 0;
+}
+
+.item-list .pager li /* Each page number in the pager list */ {
   padding: 0 0.5em;
 }
 
-.pager /* A list of page numbers when more than 1 page of content is available */ {
-  clear: both;
-  margin: 1.5em 0;
-  text-align: center;
-}
-
-.pager a,
-.pager strong.pager-current /* Each page number in the pager list */ {
-  padding: 0.5em;
-}
-
 .feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
-  margin: 1.5em 0;
 }
 
 .more-link /* Aggregator, blog, and forum more link */ {
-  text-align: right; /* LTR */
 }
 
 .region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
@@ -238,13 +225,6 @@ ul.links li {
 /*
  * Footer
  */
-.region-footer {
-}
-
-#footer-message /* Wrapper for the footer message from Drupal's "Site information"
-                   and for any blocks placed in the footer region */ {
-}
-
 .region-footer {
 }
 
