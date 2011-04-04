@@ -173,6 +173,11 @@ pre {
   margin: 1.364em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.1 = 1.364 */
 }
 
+hr {
+  height: 1px;
+  border: 1px solid #666;
+}
+
 /*
  * Lists
  *
@@ -296,14 +301,6 @@ abbr.created /* Date-based "abbreviations" show computer-friendly timestamps whi
  */
 img {
   border: 0;
-}
-
-/*
- * Horizontal rules
- */
-hr {
-  height: 1px;
-  border: 1px solid #666;
 }
 
 /*
