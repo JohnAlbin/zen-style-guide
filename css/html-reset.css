@@ -163,6 +163,9 @@ h6 {
 }
 
 /* Other block-level elements */
+p {
+}
+
 blockquote {
   margin-left: 2em;
   margin-right: 2em;
@@ -176,6 +179,9 @@ pre {
 hr {
   height: 1px;
   border: 1px solid #666;
+}
+
+address {
 }
 
 /*
