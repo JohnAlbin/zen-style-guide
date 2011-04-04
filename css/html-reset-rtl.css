@@ -11,6 +11,7 @@
  */
 ul,
 ol {
+  margin-right: 0;
   padding-left: 0;
   padding-right: 2em;
 }
