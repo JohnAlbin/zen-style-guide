@@ -3,6 +3,7 @@
  * Comment Styling
  */
 
+@import "mixins";
 
 #comments /* Wrapper for the list of comments and its title */ {
   margin: 1.5em 0;
@@ -74,6 +75,7 @@
 .comment-unpublished /* Unpublished comments */ {
   /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
 
-  div.unpublished /* The word "Unpublished" displayed underneath the content. See also the div.unpublished declaration in the nodes.css. */ {
+  div.unpublished /* The word "Unpublished" displayed underneath the content. */ {
+    @include unpublished-div;
   }
 }

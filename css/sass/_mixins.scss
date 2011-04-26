@@ -1,0 +1,21 @@
+//
+// Sass mixins to share with other .scss files.
+//
+// To use a mixin in this file, add this line to the top of your .scss file:
+//   @import "mixins";
+// Then to use a mixin for a particular rule, add this inside the ruleset's
+// curly brackets:
+//   @include mix-in-name;
+
+@mixin unpublished-div /* The word "Unpublished" displayed underneath node and comment content. */ {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
