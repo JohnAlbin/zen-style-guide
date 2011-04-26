@@ -1,17 +1,15 @@
-/**
- * @file
- * CSS targeted specifically for Internet Explorer 7 (and earlier) for Windows.
- *
- * Any CSS in this file will apply to all versions of IE before IE 8. You can
- * target specific versions of IE by using conditional comments. See your
- * sub-theme's .info file for an easy way to use them.
- */
+//
+// CSS targeted specifically for Internet Explorer 7 (and earlier) for Windows.
+//
+// Any CSS in this file will apply to all versions of IE before IE 8. You can
+// target specific versions of IE by using conditional comments. See your
+// sub-theme's .info file for an easy way to use them.
+//
 
 
-/*
- * Tabs
- */
-
+//
+// Tabs
+//
 ul.primary li,
 ul.secondary li {
   a,
@@ -20,21 +18,22 @@ ul.secondary li {
   }
 }
 
-/*
- * Drupal nodes
- */
 
+//
+// Drupal nodes
+//
 .node-unpublished>* {
-  position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
+  position: relative; // Otherwise these elements will appear below the "Unpublished" text.
 }
 
-/*
- * Drupal admin tables
- */
+
+//
+// Drupal admin tables
+//
 tr.even,
 tr.odd {
   th,
   td {
-    border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+    border-bottom: 1px solid #ccc; // IE doesn't display borders on table rows
   }
 }

@@ -1,12 +1,11 @@
-/**
- * @file
- * Print styling
- *
- * We provide some sane print styling for Drupal using Zen's layout method.
- */
+//
+// Print styling
+//
+// We provide some sane print styling for Drupal using Zen's layout method.
+//
 
 
-/* underline all links */
+// underline all links
 a {
   &:link,
   &:visited {
@@ -14,7 +13,7 @@ a {
   }
 }
 
-/* Don't underline header */
+// Don't underline header
 #site-name {
   a:link,
   a:visited {
@@ -22,7 +21,7 @@ a {
   }
 }
 
-/* CSS2 selector to add visible href after links */
+// CSS2 selector to add visible href after links
 #content {
   a:link:after,
   a:visited:after {
@@ -32,7 +31,7 @@ a {
   }
 }
 
-/* Un-float the content */
+// Un-float the content
 #content,
 #content .section {
   float: none;
@@ -41,7 +40,7 @@ a {
   padding: 0 !important;
 }
 
-/* Turn off any background colors or images */
+// Turn off any background colors or images
 body,
 #page-wrapper,
 #page,
@@ -54,7 +53,7 @@ body,
   background-image: none !important;
 }
 
-/* Hide sidebars and nav elements */
+// Hide sidebars and nav elements
 #skip-to-nav,
 #toolbar,
 #navigation,
@@ -73,8 +72,8 @@ div.tabs,
   display: none;
 }
 
-/* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
-   the content after the first page. */
+// If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
+// the content after the first page.
 #page-wrapper {
   overflow-y: visible;
 }
