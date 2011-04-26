@@ -6,12 +6,14 @@
  */
 
 
-.with-wireframes #header .section,
-.with-wireframes #content .section,
-.with-wireframes #navigation .section,
-.with-wireframes .region-sidebar-first .section,
-.with-wireframes .region-sidebar-second .section,
-.with-wireframes .region-footer,
-.with-wireframes .region-bottom {
-  outline: 1px solid #ccc;
+.with-wireframes {
+  #header .section,
+  #content .section,
+  #navigation .section,
+  .region-sidebar-first .section,
+  .region-sidebar-second .section,
+  .region-footer,
+  .region-bottom {
+    outline: 1px solid #ccc;
+  }
 }
