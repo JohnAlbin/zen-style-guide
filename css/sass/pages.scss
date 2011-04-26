@@ -26,55 +26,56 @@ body {
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
-#skip-link a,
-#skip-link a:visited {
-  display: block;
-  width: 100%;
-  padding: 2px 0 3px 0;
-  text-align: center;
-  background-color: #666;
-  color: #fff;
+#skip-link {
+  a,
+  a:visited {
+    display: block;
+    width: 100%;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+  }
 }
 
 /*
  * Header
  */
 #header {
-}
 
-#header .section {
+  .section {
+  }
 }
 
 #logo /* Wrapping link for logo */ {
   float: left; /* LTR */
   margin: 0;
   padding: 0;
-}
 
-#logo img {
-  vertical-align: bottom;
+  img {
+    vertical-align: bottom;
+  }
 }
 
 #name-and-slogan /* Wrapper for website name and slogan */ {
   float: left;
 }
 
-h1#site-name,
-div#site-name /* The name of the website */ {
+#site-name /* The name of the website */ {
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
-}
 
-#site-name a:link,
-#site-name a:visited {
-  color: #000;
-  text-decoration: none;
-}
+  a:link,
+  a:visited {
+    color: #000;
+    text-decoration: none;
+  }
 
-#site-name a:hover,
-#site-name a:focus {
-  text-decoration: underline;
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
 }
 
 #site-slogan /* The slogan (or tagline) of a website */ {
@@ -97,9 +98,9 @@ div#site-name /* The name of the website */ {
  * Content
  */
 #content {
-}
 
-#content .section {
+  .section {
+  }
 }
 
 .region-highlighted {
@@ -128,11 +129,11 @@ tr.odd {
 
 div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
   margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
-}
 
-div.messages ul {
-  margin-top: 0;
-  margin-bottom: 0;
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 div.status /* Normal priority messages */ {
@@ -168,22 +169,22 @@ div.tabs /* See also the tabs.css file. */ {
 }
 
 ul.links /* List of links */ {
-}
 
-ul.links.inline {
-  display: block; /* Let the links be inline, but the container be a block. */
-}
+  &.inline {
+    display: block; /* Let the links be inline, but the container be a block. */
+  }
 
-ul.links li {
-  padding: 0 1em 0 0; /* LTR */
+  li {
+    padding: 0 1em 0 0; /* LTR */
+  }
 }
 
 .item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
   padding: 0;
-}
 
-.item-list .pager li /* Each page number in the pager list */ {
-  padding: 0 0.5em;
+  li /* Each page number in the pager list */ {
+    padding: 0 0.5em;
+  }
 }
 
 .feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
@@ -199,9 +200,9 @@ ul.links li {
  * (see the layout.css file.)
  */
 .region-sidebar-first {
-}
 
-.region-sidebar-first .section {
+  .section {
+  }
 }
 
 /*
@@ -211,9 +212,9 @@ ul.links li {
  * (see the layout.css file.)
  */
 .region-sidebar-second {
-}
 
-.region-sidebar-second .section {
+  .section {
+  }
 }
 
 /*
