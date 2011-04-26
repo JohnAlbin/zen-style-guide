@@ -6,25 +6,26 @@
 
 .block /* Block wrapper */ {
   margin-bottom: 1.5em;
+
+  &.first /* The first block in the region */ {
+  }
+
+  &.last /* The last block in the region */ {
+  }
+
+  &.odd /* Zebra striping for each block in the region */ {
+  }
+
+  &.even /* Zebra striping for each block in the region */ {
+  }
+
+  h2.block-title /* Block title */ {
+  }
+
+  .content /* Block's content wrapper */ {
+  }
 }
 
-.block.first /* The first block in the region */ {
-}
-
-.block.last /* The last block in the region */ {
-}
-
-.block.odd /* Zebra striping for each block in the region */ {
-}
-
-.block.even /* Zebra striping for each block in the region */ {
-}
-
-h2.block-title /* Block title */ {
-}
-
-.block .content /* Block's content wrapper */ {
-}
 
 #block-aggregator-category-1 /* Block for the latest news items in the first category */ {
 }
