@@ -9,22 +9,20 @@
  */
 #user-login-form {
   text-align: right;
+
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+
+  html.js & li.openid-link,
+  li.openid-link /* The "Log in using OpenID" link. */ {
+    margin-left: 0;
+    margin-right: -20px; /* Un-do some of the padding on the ul list. */
+  }
 }
-
-
-/*
- * OpenID
- *
- * The default styling for the OpenID login link seems to assume Garland's
- * styling of list items.
- */
-
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
-  margin-left: 0;
-  margin-right: -20px; /* Un-do some of the padding on the ul list. */
-}
-
 
 /*
  * Drupal admin tables
@@ -33,8 +31,10 @@ html.js #user-login-form li.openid-link,
  * section of the site.
  */
 
-form th {
-  text-align: right;
-  padding-left: 1em;
-  padding-right: 0;
+form {
+  th {
+    text-align: right;
+    padding-left: 1em;
+    padding-right: 0;
+  }
 }
