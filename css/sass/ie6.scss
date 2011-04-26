@@ -32,41 +32,42 @@
  * Tabs - IE6 doesn't support PNGs with alpha transparency.
  */
 
-ul.primary li a,
-ul.primary li a .tab,
-ul.secondary li a,
-ul.secondary li a .tab {
-  display: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
+ul.primary li,
+ul.secondary li {
+  a,
+  a .tab {
+    display: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
+  }
 }
 
-ul.primary li a {
-  background: url(../images/tab-left-ie6.png) no-repeat left -38px;
-}
+ul.primary li {
 
-ul.primary li a .tab {
-  background: url(../images/tab-right-ie6.png) no-repeat right -38px;
-}
+  a {
+    background: url(../images/tab-left-ie6.png) no-repeat left -38px;
 
-ul.primary li a:hover,
-ul.primary li a:focus {
-  background: url(../images/tab-left-ie6.png) no-repeat left -76px;
-}
+    .tab {
+      background: url(../images/tab-right-ie6.png) no-repeat right -38px;
+    }
 
-ul.primary li a:hover .tab,
-ul.primary li a:focus .tab {
-  background: url(../images/tab-right-ie6.png) no-repeat right -76px;
-}
+    &:hover,
+    &:focus {
+      background: url(../images/tab-left-ie6.png) no-repeat left -76px;
 
-ul.primary li.active a,
-ul.primary li.active a:hover,
-ul.primary li.active a:focus {
-  background: url(../images/tab-left-ie6.png) no-repeat left 0;
-}
+      .tab {
+        background: url(../images/tab-right-ie6.png) no-repeat right -76px;
+      }
+    }
+  }
 
-ul.primary li.active a .tab,
-ul.primary li.active a:hover .tab,
-ul.primary li.active a:focus .tab {
-  background: url(../images/tab-right-ie6.png) no-repeat right 0;
+  &.active a,
+  &.active a:hover,
+  &.active a:focus {
+    background: url(../images/tab-left-ie6.png) no-repeat left 0;
+
+    .tab {
+      background: url(../images/tab-right-ie6.png) no-repeat right 0;
+    }
+  }
 }
 
 /*

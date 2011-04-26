@@ -12,11 +12,12 @@
  * Tabs
  */
 
-ul.primary li a,
-ul.primary li a .tab,
-ul.secondary li a,
-ul.secondary li a .tab {
-  cursor: pointer;
+ul.primary li,
+ul.secondary li {
+  a,
+  a .tab {
+    cursor: pointer;
+  }
 }
 
 /*
@@ -30,9 +31,10 @@ ul.secondary li a .tab {
 /*
  * Drupal admin tables
  */
-tr.even th,
-tr.even td,
-tr.odd th,
-tr.odd td {
-  border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+tr.even,
+tr.odd {
+  th,
+  td {
+    border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+  }
 }
