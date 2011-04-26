@@ -16,21 +16,20 @@ li a.active {
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-}
 
-#navigation ul.links, /* Main menu and secondary menu links */
-#navigation .content ul /* Menu block links */ {
-  margin: 0;
-  padding: 0;
-  text-align: left; /* LTR */
-}
+  ul.links, /* Main menu and secondary menu links */
+  .content ul /* Menu block links */ {
+    margin: 0;
+    padding: 0;
+    text-align: left; /* LTR */
 
-#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
-#navigation .content li {
-  float: left; /* LTR */
-  padding: 0 10px 0 0; /* LTR */
-  list-style-type: none;
-  list-style-image: none;
+    li /* A simple method to get navigation links to appear in one line. */ {
+      float: left; /* LTR */
+      padding: 0 10px 0 0; /* LTR */
+      list-style-type: none;
+      list-style-image: none;
+    }
+  }
 }
 
 .region-navigation {
