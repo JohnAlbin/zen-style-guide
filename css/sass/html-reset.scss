@@ -204,23 +204,20 @@ ol {
   padding: 0 0 0 2em; // LTR
 }
 
-ul, ol {
+ul, ol, .item-list ul, .item-list ol {
   ul, ol {
-    & ,
-    .item-list & {
-      margin: 0;
-}}}
-
-li {
-  & ,
-  .item-list ul & ,
-  ul.menu & ,
-  &.expanded,
-  &.collapsed,
-  &.leaf { // Drupal override
     margin: 0;
-    padding: 0;
   }
+}
+
+li,
+.item-list ul li,
+ul.menu li,
+li.expanded,
+li.collapsed,
+li.leaf { // List items, including Drupal overrides
+  margin: 0;
+  padding: 0;
 }
 
 ul {
