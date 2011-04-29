@@ -8,7 +8,11 @@
 //   @include mix-in-name;
 
 
-// The word "Unpublished" displayed underneath node and comment content.
+// The word "Unpublished" displayed underneath content.
+//
+// This mixin is used in these files:
+// - comments
+// - nodes
 @mixin unpublished-div {
   height: 0;
   overflow: visible;
