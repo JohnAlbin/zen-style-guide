@@ -8,6 +8,25 @@
 //   @include mix-in-name;
 
 
+// clearfix as defined by Drupal
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  // IE6
+  * html & {
+    height: 1%;
+  }
+  // IE7
+  *:first-child + html & {
+    min-height: 1%;
+  }
+}
+
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute !important;
