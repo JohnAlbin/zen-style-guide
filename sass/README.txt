@@ -30,11 +30,11 @@ force update the modification date of all your .scss files.
 For example, from your sub-theme's root directory, you can run these commands:
 
 - During sub-theme development:
-    sass -l --watch css/sass:css
+    sass -l --watch sass:css
 
 - During sub-theme development (w/ FireSass support):
-    sass -g --watch css/sass:css
+    sass -g --watch sass:css
 
 - After completion of development:
-    touch css/sass/*.scss
-    sass -t compressed --update css/sass:css
+    touch sass/*.scss
+    sass -t compressed --update sass:css
