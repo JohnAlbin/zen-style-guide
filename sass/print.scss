@@ -4,6 +4,8 @@
 // We provide some sane print styling for Drupal using Zen's layout method.
 //
 
+@media print {
+
 
 // underline all links
 a {
@@ -77,3 +79,6 @@ div.tabs,
 #page-wrapper {
   overflow-y: visible;
 }
+
+
+} // End @media print
