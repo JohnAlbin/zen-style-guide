@@ -1,0 +1,145 @@
+//
+//
+//
+
+$legacy-support-for-ie6: false !default;
+
+@mixin zen-columns-fixed (
+  $container-width: false,
+
+  // Information about the selectors.
+  $selectors: ('.content', '.sidebar-first', '.sidebar-second'),
+  $widths: (),
+  $leading-direction: (),
+  $leading-gutters: (),
+  $padding: (),
+
+  $navbar-selector: false,
+  $navbar-height: 0,
+  $navbar-width: 100%,
+  $navbar-leading-gutter: 0,
+  $navbar-padding: 0
+) {
+
+  // Setup the container.
+  position: relative;
+  @if $container-width {
+    width: $container-width;
+  }
+
+  // 
+  $col: 0;
+  // Allow leading direction to be a simple string.
+  @if type_of($leading-direction) == string {
+    $leading-direction: ($leading-direction);
+  }
+  $float: left;
+  @if length($leading-direction) > 0 {
+    $float: nth($leading-direction, 1);
+  }
+  $gutter: 0;
+  $left-fill: 0;
+  $left-reset: 0;
+  $right-fill: 0;
+  $right-reset: 0;
+  $margin: 0;
+  $padding-values: 0;
+  $padding-x: 0;
+
+  @if $navbar-selector == false {
+    $navbar-height: 0;
+  }
+  @else {
+    // Determine the padding height and width.
+    @if type_of($navbar-padding) != list {
+      $navbar-padding: ($navbar-padding);
+    }
+    $navbar-padding-x: 2 * nth($navbar-padding, 1);
+    $navbar-padding-y: 2 * nth($navbar-padding, 1);
+    @if length($navbar-padding) >= 2 {
+      $navbar-padding-x: 2 * nth($navbar-padding, 2);
+    }
+    @if length($navbar-padding) >= 3 {
+      $navbar-padding-y: nth($navbar-padding, 1) + nth($navbar-padding, 3);
+    }
+    @if length($navbar-padding) == 4 {
+      $navbar-padding-x: nth($navbar-padding, 2) + nth($navbar-padding, 4);
+    }
+
+    // Apply the rules to the navbar.
+    #{$navbar-selector} {
+      float: $float;
+      height: $navbar-height;
+      margin-left: $navbar-leading-gutter;
+      margin-right: -$navbar-leading-gutter - $navbar-width - $navbar-padding-x;
+      width: $navbar-width;
+      padding: $navbar-padding;
+    }
+
+    // The columns need to know the true height of the navbar box.
+    $navbar-height: $navbar-height + $navbar-padding-y;
+  }
+
+
+  @each $column in $selectors {
+    // Number the columns.
+    $col: $col + 1;
+    $width: nth($widths, $col);
+    @if $col <= length($leading-direction) {
+      $float: nth($leading-direction, $col);
+    }
+    // Determine the left/right padding.
+    @if $col <= length($padding) {
+      $padding-values: nth($padding, $col);
+      $padding-x: 2 * nth($padding-values, 1);
+      @if type_of($padding-values) != list {
+        $padding-values: ($padding-values);
+      }
+      @if length($padding-values) == 4 {
+        $padding-x: nth($padding-values, 2) + nth($padding-values, 4);
+      }
+      @else if length($padding-values) > 1 {
+        $padding-x: 2 * nth($padding-values, 2);
+      }
+    }
+    // Determine the leading margin.
+    @if $col <= length($leading-gutters) {
+      $gutter: nth($leading-gutters, $col);
+    }
+    @if $float == left {
+      $left-fill: $left-fill + $gutter;
+      $left-reset: -$left-fill - $padding-x - $width;
+      $margin: $navbar-height $left-reset 0 $left-fill;
+      $left-fill: $left-fill + $width;
+    }
+    @else {
+      $right-fill: $right-fill + $gutter;
+      $right-reset: -$right-fill - $padding-x - $width;
+      $margin: $navbar-height $right-fill 0 $right-reset;
+      $right-fill: $right-fill + $width;
+    }
+    
+    #{$column} {
+      float: $float;
+      width: $width;
+      margin: $margin;
+      padding: $padding-values;
+    }
+  }
+
+  @if $legacy-support-for-ie6 {
+    _zoom: 1; // Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6
+
+    @if $navbar-selector {
+      $ie-selector: join($selectors, ($navbar-selector));
+    }
+    @else {
+      $ie-selector: $selectors;
+    }
+    #{$ie-selector} {
+      _display: inline; // display inline or double your floated margin! [1]
+      _overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
+      _overflow-y: visible;
+    }
+  }
+}
