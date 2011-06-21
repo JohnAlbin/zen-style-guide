@@ -2,66 +2,69 @@
 // RTL companion for the layout-fixed.scss file.
 //
 
+@import "base";
+@import "zen-columns";
 
-//
-// Content
-//
-#content,
-.no-sidebars #content {
-  float: right;
-  margin-left: -960px; // Negative value of #content's width + right margin.
-  margin-right: 0;
+
+#main {
+  @include clearfix;
+  @include zen-columns-fixed (
+    $selectors: ('#content'),
+    $widths: (960px),
+    $leading-direction: (right),
+    $leading-gutters: (0),
+    $padding: (),
+
+    $navbar-selector: '#navigation',
+    $navbar-height: 3em,
+    $navbar-width: 100%,
+    $navbar-leading-gutter: 0,
+    $navbar-padding: 0
+  );
 }
 
-.sidebar-first #content {
-  margin-left: -960px; // Negative value of #content's width + right margin.
-  margin-right: 200px; // The width of .region-sidebar-first.
+.sidebar-first #main {
+  @include zen-columns-fixed (
+    $selectors: ('.region-sidebar-first', '#content'),
+    $widths: (180px, 760px),
+    $leading-direction: (right),
+    $leading-gutters: (0, 20px),
+    $padding: (),
+
+    $navbar-selector: '#navigation',
+    $navbar-height: 3em,
+    $navbar-width: 100%,
+    $navbar-leading-gutter: 0,
+    $navbar-padding: 0
+  );
 }
+.sidebar-second #main {
+  @include zen-columns-fixed (
+    $selectors: ('#content', '.region-sidebar-second'),
+    $widths: (760px, 180px),
+    $leading-direction: (right),
+    $leading-gutters: (0, 20px),
+    $padding: (),
 
-.sidebar-second #content {
-  margin-left: -760px; // Negative value of #content's width + right margin.
-  margin-right: 0;
+    $navbar-selector: '#navigation',
+    $navbar-height: 3em,
+    $navbar-width: 100%,
+    $navbar-leading-gutter: 0,
+    $navbar-padding: 0
+  );
 }
+.two-sidebars #main {
+  @include zen-columns-fixed (
+    $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
+    $widths: (180px, 560px, 180px),
+    $leading-direction: (right),
+    $leading-gutters: (0, 20px, 20px),
+    $padding: (),
 
-.two-sidebars #content {
-  margin-left: -760px; // Negative value of #content's width + right margin.
-  margin-right: 200px; // The width of .region-sidebar-first
-}
-
-
-//
-// Navigation
-//
-#navigation {
-  float: right;
-  margin-left: -100%; // Negative value of #navigation's width + right margin.
-  margin-right: 0;
-}
-
-
-//
-// First sidebar
-//
-.region-sidebar-first {
-  float: right;
-  margin-left: -200px; // Negative value of .region-sidebar-first's width + right margin.
-  margin-right: 0;
-}
-
-.region-sidebar-first .section {
-  margin: 0 0 0 20px;
-}
-
-
-//
-// Second sidebar
-//
-.region-sidebar-second {
-  float: right;
-  margin-left: -960px; // Negative value of .region-sidebar-second's width + right margin.
-  margin-right: 760px; // Width of content + sidebar-first.
-}
-
-.region-sidebar-second .section {
-  margin: 0 20px 0 0;
+    $navbar-selector: '#navigation',
+    $navbar-height: 3em,
+    $navbar-width: 100%,
+    $navbar-leading-gutter: 0,
+    $navbar-padding: 0
+  );
 }
