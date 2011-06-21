@@ -137,9 +137,12 @@ $legacy-support-for-ie6: false !default;
 
   // Apply rules to the container.
   position: relative;
+  @if $legacy-support-for-ie6 {
+    _zoom: 1; // Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6.
+  }
 
+  // Apply rules to the navbar.
   @if $navbar-selector {
-    // Apply rules to the navbar.
     #{$navbar-selector} {
       float: $float;
       height: $navbar-height;
@@ -149,10 +152,12 @@ $legacy-support-for-ie6: false !default;
     }
   }
 
-  @if $legacy-support-for-ie6 {
-    _zoom: 1; // Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6
+  // Prevent overflowing content from breaking the layout.
+  #{$container-children} {
+    overflow: visible;
+    word-wrap: break-word; // A very nice CSS3 property.
 
-    #{$container-children} {
+    @if $legacy-support-for-ie6 {
       _display: inline; // display inline or double your floated margin! [1]
       _overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
       _overflow-y: visible;

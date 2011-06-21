@@ -135,21 +135,6 @@ body {
 
 
 //
-// Prevent overflowing content
-//
-#header,
-#content,
-#navigation,
-.region-sidebar-first,
-.region-sidebar-second,
-.region-footer,
-.region-bottom {
-  overflow: visible;
-  word-wrap: break-word; // A very nice CSS3 property
-}
-
-
-//
 // If a div.clearfix doesn't have any content after it and its bottom edge
 // touches the bottom of the viewport, Firefox and Safari will mistakenly
 // place several pixels worth of space between the bottom of the div and the
