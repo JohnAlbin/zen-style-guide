@@ -119,7 +119,7 @@ $legacy-support-for-ie6: false !default;
     // The columns need to know the true height of the navbar box.
     $navbar-true-height: $navbar-height + $navbar-padding-y;
     // Add the navbar to the list of the selectors of the container's children.
-    $container-children: join($container-children, ($navbar-selector));
+    $container-children: append($container-children, $navbar-selector);
   }
 
   // Iterate over each column.
