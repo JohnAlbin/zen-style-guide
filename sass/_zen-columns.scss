@@ -122,6 +122,19 @@ $legacy-support-for-ie6: false !default;
     $container-children: append($container-children, $navbar-selector);
   }
 
+  // #{} interpolation doesn't work when converting lists into selectors, so
+  // convert the list into an unquoted string before using it.
+  $string: false;
+  @each $child in $container-children {
+    @if $string == false {
+      $string: unquote($child);
+    }
+    @else {
+      $string: unquote($string + ', ' + $child);
+    }
+  }
+  $container-children: $string;
+
   // Iterate over each column.
   @each $column in $selectors {
     // Number the columns.
