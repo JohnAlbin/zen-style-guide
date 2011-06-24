@@ -52,17 +52,27 @@ body {
 
 
 //
-// Main (container for everything else)
+// Main container and its columns and navbar
 //
+
+
+// If you need support for IE6, uncomment this line:
+//$legacy-support-for-ie6: true;
+
+
+// The layout when there are no sidebars.
 #main {
   @include clearfix;
+
   @include zen-columns-fixed (
+    // These mixin parameters describe the columns.
     $selectors: ('#content'),
     $widths: (960px),
     $leading-direction: (),
     $leading-gutters: (0),
     $padding: (),
 
+    // These mixin parameters describe the navbar.
     $navbar-selector: '#navigation',
     $navbar-height: 3em,
     $navbar-width: 100%,
@@ -71,14 +81,17 @@ body {
   );
 }
 
+// The layout when there is only one sidebar, the left one.
 .sidebar-first #main {
   @include zen-columns-fixed (
+    // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content'),
     $widths: (180px, 760px),
     $leading-direction: (),
     $leading-gutters: (0, 20px),
     $padding: (),
 
+    // These mixin parameters describe the navbar.
     $navbar-selector: '#navigation',
     $navbar-height: 3em,
     $navbar-width: 100%,
@@ -86,14 +99,18 @@ body {
     $navbar-padding: 0
   );
 }
+
+// The layout when there is only one sidebar, the right one.
 .sidebar-second #main {
   @include zen-columns-fixed (
+    // These mixin parameters describe the columns.
     $selectors: ('#content', '.region-sidebar-second'),
     $widths: (760px, 180px),
     $leading-direction: (),
     $leading-gutters: (0, 20px),
     $padding: (),
 
+    // These mixin parameters describe the navbar.
     $navbar-selector: '#navigation',
     $navbar-height: 3em,
     $navbar-width: 100%,
@@ -101,14 +118,18 @@ body {
     $navbar-padding: 0
   );
 }
+
+// The layout when there are two sidebars.
 .two-sidebars #main {
   @include zen-columns-fixed (
+    // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
     $widths: (180px, 560px, 180px),
     $leading-direction: (),
     $leading-gutters: (0, 20px, 20px),
     $padding: (),
 
+    // These mixin parameters describe the navbar.
     $navbar-selector: '#navigation',
     $navbar-height: 3em,
     $navbar-width: 100%,
