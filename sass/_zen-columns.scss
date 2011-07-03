@@ -188,6 +188,7 @@ $legacy-support-for-ie6: false !default;
       width: $width;
       margin: $margin;
       padding: $padding-values;
+      border: 0 !important;
     }
   }
 
