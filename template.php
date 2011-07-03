@@ -127,6 +127,23 @@ function STARTERKIT_preprocess_comment(&$variables, $hook) {
 // */
 
 /**
+ * Override or insert variables into the region templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function STARTERKIT_preprocess_region(&$variables, $hook) {
+  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
+  if (strpos($variables['region'], 'sidebar_') === 0) {
+    $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
+  }
+}
+// */
+
+/**
  * Override or insert variables into the block templates.
  *
  * @param $variables
