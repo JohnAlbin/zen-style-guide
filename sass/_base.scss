@@ -8,6 +8,14 @@
 //   @include mix-in-name;
 
 
+// To turn off support for IE6 or IE7, set these variables to false.
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+// Zen does not have any special handling for IE8 or later. But Compass defines
+// more Legacy IE variables that you might find useful for your project.
+//@import "compass/support";
+
+
 // clearfix as defined by Drupal
 @mixin clearfix {
   &:after {
@@ -18,12 +26,16 @@
     visibility: hidden;
   }
   // IE6
-  * html & {
-    height: 1%;
+  @if $legacy-support-for-ie6 {
+    * html & {
+      height: 1%;
+    }
   }
   // IE7
-  *:first-child + html & {
-    min-height: 1%;
+  @if $legacy-support-for-ie7 {
+    *:first-child + html & {
+      min-height: 1%;
+    }
   }
 }
 
@@ -33,7 +45,9 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  @if $legacy-support-for-ie7 or $legacy-support-for-ie6 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
   clip: rect(1px, 1px, 1px, 1px);
 }
 
