@@ -20,14 +20,6 @@ ul.secondary li {
 
 
 //
-// Drupal nodes
-//
-.node-unpublished>* {
-  position: relative; // Otherwise these elements will appear below the "Unpublished" text.
-}
-
-
-//
 // Drupal admin tables
 //
 tr.even,
