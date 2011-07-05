@@ -24,13 +24,16 @@ base theme  = zen
 
 
 
-; This section adds CSS files to your theme. The media type is specified in
-; the brackets. Typical CSS media types include "all", "screen", "print", and
-; "handheld". See http://www.w3.org/TR/CSS21/media.html#media-types for a full
-; list of stylesheet media types in CSS 2.1.
+; This section adds CSS files to your theme. A media type or a media query is
+; specified in the brackets. Typical CSS media types include "all", "screen",
+; "print", and "handheld". A typical media query is
+; "screen and (max-width: 320px)".
 ;
-; You can also override or remove any module's stylesheets, an extremely
-; useful feature. See the excellent Drupal 7 Theme Guide at
+; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
+; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
+;
+; You can also override or remove any module's stylesheets, an extremely useful
+; feature. See the excellent Drupal 7 Theme Guide at
 ; http://drupal.org/node/263967 for more details.
 
 stylesheets[all][] = css/html-reset.css
@@ -47,12 +50,6 @@ stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
-
-; Example of adding handheld stylesheets. The iPhone's preferred media type
-; is based on the CSS3 Media queries. http://www.w3.org/TR/css3-mediaqueries/
-
-;stylesheets[handheld][]  = css/mobile.css
-;stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 
 ; Add conditional stylesheets that are processed by IE. See the css/README.txt.
 
