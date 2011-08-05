@@ -76,13 +76,13 @@ stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 ; add a line line to this file, and then add the new $page['REGION'] variable
 ; to your page.tpl.php template.
 
-regions[help]           = Help
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
+regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
+regions[help]           = Help
 regions[content]        = Content
-regions[header]         = Header
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
 
