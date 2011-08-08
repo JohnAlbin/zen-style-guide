@@ -8,11 +8,9 @@
 
 
 // underline all links
-a {
-  &:link,
-  &:visited {
-    text-decoration: underline !important;
-  }
+a:link,
+a:visited {
+  text-decoration: underline !important;
 }
 
 // Don't underline header
