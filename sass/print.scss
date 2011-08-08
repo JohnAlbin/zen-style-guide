@@ -21,13 +21,22 @@ a:visited {
   }
 }
 
-// CSS2 selector to add visible href after links
 #content {
-  a:link:after,
-  a:visited:after {
-    content: " (" attr(href) ") ";
-    font-size: 0.8em;
+  // Add visible URL after links.
+  a[href]:after {
+    content: " (" attr(href) ")";
     font-weight: normal;
+  }
+
+  // Only display useful links.
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  // Add visible title after abbreviations.
+  abbr[title]:after {
+    content: " (" attr(title) ")";
   }
 }
 
