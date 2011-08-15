@@ -137,9 +137,9 @@ function STARTERKIT_preprocess_comment(&$variables, $hook) {
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_region(&$variables, $hook) {
   // Don't use Zen's region--sidebar.tpl.php template for sidebars.
-  if (strpos($variables['region'], 'sidebar_') === 0) {
-    $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
-  }
+  //if (strpos($variables['region'], 'sidebar_') === 0) {
+  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
+  //}
 }
 // */
 
@@ -154,6 +154,6 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
-  $variables['classes_array'][] = 'count-' . $variables['block_id'];
+  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 }
 // */
