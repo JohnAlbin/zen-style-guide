@@ -155,5 +155,11 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
 function STARTERKIT_preprocess_block(&$variables, $hook) {
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
+
+  // By default, Zen will use the block--bare.tpl.php for the main content.
+  // This optional bit of code undoes that:
+  //if ($variables['block_html_id'] == 'block-system-main') {
+  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__bare'));
+  //}
 }
 // */
