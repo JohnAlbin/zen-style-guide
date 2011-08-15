@@ -39,6 +39,11 @@ ul.primary {
       color: #777;
       background-color: transparent;
       background: url(../images/tab-left.png) no-repeat left -38px;
+      @if $legacy-support-for-ie6 {
+        .ie6 & {
+          background-image: url(../images/tab-left-ie6.png);
+        }
+      }
 
       .tab {
         display: block;
@@ -48,6 +53,11 @@ ul.primary {
         border-width: 0;
         line-height: 20px;
         background: url(../images/tab-right.png) no-repeat right -38px;
+        @if $legacy-support-for-ie6 {
+          .ie6 & {
+            background-image: url(../images/tab-right-ie6.png);
+          }
+        }
       }
 
       &:hover,
@@ -55,9 +65,19 @@ ul.primary {
         border-width: 0;
         background-color: transparent;
         background: url(../images/tab-left.png) no-repeat left -76px;
+        @if $legacy-support-for-ie6 {
+          .ie6 & {
+            background-image: url(../images/tab-left-ie6.png);
+          }
+        }
 
         .tab {
           background: url(../images/tab-right.png) no-repeat right -76px;
+          @if $legacy-support-for-ie6 {
+            .ie6 & {
+              background-image: url(../images/tab-right-ie6.png);
+            }
+          }
         }
       }
     }
@@ -69,9 +89,19 @@ ul.primary {
       color: #000;
       background-color: transparent;
       background: url(../images/tab-left.png) no-repeat left 0;
+      @if $legacy-support-for-ie6 {
+        .ie6 & {
+          background-image: url(../images/tab-left-ie6.png);
+        }
+      }
 
       .tab {
         background: url(../images/tab-right.png) no-repeat right 0;
+        @if $legacy-support-for-ie6 {
+          .ie6 & {
+            background-image: url(../images/tab-right-ie6.png);
+          }
+        }
       }
     }
   }
@@ -121,6 +151,22 @@ ul.secondary {
       border: 1px solid #c0c0c0;
       color: #000;
       background: url(../images/tab-secondary.png) repeat-x left top;
+    }
+  }
+}
+
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab {
+  @if $legacy-support-for-ie6 {
+    .ie6 & {
+      display: inline-block; // Otherwise the blocks mistakenly get 100% width in IE6
+    }
+  }
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    .ie6-7 & {
+      cursor: pointer;
     }
   }
 }
