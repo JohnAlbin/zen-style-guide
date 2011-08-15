@@ -68,16 +68,3 @@ ul.primary li.active a:hover .tab,
 ul.primary li.active a:focus .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right 0;
 }
-
-/*
- * Wireframes - IE6 doesn't support the outline property.
- */
-.with-wireframes #header .section,
-.with-wireframes #content .section,
-.with-wireframes #navigation .section,
-.with-wireframes .region-sidebar-first .section,
-.with-wireframes .region-sidebar-second .section,
-.with-wireframes .region-footer,
-.with-wireframes .region-bottom {
-  border: 1px solid #ccc;
-}
