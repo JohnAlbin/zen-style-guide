@@ -51,10 +51,15 @@ stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
-; Add conditional stylesheets that are processed by IE. See the css/README.txt.
-
-; To target all versions of IE with an ie.css, uncomment the following line:
-;stylesheets-conditional[IE][all][]       = css/ie.css
+; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
+; Instead, Zen now adds conditional-comment-included classes to the html
+; element, such as .ie6, .ie7, .ie8, .ie6-7, etc. More information on this
+; technique can be found at:
+; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+;
+; If you still wish to use conditional stylesheets, you must install the
+; conditional stylesheets module: http://drupal.org/project/conditional_styles
+;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 
 
 
