@@ -11,8 +11,9 @@ $legacy-support-for-ie6: true !default;
 //
 // The mixin has the following required parameters:
 // - $selectors: A list of selectors for all the columns inside the container.
-//   Order the columns as they appear from left-to-right (or right-to-left when
-//   the $leading-direction is "right".)
+//   In this list, order the columns as you would like them to appear from
+//   left-to-right (or right-to-left when the $leading-direction is "right".)
+//   Note that the HTML for the columns can be in any order in the HTML source.
 // - $widths: A list of widths. Each one corresponds to a column specified in
 //   $selectors. e.g. The first width is for the first column. The second width
 //   is for the second column. etc.
