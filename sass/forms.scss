@@ -124,3 +124,13 @@ form {
     margin: 0;
   }
 }
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  .ie6-7 tr.even,
+  .ie6-7 tr.odd {
+    th,
+    td {
+      border-bottom: 1px solid #ccc; // IE doesn't display borders on table rows
+    }
+  }
+}

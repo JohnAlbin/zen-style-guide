@@ -81,8 +81,8 @@ $legacy-support-for-ie7: true;
   text-align: center;
   word-wrap: break-word; // A very nice CSS3 property
 
-  @if $legacy-support-for-ie7 {
-    *:first-child + html &>* {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    .ie6-7 &>* {
       position: relative; // Otherwise these elements will appear below the "Unpublished" text.
     }
   }
