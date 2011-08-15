@@ -56,7 +56,6 @@ stylesheets[all][] = css/print.css
 ; To target all versions of IE with an ie.css, uncomment the following line:
 ;stylesheets-conditional[IE][all][]       = css/ie.css
 stylesheets-conditional[lte IE 7][all][]  = css/ie7.css
-stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 
 

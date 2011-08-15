@@ -49,6 +49,10 @@ body {
   position: relative;
 }
 
+.ie6 #main-wrapper {
+  zoom: 1; /* Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6 */
+}
+
 #main {
 }
 
@@ -163,6 +167,25 @@ body {
 .region-bottom {
   overflow: visible;
   word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+/*
+ * CSS targeted specifically for Internet Explorer 6 for Windows.
+ *
+ * Any CSS in this file will override the rules specified in the ie.css file.
+ *
+ * References:
+ * 1. http://www.positioniseverything.net/explorer/doubled-margin.html
+ * 2. http://browservulsel.blogspot.com/2005/04/ie-overflow-auto-scrollbar-overlap.html
+ * 3. http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
+ */
+.ie6 #content,
+.ie6 #navigation,
+.ie6 .region-sidebar-first,
+.ie6 .region-sidebar-second /* Floating divs */ {
+  display: inline; /* display inline or double your floated margin! [1] */
+  overflow: hidden; /* in IE6, overflow auto is broken [2] and so is overflow visible [3] */
+  overflow-y: visible;
 }
 
 /*
