@@ -9,10 +9,6 @@
 @import "base";
 
 
-// If you need support for IE6, uncomment this line:
-//$legacy-support-for-ie6: true;
-
-
 // The layout when there are no sidebars.
 #main {
   @include clearfix;
