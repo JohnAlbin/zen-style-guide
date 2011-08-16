@@ -1,0 +1,18 @@
+//
+// Shared Sass variables for use in all .scss files.
+//
+
+//
+// To turn off support for IE6 or IE7, set these variables to false.
+//
+// Zen does not have any special handling for IE8 or later. But Compass defines
+// more Legacy IE variables that you might find useful for your theme. To use
+// those Compass variables, uncomment this line in _base.scss:
+// @import "compass/support";
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+
+
+//
+// Colors, font stacks, font sizes, etc.
+//
