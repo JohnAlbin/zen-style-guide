@@ -34,7 +34,7 @@
  */
 #navigation {
   float: right;
-  margin-left: -100%; /* Negative value of #navigation's width + right margin. */
+  margin-left: -960px; /* Negative value of #navigation's width + right margin. */
   margin-right: 0;
 }
 
