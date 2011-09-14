@@ -5,6 +5,10 @@
 @import "base";
 
 
+ul li.collapsed {
+  list-style-image: url(../images/menu-collapsed-rtl.png);
+}
+
 #navigation {
   ul.links, // Main menu and secondary menu links
   .content ul { // Menu block links

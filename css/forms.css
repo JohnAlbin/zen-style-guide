@@ -130,3 +130,10 @@ form table .item-list ul {
 .ie6-7 tr.odd td {
   border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
 }
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+td.menu-disabled {
+  background: #ccc;
+}

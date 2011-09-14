@@ -134,3 +134,10 @@ form {
     }
   }
 }
+
+//
+// Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+//
+td.menu-disabled {
+  background: #ccc;
+}

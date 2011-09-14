@@ -44,6 +44,10 @@ base theme  = zen
 ; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
+; First we remove the system's menu styling since Zen has its own.
+stylesheets[all][] = css/system.menus.css
+
+; Then we add our own stylesheets.
 stylesheets[all][] = css/html-reset.css
 stylesheets[all][] = css/wireframes.css
 stylesheets[all][] = css/layout-fixed.css

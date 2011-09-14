@@ -213,11 +213,7 @@ ul, ol, .item-list ul, .item-list ol {
 }
 
 li,
-.item-list ul li,
-ul.menu li,
-li.expanded,
-li.collapsed,
-li.leaf { // List items, including Drupal overrides
+.item-list ul li { // List items, including Drupal overrides
   margin: 0;
   padding: 0;
 }
