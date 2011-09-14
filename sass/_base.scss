@@ -32,13 +32,13 @@
   }
   // IE6
   @if $legacy-support-for-ie6 {
-    * html & {
+    .ie6 & {
       height: 1%;
     }
   }
   // IE7
   @if $legacy-support-for-ie7 {
-    *:first-child + html & {
+    .ie7 & {
       min-height: 1%;
     }
   }
