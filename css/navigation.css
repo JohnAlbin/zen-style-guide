@@ -43,7 +43,7 @@ li a.active {
 }
 
 #secondary-menu {
-  float: right;
+  float: right; /* LTR */
 }
 
 /*

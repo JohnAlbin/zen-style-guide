@@ -14,3 +14,7 @@
   float: right;
   padding: 0 0 0 10px;
 }
+
+#secondary-menu {
+  float: left;
+}
