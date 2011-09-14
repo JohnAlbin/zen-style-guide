@@ -24,17 +24,25 @@ base theme  = zen
 
 
 
-; This section adds CSS files to your theme. A media type or a media query is
-; specified in the brackets. Typical CSS media types include "all", "screen",
-; "print", and "handheld". A typical media query is
-; "screen and (max-width: 320px)".
+; This section controls the CSS files for your theme. There are 3 different
+; things you can do with a "stylesheets" line:
+; - Add a new stylesheet for your theme.
+; - Override a module's stylesheet. If the stylesheet you are adding uses the
+;   same filename as a stylesheet from a Drupal core or contrib module, your CSS
+;   file will be used instead of the module's file.
+; - Remove a module's stylesheet. If you specify the name of a Drupal core or
+;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
+;   NOT include a file with that name with your theme.
+;
+; stylesheets[MEDIA][] = FILE
+;
+; The "FILE" is the name of the stylesheet to add/override/remove.
+; The "MEDIA" in the first set of brackets is a media type or a media query.
+; Typical CSS media types include "all", "screen", "print", and "handheld". A
+; typical media query is "screen and (max-width: 320px)".
 ;
 ; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
-;
-; You can also override or remove any module's stylesheets, an extremely useful
-; feature. See the excellent Drupal 7 Theme Guide at
-; http://drupal.org/node/263967 for more details.
 
 stylesheets[all][] = css/html-reset.css
 stylesheets[all][] = css/wireframes.css
