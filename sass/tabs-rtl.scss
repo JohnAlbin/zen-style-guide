@@ -5,14 +5,15 @@
 @import "base";
 
 
-ul.primary {
-
+ul.primary,
+ul.secondary {
   li {
+    float: right;
   }
 }
 
-ul.secondary {
-
+ul.primary {
   li {
+    margin: 0.5em 3px 0 0;
   }
 }
