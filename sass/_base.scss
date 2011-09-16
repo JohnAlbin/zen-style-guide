@@ -5,11 +5,11 @@
 // theme, each .scss file has a @import "base" declaration. And this _base.scss
 // file is in charge of importing all the other partials needed for the theme.
 
-//@import "compass/support";
-@import "variables";
+@import "compass/support"; // Add Compass' IE and vendor prefix support variables.
+@import "variables";       // Add your own shared variables here.
+
 @import "zen-columns";
 @import "compass/css3";
-
 
 
 //
