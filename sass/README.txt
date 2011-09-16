@@ -1,40 +1,56 @@
-ABOUT SASS
-----------
+ABOUT SASS AND COMPASS
+----------------------
 
-Experimental Sass versions of Zen's CSS files. To learn more about Sass, visit:
-  http://sass-lang.com
+This directory includes Sass versions of Zen's CSS files.
+
+Sass is a language that is just normal CSS plus some extra features, like
+variables, nested rules, math, mixins, etc. If your stylesheets are written in
+Sass, helper applications can convert them to standard CSS so that you can
+include the CSS in the normal ways with your theme.
+
+To learn more about Sass, visit: http://sass-lang.com
+
+Compass is a helper library for Sass. It includes libraries of shared mixins, a
+package manager to add additional extension libraries, and an executable that
+can easily convert Sass files into CSS.
+
+To learn more about Compass, visit: http://compass-style.org
 
 
-To automatically generate the css versions of the scss while you are doing theme
-development, you'll need to tell sass to "watch" the sass directory so that any
-time a .scss file is changed it will automatically place a generated CSS file
-into your sub-theme's css directory:
+DEVELOPING WITH SASS AND COMPASS
+--------------------------------
 
-  sass -l --watch <sass source folder>:<css destination folder>
+To automatically generate the CSS versions of the scss while you are doing theme
+development, you'll need to tell Compass to "watch" the sass directory so that
+any time a .scss file is changed it will automatically place a generated CSS
+file into your sub-theme's css directory:
 
-If you want to add support for the FireSass plug-in, add the "-g" flag:
+  compass watch <path to your sub-theme's directory>
 
-  sass -g --watch <source>:<destination>
+  If you are already in the root of your sub-theme's directory, you can simply
+  type:  compass watch
+
+While using generated CSS with Firebug, the line numbers it reports will be
+wrong since it will be showing the generated CSS file's line numbers and not the
+line numbers of the source Sass files. To correct this problem, you can install
+the FireSass plug-in into Firefox.
+  https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug/
+
+
+MOVING YOUR CSS TO PRODUCTION
+-----------------------------
 
 Once you have finished your sub-theme development and are ready to move your CSS
 files to your production server, you'll need to tell sass to update all your CSS
-files and to compress them (to improve performance). Note: the sass command will
-only generate CSS for .scss files that have recently changed; in order to force
-it to regenerate all the CSS files, you can use the UNIX "touch" command to
-force update the modification date of all your .scss files.
+files and to compress them (to improve performance). Note: the Compass command
+will only generate CSS for .scss files that have recently changed; in order to
+force it to regenerate all the CSS files, you can use the Compass' clean command
+to delete all the generated CSS files.
 
-  touch <sass source folder>/*.scss
-  sass -t compressed --update <sass source folder>:<css destination folder>
+- Delete all CSS files by running: compass clean
+- Edit the config.rb file in your theme's directory and uncomment this line by
+  deleting the "#" from the beginnning:
+    #environment = :production
+- Regenerate all the CSS files by running: compass compile
 
-
-For example, from your sub-theme's root directory, you can run these commands:
-
-- During sub-theme development:
-    sass -l --watch sass:css
-
-- During sub-theme development (w/ FireSass support):
-    sass -g --watch sass:css
-
-- After completion of development:
-    touch sass/*.scss
-    sass -t compressed --update sass:css
+And don't forget to turn on Drupal's CSS aggregation. :-)
