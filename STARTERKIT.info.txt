@@ -81,15 +81,20 @@ stylesheets[all][] = css/print.css
 
 
 
-; The regions defined in Zen's default page.tpl.php file.  The name in
-; brackets is the name of the region in the $page variable in the page.tpl.php
-; file, (e.g. "[navigation]" in the .info file means there will be a
-; $page['navigation'] variable in the page.tpl.php file.) The text after the
-; equals sign is a descriptive text used on the admin/structure/blocks page.
+; This section lists the regions defined in Zen's default page.tpl.php and
+; maintenance-page.tpl.php files. The name in brackets is the machine name of
+; the region. The text after the equals sign is a descriptive text used on the
+; admin/structure/blocks page.
 ;
-; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
-; add a line line to this file, and then add the new $page['REGION'] variable
-; to your page.tpl.php template.
+; In the page.tpl, the contents of the region are output with a
+; $page['MACHINE-NAME'] variable and, in the maintenance-page.tpl, the region is
+; output with a $MACHINE-NAME variable. For example, with this line in the .info
+; file:
+;   regions[header_top] = Header top
+; You'll use this variable in page.tpl.php:
+;   <?php print render($page['header_top']); ?>
+; And you'll use this variable in maintenance-page.tpl.php:
+;   <?php print $header_top; ?>
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar
