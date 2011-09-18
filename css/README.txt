@@ -3,10 +3,10 @@ ZEN'S STYLESHEETS
 
 Don't panic!
 
-There are 23 CSS files in this sub-theme, but its not as bad as it first seems:
+There are 21 CSS files in this sub-theme, but its not as bad as it first seems:
 - The drupal7-reference.css is just a reference file and isn't used directly by
   your sub-theme. See below.
-- There are 7 CSS files whose names end in "-rtl.css". Those are CSS files
+- There are 6 CSS files whose names end in "-rtl.css". Those are CSS files
   needed to style content written in Right-to-Left languages, such as Arabic and
   Hebrew. If your website doesn't use such languages, you can safely delete all
   of those CSS files.
@@ -14,7 +14,7 @@ There are 23 CSS files in this sub-theme, but its not as bad as it first seems:
   functionality, you can remove wireframes.css from your sub-theme's .info file
   and delete the file as well.
 
-That leaves just 14 CSS files. (Okay, still quite a few, but better than 23.)
+That leaves just 13 CSS files. (Okay, still quite a few, but better than 21.)
 
 Why not just one stylesheet?
 
@@ -59,12 +59,11 @@ theming Drupal websites.
   reset method, feel free to add it.
 
 - layout-fixed.css:
-- layout-liquid.css:
   Zen's default layout is based on the Zen Columns layout method. The
-  layout-fixed.css file is used by default and can be swapped with the
-  layout-liquid.css file. These files are designed to be easily replaced. If you
-  are more familiar with a different CSS layout method, such as Blueprint or
-  960.gs, you can replace these files with your choice of layout CSS file.
+  layout-fixed.css file is used by default, but these files are designed to be
+  easily replaced. If you are more familiar with a different CSS layout method,
+  such as Blueprint or 960.gs, you can replace the default layout with your
+  choice of layout CSS file.
 
 - page-backgrounds.css:
   Layered backgrounds across scattered divs can be easier to manage if they are
