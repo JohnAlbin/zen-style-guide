@@ -114,6 +114,7 @@ ul.primary a:focus {
 
 ul.primary a.active {
   background-color: white;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#FFFFFFFF');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(#e9e9e9, #ffffff);
   background-image: -moz-linear-gradient(#e9e9e9, #ffffff);
