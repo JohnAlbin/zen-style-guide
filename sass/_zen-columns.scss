@@ -49,7 +49,7 @@ $legacy-support-for-ie6: true !default;
 //   $navbar-width must also be specified so that the width plus leading gutter
 //   plus padding isn't greater than 100% of the container's width.
 //
-@mixin zen-columns-fixed (
+@mixin zen-columns (
   // Information about the columns.
   $selectors: ('.sidebar1', '.content', '.sidebar2'),
   $widths: (),

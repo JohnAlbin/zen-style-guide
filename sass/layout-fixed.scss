@@ -60,7 +60,7 @@ body {
 #main {
   @include clearfix;
 
-  @include zen-columns-fixed (
+  @include zen-columns (
     // These mixin parameters describe the columns.
     $selectors: ('#content'),
     $widths: (960px),
@@ -79,7 +79,7 @@ body {
 
 // The layout when there is only one sidebar, the left one.
 .sidebar-first #main {
-  @include zen-columns-fixed (
+  @include zen-columns (
     // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content'),
     $widths: (180px, 760px),
@@ -98,7 +98,7 @@ body {
 
 // The layout when there is only one sidebar, the right one.
 .sidebar-second #main {
-  @include zen-columns-fixed (
+  @include zen-columns (
     // These mixin parameters describe the columns.
     $selectors: ('#content', '.region-sidebar-second'),
     $widths: (760px, 180px),
@@ -117,7 +117,7 @@ body {
 
 // The layout when there are two sidebars.
 .two-sidebars #main {
-  @include zen-columns-fixed (
+  @include zen-columns (
     // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
     $widths: (180px, 560px, 180px),
