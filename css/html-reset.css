@@ -123,6 +123,27 @@ var {
 }
 
 /*
+ * HTML5 rules for legacy browsers
+ *
+ * Corrects for missing block and inline-block display in IE6/7/8/9 and FF3.
+ */
+article, aside, footer, header, hgroup, nav, section,
+details, figcaption, figure, menu, summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+.ie6-7 audio,
+.ie6-7 canvas,
+.ie6-7 video {
+  display: inline;
+  zoom: 1;
+}
+
+/*
  * Block-level elements
  *
  * To achieve a pleasant vertical rhythm, we use the 1.5em line height of our
