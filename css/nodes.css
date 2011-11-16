@@ -23,7 +23,7 @@
   /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
 }
 
-.node-unpublished div.unpublished,
+.node-unpublished p.unpublished,
 .comment-unpublished p.unpublished /* The word "Unpublished" displayed underneath the content. */ {
   height: 0;
   overflow: visible;
