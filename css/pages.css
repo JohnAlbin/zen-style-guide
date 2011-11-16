@@ -175,6 +175,7 @@ ul.links.inline {
 }
 
 ul.links li {
+  display: inline;
   list-style-type: none;
   padding: 0 1em 0 0; /* LTR */
 }
