@@ -24,7 +24,7 @@
 }
 
 .node-unpublished div.unpublished,
-.comment-unpublished div.unpublished /* The word "Unpublished" displayed underneath the content. */ {
+.comment-unpublished p.unpublished /* The word "Unpublished" displayed underneath the content. */ {
   height: 0;
   overflow: visible;
   color: #d8d8d8;

@@ -77,7 +77,7 @@
 .comment-unpublished { // Unpublished comments
   // background-color: #fff4f4; // Drupal core uses a #fff4f4 background
 
-  div.unpublished { // The word "Unpublished" displayed underneath the content.
+  p.unpublished { // The word "Unpublished" displayed underneath the content.
     @include unpublished-div;
   }
 }
