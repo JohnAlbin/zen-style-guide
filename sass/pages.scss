@@ -29,6 +29,8 @@ body {
 // See the element-focusable rule in system.base.css.
 //
 #skip-link {
+  margin: 0;
+
   a,
   a:visited {
     display: block;

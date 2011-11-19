@@ -26,6 +26,9 @@ body {
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
+#skip-link {
+  margin: 0;
+}
 #skip-link a,
 #skip-link a:visited {
   display: block;
