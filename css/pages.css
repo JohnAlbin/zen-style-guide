@@ -62,8 +62,7 @@ body {
   float: left;
 }
 
-h1#site-name,
-div#site-name /* The name of the website */ {
+#site-name /* The name of the website */ {
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
