@@ -114,6 +114,16 @@ body {
 }
 
 .breadcrumb { // The path to the current page in the form of a list of links
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 h1.title, // The title of the page

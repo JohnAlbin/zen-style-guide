@@ -110,6 +110,16 @@ div#site-name /* The name of the website */ {
 
 .breadcrumb /* The path to the current page in the form of a list of links */ {
 }
+.breadcrumb ul {
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 h1.title, /* The title of the page */
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
