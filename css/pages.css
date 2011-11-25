@@ -80,6 +80,8 @@ body {
 }
 
 #site-slogan /* The slogan (or tagline) of a website */ {
+  margin: 0;
+  font-size: 1em;
 }
 
 .region-header /* Wrapper for any blocks placed in the header region */ {
