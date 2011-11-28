@@ -45,14 +45,14 @@
  *   available to themers.
  *
  *   It works by having one preprocess function for each template file or its
- *   derivatives (called template suggestions). For example:
+ *   derivatives (called theme hook suggestions). For example:
  *     THEME_preprocess_page    alters the variables for page.tpl.php
  *     THEME_preprocess_node    alters the variables for node.tpl.php or
- *                              for node-forum.tpl.php
+ *                              for node--forum.tpl.php
  *     THEME_preprocess_comment alters the variables for comment.tpl.php
  *     THEME_preprocess_block   alters the variables for block.tpl.php
  *
- *   For more information on preprocess functions and template suggestions,
+ *   For more information on preprocess functions and theme hook suggestions,
  *   please visit the Theme Developer's Guide on Drupal.org:
  *   http://drupal.org/node/223440
  *   and http://drupal.org/node/190815#template-suggestions
