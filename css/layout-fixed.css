@@ -43,9 +43,6 @@ body {
 #header {
 }
 
-#header .section {
-}
-
 .region-header {
 }
 
@@ -96,15 +93,10 @@ body {
   margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
-#content .section {
-  margin: 0;
-  padding: 0;
-}
-
 /*
  * Navigation
  *
- * If you don't use this navigation bar, you should delete all of these rules
+ * If you don't use this navigation bar, you should delete both of these rules
  * so that the content and sidebars don't "make room" for the navbar.
  */
 #navigation {
@@ -130,9 +122,6 @@ body {
 .region-sidebar-first,
 .region-sidebar-second {
   margin-top: 3em; /* Set this to the same value as the navigation height above. */
-}
-
-#navigation .section {
 }
 
 /*

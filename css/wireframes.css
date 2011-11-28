@@ -6,11 +6,11 @@
  */
 
 
-.with-wireframes #header .section,
-.with-wireframes #content .section,
-.with-wireframes #navigation .section,
-.with-wireframes .region-sidebar-first .section,
-.with-wireframes .region-sidebar-second .section,
+.with-wireframes #header,
+.with-wireframes #content,
+.with-wireframes #navigation,
+.with-wireframes .region-sidebar-first,
+.with-wireframes .region-sidebar-second,
 .with-wireframes #footer,
 .with-wireframes .region-bottom {
   outline: 1px solid #ccc;
@@ -19,11 +19,11 @@
 /*
  * IE6/7 do not support the outline property.
  */
-.ie6-7 .with-wireframes #header .section,
-.ie6-7 .with-wireframes #content .section,
-.ie6-7 .with-wireframes #navigation .section,
-.ie6-7 .with-wireframes .region-sidebar-first .section,
-.ie6-7 .with-wireframes .region-sidebar-second .section,
+.ie6-7 .with-wireframes #header,
+.ie6-7 .with-wireframes #content,
+.ie6-7 .with-wireframes #navigation,
+.ie6-7 .with-wireframes .region-sidebar-first,
+.ie6-7 .with-wireframes .region-sidebar-second,
 .ie6-7 .with-wireframes #footer,
 .ie6-7 .with-wireframes .region-bottom {
   border: 1px solid #ccc;

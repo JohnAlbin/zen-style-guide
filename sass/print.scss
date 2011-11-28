@@ -44,8 +44,7 @@ a:visited {
 }
 
 // Un-float the content
-#content,
-#content .section {
+#content {
   float: none;
   width: 100%;
   margin: 0 !important;
@@ -58,8 +57,7 @@ body,
 #page,
 #main-wrapper,
 #main,
-#content,
-#content .section {
+#content {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
