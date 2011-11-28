@@ -48,9 +48,7 @@ a:visited {
 
 /* Turn off any background colors or images */
 body,
-#page-wrapper,
 #page,
-#main-wrapper,
 #main,
 #content {
   color: #000;
@@ -79,7 +77,7 @@ body,
 
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
    the content after the first page. */
-#page-wrapper {
+#page {
   overflow-y: visible;
 }
 

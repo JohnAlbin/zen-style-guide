@@ -22,7 +22,7 @@
 body {
 }
 
-#page-wrapper,
+#page,
 .region-bottom {
   /*
    * If you want to make the page a fixed width and centered in the viewport,
@@ -32,9 +32,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
-}
-
-#page {
 }
 
 /*
@@ -49,11 +46,8 @@ body {
 /*
  * Main (container for everything else)
  */
-#main-wrapper {
-  position: relative;
-}
-
 #main {
+  position: relative;
 }
 
 /*
@@ -214,7 +208,7 @@ body {
  * to appear on the #page-wrapper div.
  */
 /*
-#page-wrapper {
+#page {
   overflow-y: hidden;
 }
 */
