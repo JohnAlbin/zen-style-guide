@@ -156,7 +156,7 @@ body {
 /*
  * Footer
  */
-.region-footer {
+#footer {
 }
 
 /*
@@ -173,7 +173,7 @@ body {
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
-.region-footer,
+#footer,
 .region-bottom {
   overflow: visible;
   word-wrap: break-word; /* A very nice CSS3 property */

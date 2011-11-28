@@ -11,7 +11,7 @@
 .with-wireframes #navigation .section,
 .with-wireframes .region-sidebar-first .section,
 .with-wireframes .region-sidebar-second .section,
-.with-wireframes .region-footer,
+.with-wireframes #footer,
 .with-wireframes .region-bottom {
   outline: 1px solid #ccc;
 }
@@ -24,7 +24,7 @@
 .ie6-7 .with-wireframes #navigation .section,
 .ie6-7 .with-wireframes .region-sidebar-first .section,
 .ie6-7 .with-wireframes .region-sidebar-second .section,
-.ie6-7 .with-wireframes .region-footer,
+.ie6-7 .with-wireframes #footer,
 .ie6-7 .with-wireframes .region-bottom {
   border: 1px solid #ccc;
 }
