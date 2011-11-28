@@ -45,10 +45,7 @@
   float: right;
   margin-left: -200px; /* Negative value of .region-sidebar-first's width + right margin. */
   margin-right: 0;
-}
-
-.region-sidebar-first .section {
-  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
 }
 
 /*
@@ -58,8 +55,5 @@
   float: right;
   margin-left: -960px; /* Negative value of .region-sidebar-second's width + right margin. */
   margin-right: 760px; /* Width of content + sidebar-first. */
-}
-
-.region-sidebar-second .section {
-  margin: 0 20px 0 0;
+  padding: 0 20px 0 0;
 }

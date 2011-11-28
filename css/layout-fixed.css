@@ -64,11 +64,18 @@ body {
  */
 #content,
 .no-sidebars #content {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   float: left; /* LTR */
   width: 960px;
   margin-left: 0; /* LTR */
   margin-right: -960px; /* LTR */ /* Negative value of #content's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+  padding: 0; /* IE6-7 don't support "box-sizing: border-box". If you add
+                 padding or borders to this column, you need to add a special
+                 IE6-7 rule so the layout doesn't break. For example, see the
+                 .ie6-7 .region-sidebar-first rule below */
 }
 
 .sidebar-first #content {
@@ -101,11 +108,18 @@ body {
  * so that the content and sidebars don't "make room" for the navbar.
  */
 #navigation {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   float: left; /* LTR */
   width: 960px;
   margin-left: 0; /* LTR */
   margin-right: -960px; /* LTR */ /* Negative value of #navigation's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  padding: 0; /* IE6-7 doesn't support "box-sizing: border-box". If you add
+                 padding or borders to this column, you need to add a special
+                 IE6-7 rule so the layout doesn't break. For example, see the
+                 .ie6-7 .region-sidebar-first rule below */
   height: 3em; /* The navigation must have a fixed height, but can have any
                   arbritrary value. We picked one that is the line-height plus
                   1em: 1.3 + 1 = 2.3 Set this to the same value as the
@@ -125,32 +139,36 @@ body {
  * First sidebar
  */
 .region-sidebar-first {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   float: left; /* LTR */
   width: 200px;
   margin-left: 0; /* LTR */
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+  padding: 0 20px 0 0; /* LTR */
 }
-
-.region-sidebar-first .section {
-  margin: 0 20px 0 0; /* LTR */
-  padding: 0;
+.ie6-7 .region-sidebar-first /* IE6-7 doesn't understand "box-sizing: border-box" */ {
+  width: 180px; /* So we have to subtract any left/right padding or borders from the width. */
 }
 
 /*
  * Second sidebar
  */
 .region-sidebar-second {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   float: left; /* LTR */
   width: 200px;
   margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
   margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+  padding: 0 0 0 20px; /* LTR */
 }
-
-.region-sidebar-second .section {
-  margin: 0 0 0 20px; /* LTR */
-  padding: 0;
+.ie6-7 .region-sidebar-second /* IE6-7 doesn't understand "box-sizing: border-box" */ {
+  width: 180px; /* So we have to subtract any left/right padding or borders from the width. */
 }
 
 /*
