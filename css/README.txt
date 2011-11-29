@@ -58,9 +58,9 @@ theming Drupal websites.
   elements and standardize the styling across browsers. If you prefer a specific
   reset method, feel free to add it.
 
-- layout-fixed.css:
+- layouts/fixed-width.css:
   Zen's default layout is based on the Zen Columns layout method. The
-  layout-fixed.css file is used by default, but these files are designed to be
+  fixed-width.css file is used by default, but these files are designed to be
   easily replaced. If you are more familiar with a different CSS layout method,
   such as Blueprint or 960.gs, you can replace the default layout with your
   choice of layout CSS file.

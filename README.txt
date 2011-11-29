@@ -61,12 +61,12 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
  3. Choose your preferred page layout method or grid system.
 
     By default your new sub-theme is using a fixed-width layout. If you want a
-    liquid layout for your theme, delete the unneeded layout-fixed.css and
-    layout-fixed-rtl.css files and edit your sub-theme's .info file and replace
-    the reference to layout-fixed.css with layout-liquid.css.
+    liquid layout for your theme, delete the unneeded fixed-width.css and
+    fixed-width-rtl.css files and edit your sub-theme's .info file and replace
+    the reference to fixed-width.css with layout-liquid.css.
 
     For example, edit foo/foo.info and change this line:
-      stylesheets[all][]   = css/layout-fixed.css
+      stylesheets[all][]   = css/layouts/fixed-width.css
     to:
       stylesheets[all][]   = css/layout-liquid.css
 
@@ -75,8 +75,9 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
       is:  stylesheets[MEDIA][] = path/to/file.css
 
     Alternatively, if you are more familiar with a different CSS layout method,
-    such as Blueprint or 960.gs, you can replace the "css/layout-fixed.css" line
-    in your .info file with a line pointing at your choice of layout CSS file.
+    such as Blueprint or 960.gs, you can replace the
+    "css/layouts/fixed-width.css" line in your .info file with a line pointing
+    at your choice of layout CSS file.
 
     Then, visit your site's Appearance page at admin/appearance to refresh
     Drupal 7's cache of .info file data.
