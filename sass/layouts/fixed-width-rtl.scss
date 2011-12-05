@@ -14,6 +14,7 @@
   @include clearfix;
 
   @include zen-columns (
+    $box-sizing: border-box,
     // These mixin parameters describe the columns.
     $selectors: ('#content'),
     $widths: (960px),
@@ -33,6 +34,7 @@
 // The layout when there is only one sidebar, the left one.
 .sidebar-first #main {
   @include zen-columns (
+    $box-sizing: border-box,
     // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content'),
     $widths: (180px, 760px),
@@ -52,6 +54,7 @@
 // The layout when there is only one sidebar, the right one.
 .sidebar-second #main {
   @include zen-columns (
+    $box-sizing: border-box,
     // These mixin parameters describe the columns.
     $selectors: ('#content', '.region-sidebar-second'),
     $widths: (760px, 180px),
@@ -71,6 +74,7 @@
 // The layout when there are two sidebars.
 .two-sidebars #main {
   @include zen-columns (
+    $box-sizing: border-box,
     // These mixin parameters describe the columns.
     $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
     $widths: (180px, 560px, 180px),

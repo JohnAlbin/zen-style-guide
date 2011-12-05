@@ -19,6 +19,9 @@ $legacy-support-for-ie6: true !default;
 //   is for the second column. etc.
 //
 // The mixin has the following optional parameters:
+// - $box-sizing: The type of CSS3 box model each column should use. Can be set
+//   to content-box or border-box. Defaults to content-box, but border-box is
+//   way cooler. IE 6 and 7 don't support border-box.
 // - $leading-direction: The direction the columns should float. Can be set to
 //   "left" or "right". An extremely advanced option allows you to specify a
 //   a list of directions, one direction for each column.
@@ -51,6 +54,7 @@ $legacy-support-for-ie6: true !default;
 //
 @mixin zen-columns (
   // Information about the columns.
+  $box-sizing: content-box,
   $selectors: ('.sidebar1', '.content', '.sidebar2'),
   $widths: (),
   $leading-direction: (),
@@ -115,6 +119,10 @@ $legacy-support-for-ie6: true !default;
     @if length($navbar-padding) >= 3 {
       $navbar-padding-y: nth($navbar-padding, 1) + nth($navbar-padding, 3);
     }
+    // We only keep track of the padding for content-box layouts.
+    @if $box-sizing == border-box {
+      $navbar-padding-x: 0;
+    }
     // Determine the distance of the navbar's right edge from the container's left edge.
     $navbar-reset: -$navbar-leading-gutter - $navbar-width - $navbar-padding-x;
     // The columns need to know the true height of the navbar box.
@@ -162,6 +170,10 @@ $legacy-support-for-ie6: true !default;
         $padding-x: 2 * nth($padding-values, 2);
       }
     }
+    // We only keep track of the padding for content-box layouts.
+    @if $box-sizing == border-box {
+      $padding-x: 0;
+    }
     // If the column is floating from the left, determine the distance from the
     // container's left edge to the column's left edge ($left-fill) and to the
     // column's right edge ($left-reset).
@@ -189,7 +201,6 @@ $legacy-support-for-ie6: true !default;
       width: $width;
       margin: $margin;
       padding: $padding-values;
-      border: 0 !important;
     }
   }
 
@@ -207,12 +218,24 @@ $legacy-support-for-ie6: true !default;
     }
   }
 
-  // Prevent overflowing content from breaking the layout.
+  // Apply rules to navbar and columns.
   #{$container-children} {
+    // Specify the border-box properties.
+    @if $box-sizing == border-box {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    // Prevent borders since they'll break the layout with content-box.
+    @if $box-sizing == content-box {
+      border: 0 !important;
+    }
+    // Prevent overflowing content from breaking the layout.
     overflow: visible;
     word-wrap: break-word; // A very nice CSS3 property.
 
-    @if $legacy-support-for-ie6 {
+    @if $legacy-support-for-ie6 and $box-sizing == content-box {
       .ie6 & {
         display: inline; // display inline or double your floated margin! [1]
         overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
