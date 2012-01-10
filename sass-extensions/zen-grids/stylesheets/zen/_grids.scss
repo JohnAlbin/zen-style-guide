@@ -1,0 +1,144 @@
+//
+// Mixins for the Zen Grids system.
+//
+
+
+// Specify the number of columns in the grid.
+$zen-column-count: 12 !default;
+
+// Specify the width of the gutters; half of the gutter will be placed on each
+// side of a grid column.
+$zen-gutter-width: 20px !default;
+
+// Specify the width of the entire grid. Defaults to 100% for a fluid responsive
+// design, but you can change this to a pixel value if you need a fixed grid.
+$zen-grid-width: 100% !default;
+
+// Specify the default floating direction for zen's mixins.
+$zen-float-direction: left !default;
+
+// Specify the CSS3 box-sizing method. The default, "border-box", is compatible
+// with all modern browsers, including IE 8 and later. Use "content-box" for
+// wider compatibility.
+$zen-box-sizing: border-box !default;
+
+// This is a helper variable for RTL layouts.
+$zen-reverse-all-floats: false !default;
+
+// You can generate more efficient CSS if you manually apply the unit base to
+// all grid elements in a single ruleset.
+$zen-auto-include-unit-base: true !default;
+
+
+//
+// Apply this to the container element.
+//
+@mixin zen-grid-container () {
+  position: relative;
+  @include clearfix;
+}
+
+//
+// Apply this to any content box that is also a container element for a nested
+// grid.
+//
+@mixin zen-nested-container () {
+  @include zen-grid-container();
+  padding: {
+    left: 0;
+    right: 0;
+  }
+}
+
+//
+// Apply this to each content box. Set the $column-position to the column number
+// the content box starts on. And set the $column-span to the number of columns
+// that the content box spans.
+//
+@mixin zen-grid (
+  $column-position,
+  $column-span,
+  $float-direction: $zen-float-direction,
+  $column-count: $zen-column-count,
+  $gutter-width: $zen-gutter-width,
+  $grid-width: $zen-grid-width,
+  $box-sizing: $zen-box-sizing
+) {
+
+  // Calculate the unit width.
+  $unit-width: $grid-width / $column-count;
+
+  // Determine the float direction and its reverse.
+  $dir: $float-direction;
+  @if $zen-reverse-all-floats {
+    $dir: zen-direction-flip($dir);
+  }
+  $rev: zen-direction-flip($dir);
+
+  // Auto-apply the unit base mixin.
+  @if $zen-auto-include-unit-base {
+    @include zen-grid-unit-base($box-sizing);
+  }
+
+  float: $dir;
+  width: $column-span * $unit-width;
+  margin: {
+    #{$dir}: ($column-position - 1) * $unit-width;
+    #{$rev}: (1 - $column-position - $column-span) * $unit-width;
+  }
+  padding: {
+    left: $gutter-width / 2;
+    right: $gutter-width / 2;
+  }
+}
+
+//
+// Apply this mixin to each content box in the layout to prevent overflowing
+// content from breaking the layout.
+//
+// The mixin has the following optional parameters:
+// - $box-sizing: The type of CSS3 box model each box should use. Can be set to
+//   content-box or border-box. Defaults to content-box, but border-box is way
+//   cooler. IE 6 and 7 don't support border-box.
+@mixin zen-grid-unit-base ($box-sizing: $zen-box-sizing) {
+  // Specify the border-box properties.
+  @if $box-sizing == border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  // Prevent borders since they'll break the layout with content-box.
+  @if $box-sizing == content-box {
+    border: 0 !important;
+  }
+  // Prevent overflowing content from breaking the layout.
+  overflow: visible;
+  word-wrap: break-word; // A very nice CSS3 property.
+
+  @if $legacy-support-for-ie6 {
+    @if $box-sizing == content-box {
+      .ie6 & {
+        display: inline; // display inline or double your floated margin! [1]
+        overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
+        overflow-y: visible;
+      }
+    }
+    @else {
+      @warn "IE6 legacy support is on, but $box-sizing is set to #{$box-sizing}.";
+    }
+  }
+}
+
+
+//
+// Helper functions for the Zen mixins.
+//
+
+// Returns the opposite direction, given "left" or "right".
+@function zen-direction-flip($dir) {
+  @if $dir == left {
+    @return right;
+  }
+  @return left;
+}
