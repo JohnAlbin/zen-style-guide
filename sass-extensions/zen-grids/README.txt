@@ -1,5 +1,5 @@
-ABOUT compass-zen-plugin
-------------------------
+ABOUT zen-grids
+---------------
 
 The Zen Grids system is a fluid responsive grid system that is immune to
 rounding errors and overflowing content. With an easy-to-use Sass mixin set, the
@@ -12,8 +12,11 @@ USAGE
 A simple example: a content column with a sidebar on each side, aligned to a 12
 column grid.
 
+  @import "zen";
+
   $zen-column-count: 12;    // Set the total number of columns in the grid.
-  $zen-gutter-width: 30px;  // Set the gutter size. A half-gutter is used on each side of each column.
+  $zen-gutter-width: 30px;  // Set the gutter size. A half-gutter is used on
+                            // each side of each column.
 
   .container {
     @include zen-grid-container();
@@ -30,6 +33,23 @@ column grid.
 
 Within the .container element, the .sidebar1, .sidebar2 and .content elements
 can be in any order.
+
+
+INSTALLATION
+------------
+
+Zen grids is distributed as a Ruby Gem. On your computer, simply run:
+
+  sudo gem install zen-grids
+
+Then to add it to an existing project, edit the project's configuration file,
+config.rb, and add this line:
+
+  require 'zen-grids'
+
+And then, from the project's root directory, run:
+
+  compass install zen-grids
 
 
 REQUIREMENTS

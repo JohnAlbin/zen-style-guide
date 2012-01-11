@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project =
 
   s.version     = '1.0.alpha.1'
-  s.date        = '2012-01-10'
+  s.date        = '2012-01-11'
 
   s.authors     = ['John Albin Wilkins']
   s.email       = 'virtually.johnalbin@gmail.com'
@@ -24,7 +24,11 @@ Gem::Specification.new do |s|
     stylesheets/_zen.scss
     stylesheets/zen/_columns.scss
     stylesheets/zen/_grids.scss
+    templates/project/example.html
     templates/project/manifest.rb
+    templates/project/common.scss
+    templates/project/layout.scss
+    templates/project/styles.scss
     zen-grids.gemspec
   ]
 end
