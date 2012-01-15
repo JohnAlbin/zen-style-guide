@@ -66,6 +66,9 @@ $legacy-support-for-ie6: false !default;
 // the content box starts on. And set the $column-span to the number of columns
 // that the content box spans.
 //
+// For content boxes that are floated right, the $column-position is counted
+// from the right instead of from the left.
+//
 @mixin zen-grid (
   $column-position,
   $column-span,
@@ -86,20 +89,16 @@ $legacy-support-for-ie6: false !default;
   }
   $rev: zen-direction-flip($dir);
 
-  // Auto-apply the unit base mixin.
-  @if $zen-auto-include-unit-base {
-    @include zen-grid-unit-base($box-sizing);
-  }
-
   float: $dir;
   width: $column-span * $unit-width;
   margin: {
     #{$dir}: ($column-position - 1) * $unit-width;
     #{$rev}: (1 - $column-position - $column-span) * $unit-width;
   }
-  padding: {
-    left: $gutter-width / 2;
-    right: $gutter-width / 2;
+
+  // Auto-apply the unit base mixin.
+  @if $zen-auto-include-unit-base {
+    @include zen-grid-unit-base($gutter-width, $box-sizing);
   }
 }
 
@@ -107,11 +106,21 @@ $legacy-support-for-ie6: false !default;
 // Apply this mixin to each content box in the layout to prevent overflowing
 // content from breaking the layout.
 //
-// The mixin has the following optional parameters:
+// The mixin has the following optional parameters, but its better to use the
+// $zen-gutter-width and $zen-box-sizing variables instead:
+// - $gutter-width: Half of this value is applied as padding to the left and
+//   right sides of the element.
 // - $box-sizing: The type of CSS3 box model each box should use. Can be set to
 //   content-box or border-box. Defaults to content-box, but border-box is way
 //   cooler. IE 6 and 7 don't support border-box.
-@mixin zen-grid-unit-base ($box-sizing: $zen-box-sizing) {
+@mixin zen-grid-unit-base (
+  $gutter-width: $zen-gutter-width,
+  $box-sizing: $zen-box-sizing
+) {
+  padding: {
+    left: $gutter-width / 2;
+    right: $gutter-width / 2;
+  }
   // Specify the border-box properties.
   @if $box-sizing == border-box {
     -moz-box-sizing: border-box;
@@ -127,16 +136,14 @@ $legacy-support-for-ie6: false !default;
   overflow: visible;
   word-wrap: break-word; // A very nice CSS3 property.
 
-  @if $legacy-support-for-ie6 {
-    @if $box-sizing == content-box {
-      .ie6 & {
-        display: inline; // display inline or double your floated margin! [1]
-        overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
-        overflow-y: visible;
-      }
-    }
-    @else {
-      @warn "IE6 legacy support is on, but $box-sizing is set to #{$box-sizing}.";
+  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) and $box-sizing == border-box {
+    @warn "IE legacy support is on, but $box-sizing is set to #{$box-sizing}.";
+  }
+  @else if $legacy-support-for-ie6 and $box-sizing == content-box {
+    .ie6 & {
+      display: inline; // display inline or double your floated margin! [1]
+      overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
+      overflow-y: visible;
     }
   }
 }
@@ -155,6 +162,41 @@ $legacy-support-for-ie6: false !default;
   clear: $dir;
 }
 
+//
+// Apply this to an element to help align it to the grid. Set the $column-span
+// to the number of columns that the content box spans. Set the $column-count to
+// the number of columns that the parent element spans.
+//
+@mixin zen-grid-width (
+  $column-span,
+  $column-count: $zen-column-count,
+  $alpha-margin: false,
+  $omega-margin: false,
+  $gutter-width: $zen-gutter-width,
+  $grid-width: $zen-grid-width,
+  $box-sizing: $zen-box-sizing
+) {
+
+  $dir: $zen-float-direction;
+  @if $zen-reverse-all-floats {
+    $dir: zen-direction-flip($dir);
+  }
+  $rev: zen-direction-flip($dir);
+  @if $alpha-margin {
+    margin-#{$dir}: -1 * zen-half-gutter($gutter-width);
+  }
+  @if $omega-margin {
+    margin-#{$rev}: -1 * zen-half-gutter($gutter-width);
+  }
+
+  // Calculate the unit width.
+  $unit-width: $grid-width / $column-count;
+  width: $column-span * $unit-width;
+
+  // Auto-apply the unit base mixin.
+  @include zen-grid-unit-base($gutter-width, $box-sizing);
+}
+
 
 //
 // Helper functions for the Zen mixins.
@@ -166,4 +208,9 @@ $legacy-support-for-ie6: false !default;
     @return right;
   }
   @return left;
+}
+
+// Returns a half gutter width.
+@function zen-half-gutter($gutter-width: $zen-gutter-width) {
+  @return $gutter-width / 2;
 }
