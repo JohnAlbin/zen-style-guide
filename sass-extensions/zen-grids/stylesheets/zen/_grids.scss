@@ -26,9 +26,10 @@ $zen-box-sizing: border-box !default;
 // This is a helper variable for RTL layouts.
 $zen-reverse-all-floats: false !default;
 
-// You can generate more efficient CSS if you manually apply the unit base to
-// all grid elements in a single ruleset.
-$zen-auto-include-unit-base: true !default;
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: true !default;
+$zen-auto-include-html-item-base: true !default;
 
 // Turn off IE6/7 support since we're defaulting to box-sizing: border-box.
 $legacy-support-for-ie7: false !default;
@@ -42,7 +43,7 @@ $legacy-support-for-ie6: false !default;
 
 
 //
-// Apply this to the container element.
+// Apply this to the grid container element.
 //
 @mixin zen-grid-container () {
   position: relative;
@@ -50,11 +51,11 @@ $legacy-support-for-ie6: false !default;
 }
 
 //
-// Apply this to any content box that is also a container element for a nested
-// grid.
+// Apply this to any grid item that is also a grid container element for a
+// nested grid.
 //
 @mixin zen-nested-container () {
-  @include zen-grid-container();
+  @include zen-grid-container;
   padding: {
     left: 0;
     right: 0;
@@ -62,21 +63,23 @@ $legacy-support-for-ie6: false !default;
 }
 
 //
-// Apply this to each content box. Set the $column-position to the column number
-// the content box starts on. And set the $column-span to the number of columns
-// that the content box spans.
+// Apply this to each grid item. Set the $column-position to the column number
+// the grid item starts on. And set the $column-span to the number of columns
+// that the grid item spans.
 //
-// For content boxes that are floated right, the $column-position is counted
+// For grid items that are floated right, the $column-position is counted
 // from the right instead of from the left.
 //
-@mixin zen-grid (
+@mixin zen-grid-item (
   $column-position,
   $column-span,
   $float-direction: $zen-float-direction,
   $column-count: $zen-column-count,
   $gutter-width: $zen-gutter-width,
   $grid-width: $zen-grid-width,
-  $box-sizing: $zen-box-sizing
+  $box-sizing: $zen-box-sizing,
+  $reverse-all-floats: $zen-reverse-all-floats,
+  $auto-include-item-base: $zen-auto-include-item-base
 ) {
 
   // Calculate the unit width.
@@ -84,7 +87,7 @@ $legacy-support-for-ie6: false !default;
 
   // Determine the float direction and its reverse.
   $dir: $float-direction;
-  @if $zen-reverse-all-floats {
+  @if $reverse-all-floats {
     $dir: zen-direction-flip($dir);
   }
   $rev: zen-direction-flip($dir);
@@ -97,8 +100,8 @@ $legacy-support-for-ie6: false !default;
   }
 
   // Auto-apply the unit base mixin.
-  @if $zen-auto-include-unit-base {
-    @include zen-grid-unit-base($gutter-width, $box-sizing);
+  @if $auto-include-item-base {
+    @include zen-grid-item-base($gutter-width, $box-sizing);
   }
 }
 
@@ -109,17 +112,17 @@ $legacy-support-for-ie6: false !default;
 // The mixin has the following optional parameters, but its better to use the
 // $zen-gutter-width and $zen-box-sizing variables instead:
 // - $gutter-width: Half of this value is applied as padding to the left and
-//   right sides of the element.
+//   right sides of the item.
 // - $box-sizing: The type of CSS3 box model each box should use. Can be set to
 //   content-box or border-box. Defaults to content-box, but border-box is way
 //   cooler. IE 6 and 7 don't support border-box.
-@mixin zen-grid-unit-base (
+@mixin zen-grid-item-base (
   $gutter-width: $zen-gutter-width,
   $box-sizing: $zen-box-sizing
 ) {
   padding: {
-    left: $gutter-width / 2;
-    right: $gutter-width / 2;
+    left: zen-half-gutter($gutter-width);
+    right: zen-half-gutter($gutter-width);
   }
   // Specify the border-box properties.
   @if $box-sizing == border-box {
@@ -152,29 +155,38 @@ $legacy-support-for-ie6: false !default;
 // Apply this to content boxes that need to be cleared below other content boxes.
 //
 @mixin zen-clear (
-  $float-direction: $zen-float-direction
+  $float-direction: $zen-float-direction,
+  $reverse-all-floats: $zen-reverse-all-floats
 ) {
   // Determine the float direction.
   $dir: $float-direction;
-  @if $zen-reverse-all-floats {
+  @if $reverse-all-floats {
     $dir: zen-direction-flip($dir);
   }
   clear: $dir;
 }
 
 //
-// Apply this to an element to help align it to the grid. Set the $column-span
-// to the number of columns that the content box spans. Set the $column-count to
-// the number of columns that the parent element spans.
+// Apply this to an HTML item that is in the normal flow of a document to help
+// align it to the grid. Set the $column-span to the number of columns that the
+// HTML element should span. Set the $column-count to the number of columns that
+// the parent element spans.
 //
-@mixin zen-grid-width (
+// Unlike the zen-grid-item() mixin, this mixin does not float the HTML item. To
+// help position the item to align flush with the left edge of a containing grid
+// item, you can set the $alpha-margin to true. To help position the item to
+// align to align flush with the right edge of a containing grid item, you can
+// set the $omega-margin to true.
+//
+@mixin zen-grid-html-item (
   $column-span,
   $column-count: $zen-column-count,
   $alpha-margin: false,
   $omega-margin: false,
   $gutter-width: $zen-gutter-width,
   $grid-width: $zen-grid-width,
-  $box-sizing: $zen-box-sizing
+  $box-sizing: $zen-box-sizing,
+  $auto-include-html-item-base: $zen-auto-include-html-item-base
 ) {
 
   $dir: $zen-float-direction;
@@ -194,7 +206,9 @@ $legacy-support-for-ie6: false !default;
   width: $column-span * $unit-width;
 
   // Auto-apply the unit base mixin.
-  @include zen-grid-unit-base($gutter-width, $box-sizing);
+  @if $auto-include-html-item-base {
+    @include zen-grid-item-base($gutter-width, $box-sizing);
+  }
 }
 
 
@@ -212,5 +226,6 @@ $legacy-support-for-ie6: false !default;
 
 // Returns a half gutter width.
 @function zen-half-gutter($gutter-width: $zen-gutter-width) {
+  // @todo Handle odd-pixel-sized gutters.
   @return $gutter-width / 2;
 }
