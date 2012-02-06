@@ -10,12 +10,14 @@ $zen-column-count: 12 !default;
 // side of a grid column.
 $zen-gutter-width: 20px !default;
 
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: true !default;
+$zen-auto-include-flow-item-base: true !default;
+
 // Specify the width of the entire grid. Defaults to 100% for a fluid responsive
 // design, but you can change this to a pixel value if you need a fixed grid.
 $zen-grid-width: 100% !default;
-
-// Specify the default floating direction for zen's mixins.
-$zen-float-direction: left !default;
 
 // Specify the CSS3 box-sizing method. The default, "border-box", is compatible
 // with all modern browsers, including IE 8 and later. Use "content-box" for
@@ -23,17 +25,19 @@ $zen-float-direction: left !default;
 // and $legacy-support-for-ie6 to true.)
 $zen-box-sizing: border-box !default;
 
-// This is a helper variable for RTL layouts.
-$zen-reverse-all-floats: false !default;
-
-// You can generate more efficient CSS if you manually apply the
-// zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: true !default;
-$zen-auto-include-html-item-base: true !default;
-
 // Turn off IE6/7 support since we're defaulting to box-sizing: border-box.
 $legacy-support-for-ie7: false !default;
 $legacy-support-for-ie6: false !default;
+
+// The box-sizing polyfill for IE6/7 requires an absolute path to the
+// boxsizing.htc file. See https://github.com/Schepp/box-sizing-polyfill
+$box-sizing-polyfill-path: "" !default;
+
+// Specify the default floating direction for zen's mixins.
+$zen-float-direction: left !default;
+
+// This is a helper variable for RTL layouts.
+$zen-reverse-all-floats: false !default;
 
 
 //
@@ -139,14 +143,24 @@ $legacy-support-for-ie6: false !default;
   overflow: visible;
   word-wrap: break-word; // A very nice CSS3 property.
 
-  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) and $box-sizing == border-box {
-    @warn "IE legacy support is on, but $box-sizing is set to #{$box-sizing}.";
+  @if ($legacy-support-for-ie6 or $legacy-support-for-ie7) and $box-sizing == border-box and $box-sizing-polyfill-path == "" {
+    @warn "IE legacy support is on, but $box-sizing is set to #{$box-sizing} and the $box-sizing-polyfill-path is empty.";
   }
-  @else if $legacy-support-for-ie6 and $box-sizing == content-box {
-    .ie6 & {
-      display: inline; // display inline or double your floated margin! [1]
-      overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
-      overflow-y: visible;
+  @else {
+    @if $legacy-support-for-ie7 and $box-sizing-polyfill-path {
+      .ie7 & {
+        behavior: url($box-sizing-polyfill-path);
+      }
+    }
+    @if $legacy-support-for-ie6 {
+      .ie6 & {
+        display: inline; // display inline or double your floated margin! [1]
+        overflow: hidden; // in IE6, overflow auto is broken [2] and so is overflow visible [3]
+        overflow-y: visible;
+        @if $box-sizing-polyfill-path {
+          behavior: url($box-sizing-polyfill-path);
+        }
+      }
     }
   }
 }
@@ -172,32 +186,45 @@ $legacy-support-for-ie6: false !default;
 // HTML element should span. Set the $column-count to the number of columns that
 // the parent element spans.
 //
-// Unlike the zen-grid-item() mixin, this mixin does not float the HTML item. To
-// help position the item to align flush with the left edge of a containing grid
-// item, you can set the $alpha-margin to true. To help position the item to
-// align to align flush with the right edge of a containing grid item, you can
-// set the $omega-margin to true.
+// Unlike the zen-grid-item() mixin, this mixin does not float the HTML item; it
+// also does not have a half-gutter on each side. By default, it has no gutter
+// in the "alpha position" (the left side) and a full gutter in the "omega
+// position" (the right side.) You can turn on or off the alpha and omega
+// gutters by setting the $alpha-gutter and $omega-gutter parameters to true or
+// false.
 //
-@mixin zen-grid-html-item (
+// Note: when the $flow-direction is set to right (for RTL languages), the alpha
+// position is on the right and the omega position is on the left.
+//
+@mixin zen-grid-flow-item (
   $column-span,
-  $column-count: $zen-column-count,
-  $alpha-margin: false,
-  $omega-margin: false,
+  $column-count,
+  $alpha-gutter: false,
+  $omega-gutter: true,
   $gutter-width: $zen-gutter-width,
   $grid-width: $zen-grid-width,
   $box-sizing: $zen-box-sizing,
-  $auto-include-html-item-base: $zen-auto-include-html-item-base
+  $auto-include-flow-item-base: $zen-auto-include-flow-item-base,
+  $flow-direction: $zen-float-direction
 ) {
 
-  $dir: $zen-float-direction;
+  $dir: $flow-direction;
   @if $zen-reverse-all-floats {
     $dir: zen-direction-flip($dir);
   }
   $rev: zen-direction-flip($dir);
-  @if $alpha-margin {
+
+  // Ensure the HTML item either has a full gutter or no gutter on each side.
+  @if $alpha-gutter {
+    margin-#{dir}: zen-half-gutter($gutter-width);
+  }
+  @else {
     margin-#{$dir}: -1 * zen-half-gutter($gutter-width);
   }
-  @if $omega-margin {
+  @if $omega-gutter {
+    margin-#{$rev}: zen-half-gutter($gutter-width);
+  }
+  @else {
     margin-#{$rev}: -1 * zen-half-gutter($gutter-width);
   }
 
@@ -206,7 +233,7 @@ $legacy-support-for-ie6: false !default;
   width: $column-span * $unit-width;
 
   // Auto-apply the unit base mixin.
-  @if $auto-include-html-item-base {
+  @if $auto-include-flow-item-base {
     @include zen-grid-item-base($gutter-width, $box-sizing);
   }
 }
@@ -221,7 +248,10 @@ $legacy-support-for-ie6: false !default;
   @if $dir == left {
     @return right;
   }
-  @return left;
+  @else if $dir == right {
+    @return left;
+  }
+  @return both;
 }
 
 // Returns a half gutter width.
