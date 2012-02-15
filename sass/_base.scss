@@ -39,7 +39,7 @@ $legacy-support-for-ie7: true;
 //
 
 @import "compass/support"; // Add Compass' IE and vendor prefix support variables.
-@import "compass/css3";
+@import "compass/css3";    // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "zen";             // Add the Zen Grids responsive layout mixins.
 
 @import "custom";          // Import our custom mixins last.
