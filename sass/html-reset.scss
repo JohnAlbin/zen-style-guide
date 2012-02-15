@@ -86,31 +86,7 @@ select,
 option,
 legend,
 fieldset {
-  // The following font family declarations are based on the Microsoft core web
-  // fonts which are common fonts available on most computer systems. The DejaVu
-  // and Nimbus Sans fonts are commonly available on Linux systems where the MS
-  // fonts are less common. Tahoma and Helvetica are also widely available.
-  //
-  // A user's web browser will look at the comma-separated list and will
-  // attempt to use each font in turn until it finds one that is available
-  // on the user's computer. The final "generic" font (sans-serif, serif or
-  // monospace) hints at what type of font to use if the web browser doesn't
-  // find any of the fonts in the list.
-
-  /*
-  font-family: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-  font-family: Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-  font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
-
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  font-family: Tahoma, Verdana, "DejaVu Sans", sans-serif;
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
-
-  font-family: "Courier New", "DejaVu Sans Mono", monospace;
-  */
-
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: $font-body;
 }
 
 pre,
@@ -119,8 +95,7 @@ kbd,
 samp,
 tt,
 var {
-  // See http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+  font-family: $font-monospace;
 }
 
 
