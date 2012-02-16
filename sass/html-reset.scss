@@ -349,6 +349,11 @@ a:active {
 //
 // Other inline elements
 //
+img, embed, iframe, object, video {
+  max-width: 100%;
+  height: auto;
+}
+
 img {
   border: 0;
   // vertical-align: bottom; // Suppress the space beneath the baseline
