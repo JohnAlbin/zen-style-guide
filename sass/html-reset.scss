@@ -113,7 +113,7 @@ canvas,
 video {
   display: inline-block;
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    .ie6-7 & {
+    .lt-ie8 & {
       display: inline;
       zoom: 1;
     }

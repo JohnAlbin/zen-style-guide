@@ -37,8 +37,8 @@
   word-wrap: break-word; /* A very nice CSS3 property */
 }
 
-.ie6-7 .node-unpublished>*,
-.ie6-7 .comment-unpublished>* {
+.lt-ie8 .node-unpublished>*,
+.lt-ie8 .comment-unpublished>* {
   position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
 }
 

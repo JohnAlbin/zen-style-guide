@@ -124,10 +124,10 @@ form table .item-list ul {
   margin: 0;
 }
 
-.ie6-7 tr.even th,
-.ie6-7 tr.even td,
-.ie6-7 tr.odd th,
-.ie6-7 tr.odd td {
+.lt-ie8 tr.even th,
+.lt-ie8 tr.even td,
+.lt-ie8 tr.odd th,
+.lt-ie8 tr.odd td {
   border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
 }
 

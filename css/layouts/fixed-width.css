@@ -66,7 +66,7 @@ body {
   padding: 0; /* IE6-7 don't support "box-sizing: border-box". If you add
                  padding or borders to this column, you need to add a special
                  IE6-7 rule so the layout doesn't break. For example, see the
-                 .ie6-7 .region-sidebar-first rule below */
+                 .lt-ie8 .region-sidebar-first rule below */
 }
 
 .sidebar-first #content {
@@ -105,7 +105,7 @@ body {
   padding: 0; /* IE6-7 doesn't support "box-sizing: border-box". If you add
                  padding or borders to this column, you need to add a special
                  IE6-7 rule so the layout doesn't break. For example, see the
-                 .ie6-7 .region-sidebar-first rule below */
+                 .lt-ie8 .region-sidebar-first rule below */
   height: 3em; /* The navigation must have a fixed height, but can have any
                   arbritrary value. We picked one that is the line-height plus
                   1em: 1.3 + 1 = 2.3 Set this to the same value as the
@@ -132,7 +132,7 @@ body {
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0 20px 0 0; /* LTR */
 }
-.ie6-7 .region-sidebar-first /* IE6-7 doesn't understand "box-sizing: border-box" */ {
+.lt-ie8 .region-sidebar-first /* IE6-7 doesn't understand "box-sizing: border-box" */ {
   width: 180px; /* So we have to subtract any left/right padding or borders from the width. */
 }
 
@@ -150,7 +150,7 @@ body {
   margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
   padding: 0 0 0 20px; /* LTR */
 }
-.ie6-7 .region-sidebar-second /* IE6-7 doesn't understand "box-sizing: border-box" */ {
+.lt-ie8 .region-sidebar-second /* IE6-7 doesn't understand "box-sizing: border-box" */ {
   width: 180px; /* So we have to subtract any left/right padding or borders from the width. */
 }
 
@@ -190,10 +190,10 @@ body {
  * 2. http://browservulsel.blogspot.com/2005/04/ie-overflow-auto-scrollbar-overlap.html
  * 3. http://www.howtocreate.co.uk/wrongWithIE/?chapter=overflow%3Avisible%3B
  */
-.ie6 #content,
-.ie6 #navigation,
-.ie6 .region-sidebar-first,
-.ie6 .region-sidebar-second /* Floating divs */ {
+.lt-ie7 #content,
+.lt-ie7 #navigation,
+.lt-ie7 .region-sidebar-first,
+.lt-ie7 .region-sidebar-second /* Floating divs */ {
   display: inline; /* display inline or double your floated margin! [1] */
   overflow: hidden; /* in IE6, overflow auto is broken [2] and so is overflow visible [3] */
   overflow-y: visible;

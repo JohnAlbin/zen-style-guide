@@ -123,11 +123,12 @@ If you look at Zen's templates/html.tpl.php file, you will see the HTML tag that
 will be used by your site. Using Microsoft's conditional comment syntax,
 different HTML tags will be used for different versions of Internet Explorer.
 
-For example, IE6 will see the HTML tag that has these classes: ie6 ie6-7 ie6-8
-If you need to write an IE6-specific rule, you can simply prefix the selector
-with ".ie6 ". To write a rule that applies to both IE6 and IE7, use ".ie6-7 ":
+For example, IE6 will see the HTML tag that has these classes: lt-ie7 lt-ie8
+lt-ie9. If you need to write an IE6-specific rule, you can simply prefix the
+selector with ".lt-ie7 " (should be read as "less than IE 7"). To write a rule
+that applies to both IE6 and IE7, use ".lt-ie8 ":
   .someRule { /* Styles for all browsers */ }
-  .ie6-7 .someRule { /* Styles for IE6 and IE7 only. */ }
+  .lt-ie8 .someRule { /* Styles for IE6 and IE7 only. */ }
 
 Many CSS authors prefer using IE "conditional stylesheets", which are
 stylesheets added via conditional comments. If you would prefer that method, you

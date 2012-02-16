@@ -65,7 +65,7 @@ stylesheets[all][] = css/print.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
-; element, such as .ie6, .ie7, .ie8, .ie6-7, etc. More information on this
+; element, such as .lt-ie9, .lt-ie8, .lt-ie7. More information on this
 ; technique can be found at:
 ; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ;

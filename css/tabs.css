@@ -29,12 +29,12 @@ ul.secondary:after {
   clear: both;
   visibility: hidden;
 }
-.ie6 ul.primary,
-.ie6 ul.secondary {
+.lt-ie7 ul.primary,
+.lt-ie7 ul.secondary {
   height: 1%;
 }
-.ie7 ul.primary,
-.ie7 ul.secondary {
+.lt-ie8 ul.primary,
+.lt-ie8 ul.secondary {
   min-height: 1%;
 }
 

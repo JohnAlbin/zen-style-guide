@@ -19,12 +19,12 @@
 /*
  * IE6/7 do not support the outline property.
  */
-.ie6-7 .with-wireframes #header,
-.ie6-7 .with-wireframes #content,
-.ie6-7 .with-wireframes #navigation,
-.ie6-7 .with-wireframes .region-sidebar-first,
-.ie6-7 .with-wireframes .region-sidebar-second,
-.ie6-7 .with-wireframes #footer,
-.ie6-7 .with-wireframes .region-bottom {
+.lt-ie8 .with-wireframes #header,
+.lt-ie8 .with-wireframes #content,
+.lt-ie8 .with-wireframes #navigation,
+.lt-ie8 .with-wireframes .region-sidebar-first,
+.lt-ie8 .with-wireframes .region-sidebar-second,
+.lt-ie8 .with-wireframes #footer,
+.lt-ie8 .with-wireframes .region-bottom {
   border: 1px solid #ccc;
 }

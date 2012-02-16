@@ -19,7 +19,7 @@
 
     // IE6/7 do not support the outline property.
     @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-      .ie6-7 & {
+      .lt-ie8 & {
         border: 1px solid #ccc;
       }
     }

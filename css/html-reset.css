@@ -137,9 +137,9 @@ canvas,
 video {
   display: inline-block;
 }
-.ie6-7 audio,
-.ie6-7 canvas,
-.ie6-7 video {
+.lt-ie8 audio,
+.lt-ie8 canvas,
+.lt-ie8 video {
   display: inline;
   zoom: 1;
 }
