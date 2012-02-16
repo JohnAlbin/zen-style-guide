@@ -5,12 +5,15 @@
 // theme, each .scss file has a @import "base" declaration. And this _base.scss
 // file is in charge of importing all the other partials needed for the theme.
 //
+// This base partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we import a _custom.scss partial that includes our custom mixins.
+//
 
 
 //
-// Shared Sass variables.
-//
-
+// Legacy IE support
 //
 // These variables are used by many mixins to add additional CSS to support
 // specific versions of IE or specific vendor prefixes.
@@ -49,7 +52,8 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 
-// See http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
