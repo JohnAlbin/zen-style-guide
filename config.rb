@@ -11,6 +11,10 @@
 environment = :development
 #environment = :production
 
+# In development, we can turn on the FireSass-compatible debug_info.
+firesass = false
+#firesass = true
+
 
 # Location of the theme's resources.
 css_dir = "css"
@@ -39,9 +43,6 @@ output_style = (environment == :development) ? :expanded : :compressed
 # the absolute path to the theme from server root.
 relative_assets = true
 
-# Pass options to sass.
-# - For development, we turn on the FireSass-compatible debug_info.
-# - For production, we force the CSS to be regenerated even though the source
-#   scss may not have changed, since we want the CSS to be compressed and have
-#   the debug info removed.
-sass_options = (environment == :development) ? {:debug_info => true} : {:always_update => true}
+# Pass options to sass. For development, we turn on the FireSass-compatible
+# debug_info if the firesass config variable above is true.
+sass_options = (environment == :development && firesass == true) ? {:debug_info => true} : {}
