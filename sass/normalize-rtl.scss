@@ -1,5 +1,31 @@
 // normalize-rtl.css - RTL language extension of normalize.scss.
 
+// Import your project's base partial. Remove this line if you don't follow
+// Compass best practices. @see http://compass-style.org/help/tutorials/best_practices/
+@import "base";
+
+
+// =============================================================================
+// Variables and Imports
+//
+// If you have a base partial (and you should), you should probably move these
+// lines to your base partial.
+// =============================================================================
+
+// Setting this to false will result in smaller output, but no support for ie6 hacks.
+$legacy-support-for-ie6: true !default;
+
+// Setting this to false will result in smaller output, but no support for ie7 hacks.
+$legacy-support-for-ie7: true !default;
+
+// After the default variables are set, import the required Compass partials.
+@import "compass/support";
+
+
+// =============================================================================
+// Lists
+// =============================================================================
+
 //
 // Addresses margins set differently in IE6/7
 //
@@ -27,6 +53,8 @@ ul {
 //
 
 legend {
-  *margin-left: 0;
-  *margin-right: -7px; // 3
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *margin-left: 0;
+    *margin-right: -7px; // 3
+  }
 }

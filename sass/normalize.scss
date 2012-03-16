@@ -1,4 +1,37 @@
-// normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css
+// normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css
+
+// Import your project's base partial. Remove this line if you don't follow
+// Compass best practices. @see http://compass-style.org/help/tutorials/best_practices/
+@import "base";
+
+
+// =============================================================================
+// Variables and Imports
+//
+// If you have a base partial (and you should), you should probably move these
+// lines to your base partial.
+// =============================================================================
+
+// The base font size.
+$base-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default;
+
+// The default font family. You should set $base-font-family in your _base partial.
+$base-font-family: sans-serif !default;
+
+// Setting this to false will result in smaller output, but no support for ie6 hacks.
+$legacy-support-for-ie6: true !default;
+
+// Setting this to false will result in smaller output, but no support for ie7 hacks.
+$legacy-support-for-ie7: true !default;
+
+// After the default variables are set, import the required Compass partials.
+@import "compass/support";
+@import "compass/css3/box-sizing";
+@import "compass/typography/vertical_rhythm";
+
 
 // =============================================================================
 // HTML5 display definitions
@@ -30,16 +63,20 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *display: inline;
+    *zoom: 1;
+  }
 }
 
 //
 // Prevents modern browsers from displaying 'audio' without controls
+// Remove excess height in iOS5 devices
 //
 
 audio:not([controls]) {
   display: none;
+  height: 0;
 }
 
 //
@@ -64,9 +101,11 @@ audio:not([controls]) {
 //
 
 html {
-  font-size: 100%; // 1
+  font-size: 100% * ($base-font-size / 16px); // 1
   -webkit-text-size-adjust: 100%; // 2
   -ms-text-size-adjust: 100%; // 2
+  // Establishes a vertical rhythm unit using $base-line-height.
+  @include adjust-leading-to(1);
 }
 
 //
@@ -78,7 +117,7 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: $base-font-family;
 }
 
 //
@@ -123,33 +162,42 @@ a:active {
 //
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  // Sets the font-size and line-height while keeping a proper vertical rhythm.
+  @include adjust-font-size-to( 2 * $base-font-size );
+  // Sets 1 unit of vertical rhythm on the top margin.
+  @include leader(1);
+  // Sets 1 unit of vertical rhythm on the bottom margin.
+  @include trailer(1);
 }
 
 h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
+  @include adjust-font-size-to( 1.5 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
 }
 
 h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
+  @include adjust-font-size-to( 1.17 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
 }
 
 h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
+  @include adjust-font-size-to( 1 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
 }
 
 h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
+  @include adjust-font-size-to( 0.83 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
 }
 
 h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
+  @include adjust-font-size-to( 0.75 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
 }
 
 //
@@ -170,7 +218,8 @@ strong {
 }
 
 blockquote {
-  margin: 1em 40px;
+  // Sets 1 unit of vertical rhythm on the top and bottom margin.
+  margin: rhythm(1) 40px;
 }
 
 //
@@ -196,7 +245,8 @@ mark {
 
 p,
 pre {
-  margin: 1em 0;
+  // Sets 1 unit of vertical rhythm on the top and bottom margin.
+  margin: rhythm(1) 0;
 }
 
 //
@@ -209,8 +259,10 @@ code,
 kbd,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
-  font-size: 1em;
+  @if $legacy-support-for-ie6 {
+    _font-family: 'courier new', monospace;
+  }
+  @include adjust-font-size-to( 1 * $base-font-size );
 }
 
 //
@@ -280,7 +332,8 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1em 0;
+  // Sets 1 unit of vertical rhythm on the top and bottom margin.
+  margin: rhythm(1) 0;
 }
 
 dd {
@@ -362,14 +415,18 @@ form {
 //
 
 fieldset {
-  border: 1px solid #c0c0c0;
+  border-color: #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  // Apply borders and padding that keep the vertical rhythm.
+  @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
+  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(left,  $width: 1px, $lines: 0.625);
+  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.625);
 }
 
 //
 // 1. Corrects color not being inherited in IE6/7/8/9
-// 2. Corrects text not wrapping in FF3 
+// 2. Corrects text not wrapping in FF3
 // 3. Corrects alignment displayed oddly in IE6/7
 //
 
@@ -377,7 +434,9 @@ legend {
   border: 0; // 1
   padding: 0;
   white-space: normal; // 2
-  *margin-left: -7px; // 3  // LTR
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *margin-left: -7px; // 3  // LTR
+  }
 }
 
 //
@@ -393,7 +452,9 @@ textarea {
   font-size: 100%; // 1
   margin: 0; // 2
   vertical-align: baseline; // 3
-  *vertical-align: middle; // 3
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *vertical-align: middle; // 3
+  }
 }
 
 //
@@ -418,7 +479,9 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer; // 1
   -webkit-appearance: button; // 2
-  *overflow: visible;  // 3
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *overflow: visible;  // 3
+  }
 }
 
 //
@@ -441,8 +504,10 @@ input[type="checkbox"],
 input[type="radio"] {
   @include box-sizing(border-box); // 1
   padding: 0; // 2
-  *height: 13px; // 3
-  *width: 13px; // 3
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *height: 13px; // 3
+    *width: 13px; // 3
+  }
 }
 
 //
