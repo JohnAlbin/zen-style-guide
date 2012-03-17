@@ -31,6 +31,14 @@ $legacy-support-for-ie7: true;
 // Font faces, stacks and sizes.
 //
 
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size: 16px;   // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
 // and Nimbus Sans fonts are commonly available on Linux systems where the MS
@@ -57,6 +65,7 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $verdana; // The font family set on the html element.
 $font-body: $verdana;
 $font-monospace: $courier;
 
@@ -74,6 +83,7 @@ $font-monospace: $courier;
 @import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
 @import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 
 @import "custom";           // Import our custom mixins last.
