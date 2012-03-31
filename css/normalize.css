@@ -1,4 +1,4 @@
-/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
    Normalize.css is intended to be used as an alternative to CSS resets.
@@ -131,7 +131,7 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
 
   /* Establish a vertical rhythm. */
-  line-height: 24px;
+  line-height: 1.5em;
 }
 
 /*
@@ -199,7 +199,7 @@ textarea {
 
    */
 
-  font-family: sans-serif;
+  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }
 
 /*
@@ -215,9 +215,11 @@ body {
    Links
    ========================================================================== */
 
-/* The order of link states are based on Eric Meyer's article:
+/*
+ * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
+
 a:link {
 }
 
@@ -269,38 +271,44 @@ h1 {
   font-size: 2em;
   /* Sets the line height to 2 units of vertical rhythm */
   line-height: 1.5em; /* 3rem / 2em = 1.5em */
-  /* Sets the top and bottom margins to 1 unit of vertical rhythm. */
-  margin: 0.75em 0; /* 1.5rem / 2em = .75em */
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em; /* 1.5rem / 2em = .75em */
+  margin-bottom: 0.75em;
 }
 
 h2 {
   font-size: 1.5em;
   line-height: 2em; /* 3rem / 1.5em = 2em */
-  margin: 1em 0; /* 1.5rem / 1.5em = 1em */
+  margin-top: 1em; /* 1.5rem / 1.5em = 1em */
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1.17em;
   line-height: 1.282em; /* 1.5rem / 1.17em = 1.282em */
-  margin: 1.282em 0;
+  margin-top: 1.282em;
+  margin-bottom: 1.282em;
 }
 
 h4 {
   font-size: 1em;
   line-height: 1.5em; /* 1.5rem / 1em = 1.5em */
-  margin: 1.5em 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 h5 {
   font-size: 0.83em;
   line-height: 1.807em; /* 1.5rem / 0.83em = 1.807em */
-  margin: 1.807em 0;
+  margin-top: 1.807em;
+  margin-bottom: 1.807em;
 }
 
 h6 {
   font-size: 0.75em;
   line-height: 2em; /* 1.5rem / .75em = 2em */
-  margin: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 /* Thematic break */
@@ -331,6 +339,7 @@ strong {
 }
 
 blockquote {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: 1.5em 40px;
 }
 
@@ -357,6 +366,7 @@ mark {
 
 p,
 pre {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: 1.5em 0;
 }
 
@@ -371,9 +381,10 @@ kbd,
 samp,
 tt,
 var {
-  font-family: monospace, serif;
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
   _font-family: 'courier new', monospace;
   font-size: 1em;
+  line-height: 1.5em;
 }
 
 /*
@@ -405,6 +416,7 @@ q:after {
   content: none;
 }
 
+/* @todo Determine how big element affects vertical rhythm. */
 small {
   font-size: 75%;
 }
@@ -444,6 +456,7 @@ menu,
 ol,
 ul,
 .item-list ul /* Drupal override */ {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: 1.5em 0;
 }
 
@@ -455,8 +468,10 @@ dd {
   margin: 0 0 0 40px; /* LTR */
 }
 
-ul ul, ul ol, .item-list ul ul, .item-list ul ol,
-ol ol, ol ul, .item-list ol ol, .item-list ol ul {
+ul ul, ul ol,
+ol ul, ol ol,
+.item-list ul ul, .item-list ul ol,
+.item-list ol ul, .item-list ol ol {
   margin: 0; /* Turn off margins on nested lists. */
 }
 
@@ -499,6 +514,7 @@ img {
   /* vertical-align: bottom; */ /* Suppress the space beneath the baseline */
 
   /* Responsive images */
+  /* @todo Add responsive embedded video. */
   max-width: 100%;
   height: auto;
 }
@@ -619,8 +635,8 @@ input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
   *height: 13px; /* 3 */
@@ -634,8 +650,8 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box; /* 2 */
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -683,7 +699,8 @@ table {
   border-spacing: 0;
   /* width: 100%; */ /* Prevent cramped-looking tables */
   /* Add vertical rhythm margins. */
-  margin: 1.5em 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /*
