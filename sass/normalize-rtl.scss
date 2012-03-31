@@ -1,51 +1,49 @@
-// normalize-rtl.css - RTL language extension of normalize.scss.
+/* normalize-rtl.css - RTL language extension of normalize.scss. */
 
-// Import your project's base partial. Remove this line if you don't follow
-// Compass best practices. @see http://compass-style.org/help/tutorials/best_practices/
 @import "base";
 
 
-// =============================================================================
-// Lists
-// =============================================================================
+/* =============================================================================
+   Lists
+   ========================================================================== */
 
-//
-// Addresses margins set differently in IE6/7
-//
+/*
+ * Addresses margins set differently in IE6/7
+ */
 
 dd {
   margin: 0 $indent-amount 0 0;
 }
 
-//
-// Addresses paddings set differently in IE6/7
-//
+/*
+ * Addresses paddings set differently in IE6/7
+ */
 
 menu,
 ol,
 ul,
-.item-list ul { // Drupal override
+.item-list ul /* Drupal override */ {
   padding: 0 $indent-amount 0 0;
 }
 
-// =============================================================================
-// Forms
-// =============================================================================
+/* =============================================================================
+   Forms
+   ========================================================================== */
 
-//
-// 3. Corrects alignment displayed oddly in IE6/7
-//
+/*
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
 
 legend {
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *margin-left: 0;
-    *margin-right: -7px; // 3
+    *margin-right: -7px; /* 3 */
   }
 }
 
-// =============================================================================
-// Tables
-// =============================================================================
+/* =============================================================================
+   Tables
+   ========================================================================== */
 
 th {
   text-align: right;
