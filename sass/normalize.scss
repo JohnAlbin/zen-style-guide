@@ -1,7 +1,16 @@
 // normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css
 
-// Import your project's base partial. Remove this line if you don't follow
-// Compass best practices. @see http://compass-style.org/help/tutorials/best_practices/
+// =============================================================================
+// Normalize.css is intended to be used as an alternative to CSS resets.
+//
+// It is suggested that you read through the normalize.css file and customise it
+// to meet the design requirements of a project rather including it as a "black
+// box". @see http://nicolasgallagher.com/about-normalize-css/
+//
+// Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+//       @see http://snook.ca/archives/html_and_css/no_css_reset/
+// =============================================================================
+
 @import "base";
 
 
@@ -21,6 +30,7 @@ figure,
 footer,
 header,
 hgroup,
+menu,
 nav,
 section,
 summary {
@@ -65,6 +75,40 @@ audio:not([controls]) {
 // Base
 // =============================================================================
 
+// Instead of relying on the fonts that are available on a user's computer, you
+// can use web fonts which, like images, are resources downloaded to the user's
+// browser. Because of the bandwidth and rendering resources required, web fonts
+// should be used with care.
+//
+// Numerous resources for web fonts can be found on Google. Here are a few
+// websites where you can find Open Source fonts to download:
+// - http://www.fontsquirrel.com/fontface
+// - http://www.theleagueofmoveabletype.com
+//
+// In order to use these fonts, you will need to convert them into formats
+// suitable for web fonts. We recommend the free-to-use Font Squirrel's
+// Font-Face Generator:
+//   http://www.fontsquirrel.com/fontface/generator
+//
+// The following is an example @font-face declaration. This font can then be
+// used in any ruleset using a property like this:  font-family: Example, serif;
+//
+// Since we're using Sass, you'll need to declare your font faces here, then you
+// can add them to the font variables in the _base.scss partial.
+
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
 //
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
@@ -105,6 +149,22 @@ body {
 // Links
 // =============================================================================
 
+// The order of link states are based on Eric Meyer's article:
+// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover,
+a:focus {
+}
+
+a:active {
+}
+
 //
 // Addresses outline displayed oddly in Chrome
 //
@@ -126,6 +186,12 @@ a:active {
 
 // =============================================================================
 // Typography
+//
+// To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+// so that the line height of our base font becomes the basic unit of vertical
+// measurement. We use multiples of that unit to set the top and bottom margins
+// for our block level elements and to set the line heights of any fonts.
+// For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
 // =============================================================================
 
 //
@@ -165,12 +231,24 @@ h6 {
   @include adjust-font-size-to( 0.75 * $base-font-size );
 }
 
+// Thematic break
+hr {
+  height: 1px;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  margin: rhythm(1) 0;
+}
+
+
 //
 // Addresses styling not present in IE7/8/9, S5, Chrome
 //
 
+// @todo Check status of acronym in HTML5.
 abbr[title] {
   border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
 }
 
 //
@@ -222,8 +300,10 @@ pre {
 pre,
 code,
 kbd,
-samp {
-  font-family: monospace, serif;
+samp,
+tt,
+var {
+  font-family: $font-monospace; // The $font-monospace value ends with ", serif".
   @if $legacy-support-for-ie6 {
     _font-family: 'courier new', monospace;
   }
@@ -259,6 +339,7 @@ q:after {
   content: none;
 }
 
+// @todo Determine how big element affects vertical rhythm.
 small {
   font-size: 75%;
 }
@@ -296,13 +377,24 @@ sub {
 dl,
 menu,
 ol,
-ul {
+ul,
+.item-list ul { // Drupal override
   // Sets 1 unit of vertical rhythm on the top and bottom margin.
   margin: rhythm(1) 0;
 }
 
+.item-list ul li { // Drupal override
+  margin: 0;
+}
+
 dd {
   margin: 0 0 0 $indent-amount; // LTR
+}
+
+ul, ol, .item-list ul, .item-list ol {
+  ul, ol {
+    margin: 0; // Turn off margins on nested lists.
+  }
 }
 
 //
@@ -311,7 +403,8 @@ dd {
 
 menu,
 ol,
-ul {
+ul,
+.item-list ul { // Drupal override
   padding: 0 0 0 $indent-amount; // LTR
 }
 
@@ -339,6 +432,13 @@ nav ol {
 img {
   border: 0; // 1
   -ms-interpolation-mode: bicubic; // 2
+
+  // vertical-align: bottom; // Suppress the space beneath the baseline
+
+  // Responsive images
+  // @todo Add responsive embedded video.
+  max-width: 100%;
+  height: auto;
 }
 
 //
@@ -385,8 +485,8 @@ fieldset {
   // Apply borders and padding that keep the vertical rhythm.
   @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
   @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
-  @include apply-side-rhythm-border(left,  $width: 1px, $lines: 0.625);
-  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.625);
+  @include apply-side-rhythm-border(left,  $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(right, $width: 1px, $lines: 0.65);
 }
 
 //
@@ -527,4 +627,23 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  // width: 100%; // Prevent cramped-looking tables
+  // Add vertical rhythm margins.
+  @include leader(1);
+  @include trailer(1);
+}
+
+//
+// Drupal provides table styling which is only useful for its admin section
+// forms, so we override this default CSS. (We set it back in forms.css.)
+//
+
+th {
+  text-align: left; // LTR
+  padding: 0;
+  border-bottom: none;
+}
+
+tbody {
+  border-top: none;
 }
