@@ -16,9 +16,6 @@
   outline: 1px solid #ccc;
 }
 
-/*
- * IE6/7 do not support the outline property.
- */
 .lt-ie8 .with-wireframes #header,
 .lt-ie8 .with-wireframes #content,
 .lt-ie8 .with-wireframes #navigation,
@@ -26,5 +23,5 @@
 .lt-ie8 .with-wireframes .region-sidebar-second,
 .lt-ie8 .with-wireframes #footer,
 .lt-ie8 .with-wireframes .region-bottom {
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* IE6/7 do not support the outline property. */
 }
