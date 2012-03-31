@@ -1,11 +1,12 @@
-//
-// Tabs Styling
-//
-// Adds styles for the primary and secondary tabs.
-//
-// Compare this with default CSS found in the system module's stylesheet (a copy
-// of which is in drupal7-reference.css.)
-//
+/**
+ * @file
+ * Tabs Styling
+ *
+ * Adds styles for the primary and secondary tabs.
+ *
+ * Compare this with default CSS found in the system module's stylesheet (a copy
+ * of which is in drupal7-reference.css.)
+ */
 
 @import "base";
 
@@ -15,9 +16,10 @@ $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
 
-//
-// Basic positioning styles shared by primary and secondary tabs.
-//
+/*
+ * Basic positioning styles shared by primary and secondary tabs.
+ */
+
 ul.primary,
 ul.secondary {
   @include clearfix;
@@ -28,7 +30,7 @@ ul.secondary {
   white-space: nowrap;
 
   li {
-    float: left; // LTR
+    float: left; /* LTR */
     margin: 0.5em 3px 0;
   }
 
@@ -42,20 +44,22 @@ ul.secondary {
   }
 }
 
-//
-// Primary tabs
-//
+
+/*
+ * Primary tabs
+ */
+
 ul.primary {
   li {
     @include border-top-radius(4px);
     @include single-text-shadow(#fff, 1px, 1px, 0);
     border: 1px solid $tabs-border;
     border-bottom: 0;
-    margin: 0.5em 0 0 3px; // LTR
+    margin: 0.5em 0 0 3px; /* LTR */
   }
   li.active {
     border-bottom: 1px solid $tabs-container-bg;
-    margin-bottom: -1px; // Overlap the ul's border.
+    margin-bottom: -1px; /* Overlap the ul's border. */
   }
 
   a:link,
@@ -81,12 +85,14 @@ ul.primary {
   }
 }
 
-//
-// Secondary tabs
-//
+
+/*
+ * Secondary tabs
+ */
+
 ul.secondary {
   font-size: .9em;
-  margin-top: -1.5em; // Collapse bottom margin of ul.primary.
+  margin-top: -1.5em; /* Collapse bottom margin of ul.primary. */
   padding-bottom: .5em;
 
   a:link,
