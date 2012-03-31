@@ -1,6 +1,7 @@
-//
-// RTL companion for the navigation.scss file.
-//
+/**
+ * @file
+ * RTL companion for the navigation.css file.
+ */
 
 @import "base";
 
@@ -13,11 +14,11 @@ ul li.collapsed {
 }
 
 #navigation {
-  ul.links, // Main menu and secondary menu links
-  .content ul { // Menu block links
+  ul.links, /* Main menu and secondary menu links */
+  .content ul { /* Menu block links */
     text-align: right;
 
-    li { // A simple method to get navigation links to appear in one line.
+    li { /* A simple method to get navigation links to appear in one line. */
       float: right;
       padding: 0 0 0 10px;
     }
