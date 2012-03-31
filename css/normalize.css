@@ -681,6 +681,9 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  /* width: 100%; */ /* Prevent cramped-looking tables */
+  /* Add vertical rhythm margins. */
+  margin: 1.5em 0;
 }
 
 /*
