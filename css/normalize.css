@@ -130,7 +130,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
 
-  // Establish a vertical rhythm.
+  /* Establish a vertical rhythm. */
   line-height: 24px;
 }
 
