@@ -53,10 +53,10 @@ free to change it; simply edit the stylesheet declarations in your sub-theme's
 .info file. This structure was crafted based on several years of experience
 theming Drupal websites.
 
-- html-reset.css:
+- normalize.css:
   This is the place where you should set the default styling for all HTML
   elements and standardize the styling across browsers. If you prefer a specific
-  reset method, feel free to add it.
+  HTML reset method, feel free to add it.
 
 - layouts/fixed-width.css:
   Zen's default layout is based on the Zen Columns layout method. The
