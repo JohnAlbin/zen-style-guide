@@ -13,6 +13,21 @@
   /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
 }
 
+.node .node-title { /* Node title */
+}
+
+.node .user-picture { /* The picture of the node author */
+}
+
+.node .submitted { /* The "posted by" information */
+}
+
+.node .content { /* Node's content wrapper */
+}
+
+.node ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
+}
+
 .node-promoted { /* A node that has been promoted to the front page */
 }
 
@@ -36,21 +51,6 @@
 }
 
 .node-article { /* Article content node */
-}
-
-h2.node-title { /* Node title */
-}
-
-.node .user-picture { /* The picture of the node author */
-}
-
-.node .submitted { /* The "posted by" information */
-}
-
-.node .content { /* Node's content wrapper */
-}
-
-.node ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
 }
 
 .node-unpublished { /* Unpublished nodes */
