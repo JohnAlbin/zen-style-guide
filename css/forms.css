@@ -48,7 +48,6 @@
 .tips { /* Tips for Drupal's input formats */
 }
 
-
 /*
  * Password confirmation
  */
@@ -58,14 +57,12 @@
   margin: 0;
 }
 
-
 /*
  * Search (search-block-form.tpl.php)
  */
 
 #block-search-form { /* Wrapper for the search form */
 }
-
 
 /*
  * Drupal's default login form block
@@ -74,7 +71,6 @@
 #user-login-form {
   text-align: left; /* LTR */
 }
-
 
 /*
  * OpenID
@@ -100,7 +96,6 @@ html.js #user-login-form li.openid-link,
 #user-login ul {
   margin: 1.5em 0;
 }
-
 
 /*
  * Drupal admin tables
@@ -133,7 +128,6 @@ form table .item-list ul {
 .lt-ie8 tr.odd td {
   border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
 }
-
 
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.

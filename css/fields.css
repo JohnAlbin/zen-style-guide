@@ -7,7 +7,6 @@
 .field { /* Wrapper for any field. */
 }
 
-
 /*
  * Field types (Core)
  */
@@ -51,7 +50,6 @@
 .field-type-list-float {
 }
 
-
 /*
  * Field types (Contrib)
  */
@@ -64,7 +62,6 @@
 
 .field-type-user-reference {
 }
-
 
 /*
  * Named fields

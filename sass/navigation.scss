@@ -32,7 +32,6 @@ ul li.leaf {
   list-style-type: square;
 }
 
-
 /*
  * The active item in a Drupal menu
  */
@@ -40,7 +39,6 @@ ul li.leaf {
 li a.active {
   color: #000;
 }
-
 
 /*
  * Navigation bar
@@ -67,7 +65,6 @@ li a.active {
 .region-navigation {
 }
 
-
 /*
  * Main menu and Secondary menu links
  */
@@ -79,14 +76,12 @@ li a.active {
   float: right; /* LTR */
 }
 
-
 /*
  * Menu blocks
  */
 
 .block-menu {
 }
-
 
 /*
  * "Menu block" blocks

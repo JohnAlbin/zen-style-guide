@@ -12,7 +12,6 @@
   text-align: right;
 }
 
-
 /*
  * OpenID
  *
@@ -25,7 +24,6 @@ html.js #user-login-form li.openid-link,
   margin-left: 0;
   margin-right: -20px; /* Un-do some of the padding on the ul list. */
 }
-
 
 /*
  * Drupal admin tables

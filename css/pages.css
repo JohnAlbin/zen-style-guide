@@ -20,7 +20,6 @@ body {
 #page {
 }
 
-
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -38,7 +37,6 @@ body {
   background-color: #666;
   color: #fff;
 }
-
 
 /*
  * Header
@@ -83,7 +81,6 @@ body {
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }
-
 
 /*
  * Main (container for everything else)
@@ -196,7 +193,6 @@ ul.links li {
 
 .more-link { /* Aggregator, blog, and forum more link */
 }
-
 
 /*
  * First sidebar (on left in LTR languages, on right in RTL)
