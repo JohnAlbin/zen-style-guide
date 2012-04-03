@@ -1,162 +1,153 @@
-//
-// Layout Styling (DIV Positioning)
-//
-// Define CSS classes to create a table-free, 3-column, 2-column, or single
-// column layout depending on whether blocks are enabled in the left or right
-// columns.
-//
-// This layout is based on the Zen Columns layout method.
-//   http://drupal.org/node/201428
-//
-// Only CSS that affects the layout (positioning) of major elements should be
-// listed here.  Such as:
-//   display, position, float, clear, width, height, min-width, min-height
-//   margin, border, padding, overflow
-//
+/**
+ * @file
+ * Positioning for a fixed-width, desktop-centric layout.
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
 
 @import "base";
-@import "zen/columns";
 
 
-//
-// Body
-//
-body {
-}
+// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  5;
+$zen-gutter-width:  20px;
+$zen-grid-width:    980px;
+
+
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+     $zen-box-sizing: content-box;
+
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+
+/*
+ * Center the page.
+ */
 
 #page,
 .region-bottom {
-  //
-  // If you want to make the page a fixed width and centered in the viewport,
-  // this is the standards-compliant way to do that.
-  //
+  /* If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. */
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  width: $zen-grid-width;
+}
+@if $legacy-support-for-ie6 {
+  /* IE6 and earlier require a hacky method to center divs. */
+  .lt-ie7 {
+    body {
+      text-align: center;
+    }
+    #page,
+    .region-bottom {
+      text-align: left;
+    }
+  }
 }
 
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
 
-//
-// Header
-//
-#header {
-}
-
-.region-header {
-}
-
-
-//
-// Main container and its columns and navbar
-//
-
-
-// The layout when there are no sidebars.
-#main {
-  @include clearfix;
-
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('#content'),
-    $widths: (960px),
-    $leading-direction: (),
-    $leading-gutters: (0),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there is only one sidebar, the left one.
-.sidebar-first #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('.region-sidebar-first', '#content'),
-    $widths: (180px, 760px),
-    $leading-direction: (),
-    $leading-gutters: (0, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there is only one sidebar, the right one.
-.sidebar-second #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('#content', '.region-sidebar-second'),
-    $widths: (760px, 180px),
-    $leading-direction: (),
-    $leading-gutters: (0, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there are two sidebars.
-.two-sidebars #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
-    $widths: (180px, 560px, 180px),
-    $leading-direction: (),
-    $leading-gutters: (0, 20px, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-
-//
-// Footer
-//
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
 #footer {
+  @include zen-grid-item-base();
 }
 
+/*
+ * Containers for grid items and flow items.
+ */
 
-//
-// Page bottom
-//
-.region-bottom { // See also the #page-wrapper declaration above that this div shares.
+#header,
+#main,
+#footer {
+  @include zen-grid-container();
 }
 
+/*
+ * Navigation bar
+ */
 
-//
-// If a div.clearfix doesn't have any content after it and its bottom edge
-// touches the bottom of the viewport, Firefox and Safari will mistakenly
-// place several pixels worth of space between the bottom of the div and the
-// bottom of the viewport. Uncomment this CSS property to fix this.
-// Note: with some over-large content, this property might cause scrollbars
-// to appear on the #page-wrapper div.
-//
+#main {
+  padding-top: 3em; /* Move all the children of #main down to make room. */
+}
+#navigation {
+  position: absolute;
+  top: 0; /* Move the navbar up inside #main's padding. */
+  height: 3em;
+  width: $zen-grid-width;
+}
 
-//#page {
-//  overflow-y: hidden;
-//}
+/*
+ * The layout when there are no sidebars.
+ */
+
+#content {
+  width: $zen-grid-width;
+}
+
+/*
+ * The layout when there is only one sidebar, the left one.
+ */
+
+.sidebar-first {
+  #content { /* Span 4 columns, starting in 2nd column from left. */
+    @include zen-grid-item(4, 2);
+  }
+
+  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+    @include zen-grid-item(1, 1);
+  }
+}
+
+/*
+ * The layout when there is only one sidebar, the right one.
+ */
+
+.sidebar-second {
+  #content { /* Span 4 columns, starting in 1st column from left. */
+    @include zen-grid-item(4, 1);
+  }
+
+  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+    @include zen-grid-item(1, 5);
+  }
+}
+
+/*
+ * The layout when there are two sidebars.
+ */
+
+.two-sidebars {
+  #content { /* Span 3 columns, starting in 2nd column from left. */
+    @include zen-grid-item(3, 2);
+  }
+
+  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+    @include zen-grid-item(1, 1);
+  }
+
+  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+    @include zen-grid-item(1, 5);
+  }
+}

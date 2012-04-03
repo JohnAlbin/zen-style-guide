@@ -1,93 +1,11 @@
-//
-// RTL companion for the fixed-width.scss file.
-//
-// The contents of this file are just copy and pasted from the fixed-width.scss
-// file and then edited to cange the $leading-direction to be "right" to
-// override the default left direction. Simple!
-//
-
-@import "base";
-@import "zen/columns";
+/**
+ * @file
+ * RTL companion for the fixed-width.css file.
+ */
 
 
-// The layout when there are no sidebars.
-#main {
-  @include clearfix;
+// First we tell Zen grids to reverse the direction of all floats.
+$zen-reverse-all-floats: true;
 
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('#content'),
-    $widths: (960px),
-    $leading-direction: (right),
-    $leading-gutters: (0),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there is only one sidebar, the left one.
-.sidebar-first #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('.region-sidebar-first', '#content'),
-    $widths: (180px, 760px),
-    $leading-direction: (right),
-    $leading-gutters: (0, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there is only one sidebar, the right one.
-.sidebar-second #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('#content', '.region-sidebar-second'),
-    $widths: (760px, 180px),
-    $leading-direction: (right),
-    $leading-gutters: (0, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
-
-// The layout when there are two sidebars.
-.two-sidebars #main {
-  @include zen-columns (
-    $box-sizing: border-box,
-    // These mixin parameters describe the columns.
-    $selectors: ('.region-sidebar-first', '#content', '.region-sidebar-second'),
-    $widths: (180px, 560px, 180px),
-    $leading-direction: (right),
-    $leading-gutters: (0, 20px, 20px),
-    $padding: (),
-
-    // These mixin parameters describe the navbar.
-    $navbar-selector: '#navigation',
-    $navbar-height: 3em,
-    $navbar-width: 960px,
-    $navbar-leading-gutter: 0,
-    $navbar-padding: 0
-  );
-}
+// Then we import the LTR layout and the directions are automatically reversed.
+@import "fixed-width.scss";

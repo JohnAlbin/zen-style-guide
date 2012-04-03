@@ -5,55 +5,146 @@
 
 
 /*
- * Content
+ * Center the page.
  */
-#content,
-.no-sidebars #content {
-  float: right;
-  margin-left: -960px; /* Negative value of #content's width + right margin. */
-  margin-right: 0;
+
+#page,
+.region-bottom {
+  /* If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. */
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
 }
+
+/* IE6 and earlier require a hacky method to center divs. */
+.lt-ie7 body {
+  text-align: center;
+}
+.lt-ie7 #page,
+.lt-ie7 .region-bottom {
+  text-align: left;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+  overflow: visible;
+  word-wrap: break-word;
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+#header,
+#main,
+#footer {
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/*
+ * Navigation bar
+ */
+
+#main {
+  padding-top: 3em; /* Move all the children of #main down to make room. */
+}
+
+#navigation {
+  position: absolute;
+  top: 0; /* Move the navbar up inside #main's padding. */
+  height: 3em;
+  width: 980px;
+}
+
+/*
+ * The layout when there are no sidebars.
+ */
+
+#content {
+  width: 980px;
+}
+
+/*
+ * The layout when there is only one sidebar, the left one.
+ */
 
 .sidebar-first #content {
-  margin-left: -960px; /* Negative value of #content's width + right margin. */
-  margin-right: 200px; /* The width of .region-sidebar-first. */
+  /* Span 4 columns, starting in 2nd column from left. */
+  float: right;
+  width: 764px;
+  margin-right: 196px;
+  margin-left: -980px;
 }
+
+.sidebar-first .region-sidebar-first {
+  /* Span 1 column, starting in 1st column from left. */
+  float: right;
+  width: 176px;
+  margin-right: 0px;
+  margin-left: -196px;
+}
+
+/*
+ * The layout when there is only one sidebar, the right one.
+ */
 
 .sidebar-second #content {
-  margin-left: -760px; /* Negative value of #content's width + right margin. */
-  margin-right: 0;
+  /* Span 4 columns, starting in 1st column from left. */
+  float: right;
+  width: 764px;
+  margin-right: 0px;
+  margin-left: -784px;
 }
+
+.sidebar-second .region-sidebar-second {
+  /* Span 1 column, starting in 5th column from left. */
+  float: right;
+  width: 176px;
+  margin-right: 784px;
+  margin-left: -980px;
+}
+
+/*
+ * The layout when there are two sidebars.
+ */
 
 .two-sidebars #content {
-  margin-left: -760px; /* Negative value of #content's width + right margin. */
-  margin-right: 200px; /* The width of .region-sidebar-first */
+  /* Span 3 columns, starting in 2nd column from left. */
+  float: right;
+  width: 568px;
+  margin-right: 196px;
+  margin-left: -784px;
 }
 
-/*
- * Navigation
- */
-#navigation {
+.two-sidebars .region-sidebar-first {
+  /* Span 1 column, starting in 1st column from left. */
   float: right;
-  margin-left: -960px; /* Negative value of #navigation's width + right margin. */
-  margin-right: 0;
+  width: 176px;
+  margin-right: 0px;
+  margin-left: -196px;
 }
 
-/*
- * First sidebar
- */
-.region-sidebar-first {
+.two-sidebars .region-sidebar-second {
+  /* Span 1 column, starting in 5th column from left. */
   float: right;
-  margin-left: -200px; /* Negative value of .region-sidebar-first's width + right margin. */
-  margin-right: 0;
-  padding: 0 0 0 20px;
-}
-
-/*
- * Second sidebar
- */
-.region-sidebar-second {
-  float: right;
-  margin-left: -960px; /* Negative value of .region-sidebar-second's width + right margin. */
-  margin-right: 760px; /* Width of content + sidebar-first. */
-  padding: 0 20px 0 0;
+  width: 176px;
+  margin-right: 784px;
+  margin-left: -980px;
 }
