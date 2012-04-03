@@ -20,6 +20,7 @@
   #content a[href]:after { /* Add visible URL after links. */
     content: " (" attr(href) ")";
     font-weight: normal;
+    font-size: 16px;
   }
 
   #content a[href^="javascript:"]:after,
@@ -32,8 +33,8 @@
   }
 
   #content { /* Un-float the content */
-    float: none;
-    width: 100%;
+    float: none !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -63,12 +64,6 @@
   .feed-icons { /* Hide sidebars and nav elements */
     visibility: hidden;
     display: none;
-  }
-
-  /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
-     the content after the first page. */
-  #page {
-    overflow-y: visible;
   }
 
 } /* End @media print */
