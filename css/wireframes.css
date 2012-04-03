@@ -7,6 +7,7 @@
 
 
 .with-wireframes #header,
+.with-wireframes #main,
 .with-wireframes #content,
 .with-wireframes #navigation,
 .with-wireframes .region-sidebar-first,
@@ -17,6 +18,7 @@
 }
 
 .lt-ie8 .with-wireframes #header,
+.lt-ie8 .with-wireframes #main,
 .lt-ie8 .with-wireframes #content,
 .lt-ie8 .with-wireframes #navigation,
 .lt-ie8 .with-wireframes .region-sidebar-first,
