@@ -72,7 +72,7 @@
 }
 
 .indented { /* Nested comments are indented */
-  /* margin-left: 25px; */ /* Drupal core uses a 25px left margin */
+  margin-left: $indent-amount; /* Drupal core uses a 25px left margin */
 }
 
 .comment-unpublished { /* Unpublished comments */

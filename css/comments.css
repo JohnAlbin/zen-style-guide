@@ -70,7 +70,7 @@ h3.comment-title { /* Comment title */
 }
 
 .indented { /* Nested comments are indented */
-  /* margin-left: 25px; */ /* Drupal core uses a 25px left margin */
+  margin-left: 30px; /* Drupal core uses a 25px left margin */
 }
 
 .comment-unpublished { /* Unpublished comments */
