@@ -47,18 +47,6 @@ $zen-auto-include-item-base: false;
   margin-right: auto;
   width: $zen-grid-width;
 }
-@if $legacy-support-for-ie6 {
-  /* IE6 and earlier require a hacky method to center divs. */
-  .lt-ie7 {
-    body {
-      text-align: center;
-    }
-    #page,
-    .region-bottom {
-      text-align: left;
-    }
-  }
-}
 
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
