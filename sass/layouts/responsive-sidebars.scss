@@ -18,7 +18,7 @@ $zen-column-count:  5;
 $zen-gutter-width:  20px;
 
 
-// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
 // - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
 //   and $legacy-support-for-ie7 to false.
 // - (Preferred) Install the box-sizing polyfill and set the variable below to
