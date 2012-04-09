@@ -172,6 +172,7 @@
 /*
  * Use 5 grid columns for larger screens.
  */
+
 @media all and (min-width: 960px) {
 
   /*
