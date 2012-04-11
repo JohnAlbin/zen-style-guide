@@ -42,15 +42,28 @@ li a.active {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
 }
 
+#navigation .block {
+  margin-bottom: 0;
+}
+
+#navigation .block-menu .block-title,
+#navigation .block-menu-block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 #navigation ul.links, /* Main menu and secondary menu links */
-#navigation .content ul { /* Menu block links */
+#navigation ul.menu { /* Menu block links */
   margin: 0;
   padding: 0;
   text-align: left; /* LTR */
 }
 
 #navigation ul.links li,
-#navigation .content ul li { /* A simple method to get navigation links to appear in one line. */
+#navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
   list-style-type: none;

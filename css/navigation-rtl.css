@@ -10,12 +10,12 @@ ul li.collapsed {
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
-#navigation .content ul { /* Menu block links */
+#navigation ul.menu { /* Menu block links */
   text-align: right;
 }
 
 #navigation ul.links li,
-#navigation .content ul li { /* A simple method to get navigation links to appear in one line. */
+#navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
   float: right;
   padding: 0 0 0 10px;
 }

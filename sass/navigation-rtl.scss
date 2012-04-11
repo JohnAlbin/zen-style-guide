@@ -15,7 +15,7 @@ ul li.collapsed {
 
 #navigation {
   ul.links, /* Main menu and secondary menu links */
-  .content ul { /* Menu block links */
+  ul.menu { /* Menu block links */
     text-align: right;
 
     li { /* A simple method to get navigation links to appear in one line. */
