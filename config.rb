@@ -24,7 +24,7 @@ images_dir      = "images"
 javascripts_dir = "js"
 
 
-# Require any additional compass plugins here.
+# Require any additional compass plugins installed on your system.
 #require 'ninesixty'
 #require 'zen-grids'
 
