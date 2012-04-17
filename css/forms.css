@@ -48,6 +48,12 @@
 .tips { /* Tips for Drupal's input formats */
 }
 
+a.button { /* Buttons used by contrib modules like Media */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
 /*
  * Password confirmation
  */

@@ -52,6 +52,10 @@
 .tips { /* Tips for Drupal's input formats */
 }
 
+a.button { /* Buttons used by contrib modules like Media */
+  @include appearance(button);
+}
+
 /*
  * Password confirmation
  */
