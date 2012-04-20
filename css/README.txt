@@ -3,7 +3,7 @@ ZEN'S STYLESHEETS
 
 Don't panic!
 
-There are 23 CSS files in this sub-theme, but its not as bad as it first seems:
+There are 22 CSS files in this sub-theme, but its not as bad as it first seems:
 - The drupal7-reference.css is just a reference file and isn't used directly by
   your sub-theme. See below.
 - There are 7 CSS files whose names end in "-rtl.css". Those are CSS files
@@ -15,8 +15,9 @@ There are 23 CSS files in this sub-theme, but its not as bad as it first seems:
 - If you aren't using this sub-theme while doing wireframes of your site's
   functionality, you can remove wireframes.css from your sub-theme's .info file
   and delete the file as well.
+- One is just a print stylesheet!
 
-That leaves just 13 CSS files. (Okay, still quite a few, but better than 23.)
+That leaves just 11 CSS files. (Okay, still quite a few, but better than 22.)
 
 Why not just one stylesheet?
 
@@ -72,10 +73,6 @@ theming Drupal websites.
 - layouts/fixed-width.css:
   This layout is based on the Zen Grids layout method, but uses a fixed pixel
   width.
-
-- page-backgrounds.css:
-  Layered backgrounds across scattered divs can be easier to manage if they are
-  centralized in one location.
 
 - tabs.css:
   While most of the CSS rulesets in your sub-theme are guidelines without any
