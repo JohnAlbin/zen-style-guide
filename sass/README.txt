@@ -34,7 +34,8 @@ file into your sub-theme's css directory:
 While using generated CSS with Firebug, the line numbers it reports will be
 wrong since it will be showing the generated CSS file's line numbers and not the
 line numbers of the source Sass files. To correct this problem, you can install
-the FireSass plug-in into Firefox.
+the FireSass plug-in into Firefox and then edit your sub-theme's config.rb file
+to set: firesass = true
   https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug/
 
 
