@@ -153,6 +153,6 @@ settings[zen_wireframes]           = 0
 
 ;settings[shortcut_module_link]    = 1
 
-; To add a CTools layout (Panels, Display Suite, etc.), uncomment the line below
-; and see the documentation at: http://drupal.org/node/495654
+; To add a Panels layout (which can also be used by Display Suite), uncomment
+; the line below and see the documentation at: http://drupal.org/node/495654
 ;plugins[panels][layouts] = layouts
