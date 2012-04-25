@@ -1,21 +1,7 @@
 @import "zen/grids";
 
-// Specify the number of columns in the grid.
-$bg-grid-column-count: $zen-column-count !default;
-
-// Specify the width of the gutters; half of the gutter will be placed on each
-// side of a grid column.
-$bg-grid-gutter-width: $zen-gutter-width !default;
-
 // Specify the column background color.
 $bg-grid-color: #ffdede !default;
-
-// Specify the width of the entire grid. Defaults to 100% for a fluid responsive
-// design, but you can change this to a pixel value if you need a fixed grid.
-$bg-grid-width: $zen-grid-width !default;
-
-// Specify the default floating direction for zen's mixins.
-$bg-float-direction: $zen-float-direction !default;
 
 
 //
@@ -26,11 +12,11 @@ $bg-float-direction: $zen-float-direction !default;
 // </p>
 //
 @mixin -experimental-bg-grid(
-  $column-count: $bg-grid-column-count,
-  $gutter-width: $bg-grid-gutter-width,
+  $column-count: $zen-column-count,
+  $gutter-width: $zen-gutter-width,
   $grid-color: $bg-grid-color,
-  $grid-width: $bg-grid-width,
-  $flow-direction: $bg-float-direction
+  $grid-width: $zen-grid-width,
+  $flow-direction: $zen-float-direction
 ) {
 
   // Internal variables.
@@ -48,7 +34,8 @@ $bg-float-direction: $zen-float-direction !default;
   position: absolute;
   position: fixed;
   z-index: -1;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: $grid-width;
   height: 100%;
   font-size: $font-size;
@@ -67,6 +54,7 @@ $bg-float-direction: $zen-float-direction !default;
   @for $i from 1 through $column-count {
     .bgcol-#{$i} {
       @include zen-grid-item(1, $i, $column-count: $column-count, $gutter-width: $gutter-width, $float-direction: $dir, $auto-include-item-base: false);
+      display: block; // Override display: none applied for grids with different column numbers.
       height: 100%;
       margin-bottom: -($line-height);
       background-color: $grid-color;
@@ -80,6 +68,7 @@ $bg-float-direction: $zen-float-direction !default;
         @include zen-clear();
       }
       @include zen-grid-item(1, $i, $column-count: $column-count, $gutter-width: $gutter-width, $float-direction: $rev, $auto-include-item-base: false);
+      display: block; // Override display: none applied for grids with different column numbers.
     }
   }
   @for $i from ($column-count + 1) through 30 {
