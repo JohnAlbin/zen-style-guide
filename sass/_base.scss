@@ -20,11 +20,12 @@
 //
 // To turn on support for IE6 or IE7, set those variables to true.
 //
-// Zen does not require special handling for IE8 or later. But Compass defines
-// more Legacy IE variables that you might find useful for your theme. See the
-// documentation for them at http://compass-style.org/reference/compass/support/
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
 $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
 
 
 //
