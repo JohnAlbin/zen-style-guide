@@ -1,10 +1,34 @@
 /**
  * @file
  * Field Styling
+ *
+ * The Fences module allows site builders to pick the semeantic HTML5 element
+ * for each field while editing the field's settings. There's no way a theme
+ * can ever know which element to use for the fields on your site, so Zen
+ * just uses lets Drupal core or Fences decide. Since you DO NOT want 3 wrapping
+ * divs around every field (do you?), we highly recommend Fences.
+ *
+ * http://drupal.org/project/fences
  */
 
 @import "base";
 
+
+/*
+ * Field wrappers when the Fences module is enabled.
+ */
+
+.field-label { /* The optional label for a field. */
+}
+
+.field-FIELDNAME { /* Underscores in field name are replaced with dashes. */
+}
+
+
+/*
+ * If you don't use the Fences module, that's fine. Really. I think. Just use
+ * these selectors instead:
+ */
 
 .field { /* Wrapper for any field. */
 }
