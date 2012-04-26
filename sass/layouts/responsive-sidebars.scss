@@ -137,6 +137,7 @@ $zen-auto-include-item-base: false;
     }
 
     .region-sidebar-second { /* Start a new row and span all 3 columns. */
+      @include zen-clear();
       @include zen-grid-item(3, 1);
       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
 

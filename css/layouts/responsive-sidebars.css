@@ -128,6 +128,7 @@
     margin-right: -33.333%;
   }
   .two-sidebars .region-sidebar-second { /* Start a new row and span all 3 columns. */
+    clear: left;
     float: left;
     width: 100%;
     margin-left: 0%;
