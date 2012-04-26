@@ -60,7 +60,6 @@
     margin-left: -33.333%;
   }
   .two-sidebars .region-sidebar-second { /* Start a new row and span all 3 columns. */
-    clear: right;
     float: right;
     width: 100%;
     margin-right: 0%;
@@ -70,6 +69,7 @@
     *zoom: 1;
     padding-left: 0;
     padding-right: 0;
+    clear: right;
   }
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
