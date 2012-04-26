@@ -61,9 +61,9 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
  3. Choose your preferred page layout method or grid system.
 
     By default your new sub-theme is using a responsive layout. If you want a
-    fixed layout for your theme, delete the unneeded responsive-sidebars.css and
-    responsive-sidebars-rtl.css files and edit your sub-theme's .info file and
-    replace the reference to responsive-sidebars.css with fixed-width.css.
+    fixed layout for your theme, delete the unneeded responsive-sidebars and
+    responsive-sidebars-rtl css/sass files and edit your sub-theme's .info file
+    and replace the reference to responsive-sidebars.css with fixed-width.css.
 
     For example, edit foo/foo.info and change this line:
       stylesheets[all][]   = css/layouts/responsive-sidebars.css
