@@ -178,6 +178,7 @@ ul.inline li {
   list-style-type: none;
   padding: 0 1em 0 0; /* LTR */
 }
+
 span.field-label { /* The inline field label used by the Fences module */
   padding: 0 1em 0 0; /* LTR */
 }

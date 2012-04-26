@@ -47,15 +47,13 @@ ul.secondary a {
 ul.primary li {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   -ms-border-top-left-radius: 4px;
-  -khtml-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   -ms-border-top-right-radius: 4px;
-  -khtml-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
   text-shadow: white 1px 1px 0;
   border: 1px solid #bbbbbb;
@@ -72,18 +70,17 @@ ul.primary a:link,
 ul.primary a:visited {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   -ms-border-top-left-radius: 4px;
-  -khtml-border-top-left-radius: 4px;
+  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   -ms-border-top-right-radius: 4px;
-  -khtml-border-top-right-radius: 4px;
+  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -moz-transition: background-color 0.3s;
   -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
   color: #333;
@@ -124,14 +121,14 @@ ul.secondary {
 
 ul.secondary a:link,
 ul.secondary a:visited {
-  -moz-border-radius: 0.75em;
   -webkit-border-radius: 0.75em;
-  -o-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
   -ms-border-radius: 0.75em;
-  -khtml-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
   border-radius: 0.75em;
-  -moz-transition: background-color 0.3s;
   -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
   text-shadow: white 1px 1px 0;

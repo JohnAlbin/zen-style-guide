@@ -38,8 +38,10 @@
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  overflow: visible;
   word-wrap: break-word;
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
 }
 
 /*
@@ -49,9 +51,19 @@
 #header,
 #main,
 #footer {
-  position: relative;
-  overflow: hidden;
+  *position: relative;
   *zoom: 1;
+}
+#header:before, #header:after,
+#main:before, #main:after,
+#footer:before, #footer:after {
+  content: "";
+  display: table;
+}
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
 }
 
 /*
@@ -132,12 +144,19 @@
     width: 100%;
     margin-left: 0%;
     margin-right: -100%;
-    position: relative;
-    overflow: hidden;
+    *position: relative;
     *zoom: 1;
     padding-left: 0;
     padding-right: 0;
     clear: left;
+  }
+  .two-sidebars .region-sidebar-second:before,
+  .two-sidebars .region-sidebar-second:after {
+    content: "";
+    display: table;
+  }
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
   }
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
@@ -146,8 +165,10 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    overflow: visible;
     word-wrap: break-word;
+    _display: inline;
+    _overflow: hidden;
+    _overflow-y: visible;
   }
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) { /* Span 1 column, starting in the 1st column from left. */
     float: left;

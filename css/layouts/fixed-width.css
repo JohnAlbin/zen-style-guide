@@ -36,7 +36,6 @@
   padding-left: 10px;
   padding-right: 10px;
   border: 0 !important;
-  overflow: visible;
   word-wrap: break-word;
   _display: inline;
   _overflow: hidden;
@@ -50,9 +49,19 @@
 #header,
 #main,
 #footer {
-  position: relative;
-  overflow: hidden;
+  *position: relative;
   *zoom: 1;
+}
+#header:before, #header:after,
+#main:before, #main:after,
+#footer:before, #footer:after {
+  content: "";
+  display: table;
+}
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
 }
 
 /*

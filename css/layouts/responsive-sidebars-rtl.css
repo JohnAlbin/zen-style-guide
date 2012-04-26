@@ -64,12 +64,19 @@
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
-    position: relative;
-    overflow: hidden;
+    *position: relative;
     *zoom: 1;
     padding-left: 0;
     padding-right: 0;
     clear: right;
+  }
+  .two-sidebars .region-sidebar-second:before,
+  .two-sidebars .region-sidebar-second:after {
+    content: "";
+    display: table;
+  }
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
   }
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
@@ -78,8 +85,10 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    overflow: visible;
     word-wrap: break-word;
+    _display: inline;
+    _overflow: hidden;
+    _overflow-y: visible;
   }
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) { /* Span 1 column, starting in the 1st column from left. */
     float: right;
