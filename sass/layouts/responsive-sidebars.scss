@@ -80,6 +80,7 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) {
   #main {
     padding-top: 3em; /* Move all the children of #main down to make room. */
+    position: relative;
   }
   #navigation {
     position: absolute;
