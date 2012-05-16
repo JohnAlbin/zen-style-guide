@@ -81,14 +81,6 @@
 }
 
 /*
- * The layout when there are no sidebars.
- */
-
-#content {
-  width: 980px;
-}
-
-/*
  * The layout when there is only one sidebar, the left one.
  */
 

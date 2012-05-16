@@ -30,7 +30,6 @@
   padding-left: 10px;
   padding-right: 10px;
   border: 0 !important;
-  overflow: visible;
   word-wrap: break-word;
   _display: inline;
   _overflow: hidden;
@@ -72,14 +71,6 @@
   position: absolute;
   top: 0; /* Move the navbar up inside #main's padding. */
   height: 3em;
-  width: 980px;
-}
-
-/*
- * The layout when there are no sidebars.
- */
-
-#content {
   width: 980px;
 }
 
