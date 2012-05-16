@@ -28,6 +28,11 @@ javascripts_dir = "js"
 #require 'ninesixty'
 #require 'zen-grids'
 
+# Assuming this theme is in sites/*/themes/THEMENAME, you can add the partials
+# included with a module by uncommenting and modifying one of the lines below:
+#add_import_path "../../../default/modules/FOO"
+#add_import_path "../../../all/modules/FOO"
+#add_import_path "../../../../modules/FOO"
 
 
 ##
@@ -45,13 +50,6 @@ relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
-
-# Assuming this theme is in sites/*/themes/THEMENAME, we can add the Drupal
-# root, sites/all and sites/default directories to the Sass import path using
-# add_import_path. Paths added first are used before paths added later.
-add_import_path "../../../default"
-add_import_path "../../../all"
-add_import_path "../../../.."
 
 # Pass options to sass. For development, we turn on the FireSass-compatible
 # debug_info if the firesass config variable above is true.
