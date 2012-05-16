@@ -84,7 +84,7 @@ $zen-auto-include-item-base: false;
   position: absolute;
   top: 0; /* Move the navbar up inside #main's padding. */
   height: 3em;
-  width: $zen-grid-width;
+  width: $zen-grid-width - $zen-gutter-width;
 }
 
 /*

@@ -71,7 +71,7 @@
   position: absolute;
   top: 0; /* Move the navbar up inside #main's padding. */
   height: 3em;
-  width: 980px;
+  width: 960px;
 }
 
 /*
