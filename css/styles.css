@@ -13,16 +13,8 @@
 @import "layouts/responsive-sidebars.css";
 
 /* Module rules */
-@import "wireframes.css";
-@import "tabs.css";
-@import "pages.css";
-@import "blocks.css";
-@import "navigation.css";
-@import "views-styles.css";
-@import "nodes.css";
-@import "comments.css";
-@import "forms.css";
-@import "fields.css";
+@import "modular-styles.css";
+/* Optionally, add your own modular stylesheets here. */
 @import "print.css";
 
 /* Global state rules */

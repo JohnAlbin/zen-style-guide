@@ -1,0 +1,120 @@
+/**
+ * @file
+ * RTL companion for the tabs.css file.
+ */
+
+@import "base";
+
+
+ul.primary,
+ul.secondary {
+  li {
+    float: right;
+  }
+}
+
+ul.primary {
+  li {
+    margin: 0.5em 3px 0 0;
+  }
+}
+/**
+ * @file
+ * RTL companion for the pages.css file.
+ */
+
+@import "base";
+
+
+/*
+ * Header
+ */
+
+#logo { /* Wrapping link for logo */
+  float: right;
+}
+
+/*
+ * Content
+ */
+
+ul.inline li { /* List of links */
+  display: inline-block; /* Bug in Safari causes display: inline to fail. */
+  padding: 0 0 0 1em;
+}
+span.field-label { /* The inline field label used by the Fences.module */
+  padding: 0 0 0 1em;
+}
+/**
+ * @file
+ * RTL companion for the navigation.css file.
+ */
+
+@import "base";
+
+
+ul li.collapsed {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *list-style-image: url(../images/menu-collapsed-rtl.png);
+  }
+  list-style-image: inline-image("menu-collapsed-rtl.png");
+}
+
+#navigation {
+  ul.links, /* Main menu and secondary menu links */
+  ul.menu { /* Menu block links */
+    text-align: right;
+
+    li { /* A simple method to get navigation links to appear in one line. */
+      float: right;
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+#secondary-menu {
+  float: left;
+}
+/**
+ * @file
+ * RTL companion for the forms.css file.
+ */
+
+@import "base";
+
+
+/*
+ * Drupal's default login form block
+ */
+
+#user-login-form {
+  text-align: right;
+
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+
+  html.js & li.openid-link,
+  li.openid-link { /* The "Log in using OpenID" link. */
+    margin-left: 0;
+    margin-right: -20px; /* Un-do some of the padding on the ul list. */
+  }
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-elements.css, but restore them for the admin
+ * section of the site.
+ */
+
+form {
+  th {
+    text-align: right;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}

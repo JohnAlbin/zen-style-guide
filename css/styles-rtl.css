@@ -10,10 +10,7 @@
 @import "layouts/responsive-sidebars-rtl.css";
 
 /* Module rules */
-@import "tabs-rtl.css";
-@import "pages-rtl.css";
-@import "navigation-rtl.css";
-@import "forms-rtl.css";
+@import "modular-styles-rtl.css";
 
 /* Global state rules */
 /* @import "global-states-rtl.css"; */
