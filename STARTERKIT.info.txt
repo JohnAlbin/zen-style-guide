@@ -47,21 +47,8 @@ base theme  = zen
 ; First we remove the system's menu styling since Zen has its own.
 stylesheets[all][] = system.menus.css
 
-; Then we add our own stylesheets.
-stylesheets[all][] = css/normalize.css
-stylesheets[all][] = css/wireframes.css
-stylesheets[all][] = css/layouts/responsive-sidebars.css
-stylesheets[all][] = css/page-backgrounds.css
-stylesheets[all][] = css/tabs.css
-stylesheets[all][] = css/pages.css
-stylesheets[all][] = css/blocks.css
-stylesheets[all][] = css/navigation.css
-stylesheets[all][] = css/views-styles.css
-stylesheets[all][] = css/nodes.css
-stylesheets[all][] = css/comments.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/fields.css
-stylesheets[all][] = css/print.css
+; Then we add our own stylesheet.
+stylesheets[all][] = css/styles.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html

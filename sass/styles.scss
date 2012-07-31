@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+@import "base"; /* Import Sass mixins, variables, Compass modules, etc. */
+
+
+/* Base rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive-sidebars";
+
+/* Module rules */
+@import "wireframes";
+@import "tabs";
+@import "pages";
+@import "blocks";
+@import "navigation";
+@import "views-styles";
+@import "nodes";
+@import "comments";
+@import "forms";
+@import "fields";
+@import "print";
+
+/* Global state rules */
+/* @import "global-states"; */
+
+/* Theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */

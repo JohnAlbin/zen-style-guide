@@ -1,0 +1,26 @@
+/**
+ * @file
+ * RTL companion for the styles.scss file.
+ */
+
+@import "base"; /* Import Sass mixins, variables, Compass modules, etc. */
+
+
+/* Base rules */
+@import "normalize-rtl";
+
+/* Layout rules */
+@import "layouts/responsive-sidebars-rtl";
+
+/* Module rules */
+@import "tabs-rtl";
+@import "pages-rtl";
+@import "navigation-rtl";
+@import "forms-rtl";
+
+/* Global state rules */
+/* @import "global-states-rtl"; */
+
+/* Theme rules */
+/* @import "theme-A-rtl"; */
+/* @import "theme-B-rtl"; */
