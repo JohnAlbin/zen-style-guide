@@ -1,10 +1,14 @@
 /**
  * @file
- * RTL companion for the tabs.css file.
+ * RTL companion for the modules.css file.
  */
 
 @import "base";
 
+
+/* =============================================================================
+   Tabs
+   ========================================================================== */
 
 ul.primary,
 ul.secondary {
@@ -18,40 +22,34 @@ ul.primary {
     margin: 0.5em 3px 0 0;
   }
 }
-/**
- * @file
- * RTL companion for the pages.css file.
- */
-
-@import "base";
 
 
-/*
- * Header
- */
+/* =============================================================================
+   Branding header
+   ========================================================================== */
 
 #logo { /* Wrapping link for logo */
   float: right;
 }
 
-/*
- * Content
- */
+
+/* =============================================================================
+   Inline styles
+   ========================================================================== */
 
 ul.inline li { /* List of links */
   display: inline-block; /* Bug in Safari causes display: inline to fail. */
   padding: 0 0 0 1em;
 }
+
 span.field-label { /* The inline field label used by the Fences.module */
   padding: 0 0 0 1em;
 }
-/**
- * @file
- * RTL companion for the navigation.css file.
- */
 
-@import "base";
 
+/* =============================================================================
+   Menus
+   ========================================================================== */
 
 ul li.collapsed {
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
@@ -59,6 +57,11 @@ ul li.collapsed {
   }
   list-style-image: inline-image("menu-collapsed-rtl.png");
 }
+
+
+/* =============================================================================
+   Navigation bar
+   ========================================================================== */
 
 #navigation {
   ul.links, /* Main menu and secondary menu links */
@@ -72,16 +75,19 @@ ul li.collapsed {
   }
 }
 
+
+/* =============================================================================
+   Main menu and Secondary menu links
+   ========================================================================== */
+
 #secondary-menu {
   float: left;
 }
-/**
- * @file
- * RTL companion for the forms.css file.
- */
 
-@import "base";
 
+/* =============================================================================
+   Forms
+   ========================================================================== */
 
 /*
  * Drupal's default login form block

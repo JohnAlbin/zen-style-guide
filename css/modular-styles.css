@@ -1,10 +1,14 @@
 /**
  * @file
- * Wireframes Styling
+ * SMACSS Modules
  *
- * Add wireframes to the basic layout elements.
+ * Adds modular sets of styles.
  */
 
+
+/* =============================================================================
+   Wireframes
+   ========================================================================== */
 
 .with-wireframes #header,
 .with-wireframes #main,
@@ -27,16 +31,11 @@
 .lt-ie8 .with-wireframes .region-bottom {
   border: 1px solid #ccc; /* IE6/7 do not support the outline property. */
 }
-/**
- * @file
- * Tabs Styling
- *
- * Adds styles for the primary and secondary tabs.
- *
- * Compare this with default CSS found in the system module's stylesheet (a copy
- * of which is in drupal7-reference.css.)
- */
 
+
+/* =============================================================================
+   Tabs
+   ========================================================================== */
 
 /*
  * Basic positioning styles shared by primary and secondary tabs.
@@ -76,15 +75,11 @@ ul.secondary a {
 ul.primary li {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -ms-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -ms-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: white 1px 1px 0;
+  text-shadow: 1px 1px 0 white;
   border: 1px solid #bbbbbb;
   border-bottom: 0;
   margin: 0.5em 0 0 3px; /* LTR */
@@ -99,17 +94,12 @@ ul.primary a:link,
 ul.primary a:visited {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
-  -ms-border-top-left-radius: 4px;
-  -o-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
-  -ms-border-top-right-radius: 4px;
-  -o-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
   color: #333;
@@ -133,7 +123,6 @@ ul.primary a.active {
   background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
-  background-image: -ms-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   border-color: #fff;
 }
@@ -157,10 +146,9 @@ ul.secondary a:visited {
   border-radius: 0.75em;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  text-shadow: white 1px 1px 0;
+  text-shadow: 1px 1px 0 white;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 .5em;
@@ -175,24 +163,16 @@ ul.secondary a:focus {
 
 ul.secondary a.active,
 ul.secondary a:active {
-  text-shadow: #333333 1px 1px 0;
+  text-shadow: 1px 1px 0 #333333;
   background-color: #666;
   border-color: #000;
   color: #fff;
 }
-/**
- * @file
- * Page Styling
- *
- * Style the markup found in page.tpl.php. Also includes some styling of
- * miscellaneous Drupal elements that appear in the $content variable, such as
- * ul.links, .pager, .more-link, etc.
- */
 
 
-/*
- * Body
- */
+/* =============================================================================
+   Body
+   ========================================================================== */
 
 body {
   margin: 0;
@@ -202,10 +182,12 @@ body {
 #page {
 }
 
-/*
- * The skip-link link will be completely hidden until a user tabs to the link.
- * See the element-focusable rule in system.base.css.
- */
+/* =============================================================================
+   Skip link
+
+   The skip-link link will be completely hidden until a user tabs to the link.
+   See the element-focusable rule in system.base.css.
+   ========================================================================== */
 
 #skip-link {
   margin: 0;
@@ -220,9 +202,10 @@ body {
   color: #fff;
 }
 
-/*
- * Header
- */
+
+/* =============================================================================
+   Branding header
+   ========================================================================== */
 
 #header {
 }
@@ -264,22 +247,24 @@ body {
   clear: both; /* Clear the logo */
 }
 
-/*
- * Main (container for everything else)
- */
+
+/* =============================================================================
+   Main area
+   ========================================================================== */
 
 #main {
 }
-
-/*
- * Content
- */
 
 #content {
 }
 
 .region-highlighted {
 }
+
+
+/* =============================================================================
+   Breadcrumb navigation
+   ========================================================================== */
 
 .breadcrumb { /* The path to the current page in the form of a list of links */
 }
@@ -293,6 +278,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+/* =============================================================================
+   Titles
+   ========================================================================== */
 
 h1.title, /* The title of the page */
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
@@ -310,6 +300,11 @@ tr.even { /* Some tables have rows marked even or odd. */
 tr.odd {
   /* background-color: #eee; */ /* Drupal core uses a #eee background */
 }
+
+
+/* =============================================================================
+   Messages
+   ========================================================================== */
 
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
@@ -339,6 +334,11 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   /* color: #e09010; */ /* Drupal core uses a #e09010 background */
 }
 
+
+/* =============================================================================
+   Content area
+   ========================================================================== */
+
 .tabs { /* See also the tabs.css file. */
 }
 
@@ -350,6 +350,11 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 
 .region-content { /* Wrapper for the actual page content */
 }
+
+
+/* =============================================================================
+   Inline styles
+   ========================================================================== */
 
 ul.inline { /* List of links generated by theme_links() */
   display: inline;
@@ -365,6 +370,11 @@ span.field-label { /* The inline field label used by the Fences module */
   padding: 0 1em 0 0; /* LTR */
 }
 
+
+/* =============================================================================
+   Pager
+   ========================================================================== */
+
 .item-list .pager { /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
@@ -372,50 +382,30 @@ span.field-label { /* The inline field label used by the Fences module */
   padding: 0 0.5em;
 }
 
+
+/* =============================================================================
+   More page areas
+   ========================================================================== */
+
 .feed-icon { /* The link to the RSS or Atom feed for the current list of content */
 }
 
 .more-link { /* Aggregator, blog, and forum more link */
 }
 
-/*
- * First sidebar (on left in LTR languages, on right in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-first
- * (see the layout.css file.)
- */
-
-.region-sidebar-first {
+.region-sidebar-first { /* First sidebar (on left in LTR languages, on right in RTL) */
 }
 
-/*
- * Second sidebar (on right in LTR languages, on left in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
- */
-
-.region-sidebar-second {
+.region-sidebar-second { /* Second sidebar (on right in LTR languages, on left in RTL) */
 }
-
-/*
- * Footer
- */
-
-#footer {
-}
-
-/*
- * Page bottom
- */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
-/**
- * @file
- * Block Styling
- */
 
+
+/* =============================================================================
+   Blocks
+   ========================================================================== */
 
 .block { /* Block wrapper */
   margin-bottom: 1.5em;
@@ -516,15 +506,11 @@ h2.block-title { /* Block title */
 
 #block-user-online { /* "Who's online" block for a list of the online users */
 }
-/**
- * @file
- * Navigation Styling
- */
 
 
-/*
- * Markup generated by theme_menu_tree().
- */
+/* =============================================================================
+   Menus
+   ========================================================================== */
 
 ul li.expanded {
   *list-style-image: url(../images/menu-expanded.png);
@@ -544,17 +530,14 @@ ul li.leaf {
   list-style-type: square;
 }
 
-/*
- * The active item in a Drupal menu
- */
-
-li a.active {
+li a.active { /* The active item in a Drupal menu */
   color: #000;
 }
 
-/*
- * Navigation bar
- */
+
+/* =============================================================================
+   Navigation bar
+   ========================================================================== */
 
 #navigation {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
@@ -592,9 +575,10 @@ li a.active {
 .region-navigation {
 }
 
-/*
- * Main menu and Secondary menu links
- */
+
+/* =============================================================================
+   Main menu and Secondary menu links
+   ========================================================================== */
 
 #main-menu {
 }
@@ -603,36 +587,29 @@ li a.active {
   float: right; /* LTR */
 }
 
-/*
- * Menu blocks
- */
+
+/* =============================================================================
+   Menu blocks
+
+   Drupal core has limited ways in which it can display its menus. To get around
+   these limitations, see http://drupal.org/project/menu_block
+   ========================================================================== */
 
 .block-menu {
 }
 
-/*
- * "Menu block" blocks
- *
- * Drupal core has limited ways in which it can display its menus. To get around
- * these limitations, see http://drupal.org/project/menu_block
- */
-
 .block-menu-block {
 }
-/**
- * @file
- * Views Styling
- */
 
 
-/*
- * Views' admin tabs
- *
- * The views admin tabs use the same classes as the secondary tabs. We prevent
- * some of our tab styling from bleeding into (and breaking) the Views admin
- * pages. If your sub-theme isn't used for admin pages, you can remove this
- * entire section.
- */
+/* =============================================================================
+   Views admin tabs
+
+   The views admin tabs use the same classes as the secondary tabs. We prevent
+   some of our tab styling from bleeding into (and breaking) the Views admin
+   pages. If your sub-theme isn't used for admin pages, you can remove this
+   entire section.
+   ========================================================================== */
 
 .views-displays .secondary li {
   float: none;
@@ -676,13 +653,11 @@ li a.active {
   -o-border-radius: 0 0 7px 7px;
   border-radius: 0 0 7px 7px;
 }
-/**
- * @file
- * Node Styling
- *
- * Style anything that isn't in the $content variable.
- */
 
+
+/* =============================================================================
+   Nodes
+   ========================================================================== */
 
 .node { /* Node wrapper */
 }
@@ -752,11 +727,11 @@ li a.active {
 .lt-ie8 .comment-unpublished > * {
   position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
 }
-/**
- * @file
- * Comment Styling
- */
 
+
+/* =============================================================================
+   Comments
+   ========================================================================== */
 
 .comments { /* Wrapper for the list of comments and its title */
   margin: 1.5em 0;
@@ -833,11 +808,11 @@ h3.comment-title { /* Comment title */
 
 .comment-unpublished p.unpublished { /* The word "Unpublished" displayed underneath the content. See also the div.unpublished declaration in the nodes.css. */
 }
-/**
- * @file
- * Form Styling
- */
 
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
@@ -977,19 +952,19 @@ form table .item-list ul {
 td.menu-disabled {
   background: #ccc;
 }
-/**
- * @file
- * Field Styling
- *
- * The Fences module allows site builders to pick the semeantic HTML5 element
- * for each field while editing the field's settings. There's no way a theme
- * can ever know which element to use for the fields on your site, so Zen
- * just uses lets Drupal core or Fences decide. Since you DO NOT want 3 wrapping
- * divs around every field (do you?), we highly recommend Fences.
- *
- * http://drupal.org/project/fences
- */
 
+
+/* =============================================================================
+   Fields
+
+   The Fences module allows site builders to pick the semeantic HTML5 element
+   for each field while editing the field's settings. There's no way a theme
+   can ever know which element to use for the fields on your site, so Zen
+   just uses lets Drupal core or Fences decide. Since you DO NOT want 3 wrapping
+   divs around every field (do you?), we highly recommend Fences.
+
+   http://drupal.org/project/fences
+   ========================================================================== */
 
 /*
  * Field wrappers when the Fences module is enabled.
