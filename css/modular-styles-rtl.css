@@ -26,6 +26,10 @@ ul.primary li {
   float: right;
 }
 
+#secondary-menu {
+  float: left;
+}
+
 
 /* =============================================================================
    Inline styles
@@ -63,15 +67,6 @@ ul li.collapsed {
 #navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
   float: right;
   padding: 0 0 0 10px;
-}
-
-
-/* =============================================================================
-   Main menu and Secondary menu links
-   ========================================================================== */
-
-#secondary-menu {
-  float: left;
 }
 
 

@@ -203,6 +203,10 @@ ul.secondary {
   font-size: 1em;
 }
 
+#secondary-menu {
+  float: right; /* LTR */
+}
+
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }
@@ -355,15 +359,6 @@ li a.active { /* The active item in a Drupal menu */
       list-style-image: none;
     }
   }
-}
-
-
-/* =============================================================================
-   Main menu and Secondary menu links
-   ========================================================================== */
-
-#secondary-menu {
-  float: right; /* LTR */
 }
 
 
