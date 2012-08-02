@@ -38,6 +38,23 @@ ul.primary {
 
 
 /* =============================================================================
+   Navigation bar
+   ========================================================================== */
+
+#navigation {
+  ul.links, /* Main menu and secondary menu links */
+  ul.menu { /* Menu block links */
+    text-align: right;
+
+    li { /* A simple method to get navigation links to appear in one line. */
+      float: right;
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+
+/* =============================================================================
    Inline styles
    ========================================================================== */
 
@@ -60,23 +77,6 @@ ul li.collapsed {
     *list-style-image: url(../images/menu-collapsed-rtl.png);
   }
   list-style-image: inline-image("menu-collapsed-rtl.png");
-}
-
-
-/* =============================================================================
-   Navigation bar
-   ========================================================================== */
-
-#navigation {
-  ul.links, /* Main menu and secondary menu links */
-  ul.menu { /* Menu block links */
-    text-align: right;
-
-    li { /* A simple method to get navigation links to appear in one line. */
-      float: right;
-      padding: 0 0 0 10px;
-    }
-  }
 }
 
 
