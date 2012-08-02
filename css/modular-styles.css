@@ -439,11 +439,10 @@ li a.active { /* The active item in a Drupal menu */
 
 
 /* =============================================================================
-   Nodes
+   Unpublished note
    ========================================================================== */
 
-.node-unpublished p.unpublished,
-.comment-unpublished p.unpublished { /* The word "Unpublished" displayed underneath the content. */
+p.unpublished { /* The word "Unpublished" displayed underneath the content. */
   height: 0;
   overflow: visible;
   color: #d8d8d8;
@@ -456,7 +455,7 @@ li a.active { /* The active item in a Drupal menu */
   word-wrap: break-word; /* A very nice CSS3 property */
 }
 
-.lt-ie8 .node-unpublished p.unpublished > *,
+.lt-ie8 .node-unpublished > *,
 .lt-ie8 .comment-unpublished > * {
   position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
 }
