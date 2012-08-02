@@ -498,20 +498,12 @@ a.button { /* Buttons used by contrib modules like Media */
   @include appearance(button);
 }
 
-/*
- * Password confirmation
- */
-
 .password-parent,
-.confirm-parent {
+.confirm-parent { /* Password confirmation */
   margin: 0;
 }
 
-/*
- * Drupal's default login form block
- */
-
-#user-login-form {
+#user-login-form { /* Drupal's default login form block */
   text-align: left; /* LTR */
 
   /*

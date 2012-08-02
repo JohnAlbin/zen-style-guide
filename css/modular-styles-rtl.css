@@ -74,20 +74,9 @@ ul li.collapsed {
    Forms
    ========================================================================== */
 
-/*
- * Drupal's default login form block
- */
-
-#user-login-form {
+#user-login-form { /* Drupal's default login form block */
   text-align: right;
 }
-
-/*
- * OpenID
- *
- * The default styling for the OpenID login link seems to assume Garland's
- * styling of list items.
- */
 
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link { /* The "Log in using OpenID" link. */
@@ -97,9 +86,6 @@ html.js #user-login-form li.openid-link,
 
 /*
  * Drupal admin tables
- *
- * We overrode these styles in html-elements.css, but restore them for the admin
- * section of the site.
  */
 
 form th {
