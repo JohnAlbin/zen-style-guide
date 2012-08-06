@@ -501,11 +501,6 @@ p.unpublished { /* The word "Unpublished" displayed underneath the content. */
   border: 1px solid #c00;
 }
 
-.form-item label { /* The label for a form element */
-  display: block;
-  font-weight: bold;
-}
-
 .form-item label.option { /* The label for a radio button or checkbox */
   display: inline;
   font-weight: normal;
