@@ -62,25 +62,22 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
 
     By default your new sub-theme is using a responsive layout. If you want a
     fixed layout for your theme, delete the unneeded responsive-sidebars and
-    responsive-sidebars-rtl css/sass files and edit your sub-theme's .info file
-    and replace the reference to responsive-sidebars.css with fixed-width.css.
+    responsive-sidebars-rtl css/sass files and edit your sub-theme's styles.css
+    or styles.scss file and replace the reference to responsive-sidebars with
+    fixed-width.
 
-    For example, edit foo/foo.info and change this line:
-      stylesheets[all][]   = css/layouts/responsive-sidebars.css
+    For example, edit foo/sass/styles.scss and change this line:
+      @import "layouts/responsive-sidebars";
     to:
-      stylesheets[all][]   = css/layouts/fixed-width.css
-
-      Why? The "stylesheets" lines in your .info file describe the media type
-      and path to the CSS file you want to include. The format for these lines
-      is:  stylesheets[MEDIA][] = path/to/file.css
+      @import "layouts/fixed-width";
 
     Alternatively, if you are more familiar with a different CSS layout method,
     such as GridSetApp or 960.gs, etc., you can replace the
-    "css/layouts/responsive-sidebars.css" line in your .info file with a line
+    "layouts/responsive-sidebars" line in your styles.scss file with a line
     pointing at your choice of layout CSS file.
 
     Then, visit your site's Appearance page at admin/appearance to refresh
-    Drupal 7's cache of .info file data.
+    Drupal 7's theme cache.
 
  4. Edit your sub-theme to use the proper function names.
 
