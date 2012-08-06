@@ -495,33 +495,23 @@ p.unpublished { /* The word "Unpublished" displayed underneath the content. */
   margin: 1.5em 0;
 }
 
+.form-checkboxes .form-item,
+.form-radios .form-item { /* Pack groups of checkboxes and radio buttons closer together */
+  margin: 0; /* Drupal core uses "0.4em 0" */
+}
+
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error { /* Highlight the form elements that caused a form submission error */
   border: 1px solid #c00;
 }
 
-.form-item label.option { /* The label for a radio button or checkbox */
-  display: inline;
-  font-weight: normal;
-}
-
-.form-required { /* The part of the label that indicates a required field */
-  color: #c00;
-}
-
 .form-item .description { /* The descriptive help text (separate from the label) */
   font-size: 0.85em;
 }
 
-.form-checkboxes .form-item,
-.form-radios .form-item { /* Pack groups of checkboxes and radio buttons closer together */
-  margin: 0; /* Drupal core uses "0.4em 0" */
-}
-
-.container-inline div,
-.container-inline label { /* Inline labels and form divs */
-  display: inline;
+.form-required { /* The part of the label that indicates a required field */
+  color: #c00;
 }
 
 a.button { /* Buttons used by contrib modules like Media */
