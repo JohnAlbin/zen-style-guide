@@ -3,7 +3,7 @@ ZEN'S STYLESHEETS
 
 Don't panic!
 
-There are 11 CSS files in this sub-theme, but its not as bad as it first seems:
+There are 11 CSS files in this sub-theme, but it's not as bad as it first seems:
 - There are 5 CSS files whose names end in "-rtl.css". Those are CSS files
   needed to style content written in Right-to-Left languages, such as Arabic and
   Hebrew. If your website doesn't use such languages, you can safely delete all
