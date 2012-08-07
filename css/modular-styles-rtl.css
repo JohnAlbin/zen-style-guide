@@ -8,11 +8,11 @@
    Branding header
    ========================================================================== */
 
-#logo { /* Wrapping link for logo */
+.header--logo { /* Wrapping link for logo */
   float: right;
 }
 
-#secondary-menu {
+.header--secondary-menu {
   float: left;
 }
 
