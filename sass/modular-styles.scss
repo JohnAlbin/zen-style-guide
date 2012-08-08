@@ -411,12 +411,12 @@ p.unpublished { /* The word "Unpublished" displayed underneath the content. */
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  word-wrap: break-word; // A very nice CSS3 property
+  word-wrap: break-word; /* A very nice CSS3 property */
 }
 @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
   .lt-ie8 .node-unpublished>*,
   .lt-ie8 .comment-unpublished>* {
-    position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
   }
 }
 
