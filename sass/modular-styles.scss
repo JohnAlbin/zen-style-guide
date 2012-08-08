@@ -429,11 +429,11 @@ p.unpublished { /* The word "Unpublished" displayed underneath the content. */
   margin: 1.5em 0;
 }
 
-.comment { /* Wrapper for a single comment */
+.comment-preview { /* Preview of the comment before submitting new or updated comment */
+  background-color: #ffffea; /* Drupal core will use a #ffffea background. See #1110842 */
+}
 
-  &.comment-preview { /* Preview of the comment before submitting new or updated comment */
-    background-color: #ffffea; /* Drupal core will use a #ffffea background. See #1110842 */
-  }
+.comment { /* Wrapper for a single comment */
 
   .new { /* "New" marker for comments that are new for the current user */
     color: #c00;
