@@ -40,17 +40,21 @@
    Tabs
    ========================================================================== */
 
-ul.primary,
-ul.secondary {
-  li {
-    float: right;
-  }
+.tabs--tab {
+  float: right;
 }
 
-ul.primary {
-  li {
-    margin: 0.5em 3px 0 0;
-  }
+.tabs-primary--tab {
+  @extend .tabs--tab;
+}
+
+.tabs-primary--tab-active {
+  @extend .tabs-primary--tab;
+}
+
+.tabs-secondary--tab,
+.tabs-secondary--tab-active {
+  @extend .tabs--tab;
 }
 
 

@@ -37,15 +37,13 @@
    Tabs
    ========================================================================== */
 
-ul.primary li,
-ul.secondary li {
+.tabs--tab,
+.tabs-primary--tab,
+.tabs-primary--tab-active,
+.tabs-secondary--tab,
+.tabs-secondary--tab-active {
   float: right;
 }
-
-ul.primary li {
-  margin: 0.5em 3px 0 0;
-}
-
 
 /* =============================================================================
    Inline styles
