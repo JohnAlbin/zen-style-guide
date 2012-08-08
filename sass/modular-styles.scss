@@ -371,28 +371,28 @@ span.field-label { /* The inline field label used by the Fences module */
    Menus
    ========================================================================== */
 
-ul li.expanded {
+.menu--expanded {
+  list-style-image: inline-image("menu-expanded.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *list-style-image: url(../images/menu-expanded.png);
   }
-  list-style-image: inline-image("menu-expanded.png");
   list-style-type: circle;
 }
-ul li.collapsed {
+.menu--collapsed {
+  list-style-image: inline-image("menu-collapsed.png"); /* LTR */
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *list-style-image: url(../images/menu-collapsed.png); /* LTR */
   }
-  list-style-image: inline-image("menu-collapsed.png"); /* LTR */
   list-style-type: disc;
 }
-ul li.leaf {
+.menu--leaf {
+  list-style-image: inline-image("menu-leaf.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *list-style-image: url(../images/menu-leaf.png);
   }
-  list-style-image: inline-image("menu-leaf.png");
   list-style-type: square;
 }
-li a.active { /* The active item in a Drupal menu */
+.menu a.active { /* The active item in a Drupal menu */
   color: #000;
 }
 
