@@ -21,13 +21,13 @@
    Navigation bar
    ========================================================================== */
 
-#navigation ul.links, /* Main menu and secondary menu links */
-#navigation ul.menu { /* Menu block links */
+#navigation .links, /* Main menu and secondary menu links */
+#navigation .menu { /* Menu block links */
   text-align: right;
 }
 
-#navigation ul.links li,
-#navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
+#navigation .links li,
+#navigation .menu li { /* A simple method to get navigation links to appear in one line. */
   float: right;
   padding: 0 0 0 10px;
 }
@@ -49,10 +49,11 @@
    Inline styles
    ========================================================================== */
 
-ul.inline li { /* List of links */
+.inline li { /* List of links */
   display: inline-block; /* Bug in Safari causes display: inline to fail. */
   padding: 0 0 0 1em;
 }
+
 span.field-label { /* The inline field label used by the Fences.module */
   padding: 0 0 0 1em;
 }

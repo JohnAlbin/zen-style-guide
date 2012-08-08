@@ -24,8 +24,8 @@
    ========================================================================== */
 
 #navigation {
-  ul.links, /* Main menu and secondary menu links */
-  ul.menu { /* Menu block links */
+  .links, /* Main menu and secondary menu links */
+  .menu { /* Menu block links */
     text-align: right;
 
     li { /* A simple method to get navigation links to appear in one line. */
@@ -62,7 +62,7 @@
    Inline styles
    ========================================================================== */
 
-ul.inline li { /* List of links */
+.inline li { /* List of links */
   display: inline-block; /* Bug in Safari causes display: inline to fail. */
   padding: 0 0 0 1em;
 }
