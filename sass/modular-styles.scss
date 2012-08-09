@@ -176,13 +176,74 @@ h3.title { /* Comment title */
    Messages
    ========================================================================== */
 
-div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
-  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
-
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
+.messages {
+  margin: rhythm(1) 0;
+  padding: 10px 10px 10px 50px; /* LTR */
+  background-image: inline-image("message-24-ok.png");
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *background-image: url(../images/message-24-ok.png);
   }
+  background-position: 8px 8px; /* LTR */
+  background-repeat: no-repeat;
+  border: 1px solid #be7;
+}
+
+.messages-status {
+  @extend .messages;
+  @extend .ok-style;
+}
+
+.messages-warning {
+  @extend .messages;
+  @extend .warning-style;
+  background-image: inline-image("message-24-warning.png");
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *background-image: url(../images/message-24-warning.png);
+  }
+  border-color: #ed5;
+}
+
+.messages-error {
+  @extend .messages;
+  @extend .error-style;
+  background-image: inline-image("message-24-error.png");
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *background-image: url(../images/message-24-error.png);
+  }
+  border-color: #ed541d;
+
+  p.error { /* Core/module installation error messages. */
+    color: #333;
+  }
+}
+
+.messages--list {
+  margin: 0;
+}
+.messages--item {
+  list-style-image: none;
+}
+
+/*
+ * System status report
+ */
+
+.ok,
+.ok-style {
+  background-color: #f8fff0;
+  color: #234600;
+}
+
+.warning,
+.warning-style {
+  background-color: #fffce5;
+  color: #840;
+}
+
+.error,
+.error-style {
+  background-color: #fef5f1;
+  color: #8c2e0b;
 }
 
 
