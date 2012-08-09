@@ -62,12 +62,12 @@
    Tabs
    ========================================================================== */
 
-.tabs--tab {
+.tabs--tab-style {
   float: right;
 }
 
 .tabs-primary--tab {
-  @extend .tabs--tab;
+  @extend .tabs--tab-style;
 }
 
 .tabs-primary--tab-active {
@@ -76,7 +76,7 @@
 
 .tabs-secondary--tab,
 .tabs-secondary--tab-active {
-  @extend .tabs--tab;
+  @extend .tabs--tab-style;
 }
 
 

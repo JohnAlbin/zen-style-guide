@@ -245,7 +245,6 @@ h3.title { /* Comment title */
  * Basic positioning styles shared by primary and secondary tabs.
  */
 
-.tabs,
 .tabs-primary,
 .tabs-secondary {
   overflow: hidden;
@@ -262,7 +261,6 @@ h3.title { /* Comment title */
   white-space: nowrap;
 }
 
-.tabs--tab,
 .tabs-primary--tab,
 .tabs-primary--tab-active,
 .tabs-secondary--tab,
@@ -271,11 +269,10 @@ h3.title { /* Comment title */
   margin: 0 3px;
 }
 
-.tabs--tab-link,
-.tabs-primary--tab-link,
-.tabs-primary--tab-link-active,
-.tabs-secondary--tab-link,
-.tabs-secondary--tab-link-active {
+a.tabs-primary--tab-link,
+a.tabs-primary--tab-link-active,
+a.tabs-secondary--tab-link,
+a.tabs-secondary--tab-link-active {
   border: 1px solid #e9e9e9;
   border-right: 0;
   border-bottom: 0;
@@ -306,8 +303,8 @@ h3.title { /* Comment title */
   border-bottom-color: white;
 }
 
-.tabs-primary--tab-link,
-.tabs-primary--tab-link-active {
+a.tabs-primary--tab-link,
+a.tabs-primary--tab-link-active {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -325,17 +322,14 @@ h3.title { /* Comment title */
   text-align: center;
 }
 
-.tabs-primary--tab-link:hover,
-.tabs-primary--tab-link-active:hover,
-.tabs-primary--tab-link:focus,
-.tabs-primary--tab-link-active:focus {
+a.tabs-primary--tab-link:hover,
+a.tabs-primary--tab-link:focus {
   background-color: #e9e9e9;
   border-color: #f2f2f2;
 }
 
-.tabs-primary--tab-link-active,
-.tabs-primary--tab-link-active:hover,
-.tabs-primary--tab-link-active:focus {
+a.tabs-primary--tab-link:active,
+a.tabs-primary--tab-link-active {
   background-color: transparent;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
@@ -356,14 +350,13 @@ h3.title { /* Comment title */
   margin-top: -1.5em; /* Collapse bottom margin of ul.primary. */
 }
 
-
 .tabs-secondary--tab,
 .tabs-secondary--tab-active {
   margin: 0.75em 3px;
 }
 
-.tabs-secondary--tab-link,
-.tabs-secondary--tab-link-active {
+a.tabs-secondary--tab-link,
+a.tabs-secondary--tab-link-active {
   -webkit-border-radius: 0.75em;
   -moz-border-radius: 0.75em;
   -ms-border-radius: 0.75em;
@@ -379,20 +372,15 @@ h3.title { /* Comment title */
   padding: 0 .5em;
 }
 
-.tabs-secondary--tab-link:hover,
-.tabs-secondary--tab-link-active:hover,
-.tabs-secondary--tab-link:focus,
-.tabs-secondary--tab-link-active:focus {
+a.tabs-secondary--tab-link:hover,
+a.tabs-secondary--tab-link:focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
 
-.tabs-secondary--tab-link-active,
-.tabs-secondary--tab-link-active:hover,
-.tabs-secondary--tab-link-active:focus,
-.tabs-secondary--tab-link:active,
-.tabs-secondary--tab-link-active:active {
+a.tabs-secondary--tab-link:active,
+a.tabs-secondary--tab-link-active {
   text-shadow: 1px 1px 0 #333333;
   background-color: #666;
   border-color: #000;
