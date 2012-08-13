@@ -629,27 +629,27 @@ a.button { /* Buttons used by contrib modules like Media */
 
 #user-login-form { /* Drupal's default login form block */
   text-align: left; /* LTR */
+}
 
-  /*
-   * OpenID
-   *
-   * The default styling for the OpenID login link seems to assume Garland's
-   * styling of list items.
-   */
+/*
+ * OpenID
+ *
+ * The default styling for the OpenID login link seems to assume Garland's
+ * styling of list items.
+ */
 
-  ul { /* OpenID creates a new ul above the login form's links. */
-    margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
-  }
+.openid-links { /* OpenID creates a new ul above the login form's links. */
+  margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+}
 
-  html.js & li.openid-link,
-  li.openid-link { /* The "Log in using OpenID" link. */
-    margin-top: 1.5em;
-    margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
-  }
+.openid-link, /* The "Log in using OpenID" link. */
+.user-link { /* The "Cancel OpenID login" link. */
+  margin-top: 1.5em;
+}
 
-  li.user-link { /* The "Cancel OpenID login" link. */
-    margin-top: 1.5em;
-  }
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
 }
 
 #user-login ul {
