@@ -21,8 +21,7 @@ dd {
 
 menu,
 ol,
-ul,
-.item-list ul /* Drupal override */ {
+ul {
   padding: 0 $indent-amount 0 0;
 }
 
@@ -39,12 +38,4 @@ legend {
     *margin-left: 0;
     *margin-right: -7px; /* 3 */
   }
-}
-
-/* =============================================================================
-   Tables
-   ========================================================================== */
-
-th {
-  text-align: right;
 }

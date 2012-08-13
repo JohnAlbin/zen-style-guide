@@ -385,21 +385,16 @@ sub {
 dl,
 menu,
 ol,
-ul,
-.item-list ul /* Drupal override */ {
+ul {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: rhythm(1) 0;
-}
-
-.item-list ul li { /* Drupal override */
-  margin: 0;
 }
 
 dd {
   margin: 0 0 0 $indent-amount; /* LTR */
 }
 
-ul, ol, .item-list ul, .item-list ol {
+ul, ol {
   ul, ol {
     margin: 0; /* Turn off margins on nested lists. */
   }
@@ -411,8 +406,7 @@ ul, ol, .item-list ul, .item-list ol {
 
 menu,
 ol,
-ul,
-.item-list ul /* Drupal override */ {
+ul {
   padding: 0 0 0 $indent-amount; /* LTR */
 }
 
@@ -623,6 +617,11 @@ textarea {
   vertical-align: top; /* 2 */
 }
 
+label {
+  display: block;
+  font-weight: bold;
+}
+
 
 /* =============================================================================
    Tables
@@ -639,19 +638,4 @@ table {
   /* Add vertical rhythm margins. */
   @include leader(1);
   @include trailer(1);
-}
-
-/*
- * Drupal provides table styling which is only useful for its admin section
- * forms, so we override this default CSS. (We set it back in forms.css.)
- */
-
-th {
-  text-align: left; /* LTR */
-  padding: 0;
-  border-bottom: none;
-}
-
-tbody {
-  border-top: none;
 }

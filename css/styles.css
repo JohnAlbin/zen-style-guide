@@ -18,7 +18,7 @@
 @import "print.css";
 
 /* Global state rules */
-/* @import "global-states.css"; */
+@import "global-states.css";
 
 /* Theme rules */
 /* @import "theme-A.css"; */
