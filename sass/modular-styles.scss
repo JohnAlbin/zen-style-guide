@@ -523,6 +523,7 @@ span.field-label { /* The inline field label used by the Fences module */
 .unpublished { /* The word "Unpublished" displayed underneath the content. */
   height: 0;
   overflow: visible;
+  background-color: transparent; /* Remove background highlighting from <mark> in normalize. */
   color: #d8d8d8;
   font-size: 75px;
   line-height: 1;
