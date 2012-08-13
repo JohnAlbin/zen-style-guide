@@ -446,20 +446,30 @@ span.field-label { /* The inline field label used by the Fences module */
    Pager
    ========================================================================== */
 
-.pager { /* A list of page numbers when more than 1 page of content is available */
+.pager { /* A list of page numbers when more than 1 page of content is available. */
   clear: both;
   padding: 0;
   text-align: center;
-
-  li { /* Each page number in the pager list */
-    display: inline;
-    padding: 0 0.5em;
-    list-style-type: none;
-    background-image: none;
-  }
 }
 
-.pager-current {
+%pager-item {
+  display: inline;
+  padding: 0 0.5em;
+  list-style-type: none;
+  background-image: none;
+}
+
+.pager-item,      /* A list item containing a page number in the list of pages. */
+.pager-first,     /* The first page's list item. */
+.pager-previous,  /* The previous page's list item. */
+.pager-next,      /* The next page's list item. */
+.pager-last,      /* The last page's list item. */
+.pager-ellipsis { /* A concatenation of several list items using an ellipsis */
+  @extend %pager-item;
+}
+
+.pager-current { /* The current page's list item. */
+  @extend %pager-item;
   font-weight: bold;
 }
 
