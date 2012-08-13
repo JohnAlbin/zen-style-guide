@@ -119,8 +119,8 @@
     margin-bottom: 0;
   }
 
-  .block-menu .block-title,
-  .block-menu-block .block-title {
+  .block-menu .block--title,
+  .block-menu-block .block--title {
     @include element-invisible();
   }
 
@@ -162,12 +162,12 @@
    Titles
    ========================================================================== */
 
-h1.title, /* The title of the page */
-h2.node-title, /* Title of a piece of content when it is given in a list of content */
-h2.block-title, /* Block title */
-h2.title, /* Comment section heading */
-h2.comment-form, /* Comment form heading */
-h3.title { /* Comment title */
+.page--title,          /* The title of the page */
+.node--title,          /* Title of a piece of content when it is given in a list of content */
+.block--title,         /* Block title */
+.comments--title,      /* Comment section heading */
+.comments--form-title, /* Comment form heading */
+.comment--title {      /* Comment title */
   margin: 0;
 }
 
