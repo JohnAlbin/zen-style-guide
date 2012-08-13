@@ -190,12 +190,12 @@ h3.title { /* Comment title */
 
 .messages-status {
   @extend .messages;
-  @extend .ok-style;
+  @extend %ok;
 }
 
 .messages-warning {
   @extend .messages;
-  @extend .warning-style;
+  @extend %warning;
   background-image: inline-image("message-24-warning.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *background-image: url(../images/message-24-warning.png);
@@ -205,7 +205,7 @@ h3.title { /* Comment title */
 
 .messages-error {
   @extend .messages;
-  @extend .error-style;
+  @extend %error;
   background-image: inline-image("message-24-error.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *background-image: url(../images/message-24-error.png);
@@ -229,19 +229,19 @@ h3.title { /* Comment title */
  */
 
 .ok,
-.ok-style {
+%ok {
   background-color: #f8fff0;
   color: #234600;
 }
 
 .warning,
-.warning-style {
+%warning {
   background-color: #fffce5;
   color: #840;
 }
 
 .error,
-.error-style {
+%error {
   background-color: #fef5f1;
   color: #8c2e0b;
 }
@@ -255,7 +255,7 @@ h3.title { /* Comment title */
  * Basic positioning styles shared by primary and secondary tabs.
  */
 
-.tabs-style {
+%tabs {
   @include clearfix;
   @include background-image(linear-gradient(bottom, $tabs-border 1px, transparent 1px));
   border-bottom: 1px solid $tabs-border \0/ie; /* IE 9 and earlier don't understand gradients. */
@@ -265,12 +265,12 @@ h3.title { /* Comment title */
   white-space: nowrap;
 }
 
-.tabs--tab-style {
+%tabs--tab {
   float: left; /* LTR */
   margin: 0 3px;
 }
 
-.tabs--tab-link-style {
+%tabs--tab-link {
   border: 1px solid #e9e9e9;
   border-right: 0;
   border-bottom: 0;
@@ -284,11 +284,11 @@ h3.title { /* Comment title */
  */
 
 .tabs-primary {
-  @extend .tabs-style;
+  @extend %tabs;
 }
 
 .tabs-primary--tab {
-  @extend .tabs--tab-style;
+  @extend %tabs--tab;
   @include border-top-radius(4px);
   @include single-text-shadow(#fff, 1px, 1px, 0);
   border: 1px solid $tabs-border;
@@ -302,9 +302,8 @@ h3.title { /* Comment title */
 }
 
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
-// @todo Convert this to a %selector after release of Sass 3.2.
-.tabs-primary--tab-link-style {
-  @extend .tabs--tab-link-style;
+%tabs-primary--tab-link {
+  @extend %tabs--tab-link;
   @include border-top-radius(4px);
   @include transition(background-color 0.3s);
   color: #333;
@@ -314,12 +313,12 @@ h3.title { /* Comment title */
   text-align: center;
 }
 
-.tabs-primary--tab-link-hover-style {
+%tabs-primary--tab-link-hover {
   background-color: #e9e9e9;
   border-color: #f2f2f2;
 }
 
-.tabs-primary--tab-link-active-style {
+%tabs-primary--tab-link-active {
   background-color: transparent;
   @include filter-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0));
   @include background-image(linear-gradient(rgba(#e9e9e9, 1), rgba(#e9e9e9, 0)));
@@ -327,20 +326,20 @@ h3.title { /* Comment title */
 }
 
 a.tabs-primary--tab-link {
-  @extend .tabs-primary--tab-link-style;
+  @extend %tabs-primary--tab-link;
 
   &:hover,
   &:focus {
-    @extend .tabs-primary--tab-link-hover-style;
+    @extend %tabs-primary--tab-link-hover;
   }
   &:active {
-    @extend .tabs-primary--tab-link-active-style;
+    @extend %tabs-primary--tab-link-active;
   }
 }
 
 a.tabs-primary--tab-link-active {
-  @extend .tabs-primary--tab-link-style;
-  @extend .tabs-primary--tab-link-active-style;
+  @extend %tabs-primary--tab-link;
+  @extend %tabs-primary--tab-link-active;
 }
 
 /*
@@ -348,21 +347,20 @@ a.tabs-primary--tab-link-active {
  */
 
 .tabs-secondary {
-  @extend .tabs-style;
+  @extend %tabs;
   font-size: .9em;
   margin-top: -(rhythm(1)); /* Collapse bottom margin of ul.primary. */
 }
 
 .tabs-secondary--tab,
 .tabs-secondary--tab-active {
-  @extend .tabs--tab-style;
+  @extend %tabs--tab;
   margin: rhythm(1)/2 3px;
 }
 
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
-// @todo Convert this to a %selector after release of Sass 3.2.
-.tabs-secondary--tab-link-style {
-  @extend .tabs--tab-link-style;
+%tabs-secondary--tab-link {
+  @extend %tabs--tab-link;
   @include border-radius(.75em);
   @include transition(background-color 0.3s);
   @include single-text-shadow(#fff, 1px, 1px, 0);
@@ -371,13 +369,13 @@ a.tabs-primary--tab-link-active {
   padding: 0 .5em;
 }
 
-.tabs-secondary--tab-link-focus-style {
+%tabs-secondary--tab-link-focus {
   background-color: #dedede;
   border-color: #999;
   color: #333;
 }
 
-.tabs-secondary--tab-link-active-style {
+%tabs-secondary--tab-link-active {
   @include single-text-shadow(#333, 1px, 1px, 0);
   background-color: #666;
   border-color: #000;
@@ -385,20 +383,20 @@ a.tabs-primary--tab-link-active {
 }
 
 a.tabs-secondary--tab-link {
-  @extend .tabs-secondary--tab-link-style;
+  @extend %tabs-secondary--tab-link;
 
   &:hover,
   &:focus {
-    @extend .tabs-secondary--tab-link-focus-style;
+    @extend %tabs-secondary--tab-link-focus;
   }
   &:active {
-    @extend .tabs-secondary--tab-link-active-style;
+    @extend %tabs-secondary--tab-link-active;
   }
 }
 
 a.tabs-secondary--tab-link-active {
-  @extend .tabs-secondary--tab-link-style;
-  @extend .tabs-secondary--tab-link-active-style;
+  @extend %tabs-secondary--tab-link;
+  @extend %tabs-secondary--tab-link-active;
 }
 
 
