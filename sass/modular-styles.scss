@@ -36,11 +36,44 @@
 
 
 /* =============================================================================
-   Skip link
-
-   The skip-link link will be completely hidden until a user tabs to the link.
-   See the element-focusable rule in system.base.css.
+   Accessibility features
    ========================================================================== */
+
+/* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.element-invisible,
+%element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+%element-invisible-off { /* Turns off the element-invisible effect. */
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+.element-focusable,
+%element-focusable {
+  @extend %element-invisible;
+
+  &:active,
+  &:focus {
+    @extend %element-invisible-off;
+  }
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ */
 
 #skip-link {
   margin: 0;
@@ -121,7 +154,7 @@
 
   .block-menu .block--title,
   .block-menu-block .block--title {
-    @include element-invisible();
+    @extend %element-invisible;
   }
 
   .links, /* Main menu and secondary menu links */
