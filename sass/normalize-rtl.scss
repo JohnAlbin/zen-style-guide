@@ -1,22 +1,14 @@
-/* normalize-rtl.css - RTL language extension of normalize.scss. */
+/* normalize-rtl.css v2.0.1 | GPLv2 License | RTL language extension of normalize.scss */
 
 @import "base";
 
 
-/* =============================================================================
+/* ==========================================================================
    Lists
    ========================================================================== */
 
 /*
- * Addresses margins set differently in IE6/7
- */
-
-dd {
-  margin: 0 $indent-amount 0 0;
-}
-
-/*
- * Addresses paddings set differently in IE6/7
+ * Set 1 unit of vertical rhythm and a consistent indentation.
  */
 
 menu,
@@ -25,16 +17,20 @@ ul {
   padding: 0 $indent-amount 0 0;
 }
 
-/* =============================================================================
+dd {
+  margin: 0 $indent-amount 0 0;
+}
+
+/* ==========================================================================
    Forms
    ========================================================================== */
 
-/*
- * 3. Corrects alignment displayed oddly in IE6/7
- */
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  /*
+   * 3. Corrects alignment displayed oddly in IE 6/7.
+   */
 
-legend {
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  legend {
     *margin-left: 0;
     *margin-right: -7px; /* 3 */
   }
