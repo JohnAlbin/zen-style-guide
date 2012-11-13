@@ -10,7 +10,7 @@
 @import "normalize.css";
 
 /* Layout rules */
-@import "layouts/responsive-sidebars.css";
+@import "layout-responsive.css";
 
 /* Module rules */
 @import "modular-styles.css";
