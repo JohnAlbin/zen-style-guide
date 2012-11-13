@@ -8,7 +8,7 @@
 // This base partial is organized in this way:
 // - First we set any shared Sass variables.
 // - Next we import Compass plug-ins (Sass mixin libraries).
-// - Last we import a _custom.scss partial that includes our custom mixins.
+// - Last we define our custom mixins for this theme.
 //
 
 
@@ -109,4 +109,10 @@ $tabs-border: #bbb;
 @import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 
-@import "custom";           // Import our custom mixins last.
+
+//
+// Custom sass mixins
+//
+
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
