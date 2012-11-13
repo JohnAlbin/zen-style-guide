@@ -12,6 +12,10 @@
 //
 
 
+// =============================================================================
+// Variables
+// =============================================================================
+
 //
 // Legacy IE support
 //
@@ -98,9 +102,9 @@ $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
 
-//
+// =============================================================================
 // Partials to be shared with all .scss files.
-//
+// =============================================================================
 
 @import "compass/support";  // Add Compass' IE and vendor prefix support variables.
 @import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
@@ -110,9 +114,9 @@ $tabs-border: #bbb;
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 
 
-//
+// =============================================================================
 // Custom sass mixins
-//
+// =============================================================================
 
 // Define the custom mixins for your project here.
 // http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
