@@ -79,11 +79,12 @@ $zen-auto-include-item-base: false;
   }
 }
 
+/*
+ * Use 3 grid columns for smaller screens.
+ */
+$zen-column-count: 3;
+
 @media all and (min-width: 480px) and (max-width: 959px) {
-  /*
-   * Use 3 grid columns for smaller screens.
-   */
-  $zen-column-count: 3;
 
   /*
    * The layout when there is only one sidebar, the left one.
@@ -148,11 +149,12 @@ $zen-auto-include-item-base: false;
   }
 }
 
+/*
+ * Use 5 grid columns for larger screens.
+ */
+$zen-column-count: 5;
+
 @media all and (min-width: 960px) {
-  /*
-   * Use 5 grid columns for larger screens.
-   */
-  $zen-column-count: 5;
 
   /*
    * The layout when there is only one sidebar, the left one.
