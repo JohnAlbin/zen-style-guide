@@ -120,7 +120,7 @@ html {
   font-size: 100% * ($base-font-size / 16px); /* 3 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
-  /* Establishes a vertical rhythm unit using $base-line-height. */
+  // Establishes a vertical rhythm unit using $base-line-height.
   @include adjust-leading-to(1);
 }
 
@@ -308,7 +308,7 @@ pre,
 samp,
 tt,
 var {
-  font-family: $font-monospace; /* The $font-monospace value ends with ", serif". */
+  font-family: $font-monospace; // The value of $font-monospace ends with ", serif".
   @if $legacy-support-for-ie6 {
     _font-family: 'courier new', monospace;
   }
@@ -414,8 +414,7 @@ dd {
 img {
   border: 0;
   @if $legacy-support-for-ie7 {
-    /* Improves image quality when scaled in IE 7. */
-    -ms-interpolation-mode: bicubic;
+    -ms-interpolation-mode: bicubic; /* Improves image quality when scaled in IE 7. */
   }
 
   /* vertical-align: bottom; */ /* Suppress the space beneath the baseline */

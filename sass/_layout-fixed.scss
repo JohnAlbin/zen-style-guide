@@ -29,6 +29,9 @@ $zen-auto-include-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
 
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+
 /*
  * Center the page.
  */
@@ -80,6 +83,8 @@ $zen-auto-include-item-base: false;
   height: 3em;
   width: $zen-grid-width - $zen-gutter-width;
 }
+
+} // End of @if $zen-reverse-all-floats == true
 
 /*
  * The layout when there is only one sidebar, the left one.

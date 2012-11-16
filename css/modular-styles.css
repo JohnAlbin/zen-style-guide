@@ -8,7 +8,6 @@
  * http://drupal.org/node/1707736
  */
 
-
 /* =============================================================================
    Wireframes
    ========================================================================== */
@@ -35,7 +34,6 @@
   border: 1px solid #ccc; /* IE6/7 do not support the outline property. */
 }
 
-
 /* =============================================================================
    Accessibility features
    ========================================================================== */
@@ -54,8 +52,7 @@
 }
 
 .element-focusable:active,
-.element-focusable:focus {
-  /* Turns off the element-invisible effect. */
+.element-focusable:focus { /* Turns off the element-invisible effect. */
   position: static !important;
   clip: auto;
   height: auto;
@@ -70,6 +67,7 @@
 #skip-link {
   margin: 0;
 }
+
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -79,7 +77,6 @@
   background-color: #666;
   color: #fff;
 }
-
 
 /* =============================================================================
    Branding header
@@ -105,11 +102,15 @@
   line-height: 1.5em;
 }
 
+.header--site-link { /* The link around the name of the website */
+}
+
 .header--site-link:link,
-.header--site-link:visited { /* The link around the name of the website */
+.header--site-link:visited {
   color: #000;
   text-decoration: none;
 }
+
 .header--site-link:hover,
 .header--site-link:focus {
   text-decoration: underline;
@@ -127,7 +128,6 @@
 .header--region { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }
-
 
 /* =============================================================================
    Navigation bar
@@ -156,22 +156,24 @@
   list-style-image: none;
 }
 
-
 /* =============================================================================
    Breadcrumb navigation
    ========================================================================== */
 
-.breadcrumb ol { /* The path to the current page in the form of a list of links */
+.breadcrumb { /* The path to the current page in the form of a list of links */
+}
+
+.breadcrumb ol {
   margin: 0;
   padding: 0;
 }
+
 .breadcrumb li {
   display: inline;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
 
 /* =============================================================================
    Titles
@@ -185,7 +187,6 @@
 .comment--title {      /* Comment title */
   margin: 0;
 }
-
 
 /* =============================================================================
    Messages
@@ -249,7 +250,6 @@
   background-color: #fef5f1;
   color: #8c2e0b;
 }
-
 
 /* =============================================================================
    Tabs
@@ -401,7 +401,6 @@ a.tabs-secondary--tab-link-active {
   color: #fff;
 }
 
-
 /* =============================================================================
    Inline styles
    ========================================================================== */
@@ -410,6 +409,7 @@ a.tabs-secondary--tab-link-active {
   display: inline;
   padding: 0;
 }
+
 .inline li {
   display: inline;
   list-style-type: none;
@@ -419,7 +419,6 @@ a.tabs-secondary--tab-link-active {
 span.field-label { /* The inline field label used by the Fences module */
   padding: 0 1em 0 0; /* LTR */
 }
-
 
 /* =============================================================================
    "More" links
@@ -441,7 +440,6 @@ span.field-label { /* The inline field label used by the Fences module */
   padding: 1px 0 1px 20px; /* LTR */
 }
 
-
 /* =============================================================================
    Pager
    ========================================================================== */
@@ -452,12 +450,12 @@ span.field-label { /* The inline field label used by the Fences module */
   text-align: center;
 }
 
-.pager-item,     /* A list item containing a page number in the list of pages. */
-.pager-first,    /* The first page's list item. */
-.pager-previous, /* The previous page's list item. */
-.pager-next,     /* The next page's list item. */
-.pager-last,     /* The last page's list item. */
-.pager-ellipsis, /* A concatenation of several list items using an ellipsis */
+.pager-item,
+.pager-first,
+.pager-previous,
+.pager-next,
+.pager-last,
+.pager-ellipsis,
 .pager-current {
   display: inline;
   padding: 0 0.5em;
@@ -465,10 +463,17 @@ span.field-label { /* The inline field label used by the Fences module */
   background-image: none;
 }
 
+.pager-item,
+.pager-first,
+.pager-previous,
+.pager-next,
+.pager-last,
+.pager-ellipsis { /* A concatenation of several list items using an ellipsis */
+}
+
 .pager-current { /* The current page's list item. */
   font-weight: bold;
 }
-
 
 /* =============================================================================
    Blocks
@@ -477,7 +482,6 @@ span.field-label { /* The inline field label used by the Fences module */
 .block { /* Block wrapper */
   margin-bottom: 1.5em;
 }
-
 
 /* =============================================================================
    Menus
@@ -505,17 +509,15 @@ span.field-label { /* The inline field label used by the Fences module */
   color: #000;
 }
 
-
 /* =============================================================================
    Nodes
    ========================================================================== */
 
 .new,
-.update { /* The "new" or "updated" morker. */
+.update { /* The "new" or "updated" marker. */
   color: #c00;
   background-color: transparent; /* Remove background highlighting from <mark> in normalize. */
 }
-
 
 /* =============================================================================
    Unpublished note
@@ -540,7 +542,6 @@ span.field-label { /* The inline field label used by the Fences module */
   position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
 }
 
-
 /* =============================================================================
    Comments
    ========================================================================== */
@@ -553,6 +554,9 @@ span.field-label { /* The inline field label used by the Fences module */
   background-color: #ffffea; /* Drupal core will use a #ffffea background. See #1110842 */
 }
 
+.comment { /* Wrapper for a single comment */
+}
+
 .comment .permalink { /* Comment's permalink wrapper */
   text-transform: uppercase;
   font-size: 75%;
@@ -561,7 +565,6 @@ span.field-label { /* The inline field label used by the Fences module */
 .indented { /* Nested comments are indented */
   margin-left: 30px; /* Drupal core uses a 25px left margin */
 }
-
 
 /* =============================================================================
    Forms
@@ -632,7 +635,7 @@ a.button { /* Buttons used by contrib modules like Media */
 }
 
 .openid-link, /* The "Log in using OpenID" link. */
-.user-link { /* The "Cancel OpenID login" link. */
+.user-link {  /* The "Cancel OpenID login" link. */
   margin-top: 1.5em;
 }
 

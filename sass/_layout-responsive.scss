@@ -25,6 +25,9 @@ $zen-auto-include-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
 
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+
 /*
  * Center the page.
  */
@@ -78,6 +81,8 @@ $zen-auto-include-item-base: false;
     width: $zen-grid-width;
   }
 }
+
+} // End of @if $zen-reverse-all-floats == true
 
 /*
  * Use 3 grid columns for smaller screens.

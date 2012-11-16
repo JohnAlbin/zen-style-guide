@@ -6,7 +6,6 @@
  */
 
 @media print {
-
   a:link,
   a:visited { /* underline all links */
     text-decoration: underline !important;
@@ -65,5 +64,4 @@
     visibility: hidden;
     display: none;
   }
-
 } /* End @media print */
