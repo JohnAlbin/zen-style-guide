@@ -3,19 +3,21 @@ ZEN'S STYLESHEETS
 
 Don't panic!
 
-There are 11 CSS files in this sub-theme, but it's not as bad as it first seems:
-- There are 5 CSS files whose names end in "-rtl.css". Those are CSS files
+There are 13 CSS files in this sub-theme, but it's not as bad as it first seems:
+- There are 6 CSS files whose names end in "-rtl.css". Those are CSS files
   needed to style content written in Right-to-Left languages, such as Arabic and
   Hebrew. If your website doesn't use such languages, you can safely delete all
   of those CSS files.
-- There are 2 example layout stylesheets in the layouts/ folder, but only one of
-  them is used at any time.
+- There are 2 example layout stylesheets named beginning with "layout-",
+  but only one of them is used at any time.
+- One is global state rules, that apply only during certain states of the page
+  and have a JavaScript dependency.
 - One is just a print stylesheet!
 
 That leaves just 4 CSS files!
 - styles.css
 - normalize.css
-- layout/responsive-sidebars.css
+- layout-responsive.css
 - modular-styles.css
 
 Now go look in the styles.css file. That file simply includes (via @import) the
@@ -71,14 +73,14 @@ theming Drupal websites.
   you set all the styles for all HTML elements after you reset them. In SMACSS,
   this file contains all the "base rules". http://smacss.com/book/type-base
 
-- layouts/responsive-sidebars.css:
+- layout-responsive.css:
   Zen's default layout is based on the Zen Grids layout method. Despite the
   name, it is an independent project from the Zen theme. Zen Grids is an
   intuitive, flexible grid system that leverages the natural source order of
   your content to make it easier to create fluid responsive designs. You can
   learn more about Zen Grids at http://zengrids.com
 
-  The responsive-sidebars.css file is used by default, but these files are
+  The layout-responsive.css file is used by default, but these files are
   designed to be easily replaced. If you are more familiar with a different CSS
   layout method, such as GridSetApp, 960.gs, etc., you can replace the default
   layout with your choice of layout CSS file.
@@ -86,7 +88,7 @@ theming Drupal websites.
   In SMACSS, this file contains the "layout rules".
   http://smacss.com/book/type-layout
 
-- layouts/fixed-width.css:
+- layout-fixed.css:
   This layout is based on the Zen Grids layout method, but uses a fixed pixel
   width. It is not included by default in your theme's .info file, but is
   provided as an option.
