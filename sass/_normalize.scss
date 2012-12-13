@@ -423,6 +423,9 @@ img {
   /* @todo Look into adding responsive embedded video. */
   max-width: 100%;
   height: auto;
+  @if $legacy-support-for-ie8 {
+    width: auto; /* Correct IE 8 not scaling image height when resized. */
+  }
 }
 
 /*
