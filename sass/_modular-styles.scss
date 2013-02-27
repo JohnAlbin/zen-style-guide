@@ -38,23 +38,12 @@
 /* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 .element-invisible,
 %element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
-  clip: rect(1px, 1px, 1px, 1px);
+  @include element-invisible;
 }
 
 
 %element-invisible-off { /* Turns off the element-invisible effect. */
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: auto;
+  @include element-invisible-off;
 }
 
 .element-focusable,
