@@ -623,6 +623,16 @@ a.button { /* Buttons used by contrib modules like Media */
   text-align: left; /* LTR */
 }
 
+/**
+* Keep form elements constrained in their containers.
+*/
+input {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /*
  * OpenID
  *
