@@ -1,6 +1,6 @@
 /**
  * @file
- * RTL companion for the layout-responsive.css file.
+ * RTL companion for the layout-fixed-width.css file.
  */
 
 
@@ -8,4 +8,4 @@
 $zen-reverse-all-floats: true;
 
 // Then we import the LTR layout and the directions are automatically reversed.
-@import "layout-responsive";
+@import "fixed";

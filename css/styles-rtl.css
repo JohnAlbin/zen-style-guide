@@ -3,17 +3,14 @@
  * RTL companion for the styles.css file.
  */
 
-/* Base rules */
+/* Base HTML element rules */
 @import "normalize-rtl.css";
 
 /* Layout rules */
-@import "layout-responsive-rtl.css";
+@import "layouts/responsive-rtl.css";
 
-/* Module rules */
-@import "modular-styles-rtl.css";
-
-/* Global state rules */
-@import "global-states-rtl.css";
+/* Component (SMACSS module) rules */
+@import "components/misc-rtl.css";
 
 /* Theme rules */
 /* @import "theme-A-rtl.css"; */
