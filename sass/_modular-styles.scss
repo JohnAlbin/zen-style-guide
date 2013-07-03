@@ -634,14 +634,6 @@ a.button { /* Buttons used by contrib modules like Media */
   text-align: left; /* LTR */
 }
 
-/**
-* Keep form elements constrained in their containers.
-*/
-input {
-  max-width: 100%;
-  @include box-sizing(border-box);
-}
-
 /*
  * OpenID
  *

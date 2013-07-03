@@ -509,6 +509,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  * 4. Improve appearance and consistency with IE 6/7.
+ * 5. Keep form elements constrained in their containers.
  */
 
 button,
@@ -522,6 +523,8 @@ textarea {
     vertical-align: baseline; /* 4 */
     *vertical-align: middle; /* 4 */
   }
+  max-width: 100%; /* 5 */
+  @include box-sizing(border-box); /* 5 */
 }
 
 /**
