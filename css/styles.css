@@ -6,7 +6,7 @@
  * of these @include files will be combined into a single file.
  */
 
-/* Base HTML element rules */
+/* HTML element (SMACSS base) rules */
 @import "normalize.css";
 
 /* Layout rules */
@@ -17,6 +17,6 @@
 /* Optionally, add your own components here. */
 @import "print.css";
 
-/* Theme rules */
+/* SMACSS theme rules */
 /* @import "theme-A.css"; */
 /* @import "theme-B.css"; */

@@ -3,7 +3,7 @@
  * RTL companion for the styles.css file.
  */
 
-/* Base HTML element rules */
+/* HTML element (SMACSS base) rules */
 @import "normalize-rtl.css";
 
 /* Layout rules */
@@ -12,6 +12,6 @@
 /* Component (SMACSS module) rules */
 @import "components/misc-rtl.css";
 
-/* Theme rules */
+/* SMACSS theme rules */
 /* @import "theme-A-rtl.css"; */
 /* @import "theme-B-rtl.css"; */
