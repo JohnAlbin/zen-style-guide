@@ -94,8 +94,7 @@
 
 .header--site-name { /* The name of the website */
   margin: 0;
-  font-size: 2em;
-  line-height: 1.5em;
+  @include adjust-font-size-to( $h1-font-size );
 }
 
 .header--site-link { /* The link around the name of the website */
@@ -486,7 +485,7 @@ span.field-label { /* The inline field label used by the Fences module */
    ========================================================================== */
 
 .block { /* Block wrapper */
-  margin-bottom: 1.5em;
+  margin-bottom: rhythm(1);
 }
 
 /* =============================================================================
@@ -557,7 +556,7 @@ span.field-label { /* The inline field label used by the Fences module */
    ========================================================================== */
 
 .comments { /* Wrapper for the list of comments and its title */
-  margin: 1.5em 0;
+  margin: rhythm(1) 0;
 }
 
 .comment-preview { /* Preview of the comment before submitting new or updated comment */
@@ -581,7 +580,7 @@ span.field-label { /* The inline field label used by the Fences module */
    ========================================================================== */
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
-  margin: 1.5em 0;
+  margin: rhythm(1) 0;
 
   .form-checkboxes & ,
   .form-radios & { /* Pack groups of checkboxes and radio buttons closer together */
@@ -646,7 +645,7 @@ a.button { /* Buttons used by contrib modules like Media */
 
 .openid-link, /* The "Log in using OpenID" link. */
 .user-link { /* The "Cancel OpenID login" link. */
-  margin-top: 1.5em;
+  margin-top: rhythm(1);
 }
 
 html.js #user-login-form li.openid-link,
@@ -655,7 +654,7 @@ html.js #user-login-form li.openid-link,
 }
 
 #user-login ul {
-  margin: 1.5em 0;
+  margin: rhythm(1) 0;
 }
 
 /*
