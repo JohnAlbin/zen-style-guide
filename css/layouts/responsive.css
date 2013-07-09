@@ -9,23 +9,20 @@
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
 
-/*
+/**
  * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
  */
-
 #page,
 .region-bottom {
-  /* For screen sizes larger than 1200px, prevent excessively long lines of text
-     by setting a max-width. */
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
 
-/*
- * Apply the shared properties of grid items in a single, efficient ruleset.
- */
-
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
 #header,
 #content,
 #navigation,
@@ -45,17 +42,13 @@
   _overflow-y: visible;
 }
 
-/*
- * Containers for grid items and flow items.
- */
-
+/* Containers for grid items and flow items. */
 #header,
 #main,
 #footer {
   *position: relative;
   *zoom: 1;
 }
-
 #header:before,
 #header:after,
 #main:before,
@@ -65,88 +58,95 @@
   content: "";
   display: table;
 }
-
 #header:after,
 #main:after,
 #footer:after {
   clear: both;
 }
 
-/*
- * Navigation bar
- */
-
+/* Navigation bar */
 @media all and (min-width: 480px) {
   #main {
-    padding-top: 3em; /* Move all the children of #main down to make room. */
+    /* Move all the children of #main down to make room. */
+    padding-top: 3em;
     position: relative;
   }
-
   #navigation {
+    /* Move the navbar up inside #main's padding. */
     position: absolute;
-    top: 0; /* Move the navbar up inside #main's padding. */
+    top: 0;
     height: 3em;
     width: 100%;
   }
 }
 
-/*
+/**
  * Use 3 grid columns for smaller screens.
  */
-
 @media all and (min-width: 480px) and (max-width: 959px) {
-  /*
+
+  /**
    * The layout when there is only one sidebar, the left one.
    */
-  .sidebar-first #content { /* Span 2 columns, starting in 2nd column from left. */
+
+  /* Span 2 columns, starting in 2nd column from left. */
+  .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
 
-  .sidebar-first .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  /* Span 1 column, starting in 1st column from left. */
+  .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
 
-  /*
+  /**
    * The layout when there is only one sidebar, the right one.
    */
-  .sidebar-second #content { /* Span 2 columns, starting in 1st column from left. */
+
+  /* Span 2 columns, starting in 1st column from left. */
+  .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
 
-  .sidebar-second .region-sidebar-second { /* Span 1 column, starting in 3rd column from left. */
+  /* Span 1 column, starting in 3rd column from left. */
+  .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
     margin-right: -100%;
   }
 
-  /*
+  /**
    * The layout when there are two sidebars.
    */
-  .two-sidebars #content { /* Span 2 columns, starting in 2nd column from left. */
+
+  /* Span 2 columns, starting in 2nd column from left. */
+  .two-sidebars #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
 
-  .two-sidebars .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  /* Span 1 column, starting in 1st column from left. */
+  .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
 
-  .two-sidebars .region-sidebar-second { /* Start a new row and span all 3 columns. */
+  /* Start a new row and span all 3 columns. */
+  .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -156,6 +156,7 @@
     clear: left;
   }
 
+  /* Apply the shared properties of grid items in a single, efficient ruleset. */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -170,7 +171,8 @@
     _overflow-y: visible;
   }
 
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) { /* Span 1 column, starting in the 1st column from left. */
+  /* Span 1 column, starting in the 1st column from left. */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
@@ -178,14 +180,16 @@
     clear: left;
   }
 
-  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) { /* Span 1 column, starting in the 2nd column from left. */
+  /* Span 1 column, starting in the 2nd column from left. */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
 
-  .two-sidebars .region-sidebar-second .block:nth-child(3n) { /* Span 1 column, starting in the 3rd column from left. */
+  /* Span 1 column, starting in the 3rd column from left. */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
@@ -193,63 +197,73 @@
   }
 }
 
-/*
+/**
  * Use 5 grid columns for larger screens.
  */
-
 @media all and (min-width: 960px) {
-  /*
+
+  /**
    * The layout when there is only one sidebar, the left one.
    */
-  .sidebar-first #content { /* Span 4 columns, starting in 2nd column from left. */
+
+  /* Span 4 columns, starting in 2nd column from left. */
+  .sidebar-first #content {
     float: left;
     width: 80%;
     margin-left: 20%;
     margin-right: -100%;
   }
 
-  .sidebar-first .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  /* Span 1 column, starting in 1st column from left. */
+  .sidebar-first .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
 
-  /*
+  /**
    * The layout when there is only one sidebar, the right one.
    */
-  .sidebar-second #content { /* Span 4 columns, starting in 1st column from left. */
+
+  /* Span 4 columns, starting in 1st column from left. */
+  .sidebar-second #content {
     float: left;
     width: 80%;
     margin-left: 0%;
     margin-right: -80%;
   }
 
-  .sidebar-second .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+  /* Span 1 column, starting in 5th column from left. */
+  .sidebar-second .region-sidebar-second {
     float: left;
     width: 20%;
     margin-left: 80%;
     margin-right: -100%;
   }
 
-  /*
+  /**
    * The layout when there are two sidebars.
    */
-  .two-sidebars #content { /* Span 3 columns, starting in 2nd column from left. */
+
+  /* Span 3 columns, starting in 2nd column from left. */
+  .two-sidebars #content {
     float: left;
     width: 60%;
     margin-left: 20%;
     margin-right: -80%;
   }
 
-  .two-sidebars .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  /* Span 1 column, starting in 1st column from left. */
+  .two-sidebars .region-sidebar-first {
     float: left;
     width: 20%;
     margin-left: 0%;
     margin-right: -20%;
   }
 
-  .two-sidebars .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+  /* Span 1 column, starting in 5th column from left. */
+  .two-sidebars .region-sidebar-second {
     float: left;
     width: 20%;
     margin-left: 80%;

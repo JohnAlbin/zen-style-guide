@@ -3,61 +3,68 @@
  * RTL companion for the layout-fixed-width.css file.
  */
 
-/*
- * The layout when there is only one sidebar, the left one.
+/**
+ * The layout when there is only one sidebar, the right one.
  */
 
-.sidebar-first #content { /* Span 4 columns, starting in 2nd column from left. */
+/* Span 4 columns, starting in 2nd column from right. */
+.sidebar-first #content {
   float: right;
   width: 764px;
   margin-right: 196px;
   margin-left: -980px;
 }
 
-.sidebar-first .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+/* Span 1 column, starting in 1st column from right. */
+.sidebar-first .region-sidebar-first {
   float: right;
   width: 176px;
   margin-right: 0px;
   margin-left: -196px;
 }
 
-/*
- * The layout when there is only one sidebar, the right one.
+/**
+ * The layout when there is only one sidebar, the left one.
  */
 
-.sidebar-second #content { /* Span 4 columns, starting in 1st column from left. */
+/* Span 4 columns, starting in 1st column from right. */
+.sidebar-second #content {
   float: right;
   width: 764px;
   margin-right: 0px;
   margin-left: -784px;
 }
 
-.sidebar-second .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+/* Span 1 column, starting in 5th column from right. */
+.sidebar-second .region-sidebar-second {
   float: right;
   width: 176px;
   margin-right: 784px;
   margin-left: -980px;
 }
 
-/*
+/**
  * The layout when there are two sidebars.
  */
 
-.two-sidebars #content { /* Span 3 columns, starting in 2nd column from left. */
+/* Span 3 columns, starting in 2nd column from right. */
+.two-sidebars #content {
   float: right;
   width: 568px;
   margin-right: 196px;
   margin-left: -784px;
 }
 
-.two-sidebars .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+/* Span 1 column, starting in 1st column from right. */
+.two-sidebars .region-sidebar-first {
   float: right;
   width: 176px;
   margin-right: 0px;
   margin-left: -196px;
 }
 
-.two-sidebars .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+/* Span 1 column, starting in 5th column from right. */
+.two-sidebars .region-sidebar-second {
   float: right;
   width: 176px;
   margin-right: 784px;

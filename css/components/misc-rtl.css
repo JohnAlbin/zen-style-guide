@@ -3,37 +3,39 @@
  * RTL companion for the modular-styles.css file.
  */
 
-/* =============================================================================
-   Branding header
-   ========================================================================== */
+/**
+ * Branding header.
+ */
 
-.header--logo { /* Wrapping link for logo */
+/* Wrapping link for logo. */
+.header--logo {
   float: right;
 }
 
+/* The secondary menu (login, etc.) */
 .header--secondary-menu {
   float: left;
 }
 
-/* =============================================================================
-   Navigation bar
-   ========================================================================== */
+/**
+ * Navigation bar.
+ */
 
-#navigation .links, /* Main menu and secondary menu links */
-#navigation .menu { /* Menu block links */
+/* Main menu and secondary menu links and menu block links. */
+#navigation .links,
+#navigation .menu {
   text-align: right;
 }
-
 #navigation .links li,
-#navigation .menu li { /* A simple method to get navigation links to appear in one line. */
+#navigation .menu li {
+  /* A simple method to get navigation links to appear in one line. */
   float: right;
   padding: 0 0 0 10px;
 }
 
-/* =============================================================================
-   Messages
-   ========================================================================== */
-
+/**
+ * Messages.
+ */
 .messages,
 .messages-status,
 .messages-warning,
@@ -42,10 +44,9 @@
   background-position: 99% 8px;
 }
 
-/* =============================================================================
-   Tabs
-   ========================================================================== */
-
+/**
+ * Tabs.
+ */
 .tabs-primary--tab,
 .tabs-primary--tab-active,
 .tabs-secondary--tab,
@@ -53,63 +54,62 @@
   float: right;
 }
 
-/* =============================================================================
-   Inline styles
-   ========================================================================== */
+/**
+ * Inline styles.
+ */
 
-.inline li { /* List of links */
-  display: inline-block; /* Bug in Safari causes display: inline to fail. */
+/* List of links */
+.inline li {
+  /* Bug in Safari causes display: inline to fail. */
+  display: inline-block;
   padding: 0 0 0 1em;
 }
 
-span.field-label { /* The inline field label used by the Fences.module */
+/* The inline field label used by the Fences.module */
+span.field-label {
   padding: 0 0 0 1em;
 }
 
-/* =============================================================================
-   "More" links
-   ========================================================================== */
-
+/**
+ * "More" links.
+ */
 .more-link {
   text-align: left;
 }
-
 .more-help-link {
   text-align: left;
 }
-
 .more-help-link a {
   background-position: 100% 50%;
   padding: 1px 20px 1px 0;
 }
 
-/* =============================================================================
-   Menus
-   ========================================================================== */
-
+/**
+ * Menus.
+ */
 .menu--collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-  *list-style-image: url(../images/menu-collapsed-rtl.png);
+  *list-style-image: url('../../images/menu-collapsed-rtl.png');
 }
 
-/* =============================================================================
-   Forms
-   ========================================================================== */
+/**
+ * Forms.
+ */
 
-#user-login-form { /* Drupal's default login form block */
+/* Drupal's default login form block */
+#user-login-form {
   text-align: right;
 }
-
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
   margin-left: 0;
-  margin-right: -20px; /* Un-do some of the padding on the ul list. */
+  margin-right: -20px;
 }
 
 /*
- * Drupal admin tables
+ * Drupal admin tables.
  */
-
 form th {
   text-align: right;
   padding-left: 1em;
@@ -121,15 +121,13 @@ form th {
  *
  * @see collapse.js
  */
-
 html.js .collapsible .fieldset-legend {
   background-position: 98% 75%;
   padding-left: 0;
   padding-right: 15px;
 }
-
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
-  *background-image: url(../images/menu-collapsed-rtl.png);
+  *background-image: url('../../images/menu-collapsed-rtl.png');
   background-position: 98% 50%;
 }
