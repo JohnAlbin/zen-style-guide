@@ -11,7 +11,7 @@
   a:visited { /* underline all links */
     text-decoration: underline !important;
 
-    #site-name & { /* Don't underline header */
+    &.header--site-link { /* Don't underline header */
       text-decoration: none !important;
     }
   }
