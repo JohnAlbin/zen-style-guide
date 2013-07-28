@@ -516,14 +516,17 @@ span.field-label {
 }
 
 /**
- * Unpublished note.
+ * Watermark.
+ *
+ * Make the element appear beneath sibling elements, like a watermark.
  */
-
-/* The word "Unpublished" displayed underneath the content. */
-.unpublished {
+%watermark {
   height: 0;
   overflow: visible;
-  /* Remove background highlighting from <mark> in normalize. */
+}
+%watermark--unpublished {
+  @extend %watermark;
+  // Remove background highlighting from <mark> in normalize.
   background-color: transparent;
   color: #d8d8d8;
   font-size: 75px;
@@ -532,15 +535,22 @@ span.field-label {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  /* A very nice CSS3 property. */
   word-wrap: break-word;
 }
-@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  .lt-ie8 .node-unpublished>*,
-  .lt-ie8 .comment-unpublished>* {
-    /* Otherwise these elements will appear below the "Unpublished" text. */
-    position: relative;
+%watermark__wrapper {
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    // Otherwise adjacent elements will appear below the watermark text.
+    > * {
+      *position: relative;
+    }
   }
+}
+.watermark {
+  @extend %watermark--unpublished;
+}
+.watermark__wrapper {
+  // The watermark's wrapper only needs CSS for IE 6/7.
+  @extend %watermark__wrapper;
 }
 
 /**
