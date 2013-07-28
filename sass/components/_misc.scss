@@ -804,8 +804,5 @@ tr.selected td {
   .filled {
     background-color: #0072b9;
     background-image: image-url("progress.gif");
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-      *background-image: image-url("progress.gif");
-    }
   }
 }
