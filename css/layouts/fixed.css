@@ -31,7 +31,8 @@
 #footer {
   padding-left: 10px;
   padding-right: 10px;
-  border: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
   word-wrap: break-word;
   *behavior: url("/path/to/boxsizing.htc");
   _display: inline;
