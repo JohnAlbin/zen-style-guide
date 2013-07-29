@@ -8,12 +8,12 @@
  */
 
 /* Wrapping link for logo. */
-.header--logo {
+.header__logo {
   float: right;
 }
 
 /* The secondary menu (login, etc.) */
-.header--secondary-menu {
+.header__secondary-menu {
   float: left;
 }
 
@@ -42,31 +42,31 @@
   padding: 10px 50px 10px 10px;
   background-position: 99% 8px;
 }
-.messages-status {
+.messages--status {
   @extend .messages;
 }
-.messages-warning {
+.messages--warning {
   @extend .messages;
 }
-.messages-error {
+.messages--error {
   @extend .messages;
 }
 
 /**
  * Tabs.
  */
-%tabs--tab {
+%tabs__tab {
   float: right;
 }
-.tabs-primary--tab {
-  @extend %tabs--tab;
+.tabs-primary__tab {
+  @extend %tabs__tab;
 }
-.tabs-primary--tab-active {
-  @extend .tabs-primary--tab;
+.tabs-primary__tab.is-active {
+  @extend .tabs-primary__tab;
 }
-.tabs-secondary--tab,
-.tabs-secondary--tab-active {
-  @extend %tabs--tab;
+.tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
+  @extend %tabs__tab;
 }
 
 /**
@@ -102,7 +102,7 @@ span.field-label {
 /**
  * Menus.
  */
-.menu--collapsed {
+.menu__item.is-collapsed {
   list-style-image: inline-image("menu-collapsed-rtl.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *list-style-image: image-url("menu-collapsed-rtl.png");
