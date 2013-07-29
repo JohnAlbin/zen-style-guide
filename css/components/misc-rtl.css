@@ -8,12 +8,12 @@
  */
 
 /* Wrapping link for logo. */
-.header--logo {
+.header__logo {
   float: right;
 }
 
 /* The secondary menu (login, etc.) */
-.header--secondary-menu {
+.header__secondary-menu {
   float: left;
 }
 
@@ -37,9 +37,9 @@
  * Messages.
  */
 .messages,
-.messages-status,
-.messages-warning,
-.messages-error {
+.messages--status,
+.messages--warning,
+.messages--error {
   padding: 10px 50px 10px 10px;
   background-position: 99% 8px;
 }
@@ -47,10 +47,9 @@
 /**
  * Tabs.
  */
-.tabs-primary--tab,
-.tabs-primary--tab-active,
-.tabs-secondary--tab,
-.tabs-secondary--tab-active {
+.tabs-primary__tab,
+.tabs-secondary__tab,
+.tabs-secondary__tab.is-active {
   float: right;
 }
 
@@ -87,7 +86,7 @@ span.field-label {
 /**
  * Menus.
  */
-.menu--collapsed {
+.menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
   *list-style-image: url('../../images/menu-collapsed-rtl.png');
 }

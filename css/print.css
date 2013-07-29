@@ -18,8 +18,8 @@
   }
 
   /* Don't underline header. */
-  a:link.header--site-link,
-  a:visited.header--site-link {
+  a:link.header__site-link,
+  a:visited.header__site-link {
     text-decoration: none !important;
   }
 
