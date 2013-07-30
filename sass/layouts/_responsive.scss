@@ -1,6 +1,6 @@
 /**
  * @file
- * Positioning for responsive layout .
+ * Positioning for a responsive layout.
  *
  * Define CSS classes to create a table-free, 3-column, 2-column, or single
  * column layout depending on whether blocks are enabled in the left or right
@@ -9,7 +9,7 @@
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
 
-// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// We are going to create a fluid, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
 $zen-column-count:  5;
 $zen-gutter-width:  20px;
