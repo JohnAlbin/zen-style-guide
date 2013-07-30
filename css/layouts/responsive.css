@@ -1,10 +1,9 @@
 /**
  * @file
- * Positioning for responsive layout .
+ * Positioning for a responsive layout.
  *
- * Define CSS classes to create a table-free, 3-column, 2-column, or single
- * column layout depending on whether blocks are enabled in the left or right
- * columns.
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
