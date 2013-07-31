@@ -122,7 +122,7 @@ theming Drupal websites.
 
 In these stylesheets, we have included just the classes and IDs needed to apply
 a minimum amount of styling. To learn many more useful Drupal core selectors,
-check Zen's online documentation: http://drupal.org/node/1707736
+check Zen's online documentation: https://drupal.org/node/1707736
 
 
 STYLES FOR INTERNET EXPLORER
@@ -145,7 +145,7 @@ that applies to both IE6 and IE7, use ".lt-ie8 ":
 Many CSS authors prefer using IE "conditional stylesheets", which are
 stylesheets added via conditional comments. If you would prefer that method, you
 should check out the Conditional Stylesheets module:
-http://drupal.org/project/conditional_styles
+https://drupal.org/project/conditional_styles
 
 
 DRUPAL CORE'S STYLESHEETS

@@ -13,7 +13,7 @@
 
 screenshot  = screenshot.png
 name        = Zen Sub-theme Starter Kit
-description = Read the <a href="http://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
+description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
 
 
 
@@ -59,7 +59,7 @@ stylesheets[all][] = css/styles.css
 ; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ;
 ; If you still wish to use conditional stylesheets, you must install the
-; conditional stylesheets module: http://drupal.org/project/conditional_styles
+; conditional stylesheets module: https://drupal.org/project/conditional_styles
 ;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 
 
@@ -109,7 +109,7 @@ regions[page_bottom]    = Page bottom
 ; admin/appearance config page. This is useful for suppressing check boxes
 ; for elements not used by your sub-theme. To suppress a check box, omit the
 ; entry for it below. See the Drupal 7 Theme Guide for more info:
-; http://drupal.org/node/171205#features
+; https://drupal.org/node/171205#features
 
 features[] = logo
 features[] = name
@@ -143,5 +143,5 @@ settings[zen_wireframes]           = 0
 ;settings[shortcut_module_link]    = 1
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
-; the line below and see the documentation at: http://drupal.org/node/495654
+; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts

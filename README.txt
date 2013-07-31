@@ -9,7 +9,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
 (read the sites/default/default.settings.php for more info.)
 
   Why? To learn why you shouldn't modify any of the files in the zen/ folder,
-  see http://drupal.org/node/245802
+  see https://drupal.org/node/245802
 
 
 *** IMPORTANT NOTE ***
@@ -18,7 +18,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
 * functions should be called. This means that if you add a new theme,
 * preprocess or process function to your template.php file or add a new template
 * (.tpl.php) file to your sub-theme, you will need to rebuild the "theme
-* registry." See http://drupal.org/node/173880#theme-registry
+* registry." See https://drupal.org/node/173880#theme-registry
 *
 * Drupal 7 also stores a cache of the data in .info files. If you modify any
 * lines in your sub-theme's .info file, you MUST refresh Drupal 7's cache by
@@ -53,7 +53,7 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
       Why? The .info file describes the basic things about your theme: its
       name, description, features, template regions, CSS files, and JavaScript
       files. See the Drupal 7 Theme Guide for more info:
-      http://drupal.org/node/171205
+      https://drupal.org/node/171205
 
     Then, visit your site's Appearance page at admin/appearance to refresh
     Drupal 7's cache of .info file data.
@@ -115,17 +115,17 @@ Optional steps:
     the theme registry.
 
     You can find a full list of Drupal templates that you can override in the
-    templates/README.txt file or http://drupal.org/node/190815
+    templates/README.txt file or https://drupal.org/node/190815
 
       Why? In Drupal 7 theming, if you want to modify a template included by a
       module, you should copy the template file from the module's directory to
       your sub-theme's template directory and then rebuild the theme registry.
-      See the Drupal 7 Theme Guide for more info: http://drupal.org/node/173880
+      See the Drupal 7 Theme Guide for more info: https://drupal.org/node/173880
 
  8. Further extend your sub-theme.
 
     Discover further ways to extend your sub-theme by reading Zen's
     documentation online at:
-      http://drupal.org/documentation/theme/zen
+      https://drupal.org/documentation/theme/zen
     and Drupal 7's Theme Guide online at:
-      http://drupal.org/theme-guide
+      https://drupal.org/theme-guide
