@@ -15,13 +15,13 @@
 }
 
 .with-wireframes {
-  #header,
-  #main,
-  #content,
-  #navigation,
+  .header,
+  .main,
+  .main-content,
+  .main-navigation,
   .region-sidebar-first,
   .region-sidebar-second,
-  #footer,
+  .footer,
   .region-bottom {
     @extend %wireframe;
   }
