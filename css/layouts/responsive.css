@@ -14,7 +14,7 @@
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-#page,
+.page,
 .region-bottom {
   margin-left: auto;
   margin-right: auto;
@@ -22,12 +22,12 @@
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-#header,
-#content,
-#navigation,
+.header,
+.main-content,
+.main-navigation,
 .region-sidebar-first,
 .region-sidebar-second,
-#footer {
+.footer {
   padding-left: 10px;
   padding-right: 10px;
   -moz-box-sizing: border-box;
@@ -42,36 +42,36 @@
 }
 
 /* Containers for grid items and flow items. */
-#header,
-#main,
-#footer {
+.header,
+.main,
+.footer {
   *position: relative;
   *zoom: 1;
 }
-#header:before,
-#header:after,
-#main:before,
-#main:after,
-#footer:before,
-#footer:after {
+.header:before,
+.header:after,
+.main:before,
+.main:after,
+.footer:before,
+.footer:after {
   content: "";
   display: table;
 }
-#header:after,
-#main:after,
-#footer:after {
+.header:after,
+.main:after,
+.footer:after {
   clear: both;
 }
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-  #main {
-    /* Move all the children of #main down to make room. */
+  .main {
+    /* Move all the children of .main down to make room. */
     padding-top: 3em;
     position: relative;
   }
-  #navigation {
-    /* Move the navbar up inside #main's padding. */
+  .main-navigation {
+    /* Move the navbar up inside .main's padding. */
     position: absolute;
     top: 0;
     height: 3em;
@@ -89,7 +89,7 @@
    */
 
   /* Span 2 columns, starting in 2nd column from left. */
-  .sidebar-first #content {
+  .sidebar-first .main-content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
@@ -109,7 +109,7 @@
    */
 
   /* Span 2 columns, starting in 1st column from left. */
-  .sidebar-second #content {
+  .sidebar-second .main-content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
@@ -129,7 +129,7 @@
    */
 
   /* Span 2 columns, starting in 2nd column from left. */
-  .two-sidebars #content {
+  .two-sidebars .main-content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
@@ -206,7 +206,7 @@
    */
 
   /* Span 4 columns, starting in 2nd column from left. */
-  .sidebar-first #content {
+  .sidebar-first .main-content {
     float: left;
     width: 80%;
     margin-left: 20%;
@@ -226,7 +226,7 @@
    */
 
   /* Span 4 columns, starting in 1st column from left. */
-  .sidebar-second #content {
+  .sidebar-second .main-content {
     float: left;
     width: 80%;
     margin-left: 0%;
@@ -246,7 +246,7 @@
    */
 
   /* Span 3 columns, starting in 2nd column from left. */
-  .two-sidebars #content {
+  .two-sidebars .main-content {
     float: left;
     width: 60%;
     margin-left: 20%;

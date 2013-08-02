@@ -8,7 +8,7 @@
  */
 
 /* Span 4 columns, starting in 2nd column from right. */
-.sidebar-first #content {
+.sidebar-first .main-content {
   float: right;
   width: 764px;
   margin-right: 196px;
@@ -28,7 +28,7 @@
  */
 
 /* Span 4 columns, starting in 1st column from right. */
-.sidebar-second #content {
+.sidebar-second .main-content {
   float: right;
   width: 764px;
   margin-right: 0px;
@@ -48,7 +48,7 @@
  */
 
 /* Span 3 columns, starting in 2nd column from right. */
-.two-sidebars #content {
+.two-sidebars .main-content {
   float: right;
   width: 568px;
   margin-right: 196px;
