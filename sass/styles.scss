@@ -16,8 +16,32 @@
 @import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
-@import "components/misc";
-// Optionally, add your own components here.
+@import "components/element-invisible";
+@import "components/inline";
+
+@import "components/forms-drupal";
+@import "components/autocomplete";
+@import "components/button";
+@import "components/collapsible-fieldsets";
+@import "components/form-tables";
+@import "components/progress-bar";
+@import "components/tabledrag";
+
+@import "components/block";
+@import "components/breadcrumb";
+@import "components/comments";
+@import "components/header";
+@import "components/highlight-mark";
+@import "components/messages";
+@import "components/more-link";
+@import "components/navbar";
+@import "components/pager";
+@import "components/side-menu";
+@import "components/skip-link";
+@import "components/tabs";
+@import "components/watermark";
+@import "components/wireframes";
+
 @import "print";
 
 /* SMACSS theme rules */
