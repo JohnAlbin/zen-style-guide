@@ -110,6 +110,16 @@ span.field-label {
 }
 
 /**
+ * Comments.
+ */
+
+/* Nested comments are indented. */
+.indented {
+  margin-left: 0;
+  margin-right: $indent-amount;
+}
+
+/**
  * Forms.
  */
 
