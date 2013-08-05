@@ -531,7 +531,7 @@ span.field-label {
 /* Nested comments are indented. */
 .indented {
   /* Drupal core uses a 25px left margin. */
-  margin-left: 30px;
+  margin-left: 30px; /* LTR */
 }
 
 /**
