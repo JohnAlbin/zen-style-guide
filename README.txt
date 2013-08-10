@@ -61,19 +61,19 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
  3. Choose your preferred page layout method or grid system.
 
     By default your new sub-theme is using a responsive layout. If you want a
-    fixed layout for your theme, delete the unneeded responsive-sidebars and
-    responsive-sidebars-rtl css/sass files and edit your sub-theme's styles.css
-    or styles.scss file and replace the reference to responsive-sidebars with
-    fixed-width.
+    fixed layout for your theme, delete the unneeded "responsive" and
+    "responsive-rtl" css/sass files and edit your sub-theme's styles.css
+    or styles.scss file and replace the reference to "responsive" with
+    "fixed".
 
     For example, edit foo/sass/styles.scss and change this line:
-      @import "layouts/responsive-sidebars";
+      @import "layouts/responsive";
     to:
-      @import "layouts/fixed-width";
+      @import "layouts/fixed";
 
     Alternatively, if you are more familiar with a different CSS layout method,
     such as GridSetApp or 960.gs, etc., you can replace the
-    "layouts/responsive-sidebars" line in your styles.scss file with a line
+    "layouts/responsive" line in your styles.scss file with a line
     pointing at your choice of layout CSS file.
 
     Then, visit your site's Appearance page at admin/appearance to refresh
