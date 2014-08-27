@@ -29,3 +29,8 @@
 .error {
   @extend %status-error;
 }
+
+/* Node revisions. */
+.revision-current {
+  @extend %status-ok;
+}

@@ -44,11 +44,12 @@ base theme  = zen
 ; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
 ; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
 
-; First we remove the system's menu and message styling since Zen has its own.
+; First we remove any Drupal styling that Zen provides as components.
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
 stylesheets[all][] = comment.css
+stylesheets[all][] = node.css
 
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
