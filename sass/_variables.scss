@@ -21,14 +21,24 @@
 // Zen does not require special handling for IE8 or later. But Compass uses that
 // variable for a couple edge cases. We include it for completeness sake. See
 // the documentation at http://compass-style.org/reference/compass/support/
-$legacy-support-for-ie6: false;
-$legacy-support-for-ie7: false;
-$legacy-support-for-ie8: true;
+
+// Optional map of minimum browser versions to support. For example, to require
+// support for IE 8 and later, set $browser-minimum-versions['ie'] to '8'.
+$browser-minimum-versions: (
+  'chrome':  null,
+  'firefox': null,
+  'ie':      null,
+  'safari':  null,
+  'opera':   null
+) !default;
 
 
 //
 // Font faces, stacks and sizes.
 //
+
+// Set this to true to force normalize.scss output to exactly match normalize.css.
+$strict-normalize: false;
 
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
@@ -37,6 +47,10 @@ $legacy-support-for-ie8: true;
 
 $base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$rhythm-unit: 'rem';
 
 $h1-font-size: 2    * $base-font-size;
 $h2-font-size: 1.5  * $base-font-size;
@@ -81,7 +95,7 @@ $font-monospace:   $courier;
 //
 
 // The amount lists, blockquotes and comments are indented.
-$indent-amount: 30px;
+$indent-amount: 2rem;
 
 // The height of the navigation container.
 $nav-height: 3em;
