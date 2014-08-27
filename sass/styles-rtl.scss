@@ -7,7 +7,7 @@
 @import "init";
 
 /* HTML element (SMACSS base) rules */
-@import "normalize-rtl";
+@import "base/normalize-rtl";
 
 /* Layout rules */
 @import "layouts/responsive-rtl";

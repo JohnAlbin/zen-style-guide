@@ -4,7 +4,7 @@
  */
 
 /* HTML element (SMACSS base) rules */
-@import "normalize-rtl.css";
+@import "base/normalize-rtl.css";
 
 /* Layout rules */
 @import "layouts/responsive-rtl.css";

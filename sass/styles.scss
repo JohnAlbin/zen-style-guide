@@ -10,7 +10,7 @@
 @import "init";
 
 /* HTML element (SMACSS base) rules */
-@import "normalize";
+@import "base/normalize";
 
 /* Layout rules */
 @import "layouts/responsive";
