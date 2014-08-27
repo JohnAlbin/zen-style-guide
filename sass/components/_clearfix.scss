@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Markup free clearing.
+ *
+ * @see http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+
+.clearfix,
+%clearfix {
+  @include clearfix();
+}

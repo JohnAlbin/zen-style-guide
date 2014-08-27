@@ -4,7 +4,7 @@
 
 /* Basic positioning styles shared by primary and secondary tabs. */
 %tabs {
-  @include clearfix;
+  @extend %clearfix;
   @include background-image(linear-gradient(bottom, $tabs-border 1px, transparent 1px));
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;

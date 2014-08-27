@@ -1,0 +1,16 @@
+// Clearfix
+//
+// We use the micro-clearfix, optimized for use in @extend where fewer & is
+// better. See http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
