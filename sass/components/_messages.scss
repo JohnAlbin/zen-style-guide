@@ -1,8 +1,27 @@
 /**
- * Messages.
+ * Messages
  */
 
-.messages {
+.status-ok,
+%status-ok {
+  background-color: #f8fff0;
+  color: #234600;
+}
+
+.status-warning,
+%status-warning {
+  background-color: #fffce5;
+  color: #840;
+}
+
+.status-error,
+%status-error {
+  background-color: #fef5f1;
+  color: #8c2e0b;
+}
+
+.messages,
+%messages {
   margin: rhythm(1) 0;
   padding: 10px 10px 10px 50px; /* LTR */
   background-image: inline-image("message-24-ok.png");
@@ -13,54 +32,65 @@
   background-repeat: no-repeat;
   border: 1px solid #be7;
 }
-.messages--status {
-  @extend .messages;
-  @extend %ok;
+
+.messages--status,
+%messages--status {
+  @extend %messages;
+  @extend %status-ok;
 }
-.messages--warning {
-  @extend .messages;
-  @extend %warning;
+
+.messages--warning,
+%messages--warning {
+  @extend %messages;
+  @extend %status-warning;
   background-image: inline-image("message-24-warning.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *background-image: image-url("message-24-warning.png");
   }
   border-color: #ed5;
 }
-.messages--error {
-  @extend .messages;
-  @extend %error;
+
+.messages--error,
+%messages--error {
+  @extend %messages;
+  @extend %status-error;
   background-image: inline-image("message-24-error.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *background-image: image-url("message-24-error.png");
   }
   border-color: #ed541d;
-
 }
-.messages__list {
+
+.messages--error__text,
+%messages--error__text {
+  color: #333;
+}
+
+.messages__list,
+%messages__list {
   margin: 0;
 }
-.messages__item {
+
+.messages__item,
+%messages__item {
   list-style-image: none;
 }
 
+
+// Drupal selectors.
+
 /* Core/module installation error messages. */
 .messages--error p.error {
-  color: #333;
+  @extend %messages--error__text;
 }
 
 /* System status report. */
 .ok,
-%ok {
-  background-color: #f8fff0;
-  color: #234600;
+  @extend %status-ok;
 }
-.warning,
-%warning {
-  background-color: #fffce5;
-  color: #840;
+.warning {
+  @extend %status-warning;
 }
-.error,
-%error {
-  background-color: #fef5f1;
-  color: #8c2e0b;
+.error {
+  @extend %status-error;
 }
