@@ -4,7 +4,7 @@
 
 .menu__item.is-collapsed {
   list-style-image: inline-image("menu-collapsed-rtl.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     *list-style-image: image-url("menu-collapsed-rtl.png");
   }
 }

@@ -8,7 +8,7 @@
 .fieldset-legend {
   html.js .collapsible & {
     background-image: inline-image("menu-expanded.png");
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    @if support-legacy-browser(ie, "7") {
       *background-image: image-url("menu-expanded.png");
     }
     background-position: 5px 65%; /* LTR */
@@ -17,7 +17,7 @@
   }
   html.js .collapsed & {
     background-image: inline-image("menu-collapsed.png"); /* LTR */
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    @if support-legacy-browser(ie, "7") {
       *background-image: image-url("menu-collapsed.png"); /* LTR */
     }
     background-position: 5px 50%; /* LTR */

@@ -25,7 +25,7 @@
   margin: rhythm(1) 0;
   padding: 10px 10px 10px 50px; /* LTR */
   background-image: inline-image("message-24-ok.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     *background-image: image-url("message-24-ok.png");
   }
   background-position: 8px 8px; /* LTR */
@@ -44,7 +44,7 @@
   @extend %messages;
   @extend %status-warning;
   background-image: inline-image("message-24-warning.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     *background-image: image-url("message-24-warning.png");
   }
   border-color: #ed5;
@@ -55,7 +55,7 @@
   @extend %messages;
   @extend %status-error;
   background-image: inline-image("message-24-error.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     *background-image: image-url("message-24-error.png");
   }
   border-color: #ed541d;

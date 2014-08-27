@@ -6,7 +6,7 @@
 %wireframe {
   outline: 1px solid #ccc;
 
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     .lt-ie8 & {
       /* IE6/7 do not support the outline property. */
       border: 1px solid #ccc;

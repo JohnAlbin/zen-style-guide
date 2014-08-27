@@ -11,7 +11,7 @@
 }
 .more-help-link a {
   background-image: inline-image("help.png");
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  @if support-legacy-browser(ie, "7") {
     *background-image: image-url("help.png");
   }
   background-position: 0 50%; /* LTR */
