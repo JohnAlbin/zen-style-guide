@@ -78,7 +78,7 @@ $zen-auto-include-grid-item-base: false;
  */
 @media all and (min-width: 480px) and (max-width: 959px) {
 
-  $zen-columns: 3;
+  $zen-columns: 3 !global;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -156,7 +156,7 @@ $zen-auto-include-grid-item-base: false;
  */
 @media all and (min-width: 960px) {
 
-  $zen-columns: 5;
+  $zen-columns: 5 !global;
 
   /**
    * The layout when there is only one sidebar, the left one.
