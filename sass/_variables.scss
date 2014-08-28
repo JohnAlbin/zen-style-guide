@@ -100,7 +100,7 @@ $font-monospace:   $courier;
 //
 
 // The amount lists, blockquotes and comments are indented.
-$indent-amount: 2rem;
+$indent-amount: 2 * $base-font-size;
 
 // The height of the navigation container.
 $nav-height: 3em;
