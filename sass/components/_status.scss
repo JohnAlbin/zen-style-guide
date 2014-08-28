@@ -20,7 +20,7 @@
 // Drupal selectors.
 
 /* System status report. */
-.ok,
+.ok {
   @extend %status-ok;
 }
 .warning {

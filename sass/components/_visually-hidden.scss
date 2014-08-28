@@ -9,12 +9,12 @@
 
 .visually-hidden,
 %visually-hidden {
-  @include visually-hidden;
+  @include visually-hidden();
 }
 
 .visually-hidden--off,
 %visually-hidden--off {
-  @include visually-hidden-off;
+  @include visually-hidden--off();
 }
 
 .visually-hidden--focusable,

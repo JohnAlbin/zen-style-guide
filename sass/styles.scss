@@ -17,9 +17,7 @@
 @import "layouts/responsive";
 
 /* Component (SMACSS module) rules */
-@import "components/visually-hidden";
-@import "components/hidden";
-@import "components/inline";
+@import "components/clearfix";
 
 @import "components/forms-drupal";
 @import "components/autocomplete";
@@ -35,7 +33,9 @@
 @import "components/breadcrumb";
 @import "components/comments";
 @import "components/header";
+@import "components/hidden";
 @import "components/highlight-mark";
+@import "components/inline";
 @import "components/messages";
 @import "components/more-link";
 @import "components/navbar";
@@ -43,7 +43,9 @@
 @import "components/pager";
 @import "components/side-menu";
 @import "components/skip-link";
+@import "components/status";
 @import "components/tabs";
+@import "components/visually-hidden";
 @import "components/watermark";
 @import "components/wireframes";
 
