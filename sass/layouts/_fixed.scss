@@ -11,9 +11,9 @@
 
 // We are going to create a 980px wide, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  5;
-$zen-gutter-width:  20px;
-$zen-grid-width:    980px;
+$zen-columns:     5;
+$zen-gutters:     20px;
+$zen-grid-width:  980px;
 
 // If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
 // Since the same CSS unit for grid width and gutter width are set here
@@ -22,11 +22,11 @@ $zen-box-sizing: content-box;
 
 // You can generate more efficient CSS if you manually apply the
 // zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
+$zen-auto-include-grid-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
 // Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
-@if $zen-reverse-all-floats == false {
+@if $zen-switch-direction == false {
 
 /**
  * Center the page.
@@ -48,7 +48,7 @@ $zen-auto-include-item-base: false;
 .region-sidebar-first,
 .region-sidebar-second,
 .footer {
-  // See the note about $zen-auto-include-item-base above.
+  // See the note about $zen-auto-include-grid-item-base above.
   @include zen-grid-item-base();
 }
 
@@ -70,10 +70,10 @@ $zen-auto-include-item-base: false;
   position: absolute;
   top: 0;
   height: $nav-height;
-  width: $zen-grid-width - $zen-gutter-width;
+  width: $zen-grid-width - $zen-gutters;
 }
 
-} // End of @if $zen-reverse-all-floats == true
+} // End of @if $zen-switch-direction == false
 
 /**
  * The layout when there is only one sidebar, the left one.

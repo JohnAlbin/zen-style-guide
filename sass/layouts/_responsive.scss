@@ -10,19 +10,19 @@
 
 // We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
 // between columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  1;
-$zen-gutter-width:  20px;
+$zen-columns: 1;
+$zen-gutters: 20px;
 
 // If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
 //$zen-box-sizing: content-box;
 
 // You can generate more efficient CSS if you manually apply the
 // zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
+$zen-auto-include-grid-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
 // Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
-@if $zen-reverse-all-floats == false {
+@if $zen-switch-direction == false {
 
 /**
  * Center the page.
@@ -44,7 +44,7 @@ $zen-auto-include-item-base: false;
 .region-sidebar-first,
 .region-sidebar-second,
 .footer {
-  // See the note about $zen-auto-include-item-base above.
+  // See the note about $zen-auto-include-grid-item-base above.
   @include zen-grid-item-base();
 }
 
@@ -71,14 +71,14 @@ $zen-auto-include-item-base: false;
   }
 }
 
-} // End of @if $zen-reverse-all-floats == true
+} // End of @if $zen-switch-direction == false
 
 /**
  * Use 3 grid columns for smaller screens.
  */
 @media all and (min-width: 480px) and (max-width: 959px) {
 
-  $zen-column-count: 3;
+  $zen-columns: 3;
 
   /**
    * The layout when there is only one sidebar, the left one.
@@ -127,8 +127,8 @@ $zen-auto-include-item-base: false;
     /* Start a new row and span all 3 columns. */
     .region-sidebar-second {
       @include zen-grid-item(3, 1);
-      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
-      @include zen-clear();
+      @include zen-grid-container(grid-item); // Since we're making every block in this region be a grid item.
+      @include zen-new-row();
 
       /* Apply the shared properties of grid items in a single, efficient ruleset. */
       .block {
@@ -137,7 +137,7 @@ $zen-auto-include-item-base: false;
       /* Span 1 column, starting in the 1st column from left. */
       .block:nth-child(3n+1) {
         @include zen-grid-item(1, 1);
-        @include zen-clear();
+        @include zen-new-row();
       }
       /* Span 1 column, starting in the 2nd column from left. */
       .block:nth-child(3n+2) {
@@ -156,7 +156,7 @@ $zen-auto-include-item-base: false;
  */
 @media all and (min-width: 960px) {
 
-  $zen-column-count: 5;
+  $zen-columns: 5;
 
   /**
    * The layout when there is only one sidebar, the left one.
