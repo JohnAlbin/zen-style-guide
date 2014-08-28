@@ -4,14 +4,10 @@
  */
 
 /* HTML element (SMACSS base) rules */
-@import "base/normalize-rtl.css";
+@import "base/base-rtl.css";
 
 /* Layout rules */
 @import "layouts/responsive-rtl.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc-rtl.css";
-
-/* Skin (SMACSS theme) rules */
-/* @import "theme-A-rtl.css"; */
-/* @import "theme-B-rtl.css"; */
