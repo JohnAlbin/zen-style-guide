@@ -31,7 +31,7 @@ relative_assets = true
 line_comments = false
 
 # CSS sourcemaps
-sourcemap = false
+sourcemap = true
 
 # Pass options to sass.
 # sass_options = {}
