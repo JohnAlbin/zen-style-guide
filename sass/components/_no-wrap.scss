@@ -1,0 +1,14 @@
+/**
+ * Prevent text wrapping.
+ */
+.no-wrap,
+%no-wrap {
+  white-space: nowrap;
+}
+
+
+// Drupal selectors.
+
+.nowrap {
+  @extend %no-wrap;
+}

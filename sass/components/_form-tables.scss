@@ -3,6 +3,12 @@
  * Drupal admin tables.
  */
 
+/* TableHeader behavior. */
+table.sticky-header {
+  background-color: #fff;
+  margin-top: 0;
+}
+
 form {
   th {
     text-align: left; /* LTR */
@@ -47,7 +53,11 @@ th.checkbox {
   text-align: center;
 }
 
-/* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
 td.menu-disabled {
   background: #ccc;
+}
+
+/* TableSelect behavior. */
+tr.selected td {
+  background: #ffc;
 }

@@ -1,0 +1,42 @@
+/**
+ * Progress bar.
+ */
+
+.progress-bar__percentage,
+%progress-bar__percentage {
+  float: left;
+}
+
+.progress-bar--disabled,
+%progress-bar--disabled {
+  float: right;
+}
+
+.progress-bar--ajax,
+%progress-bar--ajax {
+  float: right;
+}
+
+.progress-bar--ajax__throbber,
+%progress-bar--ajax__throbber {
+  float: right;
+}
+
+
+// Drupal selectors.
+
+.progress .percentage {
+  @extend %progress-bar__percentage;
+}
+
+.progress-disabled {
+  @extend %progress-bar--disabled;
+}
+
+.ajax-progress {
+  @extend %progress-bar--ajax;
+
+  .throbber {
+    @extend %progress-bar--ajax__throbber;
+  }
+}

@@ -17,6 +17,7 @@
 
 /* Component (SMACSS module) rules */
 @import "components/visually-hidden";
+@import "components/hidden";
 @import "components/inline";
 
 @import "components/forms-drupal";
@@ -24,7 +25,9 @@
 @import "components/button";
 @import "components/collapsible-fieldsets";
 @import "components/form-tables";
+@import "components/openid";
 @import "components/progress-bar";
+@import "components/resizable-textarea";
 @import "components/tabledrag";
 
 @import "components/block";
@@ -35,6 +38,7 @@
 @import "components/messages";
 @import "components/more-link";
 @import "components/navbar";
+@import "components/no-wrap";
 @import "components/pager";
 @import "components/side-menu";
 @import "components/skip-link";

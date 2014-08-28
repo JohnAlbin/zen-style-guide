@@ -1,0 +1,55 @@
+/**
+ * TableDrag behavior.
+ */
+
+.drag__handle,
+%drag__handle {
+  float: right;
+  margin-right: -1em;
+  margin-left: 0;
+}
+
+.drag__toggle-weight-wrapper,
+%drag__toggle-weight-wrapper {
+  text-align: right; /* LTR */
+}
+
+.drag__indentation,
+%drag__indentation {
+  float: right;
+  margin: -0.4em -0.4em -0.4em 0.2em;
+  padding: 0.42em 0.6em 0.42em 0;
+}
+
+.drag__tree-child,
+%drag__tree-child {
+  background-position: -65px center;
+}
+
+.drag__tree-child-last,
+%drag__tree-child-last {
+  @extend %drag__tree-child;
+}
+
+
+// Drupal selectors.
+
+.tabledrag-handle {
+  @extend %drag__handle;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  @extend %drag__toggle-weight-wrapper;
+}
+
+.indentation {
+  @extend %drag__indentation;
+}
+
+.tree-child {
+  @extend %drag__tree-child;
+}
+
+.tree-child-last {
+  @extend %drag__tree-child-last;
+}

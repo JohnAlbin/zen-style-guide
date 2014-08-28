@@ -5,17 +5,88 @@
  * @see progress.js
  */
 
-.progress {
+.progress-bar,
+%progress-bar {
   font-weight: bold;
+}
+
+.progress-bar__bar,
+%progress-bar__bar {
+  margin: 0 0.2em;
+  border: 1px solid #666;
+  @include border-radius(3px);
+  background-color: #ccc;
+}
+
+.progress-bar__fill,
+%progress-bar__fill {
+  height: 1.5em;
+  width: 5px;
+  background: #0072b9 image-url("progress.gif") repeat 0 0;
+}
+
+.progress-bar__percentage,
+%progress-bar__percentage {
+  float: right; /* LTR */
+}
+
+.progress-bar--ajax,
+%progress-bar--ajax {
+  display: inline-block; /* LTR */
+}
+
+.progress-bar--ajax__throbber,
+%progress-bar--ajax__throbber {
+  background: transparent image-url("throbber.gif") no-repeat 0px -18px;
+  float: left; /* LTR */
+  height: 15px;
+  margin: 2px;
+  width: 15px;
+
+  tr & {
+    margin: 0 2px;
+  }
+}
+
+.progress-bar--ajax__message,
+%progress-bar--ajax__message {
+  padding-left: 20px;
+}
+
+.progress-bar--ajax__bar,
+%progress-bar--ajax__bar {
+  width: 16em;
+}
+
+
+// Drupal selectors.
+
+.progress {
+  @extend %progress-bar;
 
   .bar {
-    background: #ccc;
-    border-color: #666;
-    margin: 0 0.2em;
-    @include border-radius(3px);
+    @extend %progress-bar__bar;
   }
   .filled {
-    background-color: #0072b9;
-    background-image: image-url("progress.gif");
+    @extend %progress-bar__fill;
   }
+  .percentage {
+    @extend %progress-bar__percentage;
+  }
+}
+
+.ajax-progress {
+  @extend %progress-bar--ajax;
+
+  .throbber {
+    @extend %progress-bar--ajax__throbber;
+  }
+
+  .message {
+    @extend %progress-bar--ajax__message;
+  }
+}
+
+.ajax-progress-bar {
+  @extend %progress-bar--ajax__bar;
 }

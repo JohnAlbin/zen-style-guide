@@ -2,14 +2,28 @@
  * The RTL language extension of the inline component.
  */
 
-/* List of links */
-.inline li {
+.inline-field-label,
+%inline-field-label {
+  padding: 0 0 0 1em;
+}
+
+.inline_links__item,
+%inline_links__item {
   /* Bug in Safari causes display: inline to fail. */
   display: inline-block;
   padding: 0 0 0 1em;
 }
 
-/* The inline field label used by the Fences.module */
+
+// Drupal selectors.
+
+/* The inline field label used by the Fences module. */
 span.field-label {
-  padding: 0 0 0 1em;
+  @extend %inline-field-label;
+}
+
+.inline {
+  li {
+    @extend %inline-links__item;
+  }
 }

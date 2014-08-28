@@ -1,25 +1,143 @@
 /**
  * @file
- * TableDrag behavior.
- *
- * @see tabledrag.js
+ * TableDrag behavior
  */
 
-tr.drag {
+.drag__wrapper,
+%drag__wrapper {
+  cursor: move;
+}
+
+.drag__item,
+%drag__item {
   background-color: #fffff0;
 }
-tr.drag-previous {
+
+.drag__item-previous,
+%drag__item-previous {
   background-color: #ffd;
 }
-.tabledrag-toggle-weight {
+
+.drag__handle,
+%drag__handle {
+  cursor: move;
+  float: left; /* LTR */
+  height: 1.7em;
+  margin-left: -1em; /* LTR */
+  overflow: hidden;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.drag__handle-icon,
+%drag__handle-icon {
+  background: inline-image("draggable.png") no-repeat 6px 9px;
+  @if support-legacy-browser(ie, "7") {
+    *background: image-url("draggable.png") no-repeat 6px 9px;
+  }
+  height: 13px;
+  margin: -0.4em 0.5em;
+  padding: 0.42em 0.5em;
+  width: 13px;
+}
+
+.drag__handle-icon:hover,
+%drag__handle-icon-is-hover {
+  background-position: 6px -11px;
+}
+
+.drag__toggle-weight-wrapper,
+%drag__toggle-weight-wrapper {
+  text-align: right; /* LTR */
+}
+
+.drag__toggle-weight,
+%drag__toggle-weight {
   font-size: 0.9em;
 }
 
-/**
- * TableSelect behavior.
- *
- * @see tableselect.js
- */
-tr.selected td {
-  background: #ffc;
+.drag__indentation,
+%drag__indentation {
+  float: left; /* LTR */
+  height: 1.7em;
+  margin: -0.4em 0.2em -0.4em -0.4em; /* LTR */
+  padding: 0.42em 0 0.42em 0.6em; /* LTR */
+  width: 20px;
+}
+
+.drag__tree-child,
+%drag__tree-child {
+  background: inline-image("tree.png") no-repeat 11px center; /* LTR */
+  @if support-legacy-browser(ie, "7") {
+    *background: image-url("tree.png") no-repeat 11px center;
+  }
+}
+
+.drag__tree-child-last,
+%drag__tree-child-last {
+  background: inline-image("tree-bottom.png") no-repeat 11px center; /* LTR */
+  @if support-legacy-browser(ie, "7") {
+    *background: image-url("tree-bottom.png") no-repeat 11px center;
+  }
+}
+
+.drag__tree-child-horizontal,
+%drag__tree-child-horizontal {
+  @extend %drag__tree-child;
+  background-position: -11px center;
+}
+
+
+// Drupal selectors.
+
+body.drag {
+  @extend %drag__wrapper;
+}
+
+tr.drag {
+  @extend %drag__item;
+}
+
+tr.drag-previous {
+  @extend %drag__item-previous;
+}
+
+.tabledrag-handle {
+  @extend %drag__handle;
+
+  .handle {
+    @extend %drag__handle-icon;
+  }
+}
+
+.tabledrag-handle-hover .handle {
+  @extend %drag__handle-icon-is-hover;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  @extend %drag__toggle-weight-wrapper;
+}
+
+.tabledrag-toggle-weight {
+  @extend %drag__toggle-weight;
+}
+
+.indentation {
+  @extend %drag__indentation;
+}
+
+.tree-child {
+  @extend %drag__tree-child;
+}
+
+.tree-child-last {
+  @extend %drag__tree-child-last;
+}
+
+.tree-child-horizontal {
+  @extend %drag__tree-child-horizontal;
 }

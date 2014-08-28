@@ -1,0 +1,6 @@
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: 0;
+  margin-right: -20px;
+}

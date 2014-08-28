@@ -1,0 +1,36 @@
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+
+.hidden,
+%hidden {
+  display: none;
+}
+
+/**
+ * For anything you want to hide on page load when JS is enabled, so
+ * that you can use the JS to control visibility and avoid flicker.
+ */
+
+.js-hidden,
+%js-hidden {
+  html.js & {
+    display: none;
+  }
+}
+
+
+// Drupal selectors.
+
+.element-hidden {
+  @extend %js-hidden;
+}
+
+.js-hide {
+  @extend %js-hidden;
+}

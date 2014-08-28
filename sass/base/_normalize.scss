@@ -584,11 +584,12 @@ legend {
   }
 }
 
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-
 textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  @include box-sizing(border-box);
+  /* Remove default vertical scrollbar in IE 8/9/10/11. */
   overflow: auto;
 }
 

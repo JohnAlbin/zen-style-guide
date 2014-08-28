@@ -33,6 +33,19 @@
   }
 }
 
+.inline-form-items,
+%inline-form-items {
+  div,
+  label {
+    display: inline;
+  }
+
+  /* Fieldset contents always need to be rendered as block. */
+  div.fieldset-wrapper {
+    display: block;
+  }
+}
+
 .form-type-radio,
 .form-type-checkbox {
   .description {
@@ -62,29 +75,9 @@ label.option {
   text-align: left; /* LTR */
 }
 
-/**
- * OpenID
- *
- * The default styling for the OpenID login link seems to assume Garland's
- * styling of list items.
- */
 
-/* OpenID creates a new ul above the login form's links. */
-.openid-links {
-  /* Position OpenID's ul next to the rest of the links. */
-  margin-bottom: 0;
-}
+// Drupal selectors.
 
-/* The "Log in using OpenID" and "Cancel OpenID login" links. */
-.openid-link,
-.user-link {
-  margin-top: rhythm(1);
-}
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link {
-  /* Un-do some of the padding on the ul list. */
-  margin-left: -20px; /* LTR */
-}
-#user-login ul {
-  margin: rhythm(1) 0;
+.container-inline  {
+  @extend %inline-form-items;
 }
