@@ -12,7 +12,8 @@
   float: right;
   width: 764px;
   margin-right: 196px;
-  margin-left: -980px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /* Span 1 column, starting in 1st column from right. */
@@ -20,7 +21,8 @@
   float: right;
   width: 176px;
   margin-right: 0px;
-  margin-left: -196px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /**
@@ -32,7 +34,8 @@
   float: right;
   width: 764px;
   margin-right: 0px;
-  margin-left: -784px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /* Span 1 column, starting in 5th column from right. */
@@ -40,7 +43,8 @@
   float: right;
   width: 176px;
   margin-right: 784px;
-  margin-left: -980px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /**
@@ -52,7 +56,8 @@
   float: right;
   width: 568px;
   margin-right: 196px;
-  margin-left: -784px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /* Span 1 column, starting in 1st column from right. */
@@ -60,7 +65,8 @@
   float: right;
   width: 176px;
   margin-right: 0px;
-  margin-left: -196px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }
 
 /* Span 1 column, starting in 5th column from right. */
@@ -68,5 +74,6 @@
   float: right;
   width: 176px;
   margin-right: 784px;
-  margin-left: -980px;
+  margin-left: -100%;
+  *margin-left: -99.9%;
 }

@@ -2,15 +2,17 @@
  * The RTL language extension of the inline component.
  */
 
-/* List of links */
-.inline li {
-  /* Bug in Safari causes display: inline to fail. */
-  display: inline-block;
+/* The inline field label used by the Fences module. */
+.inline-field-label,
+span.field-label {
   padding: 0 0 0 1em;
 }
 
-/* The inline field label used by the Fences.module */
-span.field-label {
+/* List of links */
+.inline-links__item,
+.inline li {
+  /* Bug in Safari causes display: inline to fail. */
+  display: inline-block;
   padding: 0 0 0 1em;
 }
 
@@ -22,23 +24,30 @@ span.field-label {
 #user-login-form {
   text-align: right;
 }
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link {
-  /* Un-do some of the padding on the ul list. */
-  margin-left: 0;
-  margin-right: -20px;
+
+/* Animated throbber */
+.autocomplete__input,
+html.js input.form-autocomplete {
+  background-position: 0% 2px;
+}
+.autocomplete__input.is-throbbing,
+html.js input.throbbing {
+  background-position: 0% -18px;
 }
 
 /**
  * @file
  * The RTL language extension of the collapsible-fieldset component.
  */
-html.js .collapsible .fieldset-legend {
+
+.collapsible-fieldset__legend,
+.collapsible .fieldset-legend {
   background-position: 98% 75%;
   padding-left: 0;
   padding-right: 15px;
 }
-html.js .collapsed .fieldset-legend {
+.is-collapsed .collapsible-fieldset__legend,
+.collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
   *background-image: url('../../images/menu-collapsed-rtl.png');
   background-position: 98% 50%;
@@ -48,10 +57,67 @@ html.js .collapsed .fieldset-legend {
  * @file
  * The RTL language extension of the form-tables component.
  */
+
 form th {
   text-align: right;
   padding-left: 1em;
   padding-right: 0;
+}
+
+/* OpenID */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: 0;
+  margin-right: -20px;
+}
+
+/**
+ * Progress bar.
+ */
+
+.progress-bar__percentage,
+.progress .percentage {
+  float: left;
+}
+.progress-bar--disabled,
+.progress-disabled {
+  float: right;
+}
+.progress-bar--ajax,
+.ajax-progress {
+  float: right;
+}
+.progress-bar--ajax__throbber,
+.ajax-progress .throbber {
+  float: right;
+}
+
+/**
+ * TableDrag behavior.
+ */
+
+.drag__handle,
+.tabledrag-handle {
+  float: right;
+  margin-right: -1em;
+  margin-left: 0;
+}
+.drag__toggle-weight-wrapper,
+.tabledrag-toggle-weight-wrapper {
+  text-align: right;
+}
+.drag__indentation,
+.indentation {
+  float: right;
+  margin: -0.4em -0.4em -0.4em 0.2em;
+  padding: 0.42em 0.6em 0.42em 0;
+}
+.drag__tree-child,
+.drag__tree-child-last,
+.tree-child-last,
+.tree-child {
+  background-position: -65px center;
 }
 
 /**
@@ -62,7 +128,7 @@ form th {
 /* Nested comments are indented. */
 .indented {
   margin-left: 0;
-  margin-right: 30px;
+  margin-right: 32px;
 }
 
 /**
@@ -82,6 +148,7 @@ form th {
 /**
  * The RTL language extension of the messages component.
  */
+
 .messages,
 .messages--status,
 .messages--warning,
@@ -93,6 +160,7 @@ form th {
 /**
  * The RTL language extension of the more-link component.
  */
+
 .more-link {
   text-align: left;
 }
@@ -123,6 +191,7 @@ form th {
 /**
  * The RTL language extension of the side-menu component.
  */
+
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
   *list-style-image: url('../../images/menu-collapsed-rtl.png');
@@ -131,7 +200,9 @@ form th {
 /**
  * The RTL language extension of the tabs component.
  */
+
 .tabs-primary__tab,
+.tabs-primary__tab.is-active,
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: right;

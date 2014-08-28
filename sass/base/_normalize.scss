@@ -148,6 +148,14 @@ a:hover {
    ========================================================================== */
 
 /**
+ * To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+ * so that the line height of our base font becomes the basic unit of vertical
+ * measurement. We use multiples of that unit to set the top and bottom margins
+ * for our block level elements and to set the line heights of any fonts.
+ * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+ */
+
+/**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
@@ -170,6 +178,7 @@ strong {
    */
 
   blockquote {
+    /* Also indent the quote on both sides. */
     margin: rhythm(1) $indent-amount;
   }
 }
@@ -299,6 +308,10 @@ sub {
   }
 
   @if not $strict-normalize {
+    /**
+     * Turn off margins on nested lists.
+     */
+
     ol,
     ul {
       ol,
@@ -624,12 +637,11 @@ legend {
   }
 }
 
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
 textarea {
-  display: block;
-  margin: 0;
-  width: 100%;
-  @include box-sizing(border-box);
-  /* Remove default vertical scrollbar in IE 8/9/10/11. */
   overflow: auto;
 }
 

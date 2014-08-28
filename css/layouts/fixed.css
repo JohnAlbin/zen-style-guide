@@ -15,6 +15,7 @@
  * If you want to make the page a fixed width and centered in the viewport,
  * this is the standards-compliant way to do that.
  */
+
 .page,
 .region-bottom {
   margin-left: auto;
@@ -33,11 +34,11 @@
   padding-right: 10px;
   border-left: 0 !important;
   border-right: 0 !important;
-  word-wrap: break-word;
   *behavior: url("/path/to/boxsizing.htc");
   _display: inline;
   _overflow: hidden;
   _overflow-y: visible;
+  *word-wrap: break-word;
 }
 
 /* Containers for grid items and flow items. */
@@ -85,7 +86,8 @@
   float: left;
   width: 764px;
   margin-left: 196px;
-  margin-right: -980px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /* Span 1 column, starting in 1st column from left. */
@@ -93,7 +95,8 @@
   float: left;
   width: 176px;
   margin-left: 0px;
-  margin-right: -196px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /**
@@ -105,7 +108,8 @@
   float: left;
   width: 764px;
   margin-left: 0px;
-  margin-right: -784px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /* Span 1 column, starting in 5th column from left. */
@@ -113,7 +117,8 @@
   float: left;
   width: 176px;
   margin-left: 784px;
-  margin-right: -980px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /**
@@ -125,7 +130,8 @@
   float: left;
   width: 568px;
   margin-left: 196px;
-  margin-right: -784px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /* Span 1 column, starting in 1st column from left. */
@@ -133,7 +139,8 @@
   float: left;
   width: 176px;
   margin-left: 0px;
-  margin-right: -196px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }
 
 /* Span 1 column, starting in 5th column from left. */
@@ -141,5 +148,6 @@
   float: left;
   width: 176px;
   margin-left: 784px;
-  margin-right: -980px;
+  margin-right: -100%;
+  *margin-right: -99.9%;
 }

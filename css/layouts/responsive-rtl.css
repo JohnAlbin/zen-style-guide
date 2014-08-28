@@ -6,6 +6,7 @@
 /**
  * Use 3 grid columns for smaller screens.
  */
+
 @media all and (min-width: 480px) and (max-width: 959px) {
 
   /**
@@ -18,6 +19,7 @@
     width: 66.66667%;
     margin-right: 33.33333%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 1st column from right. */
@@ -25,7 +27,8 @@
     float: right;
     width: 33.33333%;
     margin-right: 0%;
-    margin-left: -33.33333%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /**
@@ -37,7 +40,8 @@
     float: right;
     width: 66.66667%;
     margin-right: 0%;
-    margin-left: -66.66667%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 3rd column from right. */
@@ -46,6 +50,7 @@
     width: 33.33333%;
     margin-right: 66.66667%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /**
@@ -58,6 +63,7 @@
     width: 66.66667%;
     margin-right: 33.33333%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 1st column from right. */
@@ -65,7 +71,8 @@
     float: right;
     width: 33.33333%;
     margin-right: 0%;
-    margin-left: -33.33333%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Start a new row and span all 3 columns. */
@@ -74,9 +81,20 @@
     width: 100%;
     margin-right: 0%;
     margin-left: -100%;
+    *margin-left: -99.9%;
+    *position: relative;
+    *zoom: 1;
     padding-left: 0;
     padding-right: 0;
     clear: right;
+  }
+  .two-sidebars .region-sidebar-second:before,
+  .two-sidebars .region-sidebar-second:after {
+    content: "";
+    display: table;
+  }
+  .two-sidebars .region-sidebar-second:after {
+    clear: both;
   }
 
   /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -87,11 +105,11 @@
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    word-wrap: break-word;
     *behavior: url("/path/to/boxsizing.htc");
     _display: inline;
     _overflow: hidden;
     _overflow-y: visible;
+    *word-wrap: break-word;
   }
 
   /* Span 1 column, starting in the 1st column from right. */
@@ -99,7 +117,8 @@
     float: right;
     width: 33.33333%;
     margin-right: 0%;
-    margin-left: -33.33333%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
     clear: right;
   }
 
@@ -108,7 +127,8 @@
     float: right;
     width: 33.33333%;
     margin-right: 33.33333%;
-    margin-left: -66.66667%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in the 3rd column from right. */
@@ -117,12 +137,14 @@
     width: 33.33333%;
     margin-right: 66.66667%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 }
 
 /**
  * Use 5 grid columns for larger screens.
  */
+
 @media all and (min-width: 960px) {
 
   /**
@@ -135,6 +157,7 @@
     width: 80%;
     margin-right: 20%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 1st column from right. */
@@ -142,7 +165,8 @@
     float: right;
     width: 20%;
     margin-right: 0%;
-    margin-left: -20%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /**
@@ -154,7 +178,8 @@
     float: right;
     width: 80%;
     margin-right: 0%;
-    margin-left: -80%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 5th column from right. */
@@ -163,6 +188,7 @@
     width: 20%;
     margin-right: 80%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /**
@@ -174,7 +200,8 @@
     float: right;
     width: 60%;
     margin-right: 20%;
-    margin-left: -80%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 1st column from right. */
@@ -182,7 +209,8 @@
     float: right;
     width: 20%;
     margin-right: 0%;
-    margin-left: -20%;
+    margin-left: -100%;
+    *margin-left: -99.9%;
   }
 
   /* Span 1 column, starting in 5th column from right. */
@@ -191,5 +219,6 @@
     width: 20%;
     margin-right: 80%;
     margin-left: -100%;
+    *margin-left: -99.9%;
   }
 }
