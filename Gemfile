@@ -6,5 +6,5 @@ group :frontend do
   # Build compass sprites faster with oily_png.
   gem 'oily_png',       '~> 1.1'
   gem 'sass',           '~> 3.3'
-  gem 'zen-grids',      '>= 2.0.0.beta.2'
+  gem 'zen-grids',      '>= 2.0.0.beta.3'
 end
