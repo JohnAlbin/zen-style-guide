@@ -20,15 +20,27 @@ To learn more about Compass, visit: http://compass-style.org
 DEVELOPING WITH SASS AND COMPASS
 --------------------------------
 
+Zen 7.x-5.0 was developed with the latest version of Sass and Compass (at the
+time!) Newer versions are not compatible with Zen's Sass files. To ensure you
+are using the correct version of Sass and Compass, you will need to use the
+"bundle" command which will read Zen's Gemfile to ensure the proper versions are
+used when compiling your CSS. To install the correction versions of Sass and
+Compass, go to the root directory of your sub-theme and type:
+
+  bundle install
+
+You will also need to prefix any compass commands with "bundle exec". For
+example, type "bundle exec compass compile" instead of just "compass compile".
+
 To automatically generate the CSS versions of the scss while you are doing theme
 development, you'll need to tell Compass to "watch" the sass directory so that
 any time a .scss file is changed it will automatically place a generated CSS
 file into your sub-theme's css directory:
 
-  compass watch <path to your sub-theme's directory>
+  bundle exec compass watch <path to your sub-theme's directory>
 
   If you are already in the root of your sub-theme's directory, you can simply
-  type:  compass watch
+  type:  bundle exec compass watch
 
 While using generated CSS with Firebug, the line numbers it reports will be
 wrong since it will be showing the generated CSS file's line numbers and not the
@@ -48,10 +60,10 @@ will only generate CSS for .scss files that have recently changed; in order to
 force it to regenerate all the CSS files, you can use the Compass' clean command
 to delete all the generated CSS files.
 
-- Delete all CSS files by running: compass clean
+- Delete all CSS files by running: bundle exec compass clean
 - Edit the config.rb file in your theme's directory and uncomment this line by
   deleting the "#" from the beginning:
     #environment = :production
-- Regenerate all the CSS files by running: compass compile
+- Regenerate all the CSS files by running: bundle exec compass compile
 
 And don't forget to turn on Drupal's CSS aggregation. :-)
