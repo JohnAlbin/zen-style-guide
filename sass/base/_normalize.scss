@@ -132,11 +132,14 @@ template {
 
 a:link {
 }
+
 a:visited {
 }
+
 a:hover,
 a:focus {
 }
+
 a:active {
 }
 
@@ -438,7 +441,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  // The value of $font-monospace ends with ", serif".
+  font-family: $font-monospace;
   @if support-legacy-browser(ie, "6") {
     _font-family: 'courier new', monospace;
   }
