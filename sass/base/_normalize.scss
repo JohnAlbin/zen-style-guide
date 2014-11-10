@@ -369,28 +369,25 @@ sub {
 /* Embedded content
    ========================================================================== */
 
-@if support-legacy-browser(ie, "10") {
-  /**
-   * Remove border when inside `a` element in IE 8/9/10.
-   */
-
-  img {
+img {
+  @if support-legacy-browser(ie, "10") {
+   /* Remove border when inside `a` element in IE 8/9/10. */
     border: 0;
-    @if support-legacy-browser(ie, "7") {
-      /* Improve image quality when scaled in IE 7. */
-      -ms-interpolation-mode: bicubic;
-    }
+  }
+  @if support-legacy-browser(ie, "7") {
+    /* Improve image quality when scaled in IE 7. */
+    -ms-interpolation-mode: bicubic;
+  }
 
-    /* Suppress the space beneath the baseline */
-    /* vertical-align: bottom; */
+  /* Suppress the space beneath the baseline */
+  /* vertical-align: bottom; */
 
-    /* Responsive images */
-    max-width: 100%;
-    height: auto;
-    @if support-legacy-browser(ie, "8") {
-      /* Correct IE 8 not scaling image height when resized. */
-      width: auto;
-    }
+  /* Responsive images */
+  max-width: 100%;
+  height: auto;
+  @if support-legacy-browser(ie, "8") {
+    /* Correct IE 8 not scaling image height when resized. */
+    width: auto;
   }
 }
 
