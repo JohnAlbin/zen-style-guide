@@ -15,33 +15,33 @@
  *       @see http://snook.ca/archives/html_and_css/no_css_reset/
  */
 
+// To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+// so that the line height of our base font becomes the basic unit of vertical
+// measurement. We use multiples of that unit to set the top and bottom margins
+// for our block level elements and to set the line heights of any fonts. For
+// more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+//
+// Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+// and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
+// body `font-size` is set using `em` units.
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  /**
-   * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
-   * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
-   * body `font-size` is set using `em` units.
-   */
-
-  @include establish-baseline();
-}
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
+@include establish-baseline();
 
 html {
-  font-family: $base-font-family; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
   // Show a background image that can be used to debug your alignments.
   // @include debug-vertical-alignment();
+  font-family: $font-body; /* 1 */
+  // Prevent iOS text size adjust after orientation change, without disabling
+  // user zoom.
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  // On short pages, we want any background gradients to fill the entire height
+  // of the browser.
+  min-height: 100%;
 }
 
 /**
- * Remove default margin.
+ * Remove default margin and padding.
  */
 
 body {
@@ -84,9 +84,9 @@ audio,
 canvas,
 progress,
 video {
-  @if support-legacy-browser(ie, "9") {
+  @if support-legacy-browser(ie, '9') {
     display: inline-block; /* 1 */
-    @if support-legacy-browser(ie, "7") {
+    @if support-legacy-browser(ie, '7') {
       *display: inline;
       *zoom: 1;
     }
@@ -104,7 +104,7 @@ audio:not([controls]) {
   height: 0;
 }
 
-@if support-legacy-browser(ie, "10") {
+@if support-legacy-browser(ie, '10') {
   /**
    * Address `[hidden]` styling not present in IE 8/9/10.
    */
@@ -122,18 +122,100 @@ template {
   display: none;
 }
 
+/* Headings
+   ========================================================================== */
+
+// Headings
+//
+// All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>,
+// are available. <code>%h1</code> through <code>%h6</code> classes are also
+// available, for when you want to match the font styling of a heading but still
+// want your text to be displayed inline.
+//
+// Markup: heading.html
+//
+// Styleguide: base.heading
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1,
+%h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  @include adjust-font-size-to( 2 * $base-font-size );
+
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  @include leader(1);
+  @include trailer(1);
+}
+
+h2,
+%h2 {
+  @include adjust-font-size-to( 1.5 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
+}
+
+h3,
+%h3 {
+  @include adjust-font-size-to( 1.17 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
+}
+
+h4,
+%h4 {
+  @include adjust-font-size-to( 1 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
+}
+
+h5,
+%h5 {
+  @include adjust-font-size-to( 0.83 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
+}
+
+h6,
+%h6 {
+  @include adjust-font-size-to( 0.67 * $base-font-size );
+  @include leader(1);
+  @include trailer(1);
+}
+
 /* Links
    ========================================================================== */
 
-/**
- * The order of link states are based on Eric Meyer's article:
- * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
- */
+// Links
+//
+// Hyperlinks are used to allow the user to navigate to other resources or to
+// download a resource.
+//
+// The order of link states are based on Eric Meyer's article:
+// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+//
+// Markup: link.html
+//
+// :visited - A link that has already been visited.
+// :hover   - A link that is being hovered over.
+// :focus   - A link that has been given keyboard focus.
+// :active  - A link that is being actively clicked.
+//
+// Styleguide: base.link
 
-a:link {
+:link,
+%link {
+
+  @if support-legacy-browser(ie, '10') {
+    // Remove the gray background color from active links in IE 10.
+    background-color: transparent;
+  }
 }
 
-a:visited {
+:visited {
 }
 
 a:hover,
@@ -143,159 +225,384 @@ a:focus {
 a:active {
 }
 
-@if support-legacy-browser(ie, "10") {
-  /**
-   * Remove the gray background color from active links in IE 10.
-   */
-
-  a {
-    background-color: transparent;
-  }
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
+// Improve readability by removing focus styles when also mouse hovered in all browsers.
 a:active,
 a:hover {
   outline: 0;
 }
 
+/* Grouping content
+   ========================================================================== */
+
+// Grouping content
+//
+// Weight: 1
+//
+// Styleguide: base.grouping
+
+// Blockquotes
+//
+// For quoting blocks of content from another source within your document. Wrap
+// <code>&lt;blockquote&gt;</code> around any <abbr
+// title="HyperText Markup Language">HTML</abbr> as the quote. For straight
+// quotes, we recommend a <code>&lt;p&gt;</code>.
+//
+// Optionally, add a <code>&lt;footer&gt;</code> to identify the source of the
+// quote. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
+//
+// Markup: grouping-blockquote.html
+//
+// Styleguide: base.grouping.blockquote
+
+blockquote {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  // Also indent the quote on both sides.
+  @include output-rhythm(margin, rhythm(1) $indent-amount);
+}
+
+// Figures
+//
+// The element can thus be used to annotate illustrations, diagrams, photos,
+// code listings, etc.
+//
+// Optionally, a &lt;figcaption&gt; element inside the &lt;figure&gt; represents
+// the caption of the figure.
+//
+// Markup: grouping-figure.html
+//
+// Styleguide: base.grouping.figure
+
+figure {
+  // Address margin not present in IE 8/9 and Safari.
+  @include output-rhythm(margin, rhythm(1) 0);
+}
+
+// Horizontal rule
+//
+// The hr element represents a paragraph-level thematic break, e.g. a scene
+// change in a story, or a transition to another topic within a section of a
+// reference book.
+//
+// Markup: grouping-hr.html
+//
+// Styleguide: base.grouping.hr
+
+hr {
+  // Address differences between Firefox and other browsers.
+  @include box-sizing(content-box);
+  height: 0;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  @include output-rhythm(margin, rhythm(1) 0);
+}
+
+// Body copy
+//
+// The default <code>font-size</code> and <code>line-height</code> are applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a top and bottom margin.</p>
+//
+// Markup: grouping-p.html
+//
+// Styleguide: base.grouping.p
+
+p,
+pre {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  @include output-rhythm(margin, rhythm(1) 0);
+}
+
+// Preformatted text
+//
+// The &lt;pre&gt; tag represents a block of preformatted text, such as
+// fragments of computer code, ASCII art, etc.
+//
+// Markup: grouping-pre.html
+//
+// Styleguide: base.grouping.pre
+
+%monospace {
+  // Address odd `em`-unit font size rendering in all browsers.
+  // The value of $font-monospace ends with ", serif".
+  font-family: $font-monospace;
+  @if support-legacy-browser(ie, '6') {
+    _font-family: 'courier new', monospace;
+  }
+  font-size: 1em;
+}
+
+pre {
+  @extend %monospace;
+  // Contain overflow in all browsers.
+  overflow: auto;
+}
+
+// Lists
+//
+// Styleguide: base.grouping.lists
+
+// Unordered list
+//
+// A list of items in which the order does <em>not</em> explicitly matter.
+//
+// Markup: grouping-lists-ul.html
+//
+// Styleguide: base.grouping.lists.ul
+
+// Ordered list
+//
+// A list of items in which the order <em>does</em> explicitly matter.
+//
+// Markup: grouping-lists-ol.html
+//
+// Styleguide: base.grouping.lists.ol
+
+// Description list
+//
+// A list of terms with their associated descriptions.
+//
+// Markup: grouping-lists-dl.html
+//
+// Styleguide: base.grouping.lists.dl
+
+dl,
+menu,
+ol,
+ul {
+  // Address margins set differently in IE 6/7.
+  @include output-rhythm(margin, rhythm(1) 0);
+}
+
+/**
+ * Turn off margins on nested lists.
+ */
+
+ol,
+ul {
+  ol,
+  ul {
+    margin: 0;
+  }
+}
+
+dd {
+  margin: 0 0 0 $indent-amount; /* LTR */
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 $indent-amount; /* LTR */
+}
+
+@if support-legacy-browser(ie, '7') {
+  /**
+   * Correct list images handled incorrectly in IE 7.
+   */
+
+  nav ul,
+  nav ol {
+    list-style: none;
+    list-style-image: none;
+  }
+}
+
 /* Text-level semantics
    ========================================================================== */
 
-/**
- * To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
- * so that the line height of our base font becomes the basic unit of vertical
- * measurement. We use multiples of that unit to set the top and bottom margins
- * for our block level elements and to set the line heights of any fonts.
- * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
- */
+// Text-level semantics
+//
+// Markup: text.html
+//
+// Weight: 1
+//
+// Styleguide: base.text
 
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
+// Abbreviation / Acroynym
+//
+// Stylized implementation of HTML's <code>&lt;abbr&gt;</code> element for
+// abbreviations and acronyms to show the expanded version on hover.
+// Abbreviations with a <code>title</code> attribute have a light dotted bottom
+// border and a help cursor on hover, providing additional context on hover.
+//
+// Markup: text-abbr.html
+//
+// Styleguide: base.text.abbr
 
 abbr[title] {
+  // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
   border-bottom: 1px dotted;
 }
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
+// Bold
+//
+// For emphasizing a snippet of text with a heavier font-weight. Either the
+// &lt;strong&gt; tag or the &lt;b&gt; tag can be used.
+//
+// Feel free to use <code>&lt;b&gt;</code> in HTML5. <code>&lt;b&gt;</code> is
+// meant to highlight words or phrases without conveying additional importance.
+//
+// Markup: text-b.html
+//
+// Styleguide: base.text.b
 
 b,
 strong {
+  // Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
   font-weight: bold;
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  /**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
+// Cite
+//
+// The cite element represents a reference to a creative work.
+//
+// Markup: text-cite.html
+//
+// Styleguide: base.text.cite
 
-  blockquote {
-    /* Also indent the quote on both sides. */
-    @include output-rhythm(margin, rhythm(1) $indent-amount);
-  }
+cite {
 }
 
-/**
- * Address styling not present in Safari and Chrome.
- */
+// Code
+//
+// The <code>code</code> element represents a fragment of computer code. The
+// <code>var</code> element represents a variable. The <code>samp</code> element
+// represents (sample) output from a program or computing system. The
+// <code>kbd</code> element represents user input (typically keyboard input.)
+//
+// Markup: text-code.html
+//
+// Styleguide: base.text.code
+
+code,
+kbd,
+samp,
+var {
+  @extend %monospace;
+}
+
+// Deleted text
+//
+// For indicating blocks of text that have been deleted use the
+// <code>&lt;del&gt;</code> tag.
+//
+// Markup: text-del.html
+//
+// Styleguide: base.text.del
+
+del {
+}
+
+// Definition
+//
+// The dfn element represents the defining instance of a term.
+//
+// Markup: text-dfn.html
+//
+// Styleguide: base.text.dfn
 
 dfn {
+  // Address styling not present in Safari and Chrome.
   font-style: italic;
 }
 
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
+// Italics
+//
+// For emphasizing a snippet of text with italics. Either the &lt;em&gt; tag or
+// the &lt;i&gt; tag can be used.
+//
+// Feel free to use <code>&lt;i&gt;</code> in HTML5. <code>&lt;i&gt;</code> is
+// meant to convey voice, technical terms, etc.
+//
+// Markup: text-i.html
+//
+// Styleguide: base.text.i
 
-h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  @if not $strict-normalize or support-legacy-browser(ie, "7") {
-    @include adjust-font-size-to( $h1-font-size );
-  }
-  @else {
-    font-size: if($rhythm-unit == "px", $h1-font-size, ($h1-font-size / $base-font-size)#{$rhythm-unit});
-  }
-
-  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  @include leader(1, $h1-font-size);
-  @include trailer(1, $h1-font-size);
+i,
+em {
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  h2 {
-    @include adjust-font-size-to( $h2-font-size );
-    @include leader(1, $h2-font-size);
-    @include trailer(1, $h2-font-size);
-  }
+// Inserted text
+//
+// For indicating additions to the document use the <code>&lt;ins&gt;</code>
+// tag.
+//
+// Markup: text-ins.html
+//
+// Styleguide: base.text.ins
 
-  h3 {
-    @include adjust-font-size-to( $h3-font-size );
-    @include leader(1, $h3-font-size);
-    @include trailer(1, $h3-font-size);
-  }
-
-  h4 {
-    @include adjust-font-size-to( $h4-font-size );
-    @include leader(1, $h4-font-size);
-    @include trailer(1, $h4-font-size);
-  }
-
-  h5 {
-    @include adjust-font-size-to( $h5-font-size );
-    @include leader(1, $h5-font-size);
-    @include trailer(1, $h5-font-size);
-  }
-
-  h6 {
-    @include adjust-font-size-to( $h6-font-size );
-    @include leader(1, $h6-font-size);
-    @include trailer(1, $h6-font-size);
-  }
+ins {
 }
 
-@if support-legacy-browser(ie, "9") {
-  /**
-   * Address styling not present in IE 8/9.
-   */
+// Marked text
+//
+// For highlighting a run of text due to its relevance in another context, use
+// the <code>&lt;mark&gt;</code> tag.
+//
+// Markup: text-mark.html
+//
+// Styleguide: base.text.mark
 
+@if support-legacy-browser(ie, '9') {
   mark {
+    // Address styling not present in IE 8/9.
     background: #ff0;
     color: #000;
   }
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  /**
-   * Set 1 unit of vertical rhythm on the top and bottom margin.
-   */
+// Quote
+//
+// The <code>q</code> element represents an inline quote from another source.
+// Longer quotes should use the <code>blockquote</code> element.
+//
+// Markup: text-q.html
+//
+// Styleguide: base.text.q
 
-  p,
-  pre {
-    @include output-rhythm(margin, rhythm(1) 0);
-  }
+q {
 }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
+// Strikethrough text
+//
+// For indicating blocks of text that are no longer relevant use the
+// <code>&lt;s&gt;</code> tag.
+//
+// Markup: text-s.html
+//
+// Styleguide: base.text.s
+
+s {
+}
+
+// Small text
+//
+// For de-emphasizing inline or blocks of text, use the
+// <code>&lt;small&gt;</code> tag to set text at 80% the size of the parent.
+//
+// Markup: text-small.html
+//
+// Styleguide: base.text.small
 
 small {
+  // Address inconsistent and variable font size in all browsers.
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+// Superscript / Subscript
+//
+// The &lt;sup&gt; tag represents a superscript and the &lt;sub&gt; tag
+// represents a subscript.
+//
+// Markup: text-sub.html
+//
+// Styleguide: base.text.sub
 
 sub,
 sup {
+  // Prevent `sub` and `sup` affecting `line-height` in all browsers.
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -310,151 +617,83 @@ sub {
   bottom: -0.25em;
 }
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  /* Lists
-     ========================================================================== */
+// Underlined text
+//
+// To underline text use the <code>&lt;u&gt;</code> tag. Not recommended since
+// underlines are used by web browsers to style hyperlinks.
+//
+// Markup: text-u.html
+//
+// Styleguide: base.text.u
 
-  /**
-   * Address margins set differently in IE 6/7.
-   */
-
-  dl,
-  menu,
-  ol,
-  ul {
-    @include output-rhythm(margin, rhythm(1) 0);
-  }
-
-  @if not $strict-normalize {
-    /**
-     * Turn off margins on nested lists.
-     */
-
-    ol,
-    ul {
-      ol,
-      ul {
-        margin: 0;
-      }
-    }
-  }
-
-  dd {
-    margin: 0 0 0 $indent-amount; /* LTR */
-  }
-
-  /**
-   * Address paddings set differently in IE 6/7.
-   */
-
-  menu,
-  ol,
-  ul {
-    padding: 0 0 0 $indent-amount; /* LTR */
-  }
-}
-
-@if support-legacy-browser(ie, "7") {
-  /**
-   * Correct list images handled incorrectly in IE 7.
-   */
-
-  nav ul,
-  nav ol {
-    list-style: none;
-    list-style-image: none;
-  }
+u {
 }
 
 /* Embedded content
    ========================================================================== */
 
+// Embedded content
+//
+// Weight: 2
+//
+// Styleguide: base.embedded
+
+// Image
+//
+// An &lt;img&gt; tag represents an image.
+//
+// Markup: embedded-img.html
+//
+// Styleguide: base.embedded.img
+
 img {
-  @if support-legacy-browser(ie, "10") {
-   /* Remove border when inside `a` element in IE 8/9/10. */
+  @if support-legacy-browser(ie, '10') {
+    /* Remove border when inside `a` element in IE 8/9/10. */
     border: 0;
   }
-  @if support-legacy-browser(ie, "7") {
+  @if support-legacy-browser(ie, '7') {
     /* Improve image quality when scaled in IE 7. */
     -ms-interpolation-mode: bicubic;
   }
+}
 
+img,
+svg {
   /* Suppress the space beneath the baseline */
   /* vertical-align: bottom; */
 
   /* Responsive images */
   max-width: 100%;
   height: auto;
-  @if support-legacy-browser(ie, "8") {
+  @if support-legacy-browser(ie, '8') {
     /* Correct IE 8 not scaling image height when resized. */
     width: auto;
   }
 }
 
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
+// Scalable vector
+//
+// A &lt;svg&gt; tag represents an image encoded as a Scalable Vector Graphic.
+//
+// Markup: embedded-svg.html
+//
+// Styleguide: base.embedded.svg
 
 svg:not(:root) {
+  // Correct overflow not hidden in IE 9/10/11.
   overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  @include output-rhythm(margin, rhythm(1) 0);
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-  @include box-sizing(content-box);
-  height: 0;
-  border: 1px solid #666;
-  padding-bottom: -1px;
-  @include output-rhythm(margin, rhythm(1) 0);
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  // The value of $font-monospace ends with ", serif".
-  font-family: $font-monospace;
-  @if support-legacy-browser(ie, "6") {
-    _font-family: 'courier new', monospace;
-  }
-  font-size: 1em;
 }
 
 /* Forms
    ========================================================================== */
 
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
+// Forms
+//
+// Weight: 2
+//
+// Styleguide: base.forms
 
-@if support-legacy-browser(ie, "7") {
+@if support-legacy-browser(ie, '7') {
   /**
    * Correct margin displayed oddly in IE 6/7.
    */
@@ -482,8 +721,8 @@ textarea {
   color: inherit; /* 1 */
   font: inherit; /* 2 */
   margin: 0; /* 3 */
-  @if support-legacy-browser(ie, "7") {
-    *font-family: $base-font-family; /* 4 */
+  @if support-legacy-browser(ie, '7') {
+    *font-family: $font-body; /* 4 */
     *vertical-align: middle; /* 5 */
   }
   max-width: 100%; /* 6 */
@@ -511,36 +750,6 @@ select {
 }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
- *    Known issue: inner spacing remains in IE 6.
- */
-
-button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-  @if support-legacy-browser(ie, "7") {
-    *overflow: visible; /* 4 */
-  }
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
  * Remove inner padding and border in Firefox 4+.
  */
 
@@ -550,34 +759,98 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+// Buttons
+//
+// Buttons built with the &lt;button&gt; tag are the most flexible for styling
+// purposes. But &lt;input&gt; tags with <code>type</code> set to
+// <code>submit</code>, <code>image</code>, <code>reset</code>, or
+// <code>button</code> are also supported.
+//
+// Markup: forms-button.html
+//
+// Styleguide: base.forms.button
+
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
  */
 
-input {
-  line-height: normal;
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  @extend %button;
+  -webkit-appearance: button; /* 2 */
 }
 
-@if support-legacy-browser(ie, "10") {
-  /**
-   * It's recommended that you don't attempt to style these elements.
-   * Firefox's implementation doesn't respect box-sizing, padding, or width.
-   *
-   * 1. Address box sizing set to `content-box` in IE 8/9/10.
-   * 2. Remove excess padding in IE 8/9/10.
-   * 3. Remove excess padding in IE 7.
-   *    Known issue: excess padding remains in IE 6.
-   */
+// Inputs
+//
+// Input fields are mostly text-based inputs that include the HTML5 types:
+// <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>,
+// <code>email</code>, <code>password</code>, <code>date</code>,
+// <code>time</code>, <code>number</code>, <code>range</code>,
+// <code>color</code>, and <code>file</code>.
+//
+// Markup: forms-input.html
+//
+// Styleguide: base.forms.input
 
-  input[type="checkbox"],
-  input[type="radio"] {
+input {
+  // Address Firefox 4+ setting `line-height` on `input` using `!important` in
+  // the UA stylesheet.
+  line-height: normal;
+
+  &[type="text"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="email"],
+  &[type="password"],
+  &[type="date"],
+  &[type="time"],
+  &[type="number"],
+  &[type="range"] {
+  }
+}
+
+// Checkboxes
+//
+// If an &lt;input&gt; element has the <code>type="checkbox"</code> attribute
+// set, the form field is displayed as a checkbox.
+//
+// Markup: forms-input-checkbox.html
+//
+// Styleguide: base.forms.input-checkbox
+
+// Radio buttons
+//
+// If an &lt;input&gt; element has the <code>type="radio"</code> attribute
+// set, the form field is displayed as a radio button.
+//
+// Markup: forms-input-radio.html
+//
+// Styleguide: base.forms.input-radio
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  @if support-legacy-browser(ie, '10') {
     @include box-sizing(border-box); /* 1 */
     padding: 0; /* 2 */
-    @if support-legacy-browser(ie, "7") {
-      *height: 13px; /* 3 */
-      *width: 13px; /* 3 */
-    }
+  }
+  @if support-legacy-browser(ie, '7') {
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
   }
 }
 
@@ -614,11 +887,17 @@ input[type="search"] {
   }
 }
 
-/**
- * Define consistent border, margin, and padding.
- */
+// Fieldsets
+//
+// The fieldset element groups a set of form fields, optionally under a common
+// name given by the legend element.
+//
+// Markup: forms-fieldset.html
+//
+// Styleguide: base.forms.fieldset
 
 fieldset {
+  // Define consistent border, margin, and padding.
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
@@ -628,11 +907,18 @@ fieldset {
   @include apply-side-rhythm-border(right,  $width: 1px, $lines: 0.625);
 }
 
-/**
- * Drupal-style form labels.
- */
+// Labels
+//
+// The &lt;label&gt; tag represents a caption of a form field. The label can be
+// associated with a specific form control by using the <code>for</code>
+// attribute or by putting the form control inside the label element itself.
+//
+// Markup: forms-label.html
+//
+// Styleguide: base.forms.label
 
 label {
+  // Drupal-style form labels.
   display: block;
   font-weight: bold;
 }
@@ -644,21 +930,30 @@ label {
  */
 
 legend {
-  @if support-legacy-browser(ie, "11") {
+  @if support-legacy-browser(ie, '11') {
     border: 0; /* 1 */
   }
   padding: 0; /* 2 */
-  @if support-legacy-browser(ie, "7") {
+  @if support-legacy-browser(ie, '7') {
     *margin-left: -7px; /* 3 */ /* LTR */
   }
 }
 
+// Select
+//
+// The &lt;select&gt; tag represents a form field for selecting amongst a set of
+// options.
+//
+// Markup: forms-select.html
+//
+// Styleguide: base.forms.select
+
 /**
- * Remove default vertical scrollbar in IE 8/9/10/11.
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
  */
 
-textarea {
-  overflow: auto;
+select {
 }
 
 /**
@@ -670,8 +965,31 @@ optgroup {
   font-weight: bold;
 }
 
+// Text areas
+//
+// The &lt;textarea&gt; tag represents a multiline plain text form field.
+//
+// Markup: forms-textarea.html
+//
+// Styleguide: base.forms.textarea
+
+textarea {
+  // Remove default vertical scrollbar in IE 8/9/10/11.
+  overflow: auto;
+}
+
 /* Tables
    ========================================================================== */
+
+// Tables
+//
+// The table element displays tabular data in rows, columns, and cells.
+//
+// Markup: table.html
+//
+// Weight: 2
+//
+// Styleguide: base.table
 
 table {
   /* Remove most spacing between table cells. */
