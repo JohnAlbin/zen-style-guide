@@ -133,7 +133,10 @@ $colors: add-color-scheme('design', 'Colors used by different parts of the desig
   link-visited:     color(purple),
   link-focus:       color(red),
 
-  border:           color(grey-light)
+  border:           color(grey-light),
+
+  tabs-border:      color(grey-light),
+  tabs-background:  color(white)
 ));
 $color-default-scheme:  'design';
 
@@ -157,7 +160,3 @@ $indent-amount: 2 * $base-font-size;
 
 // The height of the navigation container.
 $nav-height: 2 * $base-line-height;
-
-// Tab styling. @TODO Deprecate!
-$tabs-container-bg: #fff;
-$tabs-border: #bbb;

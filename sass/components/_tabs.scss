@@ -5,10 +5,10 @@
 /* Basic positioning styles shared by primary and secondary tabs. */
 %tabs {
   @extend %clearfix;
-  @include background-image(linear-gradient(bottom, $tabs-border 1px, transparent 1px));
+  @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
-  border-bottom: 1px solid $tabs-border \0/ie;
+  border-bottom: 1px solid color(tabs-border) \0/ie;
   margin: rhythm(1) 0;
   padding: 0 2px;
   white-space: nowrap;
@@ -34,14 +34,14 @@
   @extend %tabs__tab;
   @include border-top-radius(4px);
   @include single-text-shadow(#fff, 1px, 1px, 0);
-  border: 1px solid $tabs-border;
+  border: 1px solid color(tabs-border);
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
   border-bottom: 0 \0/ie;
 }
 .tabs-primary__tab.is-active {
   @extend .tabs-primary__tab;
-  border-bottom-color: $tabs-container-bg;
+  border-bottom-color: color(tabs-background);
 }
 
 // We use 3 placeholder styles to prevent @extend from going selector crazy.
