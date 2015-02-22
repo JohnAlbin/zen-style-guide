@@ -1,26 +1,24 @@
 /* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
 
-@if not $strict-normalize or support-legacy-browser(ie, "7") {
-  /* Lists
-     ========================================================================== */
+/* Lists
+   ========================================================================== */
 
-  /**
-   * Address margins set differently in IE 6/7.
-   */
+/**
+ * Address margins set differently in IE 6/7.
+ */
 
-  dd {
-    margin: 0 $indent-amount 0 0;
-  }
+dd {
+  margin: 0 $indent-amount 0 0;
+}
 
-  /**
-   * Address paddings set differently in IE 6/7.
-   */
+/**
+ * Address paddings set differently in IE 6/7.
+ */
 
-  menu,
-  ol,
-  ul {
-    padding: 0 $indent-amount 0 0;
-  }
+menu,
+ol,
+ul {
+  padding: 0 $indent-amount 0 0;
 }
 
 @if support-legacy-browser(ie, "7") {

@@ -1,9 +1,26 @@
-/**
- * @file
- * Buttons.
- */
+// Buttons
+//
+// Buttons built with the &lt;button&gt; tag are the most flexible for styling
+// purposes. But &lt;a&gt; tags and &lt;input&gt; tags with <code>type</code>
+// set to <code>submit</code>, <code>image</code>, <code>reset</code>, or
+// <code>button</code> are also supported.
+//
+// Markup: button.html
+//
+// Styleguide: components.button
 
-/* Buttons used by contrib modules like Media. */
-a.button {
+.button,
+%button {
   @include appearance(button);
+  // Improve usability and consistency of cursor style between image-type `input` and others.
+  cursor: pointer;
+  @if support-legacy-browser(ie, '7') {
+    // Remove inner spacing in IE 7 without affecting normal text inputs.
+    *overflow: visible;
+  }
+
+  // Re-set default cursor for disabled elements.
+  &[disabled] {
+    cursor: default;
+  }
 }
