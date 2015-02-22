@@ -9,6 +9,7 @@
 
 # Require any additional compass plugins installed on your system.
 require 'breakpoint'
+require 'sass-globbing'
 require 'zen-grids'
 
 # Location of the theme's resources.
