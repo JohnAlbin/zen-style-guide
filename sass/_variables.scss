@@ -1,6 +1,10 @@
-// =============================================================================
+//
 // Variables
-// =============================================================================
+//
+
+// The following Sass functions are required to generate some variables' values,
+// so we load them first.
+@import 'library/color';
 
 
 //
@@ -16,7 +20,7 @@
 // The browser usage threshold for features that cannot degrade gracefully.
 // A value of 100 means 100% of users would have to use the browser before it is
 // supported. A value of 0.01 (the default) means 1 user in 10,000.
-$critical-usage-threshold: 0.01;
+$critical-usage-threshold: 0.01 !default;
 
 // Set this to true to generate comments that will explain why a prefix was
 // included or omitted.
@@ -32,7 +36,7 @@ $browser-minimum-versions: (
   'ie':      null,
   'safari':  null,
   'opera':   null
-);
+) !default;
 
 //
 // Border-box support for IE 6/7
@@ -54,23 +58,20 @@ $browser-minimum-versions: (
 // Font faces, stacks and sizes.
 //
 
-// Set this to true to force normalize.scss output to exactly match normalize.css.
-$strict-normalize: false;
-
 // Compass' vertical_rhythm extension is a powerful tool to set up a vertical
 // rhythm for your entire page. You can see some of its mixins and functions in
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
 // The font size set on the root html element.
-$base-font-size:   16px;
+$base-font-size:    16px;
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height: 24px;
+$base-line-height:  24px;
 
 // The length unit in which to output vertical rhythm values.
 // Supported values: px, em, rem.
-$rhythm-unit: 'rem';
+$rhythm-unit:       'rem';
 
 
 // The following font family declarations use widely available fonts.
@@ -101,26 +102,62 @@ $font-body:       $verdana;
 $font-monospace:  $courier;
 
 
-//
 // Colors
 //
-
-
+// Use the <code>color()</code> function to add colors to CSS properties.
 //
+// Markup: sass-colors.html
+//
+// Styleguide: sass.colors
+
+// Define useful names of color values.
+$colors: add-default-color-scheme('The main colors of the site.', (
+  white:            #fff,
+  grey-light:       #ccc,
+  grey-dark:        #666,
+  black:            #000,
+
+  blue:             #0000ee,
+  purple:           #663399,
+  red:              #ff0000
+));
+
+// Define color variable names for functional uses.
+$colors: add-color-scheme('design', 'Colors used by different parts of the design.', (
+  body-bg:          color(white),
+
+  // Text colors.
+  body:             color(black),
+
+  link:             color(blue),
+  link-visited:     color(purple),
+  link-focus:       color(red),
+
+  border:           color(grey-light)
+));
+$color-default-scheme:  'design';
+
+
 // Breakpoints
 //
-
-
+// Use the <code>respond-to()</code> mixin to use named breakpoints.
 //
-// Misc
-//
+// Styleguide: sass.variables.breakpoints
+
+$breakpoints: (
+  'small'             : (444px, 'no-query' true),
+  'medium'            : (777px, 'no-query' true),
+  'medium-only'       : (777px 998px, 'no-query' true),
+  'large'             : (999px, 'no-query' true),
+  'larger'            : (1222px)
+);
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 2 * $base-font-size;
 
 // The height of the navigation container.
-$nav-height: 3em;
+$nav-height: 2 * $base-line-height;
 
-// Tab styling.
+// Tab styling. @TODO Deprecate!
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
