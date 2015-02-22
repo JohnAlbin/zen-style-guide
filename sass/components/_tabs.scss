@@ -6,11 +6,11 @@
 %tabs {
   @extend %clearfix;
   @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
-  /* IE 9 and earlier don't understand gradients. */
-  list-style: none;
-  border-bottom: 1px solid color(tabs-border) \0/ie;
   margin: rhythm(1) 0;
+  /* IE 9 and earlier don't understand gradients. */
+  border-bottom: 1px solid color(tabs-border) \0/ie;
   padding: 0 2px;
+  list-style: none;
   white-space: nowrap;
 }
 %tabs__tab {

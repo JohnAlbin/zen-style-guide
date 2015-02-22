@@ -1,22 +1,37 @@
-/**
- * @file
- * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
- *
- * When you turn on CSS aggregation at admin/config/development/performance, all
- * of these @include files will be combined into a single file.
- */
-
-/* Import Sass mixins, variables, Compass modules, etc. */
+// Colors and Sass
+//
+// Documentation for colors and Sass mixins and variables.
+//
+// Weight: -1
+//
+// Styleguide: sass
 @import "init";
 
-/* HTML element (SMACSS base) rules */
+// Base
+//
+// These are the base styles applied to HTML elements.
+//
+// Styleguide: base
 @import "base/fonts";
 @import "base/normalize";
 
-/* Layout rules */
+// Layouts
+//
+// The layout styling for major parts of the page that are included with the
+// theme. Note: some Panels layouts are included in other parts of the system
+// and are not documented.
+//
+// Styleguide: layouts
 @import "layouts/responsive";
 
-/* Component (SMACSS module) rules */
+// Components
+//
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+//
+// Weight: 1
+//
+// Styleguide: components
 @import "components/clearfix";
 
 @import "components/forms-drupal";
