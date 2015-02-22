@@ -1,0 +1,111 @@
+$colors               : ()        !default;
+$color-default-scheme : 'default' !default;
+
+// color($key, [$scheme])
+//
+// Returns a color value given a key word and optional color scheme. If the
+// named color is not in the given color scheme, the "default" color scheme will
+// be searched.
+//
+// Usage:
+// ```scss
+// .ex {
+//   background-color: color(body-bg);
+//   border: 1px solid color(border, 'grace');
+// }
+// ```
+//
+// $key     - The name of the requested color.
+// $scheme  - Optional color scheme to choose from; defaults to `$color-default-scheme`.
+//
+// Style guide: sass.functions.color
+@function color($key, $scheme: $color-default-scheme) {
+  @if map-has-key(map-get(map-get($colors, $scheme), 'names'), $key) {
+    @return map-get(map-get(map-get($colors, $scheme), 'names'), $key);
+  } @else if map-has-key(map-get(map-get($colors, 'default'), 'names'), $key) {
+    @return map-get(map-get(map-get($colors, 'default'), 'names'), $key);
+  } @else {
+    @warn 'The color "#{$key}" was not found in $colors map.';
+  }
+}
+
+// add-color-scheme($scheme, $description, $new-colors)
+//
+// Sets the colors for a new color scheme.
+//
+// Usage:
+// ```scss
+// $colors: add-color-scheme('design', 'Colors used by different parts of the design.', (
+//  link:             color(blue),
+//  link-visited:     color(blue-dark),
+//  link-focus:       color(red),
+// ));
+// ```
+//
+// $scheme      - The name of the new color scheme.
+// $description - A description of the color scheme.
+// $new-colors  - A Sass map containing the new colors.
+//
+// Style guide: sass.functions.color.add-color-scheme
+@function add-color-scheme($scheme, $description, $new-colors) {
+  $colors: map-merge($colors, ($scheme: ('description': $description, 'names': $new-colors)));
+  @return $colors;
+}
+
+// add-default-color-scheme($description, $new-colors)
+//
+// Sets the default scheme.
+//
+// Usage:
+// ```scss
+// $colors: add-default-color-scheme('The main colors of the site.', (
+//   white:            #fff,
+//   grey-dark:        #545d5d,
+//   blue:             #008fbf,
+// ));
+// ```
+//
+// $description - A description of the default color scheme.
+// $new-colors  - A Sass map containing the new colors.
+//
+// Style guide: sass.functions.color.add-default-color-scheme
+@function add-default-color-scheme($description, $new-colors) {
+  @return add-color-scheme('default', $description, $new-colors);
+}
+
+// kss-color-markup()
+//
+// Returns the HTML needed to display all colors in color() in a KSS style
+// guide. The parameters are used to specifiy the classes for various elements.
+//
+// $wrapper_class     - Defaults to 'kss-text'.
+// $title_class       - Defaults to 'kss-color__title'.
+// $description_class - Defaults to 'kss-color__description'.
+// $color_class       - Defaults to 'kss-color'.
+// $swatch_class      - Defaults to 'kss-color__swatch'.
+// $variable_class    - Defaults to 'kss-color__variable'.
+//
+// style guide: sass.functions.color.kss-color-markup
+
+@function kss-color-markup($wrapper_class: 'kss-text', $title_class: 'kss-color__title', $description_class: 'kss-color__description', $color_class: 'kss-color', $swatch_class: 'kss-color__swatch', $variable_class: 'kss-color__variable') {
+  $markup: '';
+
+  @if $wrapper_class {
+    $markup: '<div class="kss-text">';
+  }
+
+  @each $scheme, $map in $colors {
+    // Display the scheme name and description.
+    $markup: $markup + '<h3 class="' + $title_class + '">#{$scheme}</h3><p class="' + $description_class + '">#{map-get($map, 'description')}</p>';
+
+    // Display the colors in the scheme.
+    @each $color, $value in map-get($map, 'names') {
+      $markup: $markup + '<div class="' + $color_class + '"><span class="' + $swatch_class + '" style="background-color: #{$value}"></span><code class="' + $variable_class + '">color(#{$color})</code></div>';
+    }
+  }
+
+  @if $wrapper_class {
+    $markup: $markup + '</div>';
+  }
+  @return $markup;
+}
