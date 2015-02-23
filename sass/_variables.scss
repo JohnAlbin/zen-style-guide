@@ -95,11 +95,12 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$courier:         Courier, "Courier New", "DejaVu Sans Mono", "Ubuntu Mono", monospace, sans-serif;
+$menlo:           Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace;
 
 // Now create some variables using the font stacks we want on this site.
 $font-body:       $verdana;
-$font-monospace:  $courier;
+$font-monospace:  $menlo;
 
 
 // Colors
