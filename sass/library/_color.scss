@@ -87,11 +87,11 @@ $color-default-scheme : 'default' !default;
 //
 // style guide: sass.functions.color.kss-color-markup
 
-@function kss-color-markup($wrapper_class: 'kss-text', $title_class: 'kss-color__title', $description_class: 'kss-color__description', $color_class: 'kss-color', $swatch_class: 'kss-color__swatch', $variable_class: 'kss-color__variable') {
+@function kss-color-markup($wrapper_class: 'kss-style', $title_class: 'kss-color__title', $description_class: 'kss-color__description', $color_class: 'kss-color', $swatch_class: 'kss-color__swatch', $variable_class: 'kss-color__variable') {
   $markup: '';
 
   @if $wrapper_class {
-    $markup: '<div class="kss-text">';
+    $markup: '<div class="' + $wrapper_class + '">';
   }
 
   @each $scheme, $map in $colors {
