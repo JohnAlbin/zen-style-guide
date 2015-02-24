@@ -33,5 +33,10 @@
 /* Nested comments are indented. */
 .indented {
   /* Drupal core uses a 25px left margin. */
-  margin-left: $indent-amount; /* LTR */
+  margin-left: $indent-amount;
+
+  @include rtl() {
+    margin-left: 0;
+    margin-right: $indent-amount;
+  }
 }

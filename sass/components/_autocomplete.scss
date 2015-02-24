@@ -44,13 +44,21 @@
 .autocomplete__input,
 %autocomplete__input {
   background-image: image-url("throbber.gif");
-  background-position: 100% 2px; /* LTR */
+  background-position: 100% 2px;
   background-repeat: no-repeat;
+
+  @include rtl() {
+    background-position: 0% 2px;
+  }
 }
 
 .autocomplete__input.is-throbbing,
 %autocomplete__input-is-throbbing {
-  background-position: 100% -18px; /* LTR */
+  background-position: 100% -18px;
+
+  @include rtl() {
+    background-position: 0% -18px;
+  }
 }
 
 

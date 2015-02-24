@@ -5,9 +5,13 @@
 
 /* Wrapping link for logo. */
 .header__logo {
-  float: left; /* LTR */
+  float: left;
   margin: 0;
   padding: 0;
+
+  @include rtl() {
+    float: right;
+  }
 }
 
 /* Logo image. */
@@ -47,7 +51,11 @@
 
 /* The secondary menu (login, etc.) */
 .header__secondary-menu {
-  float: right; /* LTR */
+  float: right;
+
+  @include rtl() {
+    float: left;
+  }
 }
 
 /* Wrapper for any blocks placed in the header region. */

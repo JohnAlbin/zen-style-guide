@@ -162,3 +162,8 @@ $indent-amount: 2 * $base-font-size;
 
 // The height of the navigation container.
 $nav-height: 2 * $base-line-height;
+
+// Drupal RTL support: Rather than include a seperate *-rtl.css file, Zen 6 uses
+// Drupal 8's standard [dir="rtl"] selector for RTL langauge support. You can
+// turn off all RTL CSS by setting the following variable to false.
+$include-rtl: true;

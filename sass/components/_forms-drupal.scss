@@ -72,7 +72,11 @@ label.option {
 
 /* Drupal's default login form block. */
 #user-login-form {
-  text-align: left; /* LTR */
+  text-align: left;
+
+  @include rtl() {
+    text-align: right;
+  }
 }
 
 

@@ -4,17 +4,30 @@
  */
 
 .more-link {
-  text-align: right; /* LTR */
+  text-align: right;
+
+  @include rtl() {
+    text-align: left;
+  }
 }
 .more-help-link {
-  text-align: right; /* LTR */
+  text-align: right;
+
+  @include rtl() {
+    text-align: left;
+  }
 }
 .more-help-link a {
+  padding: 1px 0 1px 20px;
   background-image: inline-image("help.png");
   @if support-legacy-browser(ie, "7") {
     *background-image: image-url("help.png");
   }
-  background-position: 0 50%; /* LTR */
+  background-position: 0 50%;
   background-repeat: no-repeat;
-  padding: 1px 0 1px 20px; /* LTR */
+
+  @include rtl() {
+    padding: 1px 20px 1px 0;
+    background-position: 100% 50%;
+  }
 }

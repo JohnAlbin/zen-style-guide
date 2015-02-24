@@ -14,8 +14,12 @@
   white-space: nowrap;
 }
 %tabs__tab {
-  float: left; /* LTR */
+  float: left;
   margin: 0 3px;
+
+  @include rtl() {
+    float: right;
+  }
 }
 %tabs__tab-link {
   border: 1px solid #e9e9e9;

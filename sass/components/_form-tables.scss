@@ -11,9 +11,15 @@ table.sticky-header {
 
 form {
   th {
-    text-align: left; /* LTR */
-    padding-right: 1em; /* LTR */
     border-bottom: 3px solid #ccc;
+    padding-right: 1em;
+    text-align: left;
+
+    @include rtl() {
+      text-align: right;
+      padding-left: 1em;
+      padding-right: 0;
+    }
   }
   tbody {
     border-top: 1px solid #ccc;

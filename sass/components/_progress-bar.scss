@@ -10,6 +10,13 @@
   font-weight: bold;
 }
 
+.progress-bar--disabled,
+%progress-bar--disabled {
+  @include rtl() {
+    float: right;
+  }
+}
+
 .progress-bar__bar,
 %progress-bar__bar {
   margin: 0 0.2em;
@@ -27,24 +34,36 @@
 
 .progress-bar__percentage,
 %progress-bar__percentage {
-  float: right; /* LTR */
+  float: right;
+
+  @include rtl() {
+    float: left;
+  }
 }
 
 .progress-bar--ajax,
 %progress-bar--ajax {
-  display: inline-block; /* LTR */
+  display: inline-block;
+
+  @include rtl() {
+    float: right;
+  }
 }
 
 .progress-bar--ajax__throbber,
 %progress-bar--ajax__throbber {
   background: transparent image-url("throbber.gif") no-repeat 0px -18px;
-  float: left; /* LTR */
+  float: left;
   height: 15px;
   margin: 2px;
   width: 15px;
 
   tr & {
     margin: 0 2px;
+  }
+
+  @include rtl() {
+    float: right;
   }
 }
 
@@ -73,6 +92,10 @@
   .percentage {
     @extend %progress-bar__percentage;
   }
+}
+
+.progress-disabled {
+  @extend %progress-bar--disabled;
 }
 
 .ajax-progress {
