@@ -4,7 +4,7 @@
 
 .messages,
 %messages {
-  margin: rhythm(1) 0;
+  @include output-rhythm(margin, rhythm(1) 0);
   padding: 10px 10px 10px 50px;
   background-image: inline-image("message-24-ok.png");
   @if support-legacy-browser(ie, "7") {

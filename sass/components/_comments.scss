@@ -5,7 +5,7 @@
 
 /* Wrapper for the list of comments and its title. */
 .comments {
-  margin: rhythm(1) 0;
+  @include output-rhythm(margin, rhythm(1) 0);
 }
 
 .comments__title,      /* Comment section heading. */

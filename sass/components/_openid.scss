@@ -15,7 +15,7 @@
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
 .openid-link,
 .user-link {
-  margin-top: rhythm(1);
+  @include output-rhythm(margin-top, rhythm(1));
 }
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
@@ -28,5 +28,5 @@ html.js #user-login-form li.openid-link,
   }
 }
 #user-login ul {
-  margin: rhythm(1) 0;
+  @include output-rhythm(margin, rhythm(1) 0);
 }
