@@ -1,10 +1,13 @@
-/**
- * @file
- * Breadcrumb navigation.
- */
+// Breadcrumb navigation
+//
+// The path to the current page in the form of a list of links.
+//
+// Markup: breadcrumb.html
+//
+// Style guide: components.navigation.breadcrumb
 
-/* The path to the current page in the form of a list of links */
-.breadcrumb {
+.breadcrumb,
+%breadcrumb {
   ol {
     margin: 0;
     padding: 0;
