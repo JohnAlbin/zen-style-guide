@@ -1,10 +1,32 @@
-/**
- * @file
- * Autocomplete form field.
- *
- * @see autocomplete.js
- */
+// Autocomplete field
+//
+// Markup: autocomplete.html
+//
+// .is-throbbing - Waiting for search result.
+//
+// Style guide: components.forms.autocomplete
 
+
+/* Animated throbber */
+.autocomplete,
+%autocomplete {
+  background-image: image-url("throbber.gif");
+  background-position: 100% 2px;
+  background-repeat: no-repeat;
+
+  @include rtl() {
+    background-position: 0% 2px;
+  }
+}
+
+.autocomplete.is-throbbing,
+%autocomplete-is-throbbing {
+  background-position: 100% -18px;
+
+  @include rtl() {
+    background-position: 0% -18px;
+  }
+}
 
 /* Suggestion list. */
 .autocomplete__list-wrapper,
@@ -40,29 +62,17 @@
   color: #fff;
 }
 
-/* Animated throbber */
-.autocomplete__input,
-%autocomplete__input {
-  background-image: image-url("throbber.gif");
-  background-position: 100% 2px;
-  background-repeat: no-repeat;
-
-  @include rtl() {
-    background-position: 0% 2px;
-  }
-}
-
-.autocomplete__input.is-throbbing,
-%autocomplete__input-is-throbbing {
-  background-position: 100% -18px;
-
-  @include rtl() {
-    background-position: 0% -18px;
-  }
-}
-
 
 // Drupal selectors.
+html.js input {
+  &.form-autocomplete {
+    @extend %autocomplete;
+  }
+  &.throbbing {
+    @extend %autocomplete-is-throbbing;
+  }
+}
+
 #autocomplete {
   @extend %autocomplete__list-wrapper;
 
@@ -74,14 +84,5 @@
   }
   .selected {
     @extend %autocomplete__list-item-is-selected;
-  }
-}
-
-html.js input {
-  &.form-autocomplete {
-    @extend %autocomplete__input;
-  }
-  &.throbbing {
-    @extend %autocomplete__input-is-throbbing;
   }
 }
