@@ -1,0 +1,25 @@
+// Tables
+//
+// The table element displays tabular data in rows, columns, and cells.
+//
+// Markup: table.html
+//
+// Weight: 2
+//
+// Styleguide: base.table
+
+table {
+  /* Remove most spacing between table cells. */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* Prevent cramped-looking tables */
+  /* width: 100%; */
+  /* Add vertical rhythm margins. */
+  @include leader(1);
+  @include trailer(1);
+}
+
+td,
+th {
+  padding: 0;
+}
