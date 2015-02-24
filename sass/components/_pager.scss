@@ -8,6 +8,10 @@
   clear: both;
   padding: 0;
   text-align: center;
+
+  @media print {
+    display: none;
+  }
 }
 %pager__item {
   display: inline;

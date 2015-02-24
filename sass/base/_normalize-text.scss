@@ -20,6 +20,13 @@
 abbr[title] {
   // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
   border-bottom: 1px dotted;
+
+  @media print {
+    // Add visible title after abbreviations.
+    &:after {
+      content: " (" attr(title) ")";
+    }
+  }
 }
 
 // Bold

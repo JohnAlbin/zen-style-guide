@@ -208,3 +208,20 @@ $zen-auto-include-grid-item-base: false;
     }
   }
 }
+
+@media print {
+  .main-navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  .footer {
+    display: none;
+  }
+
+  /* Un-float the content. */
+  .main-content {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

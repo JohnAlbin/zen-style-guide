@@ -36,6 +36,11 @@
   &:visited {
     color: #000;
     text-decoration: none;
+
+    @media print {
+      // Prevent print link styling from overriding.
+      text-decoration: none !important;
+    }
   }
 
   &:hover,

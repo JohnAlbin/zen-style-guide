@@ -39,3 +39,25 @@ a:active,
 a:hover {
   outline: 0;
 }
+
+@media print {
+  // Underline all links.
+  :link,
+  :visited {
+    text-decoration: underline !important;
+  }
+
+  // Add visible URL after links.
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-weight: normal;
+    font-size: $base-font-size;
+    text-decoration: none !important;
+  }
+
+  // Only display useful links.
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+}

@@ -1,0 +1,19 @@
+// Page backgrounds
+//
+// It's sometimes useful to add background images to `body`, `.page`, `.main`,
+// and/or `.main-content` divs.
+//
+// Style guide: components.page
+
+@media print {
+
+  // Turn off any background colors or images.
+  body,
+  .page,
+  .main,
+  .main-content {
+    color: #000;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+}

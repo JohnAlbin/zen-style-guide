@@ -8,6 +8,10 @@
 
 %skip-link__wrapper {
   margin: 0;
+
+  @media print {
+    display: none;
+  }
 }
 
 %skip-link {
