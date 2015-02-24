@@ -55,7 +55,9 @@
 @import "components/more-link";
 @import "components/navbar";
 @import "components/no-wrap";
+@import "components/page";
 @import "components/pager";
+@import "components/print-none";
 @import "components/responsive-video";
 @import "components/side-menu";
 @import "components/skip-link";
@@ -64,6 +66,3 @@
 @import "components/visually-hidden";
 @import "components/watermark";
 @import "components/wireframes";
-
-/* @TODO: Refactor print states into their respective components. */
-@import "components/print";
