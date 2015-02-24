@@ -125,34 +125,34 @@ template {
 /* Headings
    ========================================================================== */
 
-@include "normalize-headings";
+@import "normalize-headings";
 
 /* Links
    ========================================================================== */
 
-@include "normalize-links";
+@import "normalize-links";
 
 /* Grouping content
    ========================================================================== */
 
-@include "normalize-grouping";
+@import "normalize-grouping";
 
 /* Text-level semantics
    ========================================================================== */
 
-@include "normalize-text";
+@import "normalize-text";
 
 /* Embedded content
    ========================================================================== */
 
-@include "normalize-embedded";
+@import "normalize-embedded";
 
 /* Forms
    ========================================================================== */
 
-@include "normalize-forms";
+@import "normalize-forms";
 
 /* Tables
    ========================================================================== */
 
-@include "normalize-tables";
+@import "normalize-tables";
