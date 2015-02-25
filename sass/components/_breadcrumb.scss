@@ -8,18 +8,26 @@
 
 .breadcrumb,
 %breadcrumb {
-  ol {
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   @media print {
     display: none;
   }
+}
+
+.breadcrumb__title,
+%breadcrumb__title {
+  @extend %visually-hidden;
+}
+
+.breadcrumb__list,
+%breadcrumb__list {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb__item,
+%breadcrumb__item {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
