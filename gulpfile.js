@@ -17,11 +17,10 @@ var gulp      = require('gulp'),
 // Build styleguide.
 gulp.task('styleguide', ['clean:styleguide', 'styleguide:markup'], $.shell.task([
     // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
-    'kss-node <%= source %> <%= destination %> --css ../css/styles.css'
+    'kss-node --config <%= config %>'
   ], {
     templateData: {
-      source:       theme + compass.sass,
-      destination:  styleguide
+      config: styleguide + 'config.json'
     }
   }
 ));
@@ -36,13 +35,14 @@ gulp.task('styleguide:markup', ['styleguide:sass-colors'], $.shell.task([
   ], {cwd: theme}
 ));
 
-
 // Lint JavaScript.
-gulp.task('lint:js', function () {
-  return gulp.src(theme + compass.js + '/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'));
-});
+gulp.task('lint:js', $.shell.task([
+    './node_modules/.bin/eslint ./'
+  ], {
+    cwd: __dirname,
+    ignoreErrors: true
+  }
+));
 
 // Lint Sass.
 gulp.task('lint:sass', function() {
@@ -67,7 +67,7 @@ gulp.task('styles:production', ['clean:css'], $.shell.task([
 ));
 
 // Watch for front-end changes and rebuild on the fly.
-gulp.task('watch', ['clean:css', 'watch:files'],
+gulp.task('watch', ['clean:css', 'watch:css', 'watch:js'],
   // This task cannot be used in a dependency, since this task won't ever end
   // due to "compass watch" never completing.
   $.shell.task(
@@ -75,8 +75,11 @@ gulp.task('watch', ['clean:css', 'watch:files'],
     {cwd: theme}
   )
 );
-gulp.task('watch:files', ['styleguide', 'lint:sass'], function() {
+gulp.task('watch:css', ['styleguide', 'lint:sass'], function() {
   return gulp.watch(theme + compass.sass + '/**/*.scss', ['styleguide', 'lint:sass']);
+});
+gulp.task('watch:js', ['styleguide', 'lint:sass'], function() {
+  return gulp.watch(theme + compass.js + '/**/*.js', ['lint:js']);
 });
 
 // Clean styleguide directory.

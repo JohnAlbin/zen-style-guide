@@ -1,0 +1,14 @@
+# The eslint command is told to search the following directories:
+# - ./
+#
+# Ignore the following paths inside those directories.
+#
+bower_components
+styleguide
+gulpfile.js
+
+# If more than one line matches a path, the last one takes precendent, so we
+# put these last.
+
+**/*.min.js
+**/vendor

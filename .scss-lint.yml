@@ -1,0 +1,54 @@
+linters:
+  ColorKeyword:
+    enabled: false
+  Comment:
+    enabled: false
+  Compass::*:
+    enabled: true # Disabled by default.
+  Compass::PropertyWithMixin:
+    ignore:
+      - 'inline-block' # Only needed for IE7/FF2 and earlier.
+  DeclarationOrder:
+    enabled: false
+  EmptyLineBetweenBlocks:
+    enabled: false
+    ignore_single_line_blocks: false
+  EmptyRule:
+    enabled: false
+  IdSelector:
+    enabled: false
+  Indentation:
+    enabled: false
+  MergeableSelector:
+    enabled: false
+    force_nesting: true
+  NameFormat:
+    enabled: false
+    convention: BEM
+  PropertySortOrder:
+    enabled: false
+  PropertySpelling:
+    enabled: false
+    extra_properties:
+      - some-experimental-property
+  QualifyingElement:
+    enabled: false
+  SelectorFormat:
+    enabled: false
+    convention: BEM
+  Shorthand:
+    enabled: false
+  SingleLinePerProperty:
+    allow_single_line_rule_sets: false
+  SpaceAfterComma:
+    enabled: false
+  SpaceAfterPropertyColon:
+    style: at_least_one_space
+  SpaceBetweenParens:
+    enabled: false
+  StringQuotes:
+    enabled: false
+  VendorPrefixes:
+    enabled: false
+  ZeroUnit:
+    enabled: false
