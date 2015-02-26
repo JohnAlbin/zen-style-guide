@@ -15,7 +15,6 @@ linters:
   MergeableSelector:
     force_nesting: true
   NameFormat:
-    enabled: false
     convention: BEM
   PropertySortOrder:
     enabled: false
