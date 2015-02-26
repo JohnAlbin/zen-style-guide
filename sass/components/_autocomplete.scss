@@ -74,6 +74,7 @@ html.js input {
   }
 }
 
+// Thid ID is set in autocomplete.js without a class attribute. :-(
 #autocomplete {
   @extend %autocomplete__list-wrapper;
 
