@@ -61,7 +61,7 @@
 %tabs__tab-link {
   @extend %tabs__tab-link-common;
   @include border-top-radius(4px);
-  @include transition(background-color 0.3s);
+  @include transition(background-color .3s);
   color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
@@ -123,7 +123,7 @@
 %tabs--secondary__tab-link {
   @extend %tabs__tab-link-common;
   @include border-radius(.75em);
-  @include transition(background-color 0.3s);
+  @include transition(background-color .3s);
   @include single-text-shadow(#fff, 1px, 1px, 0);
   background-color: #f2f2f2;
   color: #666;

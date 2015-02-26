@@ -46,8 +46,8 @@
     *background: image-url("draggable.png") no-repeat 6px 9px;
   }
   height: 13px;
-  margin: -0.4em 0.5em;
-  padding: 0.42em 0.5em;
+  margin: -.4em .5em;
+  padding: .42em .5em;
   width: 13px;
 }
 
@@ -67,21 +67,21 @@
 
 .drag__toggle-weight,
 %drag__toggle-weight {
-  font-size: 0.9em;
+  font-size: .9em;
 }
 
 .drag__indentation,
 %drag__indentation {
   float: left;
   height: 1.7em;
-  margin: -0.4em 0.2em -0.4em -0.4em;
-  padding: 0.42em 0 0.42em 0.6em;
+  margin: -.4em .2em -.4em -.4em;
+  padding: .42em 0 .42em .6em;
   width: 20px;
 
   @include rtl() {
     float: right;
-    margin: -0.4em -0.4em -0.4em 0.2em;
-    padding: 0.42em 0.6em 0.42em 0;
+    margin: -.4em -.4em -.4em .2em;
+    padding: .42em .6em .42em 0;
   }
 }
 

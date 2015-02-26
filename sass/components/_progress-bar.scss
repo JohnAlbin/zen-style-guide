@@ -19,7 +19,7 @@
 
 .progress-bar__bar,
 %progress-bar__bar {
-  margin: 0 0.2em;
+  margin: 0 .2em;
   border: 1px solid #666;
   @include border-radius(3px);
   background-color: #ccc;

@@ -19,8 +19,8 @@
 
 // The browser usage threshold for features that cannot degrade gracefully.
 // A value of 100 means 100% of users would have to use the browser before it is
-// supported. A value of 0.01 (the default) means 1 user in 10,000.
-$critical-usage-threshold: 0.01 !default;
+// supported. A value of .01 (the default) means 1 user in 10,000.
+$critical-usage-threshold: .01 !default;
 
 // Set this to true to generate comments that will explain why a prefix was
 // included or omitted.

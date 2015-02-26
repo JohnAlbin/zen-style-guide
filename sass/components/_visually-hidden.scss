@@ -1,11 +1,14 @@
-/**
- * Visually hidden
- *
- * Make an element visually hidden, but accessible.
- *
- * .visually-hidden--off        - Turns off the visually-hidden effect
- * .visually-hidden--focusable  - Makes an element visually hidden by default, but visible when focused.
- */
+// Visually hidden
+//
+// Make an element visually hidden, but accessible to screen readers, etc.
+//
+// Markup: visually-hidden.html
+//
+// .visually-hidden--off        - Turns off the visually-hidden effect.
+// .visually-hidden--focusable  - Makes an element visually hidden by default,
+//                                but visible when receiving focus.
+//
+// Style guide: components.visually-hidden
 
 .visually-hidden,
 %visually-hidden {

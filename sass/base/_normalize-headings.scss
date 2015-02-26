@@ -47,14 +47,14 @@ h4,
 
 h5,
 %h5 {
-  @include adjust-font-size-to( 0.83 * $base-font-size );
+  @include adjust-font-size-to( .83 * $base-font-size );
   @include leader(1);
   @include trailer(1);
 }
 
 h6,
 %h6 {
-  @include adjust-font-size-to( 0.67 * $base-font-size );
+  @include adjust-font-size-to( .67 * $base-font-size );
   @include leader(1);
   @include trailer(1);
 }
