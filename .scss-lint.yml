@@ -12,8 +12,6 @@ linters:
     ignore_single_line_blocks: false
   IdSelector:
     enabled: false
-  Indentation:
-    enabled: false
   MergeableSelector:
     enabled: false
     force_nesting: true

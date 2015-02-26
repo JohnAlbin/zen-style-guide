@@ -71,7 +71,7 @@
 .collapsible {
   @extend %collapsible-fieldset;
 
- .fieldset-legend {
+  .fieldset-legend {
     @extend %collapsible-fieldset__legend;
 
     .summary {
@@ -83,7 +83,7 @@
 .collapsed {
   @extend %collapsible-fieldset-is-collapsed;
 
- .fieldset-legend {
+  .fieldset-legend {
     @extend %collapsible-fieldset-is-collapsed__legend;
   }
 
