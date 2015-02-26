@@ -122,6 +122,7 @@ input {
   &[type="time"],
   &[type="number"],
   &[type="range"] {
+    // Add your styles.
   }
 }
 
@@ -260,16 +261,15 @@ legend {
 // The &lt;select&gt; tag represents a form field for selecting amongst a set of
 // options.
 //
+// Known limitation: by default, Chrome and Safari on OS X allow very limited
+// styling of `select`, unless a `border` property is set.
+//
 // Markup: forms-select.html
 //
 // Styleguide: base.forms.select
 
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
 select {
+  // Add your styles.
 }
 
 /**
