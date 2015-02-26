@@ -86,9 +86,11 @@
   .bar {
     @extend %progress-bar__bar;
   }
+
   .filled {
     @extend %progress-bar__fill;
   }
+
   .percentage {
     @extend %progress-bar__percentage;
   }

@@ -23,9 +23,11 @@
 .ok {
   @extend %status-ok;
 }
+
 .warning {
   @extend %status-warning;
 }
+
 .error {
   @extend %status-error;
 }

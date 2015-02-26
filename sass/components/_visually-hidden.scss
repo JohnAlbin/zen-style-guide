@@ -35,6 +35,7 @@
 .element-invisible {
   @extend %visually-hidden;
 }
+
 .element-focusable {
   @extend %visually-hidden--focusable;
 }

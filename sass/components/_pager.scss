@@ -13,6 +13,7 @@
     display: none;
   }
 }
+
 %pager__item {
   display: inline;
   padding: 0 .5em;
@@ -34,4 +35,3 @@
   @extend %pager__item;
   font-weight: bold;
 }
-

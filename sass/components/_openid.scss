@@ -1,4 +1,3 @@
-
 /**
  * OpenID
  *
@@ -17,6 +16,7 @@
 .user-link {
   @include output-rhythm(margin-top, rhythm(1));
 }
+
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -27,6 +27,7 @@ html.js #user-login-form li.openid-link,
     margin-right: -20px;
   }
 }
+
 #user-login ul {
   @include output-rhythm(margin, rhythm(1) 0);
 }

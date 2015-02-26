@@ -62,6 +62,7 @@ $zen-auto-include-grid-item-base: false;
     padding-top: $nav-height;
     position: relative;
   }
+
   .main-navigation {
     /* Move the navbar up inside .main's padding. */
     position: absolute;
@@ -134,15 +135,18 @@ $zen-auto-include-grid-item-base: false;
       .block {
         @include zen-grid-item-base();
       }
+
       /* Span 1 column, starting in the 1st column from left. */
       .block:nth-child(3n+1) {
         @include zen-grid-item(1, 1);
         @include zen-new-row();
       }
+
       /* Span 1 column, starting in the 2nd column from left. */
       .block:nth-child(3n+2) {
         @include zen-grid-item(1, 2);
       }
+
       /* Span 1 column, starting in the 3rd column from left. */
       .block:nth-child(3n) {
         @include zen-grid-item(1, 3);

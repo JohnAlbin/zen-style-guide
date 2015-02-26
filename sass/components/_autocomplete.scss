@@ -68,6 +68,7 @@ html.js input {
   &.form-autocomplete {
     @extend %autocomplete;
   }
+
   &.throbbing {
     @extend %autocomplete-is-throbbing;
   }
@@ -79,9 +80,11 @@ html.js input {
   ul {
     @extend %autocomplete__list;
   }
+
   li {
     @extend %autocomplete__list-item;
   }
+
   .selected {
     @extend %autocomplete__list-item-is-selected;
   }

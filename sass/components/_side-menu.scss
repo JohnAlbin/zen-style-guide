@@ -10,6 +10,7 @@
   }
   list-style-type: square;
 }
+
 .menu__item.is-expanded {
   list-style-image: inline-image("menu-expanded.png");
   @if support-legacy-browser(ie, "7") {
@@ -17,6 +18,7 @@
   }
   list-style-type: circle;
 }
+
 .menu__item.is-collapsed {
   list-style-image: inline-image("menu-collapsed.png");
   @if support-legacy-browser(ie, "7") {

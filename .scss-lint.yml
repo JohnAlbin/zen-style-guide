@@ -9,7 +9,6 @@ linters:
     ignore:
       - 'inline-block' # Only needed for IE7/FF2 and earlier.
   EmptyLineBetweenBlocks:
-    enabled: false
     ignore_single_line_blocks: false
   EmptyRule:
     enabled: false
