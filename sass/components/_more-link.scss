@@ -3,7 +3,8 @@
  * "More" links.
  */
 
-.more-link {
+.more-link,
+%more-link {
   text-align: right;
 
   @include rtl() {
@@ -11,15 +12,8 @@
   }
 }
 
-.more-help-link {
-  text-align: right;
-
-  @include rtl() {
-    text-align: left;
-  }
-}
-
-.more-help-link a {
+.more-link__help-icon,
+%more-link__help-icon {
   padding: 1px 0 1px 20px;
   background-image: inline-image("help.png");
   @if support-legacy-browser(ie, "7") {
@@ -31,5 +25,14 @@
   @include rtl() {
     padding: 1px 20px 1px 0;
     background-position: 100% 50%;
+  }
+}
+
+// Drupal selectors.
+.more-help-link {
+  @extend %more-link;
+
+  a {
+    @extend %more-link__help-icon;
   }
 }

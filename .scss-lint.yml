@@ -13,7 +13,6 @@ linters:
   IdSelector:
     enabled: false
   MergeableSelector:
-    enabled: false
     force_nesting: true
   NameFormat:
     enabled: false
