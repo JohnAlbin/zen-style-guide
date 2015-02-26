@@ -19,9 +19,21 @@ linters:
   PropertySortOrder:
     enabled: false
   PropertySpelling:
-    enabled: false
     extra_properties:
-      - some-experimental-property
+      - '*background'
+      - '*background-image'
+      - '*display'
+      - '*font-family'
+      - '_font-family'
+      - '*height'
+      - '*list-style-image'
+      - '*margin-left'
+      - '*margin-right'
+      - '*overflow'
+      - '*position'
+      - '*vertical-align'
+      - '*width'
+      - '*zoom'
   QualifyingElement:
     enabled: false
   SelectorFormat:
