@@ -27,15 +27,15 @@
   overflow: hidden;
   text-decoration: none;
 
-  &:focus,
-  &:hover {
-    text-decoration: none;
-  }
-
   @include rtl() {
     float: right;
     margin-right: -1em;
     margin-left: 0;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
   }
 }
 

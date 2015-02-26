@@ -54,10 +54,10 @@ figure {
 hr {
   // Address differences between Firefox and other browsers.
   @include box-sizing(content-box);
+  @include output-rhythm(margin, rhythm(1) 0);
   height: 0;
   border: 1px solid #666;
   padding-bottom: -1px;
-  @include output-rhythm(margin, rhythm(1) 0);
 }
 
 // Body copy

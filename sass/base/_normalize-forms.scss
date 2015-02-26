@@ -29,6 +29,7 @@ input,
 optgroup,
 select,
 textarea {
+  @include box-sizing(border-box); /* 6 */
   color: inherit; /* 1 */
   font: inherit; /* 2 */
   margin: 0; /* 3 */
@@ -37,7 +38,6 @@ textarea {
     *vertical-align: middle; /* 5 */
   }
   max-width: 100%; /* 6 */
-  @include box-sizing(border-box); /* 6 */
 }
 
 /**
@@ -183,8 +183,8 @@ input[type="number"]::-webkit-outer-spin-button {
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
   @include box-sizing(content-box); /* 2 */
+  -webkit-appearance: textfield; /* 1 */
 
   /**
    * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -208,14 +208,14 @@ input[type="search"] {
 // Styleguide: base.forms.fieldset
 
 fieldset {
-  // Define consistent border, margin, and padding.
-  margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
-  border-color: #c0c0c0;
   @include apply-side-rhythm-border(top,    $width: 1px, $lines: .35 );
   @include apply-side-rhythm-border(bottom, $width: 1px, $lines: .65 );
   @include apply-side-rhythm-border(left,   $width: 1px, $lines: .625);
   @include apply-side-rhythm-border(right,  $width: 1px, $lines: .625);
+  border-color: #c0c0c0;
+  // Define consistent border, margin, and padding.
+  margin: 0 2px;
 }
 
 // Labels

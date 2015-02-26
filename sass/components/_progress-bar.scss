@@ -19,9 +19,9 @@
 
 .progress-bar__bar,
 %progress-bar__bar {
+  @include border-radius(3px);
   margin: 0 .2em;
   border: 1px solid #666;
-  @include border-radius(3px);
   background-color: #ccc;
 }
 
@@ -52,18 +52,18 @@
 
 .progress-bar--ajax__throbber,
 %progress-bar--ajax__throbber {
-  background: transparent image-url("throbber.gif") no-repeat 0px -18px;
+  background: image-url("throbber.gif") no-repeat 0px -18px transparent;
   float: left;
   height: 15px;
   margin: 2px;
   width: 15px;
 
-  tr & {
-    margin: 0 2px;
-  }
-
   @include rtl() {
     float: right;
+  }
+
+  tr & {
+    margin: 0 2px;
   }
 }
 

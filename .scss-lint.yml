@@ -8,8 +8,6 @@ linters:
   Compass::PropertyWithMixin:
     ignore:
       - 'inline-block' # Only needed for IE7/FF2 and earlier.
-  DeclarationOrder:
-    enabled: false
   EmptyLineBetweenBlocks:
     enabled: false
     ignore_single_line_blocks: false
