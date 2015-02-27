@@ -1,7 +1,4 @@
-/**
- * @file
- * Side menus.
- */
+// Side menus
 
 .menu__item.is-leaf {
   list-style-image: inline-image('menu-leaf.png');
@@ -34,7 +31,7 @@
   }
 }
 
-/* The active item in a Drupal menu. */
+// The active item in a Drupal menu.
 .menu a.active {
   color: #000;
 }

@@ -9,14 +9,14 @@
 // Styleguide: base.table
 
 table {
-  /* Add vertical rhythm margins. */
+  // Add vertical rhythm margins.
   @include leader(1);
   @include trailer(1);
-  /* Remove most spacing between table cells. */
+  // Remove most spacing between table cells.
   border-collapse: collapse;
   border-spacing: 0;
-  /* Prevent cramped-looking tables */
-  /* width: 100%; */
+  // Prevent cramped-looking tables
+  // width: 100%;
 }
 
 td,

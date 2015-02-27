@@ -135,10 +135,7 @@ ul {
   @include output-rhythm(margin, rhythm(1) 0);
 }
 
-/**
- * Turn off margins on nested lists.
- */
-
+// Turn off margins on nested lists.
 ol,
 ul {
   ol,
@@ -155,10 +152,7 @@ dd {
   }
 }
 
-/**
- * Address paddings set differently in IE 6/7.
- */
-
+// Address paddings set differently in IE 6/7.
 menu,
 ol,
 ul {
@@ -169,11 +163,8 @@ ul {
   }
 }
 
+// Correct list images handled incorrectly in IE 7.
 @if support-legacy-browser(ie, '7') {
-  /**
-   * Correct list images handled incorrectly in IE 7.
-   */
-
   nav ul,
   nav ol {
     list-style: none;

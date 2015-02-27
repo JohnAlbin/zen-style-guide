@@ -1,6 +1,4 @@
-/**
- * Messages
- */
+// Messages
 
 .messages,
 %messages {
@@ -63,10 +61,11 @@
   list-style-image: none;
 }
 
-
+//
 // Drupal selectors.
+//
 
-/* Core/module installation error messages. */
+// Core/module installation error messages.
 .messages--error p.error {
   @extend %messages--error__text;
 }

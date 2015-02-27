@@ -1,10 +1,9 @@
-/**
- * @file
- * RTL companion for the styles.scss file.
- */
+//
+// RTL companion for the styles.scss file.
+//
 
-/* Import Sass mixins, variables, Compass modules, etc. */
+// Import Sass mixins, variables, Compass modules, etc.
 @import 'init';
 
-/* Layout rules */
+// Layout rules.
 @import 'layouts/responsive-rtl';

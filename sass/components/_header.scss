@@ -1,9 +1,6 @@
-/**
- * @file
- * Branding header.
- */
+// Branding header
 
-/* Wrapping link for logo. */
+// Wrapping link for logo.
 .header__logo {
   float: left;
   margin: 0;
@@ -14,23 +11,23 @@
   }
 }
 
-/* Logo image. */
+// Logo image.
 .header__logo-image {
   vertical-align: bottom;
 }
 
-/* Wrapper for website name and slogan. */
+// Wrapper for website name and slogan.
 .header__name-and-slogan {
   float: left;
 }
 
-/* The name of the website. */
+// The name of the website.
 .header__site-name {
   @extend %h1;
   margin: 0;
 }
 
-/* The link around the name of the website. */
+// The link around the name of the website.
 .header__site-link {
   &:link,
   &:visited {
@@ -49,12 +46,12 @@
   }
 }
 
-/* The slogan (or tagline) of a website. */
+// The slogan (or tagline) of a website.
 .header__site-slogan {
   margin: 0;
 }
 
-/* The secondary menu (login, etc.) */
+// The secondary menu (login, etc.)
 .header__secondary-menu {
   float: right;
 
@@ -63,8 +60,8 @@
   }
 }
 
-/* Wrapper for any blocks placed in the header region. */
+// Wrapper for any blocks placed in the header region.
 .header__region {
-  /* Clear the logo. */
+  // Clear the logo.
   clear: both;
 }

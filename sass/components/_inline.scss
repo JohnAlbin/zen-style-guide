@@ -1,7 +1,4 @@
-/**
- * @file
- * Inline styles.
- */
+// Inline styles
 
 .inline-field-label,
 %inline-field-label {
@@ -26,16 +23,17 @@
   padding: 0 1em 0 0;
 
   @include rtl() {
-    /* Bug in Safari causes display: inline to fail. */
+    // Bug in Safari causes display: inline to fail.
     display: inline-block;
     padding: 0 0 0 1em;
   }
 }
 
-
+//
 // Drupal selectors.
+//
 
-/* The inline field label used by the Fences module. */
+// The inline field label used by the Fences module.
 span.field-label {
   @extend %inline-field-label;
 }

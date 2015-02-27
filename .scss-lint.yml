@@ -3,8 +3,6 @@
 linters:
   ColorKeyword:
     enabled: false
-  Comment:
-    enabled: false
   Compass::*:
     enabled: true # Disabled by default.
   Compass::PropertyWithMixin:

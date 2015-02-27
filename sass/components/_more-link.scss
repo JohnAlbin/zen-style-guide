@@ -1,7 +1,4 @@
-/**
- * @file
- * "More" links.
- */
+// "More" links
 
 .more-link,
 %more-link {
@@ -28,7 +25,10 @@
   }
 }
 
+//
 // Drupal selectors.
+//
+
 .more-help-link {
   @extend %more-link;
 

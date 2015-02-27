@@ -7,7 +7,7 @@
 // Style guide: components.forms.autocomplete
 
 
-/* Animated throbber */
+// Animated throbber
 .autocomplete,
 %autocomplete {
   background-image: image-url('throbber.gif');
@@ -28,7 +28,7 @@
   }
 }
 
-/* Suggestion list. */
+// Suggestion list.
 .autocomplete__list-wrapper,
 %autocomplete__list-wrapper {
   border: 1px solid;

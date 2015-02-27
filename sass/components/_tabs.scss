@@ -17,7 +17,7 @@
   @extend %clearfix;
   @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
   @include output-rhythm(margin, rhythm(1) 0);
-  /* IE 9 and earlier don't understand gradients. */
+  // IE 9 and earlier don't understand gradients.
   border-bottom: 1px solid color(tabs-border) \0/ie;
   padding: 0 2px;
   list-style: none;
@@ -36,7 +36,7 @@
   margin: 0 3px;
   border: 1px solid color(tabs-border);
   border-bottom-color: transparent;
-  /* IE 9 and earlier don't understand gradients. */
+  // IE 9 and earlier don't understand gradients.
   border-bottom: 0 \0/ie;
 
   @include rtl() {
