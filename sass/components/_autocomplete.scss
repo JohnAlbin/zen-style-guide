@@ -74,7 +74,7 @@ html.js input {
   }
 }
 
-// Thid ID is set in autocomplete.js without a class attribute. :-(
+// scss-lint:disable IdSelector
 #autocomplete {
   @extend %autocomplete__list-wrapper;
 
@@ -90,3 +90,4 @@ html.js input {
     @extend %autocomplete__list-item-is-selected;
   }
 }
+// scss-lint:enable IdSelector

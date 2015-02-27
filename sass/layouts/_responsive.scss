@@ -217,10 +217,14 @@ $zen-auto-include-grid-item-base: false;
   }
 
   // Un-float the content.
-  .main-content {
-    float: none !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .sidebar-first,
+  .sidebar-second,
+  .two-sidebars {
+    .main-content {
+      float: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

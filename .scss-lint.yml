@@ -1,7 +1,7 @@
 # Documentation for the scss-lint Linters is available at:
 # https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
-  ColorKeyword:
+  ColorVariable:
     enabled: false
   Compass::*:
     enabled: true # Disabled by default.
@@ -10,8 +10,6 @@ linters:
       - 'inline-block' # Only needed for IE7/FF2 and earlier.
   EmptyLineBetweenBlocks:
     ignore_single_line_blocks: false
-  IdSelector:
-    enabled: false
   MergeableSelector:
     force_nesting: true
   NameFormat:
@@ -43,5 +41,3 @@ linters:
     allow_single_line_rule_sets: false # Allowed by default.
   SpaceAfterPropertyColon:
     style: at_least_one_space
-  VendorPrefixes:
-    enabled: false

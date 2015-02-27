@@ -48,7 +48,7 @@ a:hover {
   // Underline all links.
   :link,
   :visited {
-    text-decoration: underline !important;
+    text-decoration: underline;
   }
 
   // Add visible URL after links.
@@ -56,7 +56,7 @@ a:hover {
     content: ' (' attr(href) ')';
     font-weight: normal;
     font-size: $base-font-size;
-    text-decoration: none !important;
+    text-decoration: none;
   }
 
   // Only display useful links.
