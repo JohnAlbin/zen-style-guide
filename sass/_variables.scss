@@ -47,7 +47,7 @@ $browser-minimum-versions: (
 // - Install the box-sizing polyfill and set the variable below to
 //   the absolute path URL to the boxsizing.htc file.
 //   @see https://github.com/Schepp/box-sizing-polyfill
-//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+//   $box-sizing-polyfill-path: '/path/to/boxsizing.htc';
 // - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
 //   (use px for both or use % for both) and set:
 //   $box-sizing: content-box;
@@ -82,24 +82,26 @@ $rhythm-unit:       'rem';
 // find any of the fonts in the list.
 
 // Serif font stacks.
-$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
+$times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
+$georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
 
 // Sans-serif font stacks.
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$verdana:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+$tahoma:          Tahoma, Verdana, 'DejaVu Sans', sans-serif;
+$helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+$arial:           Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+$impact:          Impact, 'Arial Narrow', Helvetica, sans-serif;
 
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
-$menlo:           Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace;
+$menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier New', monospace;
 
 // Now create some variables using the font stacks we want on this site.
 $font-body:       $verdana;
 $font-monospace:  $menlo;
+$font-watermark:  $impact;
 
 
 // Colors
@@ -164,6 +166,6 @@ $indent-amount: 2 * $base-font-size;
 $nav-height: 2 * $base-line-height;
 
 // Drupal RTL support: Rather than include a seperate *-rtl.css file, Zen 6 uses
-// Drupal 8's standard [dir="rtl"] selector for RTL langauge support. You can
+// Drupal 8's standard [dir='rtl'] selector for RTL langauge support. You can
 // turn off all RTL CSS by setting the following variable to false.
 $include-rtl: true;

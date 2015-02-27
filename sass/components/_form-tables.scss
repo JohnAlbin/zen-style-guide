@@ -41,7 +41,7 @@ tr.odd {
   border-bottom: 1px solid #ccc;
   padding: .1em .6em;
 
-  @if support-legacy-browser(ie, "7") {
+  @if support-legacy-browser(ie, '7') {
     .lt-ie8 & {
       th,
       td {

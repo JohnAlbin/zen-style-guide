@@ -45,7 +45,5 @@ linters:
     allow_single_line_rule_sets: false # Allowed by default.
   SpaceAfterPropertyColon:
     style: at_least_one_space
-  StringQuotes:
-    enabled: false
   VendorPrefixes:
     enabled: false

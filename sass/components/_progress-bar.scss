@@ -29,7 +29,7 @@
 %progress-bar__fill {
   height: 1.5em;
   width: 5px;
-  background: #0072b9 image-url("progress.gif") repeat 0 0;
+  background: #0072b9 image-url('progress.gif') repeat 0 0;
 }
 
 .progress-bar__percentage,
@@ -52,7 +52,7 @@
 
 .progress-bar--ajax__throbber,
 %progress-bar--ajax__throbber {
-  background: image-url("throbber.gif") no-repeat 0 -18px transparent;
+  background: image-url('throbber.gif') no-repeat 0 -18px transparent;
   float: left;
   height: 15px;
   margin: 2px;

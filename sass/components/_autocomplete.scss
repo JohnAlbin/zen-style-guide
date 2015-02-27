@@ -10,7 +10,7 @@
 /* Animated throbber */
 .autocomplete,
 %autocomplete {
-  background-image: image-url("throbber.gif");
+  background-image: image-url('throbber.gif');
   background-position: 100% 2px;
   background-repeat: no-repeat;
 
@@ -51,7 +51,7 @@
   color: #000;
   cursor: default;
   white-space: pre;
-  @if support-legacy-browser(ie, "7") {
+  @if support-legacy-browser(ie, '7') {
     zoom: 1;
   }
 }

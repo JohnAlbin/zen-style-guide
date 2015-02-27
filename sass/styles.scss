@@ -5,15 +5,15 @@
 // Weight: -1
 //
 // Styleguide: sass
-@import "init";
+@import 'init';
 
 // Base
 //
 // These are the base styles applied to HTML elements.
 //
 // Styleguide: base
-@import "base/fonts";
-@import "base/normalize";
+@import 'base/fonts';
+@import 'base/normalize';
 
 // Layouts
 //
@@ -22,7 +22,7 @@
 // and are not documented.
 //
 // Styleguide: layouts
-@import "layouts/responsive";
+@import 'layouts/responsive';
 
 // Components
 //
@@ -32,37 +32,37 @@
 // Weight: 1
 //
 // Styleguide: components
-@import "components/clearfix";
+@import 'components/clearfix';
 
-@import "components/form-item";
-@import "components/autocomplete";
-@import "components/button";
-@import "components/collapsible-fieldsets";
-@import "components/form-tables";
-@import "components/openid";
-@import "components/progress-bar";
-@import "components/resizable-textarea";
-@import "components/tabledrag";
+@import 'components/form-item';
+@import 'components/autocomplete';
+@import 'components/button';
+@import 'components/collapsible-fieldsets';
+@import 'components/form-tables';
+@import 'components/openid';
+@import 'components/progress-bar';
+@import 'components/resizable-textarea';
+@import 'components/tabledrag';
 
-@import "components/box";
-@import "components/breadcrumb";
-@import "components/comments";
-@import "components/header";
-@import "components/hidden";
-@import "components/highlight-mark";
-@import "components/inline";
-@import "components/messages";
-@import "components/more-link";
-@import "components/navbar";
-@import "components/no-wrap";
-@import "components/page";
-@import "components/pager";
-@import "components/print-none";
-@import "components/responsive-video";
-@import "components/side-menu";
-@import "components/skip-link";
-@import "components/status";
-@import "components/tabs";
-@import "components/visually-hidden";
-@import "components/watermark";
-@import "components/wireframes";
+@import 'components/box';
+@import 'components/breadcrumb';
+@import 'components/comments';
+@import 'components/header';
+@import 'components/hidden';
+@import 'components/highlight-mark';
+@import 'components/inline';
+@import 'components/messages';
+@import 'components/more-link';
+@import 'components/navbar';
+@import 'components/no-wrap';
+@import 'components/page';
+@import 'components/pager';
+@import 'components/print-none';
+@import 'components/responsive-video';
+@import 'components/side-menu';
+@import 'components/skip-link';
+@import 'components/status';
+@import 'components/tabs';
+@import 'components/visually-hidden';
+@import 'components/watermark';
+@import 'components/wireframes';

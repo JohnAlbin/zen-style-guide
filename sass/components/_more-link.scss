@@ -15,9 +15,9 @@
 .more-link__help-icon,
 %more-link__help-icon {
   padding: 1px 0 1px 20px;
-  background-image: inline-image("help.png");
-  @if support-legacy-browser(ie, "7") {
-    *background-image: image-url("help.png");
+  background-image: inline-image('help.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('help.png');
   }
   background-position: 0 50%;
   background-repeat: no-repeat;

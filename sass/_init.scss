@@ -1,7 +1,7 @@
 // Initialization partial
 //
 // To make it easier to use all variables and mixins in any Sass file in this
-// theme, each .scss file has a `@import "init";` declaration. The _init.scss
+// theme, each .scss file has a `@import 'init';` declaration. The _init.scss
 // file is in charge of importing all the other partials needed for the theme.
 //
 // The initialization partial is organized in this way:
@@ -18,7 +18,7 @@
 // Set variables for this site before a library sets its !default value.
 //
 // Style guide: sass.variables
-@import "variables";
+@import 'variables';
 
 
 // 3rd party libraries
@@ -36,17 +36,17 @@
 // Style guide: sass.modules
 
 // Add Breakpoint.
-@import "breakpoint";
+@import 'breakpoint';
 // Add Compass' IE and vendor prefix support variables.
-@import "compass/support";
+@import 'compass/support';
 // See http://compass-style.org/help/tutorials/spriting/
-@import "compass/utilities/sprites";
+@import 'compass/utilities/sprites';
 // Use one CSS3 mixin instead of multiple vendor prefixes.
-@import "compass/css3";
+@import 'compass/css3';
 // Helps set up a vertical rhythm.
-@import "compass/typography/vertical_rhythm";
+@import 'compass/typography/vertical_rhythm';
 // Add the Zen Grids responsive layout mixins.
-@import "zen-grids";
+@import 'zen-grids';
 
 
 // Mixins
@@ -64,4 +64,4 @@
 // Weight: 1
 //
 // Style guide: sass.functions
-@import "library/*";
+@import 'library/*';

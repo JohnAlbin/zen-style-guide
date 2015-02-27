@@ -41,9 +41,9 @@
 
 .drag__handle-icon,
 %drag__handle-icon {
-  background: inline-image("draggable.png") no-repeat 6px 9px;
-  @if support-legacy-browser(ie, "7") {
-    *background: image-url("draggable.png") no-repeat 6px 9px;
+  background: inline-image('draggable.png') no-repeat 6px 9px;
+  @if support-legacy-browser(ie, '7') {
+    *background: image-url('draggable.png') no-repeat 6px 9px;
   }
   height: 13px;
   margin: -.4em .5em;
@@ -87,9 +87,9 @@
 
 .drag__tree-child,
 %drag__tree-child {
-  background: inline-image("tree.png") no-repeat 11px center;
-  @if support-legacy-browser(ie, "7") {
-    *background: image-url("tree.png") no-repeat 11px center;
+  background: inline-image('tree.png') no-repeat 11px center;
+  @if support-legacy-browser(ie, '7') {
+    *background: image-url('tree.png') no-repeat 11px center;
   }
 
   @include rtl() {
@@ -100,9 +100,9 @@
 .drag__tree-child-last,
 %drag__tree-child-last {
   @extend %drag__tree-child;
-  background-image: inline-image("tree-bottom.png");
-  @if support-legacy-browser(ie, "7") {
-    *background-image: image-url("tree-bottom.png");
+  background-image: inline-image('tree-bottom.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('tree-bottom.png');
   }
 }
 

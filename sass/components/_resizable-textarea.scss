@@ -6,7 +6,7 @@
 
 .resizable-textarea__grippie,
 %resizable-textarea__grippie {
-  background: #eee image-url("grippie.png") no-repeat center 2px;
+  background: #eee image-url('grippie.png') no-repeat center 2px;
   border: 1px solid #ddd;
   border-top-width: 0;
   cursor: s-resize;

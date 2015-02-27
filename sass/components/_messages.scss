@@ -6,9 +6,9 @@
 %messages {
   @include output-rhythm(margin, rhythm(1) 0);
   padding: 10px 10px 10px 50px;
-  background-image: inline-image("message-24-ok.png");
-  @if support-legacy-browser(ie, "7") {
-    *background-image: image-url("message-24-ok.png");
+  background-image: inline-image('message-24-ok.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('message-24-ok.png');
   }
   background-position: 8px 8px;
   background-repeat: no-repeat;
@@ -30,9 +30,9 @@
 %messages--warning {
   @extend %messages;
   @extend %status-warning;
-  background-image: inline-image("message-24-warning.png");
-  @if support-legacy-browser(ie, "7") {
-    *background-image: image-url("message-24-warning.png");
+  background-image: inline-image('message-24-warning.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('message-24-warning.png');
   }
   border-color: #ed5;
 }
@@ -41,9 +41,9 @@
 %messages--error {
   @extend %messages;
   @extend %status-error;
-  background-image: inline-image("message-24-error.png");
-  @if support-legacy-browser(ie, "7") {
-    *background-image: image-url("message-24-error.png");
+  background-image: inline-image('message-24-error.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('message-24-error.png');
   }
   border-color: #ed541d;
 }
