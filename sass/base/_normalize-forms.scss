@@ -210,10 +210,10 @@ input[type="search"] {
 
 fieldset {
   /* Apply borders and padding that keep the vertical rhythm. */
-  @include apply-side-rhythm-border(top,    $width: 1px, $lines: .35 );
+  @include apply-side-rhythm-border(top, $width: 1px, $lines: .35 );
   @include apply-side-rhythm-border(bottom, $width: 1px, $lines: .65 );
-  @include apply-side-rhythm-border(left,   $width: 1px, $lines: .625);
-  @include apply-side-rhythm-border(right,  $width: 1px, $lines: .625);
+  @include apply-side-rhythm-border(left, $width: 1px, $lines: .625);
+  @include apply-side-rhythm-border(right, $width: 1px, $lines: .625);
   border-color: #c0c0c0;
   // Define consistent border, margin, and padding.
   margin: 0 2px;

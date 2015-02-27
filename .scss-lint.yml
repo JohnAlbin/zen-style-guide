@@ -1,3 +1,5 @@
+# Documentation for the scss-lint Linters is available at:
+# https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
   ColorKeyword:
     enabled: false
@@ -40,9 +42,7 @@ linters:
   SelectorFormat:
     convention: ^[a-z](\-?[a-z0-9]+)*(\-\-[a-z0-9](\-?[a-z0-9]+)*)?(__[a-z0-9](\-?[a-z0-9]+)*)?$
   SingleLinePerProperty:
-    allow_single_line_rule_sets: false
-  SpaceAfterComma:
-    enabled: false
+    allow_single_line_rule_sets: false # Allowed by default.
   SpaceAfterPropertyColon:
     style: at_least_one_space
   SpaceBetweenParens:
