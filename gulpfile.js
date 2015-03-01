@@ -47,7 +47,7 @@ gulp.task('lint:js', $.shell.task([
 // Lint Sass.
 gulp.task('lint:sass', function() {
   return gulp.src(theme + compass.sass + '/**/*.scss')
-    .pipe($.scssLint({'bundleExec': true}));
+    .pipe($.scssLint({'bundleExec': true, 'config': theme + '/.scss-lint.yml'}));
 });
 
 // Lint Sass and JavaScript.
