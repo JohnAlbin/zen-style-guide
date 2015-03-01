@@ -56,7 +56,7 @@ hr {
   @include box-sizing(content-box);
   @include output-rhythm(margin, rhythm(1) 0);
   height: 0;
-  border: 1px solid #666;
+  border: 1px solid color(border);
   padding-bottom: -1px;
 }
 

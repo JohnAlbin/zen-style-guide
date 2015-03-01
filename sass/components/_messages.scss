@@ -13,7 +13,7 @@
   }
   background-position: 8px 8px;
   background-repeat: no-repeat;
-  border: 1px solid #be7;
+  border: 1px solid color(status-border);
 
   @include rtl() {
     padding: 10px 50px 10px 10px;
@@ -35,7 +35,7 @@
   @if support-legacy-browser(ie, '7') {
     *background-image: image-url('message-24-warning.png');
   }
-  border-color: #ed5;
+  border-color: color(warning-border);
 }
 
 .messages--error,
@@ -46,12 +46,12 @@
   @if support-legacy-browser(ie, '7') {
     *background-image: image-url('message-24-error.png');
   }
-  border-color: #ed541d;
+  border-color: color(error-border);
 }
 
 .messages--error__text,
 %messages--error__text {
-  color: #333;
+  color: color(status-highlight);
 }
 
 .messages__list,

@@ -30,7 +30,7 @@
 }
 
 %form-item--error__widget {
-  border: 1px solid #c00;
+  border: 1px solid color(form-error);
 }
 
 .form-item--inline,
@@ -68,7 +68,7 @@
 // The part of the label that indicates a required field.
 .form-item__required,
 %form-item__required {
-  color: #c00;
+  color: color(form-error);
 }
 
 

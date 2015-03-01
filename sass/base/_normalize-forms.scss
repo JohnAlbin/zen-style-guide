@@ -187,7 +187,7 @@ fieldset {
   @include apply-side-rhythm-border(bottom, $width: 1px, $lines: .65);
   @include apply-side-rhythm-border(left, $width: 1px, $lines: .625);
   @include apply-side-rhythm-border(right, $width: 1px, $lines: .625);
-  border-color: #c0c0c0;
+  border-color: color(border);
   // Define consistent border, margin, and padding.
   margin: 0 2px;
 }

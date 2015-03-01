@@ -2,12 +2,13 @@
 # https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md
 linters:
   ColorVariable:
-    enabled: false
+    enabled: false # Enable after this bug is fixed: https://github.com/causes/scss-lint/issues/376
   Compass::*:
     enabled: true # Disabled by default.
   Compass::PropertyWithMixin:
     ignore:
-      - 'inline-block' # Only needed for IE7/FF2 and earlier.
+      - 'inline-block'  # Only needed for IE7/FF2 and earlier.
+      - 'text-shadow'   # No vendor prefixes ever used. http://caniuse.com/#feat=css-textshadow
   EmptyLineBetweenBlocks:
     ignore_single_line_blocks: false
   MergeableSelector:

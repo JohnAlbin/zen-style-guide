@@ -7,12 +7,12 @@
 
 .drag__item,
 %drag__item {
-  background-color: #fffff0;
+  background-color: color(table-drag);
 }
 
 .drag__item-previous,
 %drag__item-previous {
-  background-color: #ffd;
+  background-color: darken(color(table-drag), 5%);
 }
 
 .drag__handle,

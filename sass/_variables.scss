@@ -1,4 +1,4 @@
-// scss-lint:disable ColorKeyword
+// scss-lint:disable ColorKeyword, ColorVariable, SpaceAfterComma
 
 //
 // Variables
@@ -108,7 +108,7 @@ $font-watermark:  $impact;
 
 // Colors
 //
-// Use the <code>color()</code> function to add colors to CSS properties.
+// Use the [<code>color()</code>](#kssref-sass.functions.color) function to add colors to CSS properties.
 //
 // Markup: sass-colors.html
 //
@@ -118,33 +118,100 @@ $font-watermark:  $impact;
 
 // Define useful names of color values.
 $colors: add-default-color-scheme('The main colors of the site.', (
-  white:            #fff,
-  grey-light:       #ccc,
-  grey-dark:        #666,
-  black:            #000,
+  white:                  #fff,
+  grey-extra-light:       #eee,
+  grey-light:             #ddd,
+  grey-medium-light:      #ccc,
+  grey-medium:            #999,
+  grey-dark:              #666,
+  grey-extra-dark:        #333,
+  black:                  #000,
 
-  blue:             #00e,
-  purple:           #639,
-  red:              #f00
+  blue:                   #0072b9,
+
+  purple:                 #639,
+
+  pink-pale:              #fef5f1,
+  red:                    #c00,
+  red-orange:             #ed541d,
+  rust:                   #8c2e0b,
+
+  yellow-pale:            #ffd,
+  yellow:                 #ff0,
+  yellow-dark:            #ed5,
+
+  green-pale:             #f8fff0,
+  green-light:            #be7,
+  green-dark:             #234600,
 ));
+$color-default-scheme:  'design';
 
 // Define color variable names for functional uses.
 $colors: add-color-scheme('design', 'Colors used by different parts of the design.', (
-  body-bg:          color(white),
+  // Colors used in the main content area.
+  text:                   color(black),
+  text-bg:                color(white),
 
-  // Text colors.
-  body:             color(black),
+  link:                   color(blue),
+  link-visited:           color(purple),
+  link-active:            color(red),
 
-  link:             color(blue),
-  link-visited:     color(purple),
-  link-focus:       color(red),
-
-  border:           color(grey-light),
-
-  tabs-border:      color(grey-light),
-  tabs-background:  color(white)
+  border:                 color(grey-medium-light),
 ));
-$color-default-scheme:  'design';
+
+$colors: add-colors('design', (
+  autocomplete:           color(text),
+  autocomplete-bg:        color(text-bg),
+  autocomplete-select:    color(white),
+  autocomplete-select-bg: color(blue),
+
+  body-bg:                color(text-bg),
+
+  fieldset-summary:       color(grey-medium),
+  form-error:             color(red),
+
+  mark-highlight:         color(red),
+  mark-bg:                color(yellow),
+
+  menu-active:            color(text),
+
+  preview-bg:             color(yellow-pale),
+
+  progress-bar:           color(blue),
+  progress-bar-bg:        color(grey-medium-light),
+  progress-bar-border:    color(grey-dark),
+
+  resizable-grippie:      color(grey-extra-light),
+
+  row-stripe:             color(grey-extra-light),
+  row-disabled:           color(grey-medium-light),
+
+  skip-link:              color(white),
+  skip-link-bg:           color(grey-dark),
+
+  status:                 color(green-dark),
+  status-bg:              color(green-pale),
+  status-border:          color(green-light),
+  status-highlight:       color(text),
+  warning:                color(rust),
+  warning-bg:             color(yellow-pale),
+  warning-border:         color(yellow-dark),
+  error:                  color(rust),
+  error-bg:               color(pink-pale),
+  error-border:           color(red-orange),
+
+  tabs-border:            color(border),
+  tabs-bg:                color(text-bg),
+  tab:                    color(grey-extra-dark),
+  tab-text-shadow:        color(white),
+  tab-bg:                 color(grey-light),
+  tab-secondary:          color(grey-dark),
+
+  table-drag:             color(yellow-pale),
+  table-select:           color(yellow-pale),
+
+  watermark:              color(grey-extra-light),
+));
 
 
 // Breakpoints
@@ -154,11 +221,11 @@ $color-default-scheme:  'design';
 // Styleguide: sass.variables.breakpoints
 
 $breakpoints: (
-  'small'             : (444px, 'no-query' true),
-  'medium'            : (777px, 'no-query' true),
-  'medium-only'       : (777px 998px, 'no-query' true),
-  'large'             : (999px, 'no-query' true),
-  'larger'            : (1222px)
+  'small':        (444px,       'no-query' true),
+  'medium':       (777px,       'no-query' true),
+  'medium-only':  (777px 998px, 'no-query' true),
+  'large':        (999px,       'no-query' true),
+  'larger':       (1222px),
 );
 
 // The amount lists, blockquotes and comments are indented.

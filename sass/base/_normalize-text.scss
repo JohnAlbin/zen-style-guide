@@ -145,8 +145,8 @@ ins {
 @if support-legacy-browser(ie, '9') {
   mark {
     // Address styling not present in IE 8/9.
-    background: #ff0;
-    color: #000;
+    background: color(mark-bg);
+    color: color(text);
   }
 }
 

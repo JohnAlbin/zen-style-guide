@@ -13,8 +13,7 @@
 
 // Preview of the comment before submitting new or updated comment.
 .comment-preview {
-  // Drupal core will use a #ffffea background. See #1110842.
-  background-color: #ffffea;
+  background-color: color(preview-bg);
 }
 
 // Wrapper for a single comment.

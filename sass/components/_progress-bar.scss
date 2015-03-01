@@ -18,15 +18,15 @@
 %progress-bar__bar {
   @include border-radius(3px);
   margin: 0 .2em;
-  border: 1px solid #666;
-  background-color: #ccc;
+  border: 1px solid color(progress-bar-border);
+  background-color: color(progress-bar-bg);
 }
 
 .progress-bar__fill,
 %progress-bar__fill {
   height: 1.5em;
   width: 5px;
-  background: #0072b9 image-url('progress.gif') repeat 0 0;
+  background: color(progress-bar) image-url('progress.gif') repeat 0 0;
 }
 
 .progress-bar__percentage,

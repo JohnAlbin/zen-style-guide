@@ -17,7 +17,7 @@
 
 :link,
 %link {
-  // Add your styles.
+  color: color(link);
 
   @if support-legacy-browser(ie, '10') {
     // Remove the gray background color from active links in IE 10.
@@ -26,7 +26,7 @@
 }
 
 :visited {
-  // Add your styles.
+  color: color(link-visited);
 }
 
 a:hover,
@@ -35,7 +35,7 @@ a:focus {
 }
 
 a:active {
-  // Add your styles.
+  color: color(link-active);
 }
 
 // Improve readability by removing focus styles when also mouse hovered in all browsers.
