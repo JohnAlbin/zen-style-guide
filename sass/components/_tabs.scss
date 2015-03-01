@@ -136,8 +136,8 @@
   @extend %tabs__tab-link-common;
   @include border-radius(.75em);
   @include transition(background-color .3s);
-  color: color(tab-secondary);
   @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+  color: color(tab-secondary);
   background-color: lighten(color(tab-bg), 8%);
   padding: 0 .5em;
 
