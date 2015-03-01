@@ -8,6 +8,7 @@
 
 .watermark,
 %watermark {
+  display: block;
   height: 0;
   overflow: visible;
   // Remove background highlighting from <mark> in normalize.
@@ -19,6 +20,7 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  text-shadow: 0 0 1px rgba(0, 0, 0, .1);
   word-wrap: break-word;
 }
 

@@ -73,16 +73,16 @@
       @extend %collapsible-fieldset__summary;
     }
   }
-}
 
-.collapsed {
-  @extend %collapsible-fieldset-is-collapsed;
+  &.collapsed {
+    @extend %collapsible-fieldset-is-collapsed;
 
-  .fieldset-legend {
-    @extend %collapsible-fieldset-is-collapsed__legend;
-  }
+    .fieldset-legend {
+      @extend %collapsible-fieldset-is-collapsed__legend;
+    }
 
-  .fieldset-wrapper {
-    @extend %collapsible-fieldset-is-collapsed__wrapper;
+    .fieldset-wrapper {
+      @extend %collapsible-fieldset-is-collapsed__wrapper;
+    }
   }
 }
