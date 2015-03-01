@@ -20,12 +20,12 @@ $color-default-scheme : 'default' !default;
 //
 // Style guide: sass.functions.color
 @function color($key, $scheme: $color-default-scheme) {
-  @if map-has-key(map-get(map-get($colors, $scheme), 'names'), $key) {
+  @if map-has-key($colors, $scheme) and map-has-key(map-get($colors, $scheme), 'names') and map-has-key(map-get(map-get($colors, $scheme), 'names'), $key) {
     @return map-get(map-get(map-get($colors, $scheme), 'names'), $key);
   } @else if map-has-key(map-get(map-get($colors, 'default'), 'names'), $key) {
     @return map-get(map-get(map-get($colors, 'default'), 'names'), $key);
   } @else {
-    @warn 'The color "#{$key}" was not found in $colors map.';
+    @error 'The color "#{$key}" was not found in $colors map.';
   }
 }
 
