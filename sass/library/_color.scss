@@ -47,8 +47,48 @@ $color-default-scheme : 'default' !default;
 // $new-colors  - A Sass map containing the new colors.
 //
 // Style guide: sass.functions.color.add-color-scheme
-@function add-color-scheme($scheme, $description, $new-colors) {
-  $colors: map-merge($colors, ($scheme: ('description': $description, 'names': $new-colors)));
+@function add-color-scheme($scheme, $description: '', $new-colors: ()) {
+  $colors: map-merge(
+    $colors,
+    ($scheme: (
+      'description': $description,
+      'names': $new-colors
+    ))
+  );
+  @return $colors;
+}
+
+// add-colors($scheme, $new-colors)
+//
+// Add the colors to an existing color scheme.
+//
+// Usage:
+// ```scss
+// $colors: add-colors('design', (
+//  nav:             color(link),
+//  nav-visited:     color(link-visited),
+//  nav-focus:       color(link-focus),
+// ));
+// ```
+//
+// $scheme      - The name of an existing color scheme.
+// $new-colors  - A Sass map containing the new colors.
+//
+// Style guide: sass.functions.color.add-color-scheme
+@function add-colors($scheme, $new-colors) {
+  @if not map-has-key($colors, $scheme) {
+    @error 'The color scheme "#{$scheme}" was not found in $colors map.';
+  }
+  $colors: map-merge(
+    $colors,
+    ($scheme: map-merge(
+      map-get($colors, $scheme),
+      ('names': map-merge(
+        map-get(map-get($colors, $scheme), 'names'),
+        $new-colors
+      ))
+    ))
+  );
   @return $colors;
 }
 
@@ -78,6 +118,17 @@ $color-default-scheme : 'default' !default;
 // Returns the HTML needed to display all colors in color() in a KSS style
 // guide. The parameters are used to specifiy the classes for various elements.
 //
+// Usage:
+// ```scss
+// @import 'init';
+//
+// /*
+// #{kss-color-markup()}
+// */
+//
+// Then use a Gulp.js or Grunt task to strip the leading and trailing lines
+// (containing "/*" and "*/" respectively) from the generated file.
+//
 // $wrapper-class     - Defaults to 'kss-text'.
 // $title-class       - Defaults to 'kss-color__title'.
 // $description-class - Defaults to 'kss-color__description'.
@@ -87,7 +138,14 @@ $color-default-scheme : 'default' !default;
 //
 // style guide: sass.functions.color.kss-color-markup
 
-@function kss-color-markup($wrapper-class: 'kss-style', $title-class: 'kss-color__title', $description-class: 'kss-color__description', $color-class: 'kss-color', $swatch-class: 'kss-color__swatch', $variable-class: 'kss-color__variable') {
+@function kss-color-markup(
+  $wrapper-class:     'kss-style',
+  $title-class:       'kss-color__title',
+  $description-class: 'kss-color__description',
+  $color-class:       'kss-color',
+  $swatch-class:      'kss-color__swatch',
+  $variable-class:    'kss-color__variable'
+) {
   $markup: '';
 
   @if $wrapper-class {
