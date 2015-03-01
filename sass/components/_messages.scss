@@ -2,9 +2,34 @@
 @import 'status';
 
 // Messages
+//
+// System alerts.
+//
+// Style guide: components.messages
+
+// Messages
+//
+// Weight: -1
+//
+// Markup: messages-single.html
+//
+// .messages--warning   - Warning messages.
+// .messages--error     - Error messages.
+//
+// Style guide: components.messages.single
+
+// Messages
+//
+// Markup: messages-multiple.html
+//
+// .messages--warning   - Warning messages.
+// .messages--error     - Error messages.
+//
+// Style guide: components.messages.multiple
 
 .messages,
 %messages {
+  @extend %status--ok;
   @include output-rhythm(margin, rhythm(1) 0);
   padding: 10px 10px 10px 50px;
   background-image: inline-image('message-24-ok.png');
@@ -21,16 +46,10 @@
   }
 }
 
-.messages--status,
-%messages--status {
-  @extend %messages;
-  @extend %status-ok;
-}
-
 .messages--warning,
 %messages--warning {
   @extend %messages;
-  @extend %status-warning;
+  @extend %status--warning;
   background-image: inline-image('message-24-warning.png');
   @if support-legacy-browser(ie, '7') {
     *background-image: image-url('message-24-warning.png');
@@ -41,7 +60,7 @@
 .messages--error,
 %messages--error {
   @extend %messages;
-  @extend %status-error;
+  @extend %status--error;
   background-image: inline-image('message-24-error.png');
   @if support-legacy-browser(ie, '7') {
     *background-image: image-url('message-24-error.png');
@@ -49,8 +68,8 @@
   border-color: color(error-border);
 }
 
-.messages--error__text,
-%messages--error__text {
+.messages--error__highlighted-text,
+%messages--error__highlighted-text {
   color: color(status-highlight);
 }
 
@@ -68,7 +87,17 @@
 // Drupal selectors.
 //
 
-// Core/module installation error messages.
-.messages--error p.error {
-  @extend %messages--error__text;
+.messages {
+  &.warning {
+    @extend %messages--warning;
+  }
+
+  &.error {
+    @extend %messages--error;
+  }
+}
+
+.messages--error .error,
+.messages.error .error {
+  @extend %messages--error__highlighted-text;
 }

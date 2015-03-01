@@ -1,17 +1,29 @@
-.status-ok,
-%status-ok {
+// Status report
+//
+// Drupal system status reports use a simple styling.
+//
+// markup: status.html
+//
+// .status--ok      - "Ok" status.
+// .status--warning - Warning status.
+// .status--error   - Error status.
+//
+// Style guide: components.messages.status
+
+.status--ok,
+%status--ok {
   background-color: color(status-bg);
   color: color(status);
 }
 
-.status-warning,
-%status-warning {
+.status--warning,
+%status--warning {
   background-color: color(warning-bg);
   color: color(warning);
 }
 
-.status-error,
-%status-error {
+.status--error,
+%status--error {
   background-color: color(error-bg);
   color: color(error);
 }
@@ -22,18 +34,18 @@
 
 // System status report.
 .ok {
-  @extend %status-ok;
+  @extend %status--ok;
 }
 
 .warning {
-  @extend %status-warning;
+  @extend %status--warning;
 }
 
 .error {
-  @extend %status-error;
+  @extend %status--error;
 }
 
 // Node revisions.
 .revision-current {
-  @extend %status-ok;
+  @extend %status--ok;
 }
