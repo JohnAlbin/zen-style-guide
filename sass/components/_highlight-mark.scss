@@ -1,4 +1,10 @@
 // Highlight mark
+//
+// The "new" or "updated" marker.
+//
+// Markup: highlight-mark.html
+//
+// Style guide: components.highlight-mark
 
 %highlight-mark {
   color: color(mark-highlight);
@@ -6,7 +12,6 @@
   background-color: transparent;
 }
 
-// The "new" or "updated" marker.
 .new,
 .update {
   @extend %highlight-mark;
