@@ -135,7 +135,6 @@ settings[zen_skip_link_text]       = Jump to navigation
 settings[zen_meta][]               = html5
 settings[zen_meta][]               = meta
 settings[zen_rebuild_registry]     = 1
-settings[zen_wireframes]           = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.

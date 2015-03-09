@@ -1,17 +1,31 @@
+$with-wireframes: false !default;
+
 // Wireframes
+//
+// Add wireframes around main layout elements. [Wireframes](http://www.boxesandarrows.com/view/html_wireframes_and_prototypes_all_gain_and_no_pain)
+// are useful when prototyping a website.
+//
+// This design is not applied to the site unless you set the following Sass
+// variable: `$with-wireframes: true;`
+//
+// Markup: <div class="wireframe"><p>An item inside a wireframe.</p></div>
+//
+// Style guide: components.wireframe
 
-%wireframe {
-  outline: 1px solid color(border);
+@if $with-wireframes {
 
-  @if support-legacy-browser(ie, '7') {
-    .lt-ie8 & {
-      // IE6/7 do not support the outline property.
-      border: 1px solid color(border);
+  .wireframe,
+  %wireframe {
+    outline: 1px solid color(border);
+
+    @if support-legacy-browser(ie, '7') {
+      .lt-ie8 & {
+        // IE6/7 do not support the outline property.
+        border: 1px solid color(border);
+      }
     }
   }
-}
 
-.with-wireframes {
   .header,
   .main,
   .main-content,
@@ -22,4 +36,5 @@
   .region-bottom {
     @extend %wireframe;
   }
+
 }
