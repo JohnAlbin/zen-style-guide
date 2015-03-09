@@ -22,20 +22,48 @@ DEVELOPING WITH SASS AND COMPASS
 
 To automatically generate the CSS versions of the scss while you are doing theme
 development, you'll need to tell Compass to "watch" the sass directory so that
-any time a .scss file is changed it will automatically place a generated CSS
-file into your sub-theme's css directory:
+any time a .scss file is changed it will automatically generate a CSS file in
+your sub-theme's css directory:
 
   compass watch <path to your sub-theme's directory>
 
   If you are already in the root of your sub-theme's directory, you can simply
   type:  compass watch
 
-While using generated CSS with Firebug, the line numbers it reports will be
-wrong since it will be showing the generated CSS file's line numbers and not the
-line numbers of the source Sass files. To correct this problem, you can install
-the FireSass plug-in into Firefox and then edit your sub-theme's config.rb file
-to set: firesass = true
-  https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug/
+While using generated CSS with Firebug, the line numbers it reports will not
+match the .scss file, since it references the generated CSS file's lines, not
+the line numbers of the "source" sass files. How then do we debug? Sourcemaps to
+the rescue! To find the oringial, newer browsers have support for sourcemap
+files (*.map). These files are used by the built-in development tools of newer
+browsers to map the generated line to the SCSS source. When in development mode,
+Zen can be set to generate sourcemap files. Edit config.rb, and uncomment:
+
+  sourcemap=true
+
+
+Enabling and using sourcemap files (*.map) in your browser
+
+In short, Open Developer tools, go to settings, and enable an option to the
+effect of: 'view original sources' or 'Enable CSS source maps'.
+
+* Firefox: https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/
+* Chrome:  https://developer.chrome.com/devtools/docs/css-preprocessors#toc-enabling-css-source-maps
+* IE: http://msdn.microsoft.com/en-US/library/ie/dn255007%28v=vs.85%29#source_maps
+
+
+Browser Plug-ins
+
+An alternative method is to install a browser plug-in, such as FireCompass or
+the older FireSass plug-in into Firefox.  Then you'll need to edit your
+sub-theme's config.rb file to uncomment and set either:
+
+  firesass = true
+  firecompass = true
+
+Finally, you'll need to install the appropriate plug-in:
+
+  Firesass:  https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug
+  FireCompass: https://addons.mozilla.org/en-US/firefox/addon/firecompass-for-firebug
 
 
 MOVING YOUR CSS TO PRODUCTION
