@@ -78,7 +78,7 @@ gulp.task('watch', ['clean:css', 'watch:css', 'watch:js'],
 gulp.task('watch:css', ['styleguide', 'lint:sass'], function() {
   return gulp.watch(theme + compass.sass + '/**/*.scss', ['styleguide', 'lint:sass']);
 });
-gulp.task('watch:js', ['styleguide', 'lint:sass'], function() {
+gulp.task('watch:js', ['lint:js'], function() {
   return gulp.watch(theme + compass.js + '/**/*.js', ['lint:js']);
 });
 
