@@ -3,7 +3,6 @@
 #
 # Ignore the following paths inside those directories.
 #
-bower_components
 styleguide
 gulpfile.js
 
@@ -12,3 +11,4 @@ gulpfile.js
 
 **/*.min.js
 **/vendor
+**/bower_components
