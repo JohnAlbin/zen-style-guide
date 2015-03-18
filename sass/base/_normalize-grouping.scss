@@ -14,7 +14,7 @@
 // Optionally, add a <code>&lt;footer&gt;</code> to identify the source of the
 // quote. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
 //
-// Markup: grouping-blockquote.html
+// Markup: grouping-blockquote.hbs
 //
 // Styleguide: base.grouping.blockquote
 
@@ -32,7 +32,7 @@ blockquote {
 // Optionally, a &lt;figcaption&gt; element inside the &lt;figure&gt; represents
 // the caption of the figure.
 //
-// Markup: grouping-figure.html
+// Markup: grouping-figure.hbs
 //
 // Styleguide: base.grouping.figure
 
@@ -47,7 +47,7 @@ figure {
 // change in a story, or a transition to another topic within a section of a
 // reference book.
 //
-// Markup: grouping-hr.html
+// Markup: grouping-hr.hbs
 //
 // Styleguide: base.grouping.hr
 
@@ -64,7 +64,7 @@ hr {
 //
 // The default <code>font-size</code> and <code>line-height</code> are applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a top and bottom margin.</p>
 //
-// Markup: grouping-p.html
+// Markup: grouping-p.hbs
 //
 // Styleguide: base.grouping.p
 
@@ -79,7 +79,7 @@ pre {
 // The &lt;pre&gt; tag represents a block of preformatted text, such as
 // fragments of computer code, ASCII art, etc.
 //
-// Markup: grouping-pre.html
+// Markup: grouping-pre.hbs
 //
 // Styleguide: base.grouping.pre
 
@@ -107,7 +107,7 @@ pre {
 //
 // A list of items in which the order does <em>not</em> explicitly matter.
 //
-// Markup: grouping-lists-ul.html
+// Markup: grouping-lists-ul.hbs
 //
 // Styleguide: base.grouping.lists.ul
 
@@ -115,7 +115,7 @@ pre {
 //
 // A list of items in which the order <em>does</em> explicitly matter.
 //
-// Markup: grouping-lists-ol.html
+// Markup: grouping-lists-ol.hbs
 //
 // Styleguide: base.grouping.lists.ol
 
@@ -123,7 +123,7 @@ pre {
 //
 // A list of terms with their associated descriptions.
 //
-// Markup: grouping-lists-dl.html
+// Markup: grouping-lists-dl.hbs
 //
 // Styleguide: base.grouping.lists.dl
 

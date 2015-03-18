@@ -37,7 +37,7 @@ gulp.task('styleguide:markup', ['styleguide:sass-colors'], $.shell.task([
 
 // Lint JavaScript.
 gulp.task('lint:js', $.shell.task([
-    './node_modules/.bin/eslint ./'
+    'eslint ./'
   ], {
     cwd: __dirname,
     ignoreErrors: true

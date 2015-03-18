@@ -62,7 +62,7 @@ input::-moz-focus-inner {
 // <code>submit</code>, <code>image</code>, <code>reset</code>, or
 // <code>button</code> are also supported.
 //
-// Markup: forms-button.html
+// Markup: forms-button.hbs
 //
 // Styleguide: base.forms.button
 
@@ -88,7 +88,7 @@ input[type="submit"] {
 // <code>time</code>, <code>number</code>, <code>range</code>,
 // <code>color</code>, and <code>file</code>.
 //
-// Markup: forms-input.html
+// Markup: forms-input.hbs
 //
 // Styleguide: base.forms.input
 
@@ -119,7 +119,7 @@ input {
 // It's recommended that you don't attempt to style these elements.
 // Firefox's implementation doesn't respect box-sizing, padding, or width.
 //
-// Markup: forms-input-checkbox.html
+// Markup: forms-input-checkbox.hbs
 //
 // Styleguide: base.forms.input-checkbox
 
@@ -131,7 +131,7 @@ input {
 // It's recommended that you don't attempt to style these elements.
 // Firefox's implementation doesn't respect box-sizing, padding, or width.
 //
-// Markup: forms-input-radio.html
+// Markup: forms-input-radio.hbs
 //
 // Styleguide: base.forms.input-radio
 
@@ -180,7 +180,7 @@ input[type="search"] {
 // The fieldset element groups a set of form fields, optionally under a common
 // name given by the legend element.
 //
-// Markup: forms-fieldset.html
+// Markup: forms-fieldset.hbs
 //
 // Styleguide: base.forms.fieldset
 
@@ -221,7 +221,7 @@ legend {
 // associated with a specific form control by using the <code>for</code>
 // attribute or by putting the form control inside the label element itself.
 //
-// Markup: forms-label.html
+// Markup: forms-label.hbs
 //
 // Styleguide: base.forms.label
 
@@ -239,7 +239,7 @@ label {
 // Known limitation: by default, Chrome and Safari on OS X allow very limited
 // styling of `select`, unless a `border` property is set.
 //
-// Markup: forms-select.html
+// Markup: forms-select.hbs
 //
 // Styleguide: base.forms.select
 
@@ -257,7 +257,7 @@ optgroup {
 //
 // The &lt;textarea&gt; tag represents a multiline plain text form field.
 //
-// Markup: forms-textarea.html
+// Markup: forms-textarea.hbs
 //
 // Styleguide: base.forms.textarea
 

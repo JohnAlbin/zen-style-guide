@@ -108,7 +108,7 @@ $font-watermark:  $impact;
 
 // Colors
 //
-// Use the [<code>color()</code>](#kssref-sass.functions.color) function to add colors to CSS properties.
+// Use the [<code>color()</code>](#kssref-sass-functions-color) function to add colors to CSS properties.
 //
 // Markup: sass-colors.html
 //
@@ -227,6 +227,11 @@ $breakpoints: (
   'large':        (999px,       'no-query' true),
   'larger':       (1222px),
 );
+
+
+//
+// Misc
+//
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 2 * $base-font-size;

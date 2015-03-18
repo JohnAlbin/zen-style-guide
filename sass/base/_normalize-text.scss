@@ -1,6 +1,6 @@
 // Text-level semantics
 //
-// Markup: text.html
+// Markup: text.hbs
 //
 // Weight: 1
 //
@@ -13,7 +13,7 @@
 // Abbreviations with a <code>title</code> attribute have a light dotted bottom
 // border and a help cursor on hover, providing additional context on hover.
 //
-// Markup: text-abbr.html
+// Markup: text-abbr.hbs
 //
 // Styleguide: base.text.abbr
 
@@ -37,7 +37,7 @@ abbr[title] {
 // Feel free to use <code>&lt;b&gt;</code> in HTML5. <code>&lt;b&gt;</code> is
 // meant to highlight words or phrases without conveying additional importance.
 //
-// Markup: text-b.html
+// Markup: text-b.hbs
 //
 // Styleguide: base.text.b
 
@@ -51,7 +51,7 @@ strong {
 //
 // The cite element represents a reference to a creative work.
 //
-// Markup: text-cite.html
+// Markup: text-cite.hbs
 //
 // Styleguide: base.text.cite
 
@@ -66,7 +66,7 @@ cite {
 // represents (sample) output from a program or computing system. The
 // <code>kbd</code> element represents user input (typically keyboard input.)
 //
-// Markup: text-code.html
+// Markup: text-code.hbs
 //
 // Styleguide: base.text.code
 
@@ -82,7 +82,7 @@ var {
 // For indicating blocks of text that have been deleted use the
 // <code>&lt;del&gt;</code> tag.
 //
-// Markup: text-del.html
+// Markup: text-del.hbs
 //
 // Styleguide: base.text.del
 
@@ -94,7 +94,7 @@ del {
 //
 // The dfn element represents the defining instance of a term.
 //
-// Markup: text-dfn.html
+// Markup: text-dfn.hbs
 //
 // Styleguide: base.text.dfn
 
@@ -111,7 +111,7 @@ dfn {
 // Feel free to use <code>&lt;i&gt;</code> in HTML5. <code>&lt;i&gt;</code> is
 // meant to convey voice, technical terms, etc.
 //
-// Markup: text-i.html
+// Markup: text-i.hbs
 //
 // Styleguide: base.text.i
 
@@ -125,7 +125,7 @@ em {
 // For indicating additions to the document use the <code>&lt;ins&gt;</code>
 // tag.
 //
-// Markup: text-ins.html
+// Markup: text-ins.hbs
 //
 // Styleguide: base.text.ins
 
@@ -138,7 +138,7 @@ ins {
 // For highlighting a run of text due to its relevance in another context, use
 // the <code>&lt;mark&gt;</code> tag.
 //
-// Markup: text-mark.html
+// Markup: text-mark.hbs
 //
 // Styleguide: base.text.mark
 
@@ -155,7 +155,7 @@ ins {
 // The <code>q</code> element represents an inline quote from another source.
 // Longer quotes should use the <code>blockquote</code> element.
 //
-// Markup: text-q.html
+// Markup: text-q.hbs
 //
 // Styleguide: base.text.q
 
@@ -168,7 +168,7 @@ q {
 // For indicating blocks of text that are no longer relevant use the
 // <code>&lt;s&gt;</code> tag.
 //
-// Markup: text-s.html
+// Markup: text-s.hbs
 //
 // Styleguide: base.text.s
 
@@ -181,7 +181,7 @@ s {
 // For de-emphasizing inline or blocks of text, use the
 // <code>&lt;small&gt;</code> tag to set text at 80% the size of the parent.
 //
-// Markup: text-small.html
+// Markup: text-small.hbs
 //
 // Styleguide: base.text.small
 
@@ -195,7 +195,7 @@ small {
 // The &lt;sup&gt; tag represents a superscript and the &lt;sub&gt; tag
 // represents a subscript.
 //
-// Markup: text-sub.html
+// Markup: text-sub.hbs
 //
 // Styleguide: base.text.sub
 
@@ -221,7 +221,7 @@ sub {
 // To underline text use the <code>&lt;u&gt;</code> tag. Not recommended since
 // underlines are used by web browsers to style hyperlinks.
 //
-// Markup: text-u.html
+// Markup: text-u.hbs
 //
 // Styleguide: base.text.u
 
