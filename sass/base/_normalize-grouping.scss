@@ -1,8 +1,11 @@
+// Dependencies.
+@import 'normalize';
+
 // Grouping content
 //
 // Weight: 1
 //
-// Styleguide: base.grouping
+// Style guide: base.grouping
 
 // Blockquotes
 //
@@ -16,7 +19,7 @@
 //
 // Markup: grouping-blockquote.hbs
 //
-// Styleguide: base.grouping.blockquote
+// Style guide: base.grouping.blockquote
 
 blockquote {
   // Set 1 unit of vertical rhythm on the top and bottom margin.
@@ -34,7 +37,7 @@ blockquote {
 //
 // Markup: grouping-figure.hbs
 //
-// Styleguide: base.grouping.figure
+// Style guide: base.grouping.figure
 
 figure {
   // Address margin not present in IE 8/9 and Safari.
@@ -49,7 +52,7 @@ figure {
 //
 // Markup: grouping-hr.hbs
 //
-// Styleguide: base.grouping.hr
+// Style guide: base.grouping.hr
 
 hr {
   // Address differences between Firefox and other browsers.
@@ -66,7 +69,7 @@ hr {
 //
 // Markup: grouping-p.hbs
 //
-// Styleguide: base.grouping.p
+// Style guide: base.grouping.p
 
 p,
 pre {
@@ -81,7 +84,7 @@ pre {
 //
 // Markup: grouping-pre.hbs
 //
-// Styleguide: base.grouping.pre
+// Style guide: base.grouping.pre
 
 %monospace {
   // Address odd `em`-unit font size rendering in all browsers.
@@ -101,7 +104,7 @@ pre {
 
 // Lists
 //
-// Styleguide: base.grouping.lists
+// Style guide: base.grouping.lists
 
 // Unordered list
 //
@@ -109,7 +112,7 @@ pre {
 //
 // Markup: grouping-lists-ul.hbs
 //
-// Styleguide: base.grouping.lists.ul
+// Style guide: base.grouping.lists.ul
 
 // Ordered list
 //
@@ -117,7 +120,7 @@ pre {
 //
 // Markup: grouping-lists-ol.hbs
 //
-// Styleguide: base.grouping.lists.ol
+// Style guide: base.grouping.lists.ol
 
 // Description list
 //
@@ -125,7 +128,7 @@ pre {
 //
 // Markup: grouping-lists-dl.hbs
 //
-// Styleguide: base.grouping.lists.dl
+// Style guide: base.grouping.lists.dl
 
 dl,
 menu,

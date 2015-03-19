@@ -1,3 +1,6 @@
+// Dependencies.
+@import 'clearfix';
+
 // Form item
 //
 // Wrapper for a form element (or group of form elements) and its label.
@@ -71,8 +74,9 @@
   color: color(form-error);
 }
 
-
+//
 // Drupal selectors.
+//
 
 .form-checkboxes,
 .form-radios,

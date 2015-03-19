@@ -1,10 +1,13 @@
+// Dependencies.
+@import 'normalize';
+
 // Text-level semantics
 //
 // Markup: text.hbs
 //
 // Weight: 1
 //
-// Styleguide: base.text
+// Style guide: base.text
 
 // Abbreviation / Acroynym
 //
@@ -15,7 +18,7 @@
 //
 // Markup: text-abbr.hbs
 //
-// Styleguide: base.text.abbr
+// Style guide: base.text.abbr
 
 abbr[title] {
   // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
@@ -39,7 +42,7 @@ abbr[title] {
 //
 // Markup: text-b.hbs
 //
-// Styleguide: base.text.b
+// Style guide: base.text.b
 
 b,
 strong {
@@ -53,7 +56,7 @@ strong {
 //
 // Markup: text-cite.hbs
 //
-// Styleguide: base.text.cite
+// Style guide: base.text.cite
 
 cite {
   // Add your styles.
@@ -68,7 +71,7 @@ cite {
 //
 // Markup: text-code.hbs
 //
-// Styleguide: base.text.code
+// Style guide: base.text.code
 
 code,
 kbd,
@@ -84,7 +87,7 @@ var {
 //
 // Markup: text-del.hbs
 //
-// Styleguide: base.text.del
+// Style guide: base.text.del
 
 del {
   // Add your styles.
@@ -96,7 +99,7 @@ del {
 //
 // Markup: text-dfn.hbs
 //
-// Styleguide: base.text.dfn
+// Style guide: base.text.dfn
 
 dfn {
   // Address styling not present in Safari and Chrome.
@@ -113,7 +116,7 @@ dfn {
 //
 // Markup: text-i.hbs
 //
-// Styleguide: base.text.i
+// Style guide: base.text.i
 
 i,
 em {
@@ -127,7 +130,7 @@ em {
 //
 // Markup: text-ins.hbs
 //
-// Styleguide: base.text.ins
+// Style guide: base.text.ins
 
 ins {
   // Add your styles.
@@ -140,7 +143,7 @@ ins {
 //
 // Markup: text-mark.hbs
 //
-// Styleguide: base.text.mark
+// Style guide: base.text.mark
 
 @if support-legacy-browser(ie, '9') {
   mark {
@@ -157,7 +160,7 @@ ins {
 //
 // Markup: text-q.hbs
 //
-// Styleguide: base.text.q
+// Style guide: base.text.q
 
 q {
   // Add your styles.
@@ -170,7 +173,7 @@ q {
 //
 // Markup: text-s.hbs
 //
-// Styleguide: base.text.s
+// Style guide: base.text.s
 
 s {
   // Add your styles.
@@ -183,7 +186,7 @@ s {
 //
 // Markup: text-small.hbs
 //
-// Styleguide: base.text.small
+// Style guide: base.text.small
 
 small {
   // Address inconsistent and variable font size in all browsers.
@@ -197,7 +200,7 @@ small {
 //
 // Markup: text-sub.hbs
 //
-// Styleguide: base.text.sub
+// Style guide: base.text.sub
 
 sub,
 sup {
@@ -223,7 +226,7 @@ sub {
 //
 // Markup: text-u.hbs
 //
-// Styleguide: base.text.u
+// Style guide: base.text.u
 
 u {
   // Add your styles.

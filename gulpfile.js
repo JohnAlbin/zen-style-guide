@@ -26,12 +26,12 @@ gulp.task('styleguide', ['clean:styleguide', 'styleguide:markup'], $.shell.task(
 ));
 
 gulp.task('styleguide:sass-colors', $.shell.task([
-    'bundle exec sass --compass --scss --sourcemap=none --style expanded sass/style-guide/sass-colors.scss.txt sass/style-guide/sass-colors.html.txt'
+    'bundle exec sass --compass --scss --sourcemap=none --style expanded sass/style-guide/sass-colors.scss.txt sass/style-guide/sass-colors.hbs.txt'
   ], {cwd: theme}
 ));
 
 gulp.task('styleguide:markup', ['styleguide:sass-colors'], $.shell.task([
-    'head -n 2  sass/style-guide/sass-colors.html.txt | tail -n 1 > sass/style-guide/sass-colors.html'
+    'head -n 2  sass/style-guide/sass-colors.hbs.txt | tail -n 1 > sass/style-guide/sass-colors.hbs'
   ], {cwd: theme}
 ));
 

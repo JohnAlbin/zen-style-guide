@@ -1,20 +1,17 @@
-// Resizable textareas
+// Grippie
 //
-// @see textarea.js
+// The "grippie" handle of a resizable textarea.
+//
+// @TODO
+//
+// Style guide: components.forms.grippie
 
-.resizable-textarea__grippie,
-%resizable-textarea__grippie {
+.grippie,
+%grippie {
   background: image-url('grippie.png') no-repeat center 2px color(resizable-grippie);
   border: 1px solid color(border);
   border-top-width: 0;
   cursor: s-resize;
   height: 9px;
   overflow: hidden;
-}
-
-
-// Drupal selectors.
-
-.resizable-textarea .grippie {
-  @extend %resizable-textarea__grippie;
 }

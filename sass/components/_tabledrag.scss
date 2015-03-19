@@ -1,4 +1,8 @@
-// TableDrag behavior
+// TableDrag
+//
+// @TODO
+//
+// Style guide: components.forms.tabledrag
 
 .drag__wrapper,
 %drag__wrapper {
@@ -109,8 +113,9 @@
   background-position: -11px center;
 }
 
-
+//
 // Drupal selectors.
+//
 
 body.drag {
   @extend %drag__wrapper;

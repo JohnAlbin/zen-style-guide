@@ -1,7 +1,13 @@
 // Pager
-
+//
 // A list of page numbers when more than 1 page of content is available.
-.pager {
+//
+// @TODO
+//
+// Style guide: components.pager
+
+.pager,
+%pager {
   clear: both;
   padding: 0;
   text-align: center;
@@ -11,12 +17,24 @@
   }
 }
 
+.pager__item,
 %pager__item {
   display: inline;
   padding: 0 .5em;
   list-style-type: none;
   background-image: none;
 }
+
+// The current page's list item.
+.pager__current-item,
+%pager__current-item {
+  @extend %pager__item;
+  font-weight: bold;
+}
+
+//
+// Drupal selectors.
+//
 
 .pager-item,      // A list item containing a page number in the list of pages.
 .pager-first,     // The first page's list item.
@@ -27,8 +45,6 @@
   @extend %pager__item;
 }
 
-// The current page's list item.
 .pager-current {
-  @extend %pager__item;
-  font-weight: bold;
+  @extend %pager__current-item;
 }

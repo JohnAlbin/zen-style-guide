@@ -1,6 +1,8 @@
 // Progress bar
 //
-// @see progress.js
+// @TODO
+//
+// Style guide: components.progress-bar
 
 .progress-bar,
 %progress-bar {
@@ -74,8 +76,9 @@
   width: 16em;
 }
 
-
+//
 // Drupal selectors.
+//
 
 .progress {
   @extend %progress-bar;

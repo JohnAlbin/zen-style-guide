@@ -1,9 +1,15 @@
+// Responsive sidebars layout
+//
 // Positioning for a responsive layout.
 //
 // Define CSS classes to create a fluid grid layout with optional sidebars
 // depending on whether blocks are placed in the left or right sidebars.
 //
 // This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+//
+// @TODO: Refactor
+//
+// Style guide: layout.sidebars
 
 // We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
 // between columns (applied as 10px of left/right padding on each column).

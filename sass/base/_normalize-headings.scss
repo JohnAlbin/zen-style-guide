@@ -1,3 +1,6 @@
+// Dependencies.
+@import 'normalize';
+
 // Headings
 //
 // All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>,
@@ -7,7 +10,7 @@
 //
 // Markup: headings-h.hbs
 //
-// Styleguide: base.heading
+// Style guide: base.headings
 
 // Address variable `h1` font-size and margin within `section` and `article`
 // contexts in Firefox 4+, Safari, and Chrome.

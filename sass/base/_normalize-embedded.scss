@@ -1,8 +1,11 @@
+// Dependencies.
+@import 'normalize';
+
 // Embedded content
 //
 // Weight: 2
 //
-// Styleguide: base.embedded
+// Style guide: base.embedded
 
 // Image
 //
@@ -10,7 +13,7 @@
 //
 // Markup: embedded-img.hbs
 //
-// Styleguide: base.embedded.img
+// Style guide: base.embedded.img
 
 img {
   @if support-legacy-browser(ie, '10') {
@@ -43,7 +46,7 @@ svg {
 //
 // Markup: embedded-svg.hbs
 //
-// Styleguide: base.embedded.svg
+// Style guide: base.embedded.svg
 
 svg:not(:root) {
   // Correct overflow not hidden in IE 9/10/11.

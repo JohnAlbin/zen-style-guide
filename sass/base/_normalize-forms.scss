@@ -1,8 +1,11 @@
+// Dependencies.
+@import 'normalize';
+
 // Forms
 //
 // Weight: 2
 //
-// Styleguide: base.forms
+// Style guide: base.forms
 
 // Correct margin displayed oddly in IE 6/7.
 @if support-legacy-browser(ie, '7') {
@@ -64,7 +67,7 @@ input::-moz-focus-inner {
 //
 // Markup: forms-button.hbs
 //
-// Styleguide: base.forms.button
+// Style guide: base.forms.button
 
 // 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
 //    and `video` controls.
@@ -90,7 +93,7 @@ input[type="submit"] {
 //
 // Markup: forms-input.hbs
 //
-// Styleguide: base.forms.input
+// Style guide: base.forms.input
 
 input {
   // Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -105,8 +108,19 @@ input {
   &[type="password"],
   &[type="date"],
   &[type="time"],
-  &[type="number"],
+  &[type="number"] {
+    // Add your styles.
+  }
+
   &[type="range"] {
+    // Add your styles.
+  }
+
+  &[type="color"] {
+    // Add your styles.
+  }
+
+  &[type="file"] {
     // Add your styles.
   }
 }
@@ -121,7 +135,7 @@ input {
 //
 // Markup: forms-input-checkbox.hbs
 //
-// Styleguide: base.forms.input-checkbox
+// Style guide: base.forms.input-checkbox
 
 // Radio buttons
 //
@@ -133,7 +147,7 @@ input {
 //
 // Markup: forms-input-radio.hbs
 //
-// Styleguide: base.forms.input-radio
+// Style guide: base.forms.input-radio
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -182,7 +196,7 @@ input[type="search"] {
 //
 // Markup: forms-fieldset.hbs
 //
-// Styleguide: base.forms.fieldset
+// Style guide: base.forms.fieldset
 
 fieldset {
   // Apply borders and padding that keep the vertical rhythm.
@@ -223,7 +237,7 @@ legend {
 //
 // Markup: forms-label.hbs
 //
-// Styleguide: base.forms.label
+// Style guide: base.forms.label
 
 label {
   // Drupal-style form labels.
@@ -241,7 +255,7 @@ label {
 //
 // Markup: forms-select.hbs
 //
-// Styleguide: base.forms.select
+// Style guide: base.forms.select
 
 select {
   // Add your styles.
@@ -259,7 +273,7 @@ optgroup {
 //
 // Markup: forms-textarea.hbs
 //
-// Styleguide: base.forms.textarea
+// Style guide: base.forms.textarea
 
 textarea {
   // Remove default vertical scrollbar in IE 8/9/10/11.

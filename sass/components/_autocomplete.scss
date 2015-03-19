@@ -62,8 +62,10 @@
   color: color(autocomplete-select);
 }
 
-
+//
 // Drupal selectors.
+//
+
 html.js input {
   &.form-autocomplete {
     @extend %autocomplete;
