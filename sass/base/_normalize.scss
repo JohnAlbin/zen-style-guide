@@ -25,7 +25,7 @@
 @include establish-baseline();
 
 html {
-  // scss-lint:disable VendorPrefixes
+  // scss-lint:disable VendorPrefix
   // Show a background image that can be used to debug your alignments.
   // @include debug-vertical-alignment();
   font-family: $font-body;

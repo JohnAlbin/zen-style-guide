@@ -9,6 +9,6 @@ group :frontend do
   gem 'oily_png',             '~> 1.1'
   gem 'sass',                 '~> 3.4'
   gem 'sass-globbing',        '~> 1.1'
-  gem 'scss-lint',            '~> 0.33'
+  gem 'scss-lint',            '~> 0.37'
   gem 'zen-grids',            '>= 2.0.0.beta.3'
 end
