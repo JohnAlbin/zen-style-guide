@@ -14,23 +14,20 @@
   @media print {
     display: none;
   }
-}
 
-.breadcrumb__title,
-%breadcrumb__title {
-  @extend %visually-hidden;
-}
+  &__title {
+    @extend %visually-hidden;
+  }
 
-.breadcrumb__list,
-%breadcrumb__list {
-  margin: 0;
-  padding: 0;
-}
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 
-.breadcrumb__item,
-%breadcrumb__item {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  &__item {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }

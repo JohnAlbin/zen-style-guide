@@ -9,15 +9,6 @@
 //
 // Style guide: components.navigation.skip-link
 
-.skip-link__wrapper,
-%skip-link__wrapper {
-  margin: 0;
-
-  @media print {
-    display: none;
-  }
-}
-
 .skip-link,
 %skip-link {
   &:link,
@@ -28,5 +19,13 @@
     text-align: center;
     background-color: color(skip-link-bg);
     color: color(skip-link);
+  }
+
+  &__wrapper {
+    margin: 0;
+
+    @media print {
+      display: none;
+    }
   }
 }

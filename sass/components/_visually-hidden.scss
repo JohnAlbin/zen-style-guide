@@ -14,20 +14,18 @@
 .visually-hidden,
 %visually-hidden {
   @include visually-hidden();
-}
 
-.visually-hidden--off,
-%visually-hidden--off {
-  @include visually-hidden--off();
-}
+  &--off {
+    @include visually-hidden--off();
+  }
 
-.visually-hidden--focusable,
-%visually-hidden--focusable {
-  @extend %visually-hidden;
+  &--focusable {
+    @extend %visually-hidden;
 
-  &:active,
-  &:focus {
-    @extend %visually-hidden--off;
+    &:active,
+    &:focus {
+      @extend %visually-hidden--off;
+    }
   }
 }
 

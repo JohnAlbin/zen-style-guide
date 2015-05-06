@@ -4,39 +4,58 @@
 //
 // Style guide: components.comments
 
-// Wrapper for the list of comments and its title.
-.comments {
-  @include output-rhythm(margin, rhythm(1) 0);
-}
-
-.comments__title,      // Comment section heading.
-.comments__form-title, // Comment form heading.
-.comment__title {      // Comment title.
-  margin: 0;
-}
-
-// Preview of the comment before submitting new or updated comment.
-.comment-preview {
-  background-color: color(preview-bg);
-}
-
 // Wrapper for a single comment.
-.comment {
+.comment,
+%comment {
+
+  // Wrapper for the list of comments and its title.
+  &__section {
+    @include output-rhythm(margin, rhythm(1) 0);
+  }
+
+  &__title {
+    margin: 0;
+  }
 
   // Comment's permalink wrapper.
-  .permalink {
+  &__permalink {
     text-transform: uppercase;
     font-size: 75%;
   }
+
+  // Preview of the comment before submitting new or updated comment.
+  &--preview {
+    background-color: color(preview-bg);
+  }
+
+  // Nested comments are indented.
+  &--nested {
+    // Drupal core uses a 25px left margin.
+    margin-left: $indent-amount;
+
+    @include rtl() {
+      margin-left: 0;
+      margin-right: $indent-amount;
+    }
+  }
 }
 
-// Nested comments are indented.
-.indented {
-  // Drupal core uses a 25px left margin.
-  margin-left: $indent-amount;
+//
+// Drupal selectors.
+//
 
-  @include rtl() {
-    margin-left: 0;
-    margin-right: $indent-amount;
-  }
+.comments {
+  @extend %comment__section;
+}
+
+.comment-preview {
+  @extend %comment--preview;
+}
+
+.comment .permalink {
+  @extend %comment__permalink;
+}
+
+.indented {
+  @extend %comment--nested;
 }

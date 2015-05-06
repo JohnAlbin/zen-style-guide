@@ -17,49 +17,45 @@
   @include rtl() {
     background-position: 0% 2px;
   }
-}
 
-.autocomplete.is-throbbing,
-%autocomplete-is-throbbing {
-  background-position: 100% -18px;
+  &.is-throbbing,
+  &-is-throbbing {
+    background-position: 100% -18px;
 
-  @include rtl() {
-    background-position: 0% -18px;
+    @include rtl() {
+      background-position: 0% -18px;
+    }
   }
-}
 
-// Suggestion list.
-.autocomplete__list-wrapper,
-%autocomplete__list-wrapper {
-  border: 1px solid;
-  overflow: hidden;
-  position: absolute;
-  z-index: 100;
-}
-
-.autocomplete__list,
-%autocomplete__list {
-  list-style: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
-}
-
-.autocomplete__list-item,
-%autocomplete__list-item {
-  background: color(autocomplete-bg);
-  color: color(autocomplete);
-  cursor: default;
-  white-space: pre;
-  @if support-legacy-browser(ie, '7') {
-    zoom: 1;
+  // Suggestion list.
+  &__list-wrapper {
+    border: 1px solid;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
   }
-}
 
-.autocomplete__list-item.is-selected,
-%autocomplete__list-item-is-selected {
-  background: color(autocomplete-select-bg);
-  color: color(autocomplete-select);
+  &__list {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    background: color(autocomplete-bg);
+    color: color(autocomplete);
+    cursor: default;
+    white-space: pre;
+    @if support-legacy-browser(ie, '7') {
+      zoom: 1;
+    }
+  }
+
+  &__list-item-is-selected {
+    background: color(autocomplete-select-bg);
+    color: color(autocomplete-select);
+  }
 }
 
 //

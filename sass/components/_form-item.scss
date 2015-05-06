@@ -16,70 +16,62 @@
 .form-item,
 %form-item {
   @include output-rhythm(margin, rhythm(1) 0);
-}
 
-.form-item--grouped,
-%form-item--grouped {
-  margin: 0;
-}
-
-.form-item--error,
-%form-item--error {
-  input,
-  textarea,
-  select {
-    @extend %form-item--error__widget;
+  &--grouped {
+    margin: 0;
   }
-}
 
-%form-item--error__widget {
-  border: 1px solid color(form-error);
-}
+  &--error {
+    input,
+    textarea,
+    select {
+      @extend %form-item--error__widget;
+    }
+  }
 
-.form-item--inline,
-%form-item--inline {
-  &,
-  div,
-  label {
+  &--error__widget {
+    border: 1px solid color(form-error);
+  }
+
+  &--inline {
+    &,
+    div,
+    label {
+      display: inline;
+    }
+
+    // Fieldset contents always need to be rendered as block.
+    .fieldset-wrapper {
+      display: block;
+    }
+  }
+
+  // The descriptive help text (separate from the label).
+  &__description {
+    font-size: .85em;
+  }
+
+  &--grouped__description {
+    margin-left: 2.4em;
+  }
+
+  // Labels for radios and checkboxes.
+  &--grouped__label {
     display: inline;
+    font-weight: normal;
   }
 
-  // Fieldset contents always need to be rendered as block.
-  .fieldset-wrapper {
-    display: block;
+  // The part of the label that indicates a required field.
+  &__required {
+    color: color(form-error);
   }
-}
-
-// The descriptive help text (separate from the label).
-.form-item__description,
-%form-item__description {
-  font-size: .85em;
-}
-
-.form-item--grouped__description,
-%form-item--grouped__description {
-  margin-left: 2.4em;
-}
-
-// Labels for radios and checkboxes.
-.form-item--grouped__label,
-%form-item--grouped__label {
-  display: inline;
-  font-weight: normal;
-}
-
-// The part of the label that indicates a required field.
-.form-item__required,
-%form-item__required {
-  color: color(form-error);
 }
 
 //
 // Drupal selectors.
 //
 
-.form-checkboxes,
-.form-radios,
+.form-item,
 tr.even,
 tr.odd {
   .form-item {

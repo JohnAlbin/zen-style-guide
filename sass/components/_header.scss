@@ -11,73 +11,65 @@
 .header,
 %header {
   @extend %clearfix;
-}
 
-// Wrapping link for logo.
-.header__logo,
-%header__logo {
-  float: left;
-  margin: 0;
-  padding: 0;
+  // Wrapping link for logo.
+  &__logo {
+    float: left;
+    margin: 0;
+    padding: 0;
 
-  @include rtl() {
-    float: right;
-  }
-}
-
-// Logo image.
-.header__logo-image,
-%header__logo-image {
-  vertical-align: bottom;
-}
-
-// Wrapper for website name and slogan.
-.header__name-and-slogan,
-%header__name-and-slogan {
-  float: left;
-}
-
-// The name of the website.
-.header__site-name,
-%header__site-name {
-  @extend %h1;
-  margin: 0;
-}
-
-// The link around the name of the website.
-.header__site-link,
-%header__site-link {
-  &:link,
-  &:visited {
-    color: color(text);
-    text-decoration: none;
+    @include rtl() {
+      float: right;
+    }
   }
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
+  // Logo image.
+  &__logo-image {
+    vertical-align: bottom;
   }
-}
 
-// The slogan (or tagline) of a website.
-.header__site-slogan,
-%header__site-slogan {
-  margin: 0;
-}
-
-// The secondary menu (login, etc.)
-.header__secondary-menu,
-%header__secondary-menu {
-  float: right;
-
-  @include rtl() {
+  // Wrapper for website name and slogan.
+  &__name-and-slogan {
     float: left;
   }
-}
 
-// Wrapper for any blocks placed in the header region.
-.header__region,
-%header__region {
-  // Clear the logo.
-  clear: both;
+  // The name of the website.
+  &__site-name {
+    @extend %h1;
+    margin: 0;
+  }
+
+  // The link around the name of the website.
+  &__site-link {
+    &:link,
+    &:visited {
+      color: color(text);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // The slogan (or tagline) of a website.
+  &__site-slogan {
+    margin: 0;
+  }
+
+  // The secondary menu (login, etc.)
+  &__secondary-menu {
+    float: right;
+
+    @include rtl() {
+      float: left;
+    }
+  }
+
+  // Wrapper for any blocks placed in the header region.
+  &__region {
+    // Clear the logo.
+    clear: both;
+  }
 }

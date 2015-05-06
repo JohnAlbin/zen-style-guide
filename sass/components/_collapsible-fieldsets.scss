@@ -7,61 +7,59 @@
 .collapsible-fieldset,
 %collapsible-fieldset {
   position: relative;
-}
 
-.collapsible-fieldset.is-collapsed,
-%collapsible-fieldset-is-collapsed {
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  height: 1em;
-}
-
-.is-collapsed .collapsible-fieldset__wrapper,
-%collapsible-fieldset-is-collapsed__wrapper {
-  display: none;
-}
-
-.collapsible-fieldset__legend,
-%collapsible-fieldset__legend {
-  display: block;
-  padding-left: 15px;
-  background-image: inline-image('menu-expanded.png');
-  @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('menu-expanded.png');
+  &.is-collapsed,
+  &-is-collapsed {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    height: 1em;
   }
-  background-position: 5px 65%;
-  background-repeat: no-repeat;
 
-  @include rtl() {
-    padding-left: 0;
-    padding-right: 15px;
-    background-position: 98% 75%;
+  .is-collapsed &__wrapper,
+  &-is-collapsed__wrapper {
+    display: none;
   }
-}
 
-.is-collapsed .collapsible-fieldset__legend,
-%collapsible-fieldset-is-collapsed__legend {
-  background-image: inline-image('menu-collapsed.png');
-  @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('menu-collapsed.png');
-  }
-  background-position: 5px 50%;
-
-  @include rtl() {
-    background-image: inline-image('menu-collapsed-rtl.png');
+  &__legend {
+    display: block;
+    padding-left: 15px;
+    background-image: inline-image('menu-expanded.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('menu-collapsed-rtl.png');
+      *background-image: image-url('menu-expanded.png');
     }
-    background-position: 98% 50%;
-  }
-}
+    background-position: 5px 65%;
+    background-repeat: no-repeat;
 
-.collapsible-fieldset__summary,
-%collapsible-fieldset__summary {
-  color: color(fieldset-summary);
-  font-size: .9em;
-  margin-left: .5em;
+    @include rtl() {
+      padding-left: 0;
+      padding-right: 15px;
+      background-position: 98% 75%;
+    }
+  }
+
+  .is-collapsed &__legend,
+  &-is-collapsed__legend {
+    background-image: inline-image('menu-collapsed.png');
+    @if support-legacy-browser(ie, '7') {
+      *background-image: image-url('menu-collapsed.png');
+    }
+    background-position: 5px 50%;
+
+    @include rtl() {
+      background-image: inline-image('menu-collapsed-rtl.png');
+      @if support-legacy-browser(ie, '7') {
+        *background-image: image-url('menu-collapsed-rtl.png');
+      }
+      background-position: 98% 50%;
+    }
+  }
+
+  &__summary {
+    color: color(fieldset-summary);
+    font-size: .9em;
+    margin-left: .5em;
+  }
 }
 
 //

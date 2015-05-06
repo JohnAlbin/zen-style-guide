@@ -6,7 +6,7 @@
 
 // The following Sass functions are required to generate some variables' values,
 // so we load them first.
-@import 'library/color';
+@import 'chroma/functions';
 
 
 //
@@ -66,14 +66,15 @@ $browser-minimum-versions: (
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
 // The font size set on the root html element.
-$base-font-size:    16px;
+$base-font-size:        16px;
 
 // The base line height determines the basic unit of vertical rhythm.
-$base-line-height:  24px;
+$base-line-height:      24px;
 
 // The length unit in which to output vertical rhythm values.
 // Supported values: px, em, rem.
-$rhythm-unit:       'rem';
+$rhythm-unit:           'rem';
+$rem-with-px-fallback:  true;
 
 
 // The following font family declarations use widely available fonts.
@@ -108,16 +109,17 @@ $font-watermark:  $impact;
 
 // Colors
 //
-// Use the [<code>color()</code>](#kssref-sass-functions-color) function to add colors to CSS properties.
+// Use the <code>color()</code> function to add colors to CSS properties.
 //
-// Markup: sass-colors.hbs
+// Markup: chroma-color-markup.hbs
 //
 // Weight: -1
 //
-// Styleguide: sass.colors
+// Style guide: sass.colors
 
-// Define useful names of color values.
-$colors: add-default-color-scheme('The main colors of the site.', (
+// Define descriptive names of color values.
+$chroma: define-default-color-scheme('Descriptive color names for use in "functional" color names below.');
+$chroma: add-colors((
   white:                  #fff,
   grey-extra-light:       #eee,
   grey-light:             #ddd,
@@ -144,81 +146,81 @@ $colors: add-default-color-scheme('The main colors of the site.', (
   green-light:            #be7,
   green-dark:             #234600,
 ));
-$color-default-scheme:  'design';
 
-// Define color variable names for functional uses.
-$colors: add-color-scheme('design', 'Colors used by different parts of the design.', (
+// Define color names for functional uses.
+$chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
+$chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   color(black),
-  text-bg:                color(white),
+  text:                   'black',
+  text-bg:                'white',
 
-  link:                   color(blue),
-  link-visited:           color(purple),
-  link-active:            color(red),
+  link:                   'blue',
+  link-visited:           'purple',
+  link-active:            'red',
 
-  border:                 color(grey-medium-light),
+  border:                 'grey-medium-light',
+
+  autocomplete:           'text',
+  autocomplete-bg:        'text-bg',
+  autocomplete-select:    'white',
+  autocomplete-select-bg: 'blue',
+
+  body-bg:                'text-bg',
+
+  fieldset-summary:       'grey-medium',
+  form-error:             'red',
+
+  mark-highlight:         'red',
+  mark-bg:                'yellow',
+
+  menu-active:            'text',
+
+  preview-bg:             'yellow-pale',
+
+  progress-bar:           'blue',
+  progress-bar-bg:        'grey-medium-light',
+  progress-bar-border:    'grey-dark',
+
+  resizable-grippie:      'grey-extra-light',
+
+  row-stripe:             'grey-extra-light',
+  row-disabled:           'grey-medium-light',
+
+  skip-link:              'white',
+  skip-link-bg:           'grey-dark',
+
+  status:                 'green-dark',
+  status-bg:              'green-pale',
+  status-border:          'green-light',
+  status-highlight:       'text',
+  warning:                'rust',
+  warning-bg:             'yellow-pale',
+  warning-border:         'yellow-dark',
+  error:                  'rust',
+  error-bg:               'pink-pale',
+  error-border:           'red-orange',
+
+  tabs-border:            'border',
+  tabs-bg:                'text-bg',
+  tab:                    'grey-extra-dark',
+  tab-text-shadow:        'white',
+  tab-bg:                 'grey-light',
+  tab-secondary:          'grey-dark',
+
+  table-drag:             'yellow-pale',
+  table-select:           'yellow-pale',
+
+  watermark:              'grey-extra-light',
 ));
 
-$colors: add-colors('design', (
-  autocomplete:           color(text),
-  autocomplete-bg:        color(text-bg),
-  autocomplete-select:    color(white),
-  autocomplete-select-bg: color(blue),
-
-  body-bg:                color(text-bg),
-
-  fieldset-summary:       color(grey-medium),
-  form-error:             color(red),
-
-  mark-highlight:         color(red),
-  mark-bg:                color(yellow),
-
-  menu-active:            color(text),
-
-  preview-bg:             color(yellow-pale),
-
-  progress-bar:           color(blue),
-  progress-bar-bg:        color(grey-medium-light),
-  progress-bar-border:    color(grey-dark),
-
-  resizable-grippie:      color(grey-extra-light),
-
-  row-stripe:             color(grey-extra-light),
-  row-disabled:           color(grey-medium-light),
-
-  skip-link:              color(white),
-  skip-link-bg:           color(grey-dark),
-
-  status:                 color(green-dark),
-  status-bg:              color(green-pale),
-  status-border:          color(green-light),
-  status-highlight:       color(text),
-  warning:                color(rust),
-  warning-bg:             color(yellow-pale),
-  warning-border:         color(yellow-dark),
-  error:                  color(rust),
-  error-bg:               color(pink-pale),
-  error-border:           color(red-orange),
-
-  tabs-border:            color(border),
-  tabs-bg:                color(text-bg),
-  tab:                    color(grey-extra-dark),
-  tab-text-shadow:        color(white),
-  tab-bg:                 color(grey-light),
-  tab-secondary:          color(grey-dark),
-
-  table-drag:             color(yellow-pale),
-  table-select:           color(yellow-pale),
-
-  watermark:              color(grey-extra-light),
-));
+$chroma-active-scheme: 'functional';
 
 
 // Breakpoints
 //
 // Use the <code>respond-to()</code> mixin to use named breakpoints.
 //
-// Styleguide: sass.variables.breakpoints
+// Style guide: sass.variables.breakpoints
 
 $breakpoints: (
   'small':        (444px,       'no-query' true),

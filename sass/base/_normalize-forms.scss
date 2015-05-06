@@ -1,5 +1,6 @@
 // Dependencies.
 @import 'normalize';
+@import 'components/button';
 
 // Forms
 //
@@ -69,18 +70,23 @@ input::-moz-focus-inner {
 //
 // Style guide: base.forms.button
 
-// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-//    and `video` controls.
-// 2. Correct inability to style clickable `input` types in iOS.
 button,
-html input[type="button"], // 1
-input[type="reset"],
-input[type="submit"] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   @extend %button;
-  -webkit-appearance: button; // 2
   // Prevent "line-height: normal" rule below from breaking the
   // "appearance: button" styling on the input elements in Firefox.
   line-height: inherit;
+}
+
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+//    and `video` controls.
+// 2. Correct inability to style clickable `input` types in iOS.
+html input[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
 }
 
 // Inputs
@@ -109,7 +115,7 @@ input {
   &[type="date"],
   &[type="time"],
   &[type="number"] {
-    // Add your styles.
+    @extend %text-input !optional;
   }
 
   &[type="range"] {
@@ -123,6 +129,10 @@ input {
   &[type="file"] {
     // Add your styles.
   }
+}
+
+%text-input {
+  // Add your styles.
 }
 
 // Checkboxes
@@ -245,7 +255,7 @@ label {
   font-weight: bold;
 }
 
-// Select
+// Select list
 //
 // The &lt;select&gt; tag represents a form field for selecting amongst a set of
 // options.
@@ -276,6 +286,7 @@ optgroup {
 // Style guide: base.forms.textarea
 
 textarea {
+  @extend %text-input !optional;
   // Remove default vertical scrollbar in IE 8/9/10/11.
   overflow: auto;
 }

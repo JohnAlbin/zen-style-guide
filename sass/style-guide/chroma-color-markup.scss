@@ -1,7 +1,9 @@
 // Build the markup needed for the color section of the KSS style guide.
 
 @import 'init';
+@import 'chroma/kss';
 
+// scss-lint:disable Comment
 /*
 #{kss-color-markup()}
 */

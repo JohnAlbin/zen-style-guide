@@ -1,9 +1,0 @@
-{
-  "source":       "../sass",
-  "destination":  "./",
-  "css": [
-    "../css/styles.css"
-  ],
-  "js": [
-  ]
-}

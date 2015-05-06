@@ -45,9 +45,9 @@ body {
 }
 
 // Use the saner border-box model for all elements.
-// * {
-//   @include box-sizing(border-box);
-// }
+* {
+  @include box-sizing(border-box);
+}
 
 // HTML5 display definitions
 // ==========================================================================

@@ -25,6 +25,7 @@
 //
 // The following sass modules are shared with all .scsss files:
 // - [Breakpoint](http://breakpoint-sass.com/)
+// - [Chroma](https://github.com/JohnAlbin/chroma)
 // - [Compass support](http://compass-style.org/reference/compass/support/)
 // - [Compass sprites](http://compass-style.org/reference/compass/utilities/sprites/)
 // - [Compass CSS3](http://compass-style.org/reference/compass/css3/)
@@ -37,6 +38,8 @@
 
 // Add Breakpoint to manage media queries.
 @import 'breakpoint';
+// Add Chroma to manage colors.
+@import 'chroma';
 // Add Compass' IE and vendor prefix support variables.
 @import 'compass/support';
 // See http://compass-style.org/help/tutorials/spriting/

@@ -44,43 +44,38 @@
     padding: 10px 50px 10px 10px;
     background-position: 99% 8px;
   }
-}
 
-.messages--warning,
-%messages--warning {
-  @extend %messages;
-  @extend %status--warning;
-  background-image: inline-image('message-24-warning.png');
-  @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('message-24-warning.png');
+  &--warning {
+    @extend %messages;
+    @extend %status--warning;
+    background-image: inline-image('message-24-warning.png');
+    @if support-legacy-browser(ie, '7') {
+      *background-image: image-url('message-24-warning.png');
+    }
+    border-color: color(warning-border);
   }
-  border-color: color(warning-border);
-}
 
-.messages--error,
-%messages--error {
-  @extend %messages;
-  @extend %status--error;
-  background-image: inline-image('message-24-error.png');
-  @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('message-24-error.png');
+  &--error {
+    @extend %messages;
+    @extend %status--error;
+    background-image: inline-image('message-24-error.png');
+    @if support-legacy-browser(ie, '7') {
+      *background-image: image-url('message-24-error.png');
+    }
+    border-color: color(error-border);
   }
-  border-color: color(error-border);
-}
 
-.messages--error__highlighted-text,
-%messages--error__highlighted-text {
-  color: color(status-highlight);
-}
+  &--error__highlighted-text {
+    color: color(status-highlight);
+  }
 
-.messages__list,
-%messages__list {
-  margin: 0;
-}
+  &__list {
+    margin: 0;
+  }
 
-.messages__item,
-%messages__item {
-  list-style-image: none;
+  &__item {
+    list-style-image: none;
+  }
 }
 
 //

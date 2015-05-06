@@ -22,15 +22,14 @@
   text-align: center;
   text-shadow: 0 0 1px rgba(0, 0, 0, .1);
   word-wrap: break-word;
-}
 
-// The watermark's wrapper only needs CSS for IE 6/7.
-.watermark__wrapper,
-%watermark__wrapper {
-  // Otherwise adjacent elements will appear below the watermark text.
-  @if support-legacy-browser(ie, '7') {
-    > * {
-      *position: relative;
+  // The watermark's wrapper only needs CSS for IE 6/7.
+  &__wrapper {
+    // Otherwise adjacent elements will appear below the watermark text.
+    @if support-legacy-browser(ie, '7') {
+      > * {
+        *position: relative;
+      }
     }
   }
 }

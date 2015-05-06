@@ -4,14 +4,14 @@
 //
 // Weight: -1
 //
-// Styleguide: sass
+// Style guide: sass
 @import 'init';
 
 // Base
 //
 // These are the base styles applied to HTML elements.
 //
-// Styleguide: base
+// Style guide: base
 
 // Ensure fonts get loaded first to minimize front-end performance impact.
 @import 'base/fonts';
@@ -23,7 +23,7 @@
 // theme. Note: some Panels layouts are included in other parts of the system
 // and are not documented.
 //
-// Styleguide: layouts
+// Style guide: layouts
 @import 'layouts/sidebars';
 
 // Components
@@ -33,5 +33,5 @@
 //
 // Weight: 1
 //
-// Styleguide: components
+// Style guide: components
 @import 'components/**';

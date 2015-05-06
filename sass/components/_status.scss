@@ -10,22 +10,22 @@
 //
 // Style guide: components.messages.status
 
-.status--ok,
-%status--ok {
-  background-color: color(status-bg);
-  color: color(status);
-}
+.status,
+%status {
+  &--ok {
+    background-color: color(status-bg);
+    color: color(status);
+  }
 
-.status--warning,
-%status--warning {
-  background-color: color(warning-bg);
-  color: color(warning);
-}
+  &--warning {
+    background-color: color(warning-bg);
+    color: color(warning);
+  }
 
-.status--error,
-%status--error {
-  background-color: color(error-bg);
-  color: color(error);
+  &--error {
+    background-color: color(error-bg);
+    color: color(error);
+  }
 }
 
 //

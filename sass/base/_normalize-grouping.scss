@@ -1,5 +1,6 @@
 // Dependencies.
 @import 'normalize';
+@import 'components/divider';
 
 // Grouping content
 //
@@ -44,6 +45,10 @@ figure {
   @include output-rhythm(margin, rhythm(1) 0);
 }
 
+figcaption {
+  // Add your styles.
+}
+
 // Horizontal rule
 //
 // The hr element represents a paragraph-level thematic break, e.g. a scene
@@ -55,12 +60,10 @@ figure {
 // Style guide: base.grouping.hr
 
 hr {
+  @extend %divider;
   // Address differences between Firefox and other browsers.
   @include box-sizing(content-box);
-  @include output-rhythm(margin, rhythm(1) 0);
   height: 0;
-  border: 1px solid color(border);
-  padding-bottom: -1px;
 }
 
 // Body copy
@@ -145,6 +148,10 @@ ul {
   ul {
     margin: 0;
   }
+}
+
+dt {
+  // Add your styles.
 }
 
 dd {

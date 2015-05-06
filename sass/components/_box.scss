@@ -9,11 +9,10 @@
 .box,
 %box {
   @include output-rhythm(margin-bottom, rhythm(1));
-}
 
-.box__title,
-%box__title {
-  margin: 0;
+  &__title {
+    margin: 0;
+  }
 }
 
 //

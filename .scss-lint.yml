@@ -21,6 +21,8 @@ linters:
     force_nesting: true
   NameFormat:
     convention: ^[a-z](\-?[a-z0-9]+)*(\-\-[a-z0-9](\-?[a-z0-9]+)*)?(__[a-z0-9](\-?[a-z0-9]+)*)?$
+  NestingDepth:
+    max_depth: 4  # &--variant is not a nesting level. https://github.com/causes/scss-lint/issues/384
   PropertySortOrder:
     enabled: false
   PropertySpelling:

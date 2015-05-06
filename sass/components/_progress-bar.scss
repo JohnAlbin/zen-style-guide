@@ -7,73 +7,65 @@
 .progress-bar,
 %progress-bar {
   font-weight: bold;
-}
 
-.progress-bar--disabled,
-%progress-bar--disabled {
-  @include rtl() {
-    float: right;
+  &--disabled {
+    @include rtl() {
+      float: right;
+    }
   }
-}
 
-.progress-bar__bar,
-%progress-bar__bar {
-  @include border-radius(3px);
-  margin: 0 .2em;
-  border: 1px solid color(progress-bar-border);
-  background-color: color(progress-bar-bg);
-}
+  &__bar {
+    @include border-radius(3px);
+    margin: 0 .2em;
+    border: 1px solid color(progress-bar-border);
+    background-color: color(progress-bar-bg);
+  }
 
-.progress-bar__fill,
-%progress-bar__fill {
-  height: 1.5em;
-  width: 5px;
-  background: color(progress-bar) image-url('progress.gif') repeat 0 0;
-}
+  &__fill {
+    height: 1.5em;
+    width: 5px;
+    background: color(progress-bar) image-url('progress.gif') repeat 0 0;
+  }
 
-.progress-bar__percentage,
-%progress-bar__percentage {
-  float: right;
+  &__percentage {
+    float: right;
 
-  @include rtl() {
+    @include rtl() {
+      float: left;
+    }
+  }
+
+  &--ajax {
+    display: inline-block;
+
+    @include rtl() {
+      float: right;
+    }
+  }
+
+  &--ajax__throbber {
+    background: image-url('throbber.gif') no-repeat 0 -18px transparent;
     float: left;
-  }
-}
+    height: 15px;
+    margin: 2px;
+    width: 15px;
 
-.progress-bar--ajax,
-%progress-bar--ajax {
-  display: inline-block;
+    @include rtl() {
+      float: right;
+    }
 
-  @include rtl() {
-    float: right;
-  }
-}
-
-.progress-bar--ajax__throbber,
-%progress-bar--ajax__throbber {
-  background: image-url('throbber.gif') no-repeat 0 -18px transparent;
-  float: left;
-  height: 15px;
-  margin: 2px;
-  width: 15px;
-
-  @include rtl() {
-    float: right;
+    tr & {
+      margin: 0 2px;
+    }
   }
 
-  tr & {
-    margin: 0 2px;
+  &--ajax__message {
+    padding-left: 20px;
   }
-}
 
-.progress-bar--ajax__message,
-%progress-bar--ajax__message {
-  padding-left: 20px;
-}
-
-.progress-bar--ajax__bar,
-%progress-bar--ajax__bar {
-  width: 16em;
+  &--ajax__bar {
+    width: 16em;
+  }
 }
 
 //
