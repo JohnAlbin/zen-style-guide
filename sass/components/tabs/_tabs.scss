@@ -1,0 +1,162 @@
+// Dependencies.
+@import 'components/clearfix/clearfix';
+
+// Tabs
+//
+// Markup:
+// {{> "tabs"}}
+// {{> "tabs--secondary"}}
+//
+// Style guide: components.navigation.tabs
+
+// Tabs (primary)
+//
+// Markup: tabs.hbs
+//
+// Style guide: components.navigation.tabs.primary
+
+.tabs,
+%tabs {
+  @extend %clearfix;
+  @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
+  @include output-rhythm(margin, rhythm(1) 0);
+  @if support-legacy-browser(ie, '9') {
+    // IE 9 and earlier don't understand gradients.
+    border-bottom: 1px solid color(tabs-border) \0/ie;
+  }
+  padding: 0 2px;
+  list-style: none;
+  white-space: nowrap;
+
+  @media print {
+    display: none;
+  }
+}
+
+.tabs__tab,
+%tabs__tab {
+  @include border-top-radius(4px);
+  @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+  float: left;
+  margin: 0 3px;
+  border: 1px solid color(tabs-border);
+  // Allow the tabs gradient to appear just below the tab.
+  border-bottom-color: transparent;
+  @if support-legacy-browser(ie, '9') {
+    // IE 9 and earlier don't understand gradients.
+    border-bottom: 0 \0/ie;
+  }
+
+  @include rtl() {
+    float: right;
+  }
+
+  &.is-active {
+    // Cover the tabs gradient with the same color as the background.
+    border-bottom-color: color(tabs-bg);
+  }
+}
+
+%tabs__tab-link-common {
+  @include adjust-leading-to(1);
+  // Add a top-left bevel.
+  border: 1px solid lighten(color(tab-bg), 5%);
+  border-right: 0;
+  border-bottom: 0;
+  display: block;
+  text-decoration: none;
+}
+
+.tabs__tab-link,
+%tabs__tab-link {
+  @extend %tabs__tab-link-common;
+  @include border-top-radius(4px);
+  @include transition(background-color .3s);
+  color: color(tab);
+  background-color: color(tab-bg);
+  letter-spacing: 1px;
+  padding: 0 1em;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    background-color: lighten(color(tab-bg), 5%);
+    border-color: lighten(color(tab-bg), 8%);
+  }
+
+  &:active {
+    @extend %tabs__tab-link-is-active;
+  }
+}
+
+.tabs__tab-link.is-active,
+%tabs__tab-link-is-active {
+  @if support-legacy-browser(ie, '8') {
+    @include filter-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0));
+  }
+  @include background(linear-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0)) transparent);
+  border-color: lighten(color(tab-bg), 10%);
+}
+
+// Secondary tabs
+//
+// Markup: tabs--secondary.hbs
+//
+// Style guide: components.navigation.tabs.secondary
+
+.tabs--secondary,
+%tabs--secondary {
+  @extend %tabs;
+  font-size: .9em;
+  background-image: none;
+}
+
+.tabs +,
+%tabs + {
+  .tabs--secondary,
+  %tabs--secondary {
+    @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
+    // Collapse bottom margin of .tabs.
+    @include output-rhythm(margin-top, -(rhythm(1)));
+  }
+}
+
+.tabs--secondary__tab,
+%tabs--secondary__tab {
+  @include output-rhythm(margin, rhythm(1)/2 3px);
+  float: left;
+
+  @include rtl() {
+    float: right;
+  }
+}
+
+.tabs--secondary__tab-link,
+%tabs--secondary__tab-link {
+  @extend %tabs__tab-link-common;
+  @include border-radius(.75em);
+  @include transition(background-color .3s);
+  @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+  color: color(tab-secondary);
+  background-color: lighten(color(tab-bg), 8%);
+  padding: 0 .5em;
+
+  &:focus,
+  &:hover {
+    color: darken(color(tab-secondary), 20%);
+    background-color: color(tab-bg);
+    border-color: darken(color(tab-bg), 26.5%);
+  }
+
+  &:active {
+    @extend %tabs--secondary__tab-link-is-active;
+  }
+}
+
+.tabs--secondary__tab-link.is-active,
+%tabs--secondary__tab-link-is-active {
+  @include single-text-shadow(darken(color(tab-secondary), 20%), 1px, 1px, 0);
+  color: lighten(color(tab-bg), 15%);
+  background-color: color(tab-secondary);
+  border-color: darken(color(tab-secondary), 40%);
+}

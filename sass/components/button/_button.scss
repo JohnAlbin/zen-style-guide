@@ -1,0 +1,25 @@
+// Button
+//
+// Buttons built with the &lt;button&gt; tag are the most flexible for styling
+// purposes. But `<a>` tags and `<input>` tags with `type` set to `submit`,
+// `image`, `reset`, or `button` are also supported.
+//
+// Markup: button.hbs
+//
+// Style guide: components.button
+
+.button,
+%button {
+  @include appearance(button);
+  // Improve usability and consistency of cursor style between image-type `input` and others.
+  cursor: pointer;
+  @if support-legacy-browser(ie, '7') {
+    // Remove inner spacing in IE 7 without affecting normal text inputs.
+    *overflow: visible;
+  }
+
+  // Re-set default cursor for disabled elements.
+  &[disabled] {
+    cursor: default;
+  }
+}

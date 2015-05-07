@@ -14,7 +14,7 @@ var gulp      = require('gulp'),
   compass       = require('compass-options').dirs({'config': theme + 'config.rb'});
 
 
-// Build styleguide.
+// Build style guide.
 gulp.task('styleguide', ['clean:styleguide', 'styleguide:markup'], $.shell.task([
     // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
     'kss-node --config <%= config %>'
@@ -25,14 +25,14 @@ gulp.task('styleguide', ['clean:styleguide', 'styleguide:markup'], $.shell.task(
   }
 ));
 
-gulp.task('styleguide:chroma-color-markup', $.shell.task([
-    'bundle exec sass --compass --scss --sourcemap=none --style expanded sass/style-guide/chroma-color-markup.scss css/style-guide/chroma-color-markup.hbs.tmp'
+gulp.task('styleguide:sass-colors', $.shell.task([
+    'bundle exec sass --compass --scss --sourcemap=none --style expanded sass/style-guide/chroma-kss-markup.scss css/style-guide/chroma-kss-markup.hbs.tmp'
   ], {cwd: theme}
 ));
 
-gulp.task('styleguide:markup', ['styleguide:chroma-color-markup'], $.shell.task([
-    'head -n 2  css/style-guide/chroma-color-markup.hbs.tmp | tail -n 1 > css/style-guide/chroma-color-markup.hbs',
-    'rm css/style-guide/chroma-color-markup.hbs.tmp'
+gulp.task('styleguide:markup', ['styleguide:sass-colors'], $.shell.task([
+    'head -n 2  css/style-guide/chroma-kss-markup.hbs.tmp | tail -n 1 > css/style-guide/chroma-kss-markup.hbs',
+    'rm css/style-guide/chroma-kss-markup.hbs.tmp'
   ], {cwd: theme}
 ));
 
@@ -83,7 +83,7 @@ gulp.task('watch:js', ['lint:js'], function() {
   return gulp.watch(theme + compass.js + '/**/*.js', ['lint:js']);
 });
 
-// Clean styleguide directory.
+// Clean style guide directory.
 gulp.task('clean:styleguide', del.bind(null, [styleguide + '*.html', styleguide + 'public'], {force: true}));
 
 // Clean CSS directory.

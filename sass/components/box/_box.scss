@@ -1,0 +1,32 @@
+// Box
+//
+// A simple box styling.
+//
+// A Drupal block is often styled as a box. However, this design component is not applied to any blocks by default.
+//
+// Markup: box.hbs
+//
+// Style guide: components.box
+
+.box,
+%box {
+  @include output-rhythm(margin-bottom, rhythm(1));
+  border: 5px solid color(border);
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+//.block {
+//  @extend %box;
+//}
+
+//.block__title {
+//  @extend %box__title;
+//}

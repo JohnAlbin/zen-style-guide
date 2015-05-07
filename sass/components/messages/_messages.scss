@@ -1,0 +1,98 @@
+// Dependencies.
+@import 'components/status/status';
+
+// Messages
+//
+// System alerts.
+//
+// Style guide: components.messages
+
+// Messages
+//
+// Weight: -1
+//
+// Markup: messages-single.hbs
+//
+// .messages--warning   - Warning messages.
+// .messages--error     - Error messages.
+//
+// Style guide: components.messages.single
+
+// Messages
+//
+// Markup: messages-multiple.hbs
+//
+// .messages--warning   - Warning messages.
+// .messages--error     - Error messages.
+//
+// Style guide: components.messages.multiple
+
+.messages,
+%messages {
+  @extend %status--ok;
+  @include output-rhythm(margin, rhythm(1) 0);
+  padding: 10px 10px 10px 50px;
+  background-image: inline-image('message-24-ok.png');
+  @if support-legacy-browser(ie, '7') {
+    *background-image: image-url('message-24-ok.png');
+  }
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  border: 1px solid color(status-border);
+
+  @include rtl() {
+    padding: 10px 50px 10px 10px;
+    background-position: 99% 8px;
+  }
+
+  &--warning {
+    @extend %messages;
+    @extend %status--warning;
+    background-image: inline-image('message-24-warning.png');
+    @if support-legacy-browser(ie, '7') {
+      *background-image: image-url('message-24-warning.png');
+    }
+    border-color: color(warning-border);
+  }
+
+  &--error {
+    @extend %messages;
+    @extend %status--error;
+    background-image: inline-image('message-24-error.png');
+    @if support-legacy-browser(ie, '7') {
+      *background-image: image-url('message-24-error.png');
+    }
+    border-color: color(error-border);
+  }
+
+  &--error__highlighted-text {
+    color: color(status-highlight);
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__item {
+    list-style-image: none;
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.messages {
+  &.warning {
+    @extend %messages--warning;
+  }
+
+  &.error {
+    @extend %messages--error;
+  }
+}
+
+.messages--error .error,
+.messages.error .error {
+  @extend %messages--error__highlighted-text;
+}

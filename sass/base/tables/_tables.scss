@@ -1,0 +1,28 @@
+// Dependencies.
+@import '../normalize';
+
+// Tables
+//
+// The table element displays tabular data in rows, columns, and cells.
+//
+// Markup: tables-table.hbs
+//
+// Weight: 2
+//
+// Style guide: base.table
+
+table {
+  // Add vertical rhythm margins.
+  @include leader(1);
+  @include trailer(1);
+  // Remove most spacing between table cells.
+  border-collapse: collapse;
+  border-spacing: 0;
+  // Prevent cramped-looking tables
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0;
+}

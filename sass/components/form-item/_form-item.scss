@@ -1,0 +1,115 @@
+// Dependencies.
+@import 'components/clearfix/clearfix';
+
+// Form item
+//
+// Wrapper for a form element (or group of form elements) and its label.
+//
+// .form-item--grouped  - Pack groups of checkboxes and radio buttons closer
+//                        together.
+// .form-item--error    - Highlight the form elements that caused a form
+//                        submission error.
+// .form-item--inline   - Inline form items.
+//
+// Style guide: components.forms.form-item
+
+.form-item,
+%form-item {
+  @include output-rhythm(margin, rhythm(1) 0);
+
+  &--grouped {
+    margin: 0;
+  }
+
+  &--error {
+    input,
+    textarea,
+    select {
+      @extend %form-item--error__widget;
+    }
+  }
+
+  &--error__widget {
+    border: 1px solid color(form-error);
+  }
+
+  &--inline {
+    &,
+    div,
+    label {
+      display: inline;
+    }
+
+    // Fieldset contents always need to be rendered as block.
+    .fieldset-wrapper {
+      display: block;
+    }
+  }
+
+  // The descriptive help text (separate from the label).
+  &__description {
+    font-size: .85em;
+  }
+
+  &--grouped__description {
+    margin-left: 2.4em;
+  }
+
+  // Labels for radios and checkboxes.
+  &--grouped__label {
+    display: inline;
+    font-weight: normal;
+  }
+
+  // The part of the label that indicates a required field.
+  &__required {
+    color: color(form-error);
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.form-item,
+tr.even,
+tr.odd {
+  .form-item {
+    @extend %form-item--grouped;
+  }
+}
+
+// Password confirmation.
+.password-parent,
+.confirm-parent {
+  @extend %form-item--grouped;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  @extend %form-item--error__widget;
+}
+
+.form-item .description {
+  @extend %form-item__description;
+}
+
+.container-inline .form-item {
+  @extend %form-item--inline;
+}
+
+label.option {
+  @extend %form-item--grouped__label;
+}
+
+.form-required {
+  @extend %form-item__required;
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  .description {
+    @extend %form-item--grouped__description;
+  }
+}
