@@ -32,9 +32,9 @@
   @extend %status--ok;
   @include output-rhythm(margin, rhythm(1) 0);
   padding: 10px 10px 10px 50px;
-  background-image: inline-image('message-24-ok.png');
+  background-image: inline-image('components/messages/messages--ok.png');
   @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('message-24-ok.png');
+    *background-image: image-url('components/messages/messages--ok.png');
   }
   background-position: 8px 8px;
   background-repeat: no-repeat;
@@ -48,9 +48,9 @@
   &--warning {
     @extend %messages;
     @extend %status--warning;
-    background-image: inline-image('message-24-warning.png');
+    background-image: inline-image('components/messages/messages--warning.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('message-24-warning.png');
+      *background-image: image-url('components/messages/messages--warning.png');
     }
     border-color: color(warning-border);
   }
@@ -58,9 +58,9 @@
   &--error {
     @extend %messages;
     @extend %status--error;
-    background-image: inline-image('message-24-error.png');
+    background-image: inline-image('components/messages/messages--error.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('message-24-error.png');
+      *background-image: image-url('components/messages/messages--error.png');
     }
     border-color: color(error-border);
   }

@@ -24,9 +24,9 @@
   &__legend {
     display: block;
     padding-left: 15px;
-    background-image: inline-image('menu-expanded.png');
+    background-image: inline-image('components/collapsible-fieldsets/expanded.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('menu-expanded.png');
+      *background-image: image-url('components/collapsible-fieldsets/expanded.png');
     }
     background-position: 5px 65%;
     background-repeat: no-repeat;
@@ -40,16 +40,16 @@
 
   .is-collapsed &__legend,
   &-is-collapsed__legend {
-    background-image: inline-image('menu-collapsed.png');
+    background-image: inline-image('components/collapsible-fieldsets/collapsed.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('menu-collapsed.png');
+      *background-image: image-url('components/collapsible-fieldsets/collapsed.png');
     }
     background-position: 5px 50%;
 
     @include rtl() {
-      background-image: inline-image('menu-collapsed-rtl.png');
+      background-image: inline-image('components/collapsible-fieldsets/collapsed-rtl.png');
       @if support-legacy-browser(ie, '7') {
-        *background-image: image-url('menu-collapsed-rtl.png');
+        *background-image: image-url('components/collapsible-fieldsets/collapsed-rtl.png');
       }
       background-position: 98% 50%;
     }

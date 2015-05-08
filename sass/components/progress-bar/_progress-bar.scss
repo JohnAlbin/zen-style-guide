@@ -1,3 +1,7 @@
+// Dependencies.
+// @TODO An image dependency on throbber.gif? This is a code smell.
+@import 'components/autocomplete/autocomplete';
+
 // Progress bar
 //
 // @TODO
@@ -24,7 +28,7 @@
   &__fill {
     height: 1.5em;
     width: 5px;
-    background: color(progress-bar) image-url('progress.gif') repeat 0 0;
+    background: color(progress-bar) image-url('components/progress-bar/progress.gif') repeat 0 0;
   }
 
   &__percentage {
@@ -44,7 +48,7 @@
   }
 
   &--ajax__throbber {
-    background: image-url('throbber.gif') no-repeat 0 -18px transparent;
+    background: image-url('components/autocomplete/throbber.gif') no-repeat 0 -18px transparent;
     float: left;
     height: 15px;
     margin: 2px;

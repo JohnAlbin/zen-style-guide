@@ -18,7 +18,7 @@ require 'zen-grids'
 css_dir         = "css"
 sass_dir        = "sass"
 fonts_dir       = "fonts"
-images_dir      = "images"
+images_dir      = "sass"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
