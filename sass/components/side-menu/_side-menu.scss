@@ -61,6 +61,7 @@
   &.is-expanded {
     @extend %side-menu__item-is-expanded;
   }
+
   &.is-collapsed {
     @extend %side-menu__item-is-collapsed;
   }
