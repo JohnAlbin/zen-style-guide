@@ -13,7 +13,7 @@
     "gulp-scss-lint": "^0.1.12",
     "gulp-shell": "^0.4.1",
     "gulp-size": "^1.2.1",
-    "kss": "kss-node/kss-node",
+    "kss": "^2.1.0",
     "run-sequence": "^1.1.0"
   },
   "engines": {

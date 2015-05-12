@@ -12,5 +12,8 @@
     "../css/style-guide/chroma-kss-styles.css"
   ],
   "js": [
-  ]
+  ],
+
+  "homepage": "homepage.md",
+  "title": "Zen 7.x-6.x style guide"
 }
