@@ -6,7 +6,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>KSS: Living Style Guide</title>
+  <title>Zen 7.x-6.x style guide</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -21,7 +21,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <h1 class="kss-doc-title">kss-node<br>Style Guide</h1>
+    <h1 class="kss-doc-title">Zen 7.x-6.x style guide</h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -229,7 +229,7 @@ class names specified in the component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="box ">
+          <div class="box [modifier class]">
   <h2 class="box__title">Box title</h2>
   <div class="box__content">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -240,7 +240,7 @@ class names specified in the component.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box [modifier class]&quot;&gt;
   &lt;h2 class=&quot;box__title&quot;&gt;Box title&lt;/h2&gt;
   &lt;div class=&quot;box__content&quot;&gt;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -280,30 +280,30 @@ purposes. But <code>&lt;a&gt;</code> tags and <code>&lt;input&gt;</code> tags wi
         </div>
         <div class="kss-modifier__example">
           <p>
-  <button class="" type="button">A normal button</button>
-  <button class="" type="submit">A submit button</button>
-  <button class="" type="reset">A reset button</button>
+  <button class="[modifier class]" type="button">A normal button</button>
+  <button class="[modifier class]" type="submit">A submit button</button>
+  <button class="[modifier class]" type="reset">A reset button</button>
 </p>
 <p>
-  <input class="" type="button" value="Input button">
-  <input class="" type="submit" value="Input submit button">
-  <input class="" type="reset" value="Input reset button">
+  <input class="[modifier class]" type="button" value="Input button">
+  <input class="[modifier class]" type="submit" value="Input submit button">
+  <input class="[modifier class]" type="reset" value="Input reset button">
 </p>
 <p>
-  <a class="button " href="#">Link button</a>
+  <a class="button [modifier class]" href="#">Link button</a>
 </p>
 <p>
-  <button class="" type="button" disabled>A disabled button</button>
-  <button class="" type="submit" disabled>A disabled submit button</button>
-  <button class="" type="reset" disabled>A disabled reset button</button>
+  <button class="[modifier class]" type="button" disabled>A disabled button</button>
+  <button class="[modifier class]" type="submit" disabled>A disabled submit button</button>
+  <button class="[modifier class]" type="reset" disabled>A disabled reset button</button>
 </p>
 <p>
-  <input class="" type="button" value="Disabled input button" disabled>
-  <input class="" type="submit" value="Disabled input submit button" disabled>
-  <input class="" type="reset" value="Disabled input reset button" disabled>
+  <input class="[modifier class]" type="button" value="Disabled input button" disabled>
+  <input class="[modifier class]" type="submit" value="Disabled input submit button" disabled>
+  <input class="[modifier class]" type="reset" value="Disabled input reset button" disabled>
 </p>
 <p>
-  <a class="button " disabled href="#">Disabled link button</a>
+  <a class="button [modifier class]" disabled href="#">Disabled link button</a>
 </p>
 
         </div>
@@ -311,30 +311,30 @@ purposes. But <code>&lt;a&gt;</code> tags and <code>&lt;input&gt;</code> tags wi
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
-  &lt;button class=&quot;&quot; type=&quot;button&quot;&gt;A normal button&lt;/button&gt;
-  &lt;button class=&quot;&quot; type=&quot;submit&quot;&gt;A submit button&lt;/button&gt;
-  &lt;button class=&quot;&quot; type=&quot;reset&quot;&gt;A reset button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;button&quot;&gt;A normal button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;submit&quot;&gt;A submit button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;reset&quot;&gt;A reset button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;input class=&quot;&quot; type=&quot;button&quot; value=&quot;Input button&quot;&gt;
-  &lt;input class=&quot;&quot; type=&quot;submit&quot; value=&quot;Input submit button&quot;&gt;
-  &lt;input class=&quot;&quot; type=&quot;reset&quot; value=&quot;Input reset button&quot;&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;button&quot; value=&quot;Input button&quot;&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;submit&quot; value=&quot;Input submit button&quot;&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;reset&quot; value=&quot;Input reset button&quot;&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a class=&quot;button &quot; href=&quot;#&quot;&gt;Link button&lt;/a&gt;
+  &lt;a class=&quot;button [modifier class]&quot; href=&quot;#&quot;&gt;Link button&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;button class=&quot;&quot; type=&quot;button&quot; disabled&gt;A disabled button&lt;/button&gt;
-  &lt;button class=&quot;&quot; type=&quot;submit&quot; disabled&gt;A disabled submit button&lt;/button&gt;
-  &lt;button class=&quot;&quot; type=&quot;reset&quot; disabled&gt;A disabled reset button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;button&quot; disabled&gt;A disabled button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;submit&quot; disabled&gt;A disabled submit button&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot; type=&quot;reset&quot; disabled&gt;A disabled reset button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;input class=&quot;&quot; type=&quot;button&quot; value=&quot;Disabled input button&quot; disabled&gt;
-  &lt;input class=&quot;&quot; type=&quot;submit&quot; value=&quot;Disabled input submit button&quot; disabled&gt;
-  &lt;input class=&quot;&quot; type=&quot;reset&quot; value=&quot;Disabled input reset button&quot; disabled&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;button&quot; value=&quot;Disabled input button&quot; disabled&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;submit&quot; value=&quot;Disabled input submit button&quot; disabled&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;reset&quot; value=&quot;Disabled input reset button&quot; disabled&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;a class=&quot;button &quot; disabled href=&quot;#&quot;&gt;Disabled link button&lt;/a&gt;
+  &lt;a class=&quot;button [modifier class]&quot; disabled href=&quot;#&quot;&gt;Disabled link button&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
       </div>
@@ -434,11 +434,11 @@ children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="divider "></div>
+          <div class="divider [modifier class]"></div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-<div class="divider ">
+<div class="divider [modifier class]">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
@@ -446,11 +446,11 @@ children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider &quot;&gt;&lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider [modifier class]&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 
-&lt;div class=&quot;divider &quot;&gt;
+&lt;div class=&quot;divider [modifier class]&quot;&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
@@ -508,7 +508,7 @@ item allowing them to choose an option.</p>
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <input type="text" value="" class="autocomplete ">
+          <input type="text" value="" class="autocomplete [modifier class]">
 <div class="autocomplete__list-wrapper">
   <ul class="autocomplete__list">
   <li class="autocomplete__list-item">guwatif</li>
@@ -538,7 +538,7 @@ item allowing them to choose an option.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;autocomplete &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;autocomplete [modifier class]&quot;&gt;
 &lt;div class=&quot;autocomplete__list-wrapper&quot;&gt;
   &lt;ul class=&quot;autocomplete__list&quot;&gt;
   &lt;li class=&quot;autocomplete__list-item&quot;&gt;guwatif&lt;/li&gt;
@@ -663,7 +663,7 @@ item allowing them to choose an option.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <textarea class="resizable-textarea " rows="5">
+          <textarea class="resizable-textarea [modifier class]" rows="5">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -674,7 +674,7 @@ item allowing them to choose an option.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;textarea class=&quot;resizable-textarea &quot; rows=&quot;5&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;textarea class=&quot;resizable-textarea [modifier class]&quot; rows=&quot;5&quot;&gt;
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -963,7 +963,7 @@ item allowing them to choose an option.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <header class="header " role="banner">
+          <header class="header [modifier class]" role="banner">
   <a href="/" title="Home" rel="home" class="header__logo">
     <img src="public/sample-inline.png" alt="Home" class="header__logo-image">
   </a>
@@ -992,7 +992,7 @@ item allowing them to choose an option.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header &quot; role=&quot;banner&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header [modifier class]&quot; role=&quot;banner&quot;&gt;
   &lt;a href=&quot;/&quot; title=&quot;Home&quot; rel=&quot;home&quot; class=&quot;header__logo&quot;&gt;
     &lt;img src=&quot;public/sample-inline.png&quot; alt=&quot;Home&quot; class=&quot;header__logo-image&quot;&gt;
   &lt;/a&gt;
@@ -1114,7 +1114,7 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="inline-links ">
+          <ul class="inline-links [modifier class]">
   <li class="inline-links__item"><a href="#">Read more</a></li>
   <li class="inline-links__item"><a href="#">Comment</a></li>
 </ul>
@@ -1123,7 +1123,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline-links &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline-links [modifier class]&quot;&gt;
   &lt;li class=&quot;inline-links__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;inline-links__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Comment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1158,14 +1158,14 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <h4 class="inline-sibling ">A Heading</h4>
+          <h4 class="inline-sibling [modifier class]">A Heading</h4>
 <p>A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling &quot;&gt;A Heading&lt;/h4&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling [modifier class]&quot;&gt;A Heading&lt;/h4&gt;
 &lt;p&gt;A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
 </code></pre>
       </div>
@@ -1221,7 +1221,7 @@ and hide() functions.</p>
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="messages ">
+          <div class="messages [modifier class]">
   <h2 class="visually-hidden">Status message</h2>
 
   This is a single system message.
@@ -1259,7 +1259,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;messages &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;messages [modifier class]&quot;&gt;
   &lt;h2 class=&quot;visually-hidden&quot;&gt;Status message&lt;/h2&gt;
 
   This is a single system message.
@@ -1294,7 +1294,7 @@ and hide() functions.</p>
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="messages ">
+          <div class="messages [modifier class]">
   <h2 class="visually-hidden">Status message</h2>
 
   <ul class="messages__list">
@@ -1344,7 +1344,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;messages &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;messages [modifier class]&quot;&gt;
   &lt;h2 class=&quot;visually-hidden&quot;&gt;Status message&lt;/h2&gt;
 
   &lt;ul class=&quot;messages__list&quot;&gt;
@@ -1387,7 +1387,7 @@ and hide() functions.</p>
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="status ">
+          <div class="status [modifier class]">
   This is a system status report message.
 </div>
 
@@ -1431,7 +1431,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;status &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;status [modifier class]&quot;&gt;
   This is a system status report message.
 &lt;/div&gt;
 </code></pre>
@@ -1485,7 +1485,7 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <nav class="breadcrumb " role="navigation">
+          <nav class="breadcrumb [modifier class]" role="navigation">
   <h2 class="breadcrumb__title">You are here</h2>
 
   <ol class="breadcrumb__list">
@@ -1500,7 +1500,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb &quot; role=&quot;navigation&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb [modifier class]&quot; role=&quot;navigation&quot;&gt;
   &lt;h2 class=&quot;breadcrumb__title&quot;&gt;You are here&lt;/h2&gt;
 
   &lt;ol class=&quot;breadcrumb__list&quot;&gt;
@@ -1590,7 +1590,7 @@ is available.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="pager ">
+          <ul class="pager [modifier class]">
   <li class="pager__item">
     <a title="Go to first page" href="/admin/content">« first</a>
   </li>
@@ -1622,7 +1622,7 @@ is available.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager [modifier class]&quot;&gt;
   &lt;li class=&quot;pager__item&quot;&gt;
     &lt;a title=&quot;Go to first page&quot; href=&quot;/admin/content&quot;&gt;« first&lt;/a&gt;
   &lt;/li&gt;
@@ -1681,7 +1681,7 @@ side of the main content.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="side-menu ">
+          <ul class="side-menu [modifier class]">
   <li class="side-menu__item">
     <a href="/" class="side-menu__link">Home</a>
   </li>
@@ -1714,7 +1714,7 @@ side of the main content.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;side-menu &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;side-menu [modifier class]&quot;&gt;
   &lt;li class=&quot;side-menu__item&quot;&gt;
     &lt;a href=&quot;/&quot; class=&quot;side-menu__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
@@ -1778,7 +1778,7 @@ with the <code>visually-hidden</code> component.</p>
         </div>
         <div class="kss-modifier__example">
           <p class="skip-link__wrapper">
-  <a href="#main-menu" class="skip-link visually-hidden--focusable ">Jump to navigation</a>
+  <a href="#main-menu" class="skip-link visually-hidden--focusable [modifier class]">Jump to navigation</a>
 </p>
 
         </div>
@@ -1798,7 +1798,7 @@ with the <code>visually-hidden</code> component.</p>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;skip-link__wrapper&quot;&gt;
-  &lt;a href=&quot;#main-menu&quot; class=&quot;skip-link visually-hidden--focusable &quot;&gt;Jump to navigation&lt;/a&gt;
+  &lt;a href=&quot;#main-menu&quot; class=&quot;skip-link visually-hidden--focusable [modifier class]&quot;&gt;Jump to navigation&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
       </div>
@@ -1827,7 +1827,7 @@ with the <code>visually-hidden</code> component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="tabs ">
+          <ul class="tabs [modifier class]">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Revisions</a></li>
@@ -1842,7 +1842,7 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs [modifier class]&quot;&gt;
   &lt;li class=&quot;tabs__tab is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link is-active&quot;&gt;View &lt;span class=&quot;visually-hidden&quot;&gt;(active tab)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Revisions&lt;/a&gt;&lt;/li&gt;
@@ -1879,7 +1879,7 @@ with the <code>visually-hidden</code> component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="tabs ">
+          <ul class="tabs [modifier class]">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Revisions</a></li>
@@ -1889,7 +1889,7 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs [modifier class]&quot;&gt;
   &lt;li class=&quot;tabs__tab is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link is-active&quot;&gt;View &lt;span class=&quot;visually-hidden&quot;&gt;(active tab)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Revisions&lt;/a&gt;&lt;/li&gt;
@@ -2040,7 +2040,7 @@ intrinsic aspect ratio is preserved at any screen width. The
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="responsive-video ">
+          <div class="responsive-video [modifier class]">
   <iframe class="responsive-video__embed" width="560" height="315" src="https://www.youtube.com/embed/8N_tupPBtWQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
@@ -2060,7 +2060,7 @@ intrinsic aspect ratio is preserved at any screen width. The
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;responsive-video &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;responsive-video [modifier class]&quot;&gt;
   &lt;iframe class=&quot;responsive-video__embed&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/8N_tupPBtWQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 </code></pre>
@@ -2097,7 +2097,7 @@ intrinsic aspect ratio is preserved at any screen width. The
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="visually-hidden ">
+          <div class="visually-hidden [modifier class]">
   This text will be read by screen readers, but will be visually hidden.
 </div>
 
@@ -2141,7 +2141,7 @@ intrinsic aspect ratio is preserved at any screen width. The
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;visually-hidden &quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;visually-hidden [modifier class]&quot;&gt;
   This text will be read by screen readers, but will be visually hidden.
 &lt;/div&gt;
 </code></pre>
@@ -2176,7 +2176,7 @@ intrinsic aspect ratio is preserved at any screen width. The
         </div>
         <div class="kss-modifier__example">
           <div>
-  <mark class="watermark ">Unpublished</mark>
+  <mark class="watermark [modifier class]">Unpublished</mark>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
@@ -2186,7 +2186,7 @@ intrinsic aspect ratio is preserved at any screen width. The
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-  &lt;mark class=&quot;watermark &quot;&gt;Unpublished&lt;/mark&gt;
+  &lt;mark class=&quot;watermark [modifier class]&quot;&gt;Unpublished&lt;/mark&gt;
 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 &lt;/div&gt;
