@@ -8,15 +8,15 @@
 //
 // Style guide: base.grouping
 
-// Blockquotes
+// Block quotes
 //
-// For quoting blocks of content from another source within your document. Wrap
-// <code>&lt;blockquote&gt;</code> around any <abbr
+// The `<blockquote>` element is for quoting blocks of content from another
+// source within your document. Wrap the `<blockquote>` around any <abbr
 // title="HyperText Markup Language">HTML</abbr> as the quote. For straight
-// quotes, we recommend a <code>&lt;p&gt;</code>.
+// quotes, we recommend a `<p>`.
 //
-// Optionally, add a <code>&lt;footer&gt;</code> to identify the source of the
-// quote. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
+// Optionally, add a `<footer>` to identify the source of the quote, wrapping
+// the name of the source work in `<cite>`.
 //
 // Markup: grouping-blockquote.hbs
 //
@@ -30,11 +30,11 @@ blockquote {
 
 // Figures
 //
-// The element can thus be used to annotate illustrations, diagrams, photos,
-// code listings, etc.
+// The `<figure>` element can be used to annotate illustrations, diagrams,
+// photos, code listings, etc.
 //
-// Optionally, a &lt;figcaption&gt; element inside the &lt;figure&gt; represents
-// the caption of the figure.
+// Optionally, a `<figcaption>` element inside the `<figure>` represents the
+// caption of the figure.
 //
 // Markup: grouping-figure.hbs
 //
@@ -51,7 +51,7 @@ figcaption {
 
 // Horizontal rule
 //
-// The hr element represents a paragraph-level thematic break, e.g. a scene
+// The `<hr>` element represents a paragraph-level thematic break, e.g. a scene
 // change in a story, or a transition to another topic within a section of a
 // reference book.
 //
@@ -68,7 +68,9 @@ hr {
 
 // Body copy
 //
-// The default <code>font-size</code> and <code>line-height</code> are applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a top and bottom margin.</p>
+// The default `font-size` and `line-height` properties are applied to the
+// `<body>` element and all paragraphs. In addition, `<p>` (paragraphs) receive
+// a top and bottom margin.
 //
 // Markup: grouping-p.hbs
 //
@@ -82,7 +84,7 @@ pre {
 
 // Preformatted text
 //
-// The &lt;pre&gt; tag represents a block of preformatted text, such as
+// The `<pre>` element represents a block of preformatted text, such as
 // fragments of computer code, ASCII art, etc.
 //
 // Markup: grouping-pre.hbs
@@ -111,7 +113,8 @@ pre {
 
 // Unordered list
 //
-// A list of items in which the order does <em>not</em> explicitly matter.
+// The `<ul>` element is a list of items in which the order does <em>not</em>
+// explicitly matter.
 //
 // Markup: grouping-lists-ul.hbs
 //
@@ -119,7 +122,8 @@ pre {
 
 // Ordered list
 //
-// A list of items in which the order <em>does</em> explicitly matter.
+// The `<ol>` element is a list of items in which the order <em>does</em>
+// explicitly matter.
 //
 // Markup: grouping-lists-ol.hbs
 //
@@ -127,7 +131,7 @@ pre {
 
 // Description list
 //
-// A list of terms with their associated descriptions.
+// The `<dl>` element is a list of terms with their associated descriptions.
 //
 // Markup: grouping-lists-dl.hbs
 //

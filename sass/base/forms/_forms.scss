@@ -61,10 +61,9 @@ input::-moz-focus-inner {
 
 // Buttons
 //
-// Buttons built with the &lt;button&gt; tag are the most flexible for styling
-// purposes. But &lt;input&gt; tags with <code>type</code> set to
-// <code>submit</code>, <code>image</code>, <code>reset</code>, or
-// <code>button</code> are also supported.
+// Buttons built with the `<button>` element are the most flexible for styling
+// purposes. But `<input>` elements with `type` set to `submit`, `image`,
+// `reset`, or `button` are also supported.
 //
 // Markup: forms-button.hbs
 //
@@ -91,11 +90,9 @@ html input[type="button"], // 1
 
 // Inputs
 //
-// Input fields are mostly text-based inputs that include the HTML5 types:
-// <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>,
-// <code>email</code>, <code>password</code>, <code>date</code>,
-// <code>time</code>, <code>number</code>, <code>range</code>,
-// <code>color</code>, and <code>file</code>.
+// The `<input>` element is mostly used for text-based inputs that include the
+// HTML5 types: `text`, `search`, `tel`, `url`, `email`, `password`, `date`,
+// `time`, `number`, `range`, `color`, and `file`.
 //
 // Markup: forms-input.hbs
 //
@@ -137,11 +134,11 @@ input {
 
 // Checkboxes
 //
-// If an &lt;input&gt; element has the <code>type="checkbox"</code> attribute
-// set, the form field is displayed as a checkbox.
+// If an `<input>` element has the `type="checkbox"` attribute set, the form
+// field is displayed as a checkbox.
 //
-// It's recommended that you don't attempt to style these elements.
-// Firefox's implementation doesn't respect box-sizing, padding, or width.
+// It's recommended that you don't attempt to style these elements. Firefox's
+// implementation doesn't respect `box-sizing`, `padding`, or `width`.
 //
 // Markup: forms-input-checkbox.hbs
 //
@@ -149,11 +146,11 @@ input {
 
 // Radio buttons
 //
-// If an &lt;input&gt; element has the <code>type="radio"</code> attribute
-// set, the form field is displayed as a radio button.
+// If an `<input>` element has the `type="radio"` attribute set, the form field
+// is displayed as a radio button.
 //
-// It's recommended that you don't attempt to style these elements.
-// Firefox's implementation doesn't respect box-sizing, padding, or width.
+// It's recommended that you don't attempt to style these elements. Firefox's
+// implementation doesn't respect `box-sizing`, `padding`, or `width`.
 //
 // Markup: forms-input-radio.hbs
 //
@@ -201,8 +198,8 @@ input[type="search"] {
 
 // Fieldsets
 //
-// The fieldset element groups a set of form fields, optionally under a common
-// name given by the legend element.
+// The `<fieldset>` element groups a set of form fields, optionally under a
+// common name given by the `<legend>` element.
 //
 // Markup: forms-fieldset.hbs
 //
@@ -241,9 +238,9 @@ legend {
 
 // Labels
 //
-// The &lt;label&gt; tag represents a caption of a form field. The label can be
-// associated with a specific form control by using the <code>for</code>
-// attribute or by putting the form control inside the label element itself.
+// The `<label>` element represents a caption of a form field. The label can be
+// associated with a specific form control by using the `for` attribute or by
+// putting the form control inside the label element itself.
 //
 // Markup: forms-label.hbs
 //
@@ -257,11 +254,11 @@ label {
 
 // Select list
 //
-// The &lt;select&gt; tag represents a form field for selecting amongst a set of
+// The `<select>` element represents a form field for selecting amongst a set of
 // options.
 //
 // Known limitation: by default, Chrome and Safari on OS X allow very limited
-// styling of `select`, unless a `border` property is set.
+// styling of `<select>`, unless a `border` property is set.
 //
 // Markup: forms-select.hbs
 //
@@ -279,7 +276,7 @@ optgroup {
 
 // Text areas
 //
-// The &lt;textarea&gt; tag represents a multiline plain text form field.
+// The `<textarea>` element represents a multi-line plain text form field.
 //
 // Markup: forms-textarea.hbs
 //
