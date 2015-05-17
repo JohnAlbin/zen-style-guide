@@ -5,45 +5,34 @@
 //
 // Wrapper for a form element (or group of form elements) and its label.
 //
-// .form-item--grouped  - Pack groups of checkboxes and radio buttons closer
-//                        together.
-// .form-item--error    - Highlight the form elements that caused a form
-//                        submission error.
-// .form-item--inline   - Inline form items.
+// .form-item--inline - Inline form items.
+// .form-item--tight  - Packs groups of form items closer together.
+// .is-error          - Highlight the form elements that caused a form
+//                      submission error.
+//
+// Markup: form-item.hbs
 //
 // Style guide: components.forms.form-item
+
+// Form item (radio)
+//
+// Checkboxes and radios require slightly different markup; their label is after
+// their widget instead of before. Uses the `.form-item--radio` class variant of
+// the normal form item and is placed on each of the nested form items.
+//
+// .is-error - Highlight the form elements that caused a form submission error.
+//
+// Markup: form-item--radio.hbs
+//
+// Style guide: components.forms.form-item--radio
 
 .form-item,
 %form-item {
   @include output-rhythm(margin, rhythm(1) 0);
 
-  &--grouped {
-    margin: 0;
-  }
-
-  &--error {
-    input,
-    textarea,
-    select {
-      @extend %form-item--error__widget;
-    }
-  }
-
-  &--error__widget {
-    border: 1px solid color(form-error);
-  }
-
-  &--inline {
-    &,
-    div,
-    label {
-      display: inline;
-    }
-
-    // Fieldset contents always need to be rendered as block.
-    .fieldset-wrapper {
-      display: block;
-    }
+  // The part of the label that indicates a required field.
+  &__required {
+    color: color(form-error);
   }
 
   // The descriptive help text (separate from the label).
@@ -51,19 +40,49 @@
     font-size: .85em;
   }
 
-  &--grouped__description {
-    margin-left: 2.4em;
+  &--inline {
+    div,
+    label {
+      display: inline;
+    }
+
+    // There's always an exception.
+    &__exception {
+      display: block;
+    }
   }
 
-  // Labels for radios and checkboxes.
-  &--grouped__label {
+  &--tight {
+    margin: 0;
+  }
+
+  &--radio {
+    @extend %form-item--tight;
+  }
+
+  &--radio__label,
+  &--radio &__label {
     display: inline;
     font-weight: normal;
   }
 
-  // The part of the label that indicates a required field.
-  &__required {
-    color: color(form-error);
+  &--radio__description,
+  &--radio &__description {
+    margin-left: 1.4em;
+  }
+
+  &.is-error &__widget,
+  &-is-error__widget {
+    border: 1px solid color(form-error);
+  }
+
+  &.is-error,
+  &-is-error {
+    input,
+    textarea,
+    select {
+      @extend %form-item-is-error__widget;
+    }
   }
 }
 
@@ -71,45 +90,54 @@
 // Drupal selectors.
 //
 
-.form-item,
-tr.even,
-tr.odd {
-  .form-item {
-    @extend %form-item--grouped;
+.form-item {
+  input.error,
+  textarea.error,
+  select.error {
+    @extend %form-item-is-error__widget;
   }
-}
 
-// Password confirmation.
-.password-parent,
-.confirm-parent {
-  @extend %form-item--grouped;
-}
-
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error {
-  @extend %form-item--error__widget;
-}
-
-.form-item .description {
-  @extend %form-item__description;
-}
-
-.container-inline .form-item {
-  @extend %form-item--inline;
-}
-
-label.option {
-  @extend %form-item--grouped__label;
+  .description {
+    @extend %form-item__description;
+  }
 }
 
 .form-required {
   @extend %form-item__required;
 }
 
+// Password confirmation.
+.password-parent,
+.confirm-parent {
+  @extend %form-item--tight;
+}
+
+table {
+  .form-item {
+    @extend %form-item--tight;
+  }
+}
+
 .form-type-radio,
 .form-type-checkbox {
+  @extend %form-item--radio;
+
   .description {
-    @extend %form-item--grouped__description;
+    @extend %form-item--radio__description;
+  }
+}
+
+label.option {
+  @extend %form-item--radio__label;
+}
+
+.container-inline {
+  .form-item {
+    @extend %form-item--inline;
+  }
+
+  // Fieldset contents always need to be rendered as block.
+  .fieldset-wrapper {
+    @extend %form-item--inline__exception;
   }
 }
