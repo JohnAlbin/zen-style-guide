@@ -11,12 +11,12 @@
 
 .skip-link,
 %skip-link {
+  display: block;
+  padding: 2px 0 3px;
+  text-align: center;
+
   &:link,
   &:visited {
-    display: block;
-    width: 100%;
-    padding: 2px 0 3px;
-    text-align: center;
     background-color: color(skip-link-bg);
     color: color(skip-link);
   }
