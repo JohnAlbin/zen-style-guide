@@ -22,7 +22,7 @@
 .js-hidden,
 %js-hidden {
   html.js & {
-    display: none;
+    @extend %hidden;
   }
 }
 
