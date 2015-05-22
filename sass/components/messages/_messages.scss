@@ -1,6 +1,3 @@
-// Dependencies.
-@import 'components/status/status';
-
 // Messages
 //
 // System alerts.
@@ -31,9 +28,22 @@
 //
 // Style guide: components.messages.multiple
 
+// Message colors
+//
+// Drupal system status reports use just the message colors and no other
+// styling.
+//
+// markup: messages-color.hbs
+//
+// .messages--ok-color      - "Ok" status.
+// .messages--warning-color - Warning status.
+// .messages--error-color   - Error status.
+//
+// Style guide: components.messages.status
+
 .messages,
 %messages {
-  @extend %status--ok;
+  @extend %messages--ok-color;
   @include output-rhythm(margin, rhythm(1) 0);
   padding: 10px 10px 10px 50px;
   background-image: inline-image('components/messages/messages--ok.png');
@@ -49,9 +59,24 @@
     background-position: 99% 8px;
   }
 
+  &--ok-color {
+    background-color: color(status-bg);
+    color: color(status);
+  }
+
+  &--warning-color {
+    background-color: color(warning-bg);
+    color: color(warning);
+  }
+
+  &--error-color {
+    background-color: color(error-bg);
+    color: color(error);
+  }
+
   &--warning {
     @extend %messages;
-    @extend %status--warning;
+    @extend %messages--warning-color;
     background-image: inline-image('components/messages/messages--warning.png');
     @if support-legacy-browser(ie, '7') {
       *background-image: image-url('components/messages/messages--warning.png');
@@ -61,7 +86,7 @@
 
   &--error {
     @extend %messages;
-    @extend %status--error;
+    @extend %messages--error-color;
     background-image: inline-image('components/messages/messages--error.png');
     @if support-legacy-browser(ie, '7') {
       *background-image: image-url('components/messages/messages--error.png');
@@ -99,4 +124,22 @@
 .messages--error .error,
 .messages.error .error {
   @extend %messages--error__highlighted-text;
+}
+
+// System status report.
+.ok {
+  @extend %messages--ok-color;
+}
+
+.warning {
+  @extend %messages--warning-color;
+}
+
+.error {
+  @extend %messages--error-color;
+}
+
+// Node revisions.
+.revision-current {
+  @extend %messages--ok-color;
 }
