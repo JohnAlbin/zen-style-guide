@@ -8,6 +8,12 @@
 //
 // Style guide: base.forms
 
+//
+// The following 8 rules are from normalize.css and help to fix inconsistencies
+// across various browsers. You should probably leave these rules as is and jump
+// to the "Buttons" rule on line 101 before you start editing this file.
+//
+
 // Correct margin displayed oddly in IE 6/7.
 @if support-legacy-browser(ie, '7') {
   form {
@@ -59,6 +65,39 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+//    and `video` controls.
+// 2. Correct inability to style clickable `input` types in iOS.
+html input[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
+}
+
+// Fix the cursor style for Chrome's increment/decrement buttons. For certain
+// `font-size` values of the `input`, it causes the cursor style of the
+// decrement button to change from `default` to `text`.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  // Address `box-sizing` set to `border-box` in Safari and Chrome
+  // (include `-moz` to future-proof).
+  @include box-sizing(content-box);
+  // Address `appearance` set to `searchfield` in Safari and Chrome.
+  -webkit-appearance: textfield;
+
+  // Remove inner padding and search cancel button in Safari and Chrome on OS X.
+  // Safari (but not Chrome) clips the cancel button when the search input has
+  // padding (and `textfield` appearance).
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
 // Buttons
 //
 // Buttons built with the `<button>` element are the most flexible for styling
@@ -82,13 +121,10 @@ button,
   line-height: inherit;
 }
 
-// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-//    and `video` controls.
-// 2. Correct inability to style clickable `input` types in iOS.
-html input[type="button"], // 1
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; // 2
+// The %text-form-element can be used to style `<input>` text types and
+// `<textarea>` elements at the same time.
+%text-form-element {
+  // Add your styles.
 }
 
 // Inputs
@@ -115,7 +151,7 @@ input {
   &[type="date"],
   &[type="time"],
   &[type="number"] {
-    @extend %text-input !optional;
+    @extend %text-form-element !optional;
   }
 
   &[type="range"] {
@@ -129,10 +165,6 @@ input {
   &[type="file"] {
     // Add your styles.
   }
-}
-
-%text-input {
-  // Add your styles.
 }
 
 // Checkboxes
@@ -172,30 +204,6 @@ input[type="radio"] {
   @if support-legacy-browser(ie, '7') {
     *height: 13px;
     *width: 13px;
-  }
-}
-
-// Fix the cursor style for Chrome's increment/decrement buttons. For certain
-// `font-size` values of the `input`, it causes the cursor style of the
-// decrement button to change from `default` to `text`.
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-input[type="search"] {
-  // Address `box-sizing` set to `border-box` in Safari and Chrome
-  // (include `-moz` to future-proof).
-  @include box-sizing(content-box);
-  // Address `appearance` set to `searchfield` in Safari and Chrome.
-  -webkit-appearance: textfield;
-
-  // Remove inner padding and search cancel button in Safari and Chrome on OS X.
-  // Safari (but not Chrome) clips the cancel button when the search input has
-  // padding (and `textfield` appearance).
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-decoration {
-    -webkit-appearance: none;
   }
 }
 
@@ -286,7 +294,7 @@ optgroup {
 // Style guide: base.forms.textarea
 
 textarea {
-  @extend %text-input !optional;
+  @extend %text-form-element !optional;
   // Remove default vertical scrollbar in IE 8/9/10/11.
   overflow: auto;
 }
