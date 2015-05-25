@@ -109,7 +109,7 @@ $font-watermark:  $impact;
 
 // Colors
 //
-// Use the <code>color()</code> function to add colors to CSS properties.
+// Use the `color()` function to add colors to CSS properties.
 //
 // Markup: chroma-kss-markup.hbs
 //
@@ -218,7 +218,9 @@ $chroma-active-scheme: 'functional';
 
 // Breakpoints
 //
-// Use the <code>respond-to()</code> mixin to use named breakpoints.
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki
+// pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
 //
 // Style guide: sass.variables.breakpoints
 
