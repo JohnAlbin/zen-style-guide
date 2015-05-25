@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 group :frontend do
   gem 'breakpoint',           '~> 2.5.0'
-  gem 'bundler',              '~> 1.8'
   gem 'chroma-sass',          '~> 1.0.0.beta.2'
   gem 'compass',              '~> 1.0'
   gem 'compass-import-once',  '~> 1.0'
@@ -10,6 +9,6 @@ group :frontend do
   gem 'oily_png',             '~> 1.1'
   gem 'sass',                 '~> 3.4'
   gem 'sass-globbing',        '~> 1.1'
-  gem 'scss_lint',            '~> 0.38'
+  gem 'scss_lint',            '~> 0.39'
   gem 'zen-grids',            '>= 2.0.0.beta.3'
 end
