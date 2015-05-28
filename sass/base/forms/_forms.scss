@@ -1,5 +1,7 @@
 // Dependencies.
-@import '../normalize';
+@import 'base/normalize';
+// Allow the .button component to override :link, by loading links first.
+@import 'base/links/links';
 @import 'components/button/button';
 
 // Forms
@@ -11,7 +13,7 @@
 //
 // The following 8 rules are from normalize.css and help to fix inconsistencies
 // across various browsers. You should probably leave these rules as is and jump
-// to the "Buttons" rule on line 101 before you start editing this file.
+// to the "Buttons" rule on line 100 before you start editing this file.
 //
 
 // Correct margin displayed oddly in IE 6/7.
@@ -83,9 +85,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-  // Address `box-sizing` set to `border-box` in Safari and Chrome
-  // (include `-moz` to future-proof).
-  @include box-sizing(content-box);
   // Address `appearance` set to `searchfield` in Safari and Chrome.
   -webkit-appearance: textfield;
 
@@ -104,10 +103,13 @@ input[type="search"] {
 // purposes. But `<input>` elements with `type` set to `submit`, `image`,
 // `reset`, or `button` are also supported.
 //
+// Below is the default button styling. To see variations on the button styling
+// see the [button component](section-components.html#kssref-components-button).
+//
 // Markup: forms-button.hbs
 //
-// :hover  - Hover styling.
-// :active - Depressed button styling.
+// :hover        - Hover styling.
+// :active:hover - Depressed button styling.
 //
 // Style guide: base.forms.button
 
@@ -116,14 +118,15 @@ button,
 [type="reset"],
 [type="submit"] {
   @extend %button;
-  // Prevent "line-height: normal" rule below from breaking the
-  // "appearance: button" styling on the input elements in Firefox.
-  line-height: inherit;
 }
 
 // The %text-form-element can be used to style `<input>` text types and
 // `<textarea>` elements at the same time.
 %text-form-element {
+  // Address Firefox 4+ setting `line-height` on `input` using `!important` in
+  // the UA stylesheet.
+  line-height: inherit;
+
   // Add your styles.
 }
 
@@ -138,10 +141,6 @@ button,
 // Style guide: base.forms.input
 
 input {
-  // Address Firefox 4+ setting `line-height` on `input` using `!important` in
-  // the UA stylesheet.
-  line-height: normal;
-
   &[type="text"],
   &[type="search"],
   &[type="tel"],
