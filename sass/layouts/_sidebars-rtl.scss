@@ -1,7 +1,0 @@
-// RTL companion for the _sidebars.scss file.
-
-// First we tell Zen grids to reverse the direction of all floats.
-$zen-switch-direction: true;
-
-// Then we import the LTR layout and the directions are automatically reversed.
-@import 'sidebars';
