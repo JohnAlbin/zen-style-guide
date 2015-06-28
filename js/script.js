@@ -12,11 +12,11 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document) {
 
-  "use strict";
+  'use strict';
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
   Drupal.behaviors.my_custom_behavior = {
-    attach: function(context, settings) {
+    attach: function (context, settings) {
 
       // Place your code here.
 
