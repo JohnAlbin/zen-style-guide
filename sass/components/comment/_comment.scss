@@ -1,6 +1,11 @@
-// Comments
+// Comment
 //
-// @TODO Finish KSS comments.
+// A single comment in a thread of comments.
+//
+// .comment--preview - Preview version of comment.
+// .comment--nested - A nested comment.
+//
+// Markup: comment.hbs
 //
 // Style guide: components.comments
 
@@ -50,10 +55,6 @@
 
 .comment-preview {
   @extend %comment--preview;
-}
-
-.comment .permalink {
-  @extend %comment__permalink;
 }
 
 .indented {
