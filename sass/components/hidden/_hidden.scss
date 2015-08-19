@@ -1,13 +1,15 @@
-// Hidden elements
+// Hidden
 //
-// Hide elements from all users.
+// Hide elements from all users. Compare to the visually-hidden component.
 //
 // Used for elements which should not be immediately displayed to any user. An
 // example would be a collapsible fieldset that will be expanded with a click
-// from a user. The effect of this class can be toggled with the jQuery show()
-// and hide() functions.
+// from a user.
 //
-// @TODO
+// For anything you want to hide on page load when JavaScript is enabled, use
+// the `.js-hidden` class.
+//
+// Markup: hidden.hbs
 //
 // Style guide: components.hidden
 
@@ -15,9 +17,6 @@
 %hidden {
   display: none;
 }
-
-// For anything you want to hide on page load when JS is enabled, so
-// that you can use the JS to control visibility and avoid flicker.
 
 .js-hidden,
 %js-hidden {
