@@ -64,8 +64,7 @@ options.scssLint = {
 options.eslint = {
   files  : [
     options.theme.js + '**/*.js',
-    'app/sites/all/modules/custom/**/*.js',
-    'app/sites/all/modules/features/**/*.js'
+    '!' + options.theme.js + '**/*.min.js'
   ]
 };
 
