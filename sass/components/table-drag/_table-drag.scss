@@ -1,13 +1,16 @@
-// TableDrag
+// Table drag
 //
-// @TODO
+// Drag and drop rows inside a form.
 //
-// Markup: tabledrag.hbs
+// If your custom theme isn't used for Drupal's admin pages, you can safely
+// delete this component to save file weight in the generated CSS.
 //
-// Style guide: components.forms.tabledrag
+// Markup: table-drag.hbs
+//
+// Style guide: components.forms.table-drag
 
-.drag,
-%drag {
+.table-drag,
+%table-drag {
   &__wrapper {
     cursor: move;
   }
@@ -41,9 +44,9 @@
   }
 
   &__handle-icon {
-    background: inline-image('components/tabledrag/draggable.png') no-repeat 6px 9px;
+    background: inline-image('components/table-drag/table-drag__handle-icon.png') no-repeat 6px 9px;
     @if support-legacy-browser(ie, '7') {
-      *background: image-url('components/tabledrag/draggable.png') no-repeat 6px 9px;
+      *background: image-url('components/table-drag/table-drag__handle-icon.png') no-repeat 6px 9px;
     }
     height: 13px;
     margin: -.4em .5em;
@@ -82,9 +85,9 @@
   }
 
   &__tree-child {
-    background: inline-image('components/tabledrag/tree.png') no-repeat 11px center;
+    background: inline-image('components/table-drag/table-drag__tree-child.png') no-repeat 11px center;
     @if support-legacy-browser(ie, '7') {
-      *background: image-url('components/tabledrag/tree.png') no-repeat 11px center;
+      *background: image-url('components/table-drag/table-drag__tree-child.png') no-repeat 11px center;
     }
 
     @include rtl() {
@@ -93,15 +96,15 @@
   }
 
   &__tree-child-last {
-    @extend %drag__tree-child;
-    background-image: inline-image('components/tabledrag/tree-bottom.png');
+    @extend %table-drag__tree-child;
+    background-image: inline-image('components/table-drag/table-drag__tree-child-last.png');
     @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/tabledrag/tree-bottom.png');
+      *background-image: image-url('components/table-drag/table-drag__tree-child-last.png');
     }
   }
 
   &__tree-child-horizontal {
-    @extend %drag__tree-child;
+    @extend %table-drag__tree-child;
     background-position: -11px center;
   }
 }
@@ -111,49 +114,49 @@
 //
 
 body.drag {
-  @extend %drag__wrapper;
+  @extend %table-drag__wrapper;
 }
 
 tr.drag {
-  @extend %drag__item;
+  @extend %table-drag__item;
 }
 
 tr.drag-previous {
-  @extend %drag__item-previous;
+  @extend %table-drag__item-previous;
 }
 
 .tabledrag-handle {
-  @extend %drag__handle;
+  @extend %table-drag__handle;
 
   .handle {
-    @extend %drag__handle-icon;
+    @extend %table-drag__handle-icon;
   }
 }
 
 .tabledrag-handle-hover .handle {
-  @extend %drag__handle-icon-is-hover;
+  @extend %table-drag__handle-icon-is-hover;
 }
 
 .tabledrag-toggle-weight-wrapper {
-  @extend %drag__toggle-weight-wrapper;
+  @extend %table-drag__toggle-weight-wrapper;
 }
 
 .tabledrag-toggle-weight {
-  @extend %drag__toggle-weight;
+  @extend %table-drag__toggle-weight;
 }
 
 .indentation {
-  @extend %drag__indentation;
+  @extend %table-drag__indentation;
 }
 
 .tree-child {
-  @extend %drag__tree-child;
+  @extend %table-drag__tree-child;
 }
 
 .tree-child-last {
-  @extend %drag__tree-child-last;
+  @extend %table-drag__tree-child-last;
 }
 
 .tree-child-horizontal {
-  @extend %drag__tree-child-horizontal;
+  @extend %table-drag__tree-child-horizontal;
 }
