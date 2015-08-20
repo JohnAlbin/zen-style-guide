@@ -1,22 +1,16 @@
-// Dependencies.
-// @TODO An image dependency on throbber.gif? This is a code smell.
-@import 'components/autocomplete/autocomplete';
-
 // Progress bar
 //
-// @TODO
+// Shows the progress of a task in a simple bar graph.
+//
+// .progress-bar--inline - An inline progress bar.
+//
+// Markup: progress-bar.hbs
 //
 // Style guide: components.progress-bar
 
 .progress-bar,
 %progress-bar {
   font-weight: bold;
-
-  &--disabled {
-    @include rtl() {
-      float: right;
-    }
-  }
 
   &__bar {
     @include border-radius(3px);
@@ -28,7 +22,7 @@
   &__fill {
     height: 1.5em;
     width: 5px;
-    background: color(progress-bar) image-url('components/progress-bar/progress.gif') repeat 0 0;
+    background: color(progress-bar) image-url('components/progress-bar/progress-bar.gif') repeat 0 0;
   }
 
   &__percentage {
@@ -39,36 +33,13 @@
     }
   }
 
-  &--ajax {
+  &--inline {
+    width: 16em;
     display: inline-block;
 
     @include rtl() {
       float: right;
     }
-  }
-
-  &--ajax__throbber {
-    background: image-url('components/autocomplete/throbber.gif') no-repeat 0 -18px transparent;
-    float: left;
-    height: 15px;
-    margin: 2px;
-    width: 15px;
-
-    @include rtl() {
-      float: right;
-    }
-
-    tr & {
-      margin: 0 2px;
-    }
-  }
-
-  &--ajax__message {
-    padding-left: 20px;
-  }
-
-  &--ajax__bar {
-    width: 16em;
   }
 }
 
@@ -92,22 +63,6 @@
   }
 }
 
-.progress-disabled {
-  @extend %progress-bar--disabled;
-}
-
-.ajax-progress {
-  @extend %progress-bar--ajax;
-
-  .throbber {
-    @extend %progress-bar--ajax__throbber;
-  }
-
-  .message {
-    @extend %progress-bar--ajax__message;
-  }
-}
-
 .ajax-progress-bar {
-  @extend %progress-bar--ajax__bar;
+  @extend %progress-bar--inline;
 }
