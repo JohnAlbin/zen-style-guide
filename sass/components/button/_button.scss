@@ -17,7 +17,7 @@
   @include appearance(button);
   // Some styles don't apply to <a> links since they are inline elements by default.
   display: inline-block;
-  padding: 2px 6px 3px;
+  padding: 2px 6px;
   // Address Firefox 4+ setting `line-height` on `input` using `!important` in
   // the UA stylesheet. And prevent its "line-height: normal" rule below from
   // breaking the "appearance: button" styling on the input elements.
