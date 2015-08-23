@@ -2,12 +2,12 @@
 //
 // Make an element visually hidden, but accessible to screen readers, etc.
 //
-// Markup: visually-hidden.hbs
-//
 // .visually-hidden--off        - Turns off the visually-hidden effect.
 // .visually-hidden--focusable  - Makes an element visually hidden by default,
 //                                but visible when receiving focus.
 // .visually-hidden--focusable:focus  - A focused, and visible, element.
+//
+// Markup: visually-hidden.hbs
 //
 // Style guide: components.visually-hidden
 
