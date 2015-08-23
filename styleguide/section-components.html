@@ -6,7 +6,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Zen 7.x-6.x style guide</title>
+  <title>Zen 7.x-6.x Style Guide</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -15,13 +15,14 @@
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/style-guide/chroma-kss-styles.css">
+<link rel="stylesheet" href="../css/style-guide/kss-only.css">
 
 </head>
 <body id="kss-node">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <h1 class="kss-doc-title">Zen 7.x-6.x style guide</h1>
+    <h1 class="kss-doc-title">Zen 7.x-6.x Style Guide</h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -76,7 +77,7 @@
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-comments">
                 <span class="kss-nav__ref">4.4</span
-                ><span class="kss-nav__name">Comments</span>
+                ><span class="kss-nav__name">Comment</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -100,7 +101,7 @@
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-hidden">
                 <span class="kss-nav__ref">4.8</span
-                ><span class="kss-nav__name">Hidden elements</span>
+                ><span class="kss-nav__name">Hidden</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -146,26 +147,32 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-responsive-video">
+              <a href="section-components.html#kssref-components-progress-throbber">
                 <span class="kss-nav__ref">4.16</span
+                ><span class="kss-nav__name">Progress throbber</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-responsive-video">
+                <span class="kss-nav__ref">4.17</span
                 ><span class="kss-nav__name">Responsive video</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-visually-hidden">
-                <span class="kss-nav__ref">4.17</span
+                <span class="kss-nav__ref">4.18</span
                 ><span class="kss-nav__name">Visually hidden</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-watermark">
-                <span class="kss-nav__ref">4.18</span
+                <span class="kss-nav__ref">4.19</span
                 ><span class="kss-nav__name">Watermark</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-wireframe">
-                <span class="kss-nav__ref">4.19</span
+                <span class="kss-nav__ref">4.20</span
                 ><span class="kss-nav__name">Wireframe</span>
               </a>
             </li>
@@ -219,17 +226,52 @@ class names specified in the component.</p>
 
       <div class="kss-description">
         <p>A simple box styling.</p>
-<p>A Drupal block is often styled as a box. However, this design component is not applied to any blocks by default.</p>
+<p>A Drupal block is often styled as a box. However, this design component is
+not applied to any blocks by default; it is used as an example of how to
+build and document a CSS component.</p>
 
       </div>
     </div>
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
           <div class="box [modifier class]">
+  <h2 class="box__title">Box title</h2>
+  <div class="box__content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          :hover
+        </div>
+        <div class="kss-modifier__description kss-style">
+          The hover/focus styling.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="box pseudo-class-hover">
+  <h2 class="box__title">Box title</h2>
+  <div class="box__content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .box--highlight
+        </div>
+        <div class="kss-modifier__description kss-style">
+          The &quot;highlight&quot; box variant.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="box box--highlight">
   <h2 class="box__title">Box title</h2>
   <div class="box__content">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -267,43 +309,123 @@ class names specified in the component.</p>
 
 
       <div class="kss-description">
-        <p>Buttons built with the &lt;button&gt; tag are the most flexible for styling
-purposes. But <code>&lt;a&gt;</code> tags and <code>&lt;input&gt;</code> tags with <code>type</code> set to <code>submit</code>,
-<code>image</code>, <code>reset</code>, or <code>button</code> are also supported.</p>
+        <p>In addition to the default styling of <code>&lt;button&gt;</code> and
+<code>&lt;input type=&quot;submit|image|reset|button&quot;&gt;</code> elements, the <code>.button</code> class and
+its variants can apply buttons styles to various elements (like an <code>&lt;a&gt;</code>
+link).</p>
 
       </div>
     </div>
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
           <p>
-  <button class="[modifier class]" type="button">A normal button</button>
-  <button class="[modifier class]" type="submit">A submit button</button>
-  <button class="[modifier class]" type="reset">A reset button</button>
+  <button class="button [modifier class]" type="button">Standard button</button>
+  <button class="button [modifier class]" type="button" disabled>Disabled button</button>
 </p>
 <p>
-  <input class="[modifier class]" type="button" value="Input button">
-  <input class="[modifier class]" type="submit" value="Input submit button">
-  <input class="[modifier class]" type="reset" value="Input reset button">
+  <button class="button [modifier class]" type="submit">Submit button</button>
+  <button class="button [modifier class]" type="submit" disabled>Disabled submit button</button>
+</p>
+<p>
+  <button class="button [modifier class]" type="reset">Reset button</button>
+  <button class="button [modifier class]" type="reset" disabled>Disabled reset button</button>
+</p>
+<p>
+  <input class="button [modifier class]" type="button" value="Input button">
+  <input class="button [modifier class]" type="button" value="Disabled input button" disabled>
+</p>
+<p>
+  <input class="button [modifier class]" type="submit" value="Input submit button">
+  <input class="button [modifier class]" type="submit" value="Disabled input submit button" disabled>
+</p>
+<p>
+  <input class="button [modifier class]" type="reset" value="Input reset button">
+  <input class="button [modifier class]" type="reset" value="Disabled input reset button" disabled>
 </p>
 <p>
   <a class="button [modifier class]" href="#">Link button</a>
-</p>
-<p>
-  <button class="[modifier class]" type="button" disabled>A disabled button</button>
-  <button class="[modifier class]" type="submit" disabled>A disabled submit button</button>
-  <button class="[modifier class]" type="reset" disabled>A disabled reset button</button>
-</p>
-<p>
-  <input class="[modifier class]" type="button" value="Disabled input button" disabled>
-  <input class="[modifier class]" type="submit" value="Disabled input submit button" disabled>
-  <input class="[modifier class]" type="reset" value="Disabled input reset button" disabled>
-</p>
-<p>
   <a class="button [modifier class]" disabled href="#">Disabled link button</a>
+</p>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          :hover
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Hover styling.
+        </div>
+        <div class="kss-modifier__example">
+          <p>
+  <button class="button pseudo-class-hover" type="button">Standard button</button>
+  <button class="button pseudo-class-hover" type="button" disabled>Disabled button</button>
+</p>
+<p>
+  <button class="button pseudo-class-hover" type="submit">Submit button</button>
+  <button class="button pseudo-class-hover" type="submit" disabled>Disabled submit button</button>
+</p>
+<p>
+  <button class="button pseudo-class-hover" type="reset">Reset button</button>
+  <button class="button pseudo-class-hover" type="reset" disabled>Disabled reset button</button>
+</p>
+<p>
+  <input class="button pseudo-class-hover" type="button" value="Input button">
+  <input class="button pseudo-class-hover" type="button" value="Disabled input button" disabled>
+</p>
+<p>
+  <input class="button pseudo-class-hover" type="submit" value="Input submit button">
+  <input class="button pseudo-class-hover" type="submit" value="Disabled input submit button" disabled>
+</p>
+<p>
+  <input class="button pseudo-class-hover" type="reset" value="Input reset button">
+  <input class="button pseudo-class-hover" type="reset" value="Disabled input reset button" disabled>
+</p>
+<p>
+  <a class="button pseudo-class-hover" href="#">Link button</a>
+  <a class="button pseudo-class-hover" disabled href="#">Disabled link button</a>
+</p>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          :active
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Depressed button styling.
+        </div>
+        <div class="kss-modifier__example">
+          <p>
+  <button class="button pseudo-class-active" type="button">Standard button</button>
+  <button class="button pseudo-class-active" type="button" disabled>Disabled button</button>
+</p>
+<p>
+  <button class="button pseudo-class-active" type="submit">Submit button</button>
+  <button class="button pseudo-class-active" type="submit" disabled>Disabled submit button</button>
+</p>
+<p>
+  <button class="button pseudo-class-active" type="reset">Reset button</button>
+  <button class="button pseudo-class-active" type="reset" disabled>Disabled reset button</button>
+</p>
+<p>
+  <input class="button pseudo-class-active" type="button" value="Input button">
+  <input class="button pseudo-class-active" type="button" value="Disabled input button" disabled>
+</p>
+<p>
+  <input class="button pseudo-class-active" type="submit" value="Input submit button">
+  <input class="button pseudo-class-active" type="submit" value="Disabled input submit button" disabled>
+</p>
+<p>
+  <input class="button pseudo-class-active" type="reset" value="Input reset button">
+  <input class="button pseudo-class-active" type="reset" value="Disabled input reset button" disabled>
+</p>
+<p>
+  <a class="button pseudo-class-active" href="#">Link button</a>
+  <a class="button pseudo-class-active" disabled href="#">Disabled link button</a>
 </p>
 
         </div>
@@ -311,29 +433,31 @@ purposes. But <code>&lt;a&gt;</code> tags and <code>&lt;input&gt;</code> tags wi
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;button&quot;&gt;A normal button&lt;/button&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;submit&quot;&gt;A submit button&lt;/button&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;reset&quot;&gt;A reset button&lt;/button&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;button&quot;&gt;Standard button&lt;/button&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;button&quot; disabled&gt;Disabled button&lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;button&quot; value=&quot;Input button&quot;&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;submit&quot; value=&quot;Input submit button&quot;&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;reset&quot; value=&quot;Input reset button&quot;&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;submit&quot;&gt;Submit button&lt;/button&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;submit&quot; disabled&gt;Disabled submit button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;reset&quot;&gt;Reset button&lt;/button&gt;
+  &lt;button class=&quot;button [modifier class]&quot; type=&quot;reset&quot; disabled&gt;Disabled reset button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;button&quot; value=&quot;Input button&quot;&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;button&quot; value=&quot;Disabled input button&quot; disabled&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;submit&quot; value=&quot;Input submit button&quot;&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;submit&quot; value=&quot;Disabled input submit button&quot; disabled&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;reset&quot; value=&quot;Input reset button&quot;&gt;
+  &lt;input class=&quot;button [modifier class]&quot; type=&quot;reset&quot; value=&quot;Disabled input reset button&quot; disabled&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;a class=&quot;button [modifier class]&quot; href=&quot;#&quot;&gt;Link button&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;button&quot; disabled&gt;A disabled button&lt;/button&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;submit&quot; disabled&gt;A disabled submit button&lt;/button&gt;
-  &lt;button class=&quot;[modifier class]&quot; type=&quot;reset&quot; disabled&gt;A disabled reset button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;button&quot; value=&quot;Disabled input button&quot; disabled&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;submit&quot; value=&quot;Disabled input submit button&quot; disabled&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;reset&quot; value=&quot;Disabled input reset button&quot; disabled&gt;
-&lt;/p&gt;
-&lt;p&gt;
   &lt;a class=&quot;button [modifier class]&quot; disabled href=&quot;#&quot;&gt;Disabled link button&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
@@ -357,8 +481,8 @@ purposes. But <code>&lt;a&gt;</code> tags and <code>&lt;input&gt;</code> tags wi
 
 
       <div class="kss-description">
-        <p>Allows the bottom of an element to extend to the bottom of all floated
-children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></p>
+        <p>Allows the bottom of an element to extend to the bottom of all floated child
+elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></p>
 
       </div>
     </div>
@@ -394,17 +518,110 @@ children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack
                 #components.comments
             </span>
           </span>
-          Comments
+          Comment
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
+        <p>A single comment in a thread of comments.</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <div class="comment__section">
+  <article class="comment [modifier class]">
+    <header>
+      <p><a href="#">Jane A. User</a> replied on <time>Wed, 08/19/2015 - 17:51</time>
+        <a href="#" class="comment__permalink">Permalink</a>
+      </p>
+
+      <h3 class="comment__title">
+        <a href="#">The comment's title</a>
+      </h3>
+    </header>
+
+    <p>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.</p>
+  </article>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .comment--preview
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Preview version of comment.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="comment__section">
+  <article class="comment comment--preview">
+    <header>
+      <p><a href="#">Jane A. User</a> replied on <time>Wed, 08/19/2015 - 17:51</time>
+        <a href="#" class="comment__permalink">Permalink</a>
+      </p>
+
+      <h3 class="comment__title">
+        <a href="#">The comment's title</a>
+      </h3>
+    </header>
+
+    <p>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.</p>
+  </article>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .comment--nested
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A nested comment.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="comment__section">
+  <article class="comment comment--nested">
+    <header>
+      <p><a href="#">Jane A. User</a> replied on <time>Wed, 08/19/2015 - 17:51</time>
+        <a href="#" class="comment__permalink">Permalink</a>
+      </p>
+
+      <h3 class="comment__title">
+        <a href="#">The comment's title</a>
+      </h3>
+    </header>
+
+    <p>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.</p>
+  </article>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;comment__section&quot;&gt;
+  &lt;article class=&quot;comment [modifier class]&quot;&gt;
+    &lt;header&gt;
+      &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Jane A. User&lt;/a&gt; replied on &lt;time&gt;Wed, 08/19/2015 - 17:51&lt;/time&gt;
+        &lt;a href=&quot;#&quot; class=&quot;comment__permalink&quot;&gt;Permalink&lt;/a&gt;
+      &lt;/p&gt;
+
+      &lt;h3 class=&quot;comment__title&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;The comment&#x27;s title&lt;/a&gt;
+      &lt;/h3&gt;
+    &lt;/header&gt;
+
+    &lt;p&gt;Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
 
       </section>
       <section id="kssref-components-divider" class="kss-section kss-section--depth-2">
@@ -434,25 +651,33 @@ children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack
           Example
         </div>
         <div class="kss-modifier__example">
-          <div class="divider [modifier class]"></div>
+          <div class="divider "></div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-<div class="divider [modifier class]">
+<div class="divider ">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
+
+<hr class="divider ">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider [modifier class]&quot;&gt;&lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider &quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 
-&lt;div class=&quot;divider [modifier class]&quot;&gt;
+&lt;div class=&quot;divider &quot;&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;hr class=&quot;divider &quot;&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
 </code></pre>
       </div>
 
@@ -477,11 +702,11 @@ children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack
 
 
       </section>
-      <section id="kssref-components-forms.autocomplete" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-autocomplete" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.autocomplete">
+        <a class="kss-title__permalink" href="#kssref-components-forms-autocomplete">
           <span class="kss-title__ref">
               4.6.1
             <span class="kss-title__permalink-hash">
@@ -550,35 +775,92 @@ item allowing them to choose an option.</p>
       </div>
 
       </section>
-      <section id="kssref-components-forms.collapsible-fieldset" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-collapsible-fieldset" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.collapsible-fieldset">
+        <a class="kss-title__permalink" href="#kssref-components-forms-collapsible-fieldset">
           <span class="kss-title__ref">
               4.6.2
             <span class="kss-title__permalink-hash">
                 #components.forms.collapsible-fieldset
             </span>
           </span>
-          Collapsible fieldsets
+          Collapsible fieldset
         </a>
       </h3>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
+        <p>Fieldsets with optional entry fields can be hidden with collapsed fieldsets.</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <fieldset class="collapsible-fieldset [modifier class]">
+  <legend>
+    <span class="collapsible-fieldset__legend">
+      A collapsible fieldset
+      <span class="collapsible-fieldset__summary">A summary of the form state</span>
+    </span>
+  </legend>
+  <div class="collapsible-fieldset__wrapper">
+    Place the form elements to hide inside this wrapping div.
+  </div>
+</fieldset>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .is-collapsed
+        </div>
+        <div class="kss-modifier__description kss-style">
+          The collapsed fieldset.
+        </div>
+        <div class="kss-modifier__example">
+          <fieldset class="collapsible-fieldset is-collapsed">
+  <legend>
+    <span class="collapsible-fieldset__legend">
+      A collapsible fieldset
+      <span class="collapsible-fieldset__summary">A summary of the form state</span>
+    </span>
+  </legend>
+  <div class="collapsible-fieldset__wrapper">
+    Place the form elements to hide inside this wrapping div.
+  </div>
+</fieldset>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;fieldset class=&quot;collapsible-fieldset [modifier class]&quot;&gt;
+  &lt;legend&gt;
+    &lt;span class=&quot;collapsible-fieldset__legend&quot;&gt;
+      A collapsible fieldset
+      &lt;span class=&quot;collapsible-fieldset__summary&quot;&gt;A summary of the form state&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/legend&gt;
+  &lt;div class=&quot;collapsible-fieldset__wrapper&quot;&gt;
+    Place the form elements to hide inside this wrapping div.
+  &lt;/div&gt;
+&lt;/fieldset&gt;
+</code></pre>
+      </div>
 
       </section>
-      <section id="kssref-components-forms.form-item" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-form-item" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.form-item">
+        <a class="kss-title__permalink" href="#kssref-components-forms-form-item">
           <span class="kss-title__ref">
               4.6.3
             <span class="kss-title__permalink-hash">
@@ -589,20 +871,6 @@ item allowing them to choose an option.</p>
         </a>
       </h3>
 
-      <ul class="kss-parameters">
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.form-item--grouped</code>
-          <div class="kss-parameters__description">Pack groups of checkboxes and radio buttons closer together.</div>
-        </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.form-item--error</code>
-          <div class="kss-parameters__description">Highlight the form elements that caused a form submission error.</div>
-        </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">.form-item--inline</code>
-          <div class="kss-parameters__description">Inline form items.</div>
-        </li>
-      </ul>
 
       <div class="kss-description">
         <p>Wrapper for a form element (or group of form elements) and its label.</p>
@@ -610,15 +878,243 @@ item allowing them to choose an option.</p>
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item [modifier class]">
+  <label class="form-item__label" for="form-item-input">Label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input" value="Text value">
+  <div class="form-item__description">
+    Form item description.
+  </div>
+</div>
+<div class="form-item [modifier class]">
+  <label class="form-item__label" for="form-item-input-2">Another label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input-2" value="Text value">
+  <div class="form-item__description">
+    Another form item description.
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .form-item--inline
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Inline form items.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item form-item--inline">
+  <label class="form-item__label" for="form-item-input">Label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input" value="Text value">
+  <div class="form-item__description">
+    Form item description.
+  </div>
+</div>
+<div class="form-item form-item--inline">
+  <label class="form-item__label" for="form-item-input-2">Another label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input-2" value="Text value">
+  <div class="form-item__description">
+    Another form item description.
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .form-item--tight
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Packs groups of form items closer together.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item form-item--tight">
+  <label class="form-item__label" for="form-item-input">Label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input" value="Text value">
+  <div class="form-item__description">
+    Form item description.
+  </div>
+</div>
+<div class="form-item form-item--tight">
+  <label class="form-item__label" for="form-item-input-2">Another label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input-2" value="Text value">
+  <div class="form-item__description">
+    Another form item description.
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .is-error
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlight the form elements that caused a form submission error.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item is-error">
+  <label class="form-item__label" for="form-item-input">Label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input" value="Text value">
+  <div class="form-item__description">
+    Form item description.
+  </div>
+</div>
+<div class="form-item is-error">
+  <label class="form-item__label" for="form-item-input-2">Another label <span class="form-item__required" title="This field is required.">*</span></label>
+  <input class="form-item__widget" type="text" id="form-item-input-2" value="Text value">
+  <div class="form-item__description">
+    Another form item description.
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-item [modifier class]&quot;&gt;
+  &lt;label class=&quot;form-item__label&quot; for=&quot;form-item-input&quot;&gt;Label &lt;span class=&quot;form-item__required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;form-item__widget&quot; type=&quot;text&quot; id=&quot;form-item-input&quot; value=&quot;Text value&quot;&gt;
+  &lt;div class=&quot;form-item__description&quot;&gt;
+    Form item description.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-item [modifier class]&quot;&gt;
+  &lt;label class=&quot;form-item__label&quot; for=&quot;form-item-input-2&quot;&gt;Another label &lt;span class=&quot;form-item__required&quot; title=&quot;This field is required.&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input class=&quot;form-item__widget&quot; type=&quot;text&quot; id=&quot;form-item-input-2&quot; value=&quot;Text value&quot;&gt;
+  &lt;div class=&quot;form-item__description&quot;&gt;
+    Another form item description.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
 
       </section>
-      <section id="kssref-components-forms.form-table" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-form-item--radio" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.form-table">
+        <a class="kss-title__permalink" href="#kssref-components-forms-form-item--radio">
           <span class="kss-title__ref">
               4.6.4
+            <span class="kss-title__permalink-hash">
+                #components.forms.form-item--radio
+            </span>
+          </span>
+          Form item (radio)
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>Checkboxes and radios require slightly different markup; their label is after
+their widget instead of before. Uses the <code>.form-item--radio</code> class variant of
+the normal form item and is placed on each of the nested form items.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item">
+  <label class="form-item__label" for="group">Label for the group</label>
+  <div class="form-item__description">
+    Form group description.
+  </div>
+  <div class="form-item__group" id="group">
+    <div class="form-item--radio [modifier class]">
+      <input class="form-item__widget" type="checkbox" id="option-1" value="1">
+      <label class="form-item__label" for="option-1">Option 1</label>
+      <div class="form-item__description">
+        Form item description.
+      </div>
+    </div>
+    <div class="form-item--radio [modifier class]">
+      <input class="form-item__widget" type="checkbox" id="option-2" value="2">
+      <label class="form-item__label" for="option-2">Option 2</label>
+      <div class="form-item__description">
+        Form item description.
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .is-error
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Highlight the form elements that caused a form submission error.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="form-item">
+  <label class="form-item__label" for="group">Label for the group</label>
+  <div class="form-item__description">
+    Form group description.
+  </div>
+  <div class="form-item__group" id="group">
+    <div class="form-item--radio is-error">
+      <input class="form-item__widget" type="checkbox" id="option-1" value="1">
+      <label class="form-item__label" for="option-1">Option 1</label>
+      <div class="form-item__description">
+        Form item description.
+      </div>
+    </div>
+    <div class="form-item--radio is-error">
+      <input class="form-item__widget" type="checkbox" id="option-2" value="2">
+      <label class="form-item__label" for="option-2">Option 2</label>
+      <div class="form-item__description">
+        Form item description.
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;form-item&quot;&gt;
+  &lt;label class=&quot;form-item__label&quot; for=&quot;group&quot;&gt;Label for the group&lt;/label&gt;
+  &lt;div class=&quot;form-item__description&quot;&gt;
+    Form group description.
+  &lt;/div&gt;
+  &lt;div class=&quot;form-item__group&quot; id=&quot;group&quot;&gt;
+    &lt;div class=&quot;form-item--radio [modifier class]&quot;&gt;
+      &lt;input class=&quot;form-item__widget&quot; type=&quot;checkbox&quot; id=&quot;option-1&quot; value=&quot;1&quot;&gt;
+      &lt;label class=&quot;form-item__label&quot; for=&quot;option-1&quot;&gt;Option 1&lt;/label&gt;
+      &lt;div class=&quot;form-item__description&quot;&gt;
+        Form item description.
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item--radio [modifier class]&quot;&gt;
+      &lt;input class=&quot;form-item__widget&quot; type=&quot;checkbox&quot; id=&quot;option-2&quot; value=&quot;2&quot;&gt;
+      &lt;label class=&quot;form-item__label&quot; for=&quot;option-2&quot;&gt;Option 2&lt;/label&gt;
+      &lt;div class=&quot;form-item__description&quot;&gt;
+        Form item description.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-forms-form-table" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-components-forms-form-table">
+          <span class="kss-title__ref">
+              4.6.5
             <span class="kss-title__permalink-hash">
                 #components.forms.form-table
             </span>
@@ -629,20 +1125,244 @@ item allowing them to choose an option.</p>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
+        <p>Complex forms that appear in html <code>&lt;table&gt;</code> elements.</p>
+<p>If your custom theme isn&#39;t used for Drupal&#39;s admin pages, you can safely
+delete this component to save file weight in the generated CSS.</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <table class="form-table__sticky-header" style="position: fixed; visibility: visible;">
+<thead>
+  <tr>
+    <th>Permission</th>
+    <th class="form-table__narrow-column">anonymous user</th>
+    <th class="form-table__narrow-column">authenticated user</th>
+    <th class="form-table__narrow-column">administrator</th>
+  </tr>
+</thead>
+</table>
+
+<table class="form-table ">
+<thead>
+  <tr>
+    <th>Permission</th>
+    <th class="form-table__narrow-column">anonymous user</th>
+    <th class="form-table__narrow-column">authenticated user</th>
+    <th class="form-table__narrow-column">administrator</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="module" colspan="4">Block</td>
+  </tr>
+  <tr>
+    <td class="permission">
+      <div class="form-item form-type-item">
+        Administer blocks
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox">
+        <label class="element-invisible" for="edit-1-administer-blocks">anonymous user: Administer blocks </label>
+        <input class="form-checkbox" id="edit-1-administer-blocks" name="1[administer blocks]" value="administer blocks" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-2-administer-blocks">
+        <label class="element-invisible" for="edit-2-administer-blocks">authenticated user: Administer blocks </label>
+        <input class="rid-2 form-checkbox" id="edit-2-administer-blocks" name="2[administer blocks]" value="administer blocks" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-3-administer-blocks">
+        <label class="element-invisible" for="edit-3-administer-blocks">administrator: Administer blocks </label>
+        <input class="rid-3 form-checkbox real-checkbox" id="edit-3-administer-blocks" name="3[administer blocks]" value="administer blocks" checked="checked" type="checkbox"><input style="display: none;" title="This permission is inherited from the authenticated user role." class="dummy-checkbox" disabled="disabled" checked="checked" type="checkbox">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="module" colspan="4">Devel</td>
+  </tr>
+  <tr>
+    <td class="permission">
+      <div id="edit-access-devel-information" class="form-item form-type-item">
+        Access developer information
+        <div class="description">View developer output like variable printouts, query log, etc. <em class="permission-warning">Warning: Give to trusted roles only; this permission has security implications.</em></div>
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-1-access-devel-information">
+        <label class="element-invisible" for="edit-1-access-devel-information">anonymous user: Access developer information </label>
+        <input class="rid-1 form-checkbox" id="edit-1-access-devel-information" name="1[access devel information]" value="access devel information" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-2-access-devel-information">
+        <label class="element-invisible" for="edit-2-access-devel-information">authenticated user: Access developer information </label>
+        <input class="rid-2 form-checkbox" id="edit-2-access-devel-information" name="2[access devel information]" value="access devel information" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-3-access-devel-information">
+        <label class="element-invisible" for="edit-3-access-devel-information">administrator: Access developer information </label>
+        <input class="rid-3 form-checkbox real-checkbox" id="edit-3-access-devel-information" name="3[access devel information]" value="access devel information" checked="checked" type="checkbox"><input style="display: none;" title="This permission is inherited from the authenticated user role." class="dummy-checkbox" disabled="disabled" checked="checked" type="checkbox">
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="permission">
+      <div id="edit-execute-php-code" class="form-item form-type-item">
+        Execute PHP code
+        <div class="description">Run arbitrary PHP from a block. <em class="permission-warning">Warning: Give to trusted roles only; this permission has security implications.</em></div>
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-1-execute-php-code">
+        <label class="element-invisible" for="edit-1-execute-php-code">anonymous user: Execute PHP code </label>
+        <input class="rid-1 form-checkbox" id="edit-1-execute-php-code" name="1[execute php code]" value="execute php code" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-2-execute-php-code">
+        <label class="element-invisible" for="edit-2-execute-php-code">authenticated user: Execute PHP code </label>
+        <input class="rid-2 form-checkbox" id="edit-2-execute-php-code" name="2[execute php code]" value="execute php code" type="checkbox">
+      </div>
+    </td>
+    <td class="form-table__narrow-column">
+      <div class="form-item form-type-checkbox form-item-3-execute-php-code">
+        <label class="element-invisible" for="edit-3-execute-php-code">administrator: Execute PHP code </label>
+        <input class="rid-3 form-checkbox real-checkbox" id="edit-3-execute-php-code" name="3[execute php code]" value="execute php code" checked="checked" type="checkbox"><input style="display: none;" title="This permission is inherited from the authenticated user role." class="dummy-checkbox" disabled="disabled" checked="checked" type="checkbox">
+      </div>
+    </td>
+  </tr>
+</tbody>
+</table>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;form-table__sticky-header&quot; style=&quot;position: fixed; visibility: visible;&quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Permission&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;anonymous user&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;authenticated user&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;administrator&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+
+&lt;table class=&quot;form-table &quot;&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Permission&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;anonymous user&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;authenticated user&lt;/th&gt;
+    &lt;th class=&quot;form-table__narrow-column&quot;&gt;administrator&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;module&quot; colspan=&quot;4&quot;&gt;Block&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;permission&quot;&gt;
+      &lt;div class=&quot;form-item form-type-item&quot;&gt;
+        Administer blocks
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-1-administer-blocks&quot;&gt;anonymous user: Administer blocks &lt;/label&gt;
+        &lt;input class=&quot;form-checkbox&quot; id=&quot;edit-1-administer-blocks&quot; name=&quot;1[administer blocks]&quot; value=&quot;administer blocks&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-2-administer-blocks&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-2-administer-blocks&quot;&gt;authenticated user: Administer blocks &lt;/label&gt;
+        &lt;input class=&quot;rid-2 form-checkbox&quot; id=&quot;edit-2-administer-blocks&quot; name=&quot;2[administer blocks]&quot; value=&quot;administer blocks&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-3-administer-blocks&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-3-administer-blocks&quot;&gt;administrator: Administer blocks &lt;/label&gt;
+        &lt;input class=&quot;rid-3 form-checkbox real-checkbox&quot; id=&quot;edit-3-administer-blocks&quot; name=&quot;3[administer blocks]&quot; value=&quot;administer blocks&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;&lt;input style=&quot;display: none;&quot; title=&quot;This permission is inherited from the authenticated user role.&quot; class=&quot;dummy-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;module&quot; colspan=&quot;4&quot;&gt;Devel&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;permission&quot;&gt;
+      &lt;div id=&quot;edit-access-devel-information&quot; class=&quot;form-item form-type-item&quot;&gt;
+        Access developer information
+        &lt;div class=&quot;description&quot;&gt;View developer output like variable printouts, query log, etc. &lt;em class=&quot;permission-warning&quot;&gt;Warning: Give to trusted roles only; this permission has security implications.&lt;/em&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-1-access-devel-information&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-1-access-devel-information&quot;&gt;anonymous user: Access developer information &lt;/label&gt;
+        &lt;input class=&quot;rid-1 form-checkbox&quot; id=&quot;edit-1-access-devel-information&quot; name=&quot;1[access devel information]&quot; value=&quot;access devel information&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-2-access-devel-information&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-2-access-devel-information&quot;&gt;authenticated user: Access developer information &lt;/label&gt;
+        &lt;input class=&quot;rid-2 form-checkbox&quot; id=&quot;edit-2-access-devel-information&quot; name=&quot;2[access devel information]&quot; value=&quot;access devel information&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-3-access-devel-information&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-3-access-devel-information&quot;&gt;administrator: Access developer information &lt;/label&gt;
+        &lt;input class=&quot;rid-3 form-checkbox real-checkbox&quot; id=&quot;edit-3-access-devel-information&quot; name=&quot;3[access devel information]&quot; value=&quot;access devel information&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;&lt;input style=&quot;display: none;&quot; title=&quot;This permission is inherited from the authenticated user role.&quot; class=&quot;dummy-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;permission&quot;&gt;
+      &lt;div id=&quot;edit-execute-php-code&quot; class=&quot;form-item form-type-item&quot;&gt;
+        Execute PHP code
+        &lt;div class=&quot;description&quot;&gt;Run arbitrary PHP from a block. &lt;em class=&quot;permission-warning&quot;&gt;Warning: Give to trusted roles only; this permission has security implications.&lt;/em&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-1-execute-php-code&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-1-execute-php-code&quot;&gt;anonymous user: Execute PHP code &lt;/label&gt;
+        &lt;input class=&quot;rid-1 form-checkbox&quot; id=&quot;edit-1-execute-php-code&quot; name=&quot;1[execute php code]&quot; value=&quot;execute php code&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-2-execute-php-code&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-2-execute-php-code&quot;&gt;authenticated user: Execute PHP code &lt;/label&gt;
+        &lt;input class=&quot;rid-2 form-checkbox&quot; id=&quot;edit-2-execute-php-code&quot; name=&quot;2[execute php code]&quot; value=&quot;execute php code&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td class=&quot;form-table__narrow-column&quot;&gt;
+      &lt;div class=&quot;form-item form-type-checkbox form-item-3-execute-php-code&quot;&gt;
+        &lt;label class=&quot;element-invisible&quot; for=&quot;edit-3-execute-php-code&quot;&gt;administrator: Execute PHP code &lt;/label&gt;
+        &lt;input class=&quot;rid-3 form-checkbox real-checkbox&quot; id=&quot;edit-3-execute-php-code&quot; name=&quot;3[execute php code]&quot; value=&quot;execute php code&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;&lt;input style=&quot;display: none;&quot; title=&quot;This permission is inherited from the authenticated user role.&quot; class=&quot;dummy-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; type=&quot;checkbox&quot;&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
 
       </section>
-      <section id="kssref-components-forms.resizable-textarea" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-resizable-textarea" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.resizable-textarea">
+        <a class="kss-title__permalink" href="#kssref-components-forms-resizable-textarea">
           <span class="kss-title__ref">
-              4.6.5
+              4.6.6
             <span class="kss-title__permalink-hash">
                 #components.forms.resizable-textarea
             </span>
@@ -663,7 +1383,7 @@ item allowing them to choose an option.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <textarea class="resizable-textarea [modifier class]" rows="5">
+          <textarea class="resizable-textarea " rows="5">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -674,7 +1394,7 @@ item allowing them to choose an option.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;textarea class=&quot;resizable-textarea [modifier class]&quot; rows=&quot;5&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;textarea class=&quot;resizable-textarea &quot; rows=&quot;5&quot;&gt;
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -684,24 +1404,26 @@ item allowing them to choose an option.</p>
       </div>
 
       </section>
-      <section id="kssref-components-forms.tabledrag" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-forms-table-drag" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-forms.tabledrag">
+        <a class="kss-title__permalink" href="#kssref-components-forms-table-drag">
           <span class="kss-title__ref">
-              4.6.6
+              4.6.7
             <span class="kss-title__permalink-hash">
-                #components.forms.tabledrag
+                #components.forms.table-drag
             </span>
           </span>
-          TableDrag
+          Table drag
         </a>
       </h3>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
+        <p>Drag and drop rows inside a form.</p>
+<p>If your custom theme isn&#39;t used for Drupal&#39;s admin pages, you can safely
+delete this component to save file weight in the generated CSS.</p>
 
       </div>
     </div>
@@ -963,7 +1685,7 @@ item allowing them to choose an option.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <header class="header [modifier class]" role="banner">
+          <header class="header " role="banner">
   <a href="/" title="Home" rel="home" class="header__logo">
     <img src="public/sample-inline.png" alt="Home" class="header__logo-image">
   </a>
@@ -992,7 +1714,7 @@ item allowing them to choose an option.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header [modifier class]&quot; role=&quot;banner&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header &quot; role=&quot;banner&quot;&gt;
   &lt;a href=&quot;/&quot; title=&quot;Home&quot; rel=&quot;home&quot; class=&quot;header__logo&quot;&gt;
     &lt;img src=&quot;public/sample-inline.png&quot; alt=&quot;Home&quot; class=&quot;header__logo-image&quot;&gt;
   &lt;/a&gt;
@@ -1031,22 +1753,40 @@ item allowing them to choose an option.</p>
                 #components.hidden
             </span>
           </span>
-          Hidden elements
+          Hidden
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>Hide elements from all users.</p>
+        <p>Hide elements from all users. Compare to the visually-hidden component.</p>
 <p>Used for elements which should not be immediately displayed to any user. An
 example would be a collapsible fieldset that will be expanded with a click
-from a user. The effect of this class can be toggled with the jQuery show()
-and hide() functions.</p>
-<p>@TODO</p>
+from a user.</p>
+<p>For anything you want to hide on page load when JavaScript is enabled, use
+the <code>.js-hidden</code> class.</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="hidden ">
+  This content is hidden.
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hidden &quot;&gt;
+  This content is hidden.
+&lt;/div&gt;
+</code></pre>
+      </div>
 
       </section>
       <section id="kssref-components-highlight-mark" class="kss-section kss-section--depth-2">
@@ -1114,7 +1854,7 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="inline-links [modifier class]">
+          <ul class="inline-links ">
   <li class="inline-links__item"><a href="#">Read more</a></li>
   <li class="inline-links__item"><a href="#">Comment</a></li>
 </ul>
@@ -1123,7 +1863,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline-links [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline-links &quot;&gt;
   &lt;li class=&quot;inline-links__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;inline-links__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Comment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1158,14 +1898,14 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <h4 class="inline-sibling [modifier class]">A Heading</h4>
+          <h4 class="inline-sibling ">A Heading</h4>
 <p>A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling [modifier class]&quot;&gt;A Heading&lt;/h4&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling &quot;&gt;A Heading&lt;/h4&gt;
 &lt;p&gt;A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
 </code></pre>
       </div>
@@ -1195,11 +1935,11 @@ and hide() functions.</p>
 
 
       </section>
-      <section id="kssref-components-messages.single" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-messages-single" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-messages.single">
+        <a class="kss-title__permalink" href="#kssref-components-messages-single">
           <span class="kss-title__ref">
               4.12.1
             <span class="kss-title__permalink-hash">
@@ -1211,6 +1951,10 @@ and hide() functions.</p>
       </h3>
 
 
+      <div class="kss-description">
+        <p>A single message.</p>
+
+      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
@@ -1268,11 +2012,11 @@ and hide() functions.</p>
       </div>
 
       </section>
-      <section id="kssref-components-messages.multiple" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-messages-multiple" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-messages.multiple">
+        <a class="kss-title__permalink" href="#kssref-components-messages-multiple">
           <span class="kss-title__ref">
               4.12.2
             <span class="kss-title__permalink-hash">
@@ -1284,6 +2028,10 @@ and hide() functions.</p>
       </h3>
 
 
+      <div class="kss-description">
+        <p>Multiple messages.</p>
+
+      </div>
     </div>
 
       <div class="kss-modifier__wrapper">
@@ -1357,24 +2105,25 @@ and hide() functions.</p>
       </div>
 
       </section>
-      <section id="kssref-components-messages.status" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-messages-status" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-messages.status">
+        <a class="kss-title__permalink" href="#kssref-components-messages-status">
           <span class="kss-title__ref">
               4.12.3
             <span class="kss-title__permalink-hash">
                 #components.messages.status
             </span>
           </span>
-          Status report
+          Message colors
         </a>
       </h3>
 
 
       <div class="kss-description">
-        <p>Drupal system status reports use a simple styling.</p>
+        <p>Drupal system status reports use just the message colors and no other
+styling.</p>
 
       </div>
     </div>
@@ -1387,43 +2136,43 @@ and hide() functions.</p>
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <div class="status [modifier class]">
+          <div class="[modifier class]">
   This is a system status report message.
 </div>
 
         </div>
         <div class="kss-modifier__name kss-style">
-          .status--ok
+          .messages--ok-color
         </div>
         <div class="kss-modifier__description kss-style">
           &quot;Ok&quot; status.
         </div>
         <div class="kss-modifier__example">
-          <div class="status status--ok">
+          <div class="messages--ok-color">
   This is a system status report message.
 </div>
 
         </div>
         <div class="kss-modifier__name kss-style">
-          .status--warning
+          .messages--warning-color
         </div>
         <div class="kss-modifier__description kss-style">
           Warning status.
         </div>
         <div class="kss-modifier__example">
-          <div class="status status--warning">
+          <div class="messages--warning-color">
   This is a system status report message.
 </div>
 
         </div>
         <div class="kss-modifier__name kss-style">
-          .status--error
+          .messages--error-color
         </div>
         <div class="kss-modifier__description kss-style">
           Error status.
         </div>
         <div class="kss-modifier__example">
-          <div class="status status--error">
+          <div class="messages--error-color">
   This is a system status report message.
 </div>
 
@@ -1431,7 +2180,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;status [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;[modifier class]&quot;&gt;
   This is a system status report message.
 &lt;/div&gt;
 </code></pre>
@@ -1458,11 +2207,11 @@ and hide() functions.</p>
 
 
       </section>
-      <section id="kssref-components-navigation.breadcrumb" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-navigation-breadcrumb" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.breadcrumb">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-breadcrumb">
           <span class="kss-title__ref">
               4.13.1
             <span class="kss-title__permalink-hash">
@@ -1485,7 +2234,7 @@ and hide() functions.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <nav class="breadcrumb [modifier class]" role="navigation">
+          <nav class="breadcrumb " role="navigation">
   <h2 class="breadcrumb__title">You are here</h2>
 
   <ol class="breadcrumb__list">
@@ -1500,7 +2249,7 @@ and hide() functions.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb [modifier class]&quot; role=&quot;navigation&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb &quot; role=&quot;navigation&quot;&gt;
   &lt;h2 class=&quot;breadcrumb__title&quot;&gt;You are here&lt;/h2&gt;
 
   &lt;ol class=&quot;breadcrumb__list&quot;&gt;
@@ -1514,73 +2263,24 @@ and hide() functions.</p>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.more-link" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-navigation-more-link" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.more-link">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-more-link">
           <span class="kss-title__ref">
               4.13.2
             <span class="kss-title__permalink-hash">
                 #components.navigation.more-link
             </span>
           </span>
-          &quot;More&quot; links
+          &quot;More&quot; link
         </a>
       </h3>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
-
-      </div>
-    </div>
-
-
-      </section>
-      <section id="kssref-components-navigation.navbar" class="kss-section kss-section--depth-3">
-
-    <div class="kss-style">
-      <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.navbar">
-          <span class="kss-title__ref">
-              4.13.3
-            <span class="kss-title__permalink-hash">
-                #components.navigation.navbar
-            </span>
-          </span>
-          Navigation bar
-        </a>
-      </h3>
-
-
-      <div class="kss-description">
-        <p>@TODO</p>
-
-      </div>
-    </div>
-
-
-      </section>
-      <section id="kssref-components-navigation.pager" class="kss-section kss-section--depth-3">
-
-    <div class="kss-style">
-      <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.pager">
-          <span class="kss-title__ref">
-              4.13.4
-            <span class="kss-title__permalink-hash">
-                #components.navigation.pager
-            </span>
-          </span>
-          Pager
-        </a>
-      </h3>
-
-
-      <div class="kss-description">
-        <p>Paged navigation is a list of page numbers when more than 1 page of content
-is available.</p>
+        <p>Styles the &quot;Read more…&quot; and &quot;Help&quot; links common in Drupal.</p>
 
       </div>
     </div>
@@ -1590,88 +2290,48 @@ is available.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="pager [modifier class]">
-  <li class="pager__item">
-    <a title="Go to first page" href="/admin/content">« first</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to previous page" href="/admin/content?page=1">‹ previous</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to page 1" href="/admin/content">1</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to page 2" href="/admin/content?page=1">2</a>
-  </li>
-  <li class="pager__current-item">3</li>
-  <li class="pager__item">
-    <a title="Go to page 4" href="/admin/content?page=3">4</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to page 5" href="/admin/content?page=4">5</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to next page" href="/admin/content?page=3">next ›</a>
-  </li>
-  <li class="pager__item">
-    <a title="Go to last page" href="/admin/content?page=4">last »</a>
-  </li>
-</ul>
+          <div class="more-link ">
+  <a href="#">Read more…</a>
+</div>
+
+<div class="more-link ">
+  <a class="more-link__help-icon" href="#">Help</a>
+</div>
 
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager [modifier class]&quot;&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to first page&quot; href=&quot;/admin/content&quot;&gt;« first&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to previous page&quot; href=&quot;/admin/content?page=1&quot;&gt;‹ previous&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 1&quot; href=&quot;/admin/content&quot;&gt;1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 2&quot; href=&quot;/admin/content?page=1&quot;&gt;2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__current-item&quot;&gt;3&lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 4&quot; href=&quot;/admin/content?page=3&quot;&gt;4&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 5&quot; href=&quot;/admin/content?page=4&quot;&gt;5&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to next page&quot; href=&quot;/admin/content?page=3&quot;&gt;next ›&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to last page&quot; href=&quot;/admin/content?page=4&quot;&gt;last »&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;more-link &quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;Read more…&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;more-link &quot;&gt;
+  &lt;a class=&quot;more-link__help-icon&quot; href=&quot;#&quot;&gt;Help&lt;/a&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.side-menu" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-navigation-nav-menu" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.side-menu">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-nav-menu">
           <span class="kss-title__ref">
-              4.13.5
+              4.13.3
             <span class="kss-title__permalink-hash">
-                #components.navigation.side-menu
+                #components.navigation.nav-menu
             </span>
           </span>
-          Side menu
+          Nav menu
         </a>
       </h3>
 
 
       <div class="kss-description">
-        <p>A &quot;side menu&quot; is secondary, hierarchical navigation to be displayed to the
-side of the main content.</p>
+        <p>A &quot;nav menu&quot; is secondary, hierarchical navigation which can be displayed to the
+side or below the main content.</p>
 
       </div>
     </div>
@@ -1681,7 +2341,7 @@ side of the main content.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="side-menu [modifier class]">
+          <ul class="side-menu ">
   <li class="side-menu__item">
     <a href="/" class="side-menu__link">Home</a>
   </li>
@@ -1714,7 +2374,7 @@ side of the main content.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;side-menu [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;side-menu &quot;&gt;
   &lt;li class=&quot;side-menu__item&quot;&gt;
     &lt;a href=&quot;/&quot; class=&quot;side-menu__link&quot;&gt;Home&lt;/a&gt;
   &lt;/li&gt;
@@ -1746,11 +2406,156 @@ side of the main content.</p>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.skip-link" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-navigation-navbar" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.skip-link">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-navbar">
+          <span class="kss-title__ref">
+              4.13.4
+            <span class="kss-title__permalink-hash">
+                #components.navigation.navbar
+            </span>
+          </span>
+          Navbar
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>A simple method to get navigation links to appear in one line.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <ul class="navbar clearfix">
+  <li class="navbar__item"><a href="#">Home</a></li>
+  <li class="navbar__item"><a href="#">Blandit Jugis</a></li>
+  <li class="navbar__item"><a href="#">Causa Diam</a></li>
+  <li class="navbar__item"><a href="#">Abigo Caecus</a></li>
+  <li class="navbar__item"><a href="#">Ibidem Sudo</a></li>
+  <li class="navbar__item"><a href="#">Luctus Luptatum</a></li>
+  <li class="navbar__item"><a href="#">Ut</a></li>
+</ul>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;navbar clearfix&quot;&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blandit Jugis&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Causa Diam&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Abigo Caecus&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Ibidem Sudo&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Luctus Luptatum&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;navbar__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Ut&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-navigation-pager" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-pager">
+          <span class="kss-title__ref">
+              4.13.5
+            <span class="kss-title__permalink-hash">
+                #components.navigation.pager
+            </span>
+          </span>
+          Pager
+        </a>
+      </h3>
+
+
+      <div class="kss-description">
+        <p>Paged navigation is a list of page numbers when more than 1 page of content
+is available.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <ul class="pager ">
+  <li class="pager__item">
+    <a title="Go to first page" href="/admin/content">« first</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to previous page" href="/admin/content?page=1">‹ previous</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to page 1" href="/admin/content">1</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to page 2" href="/admin/content?page=1">2</a>
+  </li>
+  <li class="pager__current-item">3</li>
+  <li class="pager__item">
+    <a title="Go to page 4" href="/admin/content?page=3">4</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to page 5" href="/admin/content?page=4">5</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to next page" href="/admin/content?page=3">next ›</a>
+  </li>
+  <li class="pager__item">
+    <a title="Go to last page" href="/admin/content?page=4">last »</a>
+  </li>
+</ul>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager &quot;&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to first page&quot; href=&quot;/admin/content&quot;&gt;« first&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to previous page&quot; href=&quot;/admin/content?page=1&quot;&gt;‹ previous&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to page 1&quot; href=&quot;/admin/content&quot;&gt;1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to page 2&quot; href=&quot;/admin/content?page=1&quot;&gt;2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__current-item&quot;&gt;3&lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to page 4&quot; href=&quot;/admin/content?page=3&quot;&gt;4&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to page 5&quot; href=&quot;/admin/content?page=4&quot;&gt;5&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to next page&quot; href=&quot;/admin/content?page=3&quot;&gt;next ›&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;pager__item&quot;&gt;
+    &lt;a title=&quot;Go to last page&quot; href=&quot;/admin/content?page=4&quot;&gt;last »&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-navigation-skip-link" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-skip-link">
           <span class="kss-title__ref">
               4.13.6
             <span class="kss-title__permalink-hash">
@@ -1804,11 +2609,11 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.tabs" class="kss-section kss-section--depth-3">
+      <section id="kssref-components-navigation-tabs" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.tabs">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-tabs">
           <span class="kss-title__ref">
               4.13.7
             <span class="kss-title__permalink-hash">
@@ -1827,7 +2632,7 @@ with the <code>visually-hidden</code> component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="tabs [modifier class]">
+          <ul class="tabs ">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Revisions</a></li>
@@ -1842,7 +2647,7 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
   &lt;li class=&quot;tabs__tab is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link is-active&quot;&gt;View &lt;span class=&quot;visually-hidden&quot;&gt;(active tab)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Revisions&lt;/a&gt;&lt;/li&gt;
@@ -1856,11 +2661,11 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.tabs.primary" class="kss-section kss-section--depth-4">
+      <section id="kssref-components-navigation-tabs-primary" class="kss-section kss-section--depth-4">
 
     <div class="kss-style">
       <h4 class="kss-title kss-title--level-4">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.tabs.primary">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-tabs-primary">
           <span class="kss-title__ref">
               4.13.7.1
             <span class="kss-title__permalink-hash">
@@ -1879,7 +2684,7 @@ with the <code>visually-hidden</code> component.</p>
           Example
         </div>
         <div class="kss-modifier__example">
-          <ul class="tabs [modifier class]">
+          <ul class="tabs ">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Revisions</a></li>
@@ -1889,7 +2694,7 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs [modifier class]&quot;&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
   &lt;li class=&quot;tabs__tab is-active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link is-active&quot;&gt;View &lt;span class=&quot;visually-hidden&quot;&gt;(active tab)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;tabs__tab&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;tabs__tab-link&quot;&gt;Revisions&lt;/a&gt;&lt;/li&gt;
@@ -1898,11 +2703,11 @@ with the <code>visually-hidden</code> component.</p>
       </div>
 
       </section>
-      <section id="kssref-components-navigation.tabs.secondary" class="kss-section kss-section--depth-4">
+      <section id="kssref-components-navigation-tabs-secondary" class="kss-section kss-section--depth-4">
 
     <div class="kss-style">
       <h4 class="kss-title kss-title--level-4">
-        <a class="kss-title__permalink" href="#kssref-components-navigation.tabs.secondary">
+        <a class="kss-title__permalink" href="#kssref-components-navigation-tabs-secondary">
           <span class="kss-title__ref">
               4.13.7.2
             <span class="kss-title__permalink-hash">
@@ -1958,8 +2763,9 @@ with the <code>visually-hidden</code> component.</p>
 
       <div class="kss-description">
         <p>Removes an element from the print version of the web site.</p>
-<p>By importing this CSS file as media &quot;all&quot;, we allow this print file to be
-aggregated with other stylesheets, for improved front-end performance.</p>
+<p>By importing these CSS rules in a file marked as media &quot;all&quot;, we allow these
+print rules to be aggregated with other stylesheets, for improved front-end
+performance.</p>
 
       </div>
     </div>
@@ -2001,11 +2807,94 @@ aggregated with other stylesheets, for improved front-end performance.</p>
 
 
       <div class="kss-description">
-        <p>@TODO</p>
+        <p>Shows the progress of a task in a simple bar graph.</p>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <div class="progress-bar [modifier class]">
+  <div class="progress-bar__bar"><div class="progress-bar__fill" style="width: 60%"></div></div>
+  <div class="progress-bar__percentage">60%</div>
+  <div class="progress-bar__message">Installing...</div>
+</div>
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .progress-bar--inline
+        </div>
+        <div class="kss-modifier__description kss-style">
+          An inline progress bar.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="progress-bar progress-bar--inline">
+  <div class="progress-bar__bar"><div class="progress-bar__fill" style="width: 60%"></div></div>
+  <div class="progress-bar__percentage">60%</div>
+  <div class="progress-bar__message">Installing...</div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;progress-bar [modifier class]&quot;&gt;
+  &lt;div class=&quot;progress-bar__bar&quot;&gt;&lt;div class=&quot;progress-bar__fill&quot; style=&quot;width: 60%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;progress-bar__percentage&quot;&gt;60%&lt;/div&gt;
+  &lt;div class=&quot;progress-bar__message&quot;&gt;Installing...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-progress-throbber" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-progress-throbber">
+          <span class="kss-title__ref">
+              4.16
+            <span class="kss-title__permalink-hash">
+                #components.progress-throbber
+            </span>
+          </span>
+          Progress throbber
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Shows the progress of a task using a throbber.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="progress-throbber ">
+  <div class="progress-throbber__widget">&nbsp;</div>
+  <div class="progress-throbber__message">Progress message</div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;progress-throbber &quot;&gt;
+  &lt;div class=&quot;progress-throbber__widget&quot;&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class=&quot;progress-throbber__message&quot;&gt;Progress message&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
 
       </section>
       <section id="kssref-components-responsive-video" class="kss-section kss-section--depth-2">
@@ -2014,7 +2903,7 @@ aggregated with other stylesheets, for improved front-end performance.</p>
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-responsive-video">
           <span class="kss-title__ref">
-              4.16
+              4.17
             <span class="kss-title__permalink-hash">
                 #components.responsive-video
             </span>
@@ -2073,7 +2962,7 @@ intrinsic aspect ratio is preserved at any screen width. The
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-visually-hidden">
           <span class="kss-title__ref">
-              4.17
+              4.18
             <span class="kss-title__permalink-hash">
                 #components.visually-hidden
             </span>
@@ -2154,7 +3043,7 @@ intrinsic aspect ratio is preserved at any screen width. The
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-watermark">
           <span class="kss-title__ref">
-              4.18
+              4.19
             <span class="kss-title__permalink-hash">
                 #components.watermark
             </span>
@@ -2176,7 +3065,7 @@ intrinsic aspect ratio is preserved at any screen width. The
         </div>
         <div class="kss-modifier__example">
           <div>
-  <mark class="watermark [modifier class]">Unpublished</mark>
+  <mark class="watermark ">Unpublished</mark>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
@@ -2186,7 +3075,7 @@ intrinsic aspect ratio is preserved at any screen width. The
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-  &lt;mark class=&quot;watermark [modifier class]&quot;&gt;Unpublished&lt;/mark&gt;
+  &lt;mark class=&quot;watermark &quot;&gt;Unpublished&lt;/mark&gt;
 
   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 &lt;/div&gt;
@@ -2200,7 +3089,7 @@ intrinsic aspect ratio is preserved at any screen width. The
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-wireframe">
           <span class="kss-title__ref">
-              4.19
+              4.20
             <span class="kss-title__permalink-hash">
                 #components.wireframe
             </span>
