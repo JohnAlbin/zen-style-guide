@@ -132,6 +132,10 @@ $breakpoints: (
 // Zen grids
 //
 
+// These are needed for all breakpoints on all layouts.
+$zen-auto-include-grid-item-base: false;
+$zen-box-sizing: universal-border-box;
+
 // The gutters in the layouts are larger on mobile.
 $zen-gutters--small: 40px;
 $zen-gutters--medium: 25px;
