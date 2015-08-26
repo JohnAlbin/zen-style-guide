@@ -222,11 +222,8 @@ input[type="radio"] {
 
 fieldset {
   // Apply borders and padding that keep the vertical rhythm.
-  @include apply-side-rhythm-border(top, $width: 1px, $lines: .35);
-  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: .65);
-  @include apply-side-rhythm-border(left, $width: 1px, $lines: .625);
-  @include apply-side-rhythm-border(right, $width: 1px, $lines: .625);
-  border-color: color(border);
+  @include padding(.35 .625 .65);
+  border: 1px solid color(border);
   // Define consistent border, margin, and padding.
   margin: 0 2px;
 }

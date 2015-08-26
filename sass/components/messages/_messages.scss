@@ -40,7 +40,7 @@
 .messages,
 %messages {
   @extend %messages--ok-color;
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
   padding: 10px 10px 10px 50px;
   background-image: inline-image('components/messages/messages--ok.png');
   @if support-legacy-browser(ie, '7') {

@@ -29,7 +29,7 @@
 // - [Compass support](http://compass-style.org/reference/compass/support/)
 // - [Compass sprites](http://compass-style.org/reference/compass/utilities/sprites/)
 // - [Compass CSS3](http://compass-style.org/reference/compass/css3/)
-// - [Compass vertical rhythm](http://compass-style.org/reference/compass/typography/vertical_rhythm/)
+// - [Typey](https://github.com/jptaranto/typey)
 // - [Zen Grids](http://next.zengrids.com/help/)
 //
 // Additional pre-built libraries can be found on the [Sache website](http://www.sache.in/).
@@ -47,8 +47,8 @@
 @import 'compass/utilities/sprites';
 // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import 'compass/css3';
-// Helps set up a vertical rhythm.
-@import 'compass/typography/vertical_rhythm';
+// Add typey to manage font sizes and margins.
+@import 'typey';
 // Add the Zen Grids responsive layout mixins.
 @import 'zen-grids';
 

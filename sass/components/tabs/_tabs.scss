@@ -19,7 +19,7 @@
 %tabs {
   @extend %clearfix;
   @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
   @if support-legacy-browser(ie, '9') {
     // IE 9 and earlier don't understand gradients.
     border-bottom: 1px solid color(tabs-border) \0/ie;
@@ -58,7 +58,6 @@
 }
 
 %tabs__tab-link-common {
-  @include adjust-leading-to(1);
   // Add a top-left bevel.
   border: 1px solid lighten(color(tab-bg), 5%);
   border-right: 0;
@@ -117,13 +116,13 @@
   %tabs--secondary {
     @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
     // Collapse bottom margin of .tabs.
-    @include output-rhythm(margin-top, -(rhythm(1)));
+    @include margin-top(-1);
   }
 }
 
 .tabs--secondary__tab,
 %tabs--secondary__tab {
-  @include output-rhythm(margin, rhythm(1)/2 3px);
+  @include margin(.5 3px);
   float: left;
 
   @include rtl() {

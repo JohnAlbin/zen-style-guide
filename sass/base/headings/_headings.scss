@@ -16,44 +16,44 @@
 h1,
 %h1 {
   // Set the font-size and line-height while keeping a proper vertical rhythm.
-  @include adjust-font-size-to(2 * $base-font-size);
+  @include type-layout(xxl, 2);
 
   // Set 1 unit of vertical rhythm on the top and bottom margins.
-  @include leader(1);
-  @include trailer(1);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }
 
 h2,
 %h2 {
-  @include adjust-font-size-to(1.5 * $base-font-size);
-  @include leader(1);
-  @include trailer(1);
+  @include type-layout(xl, 1.5);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }
 
 h3,
 %h3 {
-  @include adjust-font-size-to(1.17 * $base-font-size);
-  @include leader(1);
-  @include trailer(1);
+  @include type-layout(l, 1.5);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }
 
 h4,
 %h4 {
-  @include adjust-font-size-to(1 * $base-font-size);
-  @include leader(1);
-  @include trailer(1);
+  @include type-layout(m, 1);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }
 
 h5,
 %h5 {
-  @include adjust-font-size-to(.83 * $base-font-size);
-  @include leader(1);
-  @include trailer(1);
+  @include type-layout(s, 1);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }
 
 h6,
 %h6 {
-  @include adjust-font-size-to(.67 * $base-font-size);
-  @include leader(1);
-  @include trailer(1);
+  @include type-layout(xs, 1);
+  @include margin-top(1);
+  @include margin-bottom(1);
 }

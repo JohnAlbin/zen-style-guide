@@ -13,24 +13,17 @@
 //       @see http://snook.ca/archives/html_and_css/no_css_reset/
 // ==========================================================================
 
-// To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
-// so that the line height of our base font becomes the basic unit of vertical
-// measurement. We use multiples of that unit to set the top and bottom margins
-// for our block level elements and to set the line heights of any fonts. For
-// more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
-//
-// Establish a vertical rhythm unit using $base-font-size, $base-line-height,
-// and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
-// body `font-size` is set using `em` units.
-@include establish-baseline();
 
 html {
-  // scss-lint:disable VendorPrefix
+  @include define-type-sizing();
+  // Work-around for https://github.com/jptaranto/typey/pull/3
+  line-height: $base-line-height / $base-font-size * 1em;
   // Show a background image that can be used to debug your alignments.
   // @include debug-vertical-alignment();
   font-family: $font-body;
   // Prevent iOS text size adjust after orientation change, without disabling
   // user zoom.
+  // scss-lint:disable VendorPrefix
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   // On short pages, we want any background gradients to fill the entire height

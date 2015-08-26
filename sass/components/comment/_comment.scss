@@ -15,7 +15,7 @@
 
   // Wrapper for the list of comments and its title.
   &__section {
-    @include output-rhythm(margin, rhythm(1) 0);
+    @include margin(1 0);
   }
 
   &__title {

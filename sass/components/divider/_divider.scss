@@ -8,12 +8,12 @@
 
 .divider,
 %divider {
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
   border: 0;
   border-top: 1px solid color(border);
 
   // If used as a container, add a top margin to the first child.
   > :first-child {
-    @include output-rhythm(margin-top, rhythm(1));
+    @include margin-top(1);
   }
 }

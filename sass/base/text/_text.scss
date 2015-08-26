@@ -189,7 +189,7 @@ s {
 
 small {
   // Address inconsistent and variable font size in all browsers.
-  font-size: 80%;
+  @include font-size(s);
 }
 
 // Superscript / Subscript
@@ -204,7 +204,7 @@ small {
 sub,
 sup {
   // Prevent `sub` and `sup` affecting `line-height` in all browsers.
-  font-size: 75%;
+  @include font-size(xs);
   line-height: 0;
   position: relative;
   vertical-align: baseline;

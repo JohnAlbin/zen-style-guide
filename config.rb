@@ -12,6 +12,7 @@ require 'breakpoint'
 require 'chroma'
 require 'compass/import-once/activate'
 require 'sass-globbing'
+require 'typey'
 require 'zen-grids'
 
 # Location of the theme's resources.

@@ -17,7 +17,7 @@
 // so that we can easily extend the basic box component with: @extend %box;
 .box,
 %box {
-  @include output-rhythm(margin-bottom, rhythm(1));
+  @include margin-bottom(1);
   border: 5px solid color(border);
   padding: 1em;
 

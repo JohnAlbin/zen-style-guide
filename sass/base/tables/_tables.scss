@@ -13,8 +13,7 @@
 
 table {
   // Add vertical rhythm margins.
-  @include leader(1);
-  @include trailer(1);
+  @include margin(1 0);
   // Remove most spacing between table cells.
   border-collapse: collapse;
   border-spacing: 0;
