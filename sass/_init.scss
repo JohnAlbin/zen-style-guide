@@ -13,12 +13,12 @@
 //
 // Style guide: sass.init
 
-// Variables
-//
-// Set variables for this site before a library sets its !default value.
-//
-// Style guide: sass.variables
-@import 'variables';
+
+// The following Sass functions are required to generate some variables' values,
+// so we load them first.
+@import 'chroma/functions';
+
+@import 'init/*';
 
 
 // 3rd party libraries
@@ -68,4 +68,4 @@
 // Weight: 1
 //
 // Style guide: sass.functions
-@import 'library/**/*';
+@import 'init/*/*';
