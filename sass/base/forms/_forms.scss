@@ -4,16 +4,21 @@
 @import 'base/links/links';
 @import 'components/button/button';
 
-// Forms
+// Form defaults
 //
-// Weight: 2
+// These are the default base styles applied to HTML form elements.
 //
-// Style guide: base.forms
+// Component classes can override these styles, but if no class applies a style
+// to an HTML form element, these styles will be the ones displayed.
+//
+// Weight: -1
+//
+// Style guide: forms.base
 
 //
 // The following 8 rules are from normalize.css and help to fix inconsistencies
 // across various browsers. You should probably leave these rules as is and jump
-// to the "Buttons" rule on line 100 before you start editing this file.
+// to the "Buttons" rule on line 105 before you start editing this file.
 //
 
 // Correct margin displayed oddly in IE 6/7.
@@ -104,14 +109,14 @@ input[type="search"] {
 // `reset`, or `button` are also supported.
 //
 // Below is the default button styling. To see variations on the button styling
-// see the [button component](section-components.html#kssref-components-button).
-//
-// Markup: forms-button.hbs
+// see the [button component](section-forms.html#kssref-forms-button).
 //
 // :hover        - Hover styling.
 // :active:hover - Depressed button styling.
 //
-// Style guide: base.forms.button
+// Markup: forms-button.hbs
+//
+// Style guide: forms.base.button
 
 button,
 [type="button"],
@@ -138,7 +143,7 @@ button,
 //
 // Markup: forms-input.hbs
 //
-// Style guide: base.forms.input
+// Style guide: forms.base.input
 
 input {
   &[type="text"],
@@ -150,7 +155,7 @@ input {
   &[type="date"],
   &[type="time"],
   &[type="number"] {
-    @extend %text-form-element !optional;
+    @extend %text-form-element;
   }
 
   &[type="range"] {
@@ -176,7 +181,7 @@ input {
 //
 // Markup: forms-input-checkbox.hbs
 //
-// Style guide: base.forms.input-checkbox
+// Style guide: forms.base.input-checkbox
 
 // Radio buttons
 //
@@ -188,7 +193,7 @@ input {
 //
 // Markup: forms-input-radio.hbs
 //
-// Style guide: base.forms.input-radio
+// Style guide: forms.base.input-radio
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -213,7 +218,7 @@ input[type="radio"] {
 //
 // Markup: forms-fieldset.hbs
 //
-// Style guide: base.forms.fieldset
+// Style guide: forms.base.fieldset
 
 fieldset {
   // Apply borders and padding that keep the vertical rhythm.
@@ -254,7 +259,7 @@ legend {
 //
 // Markup: forms-label.hbs
 //
-// Style guide: base.forms.label
+// Style guide: forms.base.label
 
 label {
   // Drupal-style form labels.
@@ -272,7 +277,7 @@ label {
 //
 // Markup: forms-select.hbs
 //
-// Style guide: base.forms.select
+// Style guide: forms.base.select
 
 select {
   // Add your styles.
@@ -290,10 +295,10 @@ optgroup {
 //
 // Markup: forms-textarea.hbs
 //
-// Style guide: base.forms.textarea
+// Style guide: forms.base.textarea
 
 textarea {
-  @extend %text-form-element !optional;
+  @extend %text-form-element;
   // Remove default vertical scrollbar in IE 8/9/10/11.
   overflow: auto;
 }
