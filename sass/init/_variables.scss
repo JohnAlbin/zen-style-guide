@@ -116,11 +116,15 @@ $font-watermark:  $impact;
 // Style guide: sass.variables.breakpoints
 
 $breakpoints: (
-  'small':        (444px,       'no-query' true),
-  'medium':       (777px,       'no-query' true),
-  'medium-only':  (777px 998px, 'no-query' true),
-  'large':        (999px,       'no-query' true),
-  'larger':       (1222px),
+  xxxs: (333px, 'no-query' true),
+  xxs:  (444px, 'no-query' true),
+  xs:   (555px, 'no-query' true),
+  s:    (666px, 'no-query' true),
+  m:    (777px, 'no-query' true),
+  l:    (888px, 'no-query' true),
+  xl:   (999px, 'no-query' true),
+  xxl:  (1111px),
+  xxxl: (1222px)
 );
 
 
