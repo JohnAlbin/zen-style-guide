@@ -22,7 +22,7 @@
   }
 
   &.is-throbbing,
-  &-is-throbbing {
+  &--is-throbbing {
     background-position: 100% -18px;
 
     @include rtl() {
@@ -55,7 +55,7 @@
     }
   }
 
-  &__list-item-is-selected {
+  &__list-item--is-selected {
     background: color(autocomplete-select-bg);
     color: color(autocomplete-select);
   }
@@ -71,7 +71,7 @@ html.js input {
   }
 
   &.throbbing {
-    @extend %autocomplete-is-throbbing;
+    @extend %autocomplete--is-throbbing;
   }
 }
 
@@ -88,7 +88,7 @@ html.js input {
   }
 
   .selected {
-    @extend %autocomplete__list-item-is-selected;
+    @extend %autocomplete__list-item--is-selected;
   }
 }
 // scss-lint:enable IdSelector

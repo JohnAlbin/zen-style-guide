@@ -13,7 +13,7 @@
   position: relative;
 
   &.is-collapsed,
-  &-is-collapsed {
+  &--is-collapsed {
     border-bottom-width: 0;
     border-left-width: 0;
     border-right-width: 0;
@@ -21,7 +21,7 @@
   }
 
   .is-collapsed &__wrapper,
-  &-is-collapsed__wrapper {
+  &--is-collapsed__wrapper {
     display: none;
   }
 
@@ -43,7 +43,7 @@
   }
 
   .is-collapsed &__legend,
-  &-is-collapsed__legend {
+  &--is-collapsed__legend {
     background-image: inline-image('components/collapsible-fieldset/collapsed.png');
     @if support-legacy-browser(ie, '7') {
       *background-image: image-url('components/collapsible-fieldset/collapsed.png');
@@ -82,14 +82,14 @@
   }
 
   &.collapsed {
-    @extend %collapsible-fieldset-is-collapsed;
+    @extend %collapsible-fieldset--is-collapsed;
 
     .fieldset-legend {
-      @extend %collapsible-fieldset-is-collapsed__legend;
+      @extend %collapsible-fieldset--is-collapsed__legend;
     }
 
     .fieldset-wrapper {
-      @extend %collapsible-fieldset-is-collapsed__wrapper;
+      @extend %collapsible-fieldset--is-collapsed__wrapper;
     }
   }
 }

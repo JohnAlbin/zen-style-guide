@@ -54,7 +54,7 @@
     width: 13px;
   }
 
-  &__handle-icon-is-hover {
+  &__handle-icon--is-hover {
     background-position: 6px -11px;
   }
 
@@ -134,7 +134,7 @@ tr.drag-previous {
 }
 
 .tabledrag-handle-hover .handle {
-  @extend %table-drag__handle-icon-is-hover;
+  @extend %table-drag__handle-icon--is-hover;
 }
 
 .tabledrag-toggle-weight-wrapper {

@@ -84,12 +84,12 @@
   }
 
   &:active {
-    @extend %tabs__tab-link-is-active;
+    @extend %tabs__tab-link--is-active;
   }
 }
 
 .tabs__tab-link.is-active,
-%tabs__tab-link-is-active {
+%tabs__tab-link--is-active {
   @if support-legacy-browser(ie, '8') {
     @include filter-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0));
   }
@@ -148,12 +148,12 @@
   }
 
   &:active {
-    @extend %tabs--secondary__tab-link-is-active;
+    @extend %tabs--secondary__tab-link--is-active;
   }
 }
 
 .tabs--secondary__tab-link.is-active,
-%tabs--secondary__tab-link-is-active {
+%tabs--secondary__tab-link--is-active {
   @include single-text-shadow(darken(color(tab-secondary), 20%), 1px, 1px, 0);
   color: lighten(color(tab-bg), 15%);
   background-color: color(tab-secondary);

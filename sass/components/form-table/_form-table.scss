@@ -18,7 +18,7 @@
     background-color: color(body-bg);
 
     &.is-sticky,
-    &-is-sticky {
+    &--is-sticky {
       visibility: visible;
     }
   }

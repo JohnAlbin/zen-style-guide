@@ -72,16 +72,16 @@
   }
 
   &.is-error &__widget,
-  &-is-error__widget {
+  &--is-error__widget {
     border: 1px solid color(form-error);
   }
 
   &.is-error,
-  &-is-error {
+  &--is-error {
     input,
     textarea,
     select {
-      @extend %form-item-is-error__widget;
+      @extend %form-item--is-error__widget;
     }
   }
 }
@@ -94,7 +94,7 @@
   input.error,
   textarea.error,
   select.error {
-    @extend %form-item-is-error__widget;
+    @extend %form-item--is-error__widget;
   }
 
   .description {

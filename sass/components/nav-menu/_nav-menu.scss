@@ -18,7 +18,7 @@
     list-style-type: square;
 
     &.is-expanded,
-    &-is-expanded {
+    &--is-expanded {
       list-style-image: inline-image('components/nav-menu/nav-menu--expanded.png');
       @if support-legacy-browser(ie, '7') {
         *list-style-image: image-url('components/nav-menu/nav-menu--expanded.png');
@@ -27,7 +27,7 @@
     }
 
     &.is-collapsed,
-    &-is-collapsed {
+    &--is-collapsed {
       list-style-image: inline-image('components/nav-menu/nav-menu--collapsed.png');
       @if support-legacy-browser(ie, '7') {
         *list-style-image: image-url('components/nav-menu/nav-menu--collapsed.png');
@@ -45,7 +45,7 @@
 
   &__link {
     &.is-active,
-    &-is-active {
+    &--is-active {
       color: color(menu-active);
     }
   }
@@ -59,15 +59,15 @@
   @extend %nav-menu__item;
 
   &.is-expanded {
-    @extend %nav-menu__item-is-expanded;
+    @extend %nav-menu__item--is-expanded;
   }
 
   &.is-collapsed {
-    @extend %nav-menu__item-is-collapsed;
+    @extend %nav-menu__item--is-collapsed;
   }
 }
 
 // The active item in a Drupal menu.
 .menu a.active {
-  @extend %nav-menu__link-is-active;
+  @extend %nav-menu__link--is-active;
 }

@@ -30,7 +30,7 @@
   &:focus,
   &:hover,
   &.is-focus,
-  &-is-focus {
+  &--is-focus {
     border-color: color(text);
   }
 
