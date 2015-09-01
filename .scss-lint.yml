@@ -19,8 +19,6 @@ linters:
     ignore_single_line_blocks: false
   MergeableSelector:
     force_nesting: true
-  NameFormat:
-    convention: ^\.?[a-z][a-z0-9]*(\-?[a-z0-9]+)*(\-\-[a-z0-9](\-?[a-z0-9]+)*)?(__[a-z0-9](\-?[a-z0-9]+)*)?$
   NestingDepth:
     max_depth: 4  # &--variant is not a nesting level. https://github.com/causes/scss-lint/issues/384
   PropertySortOrder:
@@ -45,8 +43,14 @@ linters:
   QualifyingElement:
     enabled: false
   SelectorFormat:
-    convention: ^\.?[a-z][a-z0-9]*(\-?[a-z0-9]+)*(\-\-[a-z0-9](\-?[a-z0-9]+)*)?(__[a-z0-9](\-?[a-z0-9]+)*)?$
+    convention: hyphenated_BEM
   SingleLinePerProperty:
     allow_single_line_rule_sets: false # Allowed by default.
   SpaceAfterPropertyColon:
     style: at_least_one_space
+  SpaceAroundOperator:
+    enabled: false
+  # scss-lint 0.41.0 dies parsing chroma-kss-markup.scss when using SpaceBetweenParens
+  # See https://github.com/brigade/scss-lint/issues/568
+  SpaceBetweenParens:
+    enabled: false
