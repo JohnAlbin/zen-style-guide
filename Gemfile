@@ -10,6 +10,6 @@ group :frontend do
   gem 'sass',                 '~> 3.4'
   gem 'sass-globbing',        '~> 1.1'
   gem 'scss_lint',            '~> 0.41'
-  gem 'typey',                '~> 1.0.0.beta.5'
+  gem 'typey',                '~> 1.0.0.beta.8'
   gem 'zen-grids',            '>= 2.0.0.beta.3'
 end
