@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 group :frontend do
   gem 'breakpoint',           '~> 2.5.0'
-  gem 'chroma-sass',          '~> 1.0'
+  gem 'chroma-sass',          '~> 1.1'
   gem 'compass',              '~> 1.0'
   gem 'compass-import-once',  '~> 1.0'
   # Build compass sprites faster with oily_png.
