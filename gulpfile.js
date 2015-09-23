@@ -137,11 +137,17 @@ gulp.task('styleguide:chroma-kss-markup', $.shell.task(
   [
     // @TODO: mkdir and head are UNIX utils. Replace this after Chroma is refactored.
     'mkdir -p css/style-guide',
-    'bundle exec sass --compass --scss --sourcemap=none --style expanded sass/style-guide/chroma-kss-markup.scss css/style-guide/chroma-kss-markup.hbs.tmp',
+    'bundle exec sass --no-cache --compass --scss --sourcemap=none --style expanded sass/style-guide/chroma-kss-markup.scss css/style-guide/chroma-kss-markup.hbs.tmp',
     'head -n 2  css/style-guide/chroma-kss-markup.hbs.tmp | tail -n 1 > css/style-guide/chroma-kss-markup.hbs',
     'rm css/style-guide/chroma-kss-markup.hbs.tmp'
   ],
   {cwd: options.theme.root}
+));
+
+// Debug the generation of the style guide with the --verbose flag.
+gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], $.shell.task(
+  ['kss-node <%= flags %>'],
+  {templateData: {flags: flags.join(' ') + ' --verbose'}}
 ));
 
 // #########################
@@ -211,22 +217,22 @@ gulp.task('watch:js', ['lint:js'], function() {
 gulp.task('clean', ['clean:css', 'clean:styleguide']);
 
 // Clean style guide files.
-gulp.task('clean:styleguide', function(cb) {
+gulp.task('clean:styleguide', function() {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  del([
+  return del([
       options.styleGuide.destination + '*.html',
       options.styleGuide.destination + 'public',
       options.theme.css + '**/*.hbs'
-    ], {force: true}, cb);
+    ], {force: true});
 });
 
 // Clean CSS files.
-gulp.task('clean:css', function(cb) {
-  del([
+gulp.task('clean:css', function() {
+  return del([
       options.theme.root + '**/.sass-cache',
       options.theme.css + '**/*.css',
       options.theme.css + '**/*.map'
-    ], {force: true}, cb);
+    ], {force: true});
 });
 
 
