@@ -10,34 +10,21 @@
 //
 // Style guide: sass.colors
 
-// Define descriptive names of color values.
-$chroma: define-default-color-scheme('Descriptive color names for use in "functional" color names below.');
+// Define the default color scheme's color names.
+$chroma: define-default-color-scheme('branding', "The site's main colors. Can be used to define colors in other color schemes.");
+
 $chroma: add-colors((
-  white:                  #fff,
-  grey-extra-light:       #eee,
-  grey-light:             #ddd,
-  grey-medium-light:      #ccc,
-  grey-medium:            #999,
-  grey-dark:              #666,
-  grey-extra-dark:        #333,
   black:                  #000,
+  grey-dark:              ('black' lighten 40%), // #666
+  'grey':                 ('black' lighten 60%), // #999
+  grey-light:             ('black' lighten 80%), // #ccc
+  grey-extra-light:       ('black' lighten 93.33%), // #eee
+  white:                  #fff,
 
   blue:                   #0072b9,
-
-  purple:                 #639,
-
-  pink-pale:              #fef5f1,
   red:                    #c00,
-  red-orange:             #ed541d,
-  rust:                   #8c2e0b,
-
-  yellow-pale:            #ffd,
   yellow:                 #ff0,
-  yellow-dark:            #ed5,
-
-  green-pale:             #f8fff0,
-  green-light:            #be7,
-  green-dark:             #234600,
+  green:                  #060,
 ));
 
 // Define color names for functional uses.
@@ -48,10 +35,10 @@ $chroma: add-colors('functional', (
   text-bg:                'white',
 
   link:                   'blue',
-  link-visited:           'purple',
+  link-visited:           ('blue' darken 20%),
   link-active:            'red',
 
-  border:                 'grey-medium-light',
+  border:                 'grey-light',
 
   autocomplete:           'text',
   autocomplete-bg:        'text-bg',
@@ -61,9 +48,9 @@ $chroma: add-colors('functional', (
   body-bg:                'text-bg',
 
   button:                 'text',
-  button-disabled:        'grey-medium',
+  button-disabled:        'grey',
 
-  fieldset-summary:       'grey-medium',
+  fieldset-summary:       'grey',
   form-error:             'red',
 
   mark-highlight:         'red',
@@ -71,40 +58,38 @@ $chroma: add-colors('functional', (
 
   menu-active:            'text',
 
-  preview-bg:             'yellow-pale',
+  preview-bg:             ('yellow' lighten 43%),
 
   progress-bar:           'blue',
-  progress-bar-bg:        'grey-medium-light',
+  progress-bar-bg:        'grey-light',
   progress-bar-border:    'grey-dark',
 
   resizable-grippie:      'grey-extra-light',
 
   row-stripe:             'grey-extra-light',
-  row-disabled:           'grey-medium-light',
+  row-disabled:           'grey-light',
 
   skip-link:              'white',
   skip-link-bg:           'grey-dark',
 
-  status:                 'green-dark',
-  status-bg:              'green-pale',
-  status-border:          'green-light',
-  status-highlight:       'text',
-  warning:                'rust',
-  warning-bg:             'yellow-pale',
-  warning-border:         'yellow-dark',
-  error:                  'rust',
-  error-bg:               'pink-pale',
-  error-border:           'red-orange',
+  status:                 'green',
+  status-bg:              (status lighten 78%),
+  status-highlight:       text,
+  warning:                text,
+  warning-bg:             ('yellow' lighten 40%),
+  warning-border:         ('yellow' darken 5%),
+  error:                  'red',
+  error-bg:               (error lighten 57%),
 
   tabs-border:            'border',
   tabs-bg:                'text-bg',
-  tab:                    'grey-extra-dark',
+  tab:                    'text',
   tab-text-shadow:        'white',
-  tab-bg:                 'grey-light',
+  tab-bg:                 ('grey-light' lighten 6.66%),
   tab-secondary:          'grey-dark',
 
-  table-drag:             'yellow-pale',
-  table-select:           'yellow-pale',
+  table-drag:             ('yellow' lighten 43%),
+  table-select:           ('yellow' lighten 43%),
 
   watermark:              'grey-extra-light',
 ));

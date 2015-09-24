@@ -6,5 +6,5 @@
 
 // Add an outline to every grid item in the style guide.
 [id^="kssref-layouts-"] [class^="layout-"][class*="__"] {
-  outline: 1px dotted color(grey-medium);
+  outline: 1px dotted color('grey');
 }
