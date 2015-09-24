@@ -23,8 +23,7 @@ $chroma: add-colors((
 
   blue:                   #0072b9,
   red:                    #c00,
-  yellow:                 #ff0,
-  green:                  #060,
+  yellow:                 #fd0,
 ));
 
 // Define color names for functional uses.
@@ -72,12 +71,12 @@ $chroma: add-colors('functional', (
   skip-link:              'white',
   skip-link-bg:           'grey-dark',
 
-  status:                 'green',
-  status-bg:              (status lighten 78%),
+  status:                 'blue',
+  status-bg:              (status lighten 62%),
   status-highlight:       text,
   warning:                text,
-  warning-bg:             ('yellow' lighten 40%),
-  warning-border:         ('yellow' darken 5%),
+  warning-bg:             ('yellow' lighten 45%),
+  warning-border:         'yellow',
   error:                  'red',
   error-bg:               (error lighten 57%),
 

@@ -2,27 +2,14 @@
 //
 // System alerts.
 //
+// Warning messages should use the `.messages--warning` class. Error messages
+// should use the `.messages--error` class.
+//
+// The icon shown is not part of the CSS; it is an SVG image in the HTML.
+//
+// Markup: messages.hbs
+//
 // Style guide: components.messages
-
-// Single Message
-//
-// .messages--warning   - Warning messages.
-// .messages--error     - Error messages.
-//
-// Markup: messages-single.hbs
-//
-// Weight: -1
-//
-// Style guide: components.messages.single
-
-// Multiple Messages
-//
-// .messages--warning   - Warning messages.
-// .messages--error     - Error messages.
-//
-// Markup: messages-multiple.hbs
-//
-// Style guide: components.messages.multiple
 
 // Message colors
 //
@@ -33,26 +20,49 @@
 // .messages--warning-color - Warning status.
 // .messages--error-color   - Error status.
 //
-// markup: messages-color.hbs
+// Markup: messages--color.hbs
 //
-// Style guide: components.messages.status
+// Style guide: components.messages--color
 
 .messages,
 %messages {
   @extend %messages--ok-color;
   @include margin(1 0);
-  padding: 10px 10px 10px 50px;
-  background-image: inline-image('components/messages/messages--ok.png');
-  @if support-legacy-browser(ie, '7') {
-    *background-image: image-url('components/messages/messages--ok.png');
-  }
-  background-position: 8px 8px;
-  background-repeat: no-repeat;
+  position: relative;
+  padding: 10px 10px 10px 44px;
   border: 1px solid color(status);
 
   @include rtl() {
-    padding: 10px 50px 10px 10px;
+    padding: 10px 44px 10px 10px;
     background-position: 99% 8px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    height: 24px;
+    width: 24px;
+    margin-top: -12px; // Half of the icon height.
+    line-height: 1;
+
+    @include rtl() {
+      left: auto;
+      right: 0;
+    }
+
+    // SVG icon fill.
+    path {
+      fill: color(status);
+    }
+  }
+
+  &__list {
+    margin: 0;
+  }
+
+  &__item {
+    list-style-image: none;
   }
 
   &--ok-color {
@@ -70,36 +80,32 @@
     color: color(error);
   }
 
+  &--status {
+    @extend %messages;
+  }
+
   &--warning {
     @extend %messages;
     @extend %messages--warning-color;
-    background-image: inline-image('components/messages/messages--warning.png');
-    @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/messages/messages--warning.png');
-    }
     border-color: color(warning-border);
+
+    path {
+      fill: color(warning-border);
+    }
   }
 
   &--error {
     @extend %messages;
     @extend %messages--error-color;
-    background-image: inline-image('components/messages/messages--error.png');
-    @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/messages/messages--error.png');
-    }
     border-color: color(error);
+
+    path {
+      fill: color(error);
+    }
   }
 
   &--error__highlighted-text {
     color: color(status-highlight);
-  }
-
-  &__list {
-    margin: 0;
-  }
-
-  &__item {
-    list-style-image: none;
   }
 }
 
