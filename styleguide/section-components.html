@@ -267,10 +267,16 @@ class names specified in the component.</p>
 
 
       <div class="kss-description">
-        <p>A simple box styling.</p>
+        <p>A simple box style.</p>
 <p>A Drupal block is often styled as a box. However, this design component is
 not applied to any blocks by default; it is used as an example of how to
 build and document a CSS component.</p>
+<p>&quot;box&quot; is the name of our component, so we define a <code>.box</code> class that we can
+apply to any HTML element that needs the box styling. We also provide a
+<code>%box</code> placeholder selector so that we can easily extend the basic box
+component with <code>@extend %box;</code>.</p>
+<p>Take a look at the source code for this component for more information about
+building a good component.</p>
 
       </div>
     </div>
