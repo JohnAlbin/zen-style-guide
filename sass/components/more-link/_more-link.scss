@@ -17,9 +17,6 @@
   &__help-icon {
     padding: 1px 0 1px 20px;
     background-image: inline-image('components/more-link/more-link__help-icon.png');
-    @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/more-link/more-link__help-icon.png');
-    }
     background-position: 0 50%;
     background-repeat: no-repeat;
 

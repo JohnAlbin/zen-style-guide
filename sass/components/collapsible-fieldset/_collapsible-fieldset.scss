@@ -29,9 +29,6 @@
     display: block;
     padding-left: 15px;
     background-image: inline-image('components/collapsible-fieldset/expanded.png');
-    @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/collapsible-fieldset/expanded.png');
-    }
     background-position: 5px 65%;
     background-repeat: no-repeat;
 
@@ -45,16 +42,10 @@
   .is-collapsed &__legend,
   &--is-collapsed__legend {
     background-image: inline-image('components/collapsible-fieldset/collapsed.png');
-    @if support-legacy-browser(ie, '7') {
-      *background-image: image-url('components/collapsible-fieldset/collapsed.png');
-    }
     background-position: 5px 50%;
 
     @include rtl() {
       background-image: inline-image('components/collapsible-fieldset/collapsed-rtl.png');
-      @if support-legacy-browser(ie, '7') {
-        *background-image: image-url('components/collapsible-fieldset/collapsed-rtl.png');
-      }
       background-position: 98% 50%;
     }
   }

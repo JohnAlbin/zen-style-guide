@@ -72,10 +72,6 @@ video {
   @if support-legacy-browser(ie, '9') {
     // Correct `inline-block` display not defined in IE 8/9.
     display: inline-block;
-    @if support-legacy-browser(ie, '7') {
-      *display: inline;
-      *zoom: 1;
-    }
   }
   // Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
   vertical-align: baseline;

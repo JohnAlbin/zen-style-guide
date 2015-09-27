@@ -20,10 +20,6 @@ img {
     // Remove border when inside `a` element in IE 8/9/10.
     border: 0;
   }
-  @if support-legacy-browser(ie, '7') {
-    // Improve image quality when scaled in IE 7.
-    -ms-interpolation-mode: bicubic;
-  }
 }
 
 img,

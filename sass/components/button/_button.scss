@@ -26,10 +26,6 @@
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
   color: color(button);
-  @if support-legacy-browser(ie, '7') {
-    // Remove inner spacing in IE 7 without affecting normal text inputs.
-    *overflow: visible;
-  }
 
   &:hover,
   &:focus,
