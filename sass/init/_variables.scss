@@ -148,9 +148,6 @@ $zen-gutters--medium: 25px;
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 2 * $base-font-size;
 
-// The height of the navigation container.
-$nav-height: 2 * $base-line-height;
-
 // Drupal RTL support: Rather than include a separate *-rtl.css file, Zen 6 uses
 // Drupal 8's standard [dir='rtl'] selector for RTL language support. You can
 // turn off all RTL CSS by setting the following variable to false.
