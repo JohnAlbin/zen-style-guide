@@ -16,7 +16,16 @@
 
   &__help-icon {
     padding: 1px 0 1px 20px;
-    background-image: inline-image('components/more-link/more-link__help-icon.png');
+    @if support-legacy-browser(ie, '8') {
+      // IE8 does not support multiple backgrounds, so IE8 will ignore the second
+      // declaration with the SVG. https://css-tricks.com/using-svg/
+      // scss-lint:disable DuplicateProperty
+      background-image: image-url('components/more-link/more-link__help-icon.png');
+      background-image: inline-image('components/more-link/more-link__help-icon.svg'), none;
+    }
+    @else {
+      background-image: inline-image('components/more-link/more-link__help-icon.svg');
+    }
     background-position: 0 50%;
     background-repeat: no-repeat;
 
