@@ -85,7 +85,6 @@
   }
 
   &--warning {
-    @extend %messages;
     @extend %messages--warning-color;
     border-color: color(warning-border);
 
@@ -95,7 +94,6 @@
   }
 
   &--error {
-    @extend %messages;
     @extend %messages--error-color;
     border-color: color(error);
 
