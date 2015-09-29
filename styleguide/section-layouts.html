@@ -62,6 +62,12 @@
                 ><span class="kss-nav__name">Responsive 3-column grid</span>
               </a>
             </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-layouts.html#kssref-layouts-layout-swap">
+                <span class="kss-nav__ref ">3.3</span
+                ><span class="kss-nav__name">Layout swap</span>
+              </a>
+            </li>
         </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -339,6 +345,52 @@ to the div to ensure its nested grid items align with the parent grid.</li>
       The sixth &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-layouts-layout-swap" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-layouts-layout-swap">
+          <span class="kss-title__ref">
+              3.3
+            <span class="kss-title__permalink-hash">
+                #layouts.layout-swap
+            </span>
+          </span>
+          Layout swap
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Uses absolute positioning and selective padding to make 2 elements appear to
+swap places in the visual order while maintaining their original HTML source
+order.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="layout-swap">
+  <div>This element comes <strong>first</strong> in the HTML source order.</div>
+  <div class="layout-swap__top">This element comes <strong>second</strong> in the HTML source order.</div>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;layout-swap&quot;&gt;
+  &lt;div&gt;This element comes &lt;strong&gt;first&lt;/strong&gt; in the HTML source order.&lt;/div&gt;
+  &lt;div class=&quot;layout-swap__top&quot;&gt;This element comes &lt;strong&gt;second&lt;/strong&gt; in the HTML source order.&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
       </div>
