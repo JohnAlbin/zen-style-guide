@@ -50,9 +50,6 @@
     color: color(autocomplete);
     cursor: default;
     white-space: pre;
-    @if support-legacy-browser(ie, '7') {
-      zoom: 1;
-    }
   }
 
   &__list-item--is-selected {
