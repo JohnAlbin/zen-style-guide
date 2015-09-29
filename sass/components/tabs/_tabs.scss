@@ -15,6 +15,12 @@
 //
 // Style guide: components.navigation.tabs.primary
 
+// Secondary tabs
+//
+// Markup: tabs--secondary.hbs
+//
+// Style guide: components.navigation.tabs.secondary
+
 .tabs,
 %tabs {
   @extend %clearfix;
@@ -93,62 +99,55 @@
       border-color: lighten(color(tab-bg), 10%);
     }
   }
-}
 
-// Secondary tabs
-//
-// Markup: tabs--secondary.hbs
-//
-// Style guide: components.navigation.tabs.secondary
+  &--secondary {
+    @extend %tabs;
+    font-size: .9em;
+    background-image: none;
 
-.tabs--secondary,
-%tabs--secondary {
-  @extend %tabs;
-  font-size: .9em;
-  background-image: none;
-
-  .tabs + &,
-  %tabs + & {
-    @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
-    // Collapse bottom margin of .tabs.
-    @include margin-top(-1);
-  }
-
-  &__tab {
-    @include margin(.5 3px);
-    float: left;
-
-    @include rtl() {
-      float: right;
-    }
-  }
-
-  &__tab-link {
-    @extend %tabs__tab-link-common;
-    @include border-radius(.75em);
-    @include transition(background-color .3s);
-    @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
-    color: color(tab-secondary);
-    background-color: lighten(color(tab-bg), 8%);
-    padding: 0 .5em;
-
-    &:focus,
-    &:hover {
-      color: darken(color(tab-secondary), 20%);
-      background-color: color(tab-bg);
-      border-color: darken(color(tab-bg), 26.5%);
+    .tabs + &,
+    %tabs + & {
+      @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
+      // Collapse bottom margin of .tabs.
+      @include margin-top(-1);
     }
 
-    &:active {
-      @extend %tabs--secondary__tab-link--is-active;
+    &__tab {
+      @include margin(.5 3px);
+      float: left;
+
+      @include rtl() {
+        float: right;
+      }
     }
 
-    &.is-active,
-    &--is-active {
-      @include single-text-shadow(darken(color(tab-secondary), 20%), 1px, 1px, 0);
-      color: lighten(color(tab-bg), 15%);
-      background-color: color(tab-secondary);
-      border-color: darken(color(tab-secondary), 40%);
+    &__tab-link {
+      @extend %tabs__tab-link-common;
+      @include border-radius(.75em);
+      @include transition(background-color .3s);
+      @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+      color: color(tab-secondary);
+      background-color: lighten(color(tab-bg), 8%);
+      padding: 0 .5em;
+
+      &:focus,
+      &:hover {
+        color: darken(color(tab-secondary), 20%);
+        background-color: color(tab-bg);
+        border-color: darken(color(tab-bg), 26.5%);
+      }
+
+      &:active {
+        @extend %tabs--secondary__tab-link--is-active;
+      }
+
+      &.is-active,
+      &--is-active {
+        @include single-text-shadow(darken(color(tab-secondary), 20%), 1px, 1px, 0);
+        color: lighten(color(tab-bg), 15%);
+        background-color: color(tab-secondary);
+        border-color: darken(color(tab-secondary), 40%);
+      }
     }
   }
 }
