@@ -26,7 +26,8 @@
   // needs to be inline.
   &__adjacent,
   + *,
-  + * > *:first-child {
+  + * > :first-child,
+  + * > :first-child > :first-child {
     display: inline;
   }
 }
@@ -35,15 +36,20 @@
 // Drupal selectors.
 //
 
-// The inline field label used by the Fences module.
+// Drupal core.
+.field-label-inline {
+  .field-label {
+    @extend %inline-sibling;
+  }
+
+  // Revert core's stupid styling without polluting the component.
+  .field-label,
+  .field-items {
+    float: none;
+  }
+}
+
+// The inline field label used by the Fences 7.x-1.x module.
 span.field-label {
   @extend %inline-sibling;
-}
-
-.field__label-inline {
-  @extend %inline-sibling;
-}
-
-.field__items-inline {
-  @extend %inline-sibling__adjacent;
 }
