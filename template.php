@@ -70,10 +70,10 @@ function STARTERKIT_preprocess_page(&$variables, $hook) {
  */
 /* -- Delete this line if you want to use this function
 function STARTERKIT_preprocess_region(&$variables, $hook) {
-  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
+  // Don't use Zen's region--no-wrapper.tpl.php template for sidebars.
   if (strpos($variables['region'], 'sidebar_') === 0) {
     $variables['theme_hook_suggestions'] = array_diff(
-      $variables['theme_hook_suggestions'], array('region__sidebar')
+      $variables['theme_hook_suggestions'], array('region__no_wrapper')
     );
   }
 }
