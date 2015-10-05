@@ -100,10 +100,10 @@
     path {
       fill: color(error);
     }
-  }
 
-  &--error__highlighted-text {
-    color: color(status-highlight);
+    &__highlighted-text {
+      color: color(status-highlight);
+    }
   }
 }
 
