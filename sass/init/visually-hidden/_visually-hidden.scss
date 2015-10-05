@@ -12,6 +12,7 @@
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
 }
 
 // visually-hidden--off()
@@ -24,7 +25,7 @@
   clip: auto;
   height: auto;
   width: auto;
-  overflow: auto;
+  overflow: visible;
 }
 
 // visually-hidden--focusable()
