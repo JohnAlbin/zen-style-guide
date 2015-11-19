@@ -8,45 +8,26 @@
 //
 // Browser support
 //
-// Based on caniuse.com's browser usage stats, Compass will support any browser
-// that is used by at least 1 user in 10,000. These variables are used to
-// specify which browsers are supported by Compass. "Unsupported" browsers will
-// still see the generated CSS, of course, but will not get special treatment
-// for its bugs or CSS3 vendor prefixes.
-//
 
-// The browser usage threshold for features that cannot degrade gracefully.
-// A value of 100 means 100% of users would have to use the browser before it is
-// supported. A value of .01 (the default) means 1 user in 10,000.
-$critical-usage-threshold: .01 !default;
+// Support the same browsers as normalize.css v3.
+// Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
+$support-for: (
+  // IE 8-11
+  ie:  8,
+  // The last 4 versions of all other browsers.
+  '*': -4,
+);
 
-// Set this to true to generate comments that will explain why a prefix was
-// included or omitted.
-$debug-browser-support: false;
-
-// Optional map of minimum browser versions to support. If a specific browser
-// has usage stats below the $critical-usage-threshold, you can still require
-// support for it using this variable. For example, to require support for IE 6
-// and later, set $browser-minimum-versions['ie'] to '6'.
-$browser-minimum-versions: (
-  'chrome':  null,
-  'firefox': null,
-  'ie':      null,
-  'safari':  null,
-  'opera':   null
-) !default;
 
 //
-// Border-box support for IE 6/7
+// Adding border-box support for IE 6/7
 //
-// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
-// - Drop support for IE 6/7. :-) Set $critical-usage-threshold to a value high
-//   enough to drop IE7 users.
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
 // - Install the box-sizing polyfill and set the variable below to
 //   the absolute path URL to the boxsizing.htc file.
 //   @see https://github.com/Schepp/box-sizing-polyfill
 //   $box-sizing-polyfill-path: '/path/to/boxsizing.htc';
-// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
+// - Use the same CSS unit for grid and gutter width in _layout-*.scss
 //   (use px for both or use % for both) and set:
 //   $box-sizing: content-box;
 //
@@ -62,6 +43,7 @@ $base-font-size:    16px;
 // The base line height determines the basic unit of vertical rhythm.
 $base-line-height:  24px;
 
+// The font sizes for h1-h6 expressed as tee shirt sizes.
 $font-size: (
   xxl:              32px,
   xl:               24px,
@@ -74,6 +56,8 @@ $font-size: (
 // The length unit in which to output font size and margin values.
 // Supported values: px, em, rem.
 $base-unit:         'rem';
+
+// px fallbacks for rem units are needed for IE 8 and earlier.
 $rem-fallback:      true;
 
 

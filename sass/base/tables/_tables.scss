@@ -1,6 +1,3 @@
-// Dependencies.
-@import '../normalize';
-
 // Tables
 //
 // The `<table>` element displays tabular data in rows, columns, and cells.
@@ -23,5 +20,6 @@ table {
 
 td,
 th {
+  // Remove most spacing between table cells.
   padding: 0;
 }

@@ -1,7 +1,4 @@
 // Dependencies.
-@import 'base/normalize';
-// Allow the .button component to override :link, by loading links first.
-@import 'base/links/links';
 @import 'components/button/button';
 
 // Form defaults
@@ -18,7 +15,7 @@
 //
 // The following 8 rules are from normalize.css and help to fix inconsistencies
 // across various browsers. You should probably leave these rules as is and jump
-// to the "Buttons" rule on line 105 before you start editing this file.
+// to the "Buttons" rule on line 95 before you start editing this file.
 //
 
 button,
@@ -27,7 +24,7 @@ optgroup,
 select,
 textarea {
   // Keep form elements constrained in their containers.
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   max-width: 100%;
   // Correct color not being inherited.
   // Known issue: affects color of disabled elements.
@@ -36,6 +33,12 @@ textarea {
   font: inherit;
   // Address margins set differently in Firefox 4+, Safari, and Chrome.
   margin: 0;
+  @if support-for(ie, 7) {
+    // Address `font-family` inconsistency between `textarea` and other form in IE 7
+    *font-family: $font-body;
+    // Improve appearance and consistency with IE 6/7.
+    *vertical-align: middle;
+  }
 }
 
 // Address `overflow` set to `hidden` in IE 8/9/10/11.
@@ -186,9 +189,15 @@ input[type="checkbox"],
 input[type="radio"] {
   @if support-legacy-browser(ie, '10') {
     // Address box sizing set to `content-box` in IE 8/9/10.
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     // Remove excess padding in IE 8/9/10.
     padding: 0;
+  }
+  @if support-for(ie, 7) {
+    // Remove excess padding in IE 7.
+    // Known issue: excess padding remains in IE 6.
+    *height: 13px;
+    *width: 13px;
   }
 }
 
@@ -218,6 +227,10 @@ legend {
   // people aren't caught out if they zero out fieldset padding.
   margin-left: -5px;
   padding: 0 5px;
+  @if support-for(ie, 7) {
+    // Correct alignment displayed oddly in IE 6/7.
+    *margin-left: -7px;
+  }
 }
 
 // Labels

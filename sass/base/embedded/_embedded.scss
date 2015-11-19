@@ -1,6 +1,3 @@
-// Dependencies.
-@import '../normalize';
-
 // Embedded content
 //
 // Weight: 2
@@ -19,6 +16,10 @@ img {
   @if support-legacy-browser(ie, '10') {
     // Remove border when inside `a` element in IE 8/9/10.
     border: 0;
+  }
+  @if support-for(ie, 7) {
+    // Improve image quality when scaled in IE 7.
+    -ms-interpolation-mode: bicubic;
   }
 }
 

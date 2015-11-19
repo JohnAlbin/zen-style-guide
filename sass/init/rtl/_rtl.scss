@@ -7,14 +7,16 @@ $include-rtl: true !default;
 //
 // Style guide: sass.mixins.rtl
 @mixin rtl() {
-  @if & {
-    [dir="rtl"] & {
-      @content;
+  @if $include-rtl {
+    @if & {
+      [dir="rtl"] & {
+        @content;
+      }
     }
-  }
-  @else {
-    [dir="rtl"] {
-      @content;
+    @else {
+      [dir="rtl"] {
+        @content;
+      }
     }
   }
 }
