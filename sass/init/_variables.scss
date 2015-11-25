@@ -136,3 +136,7 @@ $indent-amount: 2 * $base-font-size;
 // Drupal 8's standard [dir='rtl'] selector for RTL language support. You can
 // turn off all RTL CSS by setting the following variable to false.
 $include-rtl: true;
+// Automatically turn off Zen Grids' RTL support if $include-rtl is false.
+@if not $include-rtl {
+  $zen-rtl-selector: false !global;
+}
