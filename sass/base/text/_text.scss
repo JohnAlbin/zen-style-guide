@@ -142,7 +142,7 @@ ins {
 //
 // Style guide: base.text.mark
 
-@if support-legacy-browser(ie, '9') {
+@if support-for(ie, 9) {
   mark {
     // Address styling not present in IE 8/9.
     background: color(mark-bg);

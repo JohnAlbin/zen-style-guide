@@ -7,12 +7,6 @@
 # Then go through each linter, one at a time, disabling it and fixing the
 # warnings in your code.
 linters:
-  Compass::*:
-    enabled: true # Disabled by default.
-  Compass::PropertyWithMixin:
-    ignore:
-      - 'inline-block' # Only needed for IE7/FF2 and earlier.
-      - 'text-shadow'  # No vendor prefixes ever used. http://caniuse.com/#feat=css-textshadow
   ElsePlacement:
     style: new_line # Like Drupal's PHP coding standard.
   EmptyLineBetweenBlocks:

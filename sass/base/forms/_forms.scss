@@ -187,7 +187,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  @if support-legacy-browser(ie, '10') {
+  @if support-for(ie, 10) {
     // Address box sizing set to `content-box` in IE 8/9/10.
     box-sizing: border-box;
     // Remove excess padding in IE 8/9/10.
@@ -220,7 +220,7 @@ fieldset {
 
 legend {
   // Correct `color` not being inherited in IE 8/9/10/11.
-  @if support-legacy-browser(ie, '11') {
+  @if support-for(ie, 11) {
     border: 0;
   }
   // Align legend text with a fieldset's text while removing left padding so

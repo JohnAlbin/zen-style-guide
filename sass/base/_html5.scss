@@ -25,7 +25,7 @@ audio,
 canvas,
 progress,
 video {
-  @if support-legacy-browser(ie, '9') {
+  @if support-for(ie, 9) {
     // Correct `inline-block` display not defined in IE 8/9.
     display: inline-block;
   }
@@ -40,7 +40,7 @@ audio:not([controls]) {
   height: 0;
 }
 
-@if support-legacy-browser(ie, '10') {
+@if support-for(ie, 10) {
   // Address `[hidden]` styling not present in IE 8/9/10.
   [hidden] {
     display: none;

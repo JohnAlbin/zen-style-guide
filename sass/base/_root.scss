@@ -1,5 +1,6 @@
 // Use the saner border-box model for all elements.
 * {
+  // scss-lint:disable VendorPrefix
   @if support-for(firefox, 28) {
     -moz-box-sizing: border-box;
   }

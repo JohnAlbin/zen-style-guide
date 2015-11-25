@@ -13,7 +13,7 @@
 // Style guide: base.embedded.img
 
 img {
-  @if support-legacy-browser(ie, '10') {
+  @if support-for(ie, 10) {
     // Remove border when inside `a` element in IE 8/9/10.
     border: 0;
   }
