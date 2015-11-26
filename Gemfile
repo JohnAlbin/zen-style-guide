@@ -9,7 +9,6 @@ group :frontend do
   # Build compass sprites faster with oily_png.
   gem 'oily_png',             '~> 1.1'
   gem 'sass',                 '~> 3.4'
-  gem 'sass-globbing',        '~> 1.1'
   gem 'scss_lint',            '~> 0.42'
   gem 'support-for',          '~> 1.0'
   gem 'typey',                '~> 1.0.0.beta.8'

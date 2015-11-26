@@ -19,7 +19,8 @@
 // so we load them first.
 @import 'chroma/functions';
 
-@import 'init/*';
+@import 'init/colors';
+@import 'init/variables';
 
 
 // 3rd party libraries
@@ -69,4 +70,6 @@
 // Weight: 1
 //
 // Style guide: sass.functions
-@import 'init/*/*';
+@import 'init/clearfix/clearfix';
+@import 'init/rtl/rtl';
+@import 'init/visually-hidden/visually-hidden';
