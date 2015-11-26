@@ -115,6 +115,8 @@ $breakpoints: (
   xxxl: (1222px)
 );
 
+// Output media queries where the above px are converted to ems.
+// $breakpoint-to-ems: true;
 
 //
 // Zen grids
