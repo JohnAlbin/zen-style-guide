@@ -9,8 +9,6 @@
 
 html {
   @include define-type-sizing();
-  // Show a background image that can be used to debug your alignments.
-  // @include debug-vertical-alignment();
   // Set default font family to sans-serif.
   font-family: $font-body;
   // Prevent iOS text size adjust after orientation change, without disabling
@@ -27,4 +25,7 @@ body {
   // Remove default margin and padding.
   margin: 0;
   padding: 0;
+  // Output a horizontal grid to help with debugging typography. The
+  // $typey-debug variable will toggle its output.
+  @include typey-debug-grid();
 }
