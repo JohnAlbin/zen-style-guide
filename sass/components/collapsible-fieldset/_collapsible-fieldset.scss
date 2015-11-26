@@ -28,7 +28,7 @@
   &__legend {
     display: block;
     padding-left: 15px;
-    @if support-legacy-browser(ie, '8') {
+    @if support-for(ie, 8) {
       // IE8 does not support multiple backgrounds, so IE8 will ignore the second
       // declaration with the SVG. https://css-tricks.com/using-svg/
       // scss-lint:disable DuplicateProperty
@@ -44,7 +44,7 @@
     @include rtl() {
       padding-left: 0;
       padding-right: 15px;
-      @if support-legacy-browser(ie, '8') {
+      @if support-for(ie, 8) {
         // IE 8 does not understand edge offsets.
         background-position: 98% 50%;
       }
@@ -54,7 +54,7 @@
 
   .is-collapsed &__legend,
   &--is-collapsed__legend {
-    @if support-legacy-browser(ie, '8') {
+    @if support-for(ie, 8) {
       // scss-lint:disable DuplicateProperty
       background-image: image-url('components/collapsible-fieldset/collapsed.png');
       background-image: inline-image('components/collapsible-fieldset/collapsed.svg'), none;
@@ -65,7 +65,7 @@
     background-position: 4px 50%;
 
     @include rtl() {
-      @if support-legacy-browser(ie, '8') {
+      @if support-for(ie, 8) {
         background-image: image-url('components/collapsible-fieldset/collapsed-rtl.png');
         background-image: inline-image('components/collapsible-fieldset/collapsed-rtl.svg'), none;
         background-position: 98% 50%;

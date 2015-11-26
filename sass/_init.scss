@@ -43,8 +43,6 @@
 // Add Chroma to manage colors.
 @import 'chroma';
 @import 'chroma/kss';
-// Add Compass' IE and vendor prefix support variables.
-@import 'compass/support';
 // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/utilities/sprites';
 // Used by normalize-scss to conditionally add browser support.

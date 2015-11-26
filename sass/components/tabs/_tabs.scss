@@ -25,7 +25,7 @@
 %tabs {
   @extend %clearfix;
   @include margin(1 0);
-  @if support-legacy-browser(ie, '9') {
+  @if support-for(ie, 9) {
     // IE 9 and earlier don't understand gradients.
     border-bottom: 1px solid color(tabs-border) \0/ie;
   }
@@ -47,7 +47,7 @@
     border: 1px solid color(tabs-border);
     // Allow the tabs gradient to appear just below the tab.
     border-bottom-color: transparent;
-    @if support-legacy-browser(ie, '9') {
+    @if support-for(ie, 9) {
       // IE 9 and earlier don't understand gradients.
       border-bottom: 0 \0/ie;
     }
