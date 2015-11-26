@@ -46,8 +46,6 @@
 @import 'compass/support';
 // See http://compass-style.org/help/tutorials/spriting/
 @import 'compass/utilities/sprites';
-// Use one CSS3 mixin instead of multiple vendor prefixes.
-@import 'compass/css3';
 // Used by normalize-scss to conditionally add browser support.
 @import 'support-for';
 // Add typey to manage font sizes and margins.

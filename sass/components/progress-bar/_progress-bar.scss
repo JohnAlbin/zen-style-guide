@@ -13,7 +13,7 @@
   font-weight: bold;
 
   &__bar {
-    @include border-radius(3px);
+    border-radius: 3px;
     margin: 0 .2em;
     border: 1px solid color(progress-bar-border);
     background-color: color(progress-bar-bg);

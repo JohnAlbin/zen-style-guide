@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 group :frontend do
+  gem 'autoprefixer-rails',   '~> 6.1.1'
   gem 'breakpoint',           '~> 2.5.0'
   gem 'chroma-sass',          '~> 1.2'
   gem 'compass',              '~> 1.0'

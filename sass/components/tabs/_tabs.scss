@@ -24,12 +24,12 @@
 .tabs,
 %tabs {
   @extend %clearfix;
-  @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
   @include margin(1 0);
   @if support-legacy-browser(ie, '9') {
     // IE 9 and earlier don't understand gradients.
     border-bottom: 1px solid color(tabs-border) \0/ie;
   }
+  background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
   padding: 0 2px;
   list-style: none;
   white-space: nowrap;
@@ -39,8 +39,9 @@
   }
 
   &__tab {
-    @include border-top-radius(4px);
-    @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-shadow: color(tab-text-shadow) 1px 1px 0;
     float: left;
     margin: 0 3px;
     border: 1px solid color(tabs-border);
@@ -72,8 +73,9 @@
 
   &__tab-link {
     @extend %tabs__tab-link-common;
-    @include border-top-radius(4px);
-    @include transition(background-color .3s);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: background-color .3s;
     color: color(tab);
     background-color: color(tab-bg);
     letter-spacing: 1px;
@@ -92,10 +94,7 @@
 
     &.is-active,
     &--is-active {
-      @if support-legacy-browser(ie, '8') {
-        @include filter-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0));
-      }
-      @include background(linear-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0)) transparent);
+      background: linear-gradient(rgba(lighten(color(tab-bg), 5%), 1), rgba(lighten(color(tab-bg), 5%), 0)) transparent;
       border-color: lighten(color(tab-bg), 10%);
     }
   }
@@ -107,9 +106,9 @@
 
     .tabs + &,
     %tabs + & {
-      @include background-image(linear-gradient(bottom, color(tabs-border) 1px, transparent 1px));
       // Collapse bottom margin of .tabs.
       @include margin-top(-1);
+      background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
     }
 
     &__tab {
@@ -123,10 +122,10 @@
 
     &__tab-link {
       @extend %tabs__tab-link-common;
-      @include border-radius(.75em);
-      @include transition(background-color .3s);
-      @include single-text-shadow(color(tab-text-shadow), 1px, 1px, 0);
+      border-radius: .75em;
+      transition: background-color .3s;
       color: color(tab-secondary);
+      text-shadow: color(tab-text-shadow) 1px 1px 0;
       background-color: lighten(color(tab-bg), 8%);
       padding: 0 .5em;
 
@@ -143,8 +142,8 @@
 
       &.is-active,
       &--is-active {
-        @include single-text-shadow(darken(color(tab-secondary), 20%), 1px, 1px, 0);
         color: lighten(color(tab-bg), 15%);
+        text-shadow: darken(color(tab-secondary), 20%) 1px 1px 0;
         background-color: color(tab-secondary);
         border-color: darken(color(tab-secondary), 40%);
       }
