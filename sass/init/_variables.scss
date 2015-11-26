@@ -20,20 +20,6 @@ $support-for: (
 
 
 //
-// Adding border-box support for IE 6/7
-//
-// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
-// - Install the box-sizing polyfill and set the variable below to
-//   the absolute path URL to the boxsizing.htc file.
-//   @see https://github.com/Schepp/box-sizing-polyfill
-//   $box-sizing-polyfill-path: '/path/to/boxsizing.htc';
-// - Use the same CSS unit for grid and gutter width in _layout-*.scss
-//   (use px for both or use % for both) and set:
-//   $box-sizing: content-box;
-//
-
-
-//
 // Font faces, stacks and sizes.
 //
 
@@ -130,6 +116,8 @@ $zen-box-sizing: universal-border-box;
 $zen-gutters--small: 40px;
 $zen-gutters--medium: 25px;
 
+// See $include-rtl below.
+$zen-rtl-selector: '[dir="rtl"]';
 
 //
 // Misc
