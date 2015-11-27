@@ -15,9 +15,10 @@
 // Style guide: sass.init
 
 
-// The following Sass functions are required to generate some variables' values,
-// so we load them first.
+// The following Sass functions/mixins are required to generate some variables'
+// values, so we load them first.
 @import 'chroma/functions';
+@import 'support-for';
 
 @import 'init/colors';
 @import 'init/variables';
@@ -28,9 +29,7 @@
 // The following sass modules are shared with all .scsss files:
 // - [Breakpoint](http://breakpoint-sass.com/)
 // - [Chroma](https://github.com/JohnAlbin/chroma)
-// - [Compass support](http://compass-style.org/reference/compass/support/)
-// - [Compass sprites](http://compass-style.org/reference/compass/utilities/sprites/)
-// - [Compass CSS3](http://compass-style.org/reference/compass/css3/)
+// - [Support-for](https://github.com/JohnAlbin/support-for)
 // - [Typey](https://github.com/jptaranto/typey)
 // - [Zen Grids](http://next.zengrids.com/help/)
 //
@@ -43,8 +42,6 @@
 // Add Chroma to manage colors.
 @import 'chroma';
 @import 'chroma/kss';
-// Used by normalize-scss to conditionally add browser support.
-@import 'support-for';
 // Add typey to manage font sizes and margins.
 @import 'typey';
 // Add the Zen Grids responsive layout mixins.

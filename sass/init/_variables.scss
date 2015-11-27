@@ -47,11 +47,7 @@ $typey-debug: false;
 $base-unit:         'rem';
 
 // px fallbacks for rem units are needed for IE 8 and earlier.
-$rem-fallback:      true;
-// Automatically turn off Typey's IE 8 support if support-for(ie, 8) is false.
-@if not support-for(ie, 8) {
-  $rem-fallback:    false;
-}
+$rem-fallback:      if(support-for(ie, 8), true, false);
 
 
 // The following font family declarations use widely available fonts.

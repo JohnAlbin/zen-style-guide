@@ -22,10 +22,10 @@ html {
 }
 
 body {
-  // Remove default margin and padding.
-  margin: 0;
-  padding: 0;
   // Output a horizontal grid to help with debugging typography. The
   // $typey-debug variable will toggle its output.
   @include typey-debug-grid();
+  // Remove default margin and padding.
+  margin: 0;
+  padding: 0;
 }
