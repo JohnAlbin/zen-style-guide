@@ -34,6 +34,8 @@ linters:
       - '*vertical-align'
       - '*width'
       - '*zoom'
+  PseudoElement:
+    enabled: false
   QualifyingElement:
     enabled: false
   SelectorFormat:
