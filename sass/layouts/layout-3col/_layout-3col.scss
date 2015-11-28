@@ -49,9 +49,6 @@
 //
 // Style guide: layouts.layout-3column
 
-$zen-columns: 1;
-$zen-gutters: $zen-gutters--small;
-
 .layout-3col,
 %layout-3col {
   // We set the context to flow, so that this container can be used in most
@@ -76,10 +73,7 @@ $zen-gutters: $zen-gutters--small;
     @include zen-grid-item(1, 1);
   }
 
-  $zen-columns: 2 !global;
-  $zen-gutters: $zen-gutters--medium !global;
-
-  @include respond-to(m) {
+  @include zen-respond-to(m) {
     // Since our container's context is "flow" and we changed the gutter size,
     // we need to re-apply the container's negative left/right margins.
     @include zen-grid-container($context: flow);
@@ -115,9 +109,7 @@ $zen-gutters: $zen-gutters--small;
     }
   }
 
-  $zen-columns: 3 !global;
-
-  @include respond-to(xl) {
+  @include zen-respond-to(xl) {
     &__full {
       @include zen-grid-item(3, 1);
     }

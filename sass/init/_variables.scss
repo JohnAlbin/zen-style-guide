@@ -111,9 +111,26 @@ $breakpoints: (
 $zen-auto-include-grid-item-base: false;
 $zen-box-sizing: universal-border-box;
 
-// The gutters in the layouts are larger on mobile.
-$zen-gutters--small: 40px;
-$zen-gutters--medium: 25px;
+// First we set the values we need for the mobile version of our layouts (the
+// version that does _not_ appear inside any @media queries.)
+$zen-columns: 1;
+$zen-gutters: 40px;
+
+// Then we set the values we need for each of the layouts at larger media query
+// sizes. Note how the names of the layouts match the names of our breakpoints
+// above. That allows a single zen-respond-to() to both use the proper item
+// from $zen-layouts and from $breakpoints.
+$zen-layouts: (
+  m: (
+    columns: 2,
+    // The gutters in the layouts are larger on mobile.
+    gutters: 25px,
+  ),
+  xl: (
+    columns: 3,
+    gutters: 25px,
+  ),
+);
 
 // See $include-rtl below.
 $zen-rtl-selector: '[dir="rtl"]';

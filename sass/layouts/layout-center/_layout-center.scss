@@ -26,17 +26,25 @@
 
 .layout-center,
 %layout-center {
-  @include zen-apply-gutter-padding($zen-gutters--small);
-  // The max content width is 1140px (the container width minus the gutters.)
-  max-width: 1140px + $zen-gutters--medium;
+  @include zen-apply-gutter-padding();
   margin: 0 auto;
 
-  @include respond-to(m) {
-    @include zen-apply-gutter-padding($zen-gutters--medium);
+  // We wrap the max-width declaration with zen-layout() so we can see the value
+  // of $zen-gutters when it is at the larger "xl"-sized media query.
+  @include zen-layout(xl) {
+    // The max content width is 1140px (the container width minus the gutters.)
+    max-width: 1140px + $zen-gutters;
+  }
+
+  @include zen-respond-to(m) {
+    // Since we are using zen-respond-to(), the values in $zen-layouts will
+    // override the global value for $zen-gutters.
+    @include zen-apply-gutter-padding();
   }
 
   // Since .layout-center has overridden the negative margin on another
-  // .layout-* container, we don't need the gutter on
+  // .layout-* container, the grid children will be misaligned due to
+  // .layout-center's gutter padding. So we remove it.
   &--shared-grid {
     padding-left: 0;
     padding-right: 0;
