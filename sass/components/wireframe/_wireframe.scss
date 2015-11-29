@@ -24,11 +24,7 @@ $with-wireframes: false !default;
   //
 
   .header,
-  .main,
-  .main-content,
-  .main-navigation,
-  .region-sidebar-first,
-  .region-sidebar-second,
+  .layout-3col > div,
   .footer,
   .region-bottom {
     @extend %wireframe;
