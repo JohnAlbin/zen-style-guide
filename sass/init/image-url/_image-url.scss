@@ -1,0 +1,50 @@
+// The relative path from the css directory to the sass directory.
+$image-url-path-to-source: '../sass' !default;
+// The relative path from the root sass directory to where your components usually lie.
+$image-url-path-to-components: 'components' !default;
+
+// image-url()
+//
+// If you include your images next to your component Sass files, you need to
+// specify a url() to point from the generated CSS to the Sass source like this:
+//
+// ```css
+// content: url(../sass/components/is-quite/long.svg);
+// ```
+//
+// With the `image-url()` function the path to all your components is assumed to
+// start with `../sass/components/` and you just need to give it the last, short
+// bit of the path in your Sass code like this:
+//
+// ```scss
+// content: image-url(is-quite/short.svg);
+// ```
+//
+// If you want to point at an image that is not in the components sub-directory
+// of your sass directory, you can override the default $path-to-components by
+// passing it in as the first parameter of `image-url()` like this:
+//
+// ```scss
+// content: image-url(base, grouping/blockquote.svg);
+// ```
+//
+// which would output `url(../sass/base/grouping/blockquote.svg)`.
+//
+// $path-to-components - Optional. The relative path from the root sass
+//                       directory to where your components usually lie.
+//                       Defaults to `$image-url-path-to-components`.
+// $path               - Required. The path to the image relative to the
+//                       components directory.
+// $path-to-source     - Optional. The relative path from the css directory to
+//                       the sass directory. Defaults to
+//                       `$image-url-path-to-source`.
+//
+// Style guide: sass.mixins.image-url
+@function image-url($path-to-components, $path: null, $path-to-source: $image-url-path-to-source) {
+  // If only 1 parameter is given, its value is intended for the $path.
+  @if type-of($path) == 'null' {
+    $path: $path-to-components;
+    $path-to-components: $image-url-path-to-components;
+  }
+  @return url(unquote($path-to-source + '/' + $path-to-components + '/' + $path));
+}

@@ -13,7 +13,7 @@
 // Animated throbber
 .autocomplete,
 %autocomplete {
-  background-image: image-url('components/autocomplete/throbber-inactive.png');
+  background-image: image-url('autocomplete/throbber-inactive.png');
   background-position: 100% center;
   background-repeat: no-repeat;
 
@@ -50,7 +50,7 @@
 
   &.is-throbbing,
   &--is-throbbing {
-    background-image: image-url('components/autocomplete/throbber-active.gif');
+    background-image: image-url('autocomplete/throbber-active.gif');
   }
 }
 

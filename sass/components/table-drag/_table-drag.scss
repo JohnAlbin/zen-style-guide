@@ -44,7 +44,7 @@
   }
 
   &__handle-icon {
-    background: inline-image('components/table-drag/table-drag__handle-icon.png') no-repeat 6px 9px;
+    background: image-url('table-drag/handle-icon.png') no-repeat 6px 9px;
     height: 13px;
     margin: -.4em .5em;
     padding: .42em .5em;
@@ -82,7 +82,7 @@
   }
 
   &__tree-child {
-    background: inline-image('components/table-drag/table-drag__tree-child.png') no-repeat 11px center;
+    background: image-url('table-drag/tree-child.png') no-repeat 11px center;
 
     @include rtl() {
       background-position: -65px center;
@@ -91,7 +91,7 @@
 
   &__tree-child-last {
     @extend %table-drag__tree-child;
-    background-image: inline-image('components/table-drag/table-drag__tree-child-last.png');
+    background-image: image-url('table-drag/tree-child-last.png');
   }
 
   &__tree-child-horizontal {
