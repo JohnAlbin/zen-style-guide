@@ -17,6 +17,7 @@
 
 // The following Sass functions/mixins are required to generate some variables'
 // values, so we load them first.
+@import 'breakpoint';
 @import 'chroma/functions';
 @import 'support-for';
 
@@ -37,8 +38,6 @@
 //
 // Style guide: sass.modules
 
-// Add Breakpoint to manage media queries.
-@import 'breakpoint';
 // Add Chroma to manage colors.
 @import 'chroma';
 @import 'chroma/kss';

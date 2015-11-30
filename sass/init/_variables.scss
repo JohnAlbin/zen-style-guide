@@ -1,3 +1,5 @@
+// scss-lint:disable SpaceAfterComma
+
 // Variables
 //
 // Set variables for this site before a library sets its !default value.
@@ -88,20 +90,19 @@ $font-watermark:  $impact;
 //
 // Style guide: sass.variables.breakpoints
 
-$breakpoints: (
-  xxxs: (333px, 'no-query' true),
-  xxs:  (444px, 'no-query' true),
-  xs:   (555px, 'no-query' true),
-  s:    (666px, 'no-query' true),
-  m:    (777px, 'no-query' true),
-  l:    (888px, 'no-query' true),
-  xl:   (999px, 'no-query' true),
-  xxl:  (1111px),
-  xxxl: (1222px)
-);
+@include add-breakpoint(xxxs, (333px, 'no-query' true));
+@include add-breakpoint(xxs,  (444px, 'no-query' true));
+@include add-breakpoint(xs,   (555px, 'no-query' true));
+@include add-breakpoint(s,    (666px, 'no-query' true));
+@include add-breakpoint(m,    (777px, 'no-query' true));
+@include add-breakpoint(l,    (888px, 'no-query' true));
+@include add-breakpoint(xl,   (999px, 'no-query' true));
+@include add-breakpoint(xxl,  (1111px));
+@include add-breakpoint(xxxl, (1222px));
 
 // Output media queries where the above px are converted to ems.
-// $breakpoint-to-ems: true;
+// @include breakpoint-set('to ems', true);
+
 
 //
 // Zen grids
