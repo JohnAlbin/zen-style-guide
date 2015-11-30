@@ -87,26 +87,32 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-rtl">
+              <a href="section-sass.html#kssref-sass-mixins-image-url">
                 <span class="kss-nav__ref kss-nav__ref-child">1.6.2</span
+                ><span class="kss-nav__name">image-url()</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-sass.html#kssref-sass-mixins-rtl">
+                <span class="kss-nav__ref kss-nav__ref-child">1.6.3</span
                 ><span class="kss-nav__name">rtl()</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-sass.html#kssref-sass-mixins-visually-hidden">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.3</span
+                <span class="kss-nav__ref kss-nav__ref-child">1.6.4</span
                 ><span class="kss-nav__name">visually-hidden()</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-sass.html#kssref-sass-mixins-visually-hidden--focusable">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.4</span
+                <span class="kss-nav__ref kss-nav__ref-child">1.6.5</span
                 ><span class="kss-nav__name">visually-hidden--focusable()</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-sass.html#kssref-sass-mixins-visually-hidden--off">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.5</span
+                <span class="kss-nav__ref kss-nav__ref-child">1.6.6</span
                 ><span class="kss-nav__name">visually-hidden--off()</span>
               </a>
             </li>
@@ -393,13 +399,65 @@ better.</p>
 
 
       </section>
+      <section id="kssref-sass-mixins-image-url" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-sass-mixins-image-url">
+          <span class="kss-title__ref">
+              1.6.2
+            <span class="kss-title__permalink-hash">
+                #sass.mixins.image-url
+            </span>
+          </span>
+          image-url()
+        </a>
+      </h3>
+
+      <ul class="kss-parameters">
+        <li class="kss-parameters__item">
+          <code class="kss-parameters__name">$path-to-components</code>
+          <div class="kss-parameters__description">Optional. The relative path from the root sass directory to where your components usually lie. Defaults to <code>$image-url-path-to-components</code>.</div>
+        </li>
+        <li class="kss-parameters__item">
+          <code class="kss-parameters__name">$path</code>
+          <div class="kss-parameters__description">Required. The path to the image relative to the components directory.</div>
+        </li>
+        <li class="kss-parameters__item">
+          <code class="kss-parameters__name">$path-to-source</code>
+          <div class="kss-parameters__description">Optional. The relative path from the css directory to the sass directory. Defaults to <code>$image-url-path-to-source</code>.</div>
+        </li>
+      </ul>
+
+      <div class="kss-description">
+        <p>If you include your images next to your component Sass files, you need to
+specify a url() to point from the generated CSS to the Sass source like this:</p>
+<pre><code class="lang-css">content: url(../sass/components/is-quite/long.svg);
+</code></pre>
+<p>With the <code>image-url()</code> function the path to all your components is assumed to
+start with <code>../sass/components/</code> and you just need to give it the last, short
+bit of the path in your Sass code like this:</p>
+<pre><code class="lang-scss">content: image-url(is-quite/short.svg);
+</code></pre>
+<p>If you want to point at an image that is not in the components sub-directory
+of your sass directory, you can override the default $path-to-components by
+passing it in as the first parameter of <code>image-url()</code> like this:</p>
+<pre><code class="lang-scss">content: image-url(base, grouping/blockquote.svg);
+</code></pre>
+<p>which would output <code>url(../sass/base/grouping/blockquote.svg)</code>.</p>
+
+      </div>
+    </div>
+
+
+      </section>
       <section id="kssref-sass-mixins-rtl" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-rtl">
           <span class="kss-title__ref">
-              1.6.2
+              1.6.3
             <span class="kss-title__permalink-hash">
                 #sass.mixins.rtl
             </span>
@@ -424,7 +482,7 @@ setting <code>$include-rtl: false;</code>.</p>
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden">
           <span class="kss-title__ref">
-              1.6.3
+              1.6.4
             <span class="kss-title__permalink-hash">
                 #sass.mixins.visually-hidden
             </span>
@@ -449,7 +507,7 @@ setting <code>$include-rtl: false;</code>.</p>
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden--focusable">
           <span class="kss-title__ref">
-              1.6.4
+              1.6.5
             <span class="kss-title__permalink-hash">
                 #sass.mixins.visually-hidden--focusable
             </span>
@@ -474,7 +532,7 @@ focus.</p>
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden--off">
           <span class="kss-title__ref">
-              1.6.5
+              1.6.6
             <span class="kss-title__permalink-hash">
                 #sass.mixins.visually-hidden--off
             </span>

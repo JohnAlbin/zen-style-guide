@@ -1,6 +1,7 @@
 .kss-style .chroma-kss {
   line-height: 50px;
 }
+
 .kss-style .chroma-kss__swatch {
   display: inline-block;
   width: 40px;
@@ -10,9 +11,11 @@
   margin-right: 10px;
   vertical-align: middle;
 }
+
 .kss-style .chroma-kss__variable {
   margin-right: 10px;
 }
+
 .kss-style .chroma-kss__alt-text {
   position: absolute !important;
   height: 1px;
@@ -21,16 +24,20 @@
   *clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
+
 .kss-style .chroma-kss__value {
   color: #bbb;
 }
+
 .kss-style .chroma-kss__value code {
   color: #bbb;
 }
+
 .kss-style .chroma-kss__value:before {
   content: '\2192\ ';
   font-family: sans-serif;
 }
+
 .kss-style .chroma-kss__reference {
   display: block;
   position: relative;
@@ -39,5 +46,3 @@
   padding-left: 50px;
   color: #999;
 }
-
-/*# sourceMappingURL=chroma-kss-styles.css.map */
