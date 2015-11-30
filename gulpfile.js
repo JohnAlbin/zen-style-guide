@@ -1,10 +1,9 @@
 'use strict';
 
-var compassOptions = require('compass-options'),
+var importOnce = require('node-sass-import-once'),
   path = require('path');
 
-var options = {},
-  compass;
+var options = {};
 
 // #############################
 // Edit these paths and options.
@@ -21,17 +20,43 @@ options.rootPath = {
   theme       : __dirname + '/'
 };
 
-// Define the paths in the Drupal theme by getting theme sub-directories from
-// Compass' config.rb.
-// @TODO Remove our dependency on Compass once libSass is more feature rich.
-compass = compassOptions.dirs({'config': options.rootPath.theme + 'config.rb'});
-
 options.theme = {
   root  : options.rootPath.theme,
-  css   : options.rootPath.theme + compass.css + '/',
-  sass  : options.rootPath.theme + compass.sass + '/',
-  js    : options.rootPath.theme + compass.js + '/'
+  css   : options.rootPath.theme + 'css/',
+  sass  : options.rootPath.theme + 'sass/',
+  js    : options.rootPath.theme + 'js/'
 };
+
+// Define the node-sass configuration. The includePaths is critical!
+options.sass = {
+  importer: importOnce,
+  includePaths: [
+    options.theme.sass,
+    options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
+    options.rootPath.project + 'node_modules/chroma-sass/sass',
+    options.rootPath.project + 'node_modules/sassy-maps/sass',
+    options.rootPath.project + 'node_modules/support-for/sass',
+    options.rootPath.project + 'node_modules/typey/stylesheets',
+    options.rootPath.project + 'node_modules/zen-grids/sass'
+  ],
+  outputStyle: 'expanded'
+};
+
+options.sassFiles = [
+  options.theme.sass + '**/*.scss',
+  // Do not open Sass partials as they will be included as needed.
+  '!' + options.theme.sass + '**/_*.scss',
+  // Chroma markup has its own gulp task.
+  '!' + options.theme.sass + 'style-guide/chroma-kss-markup.scss'
+];
+
+// Define which browsers to add vendor prefixes for.
+options.autoprefixer = {
+  browsers: [
+    '> 1%',
+    'ie 8'
+  ]
+}
 
 // Define the style guide paths and options.
 options.styleGuide = {
@@ -86,7 +111,9 @@ if (!enablePolling) {
 var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')(),
   del         = require('del'),
-  runSequence = require('run-sequence');
+  runSequence = require('run-sequence'),
+  // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
+  sass     = require('gulp-sass');
 
 // The default task.
 gulp.task('default', ['build']);
@@ -94,7 +121,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['styles:production', 'styleguide'], function (cb) {
+gulp.task('build', ['styles:production', 'styleguide'], function(cb) {
   // Run linting last, otherwise its output gets lost.
   runSequence(['lint'], cb);
 });
@@ -102,15 +129,23 @@ gulp.task('build', ['styles:production', 'styleguide'], function (cb) {
 // ##########
 // Build CSS.
 // ##########
-gulp.task('styles', ['clean:css'], $.shell.task(
-  ['bundle exec compass compile --time --sourcemap --output-style expanded'],
-  {cwd: options.theme.root}
-));
+gulp.task('styles', ['clean:css'], function() {
+  return gulp.src(options.sassFiles)
+    .pipe($.sourcemaps.init())
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.autoprefixer(options.autoprefixer))
+    .pipe($.size({showFiles: true}))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(options.theme.css));
+});
 
-gulp.task('styles:production', ['clean:css'], $.shell.task(
-  ['bundle exec compass compile --time --no-sourcemap --output-style compressed'],
-  {cwd: options.theme.root}
-));
+gulp.task('styles:production', ['clean:css'], function() {
+  return gulp.src(options.sassFiles)
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.autoprefixer(options.autoprefixer))
+    .pipe($.size({showFiles: true}))
+    .pipe(gulp.dest(options.theme.css));
+});
 
 // ##################
 // Build style guide.
@@ -133,16 +168,14 @@ gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], $.
   {templateData: {flags: flags.join(' ')}}
 ));
 
-gulp.task('styleguide:chroma-kss-markup', $.shell.task(
-  [
-    // @TODO: mkdir and head are UNIX utils. Replace this after Chroma is refactored.
-    'mkdir -p css/style-guide',
-    'bundle exec sass --no-cache --compass --scss --sourcemap=none --style expanded sass/style-guide/chroma-kss-markup.scss css/style-guide/chroma-kss-markup.hbs.tmp',
-    'head -n 2  css/style-guide/chroma-kss-markup.hbs.tmp | tail -n 1 > css/style-guide/chroma-kss-markup.hbs',
-    'rm css/style-guide/chroma-kss-markup.hbs.tmp'
-  ],
-  {cwd: options.theme.root}
-));
+gulp.task('styleguide:chroma-kss-markup', function() {
+  return gulp.src(options.theme.sass + 'style-guide/chroma-kss-markup.scss')
+    .pipe(sass(options.sass).on('error', sass.logError))
+    .pipe($.replace(/(\/\*|\*\/)\n/g, ''))
+    .pipe($.rename('chroma-kss-markup.hbs'))
+    .pipe($.size({showFiles: true}))
+    .pipe(gulp.dest(options.theme.css + 'style-guide'));
+});
 
 // Debug the generation of the style guide with the --verbose flag.
 gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], $.shell.task(
@@ -153,19 +186,19 @@ gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup
 // #########################
 // Lint Sass and JavaScript.
 // #########################
-gulp.task('lint', function (cb) {
+gulp.task('lint', function(cb) {
   runSequence(['lint:js', 'lint:sass'], cb);
 });
 
 // Lint JavaScript.
-gulp.task('lint:js', function () {
+gulp.task('lint:js', function() {
   return gulp.src(options.eslint.files)
     .pipe($.eslint())
     .pipe($.eslint.format());
 });
 
 // Lint JavaScript and throw an error for a CI to catch.
-gulp.task('lint:js-with-fail', function () {
+gulp.task('lint:js-with-fail', function() {
   return gulp.src(options.eslint.files)
     .pipe($.eslint())
     .pipe($.eslint.format())
@@ -188,17 +221,11 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['watch:lint-and-styleguide', 'watch:js'], function (cb) {
-  // Since watch:css will never return, call it last (not as dependency.)
-  runSequence(['watch:css'], cb);
-});
+gulp.task('watch', ['watch:css', 'watch:lint-and-styleguide', 'watch:js']);
 
-gulp.task('watch:css', ['clean:css'], $.shell.task(
-  // The "watch:css" task CANNOT be used in a dependency, because this task will
-  // never end as "compass watch" never completes and returns.
-  ['bundle exec compass watch --time --sourcemap --output-style expanded' + options.compassPollFlag],
-  {cwd: options.theme.root}
-));
+gulp.task('watch:css', ['clean:css'], function() {
+  return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
+});
 
 gulp.task('watch:lint-and-styleguide', ['styleguide', 'lint:sass'], function() {
   return gulp.watch([
@@ -229,7 +256,6 @@ gulp.task('clean:styleguide', function() {
 // Clean CSS files.
 gulp.task('clean:css', function() {
   return del([
-      options.theme.root + '**/.sass-cache',
       options.theme.css + '**/*.css',
       options.theme.css + '**/*.map'
     ], {force: true});
@@ -237,5 +263,5 @@ gulp.task('clean:css', function() {
 
 
 // Resources used to create this gulpfile.js:
-// - https://github.com/google/web-starter-kit/blob/master/gulpfile.js
-// - https://github.com/north/generator-north/blob/master/app/templates/Gulpfile.js
+// - https://github.com/google/web-starter-kit/blob/master/gulpfile.babel.js
+// - https://github.com/dlmanning/gulp-sass/blob/master/README.md
