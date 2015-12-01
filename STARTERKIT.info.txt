@@ -62,6 +62,7 @@ stylesheets[all][] = css/styles.css
 ; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ;
 ;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
+;stylesheets-conditional[(gte IE 9)|(gt IEMobile 7)|(!IE)][] = css/styles.css
 
 
 
