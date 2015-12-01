@@ -56,7 +56,7 @@ options.autoprefixer = {
     '> 1%',
     'ie 8'
   ]
-}
+};
 
 // Define the style guide paths and options.
 options.styleGuide = {
