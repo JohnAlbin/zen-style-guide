@@ -55,29 +55,16 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
       files. See the Drupal 7 Theme Guide for more info:
       https://drupal.org/node/171205
 
-    Then, visit your site's Appearance page at admin/appearance to refresh
+    Remember to visit your site's Appearance page at admin/appearance to refresh
     Drupal 7's cache of .info file data.
 
  3. Choose your preferred page layout method or grid system.
 
-    By default your new sub-theme is using a responsive layout. If you want a
-    fixed layout for your theme, delete the unneeded "responsive" and
-    "responsive-rtl" css/sass files and edit your sub-theme's styles.css
-    or styles.scss file and replace the reference to "responsive" with
-    "fixed".
+    By default your new sub-theme is using a responsive layout uzing Zen Grids.
 
-    For example, edit foo/sass/styles.scss and change this line:
-      @import "layouts/responsive";
-    to:
-      @import "layouts/fixed";
-
-    Alternatively, if you are more familiar with a different CSS layout method,
-    such as GridSetApp or 960.gs, etc., you can replace the
-    "layouts/responsive" line in your styles.scss file with a line
-    pointing at your choice of layout CSS file.
-
-    Then, visit your site's Appearance page at admin/appearance to refresh
-    Drupal 7's theme cache.
+    If you are more familiar with a different CSS layout method, such as Susy,
+    Foundation, etc., you can replace the "layouts/layout-3col" line in your
+    styles.scss file with a line pointing at your choice of layout CSS file.
 
  4. Edit your sub-theme to use the proper function names.
 
@@ -97,10 +84,36 @@ installed in sites/all/themes/, but any valid theme directory is acceptable
     admin/appearance and click the "Enable and set default" link next to your
     new sub-theme.
 
+ 6. Set up your front-end development build tools.
+
+    Your new Zen sub-theme uses Gulp.js as a task runner, so that it can do many
+    different tasks automatically:
+    - Build your CSS from your Sass using libSass and node-sass.
+    - Add vendor prefixes for the browsers you want to support using
+      Autoprefixer.
+    - Build a style guide of your components based on the KSS comments in your
+      Sass source files.
+    - Lint your Sass using scss-lint.
+    - Lint your JavaScript using eslint.
+    - Watch all of your files as you develop and re-build everything on the fly.
+
+    The package.json and Gemfile files contain the versions of all the software
+    you need. To install them run:  npm install
+
+    For a good introduction to npm, see this blog post:
+    https://www.previousnext.com.au/blog/getting-started-front-end-automation-intro-npm
+
+    Once you've read that, you can run your gulp tasks with:  npm-exec gulp
+
+    To watch all your files as you develop, run:  npm-exec gulp watch
+
+    To better understand the recommended development process for your Zen
+    sub-theme, watch this Drupalcon presentation:
+    https://events.drupal.org/losangeles2015/sessions/style-guide-driven-development-all-hail-robot-overlords
 
 Optional steps:
 
- 6. Modify the markup in Zen core's template files.
+ 7. Modify the markup in Zen core's template files.
 
     If you decide you want to modify any of the .tpl.php template files in the
     zen folder, copy them to your sub-theme's folder before making any changes.
@@ -108,7 +121,7 @@ Optional steps:
 
     For example, copy zen/templates/page.tpl.php to foo/templates/page.tpl.php.
 
- 7. Modify the markup in Drupal's search form.
+ 8. Modify the markup in Drupal's search form.
 
     Copy the search-block-form.tpl.php template file from the modules/search/
     folder and place it in your sub-theme's template folder. And then rebuild
@@ -122,7 +135,7 @@ Optional steps:
       your sub-theme's template directory and then rebuild the theme registry.
       See the Drupal 7 Theme Guide for more info: https://drupal.org/node/173880
 
- 8. Further extend your sub-theme.
+ 9. Further extend your sub-theme.
 
     Discover further ways to extend your sub-theme by reading Zen's
     documentation online at:
