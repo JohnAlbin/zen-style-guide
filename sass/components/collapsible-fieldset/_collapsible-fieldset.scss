@@ -12,19 +12,6 @@
 %collapsible-fieldset {
   position: relative;
 
-  &.is-collapsed,
-  &--is-collapsed {
-    border-bottom-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    height: 1em;
-  }
-
-  .is-collapsed &__wrapper,
-  &--is-collapsed__wrapper {
-    display: none;
-  }
-
   &__legend {
     display: block;
     padding-left: 15px;
@@ -52,35 +39,46 @@
     }
   }
 
-  .is-collapsed &__legend,
-  &--is-collapsed__legend {
-    @if support-for(ie, 8) {
-      // scss-lint:disable DuplicateProperty
-      background-image: image-url('collapsible-fieldset/collapsed.png');
-      background-image: image-url('collapsible-fieldset/collapsed.svg'), none;
-    }
-    @else {
-      background-image: image-url('collapsible-fieldset/collapsed.svg');
-    }
-    background-position: 4px 50%;
-
-    @include rtl() {
-      @if support-for(ie, 8) {
-        background-image: image-url('collapsible-fieldset/collapsed-rtl.png');
-        background-image: image-url('collapsible-fieldset/collapsed-rtl.svg'), none;
-        background-position: 98% 50%;
-      }
-      @else {
-        background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
-      }
-      background-position: right 4px top 50%;
-    }
-  }
-
   &__summary {
     color: color(fieldset-summary);
     font-size: .9em;
     margin-left: .5em;
+  }
+
+  &.is-collapsed,
+  &--is-collapsed {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    height: 1em;
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__legend {
+      @if support-for(ie, 8) {
+        // scss-lint:disable DuplicateProperty
+        background-image: image-url('collapsible-fieldset/collapsed.png');
+        background-image: image-url('collapsible-fieldset/collapsed.svg'), none;
+      }
+      @else {
+        background-image: image-url('collapsible-fieldset/collapsed.svg');
+      }
+      background-position: 4px 50%;
+
+      @include rtl() {
+        @if support-for(ie, 8) {
+          background-image: image-url('collapsible-fieldset/collapsed-rtl.png');
+          background-image: image-url('collapsible-fieldset/collapsed-rtl.svg'), none;
+          background-position: 98% 50%;
+        }
+        @else {
+          background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
+        }
+        background-position: right 4px top 50%;
+      }
+    }
   }
 }
 
