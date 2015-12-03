@@ -97,16 +97,9 @@ options.eslint = {
 };
 
 // If your files are on a network share, you may want to turn on polling for
-// Gulp and Compass watch commands. Since polling is less efficient, we disable
-// polling by default.
-var enablePolling = false;
-if (!enablePolling) {
-  options.compassPollFlag = '';
-  options.gulpWatchOptions = {};
-} else {
-  options.compassPollFlag = ' --poll';
-  options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
-}
+// Gulp watch. Since polling is less efficient, we disable polling by default.
+options.gulpWatchOptions = {};
+// options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
 
 // ################################
 // Load Gulp and tools we will use.
