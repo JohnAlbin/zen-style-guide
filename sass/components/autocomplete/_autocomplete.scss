@@ -58,10 +58,8 @@
 // Drupal selectors.
 //
 
-html.js input {
-  &.form-autocomplete {
-    @extend %autocomplete;
-  }
+.form-autocomplete {
+  @extend %autocomplete;
 
   &.throbbing {
     @extend %autocomplete--is-throbbing;
