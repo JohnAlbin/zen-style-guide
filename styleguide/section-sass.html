@@ -468,8 +468,11 @@ passing it in as the first parameter of <code>image-url()</code> like this:</p>
 
 
       <div class="kss-description">
-        <p>Includes Right-To-Left language support. Can be turned off globally by
-setting <code>$include-rtl: false;</code>.</p>
+        <p>Includes Right-To-Left language support by adding a parent selector of
+<code>[dir=&quot;rtl&quot;]</code>. Since the dir attribute is usually defined on the html element
+of a page, using this mixin on a ruleset that matches the html element won&#39;t
+work.</p>
+<p>Can be turned off globally by setting <code>$include-rtl: false;</code>.</p>
 
       </div>
     </div>
