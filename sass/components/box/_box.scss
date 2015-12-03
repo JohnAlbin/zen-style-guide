@@ -27,6 +27,13 @@
   border: 5px solid color(border);
   padding: 1em;
 
+  // Sass compiles this to the selector: .box__title, %box__title {}
+  // The "__" (double underscore) is part of a BEM naming convention that
+  // indicates the "title" is an _element_ of (a piece of) the "box" component.
+  &__title {
+    margin: 0;
+  }
+
   // Sass compiles this nested ruleset's selector into:
   // .box:focus, .box:hover, .box.is-focus, .box--is-focus,
   // %box:focus, %box:hover, %box.is-focus, %box--is-focus {}
@@ -42,13 +49,6 @@
   &.is-focus,
   &--is-focus {
     border-color: color(text);
-  }
-
-  // Sass compiles this to the selector: .box__title, %box__title {}
-  // The "__" (double underscore) is part of a BEM naming convention that
-  // indicates the "title" is an _element_ of (a piece of) the "box" component.
-  &__title {
-    margin: 0;
   }
 
   // Sass compiles this to the selector: .box--highlight, %box--highlight {}
@@ -75,12 +75,12 @@
 // have no idea what I'm talking about, you could just use this fugly CSS
 // selector:
 //
-//.sidebars {
-//  .block {
-//    @extend %box;
-//  }
+// [class$="sidebar"] {
+//   .block {
+//     @extend %box;
+//   }
 //
-//  .block__title {
-//    @extend %box__title;
-//  }
-//}
+//   .block__title {
+//     @extend %box__title;
+//   }
+// }
