@@ -27,6 +27,9 @@ options.theme = {
   js    : options.rootPath.theme + 'js/'
 };
 
+// Set the URL used to access the Drupal website under development.
+options.drupalURL = 'http://localhost';
+
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {
   importer: importOnce,
@@ -110,6 +113,7 @@ if (!enablePolling) {
 // ################################
 var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')(),
+  browserSync = require('browser-sync').create(),
   del         = require('del'),
   runSequence = require('run-sequence'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
@@ -136,7 +140,8 @@ gulp.task('styles', ['clean:css'], function() {
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(options.theme.css));
+    .pipe(gulp.dest(options.theme.css))
+    .pipe($.if(browserSync.active, browserSync.stream({match: '**/*.css'})));
 });
 
 gulp.task('styles:production', ['clean:css'], function() {
@@ -221,7 +226,14 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 // Watch for changes and rebuild.
 // ##############################
-gulp.task('watch', ['watch:css', 'watch:lint-and-styleguide', 'watch:js']);
+gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
+
+gulp.task('browser-sync', ['watch:css'], function() {
+  return browserSync.init({
+    proxy: options.drupalURL,
+    noOpen: false
+  });
+});
 
 gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
@@ -265,3 +277,4 @@ gulp.task('clean:css', function() {
 // Resources used to create this gulpfile.js:
 // - https://github.com/google/web-starter-kit/blob/master/gulpfile.babel.js
 // - https://github.com/dlmanning/gulp-sass/blob/master/README.md
+// - http://www.browsersync.io/docs/gulp/
