@@ -223,7 +223,7 @@ gulp.task('lint:sass-with-fail', function() {
 // ##############################
 gulp.task('watch', ['watch:css', 'watch:lint-and-styleguide', 'watch:js']);
 
-gulp.task('watch:css', ['clean:css'], function() {
+gulp.task('watch:css', ['styles'], function() {
   return gulp.watch(options.theme.sass + '**/*.scss', options.gulpWatchOptions, ['styles']);
 });
 
