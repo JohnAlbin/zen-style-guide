@@ -24,7 +24,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "kss": "kss-node/kss-node",
     "node-sass-import-once": "^1.2.0",
-    "run-sequence": "^1.1.5",
     "support-for": "^1.0.3",
     "typey": "^1.0.0-beta.8",
     "zen-grids": "^2.0.1"

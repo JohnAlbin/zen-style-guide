@@ -108,7 +108,6 @@ var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')(),
   browserSync = require('browser-sync').create(),
   del         = require('del'),
-  runSequence = require('run-sequence'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
   sass     = require('gulp-sass');
 
@@ -118,10 +117,7 @@ gulp.task('default', ['build']);
 // #################
 // Build everything.
 // #################
-gulp.task('build', ['styles:production', 'styleguide'], function(cb) {
-  // Run linting last, otherwise its output gets lost.
-  runSequence(['lint'], cb);
-});
+gulp.task('build', ['styles:production', 'styleguide', 'lint']);
 
 // ##########
 // Build CSS.
@@ -184,9 +180,7 @@ gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup
 // #########################
 // Lint Sass and JavaScript.
 // #########################
-gulp.task('lint', function(cb) {
-  runSequence(['lint:js', 'lint:sass'], cb);
-});
+gulp.task('lint', ['lint:sass', 'lint:js']);
 
 // Lint JavaScript.
 gulp.task('lint:js', function() {
