@@ -109,7 +109,8 @@ var gulp      = require('gulp'),
   browserSync = require('browser-sync').create(),
   del         = require('del'),
   // gulp-load-plugins will report "undefined" error unless you load gulp-sass manually.
-  sass     = require('gulp-sass');
+  sass        = require('gulp-sass'),
+  spawn       = require('child_process').spawn;
 
 // The default task.
 gulp.task('default', ['build']);
@@ -145,7 +146,7 @@ gulp.task('styles:production', ['clean:css'], function() {
 // Build style guide.
 // ##################
 var flags = [], values;
-// Construct our command-line flags from the options.styleGuide object.
+// Create a command-line flags Array from the options.styleGuide Object.
 for (var flag in options.styleGuide) {
   if (options.styleGuide.hasOwnProperty(flag)) {
     values = options.styleGuide[flag];
@@ -153,14 +154,14 @@ for (var flag in options.styleGuide) {
       values = [values];
     }
     for (var i = 0; i < values.length; i++) {
-      flags.push('--' + flag + '=\'' + values[i] + '\'');
+      flags.push('--' + flag, values[i]);
     }
   }
 }
-gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], $.shell.task(
-  ['kss-node <%= flags %>'],
-  {templateData: {flags: flags.join(' ')}}
-));
+gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
+  var cmd = spawn('kss-node', flags, {stdio: 'inherit'});
+  return cmd.on('close', cb);
+});
 
 gulp.task('styleguide:chroma-kss-markup', function() {
   return gulp.src(options.theme.sass + 'style-guide/chroma-kss-markup.scss')
@@ -172,10 +173,12 @@ gulp.task('styleguide:chroma-kss-markup', function() {
 });
 
 // Debug the generation of the style guide with the --verbose flag.
-gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], $.shell.task(
-  ['kss-node <%= flags %>'],
-  {templateData: {flags: flags.join(' ') + ' --verbose'}}
-));
+gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
+  var debugFlags = flags.slice();
+  debugFlags.push('--verbose');
+  var cmd = spawn('kss-node', debugFlags, {stdio: 'inherit'});
+  return cmd.on('close', cb);
+});
 
 // #########################
 // Lint Sass and JavaScript.
