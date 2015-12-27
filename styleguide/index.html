@@ -68,24 +68,23 @@
 <article role="main" class="kss-main">
   <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
      <h1 id="kss-style-guide">KSS Style Guide</h1>
-<p>This web site is built using Sass and component-based styles. This front-end style guide documents the design components and the Sass variables, functions and mixins used to build the site.</p>
+<p>This style guide documents the designs of this website which are built with component-based styles and Sass variables, functions and mixins. To ensure it is always up-to-date, this style guide is automatically generated from comments in the Sass files.</p>
 <h2 id="organization">Organization</h2>
 <p>We categorize our CSS styles to make them easy to find and apply to our HTML.</p>
 <ul>
-<li>Defaults: These are the default base styles applied to HTML elements.</li>
-<li>Layouts: The layout styling for major parts of the page that are included with the theme.</li>
+<li>Defaults: These are the default base styles applied to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</li>
+<li>Layouts: These are the layout components that position major chunks of the page. They just apply positioning, no other styles.</li>
 <li>Forms: Form components are specialized design components that are applied to forms or form elements.</li>
 <li>Components: Design components are reusable designs that can be applied using just the CSS class names specified in the component.</li>
 <li>Colors and Sass: Colors used throughout the site. And Sass documentation for mixins, etc.</li>
 </ul>
 <p>While our styles are organized as above in the style guide, our Sass files are organized in a file hierarchy like this:</p>
 <ul>
-<li>init: Sass needed to load variables, 3rd-party libraries and custom mixins and
-functions.</li>
-<li>base: default HTML styles</li>
-<li>components: component-based styles</li>
-<li>layout: component styles that only apply layout to major chunks of the page</li>
-<li>style-guide: some helper files needed to build this automated style guide</li>
+<li><code>sass/init</code>: The Sass used to initalize everything we need: variables, 3rd-party libraries, custom mixins and custom functions.</li>
+<li><code>sass/base</code>: default HTML styles</li>
+<li><code>sass/components</code>: component-based styles</li>
+<li><code>sass/layouts</code>: component styles that only apply layout to major chunks of the page</li>
+<li><code>sass/style-guide</code>: some helper files needed to build this automated style guide</li>
 </ul>
 
   </div>
