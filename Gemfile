@@ -4,4 +4,4 @@
 
 source 'https://rubygems.org'
 
-gem 'scss_lint',            '~> 0.43'
+gem 'scss_lint', '~> 0.43'
