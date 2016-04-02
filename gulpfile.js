@@ -84,11 +84,6 @@ options.styleGuide = {
   title: 'Zen 7.x-6.x Style Guide'
 };
 
-// Define the path to the project's .scss-lint.yml.
-options.scssLint = {
-  yml: options.rootPath.project + '.scss-lint.yml'
-};
-
 // Define the paths to the JS files to lint.
 options.eslint = {
   files  : [
@@ -105,7 +100,6 @@ options.gulpWatchOptions = {};
 // If you wish to disable the following tasks, you can set these variables to
 // true (which is simpler than re-writing the Gulp tasks to remove them.)
 options.disableTask = {
-  lintSass: false,
   browserSync: false
 };
 
@@ -195,18 +189,17 @@ gulp.task('lint:js-with-fail', function() {
 
 // Lint Sass.
 gulp.task('lint:sass', function() {
-  if (options.disableTask.lintSass) {
-    return Promise.resolve();
-  }
   return gulp.src(options.theme.sass + '**/*.scss')
-    .pipe($.scssLint({'bundleExec': true, 'config': options.scssLint.yml}));
+    .pipe($.sassLint())
+    .pipe($.sassLint.format());
 });
 
 // Lint Sass and throw an error for a CI to catch.
 gulp.task('lint:sass-with-fail', function() {
   return gulp.src(options.theme.sass + '**/*.scss')
-    .pipe($.scssLint({'bundleExec': true, 'config': options.scssLint.yml}))
-    .pipe($.scssLint.failReporter());
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError());
 });
 
 // ##############################
