@@ -22,9 +22,11 @@
 
 .tabs,
 %tabs {
+  @extend %clearfix;
+
+  // The line height of a tab.
   $tab-height: 1.25;
 
-  @extend %clearfix;
   @include margin((2 - $tab-height) 0 0);
   @include line-height($tab-height);
   @if support-for(ie, 9) {

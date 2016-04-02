@@ -1,3 +1,5 @@
+// sass-lint:disable no-ids
+
 @import 'init';
 
 // This file is used to add styles to the style guide and is not included in
@@ -5,13 +7,12 @@
 // options.styleGuide.css object in gulpfile.js.
 
 // Add an outline to every grid item in the style guide.
-[id^="kssref-layouts-"] [class^="layout-"][class*="__"] {
+[id^='kssref-layouts-'] [class^='layout-'][class*='__'] {
   outline: 1px dotted color('grey');
 }
 
 // Because our grids assume a container has some padding, add the standard
 // padding to the example wrapper.
-// scss-lint:disable IdSelector
 #kssref-layouts-layout-3column .kss-modifier__example {
   @include zen-apply-gutter-padding();
 

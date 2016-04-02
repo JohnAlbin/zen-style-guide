@@ -67,7 +67,7 @@
   }
 }
 
-// scss-lint:disable IdSelector
+// sass-lint:disable no-ids
 #autocomplete {
   @extend %autocomplete__list-wrapper;
 
@@ -83,4 +83,3 @@
     @extend %autocomplete__list-item--is-selected;
   }
 }
-// scss-lint:enable IdSelector

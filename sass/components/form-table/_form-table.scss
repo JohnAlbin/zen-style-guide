@@ -69,7 +69,7 @@
   }
 
   &__narrow-column {
-    // scss-lint:disable VendorPrefix
+    // sass-lint:disable no-vendor-prefixes, no-duplicate-properties
     width: -moz-min-content;
     width: -webkit-min-content;
     text-align: center;
