@@ -14,7 +14,7 @@ We categorize our CSS styles to make them easy to find and apply to our HTML.
 
 While our styles are organized as above in the style guide, our Sass files are organized in a file hierarchy like this:
 
-- `sass/init`: The Sass used to initalize everything we need: variables, 3rd-party libraries, custom mixins and custom functions.
+- `sass/init`: The Sass used to initialize everything we need: variables, 3rd-party libraries, custom mixins and custom functions.
 - `sass/base`: default HTML styles
 - `sass/components`: component-based styles
 - `sass/layouts`: component styles that only apply layout to major chunks of the page
