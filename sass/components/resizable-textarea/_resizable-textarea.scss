@@ -25,6 +25,12 @@
 // Drupal selectors.
 //
 
-.resizable-textarea .grippie {
-  @extend %resizable-textarea__grippie;
+.resizable-textarea {
+  textarea {
+    @extend %resizable-textarea;
+  }
+
+  .grippie {
+    @extend %resizable-textarea__grippie;
+  }
 }
