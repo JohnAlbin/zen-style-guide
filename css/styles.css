@@ -1627,6 +1627,7 @@ tr.drag-previous {
   margin-left: -1em;
   overflow: hidden;
   text-decoration: none;
+  font-size: 12px;
 }
 
 [dir="rtl"] .table-drag__handle,
@@ -1644,6 +1645,7 @@ tr.drag-previous {
 
 .table-drag__handle-icon,
 .tabledrag-handle .handle {
+  box-sizing: content-box;
   background: url(../sass/components/table-drag/handle-icon.png) no-repeat 6px 9px;
   height: 13px;
   margin: -.4em .5em;
