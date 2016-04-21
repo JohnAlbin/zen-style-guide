@@ -101,6 +101,14 @@ options.eslint = {
 options.gulpWatchOptions = {};
 // options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
 
+// If you wish to disable the following tasks, you can set these variables to
+// true (which is simpler than re-writing the Gulp tasks to remove them.)
+options.disableTask = {
+  lintSass: false,
+  browserSync: false
+};
+
+
 // ################################
 // Load Gulp and tools we will use.
 // ################################
@@ -186,6 +194,9 @@ gulp.task('lint:js-with-fail', function() {
 
 // Lint Sass.
 gulp.task('lint:sass', function() {
+  if (options.disableTask.lintSass) {
+    return Promise.resolve();
+  }
   return gulp.src(options.theme.sass + '**/*.scss')
     .pipe($.scssLint({'bundleExec': true, 'config': options.scssLint.yml}));
 });
@@ -203,6 +214,9 @@ gulp.task('lint:sass-with-fail', function() {
 gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
 
 gulp.task('browser-sync', ['watch:css'], function() {
+  if (options.disableTask.browserSync) {
+    return Promise.resolve();
+  }
   return browserSync.init({
     proxy: options.drupalURL,
     noOpen: false
