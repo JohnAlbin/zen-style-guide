@@ -97,8 +97,8 @@ a:hover {
 h1,
 .header__site-name {
   font-size: 32px;
-  line-height: 48px;
   font-size: 2rem;
+  line-height: 48px;
   line-height: 3rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -108,8 +108,8 @@ h1,
 
 h2 {
   font-size: 24px;
-  line-height: 36px;
   font-size: 1.5rem;
+  line-height: 36px;
   line-height: 2.25rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -119,8 +119,8 @@ h2 {
 
 h3 {
   font-size: 20px;
-  line-height: 36px;
   font-size: 1.25rem;
+  line-height: 36px;
   line-height: 2.25rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -130,8 +130,8 @@ h3 {
 
 h4 {
   font-size: 16px;
-  line-height: 24px;
   font-size: 1rem;
+  line-height: 24px;
   line-height: 1.5rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -141,8 +141,8 @@ h4 {
 
 h5 {
   font-size: 14px;
-  line-height: 24px;
   font-size: 0.875rem;
+  line-height: 24px;
   line-height: 1.5rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -152,8 +152,8 @@ h5 {
 
 h6 {
   font-size: 10px;
-  line-height: 24px;
   font-size: 0.625rem;
+  line-height: 24px;
   line-height: 1.5rem;
   margin-top: 24px;
   margin-top: 1.5rem;
@@ -210,7 +210,7 @@ sub {
 .divider,
 hr {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid #cccccc;
 }
@@ -225,7 +225,7 @@ menu,
 ol,
 ul {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 ol ol,
@@ -262,7 +262,7 @@ blockquote {
 
 figure {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 hr {
@@ -273,7 +273,7 @@ hr {
 p,
 pre {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 code,
@@ -448,7 +448,7 @@ textarea {
 
 table {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -915,7 +915,7 @@ th {
 .comment__section,
 .comments {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 .comment__title {
@@ -945,7 +945,7 @@ th {
 
 .form-item {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
 }
 
 .form-item__required,
@@ -1220,7 +1220,7 @@ span.field-label {
 .messages,
 .messages--status {
   margin: 24px 0px;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   position: relative;
   padding: 10px 10px 10px 44px;
   border: 1px solid #0072b9;
@@ -1543,7 +1543,8 @@ tr .ajax-progress .throbber {
   padding-left: 20px;
 }
 
-.resizable-textarea {
+.resizable-textarea,
+.resizable-textarea textarea {
   width: 100%;
   vertical-align: bottom;
 }
@@ -1717,7 +1718,7 @@ tr.drag-previous {
 .tabs,
 .tabs--secondary {
   margin: 18px 0px 0px;
-  margin: 1.125rem 0rem 0rem;
+  margin: 1.125rem 0 0;
   line-height: 30px;
   line-height: 1.875rem;
   border-bottom: 1px solid #cccccc \0/ie;
@@ -1759,7 +1760,7 @@ tr.drag-previous {
 .tabs__tab-link,
 .tabs--secondary__tab-link {
   padding: 0px 24px;
-  padding: 0rem 1.5rem;
+  padding: 0 1.5rem;
   display: block;
   text-decoration: none;
   -webkit-transition: color .3s, background .3s, border .3s;
@@ -1793,7 +1794,7 @@ tr.drag-previous {
 
 .tabs + .tabs--secondary, .tabs--secondary + .tabs--secondary {
   margin-top: 0px;
-  margin-top: 0rem;
+  margin-top: 0;
   background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
   background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
 }
