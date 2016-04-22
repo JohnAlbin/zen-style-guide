@@ -46,7 +46,3 @@ linters:
     style: at_least_one_space
   SpaceAroundOperator:
     enabled: false
-  # scss-lint 0.41.0 dies parsing chroma-kss-markup.scss when using SpaceBetweenParens
-  # See https://github.com/brigade/scss-lint/issues/568
-  SpaceBetweenParens:
-    enabled: false

@@ -1,5 +1,59 @@
-ABOUT SASS AND COMPASS
-----------------------
+ZEN'S STYLESHEETS
+-----------------
+
+Don't panic!
+
+There are a lot of files in this Sass folder. A lot. 56, actually.
+
+I swear to you I'm going to give you a good reason not to panic. Just give me
+a minute. (ヘ･_･)ヘ┳━┳
+
+Okay, how about just panicking slightly while I collect my thoughts.
+(╯°□°）╯︵ ┻━┻
+
+Okay. Okay. There _are_ 56 Sass files in this sub-theme, but it's not as bad as
+it first seems.
+
+Why not just one stylesheet?
+
+- For performance reasons you should always have all of your CSS in a single
+  file to minimize the number of HTTP requests the user's browser needs to do.
+  Fortunately, Drupal has a "Aggregate and compress CSS" feature that will
+  automatically combine all the CSS files from its modules and themes into one
+  file. You can turn on that feature under "Bandwidth Optimization" on the page:
+    Administration > Configuration > Development > Performance
+  So Drupal allows us (if we want) to use more than one stylesheet file, but
+  still serves all the styles in one file to our users.
+
+- When developing a site using a single stylesheet, it can become unwieldy to
+  scroll and find the place you need to edit. As a deadline becomes imminent,
+  developers often start stuffing new styles at the bottom of the stylesheet,
+  completely destroying any stylesheet organization.
+
+- Instead of one monolithic stylesheet, Zen sub-themes' CSS files are organized
+  into many small stylesheets. Once you learn the organization (described
+  below) it becomes easier to find the right place to add new styles.
+
+- All the Sass files are imported into the styles.scss so all the CSS is output
+  to the styles.css file.
+
+ORGANIZATION OF STYLESHEETS
+---------------------------
+
+All of the styles in this sub-theme are built using component-based designs. To
+learn more about component-based design, watch the Drupalcon presentation,
+"Style Guide Driven Development: All hail the robot overlords!"
+https://events.drupal.org/losangeles2015/sessions/style-guide-driven-development-all-hail-robot-overlords
+
+The Sass files are organized in a simple file hierarchy, and, best of all are
+documented in a style guide which is super easy to keep up-to-date. Open the
+style guide to learn more about the styles and Sass used in this sub-theme.
+
+Open the styleguide/index.html file in a web browser.
+
+
+ABOUT SASS
+----------
 
 This directory includes Sass versions of Zen's CSS files.
 
@@ -10,88 +64,25 @@ include the CSS in the normal ways with your theme.
 
 To learn more about Sass, visit: http://sass-lang.com
 
-Compass is a helper library for Sass. It includes libraries of shared mixins, a
-package manager to add additional extension libraries, and an executable that
-can easily convert Sass files into CSS.
-
-To learn more about Compass, visit: http://compass-style.org
+Since Sass is just a language, we also need an executable that can easily
+convert Sass files into CSS. We use node-sass to convert our files to CSS. And
+we use Gulp.js to run node-sass and many other useful front-end tasks.
 
 
-DEVELOPING WITH SASS AND COMPASS
---------------------------------
-
-Zen 7.x-5.0 was developed with the latest version of Sass and Compass (at the
-time!) Newer versions are not compatible with Zen's Sass files. To ensure you
-are using the correct version of Sass and Compass, you will need to use the
-"bundle" command which will read Zen's Gemfile to ensure the proper versions are
-used when compiling your CSS. To install the correction versions of Sass and
-Compass, go to the root directory of your sub-theme and type:
-
-  bundle install
-
-You will also need to prefix any compass commands with "bundle exec". For
-example, type "bundle exec compass compile" instead of just "compass compile".
+DEVELOPING WITH SASS
+--------------------
 
 To automatically generate the CSS versions of the scss while you are doing theme
-development, you'll need to tell Compass to "watch" the sass directory so that
+development, you'll need to tell Gulp to "watch" the sass directory so that
 any time a .scss file is changed it will automatically generate a CSS file in
 your sub-theme's css directory:
 
-  bundle exec compass watch <path to your sub-theme's directory>
-
-  If you are already in the root of your sub-theme's directory, you can simply
-  type:  bundle exec compass watch
-
-While using generated CSS with Firebug, the line numbers it reports will not
-match the .scss file, since it references the generated CSS file's lines, not
-the line numbers of the "source" sass files. How then do we debug? Sourcemaps to
-the rescue! To find the oringial, newer browsers have support for sourcemap
-files (*.map). These files are used by the built-in development tools of newer
-browsers to map the generated line to the SCSS source. When in development mode,
-Zen can be set to generate sourcemap files. Edit config.rb, and uncomment:
-
-  sourcemap=true
-
-
-Enabling and using sourcemap files (*.map) in your browser
-
-In short, Open Developer tools, go to settings, and enable an option to the
-effect of: 'view original sources' or 'Enable CSS source maps'.
-
-* Firefox: https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/
-* Chrome:  https://developer.chrome.com/devtools/docs/css-preprocessors#toc-enabling-css-source-maps
-* IE: http://msdn.microsoft.com/en-US/library/ie/dn255007%28v=vs.85%29#source_maps
-
-
-Browser Plug-ins
-
-An alternative method is to install a browser plug-in, such as FireCompass or
-the older FireSass plug-in into Firefox.  Then you'll need to edit your
-sub-theme's config.rb file to uncomment and set either:
-
-  firesass = true
-  firecompass = true
-
-Finally, you'll need to install the appropriate plug-in:
-
-  Firesass:  https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug
-  FireCompass: https://addons.mozilla.org/en-US/firefox/addon/firecompass-for-firebug
+  gulp watch
 
 
 MOVING YOUR CSS TO PRODUCTION
 -----------------------------
 
-Once you have finished your sub-theme development and are ready to move your CSS
-files to your production server, you'll need to tell sass to update all your CSS
-files and to compress them (to improve performance). Note: the Compass command
-will only generate CSS for .scss files that have recently changed; in order to
-force it to regenerate all the CSS files, you can use the Compass' clean command
-to delete all the generated CSS files.
-
-- Delete all CSS files by running: bundle exec compass clean
-- Edit the config.rb file in your theme's directory and uncomment this line by
-  deleting the "#" from the beginning:
-    #environment = :production
-- Regenerate all the CSS files by running: bundle exec compass compile
+Simple! Generate your CSS with: gulp
 
 And don't forget to turn on Drupal's CSS aggregation. :-)
