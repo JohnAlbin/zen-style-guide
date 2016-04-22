@@ -186,7 +186,7 @@ Set up your front-end development build tools:
       npm install -g gulp-cli
 
  5. Set the URL used to access the Drupal website under development. Edit your
-    gulpfile.js file and change the following line:
+    gulpfile.js file and change the options.drupalURL setting:
 
       options.drupalURL = 'http://localhost';
 

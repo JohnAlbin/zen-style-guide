@@ -27,8 +27,10 @@ options.theme = {
   js    : options.rootPath.theme + 'js/'
 };
 
-// Set the URL used to access the Drupal website under development.
-options.drupalURL = 'http://localhost';
+// Set the URL used to access the Drupal website under development. This will
+// allow Browser Sync to serve the website and update CSS changes on the fly.
+options.drupalURL = '';
+// options.drupalURL = 'http://localhost';
 
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {
@@ -96,12 +98,6 @@ options.eslint = {
 // Gulp watch. Since polling is less efficient, we disable polling by default.
 options.gulpWatchOptions = {};
 // options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
-
-// If you wish to disable the following tasks, you can set these variables to
-// true (which is simpler than re-writing the Gulp tasks to remove them.)
-options.disableTask = {
-  browserSync: false
-};
 
 
 // ################################
@@ -208,7 +204,7 @@ gulp.task('lint:sass-with-fail', function() {
 gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
 
 gulp.task('browser-sync', ['watch:css'], function() {
-  if (options.disableTask.browserSync) {
+  if (!options.drupalURL) {
     return Promise.resolve();
   }
   return browserSync.init({
