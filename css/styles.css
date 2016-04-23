@@ -96,68 +96,44 @@ a:hover {
 
 h1,
 .header__site-name {
-  font-size: 32px;
   font-size: 2rem;
-  line-height: 48px;
   line-height: 3rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 24px;
   font-size: 1.5rem;
-  line-height: 36px;
   line-height: 2.25rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: 20px;
   font-size: 1.25rem;
-  line-height: 36px;
   line-height: 2.25rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 h4 {
-  font-size: 16px;
   font-size: 1rem;
-  line-height: 24px;
   line-height: 1.5rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 h5 {
-  font-size: 14px;
   font-size: 0.875rem;
-  line-height: 24px;
   line-height: 1.5rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
 h6 {
-  font-size: 10px;
   font-size: 0.625rem;
-  line-height: 24px;
   line-height: 1.5rem;
-  margin-top: 24px;
   margin-top: 1.5rem;
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
@@ -186,13 +162,11 @@ mark {
 }
 
 small {
-  font-size: 14px;
   font-size: 0.875rem;
 }
 
 sub,
 sup {
-  font-size: 10px;
   font-size: 0.625rem;
   line-height: 0;
   position: relative;
@@ -209,14 +183,12 @@ sub {
 
 .divider,
 hr {
-  margin: 24px 0px;
   margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid #cccccc;
 }
 
 .divider > :first-child, hr > :first-child {
-  margin-top: 24px;
   margin-top: 1.5rem;
 }
 
@@ -224,7 +196,6 @@ dl,
 menu,
 ol,
 ul {
-  margin: 24px 0px;
   margin: 1.5rem 0;
 }
 
@@ -256,12 +227,10 @@ ul {
 }
 
 blockquote {
-  margin: 24px 32px;
   margin: 1.5rem 2rem;
 }
 
 figure {
-  margin: 24px 0px;
   margin: 1.5rem 0;
 }
 
@@ -272,7 +241,6 @@ hr {
 
 p,
 pre {
-  margin: 24px 0px;
   margin: 1.5rem 0;
 }
 
@@ -296,11 +264,6 @@ img,
 svg {
   max-width: 100%;
   height: auto;
-}
-
-.lt-ie9 img, .lt-ie9
-svg {
-  width: auto;
 }
 
 svg:not(:root) {
@@ -421,7 +384,6 @@ input[type="radio"] {
 }
 
 fieldset {
-  padding: 8.4px 15px 15.6px;
   padding: 0.525rem 0.9375rem 0.975rem;
   border: 1px solid #cccccc;
   margin: 0 2px;
@@ -447,7 +409,6 @@ textarea {
 }
 
 table {
-  margin: 24px 0px;
   margin: 1.5rem 0;
   border-collapse: collapse;
   border-spacing: 0;
@@ -768,7 +729,6 @@ th {
 }
 
 .box {
-  margin-bottom: 24px;
   margin-bottom: 1.5rem;
   border: 5px solid #cccccc;
   padding: 1em;
@@ -857,8 +817,7 @@ th {
 .collapsible .fieldset-legend {
   display: block;
   padding-left: 15px;
-  background-image: url(../sass/components/collapsible-fieldset/expanded.png);
-  background-image: url(../sass/components/collapsible-fieldset/expanded.svg), none;
+  background-image: url(../sass/components/collapsible-fieldset/expanded.svg);
   background-position: 4px 50%;
   background-repeat: no-repeat;
 }
@@ -868,7 +827,6 @@ th {
 .collapsible [dir="rtl"] .fieldset-legend {
   padding-left: 0;
   padding-right: 15px;
-  background-position: 98% 50%;
   background-position: right 4px top 50%;
 }
 
@@ -897,8 +855,7 @@ th {
 .collapsible-fieldset.is-collapsed__legend, .collapsible-fieldset--is-collapsed__legend,
 .is-collapsed__legend.collapsible,
 .collapsible.collapsed .fieldset-legend {
-  background-image: url(../sass/components/collapsible-fieldset/collapsed.png);
-  background-image: url(../sass/components/collapsible-fieldset/collapsed.svg), none;
+  background-image: url(../sass/components/collapsible-fieldset/collapsed.svg);
   background-position: 4px 50%;
 }
 
@@ -906,15 +863,12 @@ th {
 [dir="rtl"] .is-collapsed__legend.collapsible,
 [dir="rtl"] .collapsible.collapsed .fieldset-legend,
 .collapsible.collapsed [dir="rtl"] .fieldset-legend {
-  background-image: url(../sass/components/collapsible-fieldset/collapsed-rtl.png);
-  background-image: url(../sass/components/collapsible-fieldset/collapsed-rtl.svg), none;
-  background-position: 98% 50%;
+  background-image: url(../sass/components/collapsible-fieldset/collapsed-rtl.svg);
   background-position: right 4px top 50%;
 }
 
 .comment__section,
 .comments {
-  margin: 24px 0px;
   margin: 1.5rem 0;
 }
 
@@ -944,7 +898,6 @@ th {
 }
 
 .form-item {
-  margin: 24px 0px;
   margin: 1.5rem 0;
 }
 
@@ -955,7 +908,6 @@ th {
 
 .form-item__description,
 .form-item .description {
-  font-size: 14px;
   font-size: 0.875rem;
 }
 
@@ -1219,7 +1171,6 @@ span.field-label {
 
 .messages,
 .messages--status {
-  margin: 24px 0px;
   margin: 1.5rem 0;
   position: relative;
   padding: 10px 10px 10px 44px;
@@ -1321,8 +1272,7 @@ span.field-label {
 .more-link__help-icon,
 .more-help-link a {
   padding: 1px 0 1px 20px;
-  background-image: url(../sass/components/more-link/more-link__help-icon.png);
-  background-image: url(../sass/components/more-link/more-link__help-icon.svg), none;
+  background-image: url(../sass/components/more-link/more-link__help-icon.svg);
   background-position: 0 50%;
   background-repeat: no-repeat;
 }
@@ -1340,22 +1290,11 @@ span.field-label {
   list-style-type: square;
 }
 
-.lt-ie9 .nav-menu__item,
-.lt-ie9 .menu__item {
-  list-style-image: url(../sass/components/nav-menu/leaf.png);
-}
-
 .nav-menu__item.is-expanded, .nav-menu__item--is-expanded,
 .is-expanded.menu__item,
 .menu__item.is-expanded {
   list-style-image: url(../sass/components/nav-menu/expanded.svg);
   list-style-type: circle;
-}
-
-.lt-ie9 .nav-menu__item.is-expanded, .lt-ie9 .nav-menu__item--is-expanded,
-.lt-ie9 .is-expanded.menu__item,
-.lt-ie9 .menu__item.is-expanded {
-  list-style-image: url(../sass/components/nav-menu/expanded.png);
 }
 
 .nav-menu__item.is-collapsed, .nav-menu__item--is-collapsed,
@@ -1365,22 +1304,10 @@ span.field-label {
   list-style-type: disc;
 }
 
-.lt-ie9 .nav-menu__item.is-collapsed, .lt-ie9 .nav-menu__item--is-collapsed,
-.lt-ie9 .is-collapsed.menu__item,
-.lt-ie9 .menu__item.is-collapsed {
-  list-style-image: url(../sass/components/nav-menu/collapsed.png);
-}
-
 [dir="rtl"] .nav-menu__item.is-collapsed, [dir="rtl"] .nav-menu__item--is-collapsed,
 [dir="rtl"] .is-collapsed.menu__item,
 [dir="rtl"] .menu__item.is-collapsed {
   list-style-image: url(../sass/components/nav-menu/collapsed-rtl.svg);
-}
-
-.lt-ie9 [dir="rtl"] .nav-menu__item.is-collapsed, .lt-ie9 [dir="rtl"] .nav-menu__item--is-collapsed,
-.lt-ie9 [dir="rtl"] .is-collapsed.menu__item,
-.lt-ie9 [dir="rtl"] .menu__item.is-collapsed {
-  list-style-image: url(../sass/components/nav-menu/collapsed-rtl.png);
 }
 
 .nav-menu__link.is-active, .nav-menu__link--is-active,
@@ -1719,9 +1646,7 @@ tr.drag-previous {
 
 .tabs,
 .tabs--secondary {
-  margin: 18px 0px 0px;
   margin: 1.125rem 0 0;
-  line-height: 30px;
   line-height: 1.875rem;
   border-bottom: 1px solid #cccccc \0/ie;
   background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
@@ -1761,7 +1686,6 @@ tr.drag-previous {
 .tabs__tab-link-common,
 .tabs__tab-link,
 .tabs--secondary__tab-link {
-  padding: 0px 24px;
   padding: 0 1.5rem;
   display: block;
   text-decoration: none;
@@ -1787,22 +1711,18 @@ tr.drag-previous {
 }
 
 .tabs--secondary {
-  margin-top: 24px;
   margin-top: 1.5rem;
-  font-size: 14px;
   font-size: 0.875rem;
   background-image: none;
 }
 
 .tabs + .tabs--secondary, .tabs--secondary + .tabs--secondary {
-  margin-top: 0px;
   margin-top: 0;
   background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
   background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
 }
 
 .tabs--secondary__tab {
-  margin: 9px 3px;
   margin: 0.5625rem 0.1875rem;
   float: left;
 }
