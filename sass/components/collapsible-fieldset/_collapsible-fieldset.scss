@@ -15,26 +15,13 @@
   &__legend {
     display: block;
     padding-left: 15px;
-    @if support-for(ie, 8) {
-      // IE8 does not support multiple backgrounds, so IE8 will ignore the second
-      // declaration with the SVG. https://css-tricks.com/using-svg/
-      // scss-lint:disable DuplicateProperty
-      background-image: image-url('collapsible-fieldset/expanded.png');
-      background-image: image-url('collapsible-fieldset/expanded.svg'), none;
-    }
-    @else {
-      background-image: image-url('collapsible-fieldset/expanded.svg');
-    }
+    background-image: image-url('collapsible-fieldset/expanded.svg');
     background-position: 4px 50%;
     background-repeat: no-repeat;
 
     @include rtl() {
       padding-left: 0;
       padding-right: 15px;
-      @if support-for(ie, 8) {
-        // IE 8 does not understand edge offsets.
-        background-position: 98% 50%;
-      }
       background-position: right 4px top 50%;
     }
   }
@@ -57,25 +44,11 @@
     }
 
     &__legend {
-      @if support-for(ie, 8) {
-        // scss-lint:disable DuplicateProperty
-        background-image: image-url('collapsible-fieldset/collapsed.png');
-        background-image: image-url('collapsible-fieldset/collapsed.svg'), none;
-      }
-      @else {
-        background-image: image-url('collapsible-fieldset/collapsed.svg');
-      }
+      background-image: image-url('collapsible-fieldset/collapsed.svg');
       background-position: 4px 50%;
 
       @include rtl() {
-        @if support-for(ie, 8) {
-          background-image: image-url('collapsible-fieldset/collapsed-rtl.png');
-          background-image: image-url('collapsible-fieldset/collapsed-rtl.svg'), none;
-          background-position: 98% 50%;
-        }
-        @else {
-          background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
-        }
+        background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
         background-position: right 4px top 50%;
       }
     }

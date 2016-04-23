@@ -14,22 +14,10 @@
     list-style-image: image-url('nav-menu/leaf.svg');
     list-style-type: square;
 
-    @if support-for(ie, 8) {
-      .lt-ie9 & {
-        list-style-image: image-url('nav-menu/leaf.png');
-      }
-    }
-
     &.is-expanded,
     &--is-expanded {
       list-style-image: image-url('nav-menu/expanded.svg');
       list-style-type: circle;
-
-      @if support-for(ie, 8) {
-        .lt-ie9 & {
-          list-style-image: image-url('nav-menu/expanded.png');
-        }
-      }
     }
 
     &.is-collapsed,
@@ -37,20 +25,8 @@
       list-style-image: image-url('nav-menu/collapsed.svg');
       list-style-type: disc;
 
-      @if support-for(ie, 8) {
-        .lt-ie9 & {
-          list-style-image: image-url('nav-menu/collapsed.png');
-        }
-      }
-
       @include rtl() {
         list-style-image: image-url('nav-menu/collapsed-rtl.svg');
-
-        @if support-for(ie, 8) {
-          .lt-ie9 & {
-            list-style-image: image-url('nav-menu/collapsed-rtl.png');
-          }
-        }
       }
     }
   }

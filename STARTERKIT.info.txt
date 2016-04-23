@@ -57,9 +57,6 @@ stylesheets[all][] = css/styles.css
 
 ; If you wish to use conditional stylesheets, you should install the
 ; conditional stylesheets module: https://drupal.org/project/conditional_styles
-; Alternatively, Zen adds conditional-comment-included classes to the html
-; element, such as .lt-ie8, .lt-ie7. To learn more about this technique, see:
-; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ;
 ;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
 ;stylesheets-conditional[(gte IE 9)|(gt IEMobile 7)|(!IE)][] = css/styles.css
