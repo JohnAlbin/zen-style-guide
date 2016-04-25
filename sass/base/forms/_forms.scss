@@ -104,7 +104,7 @@ input[type="search"] {
 // :hover        - Hover styling.
 // :active:hover - Depressed button styling.
 //
-// Markup: forms-button.hbs
+// Markup: forms-button.twig
 //
 // Style guide: forms.base.button
 
@@ -131,7 +131,7 @@ button,
 // HTML5 types: `text`, `search`, `tel`, `url`, `email`, `password`, `date`,
 // `time`, `number`, `range`, `color`, and `file`.
 //
-// Markup: forms-input.hbs
+// Markup: forms-input.twig
 //
 // Style guide: forms.base.input
 
@@ -169,7 +169,7 @@ input {
 // It's recommended that you don't attempt to style these elements. Firefox's
 // implementation doesn't respect `box-sizing`, `padding`, or `width`.
 //
-// Markup: forms-input-checkbox.hbs
+// Markup: forms-input-checkbox.twig
 //
 // Style guide: forms.base.input-checkbox
 
@@ -181,7 +181,7 @@ input {
 // It's recommended that you don't attempt to style these elements. Firefox's
 // implementation doesn't respect `box-sizing`, `padding`, or `width`.
 //
-// Markup: forms-input-radio.hbs
+// Markup: forms-input-radio.twig
 //
 // Style guide: forms.base.input-radio
 
@@ -206,7 +206,7 @@ input[type="radio"] {
 // The `<fieldset>` element groups a set of form fields, optionally under a
 // common name given by the `<legend>` element.
 //
-// Markup: forms-fieldset.hbs
+// Markup: forms-fieldset.twig
 //
 // Style guide: forms.base.fieldset
 
@@ -239,7 +239,7 @@ legend {
 // associated with a specific form control by using the `for` attribute or by
 // putting the form control inside the label element itself.
 //
-// Markup: forms-label.hbs
+// Markup: forms-label.twig
 //
 // Style guide: forms.base.label
 
@@ -257,7 +257,7 @@ label {
 // Known limitation: by default, Chrome and Safari on OS X allow very limited
 // styling of `<select>`, unless a `border` property is set.
 //
-// Markup: forms-select.hbs
+// Markup: forms-select.twig
 //
 // Style guide: forms.base.select
 
@@ -275,7 +275,7 @@ optgroup {
 //
 // The `<textarea>` element represents a multi-line plain text form field.
 //
-// Markup: forms-textarea.hbs
+// Markup: forms-textarea.twig
 //
 // Style guide: forms.base.textarea
 

@@ -11,7 +11,7 @@
 // The `<abbr>` element makes the meanings of abbreviations and acronyms visible
 // on hover.
 //
-// Markup: text-abbr.hbs
+// Markup: text-abbr.twig
 //
 // Style guide: base.text.abbr
 
@@ -35,7 +35,7 @@ abbr[title] {
 // Feel free to use `<b>` in HTML5. `<b>` is meant to highlight words or phrases
 // without conveying additional importance.
 //
-// Markup: text-b.hbs
+// Markup: text-b.twig
 //
 // Weight: -1
 //
@@ -51,7 +51,7 @@ strong {
 //
 // The `<cite>` element represents a reference to a creative work.
 //
-// Markup: text-cite.hbs
+// Markup: text-cite.twig
 //
 // Style guide: base.text.cite
 
@@ -66,7 +66,7 @@ cite {
 // output from a program or computing system. The `<kbd>` element represents
 // user input (typically keyboard input.)
 //
-// Markup: text-code.hbs
+// Markup: text-code.twig
 //
 // Style guide: base.text.code
 
@@ -81,7 +81,7 @@ var {
 //
 // The `<del>` element indicates blocks of text that have been deleted.
 //
-// Markup: text-del.hbs
+// Markup: text-del.twig
 //
 // Style guide: base.text.del
 
@@ -93,7 +93,7 @@ del {
 //
 // The `<dfn>` element represents the defining instance of a term.
 //
-// Markup: text-dfn.hbs
+// Markup: text-dfn.twig
 //
 // Style guide: base.text.dfn
 
@@ -110,7 +110,7 @@ dfn {
 // Feel free to use `<i>` element in HTML5. `<i>` is meant to convey voice,
 // technical terms, etc.
 //
-// Markup: text-i.hbs
+// Markup: text-i.twig
 //
 // Weight: -1
 //
@@ -125,7 +125,7 @@ em {
 //
 // The `<ins>` element indicates additions to the document.
 //
-// Markup: text-ins.hbs
+// Markup: text-ins.twig
 //
 // Style guide: base.text.ins
 
@@ -138,7 +138,7 @@ ins {
 // The `<mark>` element highlights a run of text due to its relevance in another
 // context.
 //
-// Markup: text-mark.hbs
+// Markup: text-mark.twig
 //
 // Style guide: base.text.mark
 
@@ -155,7 +155,7 @@ ins {
 // The `<q>` element represents an inline quote from another source. Longer
 // quotes should use the `<blockquote>` element.
 //
-// Markup: text-q.hbs
+// Markup: text-q.twig
 //
 // Style guide: base.text.q
 
@@ -167,7 +167,7 @@ q {
 //
 // The `<s>` element indicates blocks of text that are no longer relevant.
 //
-// Markup: text-s.hbs
+// Markup: text-s.twig
 //
 // Style guide: base.text.s
 
@@ -180,7 +180,7 @@ s {
 // For de-emphasizing inline or blocks of text, use the `<small>` element to set
 // text at 80% the size of the parent.
 //
-// Markup: text-small.hbs
+// Markup: text-small.twig
 //
 // Style guide: base.text.small
 
@@ -194,7 +194,7 @@ small {
 // The `<sup>` element represents a superscript and the `<sub>` element
 // represents a subscript.
 //
-// Markup: text-sub.hbs
+// Markup: text-sub.twig
 //
 // Style guide: base.text.sub
 
@@ -220,7 +220,7 @@ sub {
 // To underline text use the `<u>` element. Not recommended since underlines are
 // used by web browsers to style hyperlinks.
 //
-// Markup: text-u.hbs
+// Markup: text-u.twig
 //
 // Style guide: base.text.u
 
