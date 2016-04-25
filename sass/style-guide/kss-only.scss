@@ -11,6 +11,7 @@
 
 // Because our grids assume a container has some padding, add the standard
 // padding to the example wrapper.
+// scss-lint:disable IdSelector
 #kssref-layouts-layout-3column .kss-modifier__example {
   @include zen-apply-gutter-padding();
 
