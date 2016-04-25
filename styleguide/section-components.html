@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
-<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Zen 7.x-6.x Style Guide</title>
@@ -12,7 +8,7 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/style-guide/chroma-kss-styles.css">
 <link rel="stylesheet" href="../css/style-guide/kss-only.css">
@@ -27,234 +23,229 @@
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
-        <a href="./">
+        <a class="kss-nav__menu-link" href="./">
           <span class="kss-nav__ref">0</span
           ><span class="kss-nav__name">Overview</span>
         </a>
       </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-sass.html">
-          <span class="kss-nav__ref">1</span
-          ><span class="kss-nav__name">Colors and Sass</span>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-sass.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors and Sass</span>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-base.html">
-          <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Defaults</span>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Defaults</span>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-layouts.html">
-          <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Layouts</span>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layouts.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Layouts</span>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-forms.html">
-          <span class="kss-nav__ref">4</span
-          ><span class="kss-nav__name">Forms</span>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-forms.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Forms</span>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-components.html">
-          <span class="kss-nav__ref">5</span
-          ><span class="kss-nav__name">Components</span>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
         </a>
-        <ul class="kss-nav__menu-child">
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-box">
-                <span class="kss-nav__ref ">5.1</span
-                ><span class="kss-nav__name">Box</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-clearfix">
-                <span class="kss-nav__ref ">5.2</span
-                ><span class="kss-nav__name">Clearfix</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-comments">
-                <span class="kss-nav__ref ">5.3</span
-                ><span class="kss-nav__name">Comment</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-divider">
-                <span class="kss-nav__ref ">5.4</span
-                ><span class="kss-nav__name">Divider</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-header">
-                <span class="kss-nav__ref ">5.5</span
-                ><span class="kss-nav__name">Branding header</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-hidden">
-                <span class="kss-nav__ref ">5.6</span
-                ><span class="kss-nav__name">Hidden</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-highlight-mark">
-                <span class="kss-nav__ref ">5.7</span
-                ><span class="kss-nav__name">Highlight mark</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-inline-links">
-                <span class="kss-nav__ref ">5.8</span
-                ><span class="kss-nav__name">Inline links</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-inline-sibling">
-                <span class="kss-nav__ref ">5.9</span
-                ><span class="kss-nav__name">Inline sibling</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-messages">
-                <span class="kss-nav__ref ">5.10</span
-                ><span class="kss-nav__name">Messages</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-messages--color">
-                <span class="kss-nav__ref ">5.11</span
-                ><span class="kss-nav__name">Message colors</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation">
-                <span class="kss-nav__ref ">5.12</span
-                ><span class="kss-nav__name">Navigation</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-breadcrumb">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.1</span
-                ><span class="kss-nav__name">Breadcrumb navigation</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-more-link">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.2</span
-                ><span class="kss-nav__name">&quot;More&quot; link</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-nav-menu">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.3</span
-                ><span class="kss-nav__name">Nav menu</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-navbar">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.4</span
-                ><span class="kss-nav__name">Navbar</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-pager">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.5</span
-                ><span class="kss-nav__name">Pager</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-skip-link">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.6</span
-                ><span class="kss-nav__name">Skip link</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-navigation-tabs">
-                <span class="kss-nav__ref kss-nav__ref-child">5.12.7</span
-                ><span class="kss-nav__name">Tabs</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-print-none">
-                <span class="kss-nav__ref ">5.13</span
-                ><span class="kss-nav__name">Do not print</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-responsive-video">
-                <span class="kss-nav__ref ">5.14</span
-                ><span class="kss-nav__name">Responsive video</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-visually-hidden">
-                <span class="kss-nav__ref ">5.15</span
-                ><span class="kss-nav__name">Visually hidden</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-watermark">
-                <span class="kss-nav__ref ">5.16</span
-                ><span class="kss-nav__name">Watermark</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-wireframe">
-                <span class="kss-nav__ref ">5.17</span
-                ><span class="kss-nav__name">Wireframe</span>
-              </a>
-            </li>
+                <ul class="kss-nav__menu-child">
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-box">
+              <span class="kss-nav__ref ">5.1</span
+              ><span class="kss-nav__name">Box</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-clearfix">
+              <span class="kss-nav__ref ">5.2</span
+              ><span class="kss-nav__name">Clearfix</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-comments">
+              <span class="kss-nav__ref ">5.3</span
+              ><span class="kss-nav__name">Comment</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-divider">
+              <span class="kss-nav__ref ">5.4</span
+              ><span class="kss-nav__name">Divider</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-header">
+              <span class="kss-nav__ref ">5.5</span
+              ><span class="kss-nav__name">Branding header</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-hidden">
+              <span class="kss-nav__ref ">5.6</span
+              ><span class="kss-nav__name">Hidden</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-highlight-mark">
+              <span class="kss-nav__ref ">5.7</span
+              ><span class="kss-nav__name">Highlight mark</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-inline-links">
+              <span class="kss-nav__ref ">5.8</span
+              ><span class="kss-nav__name">Inline links</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-inline-sibling">
+              <span class="kss-nav__ref ">5.9</span
+              ><span class="kss-nav__name">Inline sibling</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-messages">
+              <span class="kss-nav__ref ">5.10</span
+              ><span class="kss-nav__name">Messages</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-messages--color">
+              <span class="kss-nav__ref ">5.11</span
+              ><span class="kss-nav__name">Message colors</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation">
+              <span class="kss-nav__ref ">5.12</span
+              ><span class="kss-nav__name">Navigation</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-breadcrumb">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.1</span
+              ><span class="kss-nav__name">Breadcrumb navigation</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-more-link">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.2</span
+              ><span class="kss-nav__name">&quot;More&quot; link</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-nav-menu">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.3</span
+              ><span class="kss-nav__name">Nav menu</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-navbar">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.4</span
+              ><span class="kss-nav__name">Navbar</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-pager">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.5</span
+              ><span class="kss-nav__name">Pager</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-skip-link">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.6</span
+              ><span class="kss-nav__name">Skip link</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-navigation-tabs">
+              <span class="kss-nav__ref kss-nav__ref-child">5.12.7</span
+              ><span class="kss-nav__name">Tabs</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-print-none">
+              <span class="kss-nav__ref ">5.13</span
+              ><span class="kss-nav__name">Do not print</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-responsive-video">
+              <span class="kss-nav__ref ">5.14</span
+              ><span class="kss-nav__name">Responsive video</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-visually-hidden">
+              <span class="kss-nav__ref ">5.15</span
+              ><span class="kss-nav__name">Visually hidden</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-watermark">
+              <span class="kss-nav__ref ">5.16</span
+              ><span class="kss-nav__name">Watermark</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-components.html#kssref-components-wireframe">
+              <span class="kss-nav__ref ">5.17</span
+              ><span class="kss-nav__name">Wireframe</span>
+            </a>
+          </li>
+                </ul>
+              </li>
         </ul>
-      </li>
-    </ul>
   </nav>
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-components" class="kss-section kss-section--depth-1">
+  
+      <div id="kssref-components" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
         <a class="kss-title__permalink" href="#kssref-components">
           <span class="kss-title__ref">
-              5
+            5
             <span class="kss-title__permalink-hash">
-                #components
-            </span>
+                              #components
+                          </span>
           </span>
           Components
         </a>
       </h1>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Design components are reusable designs that can be applied using just the CSS
 class names specified in the component.</p>
 
       </div>
+    
+        </div>
+
+    
     </div>
-
-
-      </div>
       <section id="kssref-components-box" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-box">
           <span class="kss-title__ref">
-              5.1
+            5.1
             <span class="kss-title__permalink-hash">
-                #components.box
-            </span>
+                              #components.box
+                          </span>
           </span>
           Box
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>A simple box style.</p>
 <p>A Drupal block is often styled as a box. However, this design component is
 not applied to any blocks by default; it is used as an example of how to
@@ -267,16 +258,16 @@ component with <code>@extend %box;</code>.</p>
 building a good component.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <div class="box [modifier class]">
   <h2 class="box__title">Box title</h2>
   <div class="box__content">
@@ -285,37 +276,7 @@ building a good component.</p>
 </div>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          :hover
-        </div>
-        <div class="kss-modifier__description kss-style">
-          The hover/focus styling.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="box pseudo-class-hover">
-  <h2 class="box__title">Box title</h2>
-  <div class="box__content">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </div>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .box--highlight
-        </div>
-        <div class="kss-modifier__description kss-style">
-          The &quot;highlight&quot; box variant.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="box box--highlight">
-  <h2 class="box__title">Box title</h2>
-  <div class="box__content">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </div>
-</div>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box [modifier class]&quot;&gt;
@@ -327,41 +288,44 @@ building a good component.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/box/_box.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-clearfix" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-clearfix">
           <span class="kss-title__ref">
-              5.2
+            5.2
             <span class="kss-title__permalink-hash">
-                #components.clearfix
-            </span>
+                              #components.clearfix
+                          </span>
           </span>
           Clearfix
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Allows the bottom of an element to extend to the bottom of all floated child
 elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="clearfix">
   <div style="float: left; height: 50px; width: 50%;">A floated item.</div>
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
@@ -370,37 +334,40 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/clearfix/_clearfix.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-comments" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-comments">
           <span class="kss-title__ref">
-              5.3
+            5.3
             <span class="kss-title__permalink-hash">
-                #components.comments
-            </span>
+                              #components.comments
+                          </span>
           </span>
           Comment
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>A single comment in a thread of comments.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <div class="comment__section">
   <article class="comment [modifier class]">
     <header>
@@ -418,55 +385,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </div>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          .comment--preview
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Preview version of comment.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="comment__section">
-  <article class="comment comment--preview">
-    <header>
-      <p><a href="#">Jane A. User</a> replied on <time>Wed, 08/19/2015 - 17:51</time>
-        <a href="#" class="comment__permalink">Permalink</a>
-      </p>
-
-      <h3 class="comment__title">
-        <a href="#">The comment's title</a>
-      </h3>
-    </header>
-
-    <p>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.</p>
-  </article>
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .comment--nested
-        </div>
-        <div class="kss-modifier__description kss-style">
-          A nested comment.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="comment__section">
-  <article class="comment comment--nested">
-    <header>
-      <p><a href="#">Jane A. User</a> replied on <time>Wed, 08/19/2015 - 17:51</time>
-        <a href="#" class="comment__permalink">Permalink</a>
-      </p>
-
-      <h3 class="comment__title">
-        <a href="#">The comment's title</a>
-      </h3>
-    </header>
-
-    <p>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.</p>
-  </article>
-</div>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;comment__section&quot;&gt;
@@ -477,7 +396,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
       &lt;/p&gt;
 
       &lt;h3 class=&quot;comment__title&quot;&gt;
-        &lt;a href=&quot;#&quot;&gt;The comment&#x27;s title&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;The comment&#039;s title&lt;/a&gt;
       &lt;/h3&gt;
     &lt;/header&gt;
 
@@ -487,34 +406,37 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/comment/_comment.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-divider" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-divider">
           <span class="kss-title__ref">
-              5.4
+            5.4
             <span class="kss-title__permalink-hash">
-                #components.divider
-            </span>
+                              #components.divider
+                          </span>
           </span>
           Divider
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Can be used as an <code>&lt;hr&gt;</code>, an empty <code>&lt;div&gt;</code> or as a container.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="divider "></div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -528,7 +450,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider &quot;&gt;&lt;/div&gt;
@@ -545,33 +467,36 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/divider/_divider.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-header" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-header">
           <span class="kss-title__ref">
-              5.5
+            5.5
             <span class="kss-title__permalink-hash">
-                #components.header
-            </span>
+                              #components.header
+                          </span>
           </span>
           Branding header
         </a>
       </h2>
 
-
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <header class="header " role="banner">
   <a href="/" title="Home" rel="home" class="header__logo">
-    <img src="public/sample-inline.png" alt="Home" class="header__logo-image">
+    <img src="kss-assets/sample-inline.png" alt="Home" class="header__logo-image">
   </a>
 
   <div class="header__name-and-slogan">
@@ -595,12 +520,12 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </header>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header &quot; role=&quot;banner&quot;&gt;
   &lt;a href=&quot;/&quot; title=&quot;Home&quot; rel=&quot;home&quot; class=&quot;header__logo&quot;&gt;
-    &lt;img src=&quot;public/sample-inline.png&quot; alt=&quot;Home&quot; class=&quot;header__logo-image&quot;&gt;
+    &lt;img src=&quot;kss-assets/sample-inline.png&quot; alt=&quot;Home&quot; class=&quot;header__logo-image&quot;&gt;
   &lt;/a&gt;
 
   &lt;div class=&quot;header__name-and-slogan&quot;&gt;
@@ -625,24 +550,27 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/header/_header.scss</code>, line 5
+      </div>
+          
+    </section>
       <section id="kssref-components-hidden" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-hidden">
           <span class="kss-title__ref">
-              5.6
+            5.6
             <span class="kss-title__permalink-hash">
-                #components.hidden
-            </span>
+                              #components.hidden
+                          </span>
           </span>
           Hidden
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Hide elements from all users. Compare to the visually-hidden component.</p>
 <p>Used for elements which should not be immediately displayed to any user. An
 example would be a collapsible fieldset that will be expanded with a click
@@ -651,19 +579,19 @@ from a user.</p>
 the <code>.js-hidden</code> class.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="hidden ">
   This content is hidden.
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hidden &quot;&gt;
@@ -672,81 +600,87 @@ the <code>.js-hidden</code> class.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/hidden/_hidden.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-highlight-mark" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-highlight-mark">
           <span class="kss-title__ref">
-              5.7
+            5.7
             <span class="kss-title__permalink-hash">
-                #components.highlight-mark
-            </span>
+                              #components.highlight-mark
+                          </span>
           </span>
           Highlight mark
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>The &quot;new&quot; or &quot;updated&quot; marker. This is a very thin component. A front-end
 developer may choose to delete this component and just style the <code>&lt;mark&gt;</code>
 element directly.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <mark class="highlight-mark">New</mark>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;mark class=&quot;highlight-mark&quot;&gt;New&lt;/mark&gt;
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/highlight-mark/_highlight-mark.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-inline-links" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-inline-links">
           <span class="kss-title__ref">
-              5.8
+            5.8
             <span class="kss-title__permalink-hash">
-                #components.inline-links
-            </span>
+                              #components.inline-links
+                          </span>
           </span>
           Inline links
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>A list of links that are inline with each other.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="inline-links ">
   <li class="inline-links__item"><a href="#">Read more</a></li>
   <li class="inline-links__item"><a href="#">Comment</a></li>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline-links &quot;&gt;
@@ -756,39 +690,42 @@ element directly.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/inline-links/_inline-links.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-inline-sibling" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-inline-sibling">
           <span class="kss-title__ref">
-              5.9
+            5.9
             <span class="kss-title__permalink-hash">
-                #components.inline-sibling
-            </span>
+                              #components.inline-sibling
+                          </span>
           </span>
           Inline sibling
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>An element that needs to appear inline with the content that follows.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <h4 class="inline-sibling ">A Heading</h4>
 <p>A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling &quot;&gt;A Heading&lt;/h4&gt;
@@ -796,37 +733,40 @@ element directly.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/inline-sibling/_inline-sibling.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-messages" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-messages">
           <span class="kss-title__ref">
-              5.10
+            5.10
             <span class="kss-title__permalink-hash">
-                #components.messages
-            </span>
+                              #components.messages
+                          </span>
           </span>
           Messages
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>System alerts.</p>
 <p>Warning messages should use the <code>.messages--warning</code> class. Error messages
 should use the <code>.messages--error</code> class.</p>
 <p>The icon shown is not part of the CSS; it is an SVG image in the HTML.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="messages ">
   <h2 class="visually-hidden">Status message</h2>
 
@@ -881,7 +821,7 @@ should use the <code>.messages--error</code> class.</p>
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;messages &quot;&gt;
@@ -939,80 +879,47 @@ should use the <code>.messages--error</code> class.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/messages/_messages.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-messages--color" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-messages--color">
           <span class="kss-title__ref">
-              5.11
+            5.11
             <span class="kss-title__permalink-hash">
-                #components.messages--color
-            </span>
+                              #components.messages--color
+                          </span>
           </span>
           Message colors
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Drupal system status reports use just the message colors and no other
 styling.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <div class="[modifier class]">
   This is a system status report message.
 </div>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          .messages--ok-color
-        </div>
-        <div class="kss-modifier__description kss-style">
-          &quot;Ok&quot; status.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="messages--ok-color">
-  This is a system status report message.
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .messages--warning-color
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Warning status.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="messages--warning-color">
-  This is a system status report message.
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .messages--error-color
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Error status.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="messages--error-color">
-  This is a system status report message.
-</div>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;[modifier class]&quot;&gt;
@@ -1021,54 +928,57 @@ styling.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/messages/_messages.scss</code>, line 14
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-navigation">
           <span class="kss-title__ref">
-              5.12
+            5.12
             <span class="kss-title__permalink-hash">
-                #components.navigation
-            </span>
+                              #components.navigation
+                          </span>
           </span>
           Navigation
         </a>
       </h2>
 
+    
+        </div>
 
-    </div>
-
-
-      </section>
+    
+    </section>
       <section id="kssref-components-navigation-breadcrumb" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-breadcrumb">
           <span class="kss-title__ref">
-              5.12.1
+            5.12.1
             <span class="kss-title__permalink-hash">
-                #components.navigation.breadcrumb
-            </span>
+                              #components.navigation.breadcrumb
+                          </span>
           </span>
           Breadcrumb navigation
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>The path to the current page in the form of a list of links.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <nav class="breadcrumb " role="navigation">
   <h2 class="breadcrumb__title">You are here</h2>
 
@@ -1081,7 +991,7 @@ styling.</p>
 </nav>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb &quot; role=&quot;navigation&quot;&gt;
@@ -1097,34 +1007,37 @@ styling.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/breadcrumb/_breadcrumb.scss</code>, line 4
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-more-link" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-more-link">
           <span class="kss-title__ref">
-              5.12.2
+            5.12.2
             <span class="kss-title__permalink-hash">
-                #components.navigation.more-link
-            </span>
+                              #components.navigation.more-link
+                          </span>
           </span>
           &quot;More&quot; link
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Styles the &quot;Read more…&quot; and &quot;Help&quot; links common in Drupal.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="more-link ">
   <a href="#">Read more…</a>
 </div>
@@ -1134,7 +1047,7 @@ styling.</p>
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;more-link &quot;&gt;
@@ -1147,35 +1060,38 @@ styling.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/more-link/_more-link.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-nav-menu" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-nav-menu">
           <span class="kss-title__ref">
-              5.12.3
+            5.12.3
             <span class="kss-title__permalink-hash">
-                #components.navigation.nav-menu
-            </span>
+                              #components.navigation.nav-menu
+                          </span>
           </span>
           Nav menu
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>A &quot;nav menu&quot; is secondary, hierarchical navigation which can be displayed to the
 side or below the main content.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="nav-menu ">
   <li class="nav-menu__item">
     <a href="/" class="nav-menu__link">Home</a>
@@ -1206,7 +1122,7 @@ side or below the main content.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;nav-menu &quot;&gt;
@@ -1240,34 +1156,37 @@ side or below the main content.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/nav-menu/_nav-menu.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-navbar" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-navbar">
           <span class="kss-title__ref">
-              5.12.4
+            5.12.4
             <span class="kss-title__permalink-hash">
-                #components.navigation.navbar
-            </span>
+                              #components.navigation.navbar
+                          </span>
           </span>
           Navbar
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>A simple method to get navigation links to appear in one line.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="navbar clearfix">
   <li class="navbar__item"><a href="#">Home</a></li>
   <li class="navbar__item"><a href="#">Blandit Jugis</a></li>
@@ -1279,7 +1198,7 @@ side or below the main content.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;navbar clearfix&quot;&gt;
@@ -1294,35 +1213,38 @@ side or below the main content.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/navbar/_navbar.scss</code>, line 4
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-pager" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-pager">
           <span class="kss-title__ref">
-              5.12.5
+            5.12.5
             <span class="kss-title__permalink-hash">
-                #components.navigation.pager
-            </span>
+                              #components.navigation.pager
+                          </span>
           </span>
           Pager
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Paged navigation is a list of page numbers when more than 1 page of content
 is available.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="pager ">
   <li class="pager__item">
     <a title="Go to first page" href="/admin/content">« first</a>
@@ -1352,7 +1274,7 @@ is available.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager &quot;&gt;
@@ -1385,56 +1307,47 @@ is available.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/pager/_pager.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-skip-link" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-skip-link">
           <span class="kss-title__ref">
-              5.12.6
+            5.12.6
             <span class="kss-title__permalink-hash">
-                #components.navigation.skip-link
-            </span>
+                              #components.navigation.skip-link
+                          </span>
           </span>
           Skip link
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>To make the link completely hidden until a user tabs to the link, combine it
 with the <code>visually-hidden</code> component.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <p class="skip-link__wrapper">
   <a href="#main-menu" class="skip-link visually-hidden--focusable [modifier class]">Jump to navigation</a>
 </p>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          :focus
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Focus styling.
-        </div>
-        <div class="kss-modifier__example">
-          <p class="skip-link__wrapper">
-  <a href="#main-menu" class="skip-link visually-hidden--focusable pseudo-class-focus">Jump to navigation</a>
-</p>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;skip-link__wrapper&quot;&gt;
@@ -1443,30 +1356,33 @@ with the <code>visually-hidden</code> component.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/skip-link/_skip-link.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-tabs" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-components-navigation-tabs">
           <span class="kss-title__ref">
-              5.12.7
+            5.12.7
             <span class="kss-title__permalink-hash">
-                #components.navigation.tabs
-            </span>
+                              #components.navigation.tabs
+                          </span>
           </span>
           Tabs
         </a>
       </h3>
 
-
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="tabs ">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
@@ -1479,7 +1395,7 @@ with the <code>visually-hidden</code> component.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
@@ -1495,30 +1411,33 @@ with the <code>visually-hidden</code> component.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/tabs/_tabs.scss</code>, line 4
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-tabs-primary" class="kss-section kss-section--depth-4">
 
     <div class="kss-style">
       <h4 class="kss-title kss-title--level-4">
         <a class="kss-title__permalink" href="#kssref-components-navigation-tabs-primary">
           <span class="kss-title__ref">
-              5.12.7.1
+            5.12.7.1
             <span class="kss-title__permalink-hash">
-                #components.navigation.tabs.primary
-            </span>
+                              #components.navigation.tabs.primary
+                          </span>
           </span>
           Tabs (primary)
         </a>
       </h4>
 
-
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="tabs ">
   <li class="tabs__tab is-active"><a href="#" class="tabs__tab-link is-active">View <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs__tab"><a href="#" class="tabs__tab-link">Edit</a></li>
@@ -1526,7 +1445,7 @@ with the <code>visually-hidden</code> component.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs &quot;&gt;
@@ -1537,30 +1456,33 @@ with the <code>visually-hidden</code> component.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/tabs/_tabs.scss</code>, line 10
+      </div>
+          
+    </section>
       <section id="kssref-components-navigation-tabs-secondary" class="kss-section kss-section--depth-4">
 
     <div class="kss-style">
       <h4 class="kss-title kss-title--level-4">
         <a class="kss-title__permalink" href="#kssref-components-navigation-tabs-secondary">
           <span class="kss-title__ref">
-              5.12.7.2
+            5.12.7.2
             <span class="kss-title__permalink-hash">
-                #components.navigation.tabs.secondary
-            </span>
+                              #components.navigation.tabs.secondary
+                          </span>
           </span>
           Secondary tabs
         </a>
       </h4>
 
-
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <ul class="tabs--secondary">
   <li class="tabs--secondary__tab is-active"><a href="#" class="tabs--secondary__tab-link is-active">Content <span class="visually-hidden">(active tab)</span></a></li>
   <li class="tabs--secondary__tab"><a href="#" class="tabs--secondary__tab-link">Display</a></li>
@@ -1568,7 +1490,7 @@ with the <code>visually-hidden</code> component.</p>
 </ul>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;tabs--secondary&quot;&gt;
@@ -1579,43 +1501,46 @@ with the <code>visually-hidden</code> component.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/tabs/_tabs.scss</code>, line 16
+      </div>
+          
+    </section>
       <section id="kssref-components-print-none" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-print-none">
           <span class="kss-title__ref">
-              5.13
+            5.13
             <span class="kss-title__permalink-hash">
-                #components.print-none
-            </span>
+                              #components.print-none
+                          </span>
           </span>
           Do not print
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Removes an element from the print version of the web site.</p>
 <p>By importing these CSS rules in a file marked as media &quot;all&quot;, we allow these
 print rules to be aggregated with other stylesheets, for improved front-end
 performance.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <p class="print-none">
   This item will not be printed.
 </p>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;print-none&quot;&gt;
@@ -1624,57 +1549,48 @@ performance.</p>
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/print-none/_print-none.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-responsive-video" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-responsive-video">
           <span class="kss-title__ref">
-              5.14
+            5.14
             <span class="kss-title__permalink-hash">
-                #components.responsive-video
-            </span>
+                              #components.responsive-video
+                          </span>
           </span>
           Responsive video
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Using a wrapper div, embedded videos can be made responsive so that their
 intrinsic aspect ratio is preserved at any screen width. The
 <code>responsive-video__embed</code> class is optional if the embed is an <code>iframe</code>.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <div class="responsive-video [modifier class]">
   <iframe class="responsive-video__embed" width="560" height="315" src="https://www.youtube.com/embed/8N_tupPBtWQ" frameborder="0" allowfullscreen></iframe>
 </div>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          .responsive-video--4-3
-        </div>
-        <div class="kss-modifier__description kss-style">
-          A video with a 4:3 aspect ratio instead of the default 16:9 one.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="responsive-video responsive-video--4-3">
-  <iframe class="responsive-video__embed" width="560" height="315" src="https://www.youtube.com/embed/8N_tupPBtWQ" frameborder="0" allowfullscreen></iframe>
-</div>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;responsive-video [modifier class]&quot;&gt;
@@ -1683,79 +1599,46 @@ intrinsic aspect ratio is preserved at any screen width. The
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/responsive-video/_responsive-video.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-visually-hidden" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-visually-hidden">
           <span class="kss-title__ref">
-              5.15
+            5.15
             <span class="kss-title__permalink-hash">
-                #components.visually-hidden
-            </span>
+                              #components.visually-hidden
+                          </span>
           </span>
           Visually hidden
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Make an element visually hidden, but accessible to screen readers, etc.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Examples
+    
         </div>
-        <div class="kss-modifier__default-name kss-style">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples        </div>
+              <div class="kss-modifier__default-name kss-style">
           Default styling
         </div>
-        <div class="kss-modifier__example">
+              <div class="kss-modifier__example">
           <div class="visually-hidden [modifier class]">
   This text will be read by screen readers, but will be visually hidden.
 </div>
 
         </div>
-        <div class="kss-modifier__name kss-style">
-          .visually-hidden--off
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Turns off the visually-hidden effect.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="visually-hidden visually-hidden--off">
-  This text will be read by screen readers, but will be visually hidden.
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .visually-hidden--focusable
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Makes an element visually hidden by default, but visible when receiving focus.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="visually-hidden visually-hidden--focusable">
-  This text will be read by screen readers, but will be visually hidden.
-</div>
-
-        </div>
-        <div class="kss-modifier__name kss-style">
-          .visually-hidden--focusable:focus
-        </div>
-        <div class="kss-modifier__description kss-style">
-          A focused, and visible, element.
-        </div>
-        <div class="kss-modifier__example">
-          <div class="visually-hidden visually-hidden--focusable pseudo-class-focus">
-  This text will be read by screen readers, but will be visually hidden.
-</div>
-
-        </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;visually-hidden [modifier class]&quot;&gt;
@@ -1764,109 +1647,125 @@ intrinsic aspect ratio is preserved at any screen width. The
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/visually-hidden/_visually-hidden.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-watermark" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-watermark">
           <span class="kss-title__ref">
-              5.16
+            5.16
             <span class="kss-title__permalink-hash">
-                #components.watermark
-            </span>
+                              #components.watermark
+                          </span>
           </span>
           Watermark
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Make the element appear beneath sibling elements, like a watermark.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div>
   <mark class="watermark ">Unpublished</mark>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  [object Object]}
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
   &lt;mark class=&quot;watermark &quot;&gt;Unpublished&lt;/mark&gt;
 
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+  [object Object]}
 &lt;/div&gt;
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>components/watermark/_watermark.scss</code>, line 1
+      </div>
+          
+    </section>
       <section id="kssref-components-wireframe" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-wireframe">
           <span class="kss-title__ref">
-              5.17
+            5.17
             <span class="kss-title__permalink-hash">
-                #components.wireframe
-            </span>
+                              #components.wireframe
+                          </span>
           </span>
           Wireframe
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Add wireframes around main layout elements. <a href="http://www.boxesandarrows.com/view/html_wireframes_and_prototypes_all_gain_and_no_pain">Wireframes</a>
 are useful when prototyping a website.</p>
 <p>This design is not applied to the site unless you set the following Sass
 variable: <code>$with-wireframes: true;</code></p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <div class="wireframe">
-  <p>An item inside a wireframe.</p>
+  [object Object]}
 </div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;wireframe&quot;&gt;
-  &lt;p&gt;An item inside a wireframe.&lt;/p&gt;
+  [object Object]}
 &lt;/div&gt;
 </code></pre>
       </div>
 
-      </section>
-</article>
+            <div class="kss-source kss-style">
+        Source: <code>components/wireframe/_wireframe.scss</code>, line 3
+      </div>
+          
+    </section>
+  </article>
 
 <!-- SCRIPTS -->
-<script src="public/kss.js"></script>
-<script src="public/prettify.js"></script>
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
 <script>
   prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
 </script>
 
 
 
-<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

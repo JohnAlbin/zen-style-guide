@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
-<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Zen 7.x-6.x Style Guide</title>
@@ -12,7 +8,7 @@
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="kss-assets/kss.css">
   <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/style-guide/chroma-kss-styles.css">
 <link rel="stylesheet" href="../css/style-guide/kss-only.css">
@@ -27,205 +23,203 @@
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
-        <a href="./">
+        <a class="kss-nav__menu-link" href="./">
           <span class="kss-nav__ref">0</span
           ><span class="kss-nav__name">Overview</span>
         </a>
       </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-sass.html">
-          <span class="kss-nav__ref">1</span
-          ><span class="kss-nav__name">Colors and Sass</span>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-sass.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors and Sass</span>
         </a>
-        <ul class="kss-nav__menu-child">
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-colors">
-                <span class="kss-nav__ref ">1.1</span
-                ><span class="kss-nav__name">Colors</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-init">
-                <span class="kss-nav__ref ">1.2</span
-                ><span class="kss-nav__name">Initialization partial</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-modules">
-                <span class="kss-nav__ref ">1.3</span
-                ><span class="kss-nav__name">3rd party libraries</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-variables">
-                <span class="kss-nav__ref ">1.4</span
-                ><span class="kss-nav__name">Variables</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-variables-breakpoints">
-                <span class="kss-nav__ref kss-nav__ref-child">1.4.1</span
-                ><span class="kss-nav__name">Breakpoints</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-functions">
-                <span class="kss-nav__ref ">1.5</span
-                ><span class="kss-nav__name">Functions</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins">
-                <span class="kss-nav__ref ">1.6</span
-                ><span class="kss-nav__name">Mixins</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-clearfix">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.1</span
-                ><span class="kss-nav__name">clearfix()</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-image-url">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.2</span
-                ><span class="kss-nav__name">image-url()</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-rtl">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.3</span
-                ><span class="kss-nav__name">rtl()</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-visually-hidden">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.4</span
-                ><span class="kss-nav__name">visually-hidden()</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-visually-hidden--focusable">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.5</span
-                ><span class="kss-nav__name">visually-hidden--focusable()</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-sass.html#kssref-sass-mixins-visually-hidden--off">
-                <span class="kss-nav__ref kss-nav__ref-child">1.6.6</span
-                ><span class="kss-nav__name">visually-hidden--off()</span>
-              </a>
-            </li>
+                <ul class="kss-nav__menu-child">
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-colors">
+              <span class="kss-nav__ref ">1.1</span
+              ><span class="kss-nav__name">Colors</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-init">
+              <span class="kss-nav__ref ">1.2</span
+              ><span class="kss-nav__name">Initialization partial</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-modules">
+              <span class="kss-nav__ref ">1.3</span
+              ><span class="kss-nav__name">3rd party libraries</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables">
+              <span class="kss-nav__ref ">1.4</span
+              ><span class="kss-nav__name">Variables</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables-breakpoints">
+              <span class="kss-nav__ref kss-nav__ref-child">1.4.1</span
+              ><span class="kss-nav__name">Breakpoints</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-functions">
+              <span class="kss-nav__ref ">1.5</span
+              ><span class="kss-nav__name">Functions</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins">
+              <span class="kss-nav__ref ">1.6</span
+              ><span class="kss-nav__name">Mixins</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-clearfix">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.1</span
+              ><span class="kss-nav__name">clearfix()</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-image-url">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.2</span
+              ><span class="kss-nav__name">image-url()</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-rtl">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.3</span
+              ><span class="kss-nav__name">rtl()</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-visually-hidden">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.4</span
+              ><span class="kss-nav__name">visually-hidden()</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-visually-hidden--focusable">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.5</span
+              ><span class="kss-nav__name">visually-hidden--focusable()</span>
+            </a>
+          </li>
+                  <li class="kss-nav__menu-item">
+            <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-mixins-visually-hidden--off">
+              <span class="kss-nav__ref kss-nav__ref-child">1.6.6</span
+              ><span class="kss-nav__name">visually-hidden--off()</span>
+            </a>
+          </li>
+                </ul>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Defaults</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layouts.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Layouts</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-forms.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Forms</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+        </a>
+              </li>
         </ul>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-base.html">
-          <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Defaults</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-layouts.html">
-          <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Layouts</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-forms.html">
-          <span class="kss-nav__ref">4</span
-          ><span class="kss-nav__name">Forms</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-components.html">
-          <span class="kss-nav__ref">5</span
-          ><span class="kss-nav__name">Components</span>
-        </a>
-      </li>
-    </ul>
   </nav>
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-sass" class="kss-section kss-section--depth-1">
+  
+      <div id="kssref-sass" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
         <a class="kss-title__permalink" href="#kssref-sass">
           <span class="kss-title__ref">
-              1
+            1
             <span class="kss-title__permalink-hash">
-                #sass
-            </span>
+                              #sass
+                          </span>
           </span>
           Colors and Sass
         </a>
       </h1>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Documentation for colors and Sass mixins and variables.</p>
 
       </div>
+    
+        </div>
+
+    
     </div>
-
-
-      </div>
       <section id="kssref-sass-colors" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-colors">
           <span class="kss-title__ref">
-              1.1
+            1.1
             <span class="kss-title__permalink-hash">
-                #sass.colors
-            </span>
+                              #sass.colors
+                          </span>
           </span>
           Colors
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Use the <code>color()</code> function to add colors to CSS properties.</p>
 
       </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
+    
         </div>
-        <div class="kss-modifier__example">
+
+          <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example        </div>
+              <div class="kss-modifier__example">
           <!-- This markup is auto-generated from Sass with chroma-kss-markup(). Do not modify. --><div class="kss-style"><h3 class="chroma-kss__title">branding</h3><p class="chroma-kss__description">The site's main colors. Can be used to define colors in other color schemes.</p><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(black)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code></span> <span class="chroma-kss__reference">This color is inherited by: grey-dark "grey" grey-light grey-extra-light text border autocomplete button button-disabled fieldset-summary menu-active progress-bar-bg progress-bar-border resizable-grippie row-stripe row-disabled skip-link-bg status-highlight warning tabs-border tab tab-bg tab-secondary watermark</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #666666"></span><code class="chroma-kss__variable">color(grey-dark)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#666666</code> (black)</span> <span class="chroma-kss__reference">This color is inherited by: progress-bar-border skip-link-bg tab-secondary</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #999999"></span><code class="chroma-kss__variable">color(grey)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#999999</code> (black)</span> <span class="chroma-kss__reference">This color is inherited by: button-disabled fieldset-summary</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #cccccc"></span><code class="chroma-kss__variable">color(grey-light)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#cccccc</code> (black)</span> <span class="chroma-kss__reference">This color is inherited by: border progress-bar-bg row-disabled tabs-border tab-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #eeeeee"></span><code class="chroma-kss__variable">color(grey-extra-light)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#eeeeee</code> (black)</span> <span class="chroma-kss__reference">This color is inherited by: resizable-grippie row-stripe watermark</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(white)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code></span> <span class="chroma-kss__reference">This color is inherited by: text-bg autocomplete-bg autocomplete-select body-bg skip-link tabs-bg tab-text-shadow</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #0072b9"></span><code class="chroma-kss__variable">color(blue)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#0072b9</code></span> <span class="chroma-kss__reference">This color is inherited by: link link-visited autocomplete-select-bg progress-bar status status-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #c00"></span><code class="chroma-kss__variable">color(red)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#c00</code></span> <span class="chroma-kss__reference">This color is inherited by: link-active form-error mark-highlight error error-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fd0"></span><code class="chroma-kss__variable">color(yellow)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fd0</code></span> <span class="chroma-kss__reference">This color is inherited by: mark-bg preview-bg warning-bg warning-border table-drag table-select</span></div><h3 class="chroma-kss__title">functional</h3><p class="chroma-kss__description">Colors used by functional parts of the design.</p><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(text)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (black)</span> <span class="chroma-kss__reference">This color is inherited by: autocomplete button menu-active status-highlight warning tab</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(text-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (white)</span> <span class="chroma-kss__reference">This color is inherited by: autocomplete-bg body-bg tabs-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #0072b9"></span><code class="chroma-kss__variable">color(link)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#0072b9</code> (blue)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #003353"></span><code class="chroma-kss__variable">color(link-visited)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#003353</code> (blue)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #c00"></span><code class="chroma-kss__variable">color(link-active)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#c00</code> (red)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #cccccc"></span><code class="chroma-kss__variable">color(border)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#cccccc</code> (grey-light)</span> <span class="chroma-kss__reference">This color is inherited by: tabs-border</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(autocomplete)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(autocomplete-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (text-bg)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(autocomplete-select)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (white)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #0072b9"></span><code class="chroma-kss__variable">color(autocomplete-select-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#0072b9</code> (blue)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(body-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (text-bg)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(button)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #999999"></span><code class="chroma-kss__variable">color(button-disabled)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#999999</code> (grey)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #999999"></span><code class="chroma-kss__variable">color(fieldset-summary)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#999999</code> (grey)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #c00"></span><code class="chroma-kss__variable">color(form-error)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#c00</code> (red)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #c00"></span><code class="chroma-kss__variable">color(mark-highlight)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#c00</code> (red)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fd0"></span><code class="chroma-kss__variable">color(mark-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fd0</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(menu-active)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fffadb"></span><code class="chroma-kss__variable">color(preview-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fffadb</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #0072b9"></span><code class="chroma-kss__variable">color(progress-bar)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#0072b9</code> (blue)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #cccccc"></span><code class="chroma-kss__variable">color(progress-bar-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#cccccc</code> (grey-light)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #666666"></span><code class="chroma-kss__variable">color(progress-bar-border)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#666666</code> (grey-dark)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #eeeeee"></span><code class="chroma-kss__variable">color(resizable-grippie)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#eeeeee</code> (grey-extra-light)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #eeeeee"></span><code class="chroma-kss__variable">color(row-stripe)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#eeeeee</code> (grey-extra-light)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #cccccc"></span><code class="chroma-kss__variable">color(row-disabled)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#cccccc</code> (grey-light)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(skip-link)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (white)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #666666"></span><code class="chroma-kss__variable">color(skip-link-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#666666</code> (grey-dark)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #0072b9"></span><code class="chroma-kss__variable">color(status)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#0072b9</code> (blue)</span> <span class="chroma-kss__reference">This color is inherited by: status-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #f6fcff"></span><code class="chroma-kss__variable">color(status-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#f6fcff</code> (status)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(status-highlight)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(warning)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fffce6"></span><code class="chroma-kss__variable">color(warning-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fffce6</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fd0"></span><code class="chroma-kss__variable">color(warning-border)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fd0</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #c00"></span><code class="chroma-kss__variable">color(error)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#c00</code> (red)</span> <span class="chroma-kss__reference">This color is inherited by: error-bg</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff0f0"></span><code class="chroma-kss__variable">color(error-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff0f0</code> (error)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #cccccc"></span><code class="chroma-kss__variable">color(tabs-border)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#cccccc</code> (border)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(tabs-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (text-bg)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #000"></span><code class="chroma-kss__variable">color(tab)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#000</code> (text)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fff"></span><code class="chroma-kss__variable">color(tab-text-shadow)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fff</code> (white)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #dddddd"></span><code class="chroma-kss__variable">color(tab-bg)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#dddddd</code> (grey-light)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #666666"></span><code class="chroma-kss__variable">color(tab-secondary)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#666666</code> (grey-dark)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fffadb"></span><code class="chroma-kss__variable">color(table-drag)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fffadb</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #fffdf0"></span><code class="chroma-kss__variable">color(table-select)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#fffdf0</code> (yellow)</span></div><div class="chroma-kss"><span class="chroma-kss__swatch" style="background-color: #eeeeee"></span><code class="chroma-kss__variable">color(watermark)</code> <span class="chroma-kss__alt-text">uses the color:</span> <span class="chroma-kss__value"><code>#eeeeee</code> (grey-extra-light)</span></div></div>
 
         </div>
-      </div>
+            </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!-- This markup is auto-generated from Sass with chroma-kss-markup(). Do not modify. --&gt;&lt;div class=&quot;kss-style&quot;&gt;&lt;h3 class=&quot;chroma-kss__title&quot;&gt;branding&lt;/h3&gt;&lt;p class=&quot;chroma-kss__description&quot;&gt;The site&#x27;s main colors. Can be used to define colors in other color schemes.&lt;/p&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(black)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: grey-dark &quot;grey&quot; grey-light grey-extra-light text border autocomplete button button-disabled fieldset-summary menu-active progress-bar-bg progress-bar-border resizable-grippie row-stripe row-disabled skip-link-bg status-highlight warning tabs-border tab tab-bg tab-secondary watermark&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-dark)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: progress-bar-border skip-link-bg tab-secondary&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: button-disabled fieldset-summary&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-light)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: border progress-bar-bg row-disabled tabs-border tab-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-extra-light)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: resizable-grippie row-stripe watermark&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(white)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: text-bg autocomplete-bg autocomplete-select body-bg skip-link tabs-bg tab-text-shadow&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(blue)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: link link-visited autocomplete-select-bg progress-bar status status-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(red)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: link-active form-error mark-highlight error error-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(yellow)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: mark-bg preview-bg warning-bg warning-border table-drag table-select&lt;/span&gt;&lt;/div&gt;&lt;h3 class=&quot;chroma-kss__title&quot;&gt;functional&lt;/h3&gt;&lt;p class=&quot;chroma-kss__description&quot;&gt;Colors used by functional parts of the design.&lt;/p&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(text)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: autocomplete button menu-active status-highlight warning tab&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(text-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: autocomplete-bg body-bg tabs-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #003353&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link-visited)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#003353&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link-active)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: tabs-border&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-select)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-select-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(body-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(button)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(button-disabled)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (grey)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(fieldset-summary)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (grey)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(form-error)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(mark-highlight)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(mark-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(menu-active)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffadb&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(preview-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffadb&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(resizable-grippie)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(row-stripe)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(row-disabled)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(skip-link)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(skip-link-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: status-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #f6fcff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#f6fcff&lt;/code&gt; (status)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status-highlight)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffce6&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffce6&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(error)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: error-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff0f0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(error-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff0f0&lt;/code&gt; (error)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tabs-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (border)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tabs-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-text-shadow)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #dddddd&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#dddddd&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-secondary)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffadb&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(table-drag)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffadb&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffdf0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(table-select)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffdf0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(watermark)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!-- This markup is auto-generated from Sass with chroma-kss-markup(). Do not modify. --&gt;&lt;div class=&quot;kss-style&quot;&gt;&lt;h3 class=&quot;chroma-kss__title&quot;&gt;branding&lt;/h3&gt;&lt;p class=&quot;chroma-kss__description&quot;&gt;The site&#039;s main colors. Can be used to define colors in other color schemes.&lt;/p&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(black)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: grey-dark &quot;grey&quot; grey-light grey-extra-light text border autocomplete button button-disabled fieldset-summary menu-active progress-bar-bg progress-bar-border resizable-grippie row-stripe row-disabled skip-link-bg status-highlight warning tabs-border tab tab-bg tab-secondary watermark&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-dark)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: progress-bar-border skip-link-bg tab-secondary&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: button-disabled fieldset-summary&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-light)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: border progress-bar-bg row-disabled tabs-border tab-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(grey-extra-light)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: resizable-grippie row-stripe watermark&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(white)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: text-bg autocomplete-bg autocomplete-select body-bg skip-link tabs-bg tab-text-shadow&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(blue)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: link link-visited autocomplete-select-bg progress-bar status status-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(red)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: link-active form-error mark-highlight error error-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(yellow)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt;&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: mark-bg preview-bg warning-bg warning-border table-drag table-select&lt;/span&gt;&lt;/div&gt;&lt;h3 class=&quot;chroma-kss__title&quot;&gt;functional&lt;/h3&gt;&lt;p class=&quot;chroma-kss__description&quot;&gt;Colors used by functional parts of the design.&lt;/p&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(text)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (black)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: autocomplete button menu-active status-highlight warning tab&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(text-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: autocomplete-bg body-bg tabs-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #003353&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link-visited)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#003353&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(link-active)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: tabs-border&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-select)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(autocomplete-select-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(body-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(button)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(button-disabled)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (grey)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #999999&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(fieldset-summary)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#999999&lt;/code&gt; (grey)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(form-error)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(mark-highlight)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(mark-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(menu-active)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffadb&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(preview-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffadb&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(progress-bar-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(resizable-grippie)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(row-stripe)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(row-disabled)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(skip-link)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(skip-link-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #0072b9&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#0072b9&lt;/code&gt; (blue)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: status-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #f6fcff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#f6fcff&lt;/code&gt; (status)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(status-highlight)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffce6&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffce6&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fd0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(warning-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fd0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #c00&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(error)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#c00&lt;/code&gt; (red)&lt;/span&gt; &lt;span class=&quot;chroma-kss__reference&quot;&gt;This color is inherited by: error-bg&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff0f0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(error-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff0f0&lt;/code&gt; (error)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #cccccc&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tabs-border)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#cccccc&lt;/code&gt; (border)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tabs-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (text-bg)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #000&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#000&lt;/code&gt; (text)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fff&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-text-shadow)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fff&lt;/code&gt; (white)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #dddddd&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-bg)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#dddddd&lt;/code&gt; (grey-light)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #666666&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(tab-secondary)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#666666&lt;/code&gt; (grey-dark)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffadb&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(table-drag)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffadb&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #fffdf0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(table-select)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#fffdf0&lt;/code&gt; (yellow)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;chroma-kss&quot;&gt;&lt;span class=&quot;chroma-kss__swatch&quot; style=&quot;background-color: #eeeeee&quot;&gt;&lt;/span&gt;&lt;code class=&quot;chroma-kss__variable&quot;&gt;color(watermark)&lt;/code&gt; &lt;span class=&quot;chroma-kss__alt-text&quot;&gt;uses the color:&lt;/span&gt; &lt;span class=&quot;chroma-kss__value&quot;&gt;&lt;code&gt;#eeeeee&lt;/code&gt; (grey-extra-light)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
 </code></pre>
       </div>
 
-      </section>
+            <div class="kss-source kss-style">
+        Source: <code>init/_colors.scss</code>, line 3
+      </div>
+          
+    </section>
       <section id="kssref-sass-init" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-init">
           <span class="kss-title__ref">
-              1.2
+            1.2
             <span class="kss-title__permalink-hash">
-                #sass.init
-            </span>
+                              #sass.init
+                          </span>
           </span>
           Initialization partial
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>To make it easier to use all variables and mixins in any Sass file in this
 project, each .scss file has a <code>@import &#39;init&#39;;</code> declaration. The _init.scss
 file is in charge of importing all the other partials needed for the
@@ -238,27 +232,27 @@ project.</p>
 </ul>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-modules" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-modules">
           <span class="kss-title__ref">
-              1.3
+            1.3
             <span class="kss-title__permalink-hash">
-                #sass.modules
-            </span>
+                              #sass.modules
+                          </span>
           </span>
           3rd party libraries
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>The following sass modules are shared with all .scsss files:</p>
 <ul>
 <li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
@@ -270,166 +264,152 @@ project.</p>
 <p>Additional pre-built libraries can be found on the <a href="http://www.sache.in/">Sache website</a>.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-variables" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-variables">
           <span class="kss-title__ref">
-              1.4
+            1.4
             <span class="kss-title__permalink-hash">
-                #sass.variables
-            </span>
+                              #sass.variables
+                          </span>
           </span>
           Variables
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Set variables for this site before a library sets its !default value.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-variables-breakpoints" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-variables-breakpoints">
           <span class="kss-title__ref">
-              1.4.1
+            1.4.1
             <span class="kss-title__permalink-hash">
-                #sass.variables.breakpoints
-            </span>
+                              #sass.variables.breakpoints
+                          </span>
           </span>
           Breakpoints
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Use the <code>respond-to()</code> mixin to use named breakpoints. Documentation is
 available in the <a href="https://github.com/at-import/breakpoint/wiki/Respond-To">Breakpoint wiki
 pages</a>.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-functions" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-functions">
           <span class="kss-title__ref">
-              1.5
+            1.5
             <span class="kss-title__permalink-hash">
-                #sass.functions
-            </span>
+                              #sass.functions
+                          </span>
           </span>
           Functions
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Custom functions used on this site.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-sass-mixins">
           <span class="kss-title__ref">
-              1.6
+            1.6
             <span class="kss-title__permalink-hash">
-                #sass.mixins
-            </span>
+                              #sass.mixins
+                          </span>
           </span>
           Mixins
         </a>
       </h2>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Custom mixins used on this site.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-clearfix" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-clearfix">
           <span class="kss-title__ref">
-              1.6.1
+            1.6.1
             <span class="kss-title__permalink-hash">
-                #sass.mixins.clearfix
-            </span>
+                              #sass.mixins.clearfix
+                          </span>
           </span>
           clearfix()
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Allows the bottom of an element to extend to the bottom of all floated
 children elements. @see <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></p>
 <p>We use the micro-clearfix, optimized for use in <code>@extend</code> where fewer <code>&amp;</code> is
 better.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-image-url" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-image-url">
           <span class="kss-title__ref">
-              1.6.2
+            1.6.2
             <span class="kss-title__permalink-hash">
-                #sass.mixins.image-url
-            </span>
+                              #sass.mixins.image-url
+                          </span>
           </span>
           image-url()
         </a>
       </h3>
 
-      <ul class="kss-parameters">
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">$path-to-components</code>
-          <div class="kss-parameters__description">Optional. The relative path from the root sass directory to where your components usually lie. Defaults to <code>$image-url-path-to-components</code>.</div>
-        </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">$path</code>
-          <div class="kss-parameters__description">Required. The path to the image relative to the components directory.</div>
-        </li>
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">$path-to-source</code>
-          <div class="kss-parameters__description">Optional. The relative path from the css directory to the sass directory. Defaults to <code>$image-url-path-to-source</code>.</div>
-        </li>
-      </ul>
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>If you include your images next to your component Sass files, you need to
 specify a url() to point from the generated CSS to the Sass source like this:</p>
 <pre><code class="lang-css">content: url(../sass/components/is-quite/long.svg);
@@ -447,27 +427,48 @@ passing it in as the first parameter of <code>image-url()</code> like this:</p>
 <p>which would output <code>url(../sass/base/grouping/blockquote.svg)</code>.</p>
 
       </div>
-    </div>
+    
+          <div class="kss-parameters__title">Parameters:</div>
+      <ul class="kss-parameters">
+              <li class="kss-parameters__item">
+          <div class="kss-parameters__name"><code>$path-to-components</code></div>
+                      <div class="kss-parameters__no-default"></div>
+                    <div class="kss-parameters__description">Optional. The relative path from the root sass directory to where your components usually lie. Defaults to <code>$image-url-path-to-components</code>.</div>
+        </li>
+              <li class="kss-parameters__item">
+          <div class="kss-parameters__name"><code>$path</code></div>
+                      <div class="kss-parameters__no-default"></div>
+                    <div class="kss-parameters__description">Required. The path to the image relative to the components directory.</div>
+        </li>
+              <li class="kss-parameters__item">
+          <div class="kss-parameters__name"><code>$path-to-source</code></div>
+                      <div class="kss-parameters__no-default"></div>
+                    <div class="kss-parameters__description">Optional. The relative path from the css directory to the sass directory. Defaults to <code>$image-url-path-to-source</code>.</div>
+        </li>
+            </ul>
+            <div class="kss-source">
+        Source: <code>init/image-url/_image-url.scss</code>, line 6
+      </div>
+              </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-rtl" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-rtl">
           <span class="kss-title__ref">
-              1.6.3
+            1.6.3
             <span class="kss-title__permalink-hash">
-                #sass.mixins.rtl
-            </span>
+                              #sass.mixins.rtl
+                          </span>
           </span>
           rtl()
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Includes Right-To-Left language support by adding a parent selector of
 <code>[dir=&quot;rtl&quot;]</code>. Since the dir attribute is usually defined on the html element
 of a page, using this mixin on a ruleset that matches the html element won&#39;t
@@ -475,95 +476,102 @@ work.</p>
 <p>Can be turned off globally by setting <code>$include-rtl: false;</code>.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-visually-hidden" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden">
           <span class="kss-title__ref">
-              1.6.4
+            1.6.4
             <span class="kss-title__permalink-hash">
-                #sass.mixins.visually-hidden
-            </span>
+                              #sass.mixins.visually-hidden
+                          </span>
           </span>
           visually-hidden()
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Make an element visually hidden, but accessible to screen readers, etc.
 @see <a href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility">http://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a></p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-visually-hidden--focusable" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden--focusable">
           <span class="kss-title__ref">
-              1.6.5
+            1.6.5
             <span class="kss-title__permalink-hash">
-                #sass.mixins.visually-hidden--focusable
-            </span>
+                              #sass.mixins.visually-hidden--focusable
+                          </span>
           </span>
           visually-hidden--focusable()
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Makes an element visually hidden by default, but visible when receiving
 focus.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
+    
+    </section>
       <section id="kssref-sass-mixins-visually-hidden--off" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
         <a class="kss-title__permalink" href="#kssref-sass-mixins-visually-hidden--off">
           <span class="kss-title__ref">
-              1.6.6
+            1.6.6
             <span class="kss-title__permalink-hash">
-                #sass.mixins.visually-hidden--off
-            </span>
+                              #sass.mixins.visually-hidden--off
+                          </span>
           </span>
           visually-hidden--off()
         </a>
       </h3>
 
-
-      <div class="kss-description">
+          <div class="kss-description">
         <p>Turns off the visually-hidden effect.</p>
 
       </div>
-    </div>
+    
+        </div>
 
-
-      </section>
-</article>
+    
+    </section>
+  </article>
 
 <!-- SCRIPTS -->
-<script src="public/kss.js"></script>
-<script src="public/prettify.js"></script>
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
 <script>
   prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
 </script>
 
 
 
-<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>
