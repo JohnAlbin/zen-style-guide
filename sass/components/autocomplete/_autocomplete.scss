@@ -5,7 +5,7 @@
 //
 // .is-throbbing - Waiting for search result.
 //
-// Markup: autocomplete.hbs
+// Markup: autocomplete.twig
 //
 // Style guide: forms.autocomplete
 
@@ -41,11 +41,12 @@
     color: color(autocomplete);
     cursor: default;
     white-space: pre;
-  }
 
-  &__list-item--is-selected {
-    background: color(autocomplete-select-bg);
-    color: color(autocomplete-select);
+    &.is-selected,
+    &--is-selected {
+      background: color(autocomplete-select-bg);
+      color: color(autocomplete-select);
+    }
   }
 
   &.is-throbbing,

@@ -14,8 +14,8 @@
 // Support the same browsers as normalize.css v3.
 // Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
 $support-for: (
-  // IE 8-11
-  ie:  8,
+  // IE 9-11
+  ie:  9,
   // The last 4 versions of all other browsers.
   '*': -4,
 );
@@ -49,7 +49,7 @@ $typey-debug: false;
 $base-unit:         'rem';
 
 // px fallbacks for rem units are needed for IE 8 and earlier.
-$rem-fallback:      if(support-for(ie, 8), true, false);
+$rem-fallback:      false;
 
 
 // The following font family declarations use widely available fonts.
