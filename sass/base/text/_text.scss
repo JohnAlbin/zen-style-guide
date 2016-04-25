@@ -142,12 +142,9 @@ ins {
 //
 // Style guide: base.text.mark
 
-@if support-for(ie, 9) {
-  mark {
-    // Address styling not present in IE 8/9.
-    background: color(mark-bg);
-    color: color(text);
-  }
+mark {
+  background: color(mark-bg);
+  color: color(text);
 }
 
 // Quote
