@@ -41,11 +41,12 @@
     color: color(autocomplete);
     cursor: default;
     white-space: pre;
-  }
 
-  &__list-item--is-selected {
-    background: color(autocomplete-select-bg);
-    color: color(autocomplete-select);
+    &.is-selected,
+    &--is-selected {
+      background: color(autocomplete-select-bg);
+      color: color(autocomplete-select);
+    }
   }
 
   &.is-throbbing,

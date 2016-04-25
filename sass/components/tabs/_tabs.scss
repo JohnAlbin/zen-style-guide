@@ -3,21 +3,22 @@
 
 // Tabs
 //
+// The primary and secondary tabs.
+//
 // Markup: tabs.twig
+//
+// .tabs--secondary - Secondary tabs
 //
 // Style guide: components.navigation.tabs
 
-// Tabs (primary)
+// Tabs (stacked)
 //
-// Markup: tabs--primary.twig
+// When the secondary tabs appear directly after the primary tabs, the styling
+// is slightly different.
+//
+// Markup: tabs--stacked.twig
 //
 // Style guide: components.navigation.tabs.primary
-
-// Secondary tabs
-//
-// Markup: tabs--secondary.twig
-//
-// Style guide: components.navigation.tabs.secondary
 
 .tabs,
 %tabs {
@@ -65,16 +66,13 @@
     }
   }
 
-  &__tab-link-common {
+  &__tab-link {
     @include padding(0 1);
     display: block;
     text-decoration: none;
     transition: color .3s, background .3s, border .3s;
     text-shadow: color(tab-text-shadow) 0 1px 0;
-  }
 
-  &__tab-link {
-    @extend %tabs__tab-link-common;
     color: color(tab);
     background: color(tab-bg);
     letter-spacing: 1px;
@@ -96,51 +94,55 @@
   }
 
   &--secondary {
-    @extend %tabs;
     @include margin-top(1);
     @include font-size(s);
     background-image: none;
+  }
 
-    .tabs + &,
-    %tabs + & {
-      @include margin-top(0);
-      background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
+  // When secondary tabs appear directly after primary tabs.
+  & + &--secondary {
+    @include margin-top(0);
+    background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
+  }
+
+  &--secondary &__tab {
+    @include margin((2 - $tab-height)/2 3px);
+    border: 0;
+    background: transparent;
+
+    @include rtl() {
+      float: right;
     }
 
-    &__tab {
-      @include margin((2 - $tab-height)/2 3px);
-      float: left;
+    &.is-active {
+      border-bottom-color: transparent;
+    }
+  }
 
-      @include rtl() {
-        float: right;
-      }
+  &--secondary &__tab-link {
+    border: 1px solid color(tabs-border);
+    border-radius: $base-line-height;
+    color: color(tab-secondary);
+    background: lighten(color(tab-bg), 8%);
+    letter-spacing: normal;
+
+    &:focus,
+    &:hover {
+      color: darken(color(tab-secondary), 20%);
+      background: color(tab-bg);
+      border-color: darken(color(tab-bg), 26.5%);
     }
 
-    &__tab-link {
-      @extend %tabs__tab-link-common;
-      border: 1px solid color(tabs-border);
-      border-radius: $base-line-height;
-      color: color(tab-secondary);
-      background: lighten(color(tab-bg), 8%);
+    &:active {
+      @extend %tabs--secondary__tab-link--is-active;
+    }
 
-      &:focus,
-      &:hover {
-        color: darken(color(tab-secondary), 20%);
-        background: color(tab-bg);
-        border-color: darken(color(tab-bg), 26.5%);
-      }
-
-      &:active {
-        @extend %tabs--secondary__tab-link--is-active;
-      }
-
-      &.is-active,
-      &--is-active {
-        color: lighten(color(tab-bg), 15%);
-        text-shadow: darken(color(tab-secondary), 20%) 0 1px 0;
-        background: color(tab-secondary);
-        border-color: darken(color(tab-secondary), 40%);
-      }
+    &.is-active,
+    &--is-active {
+      color: lighten(color(tab-bg), 15%);
+      text-shadow: darken(color(tab-secondary), 20%) 0 1px 0;
+      background: color(tab-secondary);
+      border-color: darken(color(tab-secondary), 40%);
     }
   }
 }

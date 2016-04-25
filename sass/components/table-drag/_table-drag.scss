@@ -53,6 +53,7 @@
     width: 13px;
   }
 
+  &__handle.is-hover &__handle-icon,
   &__handle-icon--is-hover {
     background-position: 6px -11px;
   }

@@ -57,6 +57,10 @@
     }
   }
 
+  &__highlight {
+    color: color(status-highlight);
+  }
+
   &__list {
     margin: 0;
   }
@@ -100,10 +104,6 @@
     path {
       fill: color(error);
     }
-
-    &__highlighted-text {
-      color: color(status-highlight);
-    }
   }
 }
 
@@ -123,7 +123,7 @@
 
 .messages--error .error,
 .messages.error .error {
-  @extend %messages--error__highlighted-text;
+  @extend %messages__highlight;
 }
 
 // System status report.

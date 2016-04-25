@@ -60,14 +60,14 @@
     @extend %form-item--tight;
   }
 
-  &--radio__label,
-  &--radio &__label {
+  &--radio &__label,
+  &--radio__label {
     display: inline;
     font-weight: normal;
   }
 
-  &--radio__description,
-  &--radio &__description {
+  &--radio &__description,
+  &--radio__description {
     margin-left: 1.4em;
   }
 

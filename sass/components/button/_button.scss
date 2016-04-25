@@ -36,6 +36,10 @@
     color: color(button);
   }
 
+  // Add button variations here.
+
+  // The disabled variation should always go last, so that it overrides any
+  // other variations.
   &[disabled] {
     // Re-set default cursor for disabled elements.
     cursor: default;

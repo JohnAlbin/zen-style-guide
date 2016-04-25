@@ -38,19 +38,21 @@
     border-left-width: 0;
     border-right-width: 0;
     height: 1em;
+  }
 
-    &__wrapper {
-      display: none;
-    }
+  &.is-collapsed &__wrapper,
+  &--is-collapsed__wrapper {
+    display: none;
+  }
 
-    &__legend {
-      background-image: image-url('collapsible-fieldset/collapsed.svg');
-      background-position: 4px 50%;
+  &.is-collapsed &__legend,
+  &--is-collapsed__legend {
+    background-image: image-url('collapsible-fieldset/collapsed.svg');
+    background-position: 4px 50%;
 
-      @include rtl() {
-        background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
-        background-position: right 4px top 50%;
-      }
+    @include rtl() {
+      background-image: image-url('collapsible-fieldset/collapsed-rtl.svg');
+      background-position: right 4px top 50%;
     }
   }
 }
