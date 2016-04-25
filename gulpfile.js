@@ -69,7 +69,7 @@ options.styleGuide = {
   ],
   destination: options.rootPath.styleGuide,
 
-  builder: path.resolve(path.dirname(require.resolve('kss')), 'builder/twig'),
+  builder: 'builder/twig',
 
   // The css and js paths are URLs, like '/misc/jquery.js'.
   // The following paths are relative to the generated style guide.
