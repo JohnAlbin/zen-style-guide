@@ -716,7 +716,8 @@ th {
   white-space: pre;
 }
 
-.autocomplete__list-item--is-selected,
+.autocomplete__list-item.is-selected, .autocomplete__list-item--is-selected,
+#autocomplete li.is-selected,
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -793,16 +794,14 @@ th {
 
 .clearfix:before,
 .header:before,
-.tabs:before,
-.tabs--secondary:before {
+.tabs:before {
   content: '';
   display: table;
 }
 
 .clearfix:after,
 .header:after,
-.tabs:after,
-.tabs--secondary:after {
+.tabs:after {
   content: '';
   display: table;
   clear: both;
@@ -846,23 +845,26 @@ th {
   height: 1em;
 }
 
-.collapsible-fieldset.is-collapsed__wrapper, .collapsible-fieldset--is-collapsed__wrapper,
-.is-collapsed__wrapper.collapsible,
+.collapsible-fieldset.is-collapsed .collapsible-fieldset__wrapper, .collapsible-fieldset--is-collapsed__wrapper, .is-collapsed.collapsible .collapsible-fieldset__wrapper,
 .collapsible.collapsed .fieldset-wrapper {
   display: none;
 }
 
-.collapsible-fieldset.is-collapsed__legend, .collapsible-fieldset--is-collapsed__legend,
-.is-collapsed__legend.collapsible,
-.collapsible.collapsed .fieldset-legend {
+.collapsible-fieldset.is-collapsed .collapsible-fieldset__legend, .collapsible-fieldset--is-collapsed__legend, .is-collapsed.collapsible .collapsible-fieldset__legend,
+.collapsible.collapsed .fieldset-legend,
+.collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
+.collapsible .collapsible-fieldset.is-collapsed .fieldset-legend,
+.is-collapsed.collapsible .fieldset-legend {
   background-image: url(../sass/components/collapsible-fieldset/collapsed.svg);
   background-position: 4px 50%;
 }
 
-[dir="rtl"] .collapsible-fieldset.is-collapsed__legend, [dir="rtl"] .collapsible-fieldset--is-collapsed__legend,
-[dir="rtl"] .is-collapsed__legend.collapsible,
+[dir="rtl"] .collapsible-fieldset.is-collapsed .collapsible-fieldset__legend, [dir="rtl"] .collapsible-fieldset--is-collapsed__legend, [dir="rtl"] .is-collapsed.collapsible .collapsible-fieldset__legend,
 [dir="rtl"] .collapsible.collapsed .fieldset-legend,
-.collapsible.collapsed [dir="rtl"] .fieldset-legend {
+.collapsible.collapsed [dir="rtl"] .fieldset-legend,
+[dir="rtl"] .collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
+.collapsible [dir="rtl"] .collapsible-fieldset.is-collapsed .fieldset-legend,
+[dir="rtl"] .is-collapsed.collapsible .fieldset-legend {
   background-image: url(../sass/components/collapsible-fieldset/collapsed-rtl.svg);
   background-position: right 4px top 50%;
 }
@@ -931,22 +933,19 @@ table .form-item {
   margin: 0;
 }
 
-.form-item--radio__label,
-.form-item--radio .form-item__label,
-label.option, .form-type-radio .form-item__label,
-.form-type-checkbox .form-item__label {
+.form-item--radio .form-item__label, .form-item--radio__label, .form-type-radio .form-item__label,
+.form-type-checkbox .form-item__label,
+label.option {
   display: inline;
   font-weight: normal;
 }
 
-.form-item--radio__description,
-.form-item--radio .form-item__description,
-.form-type-radio .description,
-.form-type-checkbox .description, .form-type-radio .form-item__description,
+.form-item--radio .form-item__description, .form-item--radio__description, .form-type-radio .form-item__description,
 .form-type-checkbox .form-item__description,
+.form-type-radio .description,
+.form-type-checkbox .description,
 .form-item--radio .form-item .description,
-.form-item
-.form-item--radio .description,
+.form-item .form-item--radio .description,
 .form-type-radio .form-item .description,
 .form-item .form-type-radio .description,
 .form-type-checkbox .form-item .description,
@@ -1202,6 +1201,12 @@ span.field-label {
   fill: #0072b9;
 }
 
+.messages__highlight,
+.messages--error .error,
+.messages.error .error {
+  color: #000;
+}
+
 .messages__list {
   margin: 0;
 }
@@ -1251,12 +1256,6 @@ span.field-label {
 
 .messages--error path, .messages.error path {
   fill: #c00;
-}
-
-.messages--error__highlighted-text,
-.messages--error .error,
-.messages.error .error {
-  color: #000;
 }
 
 .more-link,
@@ -1580,8 +1579,11 @@ tr.drag-previous {
   width: 13px;
 }
 
-.table-drag__handle-icon--is-hover,
-.tabledrag-handle-hover .handle {
+.table-drag__handle.is-hover .table-drag__handle-icon, .table-drag__handle-icon--is-hover, .is-hover.tabledrag-handle .table-drag__handle-icon,
+.tabledrag-handle-hover .handle,
+.table-drag__handle.is-hover .tabledrag-handle .handle,
+.tabledrag-handle .table-drag__handle.is-hover .handle,
+.is-hover.tabledrag-handle .handle {
   background-position: 6px -11px;
 }
 
@@ -1644,8 +1646,7 @@ tr.drag-previous {
   background-position: -11px center;
 }
 
-.tabs,
-.tabs--secondary {
+.tabs {
   margin: 1.125rem 0 0;
   line-height: 1.875rem;
   border-bottom: 1px solid #cccccc \0/ie;
@@ -1657,8 +1658,7 @@ tr.drag-previous {
 }
 
 @media print {
-  .tabs,
-  .tabs--secondary {
+  .tabs {
     display: none;
   }
 }
@@ -1683,18 +1683,13 @@ tr.drag-previous {
   border-bottom-color: #fff;
 }
 
-.tabs__tab-link-common,
-.tabs__tab-link,
-.tabs--secondary__tab-link {
+.tabs__tab-link {
   padding: 0 1.5rem;
   display: block;
   text-decoration: none;
   -webkit-transition: color .3s, background .3s, border .3s;
   transition: color .3s, background .3s, border .3s;
   text-shadow: #fff 0 1px 0;
-}
-
-.tabs__tab-link {
   color: #000;
   background: #dddddd;
   letter-spacing: 1px;
@@ -1716,36 +1711,42 @@ tr.drag-previous {
   background-image: none;
 }
 
-.tabs + .tabs--secondary, .tabs--secondary + .tabs--secondary {
+.tabs + .tabs--secondary {
   margin-top: 0;
   background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
   background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
 }
 
-.tabs--secondary__tab {
+.tabs--secondary .tabs__tab {
   margin: 0.5625rem 0.1875rem;
-  float: left;
+  border: 0;
+  background: transparent;
 }
 
-[dir="rtl"] .tabs--secondary__tab {
+[dir="rtl"] .tabs--secondary .tabs__tab {
   float: right;
 }
 
-.tabs--secondary__tab-link {
+.tabs--secondary .tabs__tab.is-active {
+  border-bottom-color: transparent;
+}
+
+.tabs--secondary .tabs__tab-link {
   border: 1px solid #cccccc;
   border-radius: 24px;
   color: #666666;
   background: #f1f1f1;
+  letter-spacing: normal;
 }
 
-.tabs--secondary__tab-link:focus, .tabs--secondary__tab-link:hover {
+.tabs--secondary .tabs__tab-link:focus, .tabs--secondary .tabs__tab-link:hover {
   color: #333333;
   background: #dddddd;
   border-color: #999999;
 }
 
-.tabs--secondary__tab-link.is-active, .tabs--secondary__tab-link--is-active,
-.tabs--secondary__tab-link:active {
+.tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active,
+.tabs--secondary .tabs__tab-link:active {
   color: white;
   text-shadow: #333333 0 1px 0;
   background: #666666;
