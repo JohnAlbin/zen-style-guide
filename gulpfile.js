@@ -155,8 +155,8 @@ gulp.task('styles:production', ['clean:css'], function() {
 // ##################
 // Build style guide.
 // ##################
-gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
-  kss(options.styleGuide, cb);
+gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
+  return kss(options.styleGuide);
 });
 
 gulp.task('styleguide:chroma-kss-markup', function() {
@@ -169,9 +169,9 @@ gulp.task('styleguide:chroma-kss-markup', function() {
 });
 
 // Debug the generation of the style guide with the --verbose flag.
-gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
+gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
   options.styleGuide.verbose = true;
-  kss(options.styleGuide, cb);
+  return kss(options.styleGuide);
 });
 
 // #########################
