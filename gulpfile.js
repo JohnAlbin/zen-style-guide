@@ -57,7 +57,7 @@ options.sassFiles = [
 options.autoprefixer = {
   browsers: [
     '> 1%',
-    'ie 8'
+    'ie 9'
   ]
 };
 
