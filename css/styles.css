@@ -1699,8 +1699,7 @@ tr.drag-previous {
   background: #eaeaea;
 }
 
-.tabs__tab-link.is-active, .tabs__tab-link--is-active,
-.tabs__tab-link:active {
+.tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
   background: #fff;
   text-shadow: none;
 }
@@ -1745,8 +1744,7 @@ tr.drag-previous {
   border-color: #999999;
 }
 
-.tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active,
-.tabs--secondary .tabs__tab-link:active {
+.tabs--secondary .tabs__tab-link:active, .tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active {
   color: white;
   text-shadow: #333333 0 1px 0;
   background: #666666;
