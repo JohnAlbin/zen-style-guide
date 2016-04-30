@@ -82,10 +82,7 @@
       background: lighten(color(tab-bg), 5%);
     }
 
-    &:active {
-      @extend %tabs__tab-link--is-active;
-    }
-
+    &:active,
     &.is-active,
     &--is-active {
       background: color(tabs-bg);
@@ -133,10 +130,7 @@
       border-color: darken(color(tab-bg), 26.5%);
     }
 
-    &:active {
-      @extend %tabs--secondary__tab-link--is-active;
-    }
-
+    &:active,
     &.is-active,
     &--is-active {
       color: lighten(color(tab-bg), 15%);
