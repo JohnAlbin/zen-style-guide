@@ -90,6 +90,16 @@
     }
   }
 
+  // Turns off .tabs styling.
+  &--off {
+    @include margin(0);
+    @if support-for(ie, 9) {
+      border-bottom: 0;
+    }
+    padding: 0;
+    background-image: none;
+  }
+
   &--secondary {
     @include margin-top(1);
     @include font-size(s);
@@ -139,4 +149,13 @@
       border-color: darken(color(tab-secondary), 40%);
     }
   }
+}
+
+//
+// Drupal selectors.
+//
+
+// Views mis-uses the theme hooks for tabs.
+.views-displays .secondary {
+  @extend %tabs--off;
 }
