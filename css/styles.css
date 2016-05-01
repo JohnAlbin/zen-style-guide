@@ -1704,6 +1704,14 @@ tr.drag-previous {
   text-shadow: none;
 }
 
+.tabs--off,
+.views-displays .secondary {
+  margin: 0;
+  border-bottom: 0;
+  padding: 0;
+  background-image: none;
+}
+
 .tabs--secondary {
   margin-top: 1.5rem;
   font-size: 0.875rem;
