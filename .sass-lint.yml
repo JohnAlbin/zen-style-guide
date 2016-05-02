@@ -1,3 +1,6 @@
+# Documentation for the scss-lint Linters is available at:
+# https://github.com/sasstools/sass-lint/tree/master/docs/rules
+
 options:
   formatter: stylish
   merge-default-rules: true
@@ -42,21 +45,12 @@ rules:
   no-misspelled-properties:
     - 2
     - extra-properties:
-      - '*background'
-      - '*background-image'
-      - '*display'
       - '*font-family'
-      - _font-family
       - '*height'
       - 'interpolation-mode'
-      - '*list-style-image'
       - '*margin-left'
-      - '*margin-right'
-      - '*overflow'
-      - '*position'
       - '*vertical-align'
       - '*width'
-      - '*zoom'
   no-qualifying-elements: 0
   no-trailing-zero: 2
   no-transition-all: 2
