@@ -28,40 +28,40 @@ rules:
   single-line-per-selector: 2
 
   # Disallows
-  no-color-keywords: 2
-  no-color-literals: 2
-  no-css-comments: 2
+  # no-color-keywords: 2
+  # no-color-literals: 2
+  # no-css-comments: 2
   no-debug: 2
-  no-duplicate-properties: 2
+  # no-duplicate-properties: 2
   no-empty-rulesets: 2
   no-extends: 0
-  no-ids: 2
-  no-important: 2
+  # no-ids: 2
+  # no-important: 2
   no-invalid-hex: 2
   no-mergeable-selectors: 2
   no-misspelled-properties:
     - 2
     - extra-properties:
-        - '*background'
-        - '*background-image'
-        - '*display'
-        - '*font-family'
-        - _font-family
-        - '*height'
-        - 'interpolation-mode'
-        - '*list-style-image'
-        - '*margin-left'
-        - '*margin-right'
-        - '*overflow'
-        - '*position'
-        - '*vertical-align'
-        - '*width'
-        - '*zoom'
+      - '*background'
+      - '*background-image'
+      - '*display'
+      - '*font-family'
+      - _font-family
+      - '*height'
+      - 'interpolation-mode'
+      - '*list-style-image'
+      - '*margin-left'
+      - '*margin-right'
+      - '*overflow'
+      - '*position'
+      - '*vertical-align'
+      - '*width'
+      - '*zoom'
   no-qualifying-elements: 0
   no-trailing-zero: 2
   no-transition-all: 2
   no-url-protocols: 2
-  no-vendor-prefixes: 2
+  # no-vendor-prefixes: 2
   no-warn: 2
   property-units: 0
 
@@ -93,7 +93,7 @@ rules:
   empty-args: 0
   hex-length: 2
   hex-notation: 2
-  indentation: 2
+  # indentation: 2
   leading-zero: 2
   nesting-depth:
     - 2
@@ -118,3 +118,14 @@ rules:
   # Final Items
   trailing-semicolon: 2
   final-newline: 2
+
+  # Work-around for sass-lint not having per-file/block/line rule config.
+  # @TODO: Re-enable these disabled rules.
+  indentation: 0
+  no-color-keywords: 0
+  no-color-literals: 0
+  no-css-comments: 0
+  no-duplicate-properties: 0
+  no-ids: 0
+  no-important: 0
+  no-vendor-prefixes: 0
