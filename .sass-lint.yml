@@ -120,7 +120,7 @@ rules:
   final-newline: 2
 
   # Work-around for sass-lint not having per-file/block/line rule config.
-  # @TODO: Re-enable these disabled rules.
+  # @TODO: Re-enable these disabled rules. See https://www.drupal.org/node/2717117
   indentation: 0
   no-color-keywords: 0
   no-color-literals: 0
