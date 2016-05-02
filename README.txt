@@ -143,41 +143,23 @@ different tasks automatically:
  - Add vendor prefixes for the browsers you want to support using Autoprefixer.
  - Build a style guide of your components based on the KSS comments in your Sass
    source files.
- - Lint your Sass using scss-lint.
+ - Lint your Sass using sass-lint.
  - Lint your JavaScript using eslint.
  - Watch all of your files as you develop and re-build everything on the fly.
 
 Set up your front-end development build tools:
 
- 1. The Gemfile file in your new sub-theme contains the versions of all the
-    Ruby software you need.
-
-    Note: The only Ruby software we use is scss-lint. We will soon replace it
-    with a tool written in Node.js, but that tool is not quite ready for use.
-
-    To install this software, you will first need to install Ruby:
-    https://www.ruby-lang.org/en/documentation/installation/
-
-    Then type these two commands:
-
-      gem install bundler
-      bundle install
-
-    Alternatively, if you wish to not use any of the Ruby software, you can
-    disable the sass linting task. Edit the gulpfile.js file and set the
-    options.disableTask.lintSass variable to true.
-
- 2. Install Node.js and npm, the Node.js package manager.
+ 1. Install Node.js and npm, the Node.js package manager.
 
     Detailed instructions are available on the "npm quick start guide":
     https://github.com/kss-node/kss-node/wiki/npm-quick-start-guide
 
- 3. The package.json file in your new sub-theme contains the versions of all the
+ 2. The package.json file in your new sub-theme contains the versions of all the
     Node.js software you need. To install them run:
 
       npm install
 
- 4. Install the gulp-cli tool globally. Normally, installing a Node.js globally
+ 3. Install the gulp-cli tool globally. Normally, installing a Node.js globally
     is not recommended, which is why both Gulp and Grunt have created wrapper
     commands that will allow you to run "gulp" or "grunt" from anywhere, while
     using the local version of gulp or grunt that is installed in your project.
@@ -185,12 +167,12 @@ Set up your front-end development build tools:
 
       npm install -g gulp-cli
 
- 5. Set the URL used to access the Drupal website under development. Edit your
+ 4. Set the URL used to access the Drupal website under development. Edit your
     gulpfile.js file and change the options.drupalURL setting:
 
       options.drupalURL = 'http://localhost';
 
- 6. The default gulp task will build your CSS, build your style guide, and lint
+ 5. The default gulp task will build your CSS, build your style guide, and lint
     your Sass and JavaScript. To run the default gulp task, type:
 
       gulp
@@ -206,7 +188,7 @@ Set up your front-end development build tools:
 
 Optional steps:
 
- 7. Modify the box component styling.
+ 6. Modify the box component styling.
 
     The sass/components/box/_box.scss file describes the styles of the "box"
     component. The code comments in that file reiterate the naming conventions
@@ -222,7 +204,7 @@ Optional steps:
     style guide) to see how the box component is applying to your sidebar
     blocks.
 
- 8. Choose your preferred page layout method or grid system.
+ 7. Choose your preferred page layout method or grid system.
 
     By default your new sub-theme is using a responsive layout using Zen Grids.
 
@@ -230,7 +212,7 @@ Optional steps:
     Foundation, etc., you can replace the "layouts/layout-" lines in your
     styles.scss file with a line pointing at your choice of layout CSS file.
 
- 9. Modify the markup in Zen core's template files.
+ 8. Modify the markup in Zen core's template files.
 
     If you decide you want to modify any of the .tpl.php template files in the
     zen folder, copy them to your sub-theme's folder before making any changes.
@@ -238,7 +220,7 @@ Optional steps:
 
     For example, copy zen/templates/page.tpl.php to foo/templates/page.tpl.php.
 
- 10. Modify the markup in Drupal's search form.
+ 9. Modify the markup in Drupal's search form.
 
     Copy the search-block-form.tpl.php template file from the modules/search/
     folder and place it in your sub-theme's template folder. And then rebuild
@@ -252,7 +234,7 @@ Optional steps:
       your sub-theme's template directory and then rebuild the theme registry.
       See the Drupal 7 Theme Guide for more info: https://drupal.org/node/173880
 
- 11. Further extend your sub-theme.
+ 10. Further extend your sub-theme.
 
     Discover further ways to extend your sub-theme by reading Zen's
     documentation online at:
