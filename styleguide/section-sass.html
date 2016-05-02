@@ -64,6 +64,30 @@
               </a>
             </li>
                       <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables-support-for">
+                <span class="kss-nav__ref kss-nav__ref-child">1.4.2</span
+                ><span class="kss-nav__name">Browser support</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables-typey">
+                <span class="kss-nav__ref kss-nav__ref-child">1.4.3</span
+                ><span class="kss-nav__name">Font faces, stacks and sizes.</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables-zen-grids">
+                <span class="kss-nav__ref kss-nav__ref-child">1.4.4</span
+                ><span class="kss-nav__name">Zen grids</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-variables-misc">
+                <span class="kss-nav__ref kss-nav__ref-child">1.4.5</span
+                ><span class="kss-nav__name">Miscellaneous variables</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link" href="section-sass.html#kssref-sass-functions">
                 <span class="kss-nav__ref ">1.5</span
                 ><span class="kss-nav__name">Functions</span>
@@ -180,7 +204,8 @@
         </h2>
 
                   <div class="kss-description">
-            <p>Use the <code>color()</code> function to add colors to CSS properties.</p>
+            <p>Use the <code>color()</code> function to add colors to CSS properties. To learn more,
+<a href="http://johnalbin.github.io/chroma/">read the Chroma documentation</a>.</p>
 
           </div>
         
@@ -326,7 +351,121 @@ pages</a>.</p>
 
       
               <div class="kss-source kss-style">
-          Source: <code>init/_variables.scss</code>, line 83
+          Source: <code>init/_variables.scss</code>, line 92
+        </div>
+          </section>
+          <section id="kssref-sass-variables-support-for" class="kss-section kss-section--depth-3">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-sass-variables-support-for">
+            <span class="kss-title__ref">
+              1.4.2
+              <span class="kss-title__permalink-hash">
+                sass.variables.support-for
+              </span>
+            </span>
+            Browser support
+          </a>
+        </h3>
+
+                  <div class="kss-description">
+            <p>For older versions of browsers, some Sass relies on the <code>support-for()</code> to
+control whether extra CSS is needed to be output. The <code>support-for()</code>
+function and the <code>$support-for</code> variable are documented on the <a href="https://github.com/JohnAlbin/support-for">support-for
+homepage</a>.</p>
+
+          </div>
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>init/_variables.scss</code>, line 8
+        </div>
+          </section>
+          <section id="kssref-sass-variables-typey" class="kss-section kss-section--depth-3">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-sass-variables-typey">
+            <span class="kss-title__ref">
+              1.4.3
+              <span class="kss-title__permalink-hash">
+                sass.variables.typey
+              </span>
+            </span>
+            Font faces, stacks and sizes.
+          </a>
+        </h3>
+
+                  <div class="kss-description">
+            <p>Font styling and line heights are controlled by the several variables that
+used by mixins like <code>type-layout()</code>, <code>margin-top()</code>, and <code>margin-bottom()</code>.
+These variable and mixins are documented on the <a href="https://github.com/jptaranto/typey">Typey
+homepage</a>.</p>
+
+          </div>
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>init/_variables.scss</code>, line 27
+        </div>
+          </section>
+          <section id="kssref-sass-variables-zen-grids" class="kss-section kss-section--depth-3">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-sass-variables-zen-grids">
+            <span class="kss-title__ref">
+              1.4.4
+              <span class="kss-title__permalink-hash">
+                sass.variables.zen-grids
+              </span>
+            </span>
+            Zen grids
+          </a>
+        </h3>
+
+                  <div class="kss-description">
+            <p>The default grid system is built using the Zen Grids sass module. Full
+documentation is available on the <a href="http://zengrids.com/">Zen Grids website</a>.</p>
+<p>Note: if you are more comfortable using another grid system, you can easily
+remove Zen Grids and its layouts.</p>
+
+          </div>
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>init/_variables.scss</code>, line 114
+        </div>
+          </section>
+          <section id="kssref-sass-variables-misc" class="kss-section kss-section--depth-3">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-sass-variables-misc">
+            <span class="kss-title__ref">
+              1.4.5
+              <span class="kss-title__permalink-hash">
+                sass.variables.misc
+              </span>
+            </span>
+            Miscellaneous variables
+          </a>
+        </h3>
+
+                  <div class="kss-description">
+            <p><code>$indent-amount</code> controls the amount lists, blockquotes and comments are indented.</p>
+<p><code>$include-rtl</code> controls whether RTL styles are output. Rather than include a separate <code>*-rtl.css</code> file, Zen 6 uses Drupal 8&#39;s standard <code>[dir=&quot;rtl&quot;]</code> selector for RTL language support.</p>
+
+          </div>
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>init/_variables.scss</code>, line 153
         </div>
           </section>
           <section id="kssref-sass-functions" class="kss-section kss-section--depth-2">
