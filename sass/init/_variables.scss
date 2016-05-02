@@ -5,9 +5,14 @@
 // Style guide: sass.variables
 
 
-//
 // Browser support
 //
+// For older versions of browsers, some Sass relies on the `support-for()` to
+// control whether extra CSS is needed to be output. The `support-for()`
+// function and the `$support-for` variable are documented on the [support-for
+// homepage](https://github.com/JohnAlbin/support-for).
+//
+// Style guide: sass.variables.support-for
 
 // Support the same browsers as normalize.css v3.
 // Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
@@ -19,9 +24,14 @@ $support-for: (
 );
 
 
-//
 // Font faces, stacks and sizes.
 //
+// Font styling and line heights are controlled by the several variables that
+// used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
+// These variable and mixins are documented on the [Typey
+// homepage](https://github.com/jptaranto/typey).
+//
+// Style guide: sass.variables.typey
 
 // The font size set on the root html element.
 $base-font-size:    16px;
@@ -48,7 +58,6 @@ $base-unit:         'rem';
 
 // px fallbacks for rem units are needed for IE 8 and earlier.
 $rem-fallback:      false;
-
 
 // The following font family declarations use widely available fonts.
 // A user's web browser will look at the comma-separated list and will
@@ -102,9 +111,15 @@ $font-watermark:  $impact;
 // @include breakpoint-set('to ems', true);
 
 
-//
 // Zen grids
 //
+// The default grid system is built using the Zen Grids sass module. Full
+// documentation is available on the [Zen Grids website](http://zengrids.com/).
+//
+// Note: if you are more comfortable using another grid system, you can easily
+// remove Zen Grids and its layouts.
+//
+// Style guide: sass.variables.zen-grids
 
 // These are needed for all breakpoints on all layouts.
 $zen-auto-include-grid-item-base: false;
@@ -134,16 +149,19 @@ $zen-layouts: (
 // See $include-rtl below.
 $zen-rtl-selector: '[dir="rtl"]';
 
-//
-// Misc
-//
 
-// The amount lists, blockquotes and comments are indented.
+// Miscellaneous variables
+//
+// `$indent-amount` controls the amount lists, blockquotes and comments are indented.
+//
+// `$include-rtl` controls whether RTL styles are output. Rather than include a separate `*-rtl.css` file, Zen 6 uses Drupal 8's standard `[dir="rtl"]` selector for RTL language support.
+//
+// weight: 10
+//
+// Style guide: sass.variables.misc
+
 $indent-amount: 2 * $base-font-size;
 
-// Drupal RTL support: Rather than include a separate *-rtl.css file, Zen 6 uses
-// Drupal 8's standard [dir='rtl'] selector for RTL language support. You can
-// turn off all RTL CSS by setting the following variable to false.
 $include-rtl: true;
 // Automatically turn off Zen Grids' RTL support if $include-rtl is false.
 @if not $include-rtl {
