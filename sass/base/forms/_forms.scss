@@ -1,3 +1,5 @@
+// sass-lint:disable no-vendor-prefixes, no-css-comments
+
 // Dependencies.
 @import 'components/button/button';
 
@@ -65,21 +67,21 @@ input::-moz-focus-inner {
 // 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
 //    and `video` controls.
 // 2. Correct inability to style clickable `input` types in iOS.
-html input[type="button"], // 1
-[type="reset"],
-[type="submit"] {
+html input[type='button'] /* 1 */,
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button; // 2
 }
 
 // Fix the cursor style for Chrome's increment/decrement buttons. For certain
 // `font-size` values of the `input`, it causes the cursor style of the
 // decrement button to change from `default` to `text`.
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"] {
+input[type='search'] {
   // Address `appearance` set to `searchfield` in Safari and Chrome.
   -webkit-appearance: textfield;
 
@@ -109,9 +111,9 @@ input[type="search"] {
 // Style guide: forms.base.button
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   @extend %button;
 }
 
@@ -136,34 +138,34 @@ button,
 // Style guide: forms.base.input
 
 input {
-  &[type="text"],
-  &[type="search"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="email"],
-  &[type="password"],
-  &[type="date"],
-  &[type="time"],
-  &[type="number"] {
+  &[type='text'],
+  &[type='search'],
+  &[type='tel'],
+  &[type='url'],
+  &[type='email'],
+  &[type='password'],
+  &[type='date'],
+  &[type='time'],
+  &[type='number'] {
     @extend %text-form-element;
   }
 
-  &[type="range"] {
+  &[type='range'] {
     // Add your styles.
   }
 
-  &[type="color"] {
+  &[type='color'] {
     // Add your styles.
   }
 
-  &[type="file"] {
+  &[type='file'] {
     // Add your styles.
   }
 }
 
 // Checkboxes
 //
-// If an `<input>` element has the `type="checkbox"` attribute set, the form
+// If an `<input>` element has the `type='checkbox'` attribute set, the form
 // field is displayed as a checkbox.
 //
 // It's recommended that you don't attempt to style these elements. Firefox's
@@ -175,7 +177,7 @@ input {
 
 // Radio buttons
 //
-// If an `<input>` element has the `type="radio"` attribute set, the form field
+// If an `<input>` element has the `type='radio'` attribute set, the form field
 // is displayed as a radio button.
 //
 // It's recommended that you don't attempt to style these elements. Firefox's
@@ -185,8 +187,8 @@ input {
 //
 // Style guide: forms.base.input-radio
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   @if support-for(ie, 10) {
     // Address box sizing set to `content-box` in IE 8/9/10.
     box-sizing: border-box;

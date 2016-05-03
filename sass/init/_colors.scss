@@ -1,8 +1,9 @@
-// scss-lint:disable ColorKeyword, ColorVariable, SpaceAfterComma
+// sass-lint:disable indentation, no-color-keywords
 
 // Colors
 //
-// Use the `color()` function to add colors to CSS properties.
+// Use the `color()` function to add colors to CSS properties. To learn more,
+// [read the Chroma documentation](http://johnalbin.github.io/chroma/).
 //
 // Markup: chroma-kss-markup.twig
 //
@@ -11,7 +12,7 @@
 // Style guide: sass.colors
 
 // Define the default color scheme's color names.
-$chroma: define-default-color-scheme('branding', "The site's main colors. Can be used to define colors in other color schemes.");
+$chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
 
 $chroma: add-colors((
   black:                  #000,

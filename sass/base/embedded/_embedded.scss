@@ -19,6 +19,7 @@ img {
   }
   @if support-for(ie, 7) {
     // Improve image quality when scaled in IE 7.
+    // sass-lint:disable no-vendor-prefixes
     -ms-interpolation-mode: bicubic;
   }
 }

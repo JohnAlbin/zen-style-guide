@@ -27,8 +27,10 @@ options.theme = {
   js    : options.rootPath.theme + 'js/'
 };
 
-// Set the URL used to access the Drupal website under development.
-options.drupalURL = 'http://localhost';
+// Set the URL used to access the Drupal website under development. This will
+// allow Browser Sync to serve the website and update CSS changes on the fly.
+options.drupalURL = '';
+// options.drupalURL = 'http://localhost';
 
 // Define the node-sass configuration. The includePaths is critical!
 options.sass = {
@@ -37,7 +39,6 @@ options.sass = {
     options.theme.sass,
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/chroma-sass/sass',
-    options.rootPath.project + 'node_modules/sassy-maps/sass',
     options.rootPath.project + 'node_modules/support-for/sass',
     options.rootPath.project + 'node_modules/typey/stylesheets',
     options.rootPath.project + 'node_modules/zen-grids/sass'
@@ -45,19 +46,11 @@ options.sass = {
   outputStyle: 'expanded'
 };
 
-options.sassFiles = [
-  options.theme.sass + '**/*.scss',
-  // Do not open Sass partials as they will be included as needed.
-  '!' + options.theme.sass + '**/_*.scss',
-  // Chroma markup has its own gulp task.
-  '!' + options.theme.sass + 'style-guide/chroma-kss-markup.scss'
-];
-
 // Define which browsers to add vendor prefixes for.
 options.autoprefixer = {
   browsers: [
     '> 1%',
-    'ie 8'
+    'ie 9'
   ]
 };
 
@@ -85,11 +78,6 @@ options.styleGuide = {
   title: 'Zen 7.x-6.x Style Guide'
 };
 
-// Define the path to the project's .scss-lint.yml.
-options.scssLint = {
-  yml: options.rootPath.project + '.scss-lint.yml'
-};
-
 // Define the paths to the JS files to lint.
 options.eslint = {
   files  : [
@@ -102,13 +90,6 @@ options.eslint = {
 // Gulp watch. Since polling is less efficient, we disable polling by default.
 options.gulpWatchOptions = {};
 // options.gulpWatchOptions = {interval: 1000, mode: 'poll'};
-
-// If you wish to disable the following tasks, you can set these variables to
-// true (which is simpler than re-writing the Gulp tasks to remove them.)
-options.disableTask = {
-  lintSass: false,
-  browserSync: false
-};
 
 
 // ################################
@@ -133,8 +114,16 @@ gulp.task('build', ['styles:production', 'styleguide', 'lint']);
 // ##########
 // Build CSS.
 // ##########
+var sassFiles = [
+  options.theme.sass + '**/*.scss',
+  // Do not open Sass partials as they will be included as needed.
+  '!' + options.theme.sass + '**/_*.scss',
+  // Chroma markup has its own gulp task.
+  '!' + options.theme.sass + 'style-guide/chroma-kss-markup.scss'
+];
+
 gulp.task('styles', ['clean:css'], function() {
-  return gulp.src(options.sassFiles)
+  return gulp.src(sassFiles)
     .pipe($.sourcemaps.init())
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
@@ -145,7 +134,7 @@ gulp.task('styles', ['clean:css'], function() {
 });
 
 gulp.task('styles:production', ['clean:css'], function() {
-  return gulp.src(options.sassFiles)
+  return gulp.src(sassFiles)
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.autoprefixer(options.autoprefixer))
     .pipe($.size({showFiles: true}))
@@ -155,8 +144,8 @@ gulp.task('styles:production', ['clean:css'], function() {
 // ##################
 // Build style guide.
 // ##################
-gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
-  kss(options.styleGuide, cb);
+gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
+  return kss(options.styleGuide);
 });
 
 gulp.task('styleguide:chroma-kss-markup', function() {
@@ -169,9 +158,9 @@ gulp.task('styleguide:chroma-kss-markup', function() {
 });
 
 // Debug the generation of the style guide with the --verbose flag.
-gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function(cb) {
+gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
   options.styleGuide.verbose = true;
-  kss(options.styleGuide, cb);
+  return kss(options.styleGuide);
 });
 
 // #########################
@@ -196,18 +185,17 @@ gulp.task('lint:js-with-fail', function() {
 
 // Lint Sass.
 gulp.task('lint:sass', function() {
-  if (options.disableTask.lintSass) {
-    return Promise.resolve();
-  }
   return gulp.src(options.theme.sass + '**/*.scss')
-    .pipe($.scssLint({'bundleExec': true, 'config': options.scssLint.yml}));
+    .pipe($.sassLint())
+    .pipe($.sassLint.format());
 });
 
 // Lint Sass and throw an error for a CI to catch.
 gulp.task('lint:sass-with-fail', function() {
   return gulp.src(options.theme.sass + '**/*.scss')
-    .pipe($.scssLint({'bundleExec': true, 'config': options.scssLint.yml}))
-    .pipe($.scssLint.failReporter());
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError());
 });
 
 // ##############################
@@ -216,7 +204,7 @@ gulp.task('lint:sass-with-fail', function() {
 gulp.task('watch', ['browser-sync', 'watch:lint-and-styleguide', 'watch:js']);
 
 gulp.task('browser-sync', ['watch:css'], function() {
-  if (options.disableTask.browserSync) {
+  if (!options.drupalURL) {
     return Promise.resolve();
   }
   return browserSync.init({

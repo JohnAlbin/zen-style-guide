@@ -14,6 +14,7 @@
 
 .button,
 %button {
+  // sass-lint:disable no-vendor-prefixes
   -moz-appearance: button;
   -webkit-appearance: button;
   // Some styles don't apply to <a> links since they are inline elements by default.
