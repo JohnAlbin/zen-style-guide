@@ -4,18 +4,26 @@ This style guide documents the designs of this website which are built with comp
 
 ## Organization
 
-We categorize our CSS styles to make them easy to find and apply to our HTML.
+Design components are reusable designs that can be applied using just the CSS class names specified in the component. We categorize our components to make them easy to find.
 
-- Defaults: These are the default base styles applied to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.
-- Layouts: These are the layout components that position major chunks of the page. They just apply positioning, no other styles.
-- Forms: Form components are specialized design components that are applied to forms or form elements.
-- Components: Design components are reusable designs that can be applied using just the CSS class names specified in the component.
-- Colors and Sass: Colors used throughout the site. And Sass documentation for mixins, etc.
+<dl>
+<dt>**Defaults**</dt>
+<dd>`sass/base` — The default “base” components apply to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</dd>
+<dt>**Layouts**</dt>
+<dd>`sass/layouts` — Layout components position major chunks of the page. They just apply positioning, no other styles.</dd>
+<dt>**Components**</dt>
+<dd>`sass/components` — Miscellaneous components are grouped together, but feel free to further categorize these.</dd>
+<dt>**Navigation**</dt>
+<dd>`sass/navigation` — Navigation components are specialized design components that are applied to website navigation.</dd>
+<dt>**Forms**</dt>
+<dd>`sass/forms` — Form components are specialized design components that are applied to forms or form elements.</dd>
+</dl>
 
-While our styles are organized as above in the style guide, our Sass files are organized in a file hierarchy like this:
+In addition to the components, our component library also contains these folders:
 
-- `sass/init`: The Sass used to initialize everything we need: variables, 3rd-party libraries, custom mixins and custom functions.
-- `sass/base`: default HTML styles
-- `sass/components`: component-based styles
-- `sass/layouts`: component styles that only apply layout to major chunks of the page
-- `sass/style-guide`: some helper files needed to build this automated style guide
+<dl>
+<dt>**Colors and Sass**</dt>
+<dd>`sass/init` — This Sass documents the colors used throughout the site and various Sass variables, functions and mixins. It also initializes everything we need for all other Sass files: variables, 3rd-party libraries, custom mixins and custom functions.</dd>
+<dt>**Style guide helper files**</dt>
+<dd>`sass/style-guide` — files needed to build this automated style guide; includes some CSS overrides for the default KSS style guide</dd>
+</dl>
