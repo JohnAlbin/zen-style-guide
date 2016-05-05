@@ -11,7 +11,7 @@
 html {
   @include define-type-sizing();
   // Set default font family to sans-serif.
-  font-family: $font-body;
+  @include typeface(body);
   // Prevent iOS text size adjust after orientation change, without disabling
   // user zoom.
   -ms-text-size-adjust: 100%;

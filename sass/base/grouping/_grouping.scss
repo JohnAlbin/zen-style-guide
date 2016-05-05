@@ -178,8 +178,8 @@ pre {
 
 %monospace {
   // Address odd `em`-unit font size rendering in all browsers.
-  // The value of $font-monospace ends with ", serif".
-  font-family: $font-monospace;
+  // The font-family value ends with ", serif".
+  @include typeface(monospace);
   font-size: 1em;
 }
 
