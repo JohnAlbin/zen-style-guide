@@ -61,22 +61,27 @@
     <h1 id="kss-style-guide">KSS Style Guide</h1>
 <p>This style guide documents the designs of this website which are built with component-based styles and Sass variables, functions and mixins. To ensure it is always up-to-date, this style guide is automatically generated from comments in the Sass files.</p>
 <h2 id="organization">Organization</h2>
-<p>We categorize our CSS styles to make them easy to find and apply to our HTML.</p>
-<ul>
-<li>Defaults: These are the default base styles applied to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</li>
-<li>Layouts: These are the layout components that position major chunks of the page. They just apply positioning, no other styles.</li>
-<li>Forms: Form components are specialized design components that are applied to forms or form elements.</li>
-<li>Components: Design components are reusable designs that can be applied using just the CSS class names specified in the component.</li>
-<li>Colors and Sass: Colors used throughout the site. And Sass documentation for mixins, etc.</li>
-</ul>
-<p>While our styles are organized as above in the style guide, our Sass files are organized in a file hierarchy like this:</p>
-<ul>
-<li><code>sass/init</code>: The Sass used to initialize everything we need: variables, 3rd-party libraries, custom mixins and custom functions.</li>
-<li><code>sass/base</code>: default HTML styles</li>
-<li><code>sass/components</code>: component-based styles</li>
-<li><code>sass/layouts</code>: component styles that only apply layout to major chunks of the page</li>
-<li><code>sass/style-guide</code>: some helper files needed to build this automated style guide</li>
-</ul>
+<p>Design components are reusable designs that can be applied using just the CSS class names specified in the component. We categorize our components to make them easy to find.</p>
+<dl>
+<dt><strong>Defaults</strong></dt>
+<dd><code>sass/base</code> — The default “base” components apply to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</dd>
+<dt><strong>Layouts</strong></dt>
+<dd><code>sass/layouts</code> — Layout components position major chunks of the page. They just apply positioning, no other styles.</dd>
+<dt><strong>Components</strong></dt>
+<dd><code>sass/components</code> — Miscellaneous components are grouped together, but feel free to further categorize these.</dd>
+<dt><strong>Navigation</strong></dt>
+<dd><code>sass/navigation</code> — Navigation components are specialized design components that are applied to website navigation.</dd>
+<dt><strong>Forms</strong></dt>
+<dd><code>sass/forms</code> — Form components are specialized design components that are applied to forms or form elements.</dd>
+</dl>
+
+<p>In addition to the components, our component library also contains these folders:</p>
+<dl>
+<dt><strong>Colors and Sass</strong></dt>
+<dd><code>sass/init</code> — This Sass documents the colors used throughout the site and various Sass variables, functions and mixins. It also initializes everything we need for all other Sass files: variables, 3rd-party libraries, custom mixins and custom functions.</dd>
+<dt><strong>Style guide helper files</strong></dt>
+<dd><code>sass/style-guide</code> — files needed to build this automated style guide; includes some CSS overrides for the default KSS style guide</dd>
+</dl>
 
   </div>
 </article>

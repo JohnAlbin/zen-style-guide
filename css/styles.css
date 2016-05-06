@@ -20,6 +20,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: #000;
+  background-color: #fff;
 }
 
 article,
@@ -1760,6 +1762,9 @@ tr.drag-previous {
 }
 
 .watermark {
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   display: block;
   height: 0;
   overflow: visible;
@@ -1767,9 +1772,6 @@ tr.drag-previous {
   color: #eeeeee;
   font-size: 75px;
   line-height: 1;
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;

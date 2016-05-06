@@ -37,7 +37,7 @@ textarea {
   margin: 0;
   @if support-for(ie, 7) {
     // Address `font-family` inconsistency between `textarea` and other form in IE 7
-    *font-family: $font-body;
+    @include typeface(body);
     // Improve appearance and consistency with IE 6/7.
     *vertical-align: middle;
   }
