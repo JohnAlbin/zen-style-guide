@@ -119,7 +119,7 @@ var sassFiles = [
   // Do not open Sass partials as they will be included as needed.
   '!' + options.theme.sass + '**/_*.scss',
   // Chroma markup has its own gulp task.
-  '!' + options.theme.sass + 'style-guide/chroma-kss-markup.scss'
+  '!' + options.theme.sass + 'style-guide/kss-example-chroma.scss'
 ];
 
 gulp.task('styles', ['clean:css'], function() {
@@ -144,21 +144,21 @@ gulp.task('styles:production', ['clean:css'], function() {
 // ##################
 // Build style guide.
 // ##################
-gulp.task('styleguide', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
+gulp.task('styleguide', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
   return kss(options.styleGuide);
 });
 
-gulp.task('styleguide:chroma-kss-markup', function() {
-  return gulp.src(options.theme.sass + 'style-guide/chroma-kss-markup.scss')
+gulp.task('styleguide:kss-example-chroma', function() {
+  return gulp.src(options.theme.sass + 'style-guide/kss-example-chroma.scss')
     .pipe(sass(options.sass).on('error', sass.logError))
     .pipe($.replace(/(\/\*|\*\/)\n/g, ''))
-    .pipe($.rename('chroma-kss-markup.twig'))
+    .pipe($.rename('kss-example-chroma.twig'))
     .pipe($.size({showFiles: true}))
     .pipe(gulp.dest(options.theme.css + 'style-guide'));
 });
 
 // Debug the generation of the style guide with the --verbose flag.
-gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:chroma-kss-markup'], function() {
+gulp.task('styleguide:debug', ['clean:styleguide', 'styleguide:kss-example-chroma'], function() {
   options.styleGuide.verbose = true;
   return kss(options.styleGuide);
 });
