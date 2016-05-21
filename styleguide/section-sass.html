@@ -148,13 +148,18 @@
         </a>
               </li>
           <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-forms.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Forms</span>
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Components</span>
         </a>
               </li>
           <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Components</span>
+        <a class="kss-nav__menu-link" href="section-navigation.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Navigation</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-forms.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Forms</span>
         </a>
               </li>
         </ul>
@@ -570,7 +575,7 @@ bit of the path in your Sass code like this:</p>
 <pre><code class="lang-scss">content: image-url(is-quite/short.svg);
 </code></pre>
 <p>If you want to point at an image that is not in the components sub-directory
-of your sass directory, you can override the default $path-to-components by
+of your sass directory, you can override the default $subdirectory by
 passing it in as the first parameter of <code>image-url()</code> like this:</p>
 <pre><code class="lang-scss">content: image-url(base, grouping/blockquote.svg);
 </code></pre>
@@ -581,21 +586,27 @@ passing it in as the first parameter of <code>image-url()</code> like this:</p>
                               <div class="kss-parameters__title">Parameters:</div>
             <ul class="kss-parameters">
                       <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>$path-to-components</code></div>
+              <div class="kss-parameters__name"><code>$subdirectory</code></div>
               <div class="kss-parameters__description">
-                Optional. The relative path from the root sass directory to where your components usually lie. Defaults to <code>$image-url-path-to-components</code>.
+                Optional. The relative path from the root of your Sass source to the sub-directory where components usually lie.
+                                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>$image-url-subdirectory</code>
+                  </div>
                               </div>
             </li>
                                         <li class="kss-parameters__item">
               <div class="kss-parameters__name"><code>$path</code></div>
               <div class="kss-parameters__description">
-                Required. The path to the image relative to the components directory.
+                Required. The path to the image relative to the <code>$subdirectory</code>.
                               </div>
             </li>
                                         <li class="kss-parameters__item">
               <div class="kss-parameters__name"><code>$path-to-source</code></div>
               <div class="kss-parameters__description">
-                Optional. The relative path from the css directory to the sass directory. Defaults to <code>$image-url-path-to-source</code>.
+                Optional. The relative path from the css build directory to the sass source directory.
+                                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>$image-url-path-to-source</code>
+                  </div>
                               </div>
             </li>
                       </ul>
@@ -629,7 +640,19 @@ work.</p>
 
           </div>
         
-              </div>
+                              <div class="kss-parameters__title">Parameters:</div>
+            <ul class="kss-parameters">
+                      <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$selector</code></div>
+              <div class="kss-parameters__description">
+                The RTL parent selector.
+                                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>&#039;[dir=&quot;rtl&quot;]&#039;</code>
+                  </div>
+                              </div>
+            </li>
+                      </ul>
+                        </div>
 
       
               <div class="kss-source kss-style">
