@@ -13,10 +13,8 @@
 // Style guide: base.embedded.img
 
 img {
-  @if support-for(ie, 10) {
-    // Remove border when inside `a` element in IE 8/9/10.
-    border: 0;
-  }
+  // Remove the border on images inside links in IE <11.
+  border-style: none;
   @if support-for(ie, 7) {
     // Improve image quality when scaled in IE 7.
     // sass-lint:disable no-vendor-prefixes
@@ -43,6 +41,6 @@ svg {
 // Style guide: base.embedded.svg
 
 svg:not(:root) {
-  // Correct overflow not hidden in IE 9/10/11.
+  // Hide the overflow in IE.
   overflow: hidden;
 }

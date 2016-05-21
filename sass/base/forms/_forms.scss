@@ -15,9 +15,9 @@
 // Style guide: forms.base
 
 //
-// The following 8 rules are from normalize.css and help to fix inconsistencies
+// The following rules are from normalize.css and help to fix inconsistencies
 // across various browsers. You should probably leave these rules as is and jump
-// to the "Buttons" rule on line 95 before you start editing this file.
+// to the "Buttons" rule on line 106 before you start editing this file.
 //
 
 button,
@@ -28,12 +28,9 @@ textarea {
   // Keep form elements constrained in their containers.
   box-sizing: border-box;
   max-width: 100%;
-  // Correct color not being inherited.
-  // Known issue: affects color of disabled elements.
-  color: inherit;
-  // Correct font properties not being inherited.
+  // Change font properties to `inherit` in all browsers (opinionated).
   font: inherit;
-  // Address margins set differently in Firefox 4+, Safari, and Chrome.
+  // Remove the margin in Firefox and Safari.
   margin: 0;
   @if support-for(ie, 7) {
     // Address `font-family` inconsistency between `textarea` and other form in IE 7
@@ -43,55 +40,67 @@ textarea {
   }
 }
 
-// Address `overflow` set to `hidden` in IE 8/9/10/11.
+// Show the overflow in IE.
 button {
   overflow: visible;
 }
 
-// Address inconsistent `text-transform` inheritance for `button` and `select`.
-// All other form control elements do not inherit `text-transform` values.
-// Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
-// Correct `select` style inheritance in Firefox.
+// Remove the inheritance of text transform in Edge, Firefox, and IE.
 button,
 select {
   text-transform: none;
 }
 
-// Remove inner padding and border in Firefox 4+.
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-// 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-//    and `video` controls.
-// 2. Correct inability to style clickable `input` types in iOS.
-html input[type='button'] /* 1 */,
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+button,
+// 1
+html [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button; // 2
 }
 
-// Fix the cursor style for Chrome's increment/decrement buttons. For certain
-// `font-size` values of the `input`, it causes the cursor style of the
-// decrement button to change from `default` to `text`.
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+// Show the overflow in Edge.
+input {
+  overflow: visible;
+  @if support-for(firefox, 29) {
+    // Firefox sets `line-height` using `!important` in the UA stylesheet.
+    line-height: normal;
+  }
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type='search'] {
-  // Address `appearance` set to `searchfield` in Safari and Chrome.
+[type='search'] {
+  // Correct the odd appearance in Chrome and Safari.
   -webkit-appearance: textfield;
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
 
-  // Remove inner padding and search cancel button in Safari and Chrome on OS X.
-  // Safari (but not Chrome) clips the cancel button when the search input has
-  // padding (and `textfield` appearance).
+  // Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
+}
+
+// Correct the text style of placeholders in Chrome, Edge, and Safari.
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+::-webkit-file-upload-button {
+  // Correct the inability to style clickable types in iOS and Safari.
+  -webkit-appearance: button;
+  // Change font properties to `inherit` in Safari.
+  font: inherit;
 }
 
 // Buttons
@@ -120,10 +129,6 @@ button,
 // The %text-form-element can be used to style `<input>` text types and
 // `<textarea>` elements at the same time.
 %text-form-element {
-  // Address Firefox 4+ setting `line-height` on `input` using `!important` in
-  // the UA stylesheet.
-  line-height: inherit;
-
   // Add your styles.
 }
 
@@ -137,30 +142,28 @@ button,
 //
 // Style guide: forms.base.input
 
-input {
-  &[type='text'],
-  &[type='search'],
-  &[type='tel'],
-  &[type='url'],
-  &[type='email'],
-  &[type='password'],
-  &[type='date'],
-  &[type='time'],
-  &[type='number'] {
-    @extend %text-form-element;
-  }
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='email'],
+[type='password'],
+[type='date'],
+[type='time'],
+[type='number'] {
+  @extend %text-form-element !optional;
+}
 
-  &[type='range'] {
-    // Add your styles.
-  }
+[type='range'] {
+  // Add your styles.
+}
 
-  &[type='color'] {
-    // Add your styles.
-  }
+[type='color'] {
+  // Add your styles.
+}
 
-  &[type='file'] {
-    // Add your styles.
-  }
+[type='file'] {
+  // Add your styles.
 }
 
 // Checkboxes
@@ -187,14 +190,12 @@ input {
 //
 // Style guide: forms.base.input-radio
 
-input[type='checkbox'],
-input[type='radio'] {
-  @if support-for(ie, 10) {
-    // Address box sizing set to `content-box` in IE 8/9/10.
-    box-sizing: border-box;
-    // Remove excess padding in IE 8/9/10.
-    padding: 0;
-  }
+[type='checkbox'],
+[type='radio'] {
+  // Add the correct box sizing in IE <11.
+  box-sizing: border-box;
+  // Remove the padding in IE <11.
+  padding: 0;
   @if support-for(ie, 7) {
     // Remove excess padding in IE 7.
     // Known issue: excess padding remains in IE 6.
@@ -213,18 +214,20 @@ input[type='radio'] {
 // Style guide: forms.base.fieldset
 
 fieldset {
-  // Apply borders and padding that keep the vertical rhythm.
+  // Change the border, margin, and padding in all browsers (opinionated).
   @include padding(.35 .625 .65);
   border: 1px solid color(border);
-  // Define consistent border, margin, and padding.
   margin: 0 2px;
 }
 
 legend {
-  // Correct `color` not being inherited in IE 8/9/10/11.
-  @if support-for(ie, 11) {
-    border: 0;
-  }
+  // Correct the text wrapping in Edge and IE.
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  // Correct the color inheritance from `fieldset` elements in IE.
+  color: inherit;
   // Align legend text with a fieldset's text while removing left padding so
   // people aren't caught out if they zero out fieldset padding.
   margin-left: -5px;
@@ -268,8 +271,7 @@ select {
 }
 
 optgroup {
-  // Don't inherit the `font-weight` (applied by a rule above).
-  // NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+  // Restore the font weight unset by a previous rule.
   font-weight: bold;
 }
 
@@ -282,7 +284,7 @@ optgroup {
 // Style guide: forms.base.textarea
 
 textarea {
-  @extend %text-form-element;
-  // Remove default vertical scrollbar in IE 8/9/10/11.
+  @extend %text-form-element !optional;
+  // Remove the default vertical scrollbar in IE.
   overflow: auto;
 }

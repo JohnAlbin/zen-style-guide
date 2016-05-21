@@ -16,8 +16,11 @@
 // Style guide: base.text.abbr
 
 abbr[title] {
-  // Address styling not present in IE 8/9/10/11, Safari, and Chrome.
-  border-bottom: 1px dotted;
+  // Remove the bottom border in Firefox <40.
+  border-bottom: 0;
+  // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  text-decoration: underline;
+  text-decoration: underline dotted;
 
   @media print {
     // Add visible title after abbreviations.
@@ -41,11 +44,20 @@ abbr[title] {
 //
 // Style guide: base.text.b
 
+// Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+
 b,
 strong {
-  // Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
-  font-weight: bold;
+  font-weight: inherit;
 }
+
+// sass-lint:disable no-mergeable-selectors
+strong,
+b {
+  // Add the correct font weight in Chrome, Edge, and Safari.
+  font-weight: bolder;
+}
+// sass-lint:enable no-mergeable-selectors
 
 // Cite
 //
@@ -70,11 +82,16 @@ cite {
 //
 // Style guide: base.text.code
 
+%monospace,
 code,
 kbd,
 samp,
 var {
-  @extend %monospace;
+  // Correct the inheritance and scaling of font size in all browsers.
+  // The font-family value ends with ", serif".
+  @include typeface(monospace);
+  // Correct the odd `em` font sizing in all browsers.
+  font-size: 1em;
 }
 
 // Deleted text
@@ -98,7 +115,7 @@ del {
 // Style guide: base.text.dfn
 
 dfn {
-  // Address styling not present in Safari and Chrome.
+  // Add the correct font style in Android <4.4.
   font-style: italic;
 }
 
@@ -143,7 +160,8 @@ ins {
 // Style guide: base.text.mark
 
 mark {
-  background: color(mark-bg);
+  // Add the correct background and color in IE <10.
+  background-color: color(mark-bg);
   color: color(text);
 }
 
@@ -182,7 +200,7 @@ s {
 // Style guide: base.text.small
 
 small {
-  // Address inconsistent and variable font size in all browsers.
+  // Add the correct font size in all browsers.
   @include font-size(s);
 }
 
@@ -197,19 +215,20 @@ small {
 
 sub,
 sup {
-  // Prevent `sub` and `sup` affecting `line-height` in all browsers.
+  // Prevent `sub` and `sup` elements from affecting the line height in
+  // all browsers.
   @include font-size(xs);
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sup {
-  top: -.5em;
-}
-
 sub {
   bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
 }
 
 // Underlined text

@@ -14,9 +14,8 @@
 
 .button,
 %button {
-  // sass-lint:disable no-vendor-prefixes
-  -moz-appearance: button;
-  -webkit-appearance: button;
+  // Note that buttons also receive this property: -webkit-appearance: button
+  // @see base/forms/_form.scss
   // Some styles don't apply to <a> links since they are inline elements by default.
   display: inline-block;
   padding: 2px 6px;
@@ -28,6 +27,17 @@
   // Improve usability and consistency of cursor style between image-type `input` and others.
   cursor: pointer;
   color: color(button);
+
+  // Remove the inner border and padding in Firefox.
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  // Restore the focus styles unset by the previous rule.
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
 
   &:hover,
   &:focus,
