@@ -4,7 +4,7 @@
 //
 // Markup: more-link.twig
 //
-// Style guide: components.navigation.more-link
+// Style guide: navigation.more-link
 
 .more-link,
 %more-link {
@@ -16,7 +16,7 @@
 
   &__help-icon {
     padding: 1px 0 1px 20px;
-    background-image: image-url('more-link/more-link__help-icon.svg');
+    background-image: image-url('navigation', 'more-link/more-link__help-icon.svg');
     background-position: 0 50%;
     background-repeat: no-repeat;
 

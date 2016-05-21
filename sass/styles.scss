@@ -38,56 +38,63 @@
 @import 'layouts/layout-center/layout-center';
 @import 'layouts/layout-swap/layout-swap';
 
-// Forms
-//
-// Form components are specialized design components that are applied to forms
-// or form elements.
-//
-// Weight: 1
-//
-// Style guide: forms
-
 // Components
 //
 // Design components are reusable designs that can be applied using just the CSS
 // class names specified in the component.
 //
-// Weight: 2
+// Weight: 1
 //
 // Style guide: components
 
-// Navigation
-//
-// Style guide: components.navigation
-
-@import 'components/autocomplete/autocomplete';
 @import 'components/box/box';
-@import 'components/breadcrumb/breadcrumb';
-@import 'components/button/button';
 @import 'components/clearfix/clearfix';
-@import 'components/collapsible-fieldset/collapsible-fieldset';
 @import 'components/comment/comment';
 @import 'components/divider/divider';
-@import 'components/form-item/form-item';
-@import 'components/form-table/form-table';
 @import 'components/header/header';
 @import 'components/hidden/hidden';
 @import 'components/highlight-mark/highlight-mark';
 @import 'components/inline-links/inline-links';
 @import 'components/inline-sibling/inline-sibling';
 @import 'components/messages/messages';
-@import 'components/more-link/more-link';
-@import 'components/nav-menu/nav-menu';
-@import 'components/navbar/navbar';
-@import 'components/pager/pager';
 @import 'components/print-none/print-none';
-@import 'components/progress-bar/progress-bar';
-@import 'components/progress-throbber/progress-throbber';
-@import 'components/resizable-textarea/resizable-textarea';
 @import 'components/responsive-video/responsive-video';
-@import 'components/skip-link/skip-link';
-@import 'components/table-drag/table-drag';
-@import 'components/tabs/tabs';
 @import 'components/visually-hidden/visually-hidden';
 @import 'components/watermark/watermark';
 @import 'components/wireframe/wireframe';
+
+// Navigation
+//
+// Navigation components are specialized design components that are used for
+// page navigation.
+//
+// Weight: 2
+//
+// Style guide: navigation
+
+@import 'navigation/breadcrumb/breadcrumb';
+@import 'navigation/more-link/more-link';
+@import 'navigation/nav-menu/nav-menu';
+@import 'navigation/navbar/navbar';
+@import 'navigation/pager/pager';
+@import 'navigation/skip-link/skip-link';
+@import 'navigation/tabs/tabs';
+
+// Forms
+//
+// Form components are specialized design components that are applied to forms
+// or form elements.
+//
+// Weight: 3
+//
+// Style guide: forms
+
+@import 'forms/autocomplete/autocomplete';
+@import 'forms/button/button';
+@import 'forms/collapsible-fieldset/collapsible-fieldset';
+@import 'forms/form-item/form-item';
+@import 'forms/form-table/form-table';
+@import 'forms/progress-bar/progress-bar';
+@import 'forms/progress-throbber/progress-throbber';
+@import 'forms/resizable-textarea/resizable-textarea';
+@import 'forms/table-drag/table-drag';

@@ -5,28 +5,28 @@
 //
 // Markup: nav-menu.twig
 //
-// Style guide: components.navigation.nav-menu
+// Style guide: navigation.nav-menu
 
 .nav-menu,
 %nav-menu {
 
   &__item {
-    list-style-image: image-url('nav-menu/leaf.svg');
+    list-style-image: image-url('navigation', 'nav-menu/leaf.svg');
     list-style-type: square;
 
     &.is-expanded,
     &--is-expanded {
-      list-style-image: image-url('nav-menu/expanded.svg');
+      list-style-image: image-url('navigation', 'nav-menu/expanded.svg');
       list-style-type: circle;
     }
 
     &.is-collapsed,
     &--is-collapsed {
-      list-style-image: image-url('nav-menu/collapsed.svg');
+      list-style-image: image-url('navigation', 'nav-menu/collapsed.svg');
       list-style-type: disc;
 
       @include rtl() {
-        list-style-image: image-url('nav-menu/collapsed-rtl.svg');
+        list-style-image: image-url('navigation', 'nav-menu/collapsed-rtl.svg');
       }
     }
   }
