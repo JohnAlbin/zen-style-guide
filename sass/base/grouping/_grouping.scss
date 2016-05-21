@@ -1,4 +1,5 @@
 // Dependencies.
+@import 'base/text/text';
 @import 'components/divider/divider';
 
 // Grouping content
@@ -7,6 +8,26 @@
 //
 // Style guide: base.grouping
 
+
+// Block quotes
+//
+// The `<blockquote>` element is for quoting blocks of content from another
+// source within your document. Wrap the `<blockquote>` around any <abbr
+// title="HyperText Markup Language">HTML</abbr> as the quote. For straight
+// quotes, we recommend a `<p>`.
+//
+// Optionally, add a `<footer>` to identify the source of the quote, wrapping
+// the name of the source work in `<cite>`.
+//
+// Markup: grouping-blockquote.twig
+//
+// Style guide: base.grouping.blockquote
+
+blockquote {
+  // Set 1 unit of vertical rhythm on the top and bottom margin.
+  // Also indent the quote on both sides.
+  @include margin(1 $indent-amount);
+}
 
 // Lists
 //
@@ -91,26 +112,6 @@ ul {
   }
 }
 
-// Block quotes
-//
-// The `<blockquote>` element is for quoting blocks of content from another
-// source within your document. Wrap the `<blockquote>` around any <abbr
-// title="HyperText Markup Language">HTML</abbr> as the quote. For straight
-// quotes, we recommend a `<p>`.
-//
-// Optionally, add a `<footer>` to identify the source of the quote, wrapping
-// the name of the source work in `<cite>`.
-//
-// Markup: grouping-blockquote.twig
-//
-// Style guide: base.grouping.blockquote
-
-blockquote {
-  // Set 1 unit of vertical rhythm on the top and bottom margin.
-  // Also indent the quote on both sides.
-  @include margin(1 $indent-amount);
-}
-
 // Figures
 //
 // The `<figure>` element can be used to annotate illustrations, diagrams,
@@ -124,7 +125,7 @@ blockquote {
 // Style guide: base.grouping.figure
 
 figure {
-  // Address margin not present in IE 8/9 and Safari.
+  // Add the correct margin in IE 8.
   @include margin(1 0);
 }
 
@@ -144,9 +145,11 @@ figcaption {
 
 hr {
   @extend %divider;
-  // Address differences between Firefox and other browsers.
+  // Add the correct box sizing in Firefox.
   box-sizing: content-box;
   height: 0;
+  // Show the overflow in Edge and IE.
+  overflow: visible;
 }
 
 // Body copy
@@ -176,15 +179,6 @@ pre {
 //
 // Style guide: base.grouping.pre
 
-%monospace {
-  // Address odd `em`-unit font size rendering in all browsers.
-  // The font-family value ends with ", serif".
-  @include typeface(monospace);
-  font-size: 1em;
-}
-
 pre {
   @extend %monospace;
-  // Contain overflow in all browsers.
-  overflow: auto;
 }

@@ -1,10 +1,9 @@
 // HTML5 display definitions
 // ==========================================================================
 
-// Correct `block` display not defined for any HTML5 element in IE 8/9.
-// Correct `block` display not defined for `details` or `summary` in IE 10/11
-// and Firefox.
-// Correct `block` display not defined for `main` in IE 11.
+// Add the correct display in IE <10.
+// Add the correct display in Edge, IE, and Firefox for `details` or `summary`.
+// Add the correct display in IE for `main`.
 article,
 aside,
 details,
@@ -12,7 +11,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
@@ -21,33 +19,27 @@ summary {
   display: block;
 }
 
+// Add the correct display in IE <10.
 audio,
 canvas,
 progress,
 video {
-  @if support-for(ie, 9) {
-    // Correct `inline-block` display not defined in IE 8/9.
-    display: inline-block;
-  }
-  // Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-  vertical-align: baseline;
+  display: inline-block;
 }
 
-// Prevent modern browsers from displaying `audio` without controls.
+// Add the correct display and remove excess height in iOS 4-7.
 audio:not([controls]) {
   display: none;
-  // Remove excess height in iOS 5 devices.
   height: 0;
 }
 
-@if support-for(ie, 10) {
-  // Address `[hidden]` styling not present in IE 8/9/10.
-  [hidden] {
-    display: none;
-  }
+// Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline;
 }
 
-// Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
-template {
+// Add the correct display in IE <11, Safari <8, and Firefox <22.
+template,
+[hidden] {
   display: none;
 }

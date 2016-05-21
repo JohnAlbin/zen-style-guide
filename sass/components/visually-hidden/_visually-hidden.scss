@@ -20,8 +20,6 @@
   }
 
   &--focusable {
-    @extend %visually-hidden;
-
     &:active,
     &:focus {
       @extend %visually-hidden--off;
@@ -38,5 +36,6 @@
 }
 
 .element-focusable {
+  @extend %visually-hidden;
   @extend %visually-hidden--focusable;
 }
